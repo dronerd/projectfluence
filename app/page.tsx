@@ -237,7 +237,7 @@ export default function ExtraPage() {
               </div>
 
               <p className="mt-4 text-sm text-gray-800 whitespace-normal break-words">    
-               中2で英検1級上位1％合格。現在は TOEFL116点、TOEIC満点、ケンブリッジ英検C2 (読む・聞くは満点)。 世界最難関のドイツ語検定試験 Goethe-Zertifikat C2（読む・聞く・話す）も取得。高校時代からAI分野で研究開発に取り組み、ISEF2025日本代表などの経験を持つ。    
+               中2で英検1級上位1％合格。現在は TOEFL iBT 116点、TOEIC 990点(満点)、ケンブリッジ英検C2 (読む・聞くは満点)。 世界最難関のドイツ語検定試験 Goethe-Zertifikat C2（読む・聞く・話す）も取得。高校時代からAI分野で研究開発に取り組み、ISEF2025日本代表などの経験を持つ。    
               </p>
 
               <div className="mt-3">
