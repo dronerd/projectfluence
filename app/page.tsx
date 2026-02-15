@@ -193,7 +193,7 @@ export default function ExtraPage() {
               </p>
 
               <p className="text-base md:text-lg mb-1 break-words whitespace-normal max-w-full">
-                私（
+                
                 <a
                   className="underline"
                   href="https://yutokuroki.vercel.app/ja"
@@ -202,7 +202,7 @@ export default function ExtraPage() {
                 >
                   <strong>黒木勇人</strong>
                 </a>
-                ）が効果的な英語学習法を
+                が効果的な英語学習法を
                  <a
                       className="underline"
                       href="https://note.com/projectfluence"
@@ -222,7 +222,7 @@ export default function ExtraPage() {
             </div>
 
             <aside className="md:col-span-1 bg-neutral-100 rounded-xl p-4 shadow-inner w-full min-w-0">
-              <h3 className="text-lg uppercase text-gray-700"><strong>プロジェクト創設/開発・運営</strong></h3>
+              <h3 className="text-lg uppercase text-gray-700"><strong>プロジェクト創設</strong></h3>
 
               <div className="mt-4 flex items-center gap-4 min-w-0">
                 <div className="w-16 h-16 relative rounded-lg overflow-hidden bg-gray-800 flex-shrink-0">
@@ -237,7 +237,7 @@ export default function ExtraPage() {
               </div>
 
               <p className="mt-4 text-sm text-gray-800 whitespace-normal break-words">    
-              専門性＋英語力で夢を実現する人を増やすためにProject Fluenceを創設し、英語学習法を発信中。中2で英検1級上位1％合格。現在は TOEFL116点、TOEIC満点、ケンブリッジ英検C2 (読む・聞くは満点), 世界最難関のドイツ語検定試験 Goethe-Zertifikat C2（読む・聞く・話す）を取得。高校時代から人工知能分野で研究開発に取り組み、学会での受賞や国際学生科学技術フェア(ISEF2025)日本代表などの経験を持つ。    
+               中2で英検1級上位1％合格。現在は TOEFL116点、TOEIC満点、ケンブリッジ英検C2 (読む・聞くは満点)。 世界最難関のドイツ語検定試験 Goethe-Zertifikat C2（読む・聞く・話す）も取得。高校時代からAI分野で研究開発に取り組み、ISEF2025日本代表などの経験を持つ。    
               </p>
 
               <div className="mt-3">
