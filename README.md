@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yuto Kuroki Portfolio
 
-## Getting Started
+AI / ML-focused portfolio showcasing research, projects, and international experience (ISEF 2025 Finalist).
 
-First, run the development server:
+![Screenshot](./public/screenshot.png)
+
+🌐 **Live Site:** https://yutokuroki.vercel.app
+
+---
+
+## 🚀 Overview
+
+This is my personal portfolio website built with **Next.js**.
+
+It presents my background in **AI, machine learning, and software development**, along with my experiences in international science competitions such as **ISEF 2025**.
+
+The site also features **Project Fluence**, an initiative I founded to support English learning through AI-powered applications.
+
+---
+
+## ✨ Features
+
+### 🌐 Bilingual Support
+
+* English: `/`
+* Japanese: `/ja`
+
+### 🎯 Comprehensive Profile
+
+* Academic records (GPA)
+* Research & awards
+* Technical and language skills
+* International experience
+
+### 🧠 Project Showcase
+
+* Project Fluence
+* AI-powered applications (e.g., *VocabStream*)
+
+### 🔗 External Integrations
+
+* GitHub / LinkedIn
+* Note articles
+* Media & publications
+
+### ⚡ Performance & SEO
+
+* Next.js App Router
+* Metadata + Open Graph
+* Sitemap generation
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** Next.js 15
+* **Frontend:** React 18, TypeScript
+* **Styling:** Tailwind CSS 3
+* **Analytics:** Vercel Analytics
+* **Deployment:** Vercel
+
+---
+
+## ⚙️ Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/dronerd/yutokuroki-introduction.git
+cd yutokuroki-introduction-v1
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+yutokuroki-introduction-v1/
+├── app/
+│   ├── components/
+│   │   └── LanguageToggle.tsx
+│   ├── page.tsx
+│   ├── ja/                 # Japanese version
+│   └── privacy.tsx
+├── public/
+│   ├── images/
+│   │   ├── profile3.JPG
+│   │   ├── logo.png
+│   │   └── VocabStream.png
+│   └── ...
+├── package.json
+├── next.config.ts
+├── tailwind.config.js
+├── tsconfig.json
+└── README.md
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌍 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is deployed on **Vercel** for fast global delivery and seamless integration with Next.js.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👤 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Yuto Kuroki**
+
+* GitHub: https://github.com/dronerd
+* LinkedIn: https://www.linkedin.com/in/yutokuroki/
+
+---
+
+## 📌 Notes
+
+* Built using the **Next.js App Router**
+* Tailwind CSS is configured via PostCSS
+* Designed for performance, accessibility, and clarity
+
+---
+
+## 🔮 Future Improvements
+
+* Add animations (e.g., Framer Motion)
+* Further enhance mobile UX
