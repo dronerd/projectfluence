@@ -1,140 +1,118 @@
-# Yuto Kuroki Portfolio
+# Project Fluence (Frontend)
 
-AI / ML-focused portfolio showcasing research, projects, and international experience (ISEF 2025 Finalist).
+AI-powered English learning platform founded by **Yuto Kuroki**, designed to help learners achieve their goals through English proficiency combined with specialized skills.
 
-![Screenshot](./public/screenshot.png)
+![Project Fluence Logo](./public/images/screenshot.png)
 
-🌐 **Live Site:** https://yutokuroki.vercel.app
+🌐 **Live Site:** https://projectfluence.vercel.app  
 
 ---
 
 ## 🚀 Overview
 
-This is my personal portfolio website built with **Next.js**.
+This is a **Next.js-based frontend application** for **Project Fluence**. It serves as a landing page that provides:
 
-It presents my background in **AI, machine learning, and software development**, along with my experiences in international science competitions such as **ISEF 2025**.
+- Practical AI-generated prompts for English practice  
+- Exam preparation support (e.g., Eiken, TOEFL)  
+- Writing feedback guidance  
+- Educational content and external resources  
 
-The site also features **Project Fluence**, an initiative I founded to support English learning through AI-powered applications.
+Project Fluence aims to help learners build English skills **alongside their personal interests and career goals**.
+
+**Founder:**  
+Yuto Kuroki  
+- Eiken 1st Grade  
+- TOEIC 990  
+- TOEFL iBT 116/120  
+- Advanced German  
 
 ---
 
 ## ✨ Features
 
-### 🌐 Bilingual Support
+### 🗣️ Interactive English Practice Prompts
+- Copyable prompts for:
+  - Everyday conversation  
+  - Exam preparation  
+  - Writing correction  
+  - Vocabulary building  
+- Supports levels from **A1 to C2**
 
-* English: `/`
-* Japanese: `/ja`
+### 📚 Educational Resources
+- Links to Note articles on:
+  - English learning strategies  
+  - Exam success 
+  - Multilingual learning tips  
 
-### 🎯 Comprehensive Profile
-
-* Academic records (GPA)
-* Research & awards
-* Technical and language skills
-* International experience
-
-### 🧠 Project Showcase
-
-* Project Fluence
-* AI-powered applications (e.g., *VocabStream*)
-
-### 🔗 External Integrations
-
-* GitHub / LinkedIn
-* Note articles
-* Media & publications
+### 🎨 Modern UI
+- Built with **Next.js App Router** and **Tailwind CSS**
+- Responsive design with a clean layout
+- Sticky navigation banner
 
 ### ⚡ Performance & SEO
-
-* Next.js App Router
-* Metadata + Open Graph
-* Sitemap generation
+- Optimized for fast loading with Next.js
+- Includes sitemap and metadata for SEO
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Framework:** Next.js 15
-* **Frontend:** React 18, TypeScript
-* **Styling:** Tailwind CSS 3
-* **Analytics:** Vercel Analytics
-* **Deployment:** Vercel
+- **Framework:** Next.js 15  
+- **Language:** TypeScript  
+- **Styling:** Tailwind CSS  
+- **Analytics:** Vercel Analytics  
+- **SEO:** next-sitemap  
 
 ---
 
-## ⚙️ Setup
+## 🚀 Getting Started
 
-Clone the repository:
-
+### 1. Clone the repository
 ```bash
-git clone https://github.com/dronerd/yutokuroki-introduction.git
-cd yutokuroki-introduction-v1
+git clone <repository-url>
+cd projectfluence
 ```
 
-Install dependencies:
-
+### 2. Install dependencies
 ```bash
 npm install
 ```
 
-Run the development server:
-
+### 3. Run the development server
 ```bash
 npm run dev
 ```
 
 Open http://localhost:3000 in your browser.
 
+### 4. Build for production
+```bash
+npm run build
+npm start
+```
+
 ---
 
 ## 📁 Project Structure
 
 ```
-yutokuroki-introduction-v1/
+projectfluence/
 ├── app/
-│   ├── components/
-│   │   └── LanguageToggle.tsx
-│   ├── page.tsx
-│   ├── ja/                 # Japanese version
-│   └── privacy.tsx
+│   ├── components/          # Reusable UI components (e.g., Banner.tsx)
+│   ├── globals.css          # Global styles
+│   ├── layout.tsx           # Root layout
+│   ├── page.tsx             # Main landing page
+│   └── privacy/             # Privacy policy page
 ├── public/
-│   ├── images/
-│   │   ├── profile3.JPG
-│   │   ├── logo.png
-│   │   └── VocabStream.png
-│   └── ...
-├── package.json
-├── next.config.ts
-├── tailwind.config.js
-├── tsconfig.json
-└── README.md
+│   ├── images/              # Static assets (e.g., logo.png)
+│   └── ...                  # Other assets (robots.txt, sitemap)
+├── next.config.ts           # Next.js configuration
+├── tailwind.config.js       # Tailwind CSS configuration
+└── package.json             # Dependencies and scripts
 ```
 
 ---
 
-## 🌍 Deployment
+## 📄 License
 
-This project is deployed on **Vercel** for fast global delivery and seamless integration with Next.js.
-
----
-
-## 👤 Author
-
-**Yuto Kuroki**
-
-* GitHub: https://github.com/dronerd
-* LinkedIn: https://www.linkedin.com/in/yutokuroki/
-
----
-
-## 📌 Notes
-
-* Built using the **Next.js App Router**
-* Tailwind CSS is configured via PostCSS
-* Designed for performance, accessibility, and clarity
-
----
-
-## 🔮 Future Improvements
-
-* Add animations (e.g., Framer Motion)
-* Further enhance mobile UX
+This project is **private and proprietary** to Yuto Kuroki.
