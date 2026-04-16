@@ -231,7 +231,7 @@ export default function ExtraPage() {
 
                 <div className="min-w-0">
                   <Link aria-label="Profile" href="https://yutokuroki.vercel.app/ja" className="font-medium text-lg md:text-2xl block truncate" target="_blank" rel="noopener noreferrer"><strong>黒木勇人</strong></Link>
-                  <p className="text-sm text-gray-800 whitespace-normal break-words">早稲田大学 基幹理工学部1年</p>
+                  <p className="text-sm text-gray-800 whitespace-normal break-words">早稲田大学 情報理工学科２年</p>
                   <p className="text-sm text-gray-800 whitespace-normal break-words">yutokuroki.projectfluence@gmail.com</p>
                 </div>
               </div>
