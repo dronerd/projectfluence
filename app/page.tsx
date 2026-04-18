@@ -142,9 +142,15 @@ export default function ExtraPage() {
             <button
               onClick={scrollToTop}
               aria-label="Scroll to top"
-              className="flex items-center gap-3 focus:outline-none transform transition-transform duration-200 active:scale-105"
+              className="flex items-center focus:outline-none transform transition-transform duration-200 active:scale-105"
             >
-              <Image src="/images/logo.png" alt="Project Fluence logo" width={64} height={64} className="rounded-full object-cover" />
+              <Image
+                src="/images/logo.png"
+                alt="Project Fluence logo"
+                width={40}
+                height={40}
+                className="rounded-full object-cover"
+              />
             </button>
           </div>
 

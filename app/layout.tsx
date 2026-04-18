@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       {
         url: "https://projectfluence.vercel.app/images/logo.png",
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: "ProjectFluence",
       },
     ],
