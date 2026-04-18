@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     siteName: "Project Fluence",
     images: [
       {
-        url: "https://projectfluence.vercel.app/images/logo.png",
+        url: "https://projectfluence.vercel.app/images/logo_full.png",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "ProjectFluence",
       },
     ],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Project Fluence ～あなたの未来に、英語の力を～",
     description: "効率的に英語を学び、世界で活躍する力を身につける。Project Fluenceはそんな学びを応援する個人プロジェクトです。",
-    images: ["https://projectfluence.vercel.app/images/logo.png"],
+    images: ["https://projectfluence.vercel.app/images/logo_full.png"],
   },
 };
 
