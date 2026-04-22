@@ -136,7 +136,8 @@ export default function ExtraPage() {
   return (
     <>
       {/* Sticky Banner (same as before) */}
-      <div className="fixed top-0 left-0 w-full bg-blue-600 text-white py-7 z-50 shadow-md">
+
+      <div className="fixed top-0 left-0 w-full bg-gradient-to-r from-indigo-600 to-cyan-500 text-white py-7 z-50 shadow-md">
         <div className="max-w-[880px] sm:max-w-3xl md:max-w-7xl mx-auto px-4 sm:px-7 relative flex items-center">
           <div className="absolute left-4 flex items-center z-50">
             <button
@@ -160,15 +161,15 @@ export default function ExtraPage() {
               aria-label="Scroll to top"
               className="pointer-events-auto text-base font-normal hover:underline bg-transparent border-none cursor-pointer"
             >
-              <span className="inline md:hidden text-lg">ページトップ</span>
-              <span className="hidden md:inline text-xl">ページトップへ - Project Fluence</span>
+              <span className="inline md:hidden text-lg"><strong>ページトップ</strong></span>
+              <span className="hidden md:inline text-xl"><strong>ページトップへ </strong>- Project Fluence</span>
             </button>
           </div>
 
           <div className="absolute right-4">
             <Link href="https://note.com/projectfluence" target="_blank" className="ml-auto px-4 py-2 text-sm font-medium text-white bg-blue-900 rounded-full shadow-md transform transition-transform duration-200 hover:bg-blue-700 hover:scale-105 active:scale-110 whitespace-nowrap" rel="noopener noreferrer">
               <span className="inline md:hidden">Note</span>
-              <span className="hidden md:inline">Noteをフォロー</span>
+              <span className="hidden md:inline">Noteを見る</span>
             </Link>
           </div>
         </div>
