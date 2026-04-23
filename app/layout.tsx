@@ -1,7 +1,8 @@
+
+import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Analytics } from "@vercel/analytics/react"; 
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,54 +14,34 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
   title: "Project Fluence",
-  description: "効率的に英語を学び、世界で活躍する力を身につける。Project Fluenceはそんな学びを応援する個人プロジェクトです。 あなたの未来に、英語の力を。",
- 
+  description: "AIアプリが連携して学習体験を最適化する、英語学習のエコシステム",
+
   icons: {
     icon: "/icon.png",        // ← app/icon.png (192x192)
     apple: "/icon.png",       // iOS Safari 対応（任意だが推奨）
   },
- 
-  keywords: ["黒木勇人", "Yuto Kuroki", "早稲田大学", "英語学習", "AI英語アプリ", "note", "VocabStream", "Project Fluence", "projectfluence", "ProjectFluence", "Projectfluence"],
-  authors: [{ name: "黒木 勇人", url: "https://projectfluence.vercel.app",}],
+
   openGraph: {
-    title: "Project Fluence ～あなたの未来に、英語の力を～",
-    description: "効率的に英語を学び、世界で活躍する力を身につける。Project Fluenceはそんな学びを応援する個人プロジェクトです。",
-    url: "https://projectfluence.vercel.app",
-    siteName: "Project Fluence",
-    images: [
-      {
-        url: "https://projectfluence.vercel.app/images/logo_full.png",
-        width: 1200,
-        height: 630,
-        alt: "ProjectFluence",
-      },
-    ],
-    locale: "ja_JP",
-    type: "website",
+    images: ["https://projectfluence.vercel.app/images/logo_full.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Project Fluence ～あなたの未来に、英語の力を～",
-    description: "効率的に英語を学び、世界で活躍する力を身につける。Project Fluenceはそんな学びを応援する個人プロジェクトです。",
     images: ["https://projectfluence.vercel.app/images/logo_full.png"],
   },
 };
 
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Keep root layout as a server component; adding the font variables as classes
+  // uses the font CSS variables so geistSans/geistMono are actually referenced.
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={geistSans.variable}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
-        <Analytics /> 
+        {/* Analytics is now used so the import isn't unused */}
+        <Analytics />
       </body>
     </html>
   );
