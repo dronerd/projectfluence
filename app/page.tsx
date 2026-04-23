@@ -65,73 +65,123 @@ export default function ExtraPage() {
     {
       label: "英会話の練習用",
       text:
-        `Hi, I want to practice speaking English. Please ask me some questions in the subject of (everyday life/ university studies/ future plans…etc). After I answer, give me feedback and then ask another question. Use words I know, but sometimes a few harder ones so I can learn. My English level is (A1/A2/B1/B2/C1/C2).`
+  `I want to practice speaking English.
+
+  Please:
+  1. Ask me one question at a time about (everyday life / university studies / future plans, etc.).
+  2. Wait for my answer.
+  3. Give clear feedback on:
+    - Grammar
+    - Vocabulary
+    - Natural phrasing
+  4. Show a corrected version of my answer.
+  5. Then ask the next question.
+
+  Use mostly words at my level, but occasionally include slightly more advanced vocabulary.
+
+  My English level: (A1 / A2 / B1 / B2 / C1 / C2).`
     },
     {
       label: "英検対策（例：１級の面接）",
       text:
-        `I would like to prepare for the Eiken grade 1 Speaking section. Could you please present me with a topic that is relevant to Eiken grade 1? Then I will try to give a presentation on this topic. Afterwards, you could correct my presentation and show me how I could improve it. It would also be helpful if you could later ask me a few questions about my presentation.`
+  `I want to practice for the Eiken Grade 1 speaking test.
+
+  Please:
+  1. Give me a realistic Eiken-style topic.
+  2. Ask me to give a short speech (about 2 minutes).
+  3. After my answer, provide:
+    - A corrected version
+    - Feedback on structure, vocabulary, and coherence
+    - Suggestions for higher-level expressions
+  4. Then ask 2–3 follow-up questions like an examiner.
+
+  Keep the format close to the real test.`
     },
     {
       label: "TOEFLライティングの練習",
       text:
-        `Can you give me an example of a typical writing task given in the TOEFL iBT writing part (1/2)? I will type in my answer, so please fix grammatical mistakes, and teach me how I can further improve my vocabulary use.`
+  `Please give me a realistic TOEFL iBT writing task (Task 1 or Task 2).
+
+  After I write my response, please:
+  1. Correct grammar and sentence structure
+  2. Rewrite my answer in a more natural and high-scoring way
+  3. Suggest better vocabulary and expressions
+  4. Give a brief score estimate and explain why
+
+  Focus on helping me improve toward a higher band score.`
     },
     {
       label: "自由ライティングの添削",
-      text: `Can you revise this text for me? / Can you improve this text for me?`
+      text:
+  `Please revise the following text.
+
+  Give me:
+  1. A corrected version
+  2. A more natural / fluent version
+  3. A brief explanation of key mistakes
+  4. Suggestions for improving vocabulary and style`
     },
     {
       label: "学んだ表現のリスト化",
-      text: `Can you create a list of vocabularies and phrases you taught me today that might be useful in the future?`
+      text:
+  `Based on our conversation today, create a list of useful vocabulary and phrases I learned.
+
+  For each item, include:
+  - Meaning
+  - Example sentence
+  - When to use it
+
+  Focus on expressions that are practical and reusable.`
     }
   ];
 
   const prompts2 = [
     {
       label: "単語の説明を求める",
-      // use single quotes in the string so the inner double quotes are literal, but they will be rendered inside <pre>
-      text : 'Can you give me the definition, an example sentence, synonyms, and antonyms for the word (" ")? Please use words that are easier than the word itself to explain.'
+      text:
+  `For the word (" "), please provide:
+  - A simple definition (using easier words)
+  - 1–2 example sentences
+  - Synonyms
+  - Antonyms
+  - Common collocations (if any)`
     },
     {
       label: "自作した例文の添削",
-      text : "Can you correct and improve this sentence for me?"
+      text:
+  `Please correct and improve this sentence.
+
+  Show:
+  1. Corrected version
+  2. More natural version
+  3. Brief explanation of the changes`
     }
   ];
 
-  // --- Note articles (added as stylish cards) ---
-  const noteArticles = [
+  // ---  note articles (added as stylish cards) ---
+  const  noteArticles = [
     {
-      key: "Note Article1",
-      href: "https://note.com/projectfluence/n/n05e8b127014f",
-      title:
-        "大学生の自己紹介 ― 黒木勇人｜Project Fluence｜英語アプリ｜英検１級・TOEIC満点・TOEFL116/120・ドイツ語上級",
-    },
-    {
-      key: "Note Article2",
+      key: " note Article1",
       href: "https://note.com/projectfluence/n/nd806d6fa00ec",
       title:
         "日本にいながらネイティブ級へ─英語力を効果的に伸ばす学習方法｜英検１級・TOEIC満点・TOEFL116/120・ドイツ語上級",
     },
     {
-      key: "Note Article3",
+      key: " note Article2",
       href: "https://note.com/projectfluence/n/n751ab984987a",
       title:
         "英語学習にも応用できる！第２外国語（ドイツ語）から見えてきた効果的な言語学習法",
     },
     {
-      key: "Note Article4",
-      href: "https://note.com/projectfluence/n/nb5ee0137b415",
-      title:
-        "世界最難関の英語検定試験：ケンブリッジ英検C2 Proficiency（CPE）に合格しました！（リーディング・リスニング満点）",
-    },
-    {
-      key: "Note Article5",
+      key: " note Article3",
       href: "https://note.com/projectfluence/n/n71bd9003af29",
       title:
         "（上級者向け）日本にいながら英語力をさらに高める効果的な方法",
     },
   ];
+
+  // for stable control of mobile menu. 
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
@@ -166,11 +216,15 @@ export default function ExtraPage() {
             </button>
           </div>
 
-          <div className="absolute right-4">
-            <Link href="https://note.com/projectfluence" target="_blank" className="ml-auto px-4 py-2 text-sm font-medium text-white bg-blue-900 rounded-full shadow-md transform transition-transform duration-200 hover:bg-blue-700 hover:scale-105 active:scale-110 whitespace-nowrap" rel="noopener noreferrer">
-              <span className="inline md:hidden">Note</span>
-              <span className="hidden md:inline">Noteを見る</span>
-            </Link>
+          <div className="absolute right-4 flex items-center gap-3">
+            {/* Hamburger Button */}
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="text-white text-2xl md:text-3xl focus:outline-none"
+              aria-label="Open menu"
+            >
+              ☰
+            </button>
           </div>
         </div>
       </div>
@@ -196,55 +250,71 @@ export default function ExtraPage() {
               </div>
 
               <p className="mt-6 text-base md:text-lg break-words whitespace-normal max-w-full">
-                <strong>Project Fluence</strong>は、英語＋専門分野の力で夢を実現する人を増やすことを目指しています。
+                <strong>Project Fluence</strong>は、開発者の英語学習ノウハウを活用したAIアプリが連携して学習体験を最適化する、<strong>英語学習のエコシステム</strong>です。
               </p>
-
+              <br/>
               <p className="text-base md:text-lg mb-1 break-words whitespace-normal max-w-full">
-                
+                英語＋専門分野の力で夢を実現する人を増やすことを目指しています。
                 <a
                   className="underline"
                   href="https://yutokuroki.vercel.app/ja"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <strong>黒木勇人</strong>
                 </a>
-                が効果的な英語学習法を
+                効果的な英語学習法を
                  <a
                       className="underline"
                       href="https://note.com/projectfluence"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                    <strong>Note</strong>
+                    <strong> note</strong>
                   </a>
-                で紹介し、自ら開発した英語学習アプリも提供します。
+                で紹介し、開発したAI英語学習アプリも提供します。
               </p>
-
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a href="#about" className="inline-block bg-blue-800 text-white px-4 py-2 rounded-lg shadow hover:brightness-95">英語学習アプリ</a>
-                <a href="#notes" className="inline-block bg-blue-800 text-white px-4 py-2 rounded-lg shadow hover:brightness-95">最近のNote記事</a>
-                <a href="#method" className="inline-block bg-blue-800 text-white px-4 py-2 rounded-lg shadow hover:brightness-95">効果的な英語学習方法</a>
-              </div>
             </div>
 
             <aside className="md:col-span-1 bg-neutral-100 rounded-xl p-4 shadow-inner w-full min-w-0">
-              <h3 className="text-lg uppercase text-gray-700"><strong>プロジェクト創設</strong></h3>
+              <h3 className="text-lg uppercase text-gray-700"><strong>開発者</strong></h3>
 
               <div className="mt-4 flex items-center gap-4 min-w-0">
-                <div className="w-16 h-16 relative rounded-lg overflow-hidden bg-gray-800 flex-shrink-0">
-                  <Image src="/images/profile2.JPG" alt="Yuto Kuroki profile" fill sizes="(max-width: 768px) 64px, 64px" className="object-cover" />
-                </div>
+                
+                {/* Clickable Profile Image */}
+                <Link
+                  href="https://yutokuroki.vercel.app/ja"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-16 h-16 relative rounded-full overflow-hidden bg-gray-800 flex-shrink-0 block"
+                >
+                  <Image
+                    src="/images/profile2.JPG"
+                    alt="Yuto Kuroki profile"
+                    fill
+                    sizes="(max-width: 768px) 64px, 64px"
+                    className="object-cover"
+                  />
+                </Link>
 
                 <div className="min-w-0">
-                  <Link aria-label="Profile" href="https://yutokuroki.vercel.app/ja" className="font-medium text-lg md:text-2xl block truncate" target="_blank" rel="noopener noreferrer"><strong>黒木勇人</strong></Link>
-                  <p className="text-sm text-gray-800 whitespace-normal break-words">早稲田大学 情報理工学科２年</p>
-                  <p className="text-sm text-gray-800 whitespace-normal break-words">yutokuroki.projectfluence@gmail.com</p>
+                  <Link
+                    aria-label="Profile"
+                    href="https://yutokuroki.vercel.app/ja"
+                    className="font-medium text-lg md:text-2xl block truncate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>黒木勇人</strong>
+                  </Link>
+
+                  <p className="text-sm text-gray-800 whitespace-normal break-words">
+                    早稲田大学 情報理工学科２年
+                  </p>
                 </div>
               </div>
 
               <p className="mt-4 text-sm text-gray-800 whitespace-normal break-words">    
-               中2で英検1級上位1％合格。現在は TOEFL iBT 116点、TOEIC 990点(満点)、ケンブリッジ英検C2 (読む・聞くは満点)。 世界最難関のドイツ語検定試験 Goethe-Zertifikat C2（読む・聞く・話す）も取得。高校時代からAI分野で研究開発に取り組み、ISEF2025日本代表などの経験を持つ。    
+               中2で英検1級上位1％合格。現在は TOEFL iBT 116点、TOEIC 満点、ケンブリッジ英検C2 (読む・聞くは満点)。 世界最難関のドイツ語検定試験 Goethe-Zertifikat C2（読む・聞く・話す）も取得。高校時代からAI分野で研究開発やソフトウェア開発に取り組み、ISEF2025日本代表などの経験を持つ。    
               </p>
 
               <div className="mt-3">
@@ -255,66 +325,138 @@ export default function ExtraPage() {
             </aside>
           </section>
 
-          {/* About Section */}
-          <section id="about" className="mt-8 grid md:grid-cols-2 gap-6">
-            <article className="bg-white rounded-2xl p-6 shadow">
-              <h2 className="text-2xl font-bold">About</h2>
-              <div className="flex items-center gap-3"></div>
+          {/* Apps Section */}
+          <section id="apps" className="mt-8 bg-white rounded-2xl p-6 shadow">
+            <h2 className="text-2xl font-bold">アプリ一覧</h2>
 
-              <div className="mt-2 text-lg text-gray-700 leading-relaxed whitespace-pre-line">
-                <p className="text-lg text-gray-700 leading-relaxed mb-1">
-                 効率的に英語を学び、世界で活躍する力を身につける。    
-                </p>
-                <p className="mb-2"><strong>Project Fluence</strong> はそんな学びを応援する個人プロジェクトです。 
-                効果的な英語学習法は
-                 <a
-                      className="underline"
-                      href="https://note.com/projectfluence"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                    <strong>Note記事</strong>
-                  </a>
-                  をお読みいただき、英語学習アプリも是非ご活用ください！</p>
+            <p className="mt-3 text-gray-700 leading-relaxed">
+              <p>これらのアプリは現在開発中です。今後のアップデートをお楽しみに！</p>
+              これらのアプリは<strong>相互にデータを活用</strong>し、学習体験を最適化することを目指しています。
+              例えば、<strong>VocabStream</strong>で学習した単語データをもとに、
+              <strong>VideoFinder</strong>では理解しやすい動画を推薦し、
+              <strong>SpeakWise GPT</strong>ではあなたの語彙レベルに合わせた会話練習を提供します。
+            </p>
 
-                <p className="mt-2">＊大学生が趣味として開発・運営を行っている個人プロジェクトであるため、アプリの機能が安定していない可能性があります。ご意見やフィードバックは大歓迎です！</p>
-              </div>
-            </article>
-
-            <article className="bg-white rounded-2xl p-6 shadow">
-              <h2 className="text-2xl font-semibold mb-4">英語学習アプリ</h2>
-              <div className="mt-2 text-neutral-900 text-lg">
-                <p>
-                  英単語学習アプリ
-                  <a
-                      className="underline"
-                      href="https://vocabstream.vercel.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                    <strong>VocabStream</strong>
-                  </a>
-                   は、英単語を英語の定義と例文と組み合わせて効率的に学ぶことを可能にします。現在は安定して動作する機能のみを公開しています。今後のアップデートをお楽しみに！
-                </p>
-                <div className="mt-3">
-                  <Link href="https://vocabstream.vercel.app" target="_blank"><Image src="/VocabStream.png" alt="Project Fluence logo" width={200} height={200} className="rounded-md object-cover" /></Link>
+            <div className="mt-6 grid md:grid-cols-3 gap-6">
+              
+              {/* VocabStream */}
+              <div className="bg-neutral-50 rounded-xl p-5 shadow-sm flex flex-col">
+                <div className="flex items-center gap-3">
+                  <Image src="/images/vocabstream.png" alt="VocabStream" width={60} height={60} className="rounded-md" />
+                  <h3 className="text-xl font-semibold">VocabStream</h3>
                 </div>
+
+                <p className="mt-3 text-gray-700 text-sm leading-relaxed">
+                  英単語を「英語の定義＋例文」で学習するアプリ。  
+                  記憶ではなく「理解」で語彙力を伸ばします。
+                </p>
+
+                <ul className="mt-3 text-sm text-gray-600 list-disc list-inside space-y-1">
+                  <li>英英ベースの単語学習</li>
+                  <li>例文による文脈理解</li>
+                  <li>語彙の定着を重視</li>
+                </ul>
+
+                <a
+                  href="https://vocabstream.vercel.app"
+                  target="_blank"
+                  className="mt-auto inline-block text-center 
+                  bg-gradient-to-r from-indigo-600 to-cyan-500 
+                  text-white px-5 py-2.5 rounded-full 
+                  font-medium shadow-md 
+                  hover:shadow-lg hover:scale-[1.02] hover:brightness-110 
+                  transition-all duration-200"                  >
+                  アプリを開く →
+                </a>
               </div>
-            </article>
+
+              {/* VideoFinder */}
+              <div className="bg-neutral-50 rounded-xl p-5 shadow-sm flex flex-col">
+                <div className="flex items-center gap-3">
+                  <Image src="/images/videofinder.png" alt="VideoFinder" width={60} height={60} className="rounded-md" />
+                  <h3 className="text-xl font-semibold">VideoFinder</h3>
+                </div>
+
+                <p className="mt-3 text-gray-700 text-sm leading-relaxed">
+                  YouTube動画を英語レベル・語彙・分野に基づいて推薦する学習エンジン。
+                </p>
+
+                <ul className="mt-3 text-sm text-gray-600 list-disc list-inside space-y-1">
+                  <li>語彙一致度ベース推薦</li>
+                  <li>レベル別フィルタ</li>
+                  <li>専門分野対応</li>
+                </ul>
+
+                <a
+                  href="https://video.projectfluence.vercel.app"
+                  target="_blank"
+                  className="mt-auto inline-block text-center 
+                  bg-gradient-to-r from-indigo-600 to-cyan-500 
+                  text-white px-5 py-2.5 rounded-full 
+                  font-medium shadow-md 
+                  hover:shadow-lg hover:scale-[1.02] hover:brightness-110 
+                  transition-all duration-200"                  >
+                  アプリを開く →
+                </a>
+              </div>
+              
+              {/* SpeakWise GPT */}
+              <div className="bg-neutral-50 rounded-xl p-5 shadow-sm flex flex-col">
+                <div className="flex items-center gap-3">
+                  <Image src="/images/speakwise.png" alt="SpeakWise GPT" width={60} height={60} className="rounded-md" />
+                  <h3 className="text-xl font-semibold">SpeakWise GPT</h3>
+                </div>
+
+                <p className="mt-3 text-gray-700 text-sm leading-relaxed">
+                  生成AIを活用した英会話トレーニング。  
+                  リアルタイムでフィードバックを提供。
+                </p>
+
+                <ul className="mt-3 text-sm text-gray-600 list-disc list-inside space-y-1">
+                  <li>AI会話練習</li>
+                  <li>文法・語彙フィードバック</li>
+                  <li>レベル適応型学習</li>
+                </ul>
+
+                <a
+                  href="https://speak.projectfluence.vercel.app"
+                  target="_blank"
+                  className="mt-auto inline-block text-center 
+                  bg-gradient-to-r from-indigo-600 to-cyan-500 
+                  text-white px-5 py-2.5 rounded-full 
+                  font-medium shadow-md 
+                  hover:shadow-lg hover:scale-[1.02] hover:brightness-110 
+                  transition-all duration-200"                >
+                  アプリを開く →
+                </a>
+              </div>
+
+            </div>
           </section>
+          
 
-          {/* Recent Notes - updated: show 3 stylish rectangular cards */}
-          <section id="notes" className="mt-8 bg-white rounded-2xl p-6 shadow">
-            <h2 className="text-2xl font-bold">最近のNote記事</h2>
-
+          {/* Recent  notes - updated: show 3 stylish rectangular cards */}
+          <section id=" notes" className="mt-8 bg-white rounded-2xl p-6 shadow">
+            <h2 className="text-2xl font-bold"> note記事</h2>
+            <p>
+               noteでは、英語学習の方法やモチベーションの保ち方、私自身の学習体験から得た気づきなどを発信しています。ぜひご覧ください！
+            </p>
+            <a
+              href="https://note.com/projectfluence"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-3 underline text-md font-medium"
+            >
+              すべての note記事を見る →
+            </a>
             <ul className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-              {noteArticles.map((note) => (
-                <li key={note.key} className="py-0.5">
+              { noteArticles.map(( note) => (
+                <li key={ note.key} className="py-0.5">
                   <article className="h-full bg-neutral-50 border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between">
                     <div>
-                      <div className="inline-block px-2 py-1 text-xs font-semibold uppercase rounded-md bg-blue-50 text-blue-700 mb-2">Note</div>
-                      <a href={note.href} target="_blank" rel="noopener noreferrer" className="text-sm md:text-base font-medium underline break-words">
-                        {note.title}
+                      <div className="inline-block px-2 py-1 text-xs font-semibold uppercase rounded-md bg-blue-50 text-blue-700 mb-2"> note</div>
+                      <a href={ note.href} target="_blank" rel="noopener noreferrer" className="text-sm md:text-base font-medium underline break-words">
+                        { note.title}
                       </a>
                     </div>
                   </article>
@@ -325,7 +467,7 @@ export default function ExtraPage() {
 
           {/* なぜ英語を学ぶのか */}
           <section id="english-motivation" className="mt-8 bg-white rounded-2xl p-6 shadow">
-            <h2 className="text-2xl font-bold">なぜ英語を学ぶのか</h2>
+            <h2 className="text-2xl font-bold">英語を学ぶモチベーション</h2>
             <div className="mt-2 text-gray-700 leading-relaxed">
               <p>英語を学ぶことで出会える人や文化、広がる可能性は、学習の努力をはるかに上回る価値を持っています。</p>
               <p><strong>英語はまさに「一生もののスキル」です。</strong></p>
@@ -337,9 +479,9 @@ export default function ExtraPage() {
 
           <section id="method" className="mt-8 bg-white rounded-2xl p-6 shadow"> 
             <h3 className="text-2xl font-semibold mb-2">効果的な英語学習方法</h3>
-            <p className="text-sm mt-2 font-semibold text-gray-800">(＊詳しくは <Link href="https://note.com/projectfluence" className="underline text-lg break-words" target="_blank" rel="noopener noreferrer">Note</Link> をご覧ください)</p>
-
+            <p className="text-xs mt-2 font-semibold text-gray-800">＊以下は私が英語学習を通じて得た気づきや経験に基づいています。万人に当てはまるわけではないことをご了承ください。</p>
             <div className="mb-8">
+              <br/>
               <p className="text-gray-900 mb-2">多くの日本人の英語学習には２つの特徴があります。</p>
               <div className="mb-1">
                 <p className="text-gray-900"><strong>日英変換</strong>：英単語や英文を日本語に置き換えて理解する方法。多くの単語帳やフラッシュカードはこの仕組みです。</p>
@@ -349,26 +491,27 @@ export default function ExtraPage() {
                 <p className="text-gray-900"><strong>文法の論理的理解</strong>：be動詞、否定文、仮定法などを段階的に学び、問題集で繰り返し練習します。</p>
               </div>
 
-              <p className="text-gray-700">これらは試験対策には有効ですが、「学ぶ」と「使えるようになる」は別物です。単語や文法を覚えても、</p>
+              <p className="text-gray-700">これらは試験対策には有効ですが、</p>
               <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>相手の言葉が聞き取れない</li>
+                <li>相手の英語が聞き取れない</li>
                 <li>思考が翻訳で遅くなる</li>
-                <li>言いたいことが出てこない</li>
+                <li>言いたいことを瞬時に表現できない</li>
               </ul>
-              <p className="text-gray-700">といった問題が残ります。文法中心だと一語一句を日本語に変換し、文法の正しさを気にしすぎてしまうのです。</p>
+              <p className="text-gray-700">といった問題が残ることが多いです。一語一句を日本語に変換し、文法の正しさを気にしすぎてしまうのです。</p>
 
-              <p className="text-gray-700 leading-relaxed"><strong>本質的な英語力</strong>とは、日本語と同じように意味をそのまま理解し、アイデアを直接言葉にできること。日本語の文をいちいち分解しないように、英語も自然に理解・発信できる状態が理想です。</p>
+              <p className="text-gray-700 leading-relaxed"><strong>本質的な英語力</strong>とは、日本語と同じように意味をそのまま理解し、アイデアを直接言葉にできること。日本語の文をいちいち分解しないように、英語も自然に理解・発信できる状態が理想だと私は考えています。
+                そして、学習方法もそれに合わせて変えることができれば、日本にいながらでも本質的な英語力が身につくと考えています。
+              </p>
             </div>
 
             <div>
-              <h4 className="text-2xl font-semibold mb-2">英語を効果的に学ぶ３つの方法</h4>
-              <p><strong>＊ <Link href="https://note.com/projectfluence" className="underline text-lg break-words" target="_blank" rel="noopener noreferrer">Note</Link> でさらに詳しくご紹介しています</strong></p>
+              <h4 className="text-2xl font-semibold mb-2">本質的な英語力を身につける３つの方法</h4>
               <div className="grid mt-2 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-6">
                   <div className="p-4 bg-gray-100 rounded-lg">
                     <p className="mt-1 text-xl"><strong>1: 英単語は「英語で」学ぶ</strong></p>
                     <div className="mt-1">
-                      <p>英単語を日本語訳で覚えるのではなく、<strong>英語の定義や例文と結びつけて学ぶ</strong>ことをおすすめします。これは、私たちが日本語の知らない単語を国語辞典で調べ、よりやさしい日本語で説明を理解するのと同じ仕組みです。英語の定義や例文と結び付けて学ぶと、以下のような細かい部分が分かるようになるというメリットもあります。</p>
+                      <p>英単語を日本語訳で覚えるのではなく、<strong>英語の定義や例文と結びつけて学ぶ</strong>ことをおすすめします。これは、私たちが日本語の知らない単語を国語辞典で調べ、よりやさしい日本語で説明を理解するのと同じ仕組みです。以下のような細かい部分が分かるようになるというメリットもあります。</p>
 
                       <ul className="list-disc list-inside mt-2">
                         <li>どんな場面で使えるのか</li>
@@ -394,7 +537,7 @@ export default function ExtraPage() {
                           ))}
                         </div>
 
-                        <p className="mt-2">この学習法を効率化するために、英単語アプリ
+                        <p className="mt-2">この学習方法を効率化するために、英単語アプリ
                          <a
                           className="underline"
                           href="https://vocabstream.vercel.app"
@@ -403,7 +546,7 @@ export default function ExtraPage() {
                           >
                           <strong>VocabStream</strong>
                           </a>
-                          を安定して動作する機能のみ公開しています。今後のアップデートをお楽しみに！
+                          を安定して動作する機能のみ公開しています。
                         </p>
                       </div>
                     </div>
@@ -412,7 +555,9 @@ export default function ExtraPage() {
                   <div className="p-4 bg-gray-100 rounded-lg">
                     <p className="mt-1 text-xl"><strong>2: 英語のインプットを増やす</strong></p>
                     <div className="mt-1">
-                      <p>英語力を本質的に伸ばすには、やはり <strong>リアルなインプット</strong> が欠かせません。リスニングには、<strong>「日本語ですでに何度も観たことのあるお気に入りの映画」を英語で視聴する</strong>ことをお勧めしています。リーディングには、<strong>「日本語で読んだことのあるお気に入りの本を英語で読む」</strong>ことをお勧めしています。ストーリーを知っている分、日本語の訳さずに、英語の音声や文と意味を結びつけやすくなります。</p>
+                      <p>英語力を本質的に伸ばすには、やはり <strong>リアルなインプット</strong> が欠かせません。</p>
+                      <p>リスニングには「日本語ですでに観たことのあるお気に入りの映画」を英語で視聴することや、英語でYoutubeなどを見ることをお勧めしています。</p>
+                      <p>リーディングには「日本語で読んだことのあるお気に入りの本を英語で読む」ことをお勧めしています。ストーリーを知っている分、日本語の訳さずに、英語の音声や文と意味を結びつけやすくなります。</p>
 
                       <div className="mt-2">
                         <p className="font-semibold">注意点：</p>
@@ -420,20 +565,29 @@ export default function ExtraPage() {
                           <li>日本語字幕や翻訳に頼らない（結局日英変換の学習になってしまう）</li>
                           <li>文法を過剰に分析しない（文を丸ごと意味として理解する練習に集中する）</li>
                         </ul>
-
-                        <p className="mt-1">通勤・通学時間などを使えば、1日で１時間のインプットとして、1年で200時間以上のインプットが可能です。継続のカギはモチベーションです。</p>
                       </div>
+                      <p className="mt-2">この学習方法を効率化するために、最適な英語のYoutube動画を推薦するアプリ
+                         <a
+                          className="underline"
+                          href="https://videofinder.projectfluence.vercel.app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >
+                          <strong>VideoFinder</strong>
+                          </a>
+                          を開発中です。
+                        </p>
                     </div>
                   </div>
                 </div>
 
                 {/* ここでコピー可能な依頼文ブロックを並べる */}
                 <div className="p-4 bg-gray-100 rounded-lg space-y-3">
-                  <p className="mt-1 text-xl"><strong>3: 生成AIを使ってアウトプットの練習をする</strong></p>
+                  <p className="mt-1 text-xl"><strong>3: AIを使ってアウトプットの練習をする</strong></p>
                   <div className="mt-1">
-                    <p>アウトプットの経験を積むには、生成AIとスピーキング・ライティングを練習することがおすすめです。特におすすめなのが、<strong>ChatGPTの活用</strong>です。「いつでも・どこでも・好きなだけ」 練習できるのが最大のメリットです。例えば夜の10時、自宅でくつろいでいるときでもスピーキング練習を行うことができます。私もドイツ語をB1からC1に伸ばす際に活用しました。</p>
-
-                    <p className="mt-2">以下の依頼文をコピーして使ってみてください。</p>
+                    <p>アウトプットの経験を積むには、生成AIとスピーキング・ライティングを練習することがおすすめです。「いつでも・どこでも・好きなだけ」 練習できるのが最大のメリットです。</p>
+                    
+                    <p className="mt-2">ChatGPTなどの生成AIに以下のように質問すると練習できます。</p>
 
                     <div className="grid gap-3">
                       {prompts.map((p, i) => (
@@ -442,17 +596,64 @@ export default function ExtraPage() {
                     </div>
 
                     <p className="text-xs text-gray-600 mt-2">＊ボタンは安全なコンテキスト（https）でのみ動作する場合があります。古いブラウザ向けのフォールバックも組み込んでいます。</p>
+
+                    <p className="mt-2">この学習方法を効率化するために、レベルにあわせた会話練習を提供するアプリ
+                      <a
+                          className="underline"
+                          href="https://speak.projectfluence.vercel.app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >
+                          <strong>SpeakwiseGPT</strong>
+                      </a>
+                        を開発中です。
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <footer className="mt-10 text-sm text-gray-700">All content © {new Date().getFullYear()} Project Fluence — 黒木 勇人
+          <footer className="mt-10 text-sm text-gray-700">All content © {new Date().getFullYear()} 黒木 勇人
            
           </footer>
           <Link href="/privacy" target="_blank">Privacy Policy</Link>
         </div>
+
+        {menuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 z-50">
+          
+          {/* Side panel */}
+          <div className="absolute right-0 top-0 w-64 h-full bg-white shadow-lg p-6">
+            
+            {/* Close button */}
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="text-xl mb-6"
+            >
+              ✕
+            </button>
+
+            {/* Navigation */}
+            <nav className="flex flex-col gap-4 text-lg">
+              <a href="#apps" onClick={() => setMenuOpen(false)}>
+                英語学習アプリ
+              </a>
+              <a href="# notes" onClick={() => setMenuOpen(false)}>
+                最近の note記事
+              </a>
+              <a href="#english-motivation" onClick={() => setMenuOpen(false)}>
+                英語を学ぶモチベーション
+              </a>
+              <a href="#method" onClick={() => setMenuOpen(false)}>
+                効果的な英語学習方法
+              </a>
+            </nav>
+          </div>
+        </div>
+      )}
+
+
       </main>
     </>
   );
