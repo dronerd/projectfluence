@@ -25,7 +25,8 @@
     ],
 
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "react-router-dom": ["./apps/vocabstream/src/lib/router-compat"]
     }
   },
 

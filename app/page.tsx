@@ -355,9 +355,8 @@ export default function ExtraPage() {
                   <li>語彙の定着を重視</li>
                 </ul>
 
-                <a
-                  href="https://vocabstream.vercel.app"
-                  target="_blank"
+                <Link
+                  href="/vocabstream"
                   className="mt-auto inline-block text-center 
                   bg-gradient-to-r from-indigo-600 to-cyan-500 
                   text-white px-5 py-2.5 rounded-full 
@@ -365,7 +364,7 @@ export default function ExtraPage() {
                   hover:shadow-lg hover:scale-[1.02] hover:brightness-110 
                   transition-all duration-200"                  >
                   アプリを開く →
-                </a>
+                </Link>
               </div>
 
               {/* VideoFinder */}
@@ -417,8 +416,7 @@ export default function ExtraPage() {
                 </ul>
 
                 <a
-                  href="https://speak.projectfluence.vercel.app"
-                  target="_blank"
+                  href="/speakwise"
                   className="mt-auto inline-block text-center 
                   bg-gradient-to-r from-indigo-600 to-cyan-500 
                   text-white px-5 py-2.5 rounded-full 
@@ -464,14 +462,43 @@ export default function ExtraPage() {
           </section>
 
           {/* なぜ英語を学ぶのか */}
-          <section id="english-motivation" className="mt-8 bg-white rounded-2xl p-6 shadow">
+          <section
+            id="english-motivation"
+            className="mt-8 bg-white rounded-2xl p-6 shadow"
+          >
             <h2 className="text-2xl font-bold">英語を学ぶモチベーション</h2>
-            <div className="mt-2 text-gray-700 leading-relaxed">
-              <p>英語を学ぶことで出会える人や文化、広がる可能性は、学習の努力をはるかに上回る価値を持っています。</p>
-              <p><strong>英語はまさに「一生もののスキル」です。</strong></p>
-              <p>中高では成績や受験に、大学では授業や研究に、そして社会人になれば海外とのやり取りや情報収集に大きな力を発揮します。翻訳を待たずに世界中の情報にアクセスでき、キャリアや人生の選択肢を大きく広げてくれるのです。</p>
-              <p><strong>これほどリターンの大きい学習分野は他に多くありません。</strong></p>
-              <p>もちろん、英語学習は時に大変で、思わず投げ出したくなる瞬間もあるでしょう。しかし、コツコツ続けていけば必ず「自分の言葉で伝えられる」日がやってきます。そのときの達成感は何ものにも代えがたいはずです。そして英語を通じて海外の人とつながれれば、新しい価値観や考え方に触れ、自分の世界も大きく広がっていきます。</p>
+
+            <div className="grid md:grid-cols-[1fr_auto] gap-6 items-start">
+            
+              {/* Text */}
+              <div className="text-gray-700 leading-relaxed space-y-3">
+                <p>
+                  英語を学ぶことで出会える人や文化、広がる可能性は、学習の努力をはるかに上回る価値を持っています。
+                </p>
+                <p>
+                  <strong>英語はまさに「一生もののスキル」です。</strong>
+                </p>
+                <p>
+                  中高では成績や受験に、大学では授業や研究に、そして社会人になれば海外とのやり取りや情報収集に大きな力を発揮します。翻訳を待たずに世界中の情報にアクセスでき、キャリアや人生の選択肢を大きく広げてくれるのです。
+                </p>
+                <p>
+                  <strong>これほどリターンの大きい学習分野は他に多くありません。</strong>
+                </p>
+                <p>
+                  もちろん、英語学習は時に大変で、思わず投げ出したくなる瞬間もあるでしょう。しかし、コツコツ続けていけば必ず「自分の言葉で伝えられる」日がやってきます。そのときの達成感は何ものにも代えがたいはずです。そして英語を通じて海外の人とつながれれば、新しい価値観や考え方に触れ、自分の世界も大きく広がっていきます。
+                </p>
+              </div>
+
+              {/* Image */}
+              <div className="flex justify-center md:justify-end">
+                <Image
+                  src="/images/learningenglish.png"
+                  alt="英語学習のイメージ"
+                  width={500}
+                  height={300}
+                  className="rounded-xl object-cover w-full max-w-[220px]"
+                />
+              </div>
             </div>
           </section>
 
@@ -530,14 +557,12 @@ export default function ExtraPage() {
                         <p className="mt-2">また、ChatGPTなどの生成AIに下のプロンプトを送信することも効果的です。</p>
 
                         <p className="mt-2">この学習方法を効率化するために、英単語アプリ
-                         <a
+                         <Link
                           className="underline"
-                          href="https://vocabstream.vercel.app"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >
+                          href="/vocabstream"
+                         >
                           <strong>VocabStream</strong>
-                          </a>
+                          </Link>
                           を安定して動作する機能のみ公開しています。
                         </p>
                       </div>
@@ -582,9 +607,7 @@ export default function ExtraPage() {
                     <p className="mt-2">この学習方法を効率化するために、レベルにあわせた会話練習を提供するアプリ
                       <a
                           className="underline"
-                          href="https://speak.projectfluence.vercel.app"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href="/speakwise"
                           >
                           <strong>SpeakwiseGPT</strong>
                       </a>
@@ -653,13 +676,12 @@ export default function ExtraPage() {
 
                 {/* Children (indented) */}
                 <div className="flex flex-col gap-2 mt-2 ml-4 text-base text-gray-600">
-                  <a
-                    href="https://vocabstream.vercel.app"
-                    target="_blank"
+                  <Link
+                    href="/vocabstream"
                     onClick={() => setMenuOpen(false)}
                   >
                     ・VocabStream
-                  </a>
+                  </Link>
 
                   <a
                     href="https://video.projectfluence.vercel.app"
@@ -670,8 +692,7 @@ export default function ExtraPage() {
                   </a>
 
                   <a
-                    href="https://speak.projectfluence.vercel.app"
-                    target="_blank"
+                    href="/speakwise"
                     onClick={() => setMenuOpen(false)}
                   >
                     ・SpeakWise GPT
