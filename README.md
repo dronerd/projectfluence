@@ -39,7 +39,7 @@ Yuto Kuroki
 - Supports levels from **A1 to C2**
 
 ### 📚 Educational Resources
-- Links to  note articles on:
+- Links to note articles on:
   - English learning strategies  
   - Exam success 
   - Multilingual learning tips  

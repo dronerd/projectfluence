@@ -156,22 +156,22 @@ export default function ExtraPage() {
     }
   ];
 
-  // ---  note articles (added as stylish cards) ---
-  const  noteArticles = [
+  // --- note articles (added as stylish cards) ---
+  const noteArticles = [
     {
-      key: " note Article1",
+      key: "note Article1",
       href: "https://note.com/projectfluence/n/nd806d6fa00ec",
       title:
         "日本にいながらネイティブ級へ─英語力を効果的に伸ばす学習方法｜英検１級・TOEIC満点・TOEFL116/120・ドイツ語上級",
     },
     {
-      key: " note Article2",
+      key: "note Article2",
       href: "https://note.com/projectfluence/n/n751ab984987a",
       title:
         "英語学習にも応用できる！第２外国語（ドイツ語）から見えてきた効果的な言語学習法",
     },
     {
-      key: " note Article3",
+      key: "note Article3",
       href: "https://note.com/projectfluence/n/n71bd9003af29",
       title:
         "（上級者向け）日本にいながら英語力をさらに高める効果的な方法",
@@ -267,7 +267,7 @@ export default function ExtraPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                    <strong> note</strong>
+                    <strong>note</strong>
                   </a>
                 で紹介し、開発したAI英語学習アプリも提供します。
               </p>
@@ -433,11 +433,11 @@ export default function ExtraPage() {
           </section>
           
 
-          {/* Recent  notes - updated: show 3 stylish rectangular cards */}
-          <section id=" notes" className="mt-8 bg-white rounded-2xl p-6 shadow">
-            <h2 className="text-2xl font-bold"> note記事</h2>
+          {/* Recent notes - updated: show 3 stylish rectangular cards */}
+          <section id="notes" className="mt-8 bg-white rounded-2xl p-6 shadow">
+            <h2 className="text-2xl font-bold">note記事</h2>
             <p>
-               noteでは、英語学習の方法やモチベーションの保ち方、私自身の学習体験から得た気づきなどを発信しています。ぜひご覧ください！
+              noteでは、英語学習の方法やモチベーションの保ち方、私自身の学習体験から得た気づきなどを発信しています。ぜひご覧ください！
             </p>
             <a
               href="https://note.com/projectfluence"
@@ -445,16 +445,16 @@ export default function ExtraPage() {
               rel="noopener noreferrer"
               className="inline-block mt-3 underline text-md font-medium"
             >
-              すべての note記事を見る →
+              すべてのnote記事を見る →
             </a>
             <ul className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-              { noteArticles.map(( note) => (
-                <li key={ note.key} className="py-0.5">
+              {noteArticles.map((note) => (
+                <li key={note.key} className="py-0.5">
                   <article className="h-full bg-neutral-50 border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between">
                     <div>
-                      <div className="inline-block px-2 py-1 text-xs font-semibold uppercase rounded-md bg-blue-50 text-blue-700 mb-2"> note</div>
-                      <a href={ note.href} target="_blank" rel="noopener noreferrer" className="text-sm md:text-base font-medium underline break-words">
-                        { note.title}
+                      <div className="inline-block px-2 py-1 text-xs font-semibold uppercase rounded-md bg-blue-50 text-blue-700 mb-2">note</div>
+                      <a href={note.href} target="_blank" rel="noopener noreferrer" className="text-sm md:text-base font-medium underline break-words">
+                        {note.title}
                       </a>
                     </div>
                   </article>
@@ -644,11 +644,44 @@ export default function ExtraPage() {
 
             {/* Navigation */}
             <nav className="flex flex-col gap-4 text-lg">
-              <a href="#apps" onClick={() => setMenuOpen(false)}>
-                英語学習アプリ
-              </a>
-              <a href="# notes" onClick={() => setMenuOpen(false)}>
-                最近の note記事
+
+              {/* Parent */}
+              <div>
+                <a href="#apps" onClick={() => setMenuOpen(false)}>
+                  英語学習アプリ
+                </a>
+
+                {/* Children (indented) */}
+                <div className="flex flex-col gap-2 mt-2 ml-4 text-base text-gray-600">
+                  <a
+                    href="https://vocabstream.vercel.app"
+                    target="_blank"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    ・VocabStream
+                  </a>
+
+                  <a
+                    href="https://video.projectfluence.vercel.app"
+                    target="_blank"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    ・VideoFinder
+                  </a>
+
+                  <a
+                    href="https://speak.projectfluence.vercel.app"
+                    target="_blank"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    ・SpeakWise GPT
+                  </a>
+                </div>
+              </div>
+
+              {/* Other links */}
+              <a href="#notes" onClick={() => setMenuOpen(false)}>
+                最近のnote記事
               </a>
               <a href="#english-motivation" onClick={() => setMenuOpen(false)}>
                 英語を学ぶモチベーション
@@ -659,6 +692,7 @@ export default function ExtraPage() {
               <a href="#prompts" onClick={() => setMenuOpen(false)}>
                 AIプロンプト集
               </a>
+
             </nav>
           </div>
         </div>

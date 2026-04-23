@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     apple: "/icon.png",       // iOS Safari 対応（任意だが推奨）
   },
  
-  keywords: ["黒木勇人", "Yuto Kuroki", "早稲田大学", "英語学習", "AI英語アプリ", " note", "VocabStream", "Project Fluence", "projectfluence", "ProjectFluence", "Projectfluence"],
+  keywords: ["黒木勇人", "Yuto Kuroki", "早稲田大学", "英語学習", "AI英語アプリ", "note", "VocabStream", "Project Fluence", "projectfluence", "ProjectFluence", "Projectfluence"],
   authors: [{ name: "黒木 勇人", url: "https://projectfluence.vercel.app",}],
   openGraph: {
     title: "Project Fluence ～あなたの未来に、英語の力を～",
