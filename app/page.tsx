@@ -63,9 +63,9 @@ export default function ExtraPage() {
   // --- The prompts to show / copy ---
   const prompts = [
     {
-      label: "英会話の練習用",
+      label: "英会話の練習用（英語のレベルをご自身で設定してください）",
       text:
-  `I want to practice speaking English.
+  `I want to practice speaking English. My English level: (A1 / A2 / B1 / B2 / C1 / C2).
 
   Please:
   1. Ask me one question at a time about (everyday life / university studies / future plans, etc.).
@@ -77,9 +77,7 @@ export default function ExtraPage() {
   4. Show a corrected version of my answer.
   5. Then ask the next question.
 
-  Use mostly words at my level, but occasionally include slightly more advanced vocabulary.
-
-  My English level: (A1 / A2 / B1 / B2 / C1 / C2).`
+  Use mostly words at my level, but occasionally include slightly more advanced vocabulary.`
     },
     {
       label: "英検対策（例：１級の面接）",
@@ -330,7 +328,7 @@ export default function ExtraPage() {
             <h2 className="text-2xl font-bold">アプリ一覧</h2>
 
             <p className="mt-3 text-gray-700 leading-relaxed">
-              <p>これらのアプリは現在開発中です。今後のアップデートをお楽しみに！</p>
+              これらのアプリは現在開発中です。今後のアップデートをお楽しみに！
               これらのアプリは<strong>相互にデータを活用</strong>し、学習体験を最適化することを目指しています。
               例えば、<strong>VocabStream</strong>で学習した単語データをもとに、
               <strong>VideoFinder</strong>では理解しやすい動画を推薦し、
@@ -506,8 +504,8 @@ export default function ExtraPage() {
 
             <div>
               <h4 className="text-2xl font-semibold mb-2">本質的な英語力を身につける３つの方法</h4>
-              <div className="grid mt-2 md:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-6 mt-4">
+                
                   <div className="p-4 bg-gray-100 rounded-lg">
                     <p className="mt-1 text-xl"><strong>1: 英単語は「英語で」学ぶ</strong></p>
                     <div className="mt-1">
@@ -529,13 +527,7 @@ export default function ExtraPage() {
                         <p>(対義語) Giving up, Surrender</p>
 
                         <p className="mt-2">英英辞書・英英単語帳を使い、この学習方法を実践できます。</p>
-                        <p className="mt-2">また、ChatGPTなどの生成AIに以下のように質問することも効果的です。</p>
-
-                        <div className="grid gap-3">
-                          {prompts2.map((p, i) => (
-                            <CopyablePrompt key={i} label={p.label} text={p.text} />
-                          ))}
-                        </div>
+                        <p className="mt-2">また、ChatGPTなどの生成AIに下のプロンプトを送信することも効果的です。</p>
 
                         <p className="mt-2">この学習方法を効率化するために、英単語アプリ
                          <a
@@ -579,7 +571,6 @@ export default function ExtraPage() {
                         </p>
                     </div>
                   </div>
-                </div>
 
                 {/* ここでコピー可能な依頼文ブロックを並べる */}
                 <div className="p-4 bg-gray-100 rounded-lg space-y-3">
@@ -587,16 +578,7 @@ export default function ExtraPage() {
                   <div className="mt-1">
                     <p>アウトプットの経験を積むには、生成AIとスピーキング・ライティングを練習することがおすすめです。「いつでも・どこでも・好きなだけ」 練習できるのが最大のメリットです。</p>
                     
-                    <p className="mt-2">ChatGPTなどの生成AIに以下のように質問すると練習できます。</p>
-
-                    <div className="grid gap-3">
-                      {prompts.map((p, i) => (
-                        <CopyablePrompt key={i} label={p.label} text={p.text} />
-                      ))}
-                    </div>
-
-                    <p className="text-xs text-gray-600 mt-2">＊ボタンは安全なコンテキスト（https）でのみ動作する場合があります。古いブラウザ向けのフォールバックも組み込んでいます。</p>
-
+                    <p className="mt-2">ChatGPTなどの生成AIに下のプロンプトを送信することも効果的です。</p>
                     <p className="mt-2">この学習方法を効率化するために、レベルにあわせた会話練習を提供するアプリ
                       <a
                           className="underline"
@@ -610,6 +592,32 @@ export default function ExtraPage() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Prompts Section */}
+          <section id="prompts" className="mt-8 bg-white rounded-2xl p-6 shadow">
+            <h2 className="text-2xl font-bold">AIプロンプト集</h2>
+            <p className="mt-2 text-gray-700">
+              以下のプロンプトを使うことで、AIを活用した英語学習を効果的に進めることができます。コピーして、ChatGPTなどの生成AIに送信してみてください。
+            </p>
+
+            <div className="mt-6">
+              <h3 className="text-xl font-semibold mb-3">アウトプット練習</h3>
+              <div className="grid gap-3">
+                {prompts.map((p, i) => (
+                  <CopyablePrompt key={i} label={p.label} text={p.text} />
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold mb-3">単語・文法練習</h3>
+              <div className="grid gap-3">
+                {prompts2.map((p, i) => (
+                  <CopyablePrompt key={i} label={p.label} text={p.text} />
+                ))}
               </div>
             </div>
           </section>
@@ -647,6 +655,9 @@ export default function ExtraPage() {
               </a>
               <a href="#method" onClick={() => setMenuOpen(false)}>
                 効果的な英語学習方法
+              </a>
+              <a href="#prompts" onClick={() => setMenuOpen(false)}>
+                AIプロンプト集
               </a>
             </nav>
           </div>
