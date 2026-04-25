@@ -6,37 +6,9 @@ import Header from "./components/Header";
 import LearnGenres from "./pages/LearnGenres";
 import LessonList from "./pages/LessonList";
 import Lesson from "./pages/Lesson";
-import Review from "./pages/Review";
-import Privacy from "./pages/Privacy";
-import Prompts from "./pages/ChatGPT_prompts";
 import StillUnderDevelopment from "./pages/Still_under_development";
 import ReviewLessonDecide from "./pages/ReviewLessonDecide";
 import ReviewLesson from "./pages/ReviewLesson";
-import Eiken1Speaking from "./pages/eiken/eiken1_speaking";
-import Pre1Listening from "./pages/eiken/pre1_listening";
-import Pre1Speaking from "./pages/eiken/pre1_speaking";
-import Pre1Reading from "./pages/eiken/pre1_reading";
-import Pre1Writing from "./pages/eiken/pre1_writing";
-import Pre2Listening from "./pages/eiken/pre2_listening";
-import Pre2Speaking from "./pages/eiken/pre2_speaking";
-import Pre2Reading from "./pages/eiken/pre2_reading";
-import Pre2Writing from "./pages/eiken/pre2_writing";
-import ThreeListening from "./pages/eiken/3_listening";
-import ThreeSpeaking from "./pages/eiken/3_speaking";
-import ThreeReading from "./pages/eiken/3_reading";
-import ThreeWriting from "./pages/eiken/3_writing";
-import ToeicListening from "./pages/toeic/listening";
-import ToeicSpeaking from "./pages/toeic/speaking";
-import ToeicReading from "./pages/toeic/reading";
-import ToeicWriting from "./pages/toeic/writing";
-import IeltsListening from "./pages/ielts/listening";
-import IeltsSpeaking from "./pages/ielts/speaking";
-import IeltsReading from "./pages/ielts/reading";
-import IeltsWriting from "./pages/ielts/writing";
-import ToeflListening from "./pages/toefl/listening";
-import ToeflSpeaking from "./pages/toefl/speaking";
-import ToeflReading from "./pages/toefl/reading";
-import ToeflWriting from "./pages/toefl/writing";
 import { RouterCompatProvider } from "./lib/router-compat";
 import { matchPath } from "./lib/routes";
 
@@ -69,7 +41,6 @@ const routeTable = [
     render: () => <Lesson />,
     params: (params: Record<string, string>) => params,
   },
-  { pattern: "/review", render: () => <Review />, params: () => ({}) },
   {
     pattern: "/review/:id",
     render: (params: Record<string, string>) =>
@@ -80,39 +51,12 @@ const routeTable = [
         : { genreId: params.id },
   },
   { pattern: "/others", render: () => <LearnGenres />, params: () => ({}) },
-  { pattern: "/privacy", render: () => <Privacy />, params: () => ({}) },
-  { pattern: "/prompts", render: () => <Prompts />, params: () => ({}) },
   {
     pattern: "/still_under_development",
     render: () => <StillUnderDevelopment />,
     params: () => ({}),
   },
   { pattern: "/ai_chat", render: () => <SpeakWiseRedirect />, params: () => ({}) },
-  { pattern: "/eiken1_speaking", render: () => <Eiken1Speaking />, params: () => ({}) },
-  { pattern: "/pre1_listening", render: () => <Pre1Listening />, params: () => ({}) },
-  { pattern: "/pre1_speaking", render: () => <Pre1Speaking />, params: () => ({}) },
-  { pattern: "/pre1_reading", render: () => <Pre1Reading />, params: () => ({}) },
-  { pattern: "/pre1_writing", render: () => <Pre1Writing />, params: () => ({}) },
-  { pattern: "/pre2_listening", render: () => <Pre2Listening />, params: () => ({}) },
-  { pattern: "/pre2_speaking", render: () => <Pre2Speaking />, params: () => ({}) },
-  { pattern: "/pre2_reading", render: () => <Pre2Reading />, params: () => ({}) },
-  { pattern: "/pre2_writing", render: () => <Pre2Writing />, params: () => ({}) },
-  { pattern: "/3_listening", render: () => <ThreeListening />, params: () => ({}) },
-  { pattern: "/3_speaking", render: () => <ThreeSpeaking />, params: () => ({}) },
-  { pattern: "/3_reading", render: () => <ThreeReading />, params: () => ({}) },
-  { pattern: "/3_writing", render: () => <ThreeWriting />, params: () => ({}) },
-  { pattern: "/toeic_listening", render: () => <ToeicListening />, params: () => ({}) },
-  { pattern: "/toeic_speaking", render: () => <ToeicSpeaking />, params: () => ({}) },
-  { pattern: "/toeic_reading", render: () => <ToeicReading />, params: () => ({}) },
-  { pattern: "/toeic_writing", render: () => <ToeicWriting />, params: () => ({}) },
-  { pattern: "/ielts_listening", render: () => <IeltsListening />, params: () => ({}) },
-  { pattern: "/ielts_speaking", render: () => <IeltsSpeaking />, params: () => ({}) },
-  { pattern: "/ielts_reading", render: () => <IeltsReading />, params: () => ({}) },
-  { pattern: "/ielts_writing", render: () => <IeltsWriting />, params: () => ({}) },
-  { pattern: "/toefl_listening", render: () => <ToeflListening />, params: () => ({}) },
-  { pattern: "/toefl_speaking", render: () => <ToeflSpeaking />, params: () => ({}) },
-  { pattern: "/toefl_reading", render: () => <ToeflReading />, params: () => ({}) },
-  { pattern: "/toefl_writing", render: () => <ToeflWriting />, params: () => ({}) },
 ];
 
 function resolveRoute(pathname: string) {
