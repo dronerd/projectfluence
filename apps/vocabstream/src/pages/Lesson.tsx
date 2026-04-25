@@ -511,8 +511,8 @@ const Lesson: React.FC = () => {
   return (
     <div style={{
       display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start",
-      minHeight: "100vh", padding: isSmallScreen ? "10px" : "20px", paddingTop: isSmallScreen ? "56px" : "92px",
-      fontFamily: "sans-serif", textAlign: "center",
+      minHeight: "100vh", padding: isSmallScreen ? "10px" : "20px", paddingTop: isSmallScreen ? "12px" : "20px",
+      fontFamily: "sans-serif", textAlign: "center", backgroundColor: "#e5e7eb",
     }}>
 
       <style>{`
@@ -558,7 +558,7 @@ const Lesson: React.FC = () => {
 
         /* 矢印（→） */
         .breadcrumb .arrow {
-          color: #bbb;
+          color: #6b7280;
           margin: 0 4px;        /* 矢印とボタンの間隔を小さめに */
           flex: 0 0 auto;
         }

@@ -23,9 +23,8 @@ function SpeakWiseHeader() {
 
       <div className="speakwise-header-center">
         <a href="/speakwise" className="speakwise-title-link" aria-label="SpeakWise home">
-          <span className="speakwise-overline">Speaking App</span>
-          <h1 className="speakwise-title">SpeakWise</h1>
-          <span className="speakwise-subtitle">Focused on speaking practice</span>
+          <span className="speakwise-overline">英会話アプリ</span>
+          <h1 className="speakwise-title">SpeakWiseAI</h1>
         </a>
       </div>
 
@@ -99,15 +98,15 @@ export default function SpeakWiseApp({ pathname }: Props) {
           left: 0;
           right: 0;
           z-index: 1000;
-          background: rgba(8, 18, 37, 0.86);
+          background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%);
           backdrop-filter: blur(18px);
-          padding: 12px 18px;
+          padding: 8px 18px;
           border-bottom: 1px solid rgba(158, 180, 210, 0.16);
           display: grid;
           grid-template-columns: auto 1fr auto;
           align-items: center;
           gap: 14px;
-          min-height: 76px;
+          min-height: 56px;
           width: 100%;
           box-sizing: border-box;
           box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
@@ -179,7 +178,7 @@ export default function SpeakWiseApp({ pathname }: Props) {
           font-size: 11px;
           letter-spacing: 0.18em;
           text-transform: uppercase;
-          color: #92aacd;
+          color: white;
         }
 
         .speakwise-title {

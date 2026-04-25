@@ -46,7 +46,7 @@ export default function LandingPage() {
   return (
     <div
       className="landing-root"
-      style={{ padding: "8px 2mm", paddingTop: "92px", fontFamily: "Inter, Arial, sans-serif" }}
+      style={{ padding: "8px 2mm", paddingTop: "20px", fontFamily: "Inter, Arial, sans-serif", backgroundColor: "#e5e7eb" }}
     >
       {/* META: Helmet must be rendered inside component JSX */}
      
@@ -56,7 +56,7 @@ export default function LandingPage() {
         :root{
           --accent:#234E52;
           --muted:#666;
-          --page-bg-1: #081230;
+          --page-bg-1: #e5e7eb;
           --card-bg: #ffffff;
           --subcard-bg: #f1f5f8;
           --chip-bg: #f1f3f4;

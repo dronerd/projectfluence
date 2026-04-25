@@ -89,7 +89,7 @@ export default function AI_chat() {
   // UI styling helpers and global background
   useEffect(() => {
     const prev = document.body.style.backgroundColor;
-    document.body.style.backgroundColor = "#f7e1db";
+    document.body.style.backgroundColor = "#e5e7eb";
     return () => {
       document.body.style.backgroundColor = prev;
     };
@@ -869,7 +869,7 @@ export default function AI_chat() {
           .selected-line{margin-bottom:12px}
         `}</style>
 
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
+        <main className={containerClass} style={{ paddingTop: '20px' }}>
           <div className={contentClass}>
             <h1 style={{ fontSize: 22 }}>興味の設定</h1>
             <p className="lead">興味のあるトピックを選択してください。（＊複数選択可能です）</p>
@@ -974,7 +974,7 @@ export default function AI_chat() {
           }
         `}</style>
 
-        <main style={{ paddingTop: 92 }} className="app-container">
+        <main style={{ paddingTop: 20 }} className="app-container">
           <div className="card summary">
             <h1 style={{ fontSize: 22 }}>設定の確認</h1>
 
@@ -1018,7 +1018,7 @@ export default function AI_chat() {
           .selected-line{margin-bottom:12px}
         `}</style>
 
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
+        <main className={containerClass} style={{ paddingTop: '20px' }}>
           <div className={contentClass}>
             <h1 style={{ fontSize: 22 }}>英語試験への対策の設定</h1>
             <p className="lead">受験予定の英語試験を選択してください （＊複数選択可能です）</p>
@@ -1086,7 +1086,7 @@ export default function AI_chat() {
           .selected-line{margin-bottom:12px}
         `}</style>
 
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
+        <main className={containerClass} style={{ paddingTop: '20px' }}>
           <div className={contentClass}>
             <h1 style={{ fontSize: 22 }}>伸ばしたいスキルを選択してください</h1>
 
@@ -1138,7 +1138,7 @@ export default function AI_chat() {
           .summary-box{background:#eff6ff;padding:12px;border-radius:10px;margin-bottom:12px;text-align:center}
         `}</style>
 
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
+        <main className={containerClass} style={{ paddingTop: '20px' }}>
           <div className={contentClass}>
             <h1 style={{ fontSize: 22 }}>レッスンの希望時間を選択してください</h1>
             <p className="lead">レッスンに費やしたい時間を選んでください</p>
@@ -1189,7 +1189,7 @@ export default function AI_chat() {
           .selected-line{margin-bottom:12px}
         `}</style>
 
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
+        <main className={containerClass} style={{ paddingTop: '20px' }}>
           <div className={contentClass}>
             <h1 style={{ fontSize: 22 }}>レッスンに含める内容を選択してください</h1>
 
@@ -1252,7 +1252,7 @@ export default function AI_chat() {
           .grid-lessons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-height:320px;overflow:auto;padding:8px;background:white;border-radius:8px;border:1px solid #eef2f6}
         `}</style>
 
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
+        <main className={containerClass} style={{ paddingTop: '20px' }}>
           <div className={`${contentClass} vocab-wrap`}>
             <h1 style={{ fontSize: 22 }}>練習するカテゴリーを選択してください</h1>
 
@@ -1400,7 +1400,7 @@ export default function AI_chat() {
           }
         `}</style>
 
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
+        <main className={containerClass} style={{ paddingTop: '20px' }}>
           <div className={contentClass}>
             <h1 style={{ fontSize: 22 }}>レッスンの設定を確認してください</h1>
 

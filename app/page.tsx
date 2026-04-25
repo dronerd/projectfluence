@@ -243,7 +243,7 @@ export default function ExtraPage() {
 
                 <div className="min-w-0">
                   <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight">Project Fluence</h1>
-                  <p className="text-sm md:text-base text-gray-600 mt-1">～あなたの未来に、英語の力を～</p>
+                  <p className="text-xs md:text-sm text-gray-600 mt-1">～あなたの未来に、英語の力を～</p>
                 </div>
               </div>
 
@@ -331,8 +331,8 @@ export default function ExtraPage() {
               これらのアプリは現在開発中です。今後のアップデートをお楽しみに！
               これらのアプリは<strong>相互にデータを活用</strong>し、学習体験を最適化することを目指しています。
               例えば、<strong>VocabStream</strong>で学習した単語データをもとに、
-              <strong>VideoFinder</strong>では理解しやすい動画を推薦し、
-              <strong>SpeakWise GPT</strong>ではあなたの語彙レベルに合わせた会話練習を提供します。
+              <strong>VidMatcher</strong>では理解しやすい動画を推薦し、
+              <strong>SpeakWiseAI</strong>ではあなたの語彙レベルに合わせた会話練習を提供します。
             </p>
 
             <div className="mt-6 grid md:grid-cols-3 gap-6">
@@ -367,11 +367,11 @@ export default function ExtraPage() {
                 </Link>
               </div>
 
-              {/* VideoFinder */}
+              {/* VidMatcher */}
               <div className="bg-neutral-50 rounded-xl p-5 shadow-sm flex flex-col">
                 <div className="flex items-center gap-3">
-                  <Image src="/images/videofinder.png" alt="VideoFinder" width={60} height={60} className="rounded-md" />
-                  <h3 className="text-xl font-semibold">VideoFinder</h3>
+                  <Image src="/images/videofinder.png" alt="VidMatcher" width={60} height={60} className="rounded-md" />
+                  <h3 className="text-xl font-semibold">VidMatcher</h3>
                 </div>
 
                 <p className="mt-3 text-gray-700 text-sm leading-relaxed">
@@ -397,11 +397,11 @@ export default function ExtraPage() {
                 </a>
               </div>
               
-              {/* SpeakWise GPT */}
+              {/* SpeakWiseAI */}
               <div className="bg-neutral-50 rounded-xl p-5 shadow-sm flex flex-col">
                 <div className="flex items-center gap-3">
-                  <Image src="/images/speakwise.png" alt="SpeakWise GPT" width={60} height={60} className="rounded-md" />
-                  <h3 className="text-xl font-semibold">SpeakWise GPT</h3>
+                  <Image src="/images/speakwise.png" alt="SpeakWiseAI" width={60} height={60} className="rounded-md" />
+                  <h3 className="text-xl font-semibold">SpeakWiseAI</h3>
                 </div>
 
                 <p className="mt-3 text-gray-700 text-sm leading-relaxed">
@@ -586,11 +586,11 @@ export default function ExtraPage() {
                       <p className="mt-2">この学習方法を効率化するために、最適な英語のYoutube動画を推薦するアプリ
                          <a
                           className="underline"
-                          href="https://videofinder.projectfluence.vercel.app"
+                          href="https://VidMatcher.projectfluence.vercel.app"
                           target="_blank"
                           rel="noopener noreferrer"
                           >
-                          <strong>VideoFinder</strong>
+                          <strong>VidMatcher</strong>
                           </a>
                           を開発中です。
                         </p>
@@ -609,7 +609,7 @@ export default function ExtraPage() {
                           className="underline"
                           href="/speakwise"
                           >
-                          <strong>SpeakwiseGPT</strong>
+                          <strong>SpeakWiseAI</strong>
                       </a>
                         を開発中です。
                     </p>
@@ -688,14 +688,14 @@ export default function ExtraPage() {
                     target="_blank"
                     onClick={() => setMenuOpen(false)}
                   >
-                    ・VideoFinder
+                    ・VidMatcher
                   </a>
 
                   <a
                     href="/speakwise"
                     onClick={() => setMenuOpen(false)}
                   >
-                    ・SpeakWise GPT
+                    ・SpeakWiseAI
                   </a>
                 </div>
               </div>

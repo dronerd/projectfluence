@@ -50,15 +50,15 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           left: 0;
           right: 0;
           z-index: 1000;
-          background: rgba(8, 18, 37, 0.86);
+          background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%);
           backdrop-filter: blur(18px);
-          padding: 12px 18px;
+          padding: 8px 18px;
           border-bottom: 1px solid rgba(158, 180, 210, 0.16);
           display: grid;
           grid-template-columns: auto 1fr auto;
           align-items: center;
           gap: 14px;
-          min-height: 76px;
+          min-height: 56px;
           width: 100%;
           box-sizing: border-box;
           overflow-x: hidden;
@@ -136,7 +136,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           font-size: 11px;
           letter-spacing: 0.18em;
           text-transform: uppercase;
-          color: #92aacd;
+          color: white;
         }
 
         .vocab-title {
@@ -240,24 +240,19 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
 
         <div className="header-center">
           <Link to="/learn" className="vocab-title-link" onClick={scrollToTop}>
-            <span className="vocab-overline">Vocabulary App</span>
+            <span className="vocab-overline">単語学習アプリ</span>
             <h1 className="vocab-title">{title ?? "VocabStream"}</h1>
-            <span className="header-subtitle">Focused on vocabulary learning</span>
           </Link>
         </div>
 
         <div className="header-right">
           <Link to="/learn" className="header-pill vocab-pill" onClick={scrollToTop} aria-label="VocabStream learn page">
             <img src="/images/vocabstream.png" alt="VocabStream logo" />
-            <span>Learn</span>
+            <span>Home</span>
           </Link>
-          {user && !isLoginPage ? (
+          {user && !isLoginPage && (
             <button className="header-icon-btn" onClick={handleLogoutAndGotoLanding}>
               <span>ログアウト</span>
-            </button>
-          ) : (
-            <button type="button" className="header-icon-btn" onClick={scrollToTop} onKeyDown={handleKeyToScroll}>
-              <span>Page Top</span>
             </button>
           )}
         </div>

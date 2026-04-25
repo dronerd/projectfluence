@@ -17,9 +17,9 @@ const STATIC_GENRES: Lesson[] = [
   { id: "idioms-high-intermediate", title: "熟語中上級 (CEFR B2)" },
   { id: "idioms-advanced", title: "熟語上級 (CEFR C1)" },
   { id: "idioms-proficiency", title: "熟語熟達 (CEFR C2)" },
-  { id: "business-entry", title: "ビジネス入門レベル" },
-  { id: "business-intermediate", title: "ビジネス実践レベル" },
-  { id: "business-global", title: "ビジネスグローバルレベル" },
+  { id: "business-entry", title: "入門レベル" },
+  { id: "business-intermediate", title: "実践レベル" },
+  { id: "business-global", title: "グローバルレベル" },
   { id: "computer-science", title: "Computer Science & Technology" },
   { id: "medicine", title: "Medicine & Health" },
   { id: "economics-business", title: "Business & Economics" },
@@ -67,7 +67,7 @@ export default function LearnGenres() {
   };
 
   const blueGradients = ["#f7bba6", "#f08f76", "#e46c50", "#cc573c"];
-  const pageBackground = "#f6c6b3";
+  const pageBackground = "#e5e7eb";
 
   const levelOrder: LevelOrder = {
     単語: [
@@ -98,7 +98,6 @@ export default function LearnGenres() {
     return termColors[index % termColors.length];
   }
 
-  const HEADER_HEIGHT = isSmall ? 56 : 72;
   const basePadding = isSmall ? 12 : 20;
 
   const allowedLessonIds = new Set([
@@ -163,7 +162,7 @@ export default function LearnGenres() {
           margin-bottom: 20px;
           padding: 12px;
           background: white;
-          border: 3px solid #e46c50;
+          border: 1px solid #d1d5db;
           border-radius: 12px;
           box-shadow: 0 6px 14px rgba(0,0,0,0.08);
         }
@@ -216,7 +215,7 @@ export default function LearnGenres() {
         }
       `}</style>
 
-      <div className="main-container" style={{ paddingTop: basePadding + HEADER_HEIGHT -20 }}>
+      <div className="main-container" style={{ paddingTop: basePadding }}>
       
         <h2
           style={{
@@ -224,13 +223,13 @@ export default function LearnGenres() {
             fontWeight: 900, // 最大の太さ
             textAlign: "center",
             marginBottom: 10,
-            color: "#7f2f1e"
+            color: "#1f2937"
           }}
         >
-          単語の復習
+          単語の複習
         </h2>
 
-        <h3 style={{ fontSize: isSmall ? 16 : 22, fontWeight: 600, textAlign: "center", marginBottom: 20, color: "#bf4f35" }}>
+        <h3 style={{ fontSize: isSmall ? 16 : 22, fontWeight: 600, textAlign: "center", marginBottom: 20, color: "#374151" }}>
          復習する分野の選択
         </h3>
 

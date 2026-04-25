@@ -15,9 +15,9 @@ const STATIC_GENRE_TITLES: Record<string, string> = {
   "idioms-high-intermediate": "熟語中上級 (CEFR B2)",
   "idioms-advanced": "熟語上級 (CEFR C1)",
   "idioms-proficiency": "熟語熟達 (CEFR C2)",
-  "business-entry": "ビジネス入門レベル",
-  "business-intermediate": "ビジネス実践レベル",
-  "business-global": "ビジネスグローバルレベル",
+  "business-entry": "入門レベル",
+  "business-intermediate": "実践レベル",
+  "business-global": "グローバルレベル",
   "computer-science": "Computer Science & Technology",
   "medicine": "Medicine & Health",
   "economics-business": "Business & Economics",
@@ -124,7 +124,7 @@ const styles = `
 html, body, #root {
   margin: 0;
   padding: 0;
-  background: transparent;
+  background: #e5e7eb;
   width: 100%;
   height: 100%;
   overflow-x: hidden; /* prevent accidental horizontal scroll */
@@ -142,7 +142,7 @@ html, body, #root {
   padding: 10px 8px;
   padding-top: 92px;
   font-family: Inter, Arial, sans-serif;
-  background: transparent;
+  background: #e5e7eb;
   min-height: 100vh;
   width: 100%;
   max-width: 100%;
@@ -154,7 +154,7 @@ html, body, #root {
 .page-title {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #edf4ff;
+  color: #1f2937;
   text-align: center;
   font-weight: 800;
 }
@@ -166,17 +166,19 @@ html, body, #root {
   padding: 10px 18px;
   border-radius: 10px;
   border: none;
-  background: linear-gradient(135deg, #dfe9f7 0%, #c2d4ec 100%);
-  color: #10203b;
+  background: #ffffff;
+  color: #1f2937;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   transition: all 0.2s ease;
+  border: 1px solid #d1d5db;
 }
 .back-btn:hover {
-  background: linear-gradient(135deg, #edf4ff 0%, #d3e0f1 100%);
+  background: #f3f4f6;
   transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
 
@@ -195,15 +197,15 @@ html, body, #root {
 /* Lesson Card */
 .lesson-card {
   flex: 0 0 calc(25% - var(--card-gap));
-  background: linear-gradient(180deg, rgba(248,251,255,0.98), rgba(231,239,248,0.96));
-  border: 1px solid rgba(154,176,208,0.22);
+  background: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 24px;
   padding: var(--card-padding);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 20px 44px rgba(5,13,30,0.18);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
   cursor: pointer;
   min-width: 100px;
@@ -213,19 +215,19 @@ html, body, #root {
 /* Hover */
 .lesson-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 26px 54px rgba(5,13,30,0.24);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 .lesson-content { padding: 0; }
-.lesson-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; color: #10203b; }
-.lesson-meta { font-size: 14px; color: #44546d; }
+.lesson-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; color: #1f2937; }
+.lesson-meta { font-size: 14px; color: #6b7280; }
 
 /* Start Button inside card */
 .start-btn {
   width: 100%;
   border: none;
-  border-top: 1px solid rgba(255,255,255,0.10);
-  background: linear-gradient(135deg, #15335f 0%, #28579e 100%);
+  border-top: 1px solid #e5e7eb;
+  background: #1f2937;
   padding: 8px 0;
   font-size: 15px;
   font-weight: 600;
@@ -234,7 +236,7 @@ html, body, #root {
   border-radius: 16px;
   transition: background 0.15s ease, transform 0.08s ease;
 }
-.start-btn:hover { filter: brightness(1.04); transform: translateY(-1px); }
+.start-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
 
 /* Responsive tweaks */
 @media (min-width: 1200px) {
@@ -270,7 +272,8 @@ html, body, #root {
     flex: 0 0 calc(50% - 10px);
     padding: 10px;
     min-height: 110px;
-    background: linear-gradient(135deg, #a3c6ef 0%, #77a8e9 100%);
+    background: #ffffff;
+    border: 1px solid #d1d5db;
   }
   .lesson-title { font-size: 14px; }
   .lesson-meta { font-size: 12px; }

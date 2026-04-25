@@ -13,9 +13,9 @@ const STATIC_GENRES: Lesson[] = [
   { id: "idioms-high-intermediate", title: "熟語中上級 (CEFR B2)" },
   { id: "idioms-advanced", title: "熟語上級 (CEFR C1)" },
   { id: "idioms-proficiency", title: "熟語熟達 (CEFR C2)" },
-  { id: "business-entry", title: "ビジネス入門レベル" },
-  { id: "business-intermediate", title: "ビジネス実践レベル" },
-  { id: "business-global", title: "ビジネスグローバルレベル" },
+  { id: "business-entry", title: "入門レベル" },
+  { id: "business-intermediate", title: "実践レベル" },
+  { id: "business-global", title: "グローバルレベル" },
   { id: "computer-science", title: "Computer Science & Technology" },
   { id: "medicine", title: "Medicine & Health" },
   { id: "economics-business", title: "Business & Economics" },
@@ -68,7 +68,7 @@ export default function LearnGenres() {
     "linear-gradient(135deg, #dce9fb 0%, #aac7f1 100%)",
     "linear-gradient(135deg, #cfe0f8 0%, #8eb1e7 100%)",
   ];
-  const pageBackground = "transparent";
+  const pageBackground = "#e5e7eb";
 
   const levelOrder: LevelOrder = {
     単語: [
@@ -104,7 +104,6 @@ export default function LearnGenres() {
     return termColors[index % termColors.length];
   }
 
-  const HEADER_HEIGHT = isSmall ? 56 : 72;
   const basePadding = isSmall ? 12 : 20;
 
   const allowedLessonIds = new Set([
@@ -128,7 +127,7 @@ export default function LearnGenres() {
       <style>{`
         /* global box sizing & remove default margins that cause bleed */
         *, *::before, *::after { box-sizing: border-box; }
-        html, body, #root { height: 100%; margin: 0; padding: 0; overflow-x: hidden; background: transparent; }
+        html, body, #root { height: 100%; margin: 0; padding: 0; overflow-x: hidden; background: #e5e7eb; }
 
         /* outer wrapper fills vertical space but NOT using 100vw (avoids scroll issues) */
         .outer-root {
@@ -176,7 +175,7 @@ export default function LearnGenres() {
 
         .lesson-card {
           padding: 20px;
-          border: 1px solid rgba(107, 132, 171, 0.16);
+          border: 1px solid #d1d5db;
           border-radius: 18px;
           cursor: pointer;
           display: flex;
@@ -184,8 +183,9 @@ export default function LearnGenres() {
           justify-content: space-between;
           gap: 10px;
           transition: transform .14s cubic-bezier(.2,.9,.2,1), box-shadow .14s ease;
-          box-shadow: 0 12px 24px rgba(9,22,48,0.08);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.08);
           overflow: hidden; /* prevent children overflowing */
+          background: #ffffff;
         }
 
         /* ensure lesson image doesn't shrink and stays inside card */
@@ -222,7 +222,7 @@ export default function LearnGenres() {
         }
       `}</style>
 
-      <div className="main-container" style={{ paddingTop: basePadding + HEADER_HEIGHT -20 }}>
+      <div className="main-container" style={{ paddingTop: basePadding }}>
       
         <h2
           style={{
@@ -230,13 +230,13 @@ export default function LearnGenres() {
             fontWeight: 900, // 最大の太さ
             textAlign: "center",
             marginBottom: 10,
-            color: "#edf4ff"
+            color: "#1f2937"
           }}
         >
           単語の学習
         </h2>
 
-        <h3 style={{ fontSize: isSmall ? 16 : 22, fontWeight: 600, textAlign: "center", marginBottom: 24, color: "#b8c8df" }}>
+        <h3 style={{ fontSize: isSmall ? 16 : 22, fontWeight: 600, textAlign: "center", marginBottom: 24, color: "#374151" }}>
           学習する分野の選択
         </h3>
 
