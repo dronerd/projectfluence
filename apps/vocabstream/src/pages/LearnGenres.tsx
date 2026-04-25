@@ -5,14 +5,14 @@ type Lesson = { id: string; title: string; };
 type LevelOrder = { [key: string]: string[] };
 
 const STATIC_GENRES: Lesson[] = [
-  { id: "word-intermediate", title: "単語初級~中級 (CEFR A2~B1)" },
-  { id: "word-high-intermediate", title: "単語中上級 (CEFR B2)" },
-  { id: "word-advanced", title: "単語上級 (CEFR C1)" },
-  { id: "word-proficiency", title: "単語熟達 (CEFR C2)" },
-  { id: "idioms-intermediate", title: "熟語初級~中級 (CEFR A2~B1)" },
-  { id: "idioms-high-intermediate", title: "熟語中上級 (CEFR B2)" },
-  { id: "idioms-advanced", title: "熟語上級 (CEFR C1)" },
-  { id: "idioms-proficiency", title: "熟語熟達 (CEFR C2)" },
+  { id: "word-intermediate", title: "初級~中級 (CEFR A2~B1)" },
+  { id: "word-high-intermediate", title: "中上級 (CEFR B2)" },
+  { id: "word-advanced", title: "上級 (CEFR C1)" },
+  { id: "word-proficiency", title: "熟達 (CEFR C2)" },
+  { id: "idioms-intermediate", title: "初級~中級 (CEFR A2~B1)" },
+  { id: "idioms-high-intermediate", title: "中上級 (CEFR B2)" },
+  { id: "idioms-advanced", title: "上級 (CEFR C1)" },
+  { id: "idioms-proficiency", title: "熟達 (CEFR C2)" },
   { id: "business-entry", title: "入門レベル" },
   { id: "business-intermediate", title: "実践レベル" },
   { id: "business-global", title: "グローバルレベル" },
