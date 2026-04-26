@@ -52,17 +52,26 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           z-index: 1000;
           background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%);
           backdrop-filter: blur(18px);
-          padding: 8px 18px;
+          padding: 8px 0;
           border-bottom: 1px solid rgba(158, 180, 210, 0.16);
+          width: 100%;
+          box-sizing: border-box;
+          overflow-x: hidden;
+          box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+        }
+
+        .app-header-inner {
+          position: relative;
+          width: 100%;
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 18px;
           display: grid;
           grid-template-columns: auto 1fr auto;
           align-items: center;
           gap: 14px;
           min-height: 56px;
-          width: 100%;
           box-sizing: border-box;
-          overflow-x: hidden;
-          box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
         }
 
         .header-left,
@@ -181,9 +190,9 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
         }
 
         @media (max-width: 820px) {
-          .app-header {
+          .app-header-inner {
             grid-template-columns: auto 1fr;
-            padding: 12px 14px;
+            padding: 4px 14px;
           }
 
           .header-center {
@@ -206,7 +215,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
         }
 
         @media (max-width: 560px) {
-          .app-header {
+          .app-header-inner {
             gap: 10px;
             min-height: 72px;
           }
@@ -231,30 +240,32 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
       `}</style>
 
       <header className="app-header" role="banner">
-        <div className="header-left">
-          <a href="/" className="header-pill project-pill" aria-label="Project Fluence landing page">
-            <img src="/images/logo.png" alt="Project Fluence" className="brand-icon" />
-            <span>Project Fluence</span>
-          </a>
-        </div>
+        <div className="app-header-inner">
+          <div className="header-left">
+            <a href="/" className="header-pill project-pill" aria-label="Project Fluence landing page">
+              <img src="/images/logo.png" alt="Project Fluence" className="brand-icon" />
+              <span>Project Fluence</span>
+            </a>
+          </div>
 
-        <div className="header-center">
-          <Link to="/learn" className="vocab-title-link" onClick={scrollToTop}>
-            <span className="vocab-overline">単語学習アプリ</span>
-            <h1 className="vocab-title">{title ?? "VocabStream"}</h1>
-          </Link>
-        </div>
+          <div className="header-center">
+            <Link to="/learn" className="vocab-title-link" onClick={scrollToTop}>
+              <span className="vocab-overline">単語学習アプリ</span>
+              <h1 className="vocab-title">{title ?? "VocabStream"}</h1>
+            </Link>
+          </div>
 
-        <div className="header-right">
-          <Link to="/learn" className="header-pill vocab-pill" onClick={scrollToTop} aria-label="VocabStream learn page">
-            <img src="/images/vocabstream.png" alt="VocabStream logo" />
-            <span>Home</span>
-          </Link>
-          {user && !isLoginPage && (
-            <button className="header-icon-btn" onClick={handleLogoutAndGotoLanding}>
-              <span>ログアウト</span>
-            </button>
-          )}
+          <div className="header-right">
+            <Link to="/learn" className="header-pill vocab-pill" onClick={scrollToTop} aria-label="VocabStream learn page">
+              <img src="/images/vocabstream.png" alt="VocabStream logo" />
+              <span>Home</span>
+            </Link>
+            {user && !isLoginPage && (
+              <button className="header-icon-btn" onClick={handleLogoutAndGotoLanding}>
+                <span>ログアウト</span>
+              </button>
+            )}
+          </div>
         </div>
       </header>
     </>

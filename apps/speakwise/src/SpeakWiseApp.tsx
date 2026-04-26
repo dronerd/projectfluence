@@ -10,33 +10,35 @@ type Props = {
 function SpeakWiseHeader() {
   return (
     <header className="speakwise-header" role="banner">
-      <div className="speakwise-header-left">
-        <a
-          href="/"
-          className="speakwise-pill speakwise-project-pill"
-          aria-label="Project Fluence landing page"
-        >
-          <img src="/images/logo.png" alt="Project Fluence" className="speakwise-brand-icon" />
-          <span>Project Fluence</span>
-        </a>
-      </div>
+      <div className="speakwise-header-inner">
+        <div className="speakwise-header-left">
+          <a
+            href="/"
+            className="speakwise-pill speakwise-project-pill"
+            aria-label="Project Fluence landing page"
+          >
+            <img src="/images/logo.png" alt="Project Fluence" className="speakwise-brand-icon" />
+            <span>Project Fluence</span>
+          </a>
+        </div>
 
-      <div className="speakwise-header-center">
-        <a href="/speakwise" className="speakwise-title-link" aria-label="SpeakWise home">
-          <span className="speakwise-overline">英会話アプリ</span>
-          <h1 className="speakwise-title">SpeakWiseAI</h1>
-        </a>
-      </div>
+        <div className="speakwise-header-center">
+          <a href="/speakwise" className="speakwise-title-link" aria-label="SpeakWise home">
+            <span className="speakwise-overline">英会話アプリ</span>
+            <h1 className="speakwise-title">SpeakWiseAI</h1>
+          </a>
+        </div>
 
-      <div className="speakwise-header-right">
-        <a
-          href="/speakwise"
-          className="speakwise-pill speakwise-app-pill"
-          aria-label="SpeakWise home page"
-        >
-          <img src="/images/speakwise.png" alt="SpeakWise logo" />
-          <span>Home</span>
-        </a>
+        <div className="speakwise-header-right">
+          <a
+            href="/speakwise"
+            className="speakwise-pill speakwise-app-pill"
+            aria-label="SpeakWise home page"
+          >
+            <img src="/images/speakwise.png" alt="SpeakWise logo" />
+            <span>Home</span>
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -100,16 +102,25 @@ export default function SpeakWiseApp({ pathname }: Props) {
           z-index: 1000;
           background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%);
           backdrop-filter: blur(18px);
-          padding: 8px 18px;
+          padding: 8px 0;
           border-bottom: 1px solid rgba(158, 180, 210, 0.16);
+          width: 100%;
+          box-sizing: border-box;
+          box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+        }
+
+        .speakwise-header-inner {
+          position: relative;
+          width: 100%;
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 18px;
           display: grid;
           grid-template-columns: auto 1fr auto;
           align-items: center;
           gap: 14px;
           min-height: 56px;
-          width: 100%;
           box-sizing: border-box;
-          box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
         }
 
         .speakwise-header-left,
@@ -257,9 +268,9 @@ export default function SpeakWiseApp({ pathname }: Props) {
         }
 
         @media (max-width: 820px) {
-          .speakwise-header {
+          .speakwise-header-inner {
             grid-template-columns: auto 1fr;
-            padding: 12px 14px;
+            padding: 4px 14px;
           }
 
           .speakwise-header-center {
@@ -278,7 +289,7 @@ export default function SpeakWiseApp({ pathname }: Props) {
         }
 
         @media (max-width: 560px) {
-          .speakwise-header {
+          .speakwise-header-inner {
             gap: 10px;
             min-height: 72px;
           }
