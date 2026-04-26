@@ -1,28 +1,17 @@
 {
-    "lesson_id": "eiken-pre2-7",
-    "title": "Lesson 7",
-    "paragraph": "Nature shapes our environment and provides habitats for plants and animals. Mountains, rivers and forests influence climate and human activity. Protecting nature from pollution and natural disasters helps preserve these places for future generations.",
-    "words": [
-      { "word": "climate", "meaning": "the typical weather conditions in a region", "japaneseMeaning": "気候", "synonyms": "weather pattern, atmosphere", "antonyms": "", "example": "The region has a mild climate." },
-      { "word": "cloud", "meaning": "a visible mass of condensed water vapor in the sky", "japaneseMeaning": "雲", "synonyms": "vapor, mist", "antonyms": "clear sky", "example": "Dark clouds signalled rain." },
-      { "word": "coast", "meaning": "the land next to the sea", "japaneseMeaning": "海岸", "synonyms": "shore, seaside", "antonyms": "inland", "example": "They walked along the coast at sunset." },
-      { "word": "countryside", "meaning": "rural areas outside towns and cities", "japaneseMeaning": "田舎、郊外", "synonyms": "rural area, country", "antonyms": "city, urban area", "example": "We enjoyed the quiet countryside." },
-      { "word": "desert", "meaning": "a dry, sandy region with little rainfall", "japaneseMeaning": "砂漠", "synonyms": "wasteland, arid area", "antonyms": "oasis, rainforest", "example": "Crossing the desert was exhausting." },
-      { "word": "earthquake", "meaning": "a sudden shaking of the ground", "japaneseMeaning": "地震", "synonyms": "temblor, quake", "antonyms": "", "example": "The earthquake caused minor damage." },
-      { "word": "environment", "meaning": "the natural world and conditions around us", "japaneseMeaning": "環境", "synonyms": "surroundings, ecosystem", "antonyms": "pollution, degradation", "example": "We must protect the environment." },
-      { "word": "flood", "meaning": "an overflow of water onto normally dry land", "japaneseMeaning": "洪水", "synonyms": "inundation, deluge", "antonyms": "drought", "example": "Heavy rain caused a flood in the valley." },
-      { "word": "forest", "meaning": "a large area covered with trees", "japaneseMeaning": "森", "synonyms": "woodland, woods", "antonyms": "desert, plain", "example": "The forest is full of wildlife." },
-      { "word": "ground", "meaning": "the solid surface of the earth", "japaneseMeaning": "地面", "synonyms": "earth, soil", "antonyms": "sky, air", "example": "The ground was wet after the rain." },
-      { "word": "heat", "meaning": "high temperature or warmth", "japaneseMeaning": "熱、暑さ", "synonyms": "warmth, high temperature", "antonyms": "cold, chill", "example": "The heat was intense in midday." },
-      { "word": "island", "meaning": "land surrounded by water", "japaneseMeaning": "島", "synonyms": "isle, atoll", "antonyms": "mainland", "example": "They spent the holiday on a small island." },
-      { "word": "lake", "meaning": "a large body of freshwater surrounded by land", "japaneseMeaning": "湖", "synonyms": "pond (small), reservoir", "antonyms": "ocean", "example": "We went fishing on the lake." },
-      { "word": "mountain", "meaning": "a large natural elevation of the earth's surface", "japaneseMeaning": "山", "synonyms": "peak, summit", "antonyms": "valley, plain", "example": "They climbed the mountain last summer." },
-      { "word": "nature", "meaning": "the physical world of plants, animals, and landscapes", "japaneseMeaning": "自然", "synonyms": "wildlife, outdoors", "antonyms": "urban, artificial", "example": "Spending time in nature is relaxing." },
-      { "word": "pollution", "meaning": "the contamination of the environment", "japaneseMeaning": "汚染", "synonyms": "contamination, impurity", "antonyms": "cleanliness, purity", "example": "Air pollution affects many cities." },
-      { "word": "rain", "meaning": "water falling from clouds", "japaneseMeaning": "雨", "synonyms": "shower, precipitation", "antonyms": "sunshine, drought", "example": "We waited for the rain to stop." },
-      { "word": "river", "meaning": "a large natural stream of water flowing to the sea", "japaneseMeaning": "川", "synonyms": "stream, watercourse", "antonyms": "", "example": "The river flows through the city." },
-      { "word": "storm", "meaning": "a violent weather event with wind and rain", "japaneseMeaning": "嵐", "synonyms": "tempest, gale", "antonyms": "calm, clear weather", "example": "The storm damaged several trees." },
-      { "word": "valley", "meaning": "a low area between hills or mountains", "japaneseMeaning": "谷", "synonyms": "dale, basin", "antonyms": "mountain, peak", "example": "The village lies in a green valley." }
-    ]
-  }
-  
+  "lesson_id": "eiken-2-7",
+  "title": "Lesson 7",
+  "paragraph": "The outdoor course will enable students to examine plants and express their ideas in a notebook. The guide says the walk should last two hours, so students must wear shoes that fit well. They will reduce trash, refuse to touch wild animals, remove litter from the path, settle into groups quickly, and learn how small plants survive in dry weather.",
+  "words": [
+    { "word": "enable", "meaning": "to make it possible for someone to do something", "japaneseMeaning": "可能にする", "synonyms": "allow, permit", "antonyms": "prevent, stop", "forms": "enable, enables, enabling, enabled", "example": "The new ramp will enable wheelchair users to enter the hall." },
+    { "word": "examine", "meaning": "to look at something carefully", "japaneseMeaning": "調べる、検査する", "synonyms": "inspect, study", "antonyms": "ignore, miss", "forms": "examine, examines, examining, examined, examination", "example": "The doctor will examine my knee this afternoon." },
+    { "word": "express", "meaning": "to show or say what you think or feel", "japaneseMeaning": "表現する、述べる", "synonyms": "show, state", "antonyms": "hide, suppress", "forms": "express, expresses, expressing, expressed, expression", "example": "Students can express their opinions in the survey." },
+    { "word": "fit", "meaning": "to be the right size or shape", "japaneseMeaning": "合う、適合する", "synonyms": "suit, match", "antonyms": "misfit, clash", "forms": "fit, fits, fitting, fitted", "example": "These shoes fit me better than the old pair." },
+    { "word": "last", "meaning": "to continue for a period of time", "japaneseMeaning": "続く、持続する", "synonyms": "continue, remain", "antonyms": "end, stop", "forms": "last, lasts, lasting, lasted", "example": "The meeting will last about one hour." },
+    { "word": "reduce", "meaning": "to make something smaller or less", "japaneseMeaning": "減らす", "synonyms": "decrease, lower", "antonyms": "increase, raise", "forms": "reduce, reduces, reducing, reduced, reduction", "example": "We should reduce food waste at lunch." },
+    { "word": "refuse", "meaning": "to say no to something", "japaneseMeaning": "断る、拒否する", "synonyms": "reject, decline", "antonyms": "accept, agree", "forms": "refuse, refuses, refusing, refused, refusal", "example": "You can refuse a plastic bag at the store." },
+    { "word": "remove", "meaning": "to take something away from a place", "japaneseMeaning": "取り除く、外す", "synonyms": "take away, clear", "antonyms": "add, place", "forms": "remove, removes, removing, removed, removal", "example": "Please remove your shoes before entering the room." },
+    { "word": "settle", "meaning": "to become calm or make a decision after discussion", "japaneseMeaning": "落ち着く、解決する", "synonyms": "calm down, decide", "antonyms": "argue, disturb", "forms": "settle, settles, settling, settled, settlement", "example": "The class will settle into groups before the game starts." },
+    { "word": "survive", "meaning": "to continue living after danger or difficulty", "japaneseMeaning": "生き残る", "synonyms": "live, remain", "antonyms": "die, fail", "forms": "survive, survives, surviving, survived, survival", "example": "Some plants survive with very little water." }
+  ]
+}

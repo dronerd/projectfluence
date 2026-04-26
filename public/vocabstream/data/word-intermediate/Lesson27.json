@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-27",
-  "title": "Lesson 2",
-  "paragraph": "This lesson focuses on verbs that describe handling objects, movement, and basic interactions — useful for daily conversations and practical tasks.",
+  "lesson_id": "eiken-2-27",
+  "title": "Lesson 27",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "break", "meaning": "to separate into pieces or stop working", "japaneseMeaning": "壊す／壊れる", "synonyms": "fracture, damage", "antonyms": "fix, mend", "example": "He accidentally broke the glass." },
-    { "word": "bring", "meaning": "to carry something to a place", "japaneseMeaning": "持って来る", "synonyms": "carry, deliver", "antonyms": "take away, remove", "example": "Please bring your textbook tomorrow." },
-    { "word": "build", "meaning": "to construct by putting parts together", "japaneseMeaning": "建てる／作る", "synonyms": "construct, create", "antonyms": "destroy, demolish", "example": "They plan to build a new bridge." },
-    { "word": "cancel", "meaning": "to decide that an arranged event will not happen", "japaneseMeaning": "キャンセルする", "synonyms": "call off, revoke", "antonyms": "confirm, proceed", "example": "The flight was canceled due to weather." },
-    { "word": "carry", "meaning": "to support and move something from one place to another", "japaneseMeaning": "運ぶ", "synonyms": "transport, bear", "antonyms": "drop, leave", "example": "She carried the box upstairs." },
-    { "word": "catch", "meaning": "to capture or take hold of something", "japaneseMeaning": "捕まえる", "synonyms": "grab, seize", "antonyms": "miss, release", "example": "He caught the ball easily." },
-    { "word": "choose", "meaning": "to select from two or more options", "japaneseMeaning": "選ぶ", "synonyms": "select, pick", "antonyms": "reject, refuse", "example": "Choose the best answer." },
-    { "word": "collect", "meaning": "to bring things together as a group", "japaneseMeaning": "集める", "synonyms": "gather, assemble", "antonyms": "scatter, disperse", "example": "She collects stamps as a hobby." },
-    { "word": "compare", "meaning": "to examine similarities and differences", "japaneseMeaning": "比較する", "synonyms": "contrast, evaluate", "antonyms": "ignore, separate", "example": "Compare the two products before buying." },
-    { "word": "complain", "meaning": "to express dissatisfaction or annoyance", "japaneseMeaning": "不平を言う", "synonyms": "grumble, protest", "antonyms": "praise, compliment", "example": "He complained about the noise." },
-    { "word": "complete", "meaning": "to finish something", "japaneseMeaning": "完了する", "synonyms": "finish, accomplish", "antonyms": "start, neglect", "example": "She completed the assignment on time." },
-    { "word": "concentrate", "meaning": "to direct attention or effort toward something", "japaneseMeaning": "集中する", "synonyms": "focus, attend", "antonyms": "distract, neglect", "example": "Concentrate on the task at hand." }
+    { "word": "admire", "meaning": "to respect or like someone because of what they do", "japaneseMeaning": "称賛する、尊敬する", "synonyms": "respect, appreciate", "antonyms": "dislike, criticize", "forms": "admire, admires, admiring, admired, admiration", "example": "I admire my sister because she works hard." },
+    { "word": "admit", "meaning": "to say that something is true, especially something difficult", "japaneseMeaning": "認める、入れる", "synonyms": "accept, confess", "antonyms": "deny, reject", "forms": "admit, admits, admitting, admitted, admission", "example": "He will admit his mistake to the teacher." },
+    { "word": "appear", "meaning": "to become visible or seem to be a certain way", "japaneseMeaning": "現れる、〜のように見える", "synonyms": "show up, seem", "antonyms": "disappear, hide", "forms": "appear, appears, appearing, appeared, appearance", "example": "Dark clouds appear before the storm." },
+    { "word": "attach", "meaning": "to fasten or connect one thing to another", "japaneseMeaning": "取り付ける、添付する", "synonyms": "fasten, connect", "antonyms": "remove, separate", "forms": "attach, attaches, attaching, attached, attachment", "example": "Please attach the photo to your email." },
+    { "word": "bake", "meaning": "to cook food in an oven", "japaneseMeaning": "焼く", "synonyms": "cook, roast", "antonyms": "freeze, cool", "forms": "bake, bakes, baking, baked", "example": "We bake bread every Saturday morning." },
+    { "word": "burn", "meaning": "to be damaged by fire or heat", "japaneseMeaning": "燃える、焦げる", "synonyms": "catch fire, scorch", "antonyms": "cool, freeze", "forms": "burn, burns, burning, burned, burnt", "example": "Do not burn the toast in the oven." },
+    { "word": "chase", "meaning": "to run after someone or something", "japaneseMeaning": "追いかける", "synonyms": "follow, pursue", "antonyms": "escape, ignore", "forms": "chase, chases, chasing, chased", "example": "The dog likes to chase a ball in the park." },
+    { "word": "climb", "meaning": "to go up something using your feet and often your hands", "japaneseMeaning": "登る", "synonyms": "go up, scale", "antonyms": "descend, fall", "forms": "climb, climbs, climbing, climbed", "example": "We climb the hill to see the town." },
+    { "word": "discover", "meaning": "to find something for the first time", "japaneseMeaning": "発見する", "synonyms": "find, learn", "antonyms": "lose, miss", "forms": "discover, discovers, discovering, discovered, discovery", "example": "Scientists discover new facts about the ocean." },
+    { "word": "earn", "meaning": "to get money by working", "japaneseMeaning": "稼ぐ、得る", "synonyms": "make, receive", "antonyms": "spend, lose", "forms": "earn, earns, earning, earned", "example": "Students can earn extra money with a part-time job." }
   ]
 }

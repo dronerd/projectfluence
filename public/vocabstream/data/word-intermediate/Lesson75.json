@@ -1,0 +1,97 @@
+{
+  "lesson_id": "eiken-2-75",
+  "title": "Lesson 75",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    {
+      "word": "airport",
+      "meaning": "a place where planes arrive and leave",
+      "japaneseMeaning": "空港",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "airport, airports",
+      "example": "The airport was crowded today."
+    },
+    {
+      "word": "baggage",
+      "meaning": "bags and suitcases for travel",
+      "japaneseMeaning": "手荷物",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "baggage, baggages",
+      "example": "Our baggage arrived late."
+    },
+    {
+      "word": "boarding",
+      "meaning": "the act of getting on a plane, ship, or train",
+      "japaneseMeaning": "搭乗",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "boarding, boardings",
+      "example": "Boarding begins at gate five."
+    },
+    {
+      "word": "departure",
+      "meaning": "the act of leaving a place",
+      "japaneseMeaning": "出発",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "departure, departures",
+      "example": "Our departure time is six o’clock."
+    },
+    {
+      "word": "destination",
+      "meaning": "the place someone is going to",
+      "japaneseMeaning": "目的地",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "destination, destinations",
+      "example": "Kyoto is our final destination."
+    },
+    {
+      "word": "journey",
+      "meaning": "travel from one place to another",
+      "japaneseMeaning": "旅、移動",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "journey, journeies",
+      "example": "The journey took three hours."
+    },
+    {
+      "word": "platform",
+      "meaning": "the place where people wait for trains",
+      "japaneseMeaning": "ホーム",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "platform, platforms",
+      "example": "The train leaves from platform two."
+    },
+    {
+      "word": "route",
+      "meaning": "the way from one place to another",
+      "japaneseMeaning": "経路",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "route, routes",
+      "example": "This route avoids the busy road."
+    },
+    {
+      "word": "traffic",
+      "meaning": "vehicles moving on roads",
+      "japaneseMeaning": "交通、渋滞",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "traffic, traffics",
+      "example": "Traffic is heavy this morning."
+    },
+    {
+      "word": "transport",
+      "meaning": "ways of moving people or goods",
+      "japaneseMeaning": "交通機関、輸送",
+      "synonyms": "item, thing",
+      "antonyms": "opposite, lack",
+      "forms": "transport, transports",
+      "example": "Public transport is convenient here."
+    }
+  ]
+}

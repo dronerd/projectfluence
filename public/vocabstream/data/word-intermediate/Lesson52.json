@@ -1,19 +1,17 @@
- {
-    "lesson_id": "eiken-pre2-52",
-    "title": "Lesson 52",
-    "paragraph": "Achievement and talent adjectives, followed by basic feeling words to describe emotional states.",
-    "words": [
-      { "word": "successful", "meaning": "achieving desired aims or results", "japaneseMeaning": "成功した／うまくいっている", "synonyms": "accomplished, prosperous", "antonyms": "unsuccessful, failing", "example": "Their project was successful and well received." },
-      { "word": "talented", "meaning": "having a natural aptitude or skill", "japaneseMeaning": "才能のある", "synonyms": "gifted, skilled", "antonyms": "untalented, inept", "example": "She is a talented musician." },
-      { "word": "talkative", "meaning": "fond of talking a lot", "japaneseMeaning": "お喋りな", "synonyms": "loquacious, chatty", "antonyms": "quiet, reticent", "example": "My friend is very talkative on the phone." },
-      { "word": "tidy", "meaning": "neat and in good order", "japaneseMeaning": "きちんとした／整頓された", "synonyms": "neat, orderly", "antonyms": "messy, untidy", "example": "Keep your desk tidy for study." },
-      { "word": "unfriendly", "meaning": "not friendly; hostile", "japaneseMeaning": "不親切な／不愛想な", "synonyms": "cold, hostile", "antonyms": "friendly, cordial", "example": "He seemed unfriendly at the meeting." },
-      { "word": "weak", "meaning": "lacking physical strength or power", "japaneseMeaning": "弱い", "synonyms": "feeble, frail", "antonyms": "strong, robust", "example": "After the flu, she still feels weak." },
-      { "word": "afraid", "meaning": "feeling fear or anxiety; frightened", "japaneseMeaning": "怖がっている／恐れている", "synonyms": "scared, fearful", "antonyms": "brave, confident", "example": "He is afraid of the dark." },
-      { "word": "angry", "meaning": "feeling strong annoyance or displeasure", "japaneseMeaning": "怒っている", "synonyms": "furious, irritated", "antonyms": "calm, pleased", "example": "She was angry about the delay." },
-      { "word": "annoyed", "meaning": "slightly angry; irritated", "japaneseMeaning": "苛立っている／うんざりしている", "synonyms": "irritated, bothered", "antonyms": "pleased, delighted", "example": "He was annoyed by the loud noise." },
-      { "word": "anxious", "meaning": "experiencing worry or unease", "japaneseMeaning": "不安な／心配している", "synonyms": "worried, uneasy", "antonyms": "calm, relaxed", "example": "She felt anxious before the exam." },
-      { "word": "ashamed", "meaning": "feeling embarrassed or guilty about one's actions", "japaneseMeaning": "恥ずかしい／罪悪感のある", "synonyms": "embarrassed, guilty", "antonyms": "proud, unashamed", "example": "He was ashamed of his behavior." },
-      { "word": "bored", "meaning": "feeling weary because one is unoccupied or uninterested", "japaneseMeaning": "退屈している", "synonyms": "uninterested, dull", "antonyms": "engaged, interested", "example": "I get bored during long meetings." }
-    ]
-  }
+{
+  "lesson_id": "eiken-2-52",
+  "title": "Lesson 52",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "color", "meaning": "red, blue, green, or another visual quality", "japaneseMeaning": "色", "synonyms": "shade, hue", "antonyms": "colorlessness", "forms": "color, colors", "example": "Blue is my favorite color." },
+    { "word": "country", "meaning": "a nation with its own government", "japaneseMeaning": "国、田舎", "synonyms": "nation, state", "antonyms": "city, region", "forms": "country, countries", "example": "Japan is a country in Asia." },
+    { "word": "doctor", "meaning": "a person trained to treat sick or injured people", "japaneseMeaning": "医者", "synonyms": "physician, medical worker", "antonyms": "patient", "forms": "doctor, doctors", "example": "The doctor checked my throat." },
+    { "word": "dream", "meaning": "pictures in your mind while sleeping or a strong hope", "japaneseMeaning": "夢", "synonyms": "vision, hope", "antonyms": "reality, fact", "forms": "dream, dreams", "example": "Her dream is to become a pilot." },
+    { "word": "farm", "meaning": "land used for growing crops or keeping animals", "japaneseMeaning": "農場", "synonyms": "field, ranch", "antonyms": "city, factory", "forms": "farm, farms", "example": "The farm grows rice and vegetables." },
+    { "word": "fire", "meaning": "flames and heat from burning", "japaneseMeaning": "火、火事", "synonyms": "flames, blaze", "antonyms": "water, ice", "forms": "fire, fires", "example": "The fire kept us warm at night." },
+    { "word": "floor", "meaning": "the flat surface you walk on inside a room", "japaneseMeaning": "床、階", "synonyms": "ground, level", "antonyms": "ceiling, roof", "forms": "floor, floors", "example": "Please clean the floor after dinner." },
+    { "word": "food", "meaning": "things that people or animals eat", "japaneseMeaning": "食べ物", "synonyms": "meal, nourishment", "antonyms": "drink, poison", "forms": "food, foods", "example": "The food at the party was delicious." },
+    { "word": "front", "meaning": "the part of something that faces forward", "japaneseMeaning": "前、正面", "synonyms": "face, entrance", "antonyms": "back, rear", "forms": "front, fronts", "example": "Wait at the front of the building." },
+    { "word": "game", "meaning": "an activity or sport with rules", "japaneseMeaning": "ゲーム、試合", "synonyms": "match, contest", "antonyms": "work, practice", "forms": "game, games", "example": "The game starts at three." }
+  ]
+}

@@ -1,20 +1,17 @@
- {
-    "lesson_id": "eiken-pre2-54",
-    "title": "Lesson 54",
-    "paragraph": "More feelings — words for positive and negative emotional states and bodily sensations.",
-    "words": [
-      { "word": "grateful", "meaning": "feeling thankful", "japaneseMeaning": "感謝している", "synonyms": "thankful, appreciative", "antonyms": "ungrateful, thankless", "example": "I’m grateful for your help." },
-      { "word": "guilty", "meaning": "feeling responsible for wrongdoing", "japaneseMeaning": "罪悪感がある", "synonyms": "remorseful, ashamed", "antonyms": "innocent, blameless", "example": "He felt guilty about breaking the vase." },
-      { "word": "happy", "meaning": "feeling or showing pleasure or contentment", "japaneseMeaning": "幸せな／嬉しい", "synonyms": "joyful, pleased", "antonyms": "sad, unhappy", "example": "She is happy with her new job." },
-      { "word": "hopeful", "meaning": "feeling optimistic about the future", "japaneseMeaning": "希望に満ちた", "synonyms": "optimistic, expectant", "antonyms": "hopeless, pessimistic", "example": "We are hopeful about the results." },
-      { "word": "hopeless", "meaning": "feeling despair and no expectation of improvement", "japaneseMeaning": "絶望的な", "synonyms": "despairing, bleak", "antonyms": "hopeful, optimistic", "example": "After many failures he felt hopeless." },
-      { "word": "hungry", "meaning": "feeling the need for food", "japaneseMeaning": "空腹の", "synonyms": "starving, famished", "antonyms": "full, satisfied", "example": "I’m hungry — let’s get lunch." },
-      { "word": "hurt", "meaning": "physically injured or emotionally upset", "japaneseMeaning": "傷ついた／痛んでいる", "synonyms": "injured, pained", "antonyms": "healed, well", "example": "She felt hurt by his comment." },
-      { "word": "lazy", "meaning": "unwilling to work or use energy", "japaneseMeaning": "怠惰な", "synonyms": "idle, lethargic", "antonyms": "industrious, active", "example": "I feel lazy on Sundays." },
-      { "word": "lonely", "meaning": "sad because one is alone", "japaneseMeaning": "孤独な／寂しい", "synonyms": "isolated, alone", "antonyms": "connected, sociable", "example": "She felt lonely when her friends left." },
-      { "word": "miserable", "meaning": "very unhappy or uncomfortable", "japaneseMeaning": "惨めな／悲惨な", "synonyms": "unhappy, wretched", "antonyms": "content, cheerful", "example": "He was miserable after the breakup." },
-      { "word": "nervous", "meaning": "anxious or apprehensive", "japaneseMeaning": "緊張している／神経質な", "synonyms": "anxious, jittery", "antonyms": "calm, composed", "example": "I’m nervous about the interview." },
-      { "word": "peaceful", "meaning": "free from disturbance; calm", "japaneseMeaning": "平和な／穏やかな", "synonyms": "calm, tranquil", "antonyms": "chaotic, noisy", "example": "The countryside was peaceful and quiet." }
-    ]
-  }
-
+{
+  "lesson_id": "eiken-2-54",
+  "title": "Lesson 54",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "dead", "meaning": "not alive", "japaneseMeaning": "死んだ、枯れた", "synonyms": "not living, lifeless", "antonyms": "alive, living", "forms": "dead, deadly", "example": "The dead plant needs to be removed." },
+    { "word": "dark", "meaning": "with little or no light", "japaneseMeaning": "暗い", "synonyms": "dim, black", "antonyms": "bright, light", "forms": "dark, darker, darkest, darkness", "example": "The room was dark after sunset." },
+    { "word": "clear", "meaning": "easy to see, hear, or understand", "japaneseMeaning": "明確な、澄んだ", "synonyms": "obvious, clean", "antonyms": "unclear, cloudy", "forms": "clear, clearly, clarity", "example": "The teacher gave a clear explanation." },
+    { "word": "active", "meaning": "moving often or doing many things", "japaneseMeaning": "活動的な", "synonyms": "busy, energetic", "antonyms": "inactive, still", "forms": "active, actively, activity", "example": "My grandfather is still active every day." },
+    { "word": "actual", "meaning": "real, not imagined", "japaneseMeaning": "実際の", "synonyms": "real, true", "antonyms": "imaginary, false", "forms": "actual, actually", "example": "The actual price was lower than we expected." },
+    { "word": "awful", "meaning": "very bad or unpleasant", "japaneseMeaning": "ひどい、とても悪い", "synonyms": "terrible, bad", "antonyms": "wonderful, excellent", "forms": "awful, awfully", "example": "The weather was awful during the trip." },
+    { "word": "bad", "meaning": "not good or not pleasant", "japaneseMeaning": "悪い", "synonyms": "poor, wrong", "antonyms": "good, excellent", "forms": "bad, worse, worst, badly", "example": "The milk has a bad smell." },
+    { "word": "better", "meaning": "of higher quality or more suitable", "japaneseMeaning": "より良い", "synonyms": "improved, stronger", "antonyms": "worse, poorer", "forms": "better, best", "example": "This plan is better than the old one." },
+    { "word": "big", "meaning": "large in size or amount", "japaneseMeaning": "大きい", "synonyms": "large, huge", "antonyms": "small, little", "forms": "big, bigger, biggest", "example": "They live in a big house." },
+    { "word": "bitter", "meaning": "having a strong sharp taste that is not sweet", "japaneseMeaning": "苦い", "synonyms": "sharp, harsh", "antonyms": "sweet, mild", "forms": "bitter, bitterly, bitterness", "example": "The coffee tasted bitter without sugar." }
+  ]
+}

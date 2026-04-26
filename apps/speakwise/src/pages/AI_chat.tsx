@@ -24,44 +24,38 @@ interface ChatEntry {
 }
 
 const CATEGORIES: Record<string, string> = {
-  "business-entry": "Business (Entry)",
-  "business-global": "Business (Global)",
-  "business-intermediate": "Business (Intermediate)",
   "computer-science": "Computer Science",
   "economics-business": "Economics & Business",
   "engineering": "Engineering",
   "environment": "Environment",
   "idioms-advanced": "Idioms (Advanced)",
-  "idioms-high-intermediate": "Idioms (High-Intermediate)",
+  "idioms-beginner": "Idioms (Beginner)",
   "idioms-intermediate": "Idioms (Intermediate)",
   "idioms-proficiency": "Idioms (Proficiency)",
   "law": "Law",
   "medicine": "Medicine",
   "politics": "Politics",
   "word-advanced": "Words (Advanced)",
-  "word-high-intermediate": "Words (High-Intermediate)",
+  "word-beginner": "Words (Beginner)",
   "word-intermediate": "Words (Intermediate)",
   "word-proficiency": "Words (Proficiency)",
 };
 
 const LESSON_COUNTS: Record<string, number> = {
-  "business-entry": 50,
-  "business-global": 60,
-  "business-intermediate": 48,
   "computer-science": 40,
   "economics-business": 36,
   "engineering": 71,
   "environment": 30,
   "idioms-advanced": 28,
-  "idioms-high-intermediate": 32,
-  "idioms-intermediate": 34,
+  "idioms-beginner": 34,
+  "idioms-intermediate": 32,
   "idioms-proficiency": 26,
   "law": 22,
   "medicine": 18,
   "politics": 71,
   "word-advanced": 44,
-  "word-high-intermediate": 50,
-  "word-intermediate": 64,
+  "word-beginner": 64,
+  "word-intermediate": 50,
   "word-proficiency": 40,
 };
 
@@ -120,7 +114,7 @@ export default function AI_chat() {
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
   const [selectedDuration, setSelectedDuration] = useState("15");
   const [selectedComponents, setSelectedComponents] = useState<string[]>([]);
-  const [vocabCategory, setVocabCategory] = useState("word-intermediate");
+  const [vocabCategory, setVocabCategory] = useState("word-beginner");
   const [vocabLessonType, setVocabLessonType] = useState<"range" | "individual">("range");
   const [vocabRangeStart, setVocabRangeStart] = useState("1");
   const [vocabRangeEnd, setVocabRangeEnd] = useState("5");

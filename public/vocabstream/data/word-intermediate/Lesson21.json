@@ -1,127 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-21",
+  "lesson_id": "eiken-2-21",
   "title": "Lesson 21",
-  "paragraph": "Buildings and places are part of everyday life. Homes, schools, parks, and museums help people live, learn, and enjoy their communities. Each place has a purpose that supports daily activities.",
+  "paragraph": "The new shopping street has a cheap cafe, a commercial bank, and a domestic travel office. The school made an educational video about the area and an environmental poster about recycling. A financial guide explains prices. The old station is historical, the map is international, and the whole street feels pleasant and valuable to residents.",
   "words": [
-    {
-      "word": "apartment",
-      "meaning": "a set of rooms where someone lives, usually in a building",
-      "japaneseMeaning": "アパート、マンション",
-      "synonyms": "flat, housing unit",
-      "antonyms": "",
-      "example": "Their apartment has two bedrooms."
-    },
-    {
-      "word": "balcony",
-      "meaning": "a small outside area on an upper floor of a building",
-      "japaneseMeaning": "バルコニー",
-      "synonyms": "terrace",
-      "antonyms": "",
-      "example": "She drank tea on the balcony."
-    },
-    {
-      "word": "basement",
-      "meaning": "a room below the ground floor",
-      "japaneseMeaning": "地下室",
-      "synonyms": "cellar",
-      "antonyms": "",
-      "example": "The basement is used for storage."
-    },
-    {
-      "word": "bridge",
-      "meaning": "a structure built over a river or road to cross it",
-      "japaneseMeaning": "橋",
-      "synonyms": "overpass",
-      "antonyms": "",
-      "example": "We walked across the long bridge."
-    },
-    {
-      "word": "building",
-      "meaning": "a structure with walls and a roof",
-      "japaneseMeaning": "建物",
-      "synonyms": "structure",
-      "antonyms": "",
-      "example": "That building is over 100 years old."
-    },
-    {
-      "word": "castle",
-      "meaning": "a large, strong old building once used for defense",
-      "japaneseMeaning": "城",
-      "synonyms": "fortress, palace",
-      "antonyms": "",
-      "example": "The castle attracts many tourists."
-    },
-    {
-      "word": "city",
-      "meaning": "a large town",
-      "japaneseMeaning": "都市",
-      "synonyms": "urban area",
-      "antonyms": "village",
-      "example": "The city is busy even at night."
-    },
-    {
-      "word": "department store",
-      "meaning": "a large shop that sells many different goods",
-      "japaneseMeaning": "デパート",
-      "synonyms": "mall, retail store",
-      "antonyms": "",
-      "example": "We bought new clothes at the department store."
-    },
-    {
-      "word": "entrance",
-      "meaning": "a way into a place",
-      "japaneseMeaning": "入口",
-      "synonyms": "entry, doorway",
-      "antonyms": "exit",
-      "example": "The entrance is on the left side."
-    },
-    {
-      "word": "hospital",
-      "meaning": "a place where sick people are treated",
-      "japaneseMeaning": "病院",
-      "synonyms": "medical center",
-      "antonyms": "",
-      "example": "The hospital opened a new emergency room."
-    },
-    {
-      "word": "library",
-      "meaning": "a place where you can read or borrow books",
-      "japaneseMeaning": "図書館",
-      "synonyms": "reading room",
-      "antonyms": "",
-      "example": "She studies at the library after school."
-    },
-    {
-      "word": "market",
-      "meaning": "a place where people buy and sell goods",
-      "japaneseMeaning": "市場",
-      "synonyms": "bazaar",
-      "antonyms": "",
-      "example": "The market is crowded on weekends."
-    },
-    {
-      "word": "museum",
-      "meaning": "a place where art or historical items are shown",
-      "japaneseMeaning": "博物館",
-      "synonyms": "gallery",
-      "antonyms": "",
-      "example": "The museum displayed ancient pottery."
-    },
-    {
-      "word": "park",
-      "meaning": "a public area with grass and trees for people to relax",
-      "japaneseMeaning": "公園",
-      "synonyms": "green space",
-      "antonyms": "",
-      "example": "They walked their dog in the park."
-    },
-    {
-      "word": "station",
-      "meaning": "a place where trains or buses stop",
-      "japaneseMeaning": "駅",
-      "synonyms": "terminal",
-      "antonyms": "",
-      "example": "The station was full of commuters."
-    }
+    { "word": "cheap", "meaning": "costing little money", "japaneseMeaning": "安い", "synonyms": "low-cost, inexpensive", "antonyms": "expensive, costly", "forms": "cheap, cheaply, cheapness", "example": "This cheap lunch is good for students." },
+    { "word": "commercial", "meaning": "connected with buying and selling", "japaneseMeaning": "商業の、営利の", "synonyms": "business, trade", "antonyms": "nonprofit, personal", "forms": "commercial, commercially", "example": "The commercial area is busy on weekends." },
+    { "word": "domestic", "meaning": "connected with the home or with your own country", "japaneseMeaning": "家庭の、国内の", "synonyms": "home, national", "antonyms": "foreign, international", "forms": "domestic, domestically", "example": "Domestic flights are usually shorter than international flights." },
+    { "word": "educational", "meaning": "connected with learning or teaching", "japaneseMeaning": "教育の、教育的な", "synonyms": "instructional, learning", "antonyms": "unhelpful, recreational", "forms": "educational, educationally, education", "example": "The museum has an educational program for children." },
+    { "word": "environmental", "meaning": "connected with nature and the world around us", "japaneseMeaning": "環境の", "synonyms": "ecological, natural", "antonyms": "artificial, industrial", "forms": "environmental, environmentally, environment", "example": "The class studied environmental problems in the river." },
+    { "word": "financial", "meaning": "connected with money", "japaneseMeaning": "財政の、金融の", "synonyms": "money, economic", "antonyms": "nonfinancial, personal", "forms": "financial, financially, finance", "example": "The family made a financial plan before moving." },
+    { "word": "historical", "meaning": "connected with history or past events", "japaneseMeaning": "歴史の、歴史的な", "synonyms": "historic, past", "antonyms": "modern, future", "forms": "historical, historically, history", "example": "The guide showed us historical photos of the town." },
+    { "word": "international", "meaning": "connected with two or more countries", "japaneseMeaning": "国際的な", "synonyms": "global, worldwide", "antonyms": "domestic, local", "forms": "international, internationally", "example": "The school holds an international food day." },
+    { "word": "pleasant", "meaning": "nice and enjoyable", "japaneseMeaning": "楽しい、心地よい", "synonyms": "nice, enjoyable", "antonyms": "unpleasant, awful", "forms": "pleasant, pleasantly, pleasantness", "example": "We had a pleasant walk in the park." },
+    { "word": "valuable", "meaning": "worth a lot of money or very useful", "japaneseMeaning": "価値のある、貴重な", "synonyms": "useful, precious", "antonyms": "worthless, useless", "forms": "valuable, valuably, value", "example": "Her advice was valuable during the project." }
   ]
 }

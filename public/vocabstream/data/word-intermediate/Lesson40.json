@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-40",
-  "title": "Lesson 15",
-  "paragraph": "Actions often done with the body—coughing, crossing, diving—and brief physical interactions.",
+  "lesson_id": "eiken-2-40",
+  "title": "Lesson 40",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "cough", "meaning": "to expel air from the lungs with a sudden sound", "japaneseMeaning": "咳をする", "synonyms": "hack, clear throat", "antonyms": "silence, be quiet", "example": "He coughed during the meeting." },
-    { "word": "cross", "meaning": "to go from one side to the other", "japaneseMeaning": "渡る／横切る", "synonyms": "traverse, pass", "antonyms": "stay, remain", "example": "Cross the street carefully." },
-    { "word": "dive", "meaning": "to jump into water headfirst or plunge", "japaneseMeaning": "飛び込む／潜る", "synonyms": "plunge, submerge", "antonyms": "surface, rise", "example": "He can dive from the high board." },
-    { "word": "drag", "meaning": "to pull something with effort", "japaneseMeaning": "引きずる／引く", "synonyms": "haul, pull", "antonyms": "push, lift", "example": "Drag the box to the corner." },
-    { "word": "hug", "meaning": "to hold someone tightly for warmth or affection", "japaneseMeaning": "抱きしめる", "synonyms": "embrace, cuddle", "antonyms": "ignore, avoid", "example": "She hugged her friend goodbye." },
-    { "word": "knock", "meaning": "to strike a surface to attract attention", "japaneseMeaning": "ノックする／打つ", "synonyms": "tap, rap", "antonyms": "enter silently, sneak", "example": "Knock before entering the room." },
-    { "word": "pack", "meaning": "to put items into a container for transport", "japaneseMeaning": "詰める／荷造りする", "synonyms": "load, bundle", "antonyms": "unpack, scatter", "example": "Pack your suitcase tonight." },
-    { "word": "press", "meaning": "to apply force to something", "japaneseMeaning": "押す／圧迫する", "synonyms": "push, compress", "antonyms": "pull, release", "example": "Press the button to start." },
-    { "word": "pronounce", "meaning": "to make the sound of a word correctly", "japaneseMeaning": "発音する", "synonyms": "articulate, enunciate", "antonyms": "mumble, slur", "example": "Please pronounce this word slowly." },
-    { "word": "relax", "meaning": "to become less tense or anxious", "japaneseMeaning": "リラックスする", "synonyms": "rest, unwind", "antonyms": "stress, strain", "example": "Relax and take deep breaths." },
-    { "word": "scream", "meaning": "to give a loud, high cry from fear or excitement", "japaneseMeaning": "叫ぶ", "synonyms": "shriek, yell", "antonyms": "whisper, murmur", "example": "She screamed at the scary scene." },
-    { "word": "ski", "meaning": "to glide over snow on skis", "japaneseMeaning": "スキーをする", "synonyms": "slide, glide", "antonyms": "walk, climb", "example": "We ski every winter." }
+    { "word": "funny", "meaning": "making people laugh or seeming strange", "japaneseMeaning": "おもしろい、変な", "synonyms": "amusing, strange", "antonyms": "serious, normal", "forms": "funny, funnier, funniest", "example": "The funny story made everyone laugh." },
+    { "word": "glad", "meaning": "happy or pleased", "japaneseMeaning": "うれしい", "synonyms": "happy, pleased", "antonyms": "sad, sorry", "forms": "glad, gladly, gladness", "example": "I am glad to hear that you passed." },
+    { "word": "honest", "meaning": "telling the truth and not cheating", "japaneseMeaning": "正直な", "synonyms": "truthful, fair", "antonyms": "dishonest, false", "forms": "honest, honestly, honesty", "example": "An honest person admits mistakes." },
+    { "word": "huge", "meaning": "very large", "japaneseMeaning": "巨大な、とても大きい", "synonyms": "enormous, giant", "antonyms": "tiny, small", "forms": "huge, hugely", "example": "A huge crowd waited outside the stadium." },
+    { "word": "hungry", "meaning": "wanting or needing food", "japaneseMeaning": "空腹の", "synonyms": "starving, empty", "antonyms": "full, satisfied", "forms": "hungry, hungrily, hunger", "example": "I was hungry after soccer practice." },
+    { "word": "lazy", "meaning": "not wanting to work or move", "japaneseMeaning": "怠けた、だらけた", "synonyms": "idle, inactive", "antonyms": "hardworking, active", "forms": "lazy, lazily, laziness", "example": "A lazy weekend at home can feel nice." },
+    { "word": "lonely", "meaning": "sad because you are alone", "japaneseMeaning": "寂しい、孤独な", "synonyms": "alone, isolated", "antonyms": "connected, social", "forms": "lonely, loneliness", "example": "She felt lonely after moving to a new town." },
+    { "word": "noisy", "meaning": "making a lot of noise", "japaneseMeaning": "騒がしい", "synonyms": "loud, rowdy", "antonyms": "quiet, silent", "forms": "noisy, noisily, noise", "example": "The noisy street made it hard to sleep." },
+    { "word": "perfect", "meaning": "as good as possible, with no mistakes", "japaneseMeaning": "完璧な", "synonyms": "excellent, complete", "antonyms": "imperfect, poor", "forms": "perfect, perfectly, perfection", "example": "The weather was perfect for a picnic." },
+    { "word": "polite", "meaning": "showing good manners and respect", "japaneseMeaning": "礼儀正しい", "synonyms": "respectful, courteous", "antonyms": "rude, impolite", "forms": "polite, politely, politeness", "example": "The polite student thanked the bus driver." }
   ]
 }

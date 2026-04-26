@@ -1,104 +1,17 @@
- {
-    "lesson_id": "eiken-pre2-49",
-    "title": "Lesson 49",
-    "paragraph": "This lesson (Lesson 49) continues describing people: intelligence, creativity and friendliness among common traits.",
-    "words": [
-      {
-        "word": "clever",
-        "meaning": "quick to understand, learn, or devise",
-        "japaneseMeaning": "賢い／利口な",
-        "synonyms": "smart, bright",
-        "antonyms": "dull, stupid",
-        "example": "She is clever and solves problems quickly."
-      },
-      {
-        "word": "confident",
-        "meaning": "feeling sure of oneself; self-assured",
-        "japaneseMeaning": "自信のある",
-        "synonyms": "self-assured, poised",
-        "antonyms": "insecure, unsure",
-        "example": "He felt confident before the interview."
-      },
-      {
-        "word": "creative",
-        "meaning": "using imagination to produce original ideas",
-        "japaneseMeaning": "創造的な",
-        "synonyms": "innovative, inventive",
-        "antonyms": "unimaginative, dull",
-        "example": "The team proposed a creative solution."
-      },
-      {
-        "word": "cruel",
-        "meaning": "willfully causing pain or suffering to others",
-        "japaneseMeaning": "残酷な",
-        "synonyms": "brutal, heartless",
-        "antonyms": "kind, compassionate",
-        "example": "It was cruel to tease the puppy."
-      },
-      {
-        "word": "curious",
-        "meaning": "eager to know or learn something",
-        "japaneseMeaning": "好奇心の強い",
-        "synonyms": "inquisitive, interested",
-        "antonyms": "indifferent, uninterested",
-        "example": "The child was curious about the insects."
-      },
-      {
-        "word": "energetic",
-        "meaning": "having or showing a lot of energy",
-        "japaneseMeaning": "精力的な",
-        "synonyms": "active, lively",
-        "antonyms": "lethargic, sluggish",
-        "example": "She is energetic and always on the move."
-      },
-      {
-        "word": "friendly",
-        "meaning": "kind and pleasant to others",
-        "japaneseMeaning": "親しみやすい",
-        "synonyms": "amiable, kind",
-        "antonyms": "unfriendly, hostile",
-        "example": "Our neighbors are very friendly."
-      },
-      {
-        "word": "funny",
-        "meaning": "causing laughter or amusement",
-        "japaneseMeaning": "面白い",
-        "synonyms": "humorous, amusing",
-        "antonyms": "serious, dull",
-        "example": "He told a funny story at lunch."
-      },
-      {
-        "word": "generous",
-        "meaning": "willing to give more of something than is necessary",
-        "japaneseMeaning": "寛大な",
-        "synonyms": "giving, liberal",
-        "antonyms": "stingy, selfish",
-        "example": "She was generous with her time and helped everyone."
-      },
-      {
-        "word": "gentle",
-        "meaning": "kind, mild, or soft in manner",
-        "japaneseMeaning": "優しい／穏やかな",
-        "synonyms": "kind, mild",
-        "antonyms": "rough, harsh",
-        "example": "The doctor has a gentle manner with patients."
-      },
-      {
-        "word": "hard-working",
-        "meaning": "putting a lot of effort into work",
-        "japaneseMeaning": "勤勉な／よく働く",
-        "synonyms": "diligent, industrious",
-        "antonyms": "lazy, idle",
-        "example": "She is hard-working and always completes tasks on time."
-      },
-      {
-        "word": "honest",
-        "meaning": "truthful; free from deceit",
-        "japaneseMeaning": "正直な",
-        "synonyms": "truthful, sincere",
-        "antonyms": "dishonest, deceitful",
-        "example": "He is honest and returns lost items."
-      }
-    ]
-  }
-
+{
+  "lesson_id": "eiken-2-49",
+  "title": "Lesson 49",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "age", "meaning": "the number of years someone or something has lived or existed", "japaneseMeaning": "年齢、時代", "synonyms": "years, lifetime", "antonyms": "youth, newness", "forms": "age, ages", "example": "Write your age on the form." },
+    { "word": "air", "meaning": "the mixture of gases that we breathe", "japaneseMeaning": "空気", "synonyms": "atmosphere, breeze", "antonyms": "vacuum, water", "forms": "air", "example": "Fresh air came through the window." },
+    { "word": "artist", "meaning": "a person who creates art", "japaneseMeaning": "芸術家、アーティスト", "synonyms": "creator, painter", "antonyms": "viewer, critic", "forms": "artist, artists", "example": "The artist painted a picture of the river." },
+    { "word": "bit", "meaning": "a small amount or piece of something", "japaneseMeaning": "少し、小片", "synonyms": "piece, amount", "antonyms": "whole, lot", "forms": "bit, bits", "example": "Add a bit of salt to the soup." },
+    { "word": "boat", "meaning": "a small vehicle that travels on water", "japaneseMeaning": "ボート、船", "synonyms": "ship, vessel", "antonyms": "car, plane", "forms": "boat, boats", "example": "The boat crossed the lake." },
+    { "word": "brush", "meaning": "a tool with hairs used for cleaning, painting, or hair", "japaneseMeaning": "ブラシ、筆", "synonyms": "paintbrush, comb", "antonyms": "cloth, hand", "forms": "brush, brushes", "example": "Use a brush to clean your shoes." },
+    { "word": "calendar", "meaning": "a chart that shows days, weeks, and months", "japaneseMeaning": "カレンダー", "synonyms": "schedule, date chart", "antonyms": "clock, timer", "forms": "calendar, calendars", "example": "Mark the test date on your calendar." },
+    { "word": "camera", "meaning": "a device used to take photos or videos", "japaneseMeaning": "カメラ", "synonyms": "video camera, recorder", "antonyms": "screen, printer", "forms": "camera, cameras", "example": "My camera takes clear pictures." },
+    { "word": "captain", "meaning": "the leader of a team, ship, or aircraft", "japaneseMeaning": "キャプテン、船長", "synonyms": "leader, commander", "antonyms": "member, passenger", "forms": "captain, captains", "example": "The captain spoke to the team before the game." },
+    { "word": "carpet", "meaning": "thick cloth used to cover a floor", "japaneseMeaning": "じゅうたん", "synonyms": "rug, floor covering", "antonyms": "bare floor", "forms": "carpet, carpets", "example": "The carpet in the hotel room was red." }
+  ]
+}

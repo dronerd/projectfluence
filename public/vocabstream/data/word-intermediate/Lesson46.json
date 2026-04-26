@@ -1,104 +1,17 @@
 {
-    "lesson_id": "eiken-pre2-46",
-    "title": "Lesson 46",
-    "paragraph": "This lesson (Lesson 46) covers adjectives describing quality, size and social scope.",
-    "words": [
-      {
-        "word": "excellent",
-        "meaning": "extremely good; outstanding",
-        "japaneseMeaning": "素晴らしい",
-        "synonyms": "outstanding, superb",
-        "antonyms": "poor, mediocre",
-        "example": "Her presentation was excellent."
-      },
-      {
-        "word": "familiar",
-        "meaning": "well known from long or close association",
-        "japaneseMeaning": "馴染みのある",
-        "synonyms": "known, recognizable",
-        "antonyms": "strange, unfamiliar",
-        "example": "That melody sounded familiar to me."
-      },
-      {
-        "word": "fresh",
-        "meaning": "recently made or obtained; new",
-        "japaneseMeaning": "新鮮な",
-        "synonyms": "new, crisp",
-        "antonyms": "stale, old",
-        "example": "We bought fresh vegetables at the market."
-      },
-      {
-        "word": "global",
-        "meaning": "relating to the whole world",
-        "japaneseMeaning": "世界的な／国際的な",
-        "synonyms": "worldwide, international",
-        "antonyms": "local, regional",
-        "example": "Climate change is a global issue."
-      },
-      {
-        "word": "heavy",
-        "meaning": "weighing a lot",
-        "japaneseMeaning": "重い",
-        "synonyms": "weighty, burdensome",
-        "antonyms": "light, lightweight",
-        "example": "This box is too heavy for me to lift."
-      },
-      {
-        "word": "huge",
-        "meaning": "extremely large in size or amount",
-        "japaneseMeaning": "巨大な",
-        "synonyms": "enormous, vast",
-        "antonyms": "tiny, small",
-        "example": "They live in a huge house."
-      },
-      {
-        "word": "legal",
-        "meaning": "allowed or required by law",
-        "japaneseMeaning": "合法的な",
-        "synonyms": "lawful, legitimate",
-        "antonyms": "illegal, unlawful",
-        "example": "You should check the legal requirements first."
-      },
-      {
-        "word": "local",
-        "meaning": "relating to a particular area or neighborhood",
-        "japaneseMeaning": "地元の",
-        "synonyms": "regional, nearby",
-        "antonyms": "global, national",
-        "example": "We support local businesses."
-      },
-      {
-        "word": "loud",
-        "meaning": "producing much noise",
-        "japaneseMeaning": "うるさい／大きな音の",
-        "synonyms": "noisy, booming",
-        "antonyms": "quiet, silent",
-        "example": "The music was too loud for the room."
-      },
-      {
-        "word": "main",
-        "meaning": "most important or principal",
-        "japaneseMeaning": "主要な",
-        "synonyms": "primary, principal",
-        "antonyms": "minor, secondary",
-        "example": "The main reason is lack of time."
-      },
-      {
-        "word": "natural",
-        "meaning": "existing in nature; not made or altered by people",
-        "japaneseMeaning": "自然の／天然の",
-        "synonyms": "organic, innate",
-        "antonyms": "artificial, man-made",
-        "example": "They prefer natural fabrics like cotton."
-      },
-      {
-        "word": "noisy",
-        "meaning": "making a lot of noise",
-        "japaneseMeaning": "騒がしい",
-        "synonyms": "loud, clamorous",
-        "antonyms": "quiet, peaceful",
-        "example": "The street outside is very noisy at night."
-      }
-    ]
-  }
- 
+  "lesson_id": "eiken-2-46",
+  "title": "Lesson 46",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "radio", "meaning": "a device or service for listening to broadcasts", "japaneseMeaning": "ラジオ", "synonyms": "broadcast, receiver", "antonyms": "television, silence", "forms": "radio, radios", "example": "I listen to the radio while making breakfast." },
+    { "word": "restaurant", "meaning": "a place where people pay to eat meals", "japaneseMeaning": "レストラン", "synonyms": "cafe, diner", "antonyms": "home kitchen", "forms": "restaurant, restaurants", "example": "This restaurant serves fresh pasta." },
+    { "word": "river", "meaning": "a large natural flow of water", "japaneseMeaning": "川", "synonyms": "stream, waterway", "antonyms": "desert, land", "forms": "river, rivers", "example": "The river runs through the center of town." },
+    { "word": "rock", "meaning": "a hard piece of natural stone", "japaneseMeaning": "岩、石", "synonyms": "stone, boulder", "antonyms": "sand, soil", "forms": "rock, rocks", "example": "A large rock blocked the road." },
+    { "word": "sentence", "meaning": "a group of words that expresses a complete idea", "japaneseMeaning": "文", "synonyms": "statement, line", "antonyms": "word, fragment", "forms": "sentence, sentences", "example": "Write one sentence about your weekend." },
+    { "word": "singer", "meaning": "a person who sings", "japaneseMeaning": "歌手", "synonyms": "vocalist, performer", "antonyms": "listener, audience", "forms": "singer, singers", "example": "The singer has a clear voice." },
+    { "word": "speech", "meaning": "a formal talk given to people", "japaneseMeaning": "スピーチ、演説", "synonyms": "talk, address", "antonyms": "silence, listening", "forms": "speech, speeches", "example": "Her speech lasted five minutes." },
+    { "word": "suitcase", "meaning": "a case used for carrying clothes when traveling", "japaneseMeaning": "スーツケース", "synonyms": "bag, luggage", "antonyms": "drawer, closet", "forms": "suitcase, suitcases", "example": "My suitcase is too heavy to lift." },
+    { "word": "theater", "meaning": "a place where people watch plays or movies", "japaneseMeaning": "劇場、映画館", "synonyms": "cinema, playhouse", "antonyms": "home, street", "forms": "theater, theaters", "example": "We met outside the theater before the show." },
+    { "word": "writer", "meaning": "a person who writes books, stories, or articles", "japaneseMeaning": "作家、書き手", "synonyms": "author, journalist", "antonyms": "reader, viewer", "forms": "writer, writers", "example": "The writer described life in a small village." }
+  ]
+}

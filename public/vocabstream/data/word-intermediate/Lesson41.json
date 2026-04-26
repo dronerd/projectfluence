@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-41",
-  "title": "Lesson 16",
-  "paragraph": "Kitchen verbs and simple actions used in cooking and quick tasks.",
+  "lesson_id": "eiken-2-41",
+  "title": "Lesson 41",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "spell", "meaning": "to form a word with letters in correct order", "japaneseMeaning": "つづる／スペルする", "synonyms": "write, form", "antonyms": "mis-spell, confuse", "example": "Can you spell your name?" },
-    { "word": "text", "meaning": "to send a written electronic message", "japaneseMeaning": "テキストを送る／メールする", "synonyms": "message, SMS", "antonyms": "call, speak", "example": "Text me when you arrive." },
-    { "word": "whistle", "meaning": "to produce a high sound by blowing or pursing lips", "japaneseMeaning": "口笛を吹く", "synonyms": "tweet, chirp", "antonyms": "silent, mute", "example": "He whistled a happy tune." },
-    { "word": "yell", "meaning": "to shout loudly, often from anger", "japaneseMeaning": "大声で叫ぶ", "synonyms": "shout, scream", "antonyms": "whisper, murmur", "example": "Don't yell at your sister." },
-    { "word": "boil", "meaning": "to heat a liquid until it bubbles", "japaneseMeaning": "沸かす／煮る", "synonyms": "simmer, cook", "antonyms": "freeze, cool", "example": "Boil the water for tea." },
-    { "word": "fry", "meaning": "to cook in hot fat or oil", "japaneseMeaning": "揚げる／炒める", "synonyms": "saute, cook", "antonyms": "boil, bake", "example": "Fry the onions until golden." },
-    { "word": "pour", "meaning": "to cause liquid to flow from a container", "japaneseMeaning": "注ぐ", "synonyms": "tip, stream", "antonyms": "drain, retain", "example": "Pour the sauce over the pasta." },
-    { "word": "roast", "meaning": "to cook food, especially meat, by dry heat", "japaneseMeaning": "ローストする／焼く", "synonyms": "bake, grill", "antonyms": "boil, steam", "example": "Roast the chicken for an hour." },
-    { "word": "slice", "meaning": "to cut into thin pieces", "japaneseMeaning": "薄切りにする", "synonyms": "cut, carve", "antonyms": "join, combine", "example": "Slice the bread before serving." },
-    { "word": "stir", "meaning": "to mix gently with a spoon", "japaneseMeaning": "かき混ぜる", "synonyms": "mix, blend", "antonyms": "separate, leave", "example": "Stir the soup occasionally." },
-    { "word": "taste", "meaning": "to sample a small amount to check flavor", "japaneseMeaning": "味見する", "synonyms": "sample, try", "antonyms": "ignore, avoid", "example": "Taste the sauce and adjust seasoning." },
-    { "word": "burn", "meaning": "to be damaged by fire or heat", "japaneseMeaning": "燃やす／焦がす", "synonyms": "scorch, char", "antonyms": "extinguish, cool", "example": "Be careful not to burn the toast." }
+    { "word": "ability", "meaning": "the skill or power to do something", "japaneseMeaning": "能力、才能", "synonyms": "skill, talent", "antonyms": "inability, weakness", "forms": "ability, abilities", "example": "Her ability to explain ideas is impressive." },
+    { "word": "accident", "meaning": "something bad that happens unexpectedly", "japaneseMeaning": "事故", "synonyms": "crash, mishap", "antonyms": "plan, intention", "forms": "accident, accidents", "example": "The accident happened on a rainy road." },
+    { "word": "apartment", "meaning": "a set of rooms for living in, usually in a large building", "japaneseMeaning": "アパート、マンション", "synonyms": "flat, unit", "antonyms": "house, office", "forms": "apartment, apartments", "example": "They rent an apartment near the river." },
+    { "word": "army", "meaning": "a large organized group of soldiers", "japaneseMeaning": "軍隊、陸軍", "synonyms": "military, troops", "antonyms": "civilians, peace group", "forms": "army, armies", "example": "The army helped after the flood." },
+    { "word": "bank", "meaning": "a business that keeps and lends money", "japaneseMeaning": "銀行、土手", "synonyms": "financial institution, lender", "antonyms": "borrower, cash", "forms": "bank, banks", "example": "I opened a new account at the bank." },
+    { "word": "beach", "meaning": "an area of sand or stones beside the sea or a lake", "japaneseMeaning": "浜、ビーチ", "synonyms": "shore, coast", "antonyms": "mountain, inland", "forms": "beach, beaches", "example": "We walked along the beach at sunset." },
+    { "word": "building", "meaning": "a structure with walls and a roof", "japaneseMeaning": "建物", "synonyms": "structure, block", "antonyms": "open space, field", "forms": "building, buildings", "example": "The tallest building in town is a hotel." },
+    { "word": "career", "meaning": "the work someone does over many years", "japaneseMeaning": "職業、経歴", "synonyms": "profession, work life", "antonyms": "hobby, pastime", "forms": "career, careers", "example": "She wants a career in design." },
+    { "word": "channel", "meaning": "a television station or a way for information to pass", "japaneseMeaning": "チャンネル、経路", "synonyms": "station, route", "antonyms": "block, barrier", "forms": "channel, channels", "example": "This channel shows news every morning." },
+    { "word": "chart", "meaning": "a picture or table that shows information", "japaneseMeaning": "図表、グラフ", "synonyms": "graph, table", "antonyms": "paragraph, story", "forms": "chart, charts", "example": "The chart shows sales for each month." }
   ]
 }

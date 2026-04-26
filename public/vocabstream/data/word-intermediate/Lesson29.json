@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-29",
-  "title": "Lesson 4",
-  "paragraph": "These verbs are useful for drawing, earning, and encouraging — verbs you’ll use when talking about creativity, money, and emotions.",
+  "lesson_id": "eiken-2-29",
+  "title": "Lesson 29",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "draw", "meaning": "to produce an image with a pen/pencil or to attract", "japaneseMeaning": "描く／引きつける", "synonyms": "sketch, attract", "antonyms": "erase, repel", "example": "She drew a picture of the park." },
-    { "word": "earn", "meaning": "to receive money for work or achieve something through effort", "japaneseMeaning": "稼ぐ／得る", "synonyms": "gain, obtain", "antonyms": "lose, forfeit", "example": "He earned a promotion." },
-    { "word": "encourage", "meaning": "to give support or confidence to someone", "japaneseMeaning": "励ます", "synonyms": "support, motivate", "antonyms": "discourage, dishearten", "example": "Her coach encouraged her to try." },
-    { "word": "enjoy", "meaning": "to take pleasure in something", "japaneseMeaning": "楽しむ", "synonyms": "like, relish", "antonyms": "hate, dislike", "example": "I enjoy reading on weekends." },
-    { "word": "enter", "meaning": "to come or go into a place", "japaneseMeaning": "入る", "synonyms": "go in, come in", "antonyms": "exit, leave", "example": "Please enter the room quietly." },
-    { "word": "escape", "meaning": "to get away from a place or situation", "japaneseMeaning": "逃げる", "synonyms": "flee, avoid", "antonyms": "stay, remain", "example": "They escaped the rising floodwaters." },
-    { "word": "explain", "meaning": "to make something clear or understandable", "japaneseMeaning": "説明する", "synonyms": "clarify, describe", "antonyms": "obscure, confuse", "example": "Please explain your answer." },
-    { "word": "fail", "meaning": "to be unsuccessful in achieving a goal", "japaneseMeaning": "失敗する", "synonyms": "flop, fall short", "antonyms": "succeed, pass", "example": "He failed the test but learned from it." },
-    { "word": "fall", "meaning": "to move downward freely", "japaneseMeaning": "落ちる／倒れる", "synonyms": "drop, tumble", "antonyms": "rise, lift", "example": "Leaves fall in autumn." },
-    { "word": "feed", "meaning": "to give food to someone or something", "japaneseMeaning": "餌を与える／食べさせる", "synonyms": "nourish, supply", "antonyms": "starve, deprive", "example": "Please feed the cat." },
-    { "word": "fill", "meaning": "to make something full", "japaneseMeaning": "満たす／詰める", "synonyms": "pack, load", "antonyms": "empty, drain", "example": "Fill the bottle with water." },
-    { "word": "find", "meaning": "to discover or locate something", "japaneseMeaning": "見つける", "synonyms": "discover, locate", "antonyms": "lose, misplace", "example": "I couldn't find my keys." }
+    { "word": "dentist", "meaning": "a doctor who takes care of teeth", "japaneseMeaning": "歯科医", "synonyms": "tooth doctor, dental doctor", "antonyms": "patient, client", "forms": "dentist, dentists", "example": "I visit the dentist twice a year." },
+    { "word": "diary", "meaning": "a book where you write about daily life", "japaneseMeaning": "日記", "synonyms": "journal, notebook", "antonyms": "public record", "forms": "diary, diaries", "example": "She writes in her diary before bed." },
+    { "word": "drama", "meaning": "a play, show, or exciting situation", "japaneseMeaning": "ドラマ、劇", "synonyms": "play, show", "antonyms": "comedy, calm", "forms": "drama, dramas", "example": "The drama club performs every spring." },
+    { "word": "economy", "meaning": "the system of money, work, and trade in a place", "japaneseMeaning": "経済", "synonyms": "market, financial system", "antonyms": "waste, disorder", "forms": "economy, economies", "example": "Tourism is important for the local economy." },
+    { "word": "editor", "meaning": "a person who prepares writing, video, or audio for publication", "japaneseMeaning": "編集者", "synonyms": "reviser, publisher", "antonyms": "reader, viewer", "forms": "editor, editors", "example": "The editor checked the article for mistakes." },
+    { "word": "enemy", "meaning": "a person or group that is against another person or group", "japaneseMeaning": "敵", "synonyms": "opponent, foe", "antonyms": "friend, ally", "forms": "enemy, enemies", "example": "In the story, the hero forgives his enemy." },
+    { "word": "engineer", "meaning": "a person who designs or builds machines, roads, or systems", "japaneseMeaning": "技術者、エンジニア", "synonyms": "designer, technician", "antonyms": "amateur, user", "forms": "engineer, engineers", "example": "The engineer designed a safer bridge." },
+    { "word": "evidence", "meaning": "facts or objects that help prove something", "japaneseMeaning": "証拠", "synonyms": "proof, facts", "antonyms": "guess, rumor", "forms": "evidence", "example": "The police found evidence near the door." },
+    { "word": "factory", "meaning": "a building where products are made", "japaneseMeaning": "工場", "synonyms": "plant, workshop", "antonyms": "shop, office", "forms": "factory, factories", "example": "The factory makes parts for bicycles." },
+    { "word": "farmer", "meaning": "a person who grows crops or keeps animals for food", "japaneseMeaning": "農家、農夫", "synonyms": "grower, producer", "antonyms": "customer, buyer", "forms": "farmer, farmers", "example": "The farmer sells vegetables at the market." }
   ]
 }

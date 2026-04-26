@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-26",
-  "title": "Lesson 1",
-  "paragraph": "This lesson introduces common everyday action verbs. Practicing these will help you describe daily activities, decisions, and simple interactions with ease.",
+  "lesson_id": "eiken-2-26",
+  "title": "Lesson 26",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "accept", "meaning": "to agree to receive or take something offered", "japaneseMeaning": "受け入れる", "synonyms": "receive, take", "antonyms": "refuse, decline", "example": "She accepted the job offer." },
-    { "word": "achieve", "meaning": "to successfully reach a goal through effort", "japaneseMeaning": "達成する", "synonyms": "accomplish, attain", "antonyms": "fail, lose", "example": "He achieved his sales target." },
-    { "word": "advise", "meaning": "to offer guidance or recommendations", "japaneseMeaning": "助言する", "synonyms": "recommend, counsel", "antonyms": "mislead, confuse", "example": "I advised her to check the facts first." },
-    { "word": "agree", "meaning": "to have the same opinion or accept a proposal", "japaneseMeaning": "同意する", "synonyms": "concur, consent", "antonyms": "disagree, oppose", "example": "They agreed on the meeting time." },
-    { "word": "allow", "meaning": "to permit someone to do something", "japaneseMeaning": "許可する", "synonyms": "permit, let", "antonyms": "forbid, prohibit", "example": "The teacher allowed extra time." },
-    { "word": "announce", "meaning": "to make information known publicly", "japaneseMeaning": "発表する", "synonyms": "declare, proclaim", "antonyms": "conceal, hide", "example": "The company announced a new product." },
-    { "word": "appear", "meaning": "to become visible or to seem a certain way", "japaneseMeaning": "現れる／〜のように見える", "synonyms": "emerge, seem", "antonyms": "disappear, vanish", "example": "He appeared tired after the trip." },
-    { "word": "apply", "meaning": "to put to practical use or to request something formally", "japaneseMeaning": "適用する／申し込む", "synonyms": "use, request", "antonyms": "ignore, avoid", "example": "She applied for the scholarship." },
-    { "word": "argue", "meaning": "to give reasons for or against something; to disagree", "japaneseMeaning": "議論する／口論する", "synonyms": "debate, dispute", "antonyms": "agree, concede", "example": "They argued about the best route." },
-    { "word": "arrive", "meaning": "to reach a place", "japaneseMeaning": "到着する", "synonyms": "reach, come", "antonyms": "depart, leave", "example": "We arrived at noon." },
-    { "word": "avoid", "meaning": "to keep away from someone or something", "japaneseMeaning": "避ける", "synonyms": "evade, prevent", "antonyms": "confront, face", "example": "Try to avoid heavy traffic." },
-    { "word": "borrow", "meaning": "to take and use something belonging to someone with intention to return", "japaneseMeaning": "借りる", "synonyms": "loan (receive), take temporarily", "antonyms": "lend, give", "example": "Can I borrow your pen?" }
+    { "word": "admission", "meaning": "permission to enter a place, school, or event", "japaneseMeaning": "入場、入学許可", "synonyms": "entry, permission", "antonyms": "refusal, rejection", "forms": "admission, admissions", "example": "Admission to the museum is free on Sundays." },
+    { "word": "arrival", "meaning": "the act of reaching a place", "japaneseMeaning": "到着", "synonyms": "coming, entry", "antonyms": "departure, leaving", "forms": "arrival, arrivals", "example": "Our arrival at the hotel was later than planned." },
+    { "word": "assistant", "meaning": "a person who helps someone with a job", "japaneseMeaning": "助手、アシスタント", "synonyms": "helper, aide", "antonyms": "manager, leader", "forms": "assistant, assistants", "example": "The shop assistant helped me find a jacket." },
+    { "word": "audience", "meaning": "the people who watch or listen to a performance or speech", "japaneseMeaning": "観客、聴衆", "synonyms": "crowd, listeners", "antonyms": "performer, speaker", "forms": "audience, audiences", "example": "The audience clapped after the final song." },
+    { "word": "border", "meaning": "the line between two countries or areas", "japaneseMeaning": "国境、境界", "synonyms": "boundary, edge", "antonyms": "center, inside", "forms": "border, borders", "example": "The river forms the border between the two towns." },
+    { "word": "bridge", "meaning": "a structure built over a road, river, or railway", "japaneseMeaning": "橋", "synonyms": "crossing, overpass", "antonyms": "barrier, gap", "forms": "bridge, bridges", "example": "The old bridge crosses the wide river." },
+    { "word": "ceremony", "meaning": "a formal event for an important occasion", "japaneseMeaning": "式、儀式", "synonyms": "event, service", "antonyms": "casual meeting, routine", "forms": "ceremony, ceremonies", "example": "The graduation ceremony starts at ten." },
+    { "word": "charity", "meaning": "an organization or action that helps people in need", "japaneseMeaning": "慈善団体、慈善活動", "synonyms": "aid, donation", "antonyms": "selfishness, harm", "forms": "charity, charities", "example": "The class raised money for a local charity." },
+    { "word": "climate", "meaning": "the usual weather of a place over a long time", "japaneseMeaning": "気候", "synonyms": "weather pattern, conditions", "antonyms": "daily weather", "forms": "climate, climates", "example": "The climate in this region is warm and dry." },
+    { "word": "degree", "meaning": "a university qualification or a level of something", "japaneseMeaning": "学位、程度", "synonyms": "qualification, level", "antonyms": "lack, zero", "forms": "degree, degrees", "example": "She earned a degree in education." }
   ]
 }

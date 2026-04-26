@@ -1,0 +1,97 @@
+{
+  "lesson_id": "eiken-2-82",
+  "title": "Lesson 82",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    {
+      "word": "boil",
+      "meaning": "to heat liquid until it bubbles",
+      "japaneseMeaning": "沸かす、沸騰する",
+      "synonyms": "do, perform",
+      "antonyms": "stop, avoid",
+      "forms": "boil, boils, boiling, boiled",
+      "example": "Boil the water before making tea."
+    },
+    {
+      "word": "scratch",
+      "meaning": "to make a thin mark on a surface",
+      "japaneseMeaning": "ひっかく、傷をつける",
+      "synonyms": "mark, scrape",
+      "antonyms": "polish, protect",
+      "forms": "scratch, scratches, scratching, scratched",
+      "example": "Do not scratch the wooden table."
+    },
+    {
+      "word": "disappear",
+      "meaning": "to stop being seen",
+      "japaneseMeaning": "消える",
+      "synonyms": "do, perform",
+      "antonyms": "stop, avoid",
+      "forms": "disappear, disappears, disappearing, disappeared",
+      "example": "The sun will disappear behind the clouds."
+    },
+    {
+      "word": "divide",
+      "meaning": "to separate into parts",
+      "japaneseMeaning": "分ける",
+      "synonyms": "do, perform",
+      "antonyms": "stop, avoid",
+      "forms": "divide, divides, dividing, divided",
+      "example": "Divide the cake into six pieces."
+    },
+    {
+      "word": "draw",
+      "meaning": "to make a picture with a pen or pencil",
+      "japaneseMeaning": "描く、引く",
+      "synonyms": "do, perform",
+      "antonyms": "stop, avoid",
+      "forms": "draw, draws, drawing, drew, drawn",
+      "example": "Draw a map of your town."
+    },
+    {
+      "word": "fill",
+      "meaning": "to make something full",
+      "japaneseMeaning": "満たす、記入する",
+      "synonyms": "do, perform",
+      "antonyms": "stop, avoid",
+      "forms": "fill, fills, filling, filled",
+      "example": "Fill the bottle with water."
+    },
+    {
+      "word": "float",
+      "meaning": "to stay on the surface of liquid or air",
+      "japaneseMeaning": "浮く",
+      "synonyms": "do, perform",
+      "antonyms": "stop, avoid",
+      "forms": "float, floats, floating, floated",
+      "example": "Leaves float on the river."
+    },
+    {
+      "word": "flow",
+      "meaning": "to move like water",
+      "japaneseMeaning": "流れる",
+      "synonyms": "do, perform",
+      "antonyms": "stop, avoid",
+      "forms": "flow, flows, flowing, flowed",
+      "example": "The river flows through the city."
+    },
+    {
+      "word": "guess",
+      "meaning": "to answer without being sure",
+      "japaneseMeaning": "推測する",
+      "synonyms": "do, perform",
+      "antonyms": "stop, avoid",
+      "forms": "guess, guesss, guessing, guessed",
+      "example": "Can you guess the meaning of this word?"
+    },
+    {
+      "word": "hit",
+      "meaning": "to touch something with force",
+      "japaneseMeaning": "打つ、ぶつかる",
+      "synonyms": "do, perform",
+      "antonyms": "stop, avoid",
+      "forms": "hit, hits, hiting, hited",
+      "example": "Do not hit the ball too hard."
+    }
+  ]
+}

@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-43",
-  "title": "Lesson 18",
-  "paragraph": "Verbs for injuries, crime, admiration, and polite interactions.",
+  "lesson_id": "eiken-2-43",
+  "title": "Lesson 43",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "hit", "meaning": "to strike someone or something", "japaneseMeaning": "打つ／殴る", "synonyms": "strike, slap", "antonyms": "miss, avoid", "example": "Don't hit your brother." },
-    { "word": "injure", "meaning": "to cause physical harm or damage", "japaneseMeaning": "けがをさせる／損傷する", "synonyms": "harm, wound", "antonyms": "heal, help", "example": "He injured his arm playing soccer." },
-    { "word": "rob", "meaning": "to take property illegally from a person or place", "japaneseMeaning": "奪う／強盗する", "synonyms": "steal, burglarize", "antonyms": "give, return", "example": "The bank was robbed last night." },
-    { "word": "shoot", "meaning": "to fire a weapon or send out a projectile", "japaneseMeaning": "撃つ／発射する", "synonyms": "fire, discharge", "antonyms": "miss, refrain", "example": "He learned to shoot at the range." },
-    { "word": "admire", "meaning": "to regard with respect or warm approval", "japaneseMeaning": "称賛する／感嘆する", "synonyms": "appreciate, esteem", "antonyms": "despise, criticize", "example": "I admire her dedication." },
-    { "word": "admit", "meaning": "to confess or acknowledge something", "japaneseMeaning": "認める／告白する", "synonyms": "confess, acknowledge", "antonyms": "deny, reject", "example": "He admitted his mistake." },
-    { "word": "afford", "meaning": "to have enough money to pay for", "japaneseMeaning": "余裕がある／買う余裕がある", "synonyms": "pay for, bear", "antonyms": "lack, be unable", "example": "I can't afford a new car now." },
-    { "word": "annoy", "meaning": "to make someone slightly angry or irritated", "japaneseMeaning": "イライラさせる／悩ます", "synonyms": "irritate, bother", "antonyms": "please, delight", "example": "Loud music annoys me." },
-    { "word": "apologize", "meaning": "to express regret for something done wrong", "japaneseMeaning": "謝る", "synonyms": "say sorry, repent", "antonyms": "blame, accuse", "example": "He apologized for being late." },
-    { "word": "approach", "meaning": "to come near in distance or time", "japaneseMeaning": "近づく／アプローチする", "synonyms": "near, come close", "antonyms": "recede, withdraw", "example": "Winter is approaching quickly." },
-    { "word": "approve", "meaning": "to officially agree or accept", "japaneseMeaning": "承認する／賛成する", "synonyms": "authorize, endorse", "antonyms": "reject, deny", "example": "The committee approved the plan." },
-    { "word": "arrange", "meaning": "to put things in a neat or required order", "japaneseMeaning": "手配する／整える", "synonyms": "organize, plan", "antonyms": "disorder, neglect", "example": "Arrange the chairs for the meeting." }
+    { "word": "poor", "meaning": "having little money or low quality", "japaneseMeaning": "貧しい、質の悪い", "synonyms": "low-income, weak", "antonyms": "rich, excellent", "forms": "poor, poorly, poverty", "example": "The poor sound quality made the video hard to hear." },
+    { "word": "proud", "meaning": "pleased because of something you did or have", "japaneseMeaning": "誇りに思う", "synonyms": "pleased, satisfied", "antonyms": "ashamed, humble", "forms": "proud, proudly, pride", "example": "She felt proud of her test score." },
+    { "word": "quick", "meaning": "fast or taking little time", "japaneseMeaning": "速い、素早い", "synonyms": "fast, rapid", "antonyms": "slow, late", "forms": "quick, quickly, quickness", "example": "We had a quick lunch before class." },
+    { "word": "rare", "meaning": "not common or not often seen", "japaneseMeaning": "珍しい、まれな", "synonyms": "unusual, uncommon", "antonyms": "common, usual", "forms": "rare, rarely, rarity", "example": "It is rare to see snow here." },
+    { "word": "safe", "meaning": "not dangerous", "japaneseMeaning": "安全な", "synonyms": "secure, protected", "antonyms": "dangerous, risky", "forms": "safe, safely, safety", "example": "This path is safe for children." },
+    { "word": "serious", "meaning": "important, not funny, or needing careful thought", "japaneseMeaning": "深刻な、真剣な", "synonyms": "important, severe", "antonyms": "funny, minor", "forms": "serious, seriously, seriousness", "example": "The doctor found a serious problem." },
+    { "word": "short", "meaning": "small in length, height, or time", "japaneseMeaning": "短い、背が低い", "synonyms": "brief, small", "antonyms": "long, tall", "forms": "short, shorter, shortest, shortly", "example": "We took a short break after lunch." },
+    { "word": "silent", "meaning": "making no sound", "japaneseMeaning": "静かな、無言の", "synonyms": "quiet, soundless", "antonyms": "noisy, loud", "forms": "silent, silently, silence", "example": "The room became silent before the speech." },
+    { "word": "slow", "meaning": "not fast", "japaneseMeaning": "遅い、ゆっくりした", "synonyms": "not fast, gradual", "antonyms": "fast, quick", "forms": "slow, slowly, slowness", "example": "The slow bus made us late." },
+    { "word": "soft", "meaning": "not hard, rough, or loud", "japaneseMeaning": "柔らかい、穏やかな", "synonyms": "gentle, smooth", "antonyms": "hard, loud", "forms": "soft, softly, softness", "example": "The baby slept on a soft blanket." }
   ]
 }

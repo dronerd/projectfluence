@@ -5,17 +5,14 @@ type Lesson = { id: string; title: string; };
 type LevelOrder = { [key: string]: string[] };
 
 const STATIC_GENRES: Lesson[] = [
-  { id: "word-intermediate", title: "初級~中級 (CEFR A2~B1)" },
-  { id: "word-high-intermediate", title: "中上級 (CEFR B2)" },
-  { id: "word-advanced", title: "上級 (CEFR C1)" },
-  { id: "word-proficiency", title: "熟達 (CEFR C2)" },
-  { id: "idioms-intermediate", title: "初級~中級 (CEFR A2~B1)" },
-  { id: "idioms-high-intermediate", title: "中上級 (CEFR B2)" },
-  { id: "idioms-advanced", title: "上級 (CEFR C1)" },
-  { id: "idioms-proficiency", title: "熟達 (CEFR C2)" },
-  { id: "business-entry", title: "入門レベル" },
-  { id: "business-intermediate", title: "実践レベル" },
-  { id: "business-global", title: "グローバルレベル" },
+  { id: "word-beginner", title: "初級 (CEFR A1~A2)" },
+  { id: "word-intermediate", title: "中級 (CEFR B1)" },
+  { id: "word-advanced", title: "上級 (CEFR B2)" },
+  { id: "word-proficiency", title: "熟達 (CEFR C1~C2)" },
+  { id: "idioms-beginner", title: "初級 (CEFR A1~A2)" },
+  { id: "idioms-intermediate", title: "中級 (CEFR B1)" },
+  { id: "idioms-advanced", title: "上級 (CEFR B2)" },
+  { id: "idioms-proficiency", title: "熟達 (CEFR C1~C2)" },
   { id: "computer-science", title: "コンピューターサイエンス・テクノロジー" },
   { id: "medicine", title: "医学・健康" },
   { id: "economics-business", title: "ビジネス・経済" },
@@ -43,12 +40,10 @@ export default function LearnGenres() {
   const categories: Record<string, Lesson[]> = {
     単語: genres.filter((g) => g.id.startsWith("word")),
     熟語: genres.filter((g) => g.id.startsWith("idioms")),
-    ビジネス表現: genres.filter((g) => g.id.startsWith("business")),
     専門用語: genres.filter(
       (g) =>
         !g.id.startsWith("word") &&
-        !g.id.startsWith("idioms") &&
-        !g.id.startsWith("business")
+        !g.id.startsWith("idioms")
     ),
   };
 
@@ -72,27 +67,21 @@ export default function LearnGenres() {
 
   const levelOrder: LevelOrder = {
     単語: [
+      "word-beginner",
       "word-intermediate",
-      "word-high-intermediate",
       "word-advanced",
       "word-proficiency",
     ],
     熟語: [
+      "idioms-beginner",
       "idioms-intermediate",
-      "idioms-high-intermediate",
       "idioms-advanced",
       "idioms-proficiency",
-    ],
-    ビジネス表現: [
-      "business-entry",
-      "business-intermediate",
-      "business-global",
-      "business-proficiency",
     ],
   };
 
   function cardBackground(categoryName: string, index: number) {
-    if (categoryName === "単語" || categoryName === "熟語" || categoryName === "ビジネス表現") {
+    if (categoryName === "単語" || categoryName === "熟語") {
       return blueGradients[index] || blueGradients[blueGradients.length - 1];
     }
     const termColors = [
@@ -107,10 +96,14 @@ export default function LearnGenres() {
   const basePadding = isSmall ? 12 : 20;
 
   const allowedLessonIds = new Set([
+    "word-beginner",
     "word-intermediate",
-    "word-high-intermediate",
     "word-advanced",
     "word-proficiency",
+    "idioms-beginner",
+    "idioms-intermediate",
+    "idioms-advanced",
+    "idioms-proficiency",
   ]);
 
   function handleLessonClick(lessonId: string) {

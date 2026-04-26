@@ -1,20 +1,17 @@
-  {
-    "lesson_id": "eiken-pre2-63",
-    "title": "Lesson 63",
-    "paragraph": "Adjectives for pace, texture and striking qualities — great when describing objects or events.",
-    "words": [
-      { "word": "slow", "meaning": "moving or operating at low speed", "japaneseMeaning": "遅い／ゆっくりした", "synonyms": "unhurried, sluggish", "antonyms": "fast, quick", "example": "The traffic was slow during rush hour." },
-      { "word": "small", "meaning": "of limited size or extent; not large", "japaneseMeaning": "小さい／ささやかな", "synonyms": "tiny, little", "antonyms": "large, huge", "example": "They live in a small house near the station." },
-      { "word": "soft", "meaning": "pleasant to touch; not hard or firm", "japaneseMeaning": "柔らかい／ソフトな", "synonyms": "gentle, plush", "antonyms": "hard, firm", "example": "The pillow is soft and comfortable." },
-      { "word": "special", "meaning": "better, greater, or different from what is usual", "japaneseMeaning": "特別な／特有の", "synonyms": "unique, exceptional", "antonyms": "ordinary, common", "example": "Today’s menu has a special dessert." },
-      { "word": "strange", "meaning": "unusual or surprising in a way that is unsettling", "japaneseMeaning": "奇妙な／変わった", "synonyms": "odd, peculiar", "antonyms": "normal, familiar", "example": "It felt strange to be back after so long." },
-      { "word": "strong", "meaning": "having great physical power or force", "japaneseMeaning": "強い／力強い", "synonyms": "powerful, sturdy", "antonyms": "weak, fragile", "example": "He is strong enough to carry the table." },
-      { "word": "sudden", "meaning": "happening quickly and unexpectedly", "japaneseMeaning": "突然の／急な", "synonyms": "abrupt, unexpected", "antonyms": "gradual, expected", "example": "There was a sudden change in the weather." },
-      { "word": "tall", "meaning": "of greater than average height", "japaneseMeaning": "背が高い／高い", "synonyms": "high, lofty", "antonyms": "short, low", "example": "The tall building can be seen from the station." },
-      { "word": "terrible", "meaning": "extremely bad or serious", "japaneseMeaning": "ひどい／恐ろしい", "synonyms": "awful, dreadful", "antonyms": "wonderful, great", "example": "They had a terrible storm last night." },
-      { "word": "thick", "meaning": "having relatively great extent between two opposite surfaces", "japaneseMeaning": "厚い／濃い", "synonyms": "dense, chunky", "antonyms": "thin, fine", "example": "The book has a thick cover." },
-      { "word": "thin", "meaning": "having little thickness or depth; not fat", "japaneseMeaning": "薄い／細い", "synonyms": "slender, slim", "antonyms": "thick, fat", "example": "The paper is too thin for this printer." },
-      { "word": "tiny", "meaning": "very small in size", "japaneseMeaning": "とても小さい／微小な", "synonyms": "minute, minuscule", "antonyms": "huge, enormous", "example": "She found a tiny shell on the beach." }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-63",
+  "title": "Lesson 63",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "important", "meaning": "having great value or effect", "japaneseMeaning": "重要な", "synonyms": "key, major", "antonyms": "unimportant, minor", "forms": "important, importantly, importance", "example": "Sleep is important for health." },
+    { "word": "interesting", "meaning": "making you want to know more", "japaneseMeaning": "興味深い", "synonyms": "engaging, exciting", "antonyms": "boring, dull", "forms": "interesting, interestingly, interest", "example": "The museum had an interesting map." },
+    { "word": "large", "meaning": "big in size or amount", "japaneseMeaning": "大きい、多い", "synonyms": "big, wide", "antonyms": "small, little", "forms": "large, larger, largest", "example": "A large tree grows beside the school." },
+    { "word": "left", "meaning": "on the side of your body with the weaker hand for most people", "japaneseMeaning": "左の、残った", "synonyms": "left-hand, remaining", "antonyms": "right, gone", "forms": "left", "example": "Turn left at the bank." },
+    { "word": "little", "meaning": "small in size or amount", "japaneseMeaning": "小さい、少しの", "synonyms": "small, tiny", "antonyms": "big, much", "forms": "little, less, least", "example": "A little child waved at us." },
+    { "word": "long", "meaning": "having a great length or lasting much time", "japaneseMeaning": "長い", "synonyms": "lengthy, extended", "antonyms": "short, brief", "forms": "long, longer, longest", "example": "It was a long walk to the station." },
+    { "word": "low", "meaning": "not high or below the usual level", "japaneseMeaning": "低い", "synonyms": "short, reduced", "antonyms": "high, tall", "forms": "low, lower, lowest", "example": "The price is low this week." },
+    { "word": "married", "meaning": "having a husband or wife", "japaneseMeaning": "結婚している", "synonyms": "wed, partnered", "antonyms": "single, unmarried", "forms": "married, marry, marriage", "example": "My sister is married and lives in Kyoto." },
+    { "word": "middle", "meaning": "in the center or halfway between two sides", "japaneseMeaning": "真ん中の", "synonyms": "central, halfway", "antonyms": "edge, end", "forms": "middle", "example": "The middle seat is empty." },
+    { "word": "new", "meaning": "recently made or not used before", "japaneseMeaning": "新しい", "synonyms": "recent, fresh", "antonyms": "old, used", "forms": "new, newer, newest", "example": "I bought a new notebook." }
+  ]
+}

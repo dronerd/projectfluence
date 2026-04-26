@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-36",
-  "title": "Lesson 11",
-  "paragraph": "Verbs for expressing actions with volume, appearance, and beginnings of activities.",
+  "lesson_id": "eiken-2-36",
+  "title": "Lesson 36",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "share", "meaning": "to divide and give a portion to others", "japaneseMeaning": "分け合う／共有する", "synonyms": "divide, distribute", "antonyms": "hoard, keep", "example": "She shared her lunch with a friend." },
-    { "word": "shout", "meaning": "to speak very loudly, often from strong emotion", "japaneseMeaning": "叫ぶ", "synonyms": "yell, cry", "antonyms": "whisper, murmur", "example": "Don't shout in the library." },
-    { "word": "show", "meaning": "to present something so others can see", "japaneseMeaning": "見せる／示す", "synonyms": "display, exhibit", "antonyms": "hide, conceal", "example": "Please show me your ticket." },
-    { "word": "shut", "meaning": "to close something", "japaneseMeaning": "閉める／閉じる", "synonyms": "close, seal", "antonyms": "open, uncover", "example": "Shut the door behind you." },
-    { "word": "sign", "meaning": "to write one's name on a document or to give a signal", "japaneseMeaning": "署名する／合図する", "synonyms": "authenticate, signal", "antonyms": "erase, cancel", "example": "Sign at the bottom of the form." },
-    { "word": "sing", "meaning": "to produce musical sounds with the voice", "japaneseMeaning": "歌う", "synonyms": "chant, vocalize", "antonyms": "speak, whisper", "example": "She sings in the school choir." },
-    { "word": "sit", "meaning": "to rest with the body supported by the buttocks", "japaneseMeaning": "座る", "synonyms": "perch, seat", "antonyms": "stand, rise", "example": "Please sit down." },
-    { "word": "sleep", "meaning": "to rest with closed eyes and reduced consciousness", "japaneseMeaning": "眠る", "synonyms": "rest, slumber", "antonyms": "wake, stay awake", "example": "I usually sleep eight hours." },
-    { "word": "smile", "meaning": "to make a happy expression with the mouth", "japaneseMeaning": "微笑む", "synonyms": "grin, beam", "antonyms": "frown, scowl", "example": "She smiled at the joke." },
-    { "word": "spend", "meaning": "to use money or time for something", "japaneseMeaning": "使う／過ごす", "synonyms": "use, expend", "antonyms": "save, conserve", "example": "He spent much time studying." },
-    { "word": "stand", "meaning": "to be on one's feet in an upright position", "japaneseMeaning": "立つ", "synonyms": "rise, remain upright", "antonyms": "sit, lie", "example": "Stand in line, please." },
-    { "word": "start", "meaning": "to begin something", "japaneseMeaning": "始める／始まる", "synonyms": "begin, commence", "antonyms": "finish, end", "example": "They start class at nine." }
+    { "word": "ring", "meaning": "to make the sound of a bell or phone", "japaneseMeaning": "鳴る、鳴らす", "synonyms": "sound, chime", "antonyms": "silence, stop", "forms": "ring, rings, ringing, rang, rung", "example": "The phone will ring when someone calls." },
+    { "word": "shake", "meaning": "to move quickly from side to side or up and down", "japaneseMeaning": "振る、震える", "synonyms": "tremble, wave", "antonyms": "steady, hold still", "forms": "shake, shakes, shaking, shook, shaken", "example": "Shake the bottle before you drink it." },
+    { "word": "shout", "meaning": "to speak very loudly", "japaneseMeaning": "叫ぶ、大声で言う", "synonyms": "yell, call out", "antonyms": "whisper, mumble", "forms": "shout, shouts, shouting, shouted", "example": "Do not shout in the library." },
+    { "word": "ski", "meaning": "to move over snow using skis", "japaneseMeaning": "スキーをする", "synonyms": "snow ski, glide", "antonyms": "walk, stop", "forms": "ski, skis, skiing, skied", "example": "We ski in the mountains every winter." },
+    { "word": "smell", "meaning": "to notice something with your nose", "japaneseMeaning": "においがする、においをかぐ", "synonyms": "sniff, scent", "antonyms": "ignore, miss", "forms": "smell, smells, smelling, smelled, smelt", "example": "I can smell fresh bread from the kitchen." },
+    { "word": "smile", "meaning": "to show happiness with your mouth", "japaneseMeaning": "ほほえむ、笑顔になる", "synonyms": "grin, beam", "antonyms": "frown, cry", "forms": "smile, smiles, smiling, smiled", "example": "She will smile when she sees the gift." },
+    { "word": "spell", "meaning": "to say or write the letters of a word in order", "japaneseMeaning": "つづる", "synonyms": "write, name letters", "antonyms": "misspell, confuse", "forms": "spell, spells, spelling, spelled, spelt", "example": "Can you spell your family name?" },
+    { "word": "stand", "meaning": "to be on your feet", "japaneseMeaning": "立つ", "synonyms": "be upright, rise", "antonyms": "sit, lie", "forms": "stand, stands, standing, stood", "example": "Please stand near the door." },
+    { "word": "steal", "meaning": "to take something that belongs to someone else", "japaneseMeaning": "盗む", "synonyms": "rob, take", "antonyms": "return, give", "forms": "steal, steals, stealing, stole, stolen", "example": "It is wrong to steal money from a friend." },
+    { "word": "stretch", "meaning": "to make your body or something else longer or wider", "japaneseMeaning": "伸ばす、広げる", "synonyms": "extend, lengthen", "antonyms": "shrink, shorten", "forms": "stretch, stretches, stretching, stretched", "example": "Stretch your legs after sitting for a long time." }
   ]
 }

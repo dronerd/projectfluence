@@ -1,28 +1,17 @@
 {
-    "lesson_id": "eiken-pre2-3",
-    "title": "Lesson 3",
-    "paragraph": "Food and drink bring variety to our meals and social occasions. Ingredients like vegetables, meat, and seasonings are combined by chefs to create soups, desserts and main dishes. Healthy choices and balanced portions help you enjoy food while staying fit.",
-    "words": [
-      { "word": "beef", "meaning": "meat from cattle", "japaneseMeaning": "牛肉", "synonyms": "steak, meat", "antonyms": "vegetarian, tofu", "example": "She ordered a beef steak for dinner." },
-      { "word": "cabbage", "meaning": "a leafy vegetable used in many dishes", "japaneseMeaning": "キャベツ", "synonyms": "greens, brassica", "antonyms": "", "example": "Cabbage is common in salads and stir-fries." },
-      { "word": "carrot", "meaning": "an orange root vegetable", "japaneseMeaning": "にんじん", "synonyms": "root vegetable", "antonyms": "", "example": "He chopped a carrot for the soup." },
-      { "word": "cereal", "meaning": "grains eaten for breakfast", "japaneseMeaning": "シリアル", "synonyms": "grain, breakfast food", "antonyms": "sweets", "example": "She poured milk over the cereal." },
-      { "word": "chef", "meaning": "a professional cook", "japaneseMeaning": "シェフ", "synonyms": "cook, culinary artist", "antonyms": "diner, customer", "example": "The chef prepared a special menu." },
-      { "word": "dessert", "meaning": "a sweet course served at the end of a meal", "japaneseMeaning": "デザート", "synonyms": "sweet, pudding", "antonyms": "main course, appetizer", "example": "We had ice cream for dessert." },
-      { "word": "flour", "meaning": "a powder made from ground grains used for baking", "japaneseMeaning": "小麦粉", "synonyms": "meal, powder", "antonyms": "", "example": "Add flour to make the dough." },
-      { "word": "garlic", "meaning": "a strong-flavored bulb used in cooking", "japaneseMeaning": "にんにく", "synonyms": "allium, seasoning", "antonyms": "", "example": "Garlic adds flavor to the sauce." },
-      { "word": "grape", "meaning": "a small round fruit used fresh or for wine", "japaneseMeaning": "ぶどう", "synonyms": "fruit, berry", "antonyms": "", "example": "She picked a grape from the bunch." },
-      { "word": "jam", "meaning": "fruit preserved with sugar, spread on bread", "japaneseMeaning": "ジャム", "synonyms": "preserve, spread", "antonyms": "", "example": "He spread strawberry jam on his toast." },
-      { "word": "lemon", "meaning": "a sour yellow citrus fruit", "japaneseMeaning": "レモン", "synonyms": "citrus, lime (similar)", "antonyms": "", "example": "Add lemon juice to the dressing." },
-      { "word": "lettuce", "meaning": "a leafy vegetable used in salads", "japaneseMeaning": "レタス", "synonyms": "greens, salad leaf", "antonyms": "", "example": "She tossed lettuce with tomatoes." },
-      { "word": "mushroom", "meaning": "an edible fungus used in cooking", "japaneseMeaning": "きのこ", "synonyms": "fungus, toadstool", "antonyms": "", "example": "He added mushrooms to the pasta." },
-      { "word": "onion", "meaning": "a layered vegetable with a strong flavor", "japaneseMeaning": "たまねぎ", "synonyms": "bulb, allium", "antonyms": "", "example": "She chopped an onion for the sauce." },
-      { "word": "pepper", "meaning": "a spicy or sweet vegetable or spice", "japaneseMeaning": "ピーマン／胡椒", "synonyms": "capsicum, spice", "antonyms": "", "example": "Roast the pepper until it's soft." },
-      { "word": "salad", "meaning": "a cold dish of mixed vegetables or fruit", "japaneseMeaning": "サラダ", "synonyms": "greens, side dish", "antonyms": "stew, soup", "example": "We had a fresh salad with lunch." },
-      { "word": "sausage", "meaning": "ground meat seasoned and stuffed into casing", "japaneseMeaning": "ソーセージ", "synonyms": "link, frankfurter", "antonyms": "vegetarian patty", "example": "He grilled sausages for breakfast." },
-      { "word": "soup", "meaning": "a liquid dish often containing vegetables or meat", "japaneseMeaning": "スープ", "synonyms": "broth, stew", "antonyms": "solid meal", "example": "Tomato soup warmed us up." },
-      { "word": "spinach", "meaning": "a green leafy vegetable high in nutrients", "japaneseMeaning": "ほうれん草", "synonyms": "greens, leafy vegetable", "antonyms": "", "example": "She added spinach to the omelet." },
-      { "word": "steak", "meaning": "a slice of meat, usually beef, cooked by grilling or frying", "japaneseMeaning": "ステーキ", "synonyms": "cut, filet", "antonyms": "vegetarian dish", "example": "He ordered a medium-rare steak." }
-    ]
-  }
-  
+  "lesson_id": "eiken-2-3",
+  "title": "Lesson 3",
+  "paragraph": "The community center has an available room for a general study group. The official rules are practical, and the room is ready for busy students. The class feels similar to school, but each student has a personal goal. A responsible leader chooses suitable tasks and gives healthy advice.",
+  "words": [
+    { "word": "available", "meaning": "ready to be used or free to help", "japaneseMeaning": "利用できる、空いている", "synonyms": "free, ready", "antonyms": "unavailable, busy", "forms": "available, availability", "example": "A study room is available after three o'clock." },
+    { "word": "similar", "meaning": "almost the same but not exactly the same", "japaneseMeaning": "似ている", "synonyms": "alike, close", "antonyms": "different, unlike", "forms": "similar, similarly, similarity", "example": "My bag is similar to yours, but mine is blue." },
+    { "word": "suitable", "meaning": "right for a particular person, place, or purpose", "japaneseMeaning": "適した、ふさわしい", "synonyms": "right, proper", "antonyms": "unsuitable, wrong", "forms": "suitable, suitably, suitability", "example": "These shoes are suitable for a long walk." },
+    { "word": "official", "meaning": "approved by a person or group in authority", "japaneseMeaning": "公式の、公的な", "synonyms": "formal, approved", "antonyms": "unofficial, informal", "forms": "official, officially", "example": "The official results will appear on the school website." },
+    { "word": "personal", "meaning": "belonging to or connected with one person", "japaneseMeaning": "個人の、個人的な", "synonyms": "private, individual", "antonyms": "public, shared", "forms": "personal, personally", "example": "Please do not put personal information in a public chat." },
+    { "word": "general", "meaning": "not detailed or not limited to one small part", "japaneseMeaning": "一般的な、全体的な", "synonyms": "broad, overall", "antonyms": "specific, detailed", "forms": "general, generally", "example": "The teacher gave a general explanation before the activity." },
+    { "word": "healthy", "meaning": "good for your body or mind", "japaneseMeaning": "健康的な、健全な", "synonyms": "well, fit", "antonyms": "unhealthy, sick", "forms": "healthy, healthily, health", "example": "A healthy breakfast helps me study in the morning." },
+    { "word": "ready", "meaning": "prepared for something", "japaneseMeaning": "準備ができた", "synonyms": "prepared, set", "antonyms": "unprepared, late", "forms": "ready, readiness", "example": "The students are ready for the speaking test." },
+    { "word": "practical", "meaning": "useful in real situations", "japaneseMeaning": "実用的な、現実的な", "synonyms": "useful, realistic", "antonyms": "impractical, useless", "forms": "practical, practically, practicality", "example": "This course teaches practical skills for office work." },
+    { "word": "responsible", "meaning": "trusted to do what is needed or expected", "japaneseMeaning": "責任感のある、責任がある", "synonyms": "reliable, careful", "antonyms": "careless, irresponsible", "forms": "responsible, responsibly, responsibility", "example": "A responsible student returns library books on time." }
+  ]
+}

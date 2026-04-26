@@ -1,104 +1,17 @@
-  {
-    "lesson_id": "eiken-pre2-59",
-    "title": "Lesson 59",
-    "paragraph": "More descriptive adjectives — nationality, freshness, helpfulness and size among them.",
-    "words": [
-      {
-        "word": "foreign",
-        "meaning": "from or relating to a country that is not one's own",
-        "japaneseMeaning": "外国の／海外の",
-        "synonyms": "overseas, international",
-        "antonyms": "domestic, local",
-        "example": "She enjoys reading foreign literature."
-      },
-      {
-        "word": "fresh",
-        "meaning": "recently made or obtained; new and not stale",
-        "japaneseMeaning": "新鮮な",
-        "synonyms": "new, crisp",
-        "antonyms": "stale, old",
-        "example": "We bought fresh bread from the bakery."
-      },
-      {
-        "word": "friendly",
-        "meaning": "kind and pleasant to others",
-        "japaneseMeaning": "友好的な／親しみやすい",
-        "synonyms": "amiable, cordial",
-        "antonyms": "hostile, unfriendly",
-        "example": "The staff at the hotel were very friendly."
-      },
-      {
-        "word": "full",
-        "meaning": "containing as much as possible; not empty",
-        "japaneseMeaning": "満杯の／いっぱいの",
-        "synonyms": "packed, complete",
-        "antonyms": "empty, vacant",
-        "example": "The bus was full, so we waited for the next one."
-      },
-      {
-        "word": "global",
-        "meaning": "relating to the whole world; worldwide",
-        "japaneseMeaning": "世界的な／グローバルな",
-        "synonyms": "worldwide, international",
-        "antonyms": "local, regional",
-        "example": "The company has a global presence in many countries."
-      },
-      {
-        "word": "heavy",
-        "meaning": "weighing a lot; difficult to lift or move",
-        "japaneseMeaning": "重い",
-        "synonyms": "weighty, burdensome",
-        "antonyms": "light, lightweight",
-        "example": "The package is too heavy to carry alone."
-      },
-      {
-        "word": "helpful",
-        "meaning": "providing assistance or useful information",
-        "japaneseMeaning": "役に立つ／助けになる",
-        "synonyms": "useful, beneficial",
-        "antonyms": "unhelpful, useless",
-        "example": "Her advice was very helpful for my project."
-      },
-      {
-        "word": "hot",
-        "meaning": "having a high temperature; very warm",
-        "japaneseMeaning": "熱い／暑い",
-        "synonyms": "warm, scorching",
-        "antonyms": "cold, cool",
-        "example": "Be careful — the soup is hot."
-      },
-      {
-        "word": "huge",
-        "meaning": "extremely large in size or amount",
-        "japaneseMeaning": "巨大な",
-        "synonyms": "enormous, massive",
-        "antonyms": "tiny, small",
-        "example": "They moved into a huge new office."
-      },
-      {
-        "word": "important",
-        "meaning": "of great significance or value; essential",
-        "japaneseMeaning": "重要な",
-        "synonyms": "significant, crucial",
-        "antonyms": "trivial, unimportant",
-        "example": "It's important to read the instructions carefully."
-      },
-      {
-        "word": "impossible",
-        "meaning": "not able to occur, exist, or be done",
-        "japaneseMeaning": "不可能な",
-        "synonyms": "unachievable, impractical",
-        "antonyms": "possible, feasible",
-        "example": "It seemed impossible to finish on time."
-      },
-      {
-        "word": "interesting",
-        "meaning": "arousing curiosity or holding attention",
-        "japaneseMeaning": "興味深い／面白い",
-        "synonyms": "engaging, fascinating",
-        "antonyms": "dull, boring",
-        "example": "The lecture was interesting and informative."
-      }
-    ]
-  }
-
+{
+  "lesson_id": "eiken-2-59",
+  "title": "Lesson 59",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "want", "meaning": "to wish to have or do something", "japaneseMeaning": "欲しい、したい", "synonyms": "wish, need", "antonyms": "refuse, reject", "forms": "want, wants, wanting, wanted", "example": "I want a quiet place to study." },
+    { "word": "watch", "meaning": "to look at something for a period of time", "japaneseMeaning": "見る、見守る", "synonyms": "look at, observe", "antonyms": "ignore, miss", "forms": "watch, watches, watching, watched", "example": "We watch a movie every Friday." },
+    { "word": "win", "meaning": "to be the best or first in a game or contest", "japaneseMeaning": "勝つ", "synonyms": "succeed, beat", "antonyms": "lose, fail", "forms": "win, wins, winning, won", "example": "Our team can win if we practice." },
+    { "word": "write", "meaning": "to make words with a pen, pencil, or keyboard", "japaneseMeaning": "書く", "synonyms": "record, type", "antonyms": "erase, read", "forms": "write, writes, writing, wrote, written", "example": "Please write your email address clearly." },
+    { "word": "accept", "meaning": "to agree to take or receive something", "japaneseMeaning": "受け入れる", "synonyms": "receive, agree to", "antonyms": "refuse, reject", "forms": "accept, accepts, accepting, accepted, acceptance", "example": "She will accept the job offer." },
+    { "word": "arrive", "meaning": "to reach a place", "japaneseMeaning": "到着する", "synonyms": "reach, come", "antonyms": "leave, depart", "forms": "arrive, arrives, arriving, arrived, arrival", "example": "The train will arrive at noon." },
+    { "word": "borrow", "meaning": "to use something and return it later", "japaneseMeaning": "借りる", "synonyms": "use temporarily, take", "antonyms": "lend, keep", "forms": "borrow, borrows, borrowing, borrowed", "example": "Can I borrow your dictionary?" },
+    { "word": "break", "meaning": "to damage something or make it stop working", "japaneseMeaning": "壊す、壊れる", "synonyms": "damage, crack", "antonyms": "fix, repair", "forms": "break, breaks, breaking, broke, broken", "example": "Do not break the glass cup." },
+    { "word": "build", "meaning": "to make something by putting parts together", "japaneseMeaning": "建てる、作る", "synonyms": "construct, create", "antonyms": "destroy, remove", "forms": "build, builds, building, built", "example": "They will build a new library." },
+    { "word": "cancel", "meaning": "to decide that a plan or event will not happen", "japaneseMeaning": "取り消す、中止する", "synonyms": "stop, call off", "antonyms": "continue, arrange", "forms": "cancel, cancels, canceling, canceled, cancellation", "example": "We may cancel the picnic if it rains." }
+  ]
+}

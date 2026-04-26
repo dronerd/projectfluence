@@ -1,104 +1,17 @@
- {
-    "lesson_id": "eiken-pre2-48",
-    "title": "Lesson 48",
-    "paragraph": "This lesson (Lesson 48) includes adjectives for simplicity, tradition and character traits used to describe people.",
-    "words": [
-      {
-        "word": "simple",
-        "meaning": "easy to understand or do; not complicated",
-        "japaneseMeaning": "簡単な",
-        "synonyms": "easy, straightforward",
-        "antonyms": "complex, complicated",
-        "example": "The instructions are simple to follow."
-      },
-      {
-        "word": "traditional",
-        "meaning": "based on customs or long-established practices",
-        "japaneseMeaning": "伝統的な",
-        "synonyms": "conventional, classic",
-        "antonyms": "modern, innovative",
-        "example": "They wore traditional clothes for the festival."
-      },
-      {
-        "word": "useful",
-        "meaning": "able to be used effectively for a purpose",
-        "japaneseMeaning": "役に立つ",
-        "synonyms": "helpful, practical",
-        "antonyms": "useless, pointless",
-        "example": "This app is very useful for learning vocabulary."
-      },
-      {
-        "word": "weak",
-        "meaning": "lacking strength or power",
-        "japaneseMeaning": "弱い",
-        "synonyms": "feeble, frail",
-        "antonyms": "strong, powerful",
-        "example": "He felt weak after the long illness."
-      },
-      {
-        "word": "active",
-        "meaning": "engaging in physical or mental activity",
-        "japaneseMeaning": "活動的な／活発な",
-        "synonyms": "energetic, dynamic",
-        "antonyms": "inactive, passive",
-        "example": "She is very active in community events."
-      },
-      {
-        "word": "ambitious",
-        "meaning": "having a strong desire to achieve success",
-        "japaneseMeaning": "野心的な",
-        "synonyms": "driven, aspiring",
-        "antonyms": "unambitious, complacent",
-        "example": "He is ambitious and aims to be a manager."
-      },
-      {
-        "word": "arrogant",
-        "meaning": "having an exaggerated sense of one's importance",
-        "japaneseMeaning": "傲慢な",
-        "synonyms": "haughty, conceited",
-        "antonyms": "humble, modest",
-        "example": "He came across as arrogant during the meeting."
-      },
-      {
-        "word": "attractive",
-        "meaning": "pleasing or appealing to the senses",
-        "japaneseMeaning": "魅力的な",
-        "synonyms": "appealing, charming",
-        "antonyms": "unattractive, plain",
-        "example": "The design is very attractive to customers."
-      },
-      {
-        "word": "average",
-        "meaning": "typical or ordinary; the middle value",
-        "japaneseMeaning": "平均的な／普通の",
-        "synonyms": "typical, ordinary",
-        "antonyms": "exceptional, extraordinary",
-        "example": "Her test score was about average."
-      },
-      {
-        "word": "brave",
-        "meaning": "ready to face danger or pain without showing fear",
-        "japaneseMeaning": "勇敢な",
-        "synonyms": "courageous, bold",
-        "antonyms": "cowardly, timid",
-        "example": "The firefighter was brave during the rescue."
-      },
-      {
-        "word": "careless",
-        "meaning": "not giving enough attention; negligent",
-        "japaneseMeaning": "不注意な",
-        "synonyms": "negligent, sloppy",
-        "antonyms": "careful, cautious",
-        "example": "His careless mistake caused the delay."
-      },
-      {
-        "word": "charming",
-        "meaning": "pleasant or delightful in manner",
-        "japaneseMeaning": "魅力的な",
-        "synonyms": "delightful, pleasant",
-        "antonyms": "offensive, rude",
-        "example": "She has a charming smile."
-      }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-48",
+  "title": "Lesson 48",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "able", "meaning": "having the skill or chance to do something", "japaneseMeaning": "できる、有能な", "synonyms": "capable, skilled", "antonyms": "unable, incapable", "forms": "able, ably, ability", "example": "She is able to swim across the pool." },
+    { "word": "sorry", "meaning": "feeling sadness or regret", "japaneseMeaning": "申し訳ない、残念な", "synonyms": "regretful, sad", "antonyms": "glad, proud", "forms": "sorry, sorrier, sorriest", "example": "I am sorry for being late." },
+    { "word": "tired", "meaning": "needing rest or sleep", "japaneseMeaning": "疲れた", "synonyms": "sleepy, exhausted", "antonyms": "rested, energetic", "forms": "tired, tiredly, tiredness", "example": "I felt tired after the long walk." },
+    { "word": "wet", "meaning": "covered with water or another liquid", "japaneseMeaning": "濡れた", "synonyms": "damp, soaked", "antonyms": "dry, clean", "forms": "wet, wetter, wettest", "example": "My shoes are wet from the rain." },
+    { "word": "wise", "meaning": "showing good judgment from knowledge or experience", "japaneseMeaning": "賢い、賢明な", "synonyms": "sensible, smart", "antonyms": "foolish, careless", "forms": "wise, wisely, wisdom", "example": "It is wise to save some money." },
+    { "word": "wrong", "meaning": "not correct or not good", "japaneseMeaning": "間違った、悪い", "synonyms": "incorrect, false", "antonyms": "right, correct", "forms": "wrong, wrongly", "example": "The wrong answer is crossed out." },
+    { "word": "young", "meaning": "not old", "japaneseMeaning": "若い", "synonyms": "youthful, little", "antonyms": "old, elderly", "forms": "young, younger, youngest", "example": "The young child learned quickly." },
+    { "word": "light", "meaning": "not heavy or not dark", "japaneseMeaning": "軽い、明るい", "synonyms": "bright, lightweight", "antonyms": "heavy, dark", "forms": "light, lighter, lightest", "example": "This bag is light enough to carry." },
+    { "word": "loud", "meaning": "making a lot of noise", "japaneseMeaning": "大きな音の、うるさい", "synonyms": "noisy, strong", "antonyms": "quiet, soft", "forms": "loud, loudly, loudness", "example": "The loud music woke the baby." },
+    { "word": "lucky", "meaning": "having good things happen by chance", "japaneseMeaning": "幸運な", "synonyms": "fortunate, blessed", "antonyms": "unlucky, unfortunate", "forms": "lucky, luckily, luck", "example": "We were lucky to catch the last train." }
+  ]
+}

@@ -1,103 +1,17 @@
-  {
-    "lesson_id": "eiken-pre2-58",
-    "title": "Lesson 58",
-    "paragraph": "Adjectives for quality, size, and sensory description — ideal for describing objects and experiences.",
-    "words": [
-      {
-        "word": "dark",
-        "meaning": "with little or no light; not light in color",
-        "japaneseMeaning": "暗い／濃い色の",
-        "synonyms": "dim, shadowy",
-        "antonyms": "bright, light",
-        "example": "The room was dark after the lights went out."
-      },
-      {
-        "word": "deep",
-        "meaning": "extending far down from the top or surface; intense",
-        "japaneseMeaning": "深い",
-        "synonyms": "profound, bottomless",
-        "antonyms": "shallow, superficial",
-        "example": "The water becomes deep near the cliffs."
-      },
-      {
-        "word": "delicious",
-        "meaning": "very pleasant to taste; tasty",
-        "japaneseMeaning": "おいしい／美味な",
-        "synonyms": "tasty, scrumptious",
-        "antonyms": "tasteless, awful",
-        "example": "The soup was delicious and warmed us up."
-      },
-      {
-        "word": "difficult",
-        "meaning": "needing effort or skill to do or understand",
-        "japaneseMeaning": "難しい",
-        "synonyms": "hard, challenging",
-        "antonyms": "easy, simple",
-        "example": "This math problem is difficult to solve."
-      },
-      {
-        "word": "dirty",
-        "meaning": "not clean; covered with unclean matter",
-        "japaneseMeaning": "汚れた／不潔な",
-        "synonyms": "filthy, soiled",
-        "antonyms": "clean, spotless",
-        "example": "Your shoes are dirty from the rain."
-      },
-      {
-        "word": "easy",
-        "meaning": "not difficult; requiring little effort",
-        "japaneseMeaning": "簡単な／容易な",
-        "synonyms": "simple, effortless",
-        "antonyms": "difficult, hard",
-        "example": "The exercise was easy for most students."
-      },
-      {
-        "word": "empty",
-        "meaning": "containing nothing; vacant",
-        "japaneseMeaning": "空の／中身がない",
-        "synonyms": "vacant, hollow",
-        "antonyms": "full, occupied",
-        "example": "The bottle is empty — can you refill it?"
-      },
-      {
-        "word": "enormous",
-        "meaning": "very large in size or quantity",
-        "japaneseMeaning": "巨大な／莫大な",
-        "synonyms": "huge, massive",
-        "antonyms": "tiny, small",
-        "example": "The stadium was enormous and held thousands of fans."
-      },
-      {
-        "word": "expensive",
-        "meaning": "costing a lot of money",
-        "japaneseMeaning": "高価な／値段の高い",
-        "synonyms": "costly, pricey",
-        "antonyms": "cheap, inexpensive",
-        "example": "That watch is too expensive for my budget."
-      },
-      {
-        "word": "fair",
-        "meaning": "treating people equally and without favoritism; reasonable",
-        "japaneseMeaning": "公平な／公正な",
-        "synonyms": "just, impartial",
-        "antonyms": "unfair, biased",
-        "example": "The judge made a fair decision."
-      },
-      {
-        "word": "fast",
-        "meaning": "moving or capable of moving at high speed",
-        "japaneseMeaning": "速い",
-        "synonyms": "quick, speedy",
-        "antonyms": "slow, sluggish",
-        "example": "This car is very fast on the highway."
-      },
-      {
-        "word": "fat",
-        "meaning": "having a large amount of excess flesh; or rich in fat content (food)",
-        "japaneseMeaning": "太った／脂肪の多い",
-        "synonyms": "overweight (person), greasy (food)",
-        "antonyms": "thin, lean",
-        "example": "The recipe uses fat meat for flavor."
-      }
-    ]
-  }
+{
+  "lesson_id": "eiken-2-58",
+  "title": "Lesson 58",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "mind", "meaning": "the part of you that thinks and feels", "japaneseMeaning": "心、考え", "synonyms": "thoughts, brain", "antonyms": "body, matter", "forms": "mind, minds", "example": "Keep an open mind when you hear new ideas." },
+    { "word": "minute", "meaning": "sixty seconds or a very short time", "japaneseMeaning": "分、少しの時間", "synonyms": "moment, sixty seconds", "antonyms": "hour, long time", "forms": "minute, minutes", "example": "Wait one minute before opening the door." },
+    { "word": "money", "meaning": "coins, bills, or digital value used to buy things", "japaneseMeaning": "お金", "synonyms": "cash, funds", "antonyms": "debt, goods", "forms": "money", "example": "I saved money for a new bicycle." },
+    { "word": "music", "meaning": "sounds made with voices or instruments", "japaneseMeaning": "音楽", "synonyms": "song, melody", "antonyms": "noise, silence", "forms": "music", "example": "Soft music played in the cafe." },
+    { "word": "name", "meaning": "the word used to call a person, place, or thing", "japaneseMeaning": "名前", "synonyms": "title, label", "antonyms": "number, unknown", "forms": "name, names", "example": "Write your name at the top." },
+    { "word": "news", "meaning": "new information about recent events", "japaneseMeaning": "ニュース、知らせ", "synonyms": "reports, information", "antonyms": "old story, silence", "forms": "news", "example": "I watch the news after dinner." },
+    { "word": "paper", "meaning": "thin material used for writing or printing", "japaneseMeaning": "紙、新聞", "synonyms": "sheet, document", "antonyms": "screen, cloth", "forms": "paper, papers", "example": "Please write your answer on this paper." },
+    { "word": "park", "meaning": "a public outdoor area with grass, trees, or paths", "japaneseMeaning": "公園", "synonyms": "garden, green space", "antonyms": "building, road", "forms": "park, parks", "example": "We ate lunch in the park." },
+    { "word": "party", "meaning": "a social event with food, music, or games", "japaneseMeaning": "パーティー、政党", "synonyms": "celebration, gathering", "antonyms": "work, meeting", "forms": "party, parties", "example": "Her birthday party starts at six." },
+    { "word": "person", "meaning": "a human being", "japaneseMeaning": "人", "synonyms": "human, individual", "antonyms": "thing, animal", "forms": "person, people", "example": "One person is waiting outside." }
+  ]
+}

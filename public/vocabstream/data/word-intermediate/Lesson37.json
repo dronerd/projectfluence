@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-37",
-  "title": "Lesson 12",
-  "paragraph": "Verbs for stopping, learning, advising, and speaking — useful in study and advice contexts.",
+  "lesson_id": "eiken-2-37",
+  "title": "Lesson 37",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "stay", "meaning": "to remain in the same place", "japaneseMeaning": "滞在する／留まる", "synonyms": "remain, linger", "antonyms": "leave, go", "example": "Please stay until the end." },
-    { "word": "steal", "meaning": "to take something without permission", "japaneseMeaning": "盗む", "synonyms": "pilfer, rob", "antonyms": "return, give", "example": "Someone tried to steal her bag." },
-    { "word": "stop", "meaning": "to cease movement or action", "japaneseMeaning": "やめる／止める", "synonyms": "halt, cease", "antonyms": "go, continue", "example": "Stop talking during the exam." },
-    { "word": "study", "meaning": "to apply the mind to learning", "japaneseMeaning": "勉強する", "synonyms": "learn, review", "antonyms": "ignore, neglect", "example": "I will study for the test tonight." },
-    { "word": "succeed", "meaning": "to achieve the desired result", "japaneseMeaning": "成功する", "synonyms": "triumph, prosper", "antonyms": "fail, falter", "example": "She succeeded in the competition." },
-    { "word": "suggest", "meaning": "to offer an idea or plan for consideration", "japaneseMeaning": "提案する", "synonyms": "propose, recommend", "antonyms": "dissuade, oppose", "example": "I suggest taking a break." },
-    { "word": "support", "meaning": "to give help or encouragement", "japaneseMeaning": "支援する／支持する", "synonyms": "assist, back", "antonyms": "oppose, hinder", "example": "They support the new policy." },
-    { "word": "suppose", "meaning": "to assume something is true without proof", "japaneseMeaning": "仮定する／思う", "synonyms": "assume, presume", "antonyms": "know, verify", "example": "I suppose he's busy today." },
-    { "word": "swim", "meaning": "to move through water using the body", "japaneseMeaning": "泳ぐ", "synonyms": "bathe, paddle", "antonyms": "float (passive), sink", "example": "We swim in the lake every summer." },
-    { "word": "talk", "meaning": "to speak in order to communicate", "japaneseMeaning": "話す", "synonyms": "speak, converse", "antonyms": "listen, be silent", "example": "Let's talk after class." },
-    { "word": "teach", "meaning": "to give instruction or impart knowledge", "japaneseMeaning": "教える", "synonyms": "instruct, educate", "antonyms": "learn, ignore", "example": "She teaches math at the school." },
-    { "word": "tell", "meaning": "to communicate information to someone", "japaneseMeaning": "伝える／話す", "synonyms": "inform, say", "antonyms": "hide, conceal", "example": "Tell me the truth." }
+    { "word": "central", "meaning": "in the middle or most important", "japaneseMeaning": "中央の、中心的な", "synonyms": "middle, main", "antonyms": "outer, minor", "forms": "central, centrally, center", "example": "The station is in the central part of the city." },
+    { "word": "common", "meaning": "happening often or found in many places", "japaneseMeaning": "一般的な、よくある", "synonyms": "usual, frequent", "antonyms": "rare, unusual", "forms": "common, commonly", "example": "It is common to see bikes near the station." },
+    { "word": "correct", "meaning": "right and without mistakes", "japaneseMeaning": "正しい、正確な", "synonyms": "right, accurate", "antonyms": "wrong, incorrect", "forms": "correct, correctly, correctness", "example": "Please write the correct answer." },
+    { "word": "direct", "meaning": "going straight to a place or saying something clearly", "japaneseMeaning": "直接の、率直な", "synonyms": "straight, clear", "antonyms": "indirect, unclear", "forms": "direct, directly", "example": "There is a direct bus to the airport." },
+    { "word": "empty", "meaning": "with nothing inside", "japaneseMeaning": "空の、空いている", "synonyms": "blank, vacant", "antonyms": "full, crowded", "forms": "empty, emptily, emptiness", "example": "The empty bottle is on the table." },
+    { "word": "fair", "meaning": "treating people equally and honestly", "japaneseMeaning": "公平な、公正な", "synonyms": "just, equal", "antonyms": "unfair, biased", "forms": "fair, fairly, fairness", "example": "The teacher made a fair decision." },
+    { "word": "fast", "meaning": "moving or happening quickly", "japaneseMeaning": "速い", "synonyms": "quick, rapid", "antonyms": "slow, late", "forms": "fast, faster, fastest", "example": "The fast train reaches the city in one hour." },
+    { "word": "foreign", "meaning": "from another country", "japaneseMeaning": "外国の", "synonyms": "overseas, international", "antonyms": "local, domestic", "forms": "foreign", "example": "She enjoys learning foreign languages." },
+    { "word": "fresh", "meaning": "new, clean, or recently made", "japaneseMeaning": "新鮮な、新しい", "synonyms": "new, clean", "antonyms": "stale, old", "forms": "fresh, freshly, freshness", "example": "The bakery sells fresh bread every morning." },
+    { "word": "full", "meaning": "containing as much as possible", "japaneseMeaning": "いっぱいの、満腹の", "synonyms": "filled, complete", "antonyms": "empty, hungry", "forms": "full, fully, fullness", "example": "The bus was full after the concert." }
   ]
 }

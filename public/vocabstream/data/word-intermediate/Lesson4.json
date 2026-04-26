@@ -1,28 +1,17 @@
 {
-    "lesson_id": "eiken-pre2-4",
-    "title": "Lesson 4",
-    "paragraph": "Travel involves planning routes, tickets and luggage. Whether you take a flight, train, coach or subway, checking schedules and following customs rules helps the journey go smoothly. Keeping your boarding pass, baggage tags and reservation details handy reduces stress at the airport or station.",
-    "words": [
-      { "word": "airport", "meaning": "a place where aircraft take off and land", "japaneseMeaning": "空港", "synonyms": "airfield, aerodrome", "antonyms": "", "example": "We arrived at the airport early." },
-      { "word": "baggage", "meaning": "suitcases and bags that travelers carry", "japaneseMeaning": "荷物（手荷物）", "synonyms": "luggage, suitcases", "antonyms": "", "example": "Check your baggage weight before the flight." },
-      { "word": "boarding pass", "meaning": "a document allowing a passenger onto a flight", "japaneseMeaning": "搭乗券", "synonyms": "ticket, pass", "antonyms": "", "example": "Show your boarding pass at the gate." },
-      { "word": "border", "meaning": "the dividing line between two countries", "japaneseMeaning": "国境", "synonyms": "frontier, boundary", "antonyms": "interior, center", "example": "We crossed the border by train." },
-      { "word": "coach", "meaning": "a long-distance bus for travel", "japaneseMeaning": "長距離バス", "synonyms": "bus, shuttle", "antonyms": "car, plane", "example": "They took a coach to the next city." },
-      { "word": "customs", "meaning": "official checks of goods and people at borders", "japaneseMeaning": "税関", "synonyms": "inspection, border control", "antonyms": "", "example": "Declare any goods at customs." },
-      { "word": "delay", "meaning": "when something happens later than planned", "japaneseMeaning": "遅延", "synonyms": "postponement, setback", "antonyms": "on time, prompt", "example": "The flight had a long delay." },
-      { "word": "destination", "meaning": "the place someone is going to", "japaneseMeaning": "目的地", "synonyms": "goal, endpoint", "antonyms": "origin, departure", "example": "Our destination is Kyoto." },
-      { "word": "fare", "meaning": "the price paid for a journey", "japaneseMeaning": "運賃", "synonyms": "ticket price, charge", "antonyms": "free ride, complimentary", "example": "The bus fare increased last month." },
-      { "word": "flight", "meaning": "a trip by airplane", "japaneseMeaning": "フライト、飛行", "synonyms": "air journey, plane trip", "antonyms": "ground travel", "example": "Our flight leaves at noon." },
-      { "word": "gate", "meaning": "the area at an airport where boarding takes place", "japaneseMeaning": "搭乗口", "synonyms": "boarding gate, entrance", "antonyms": "", "example": "Wait near gate 12 for boarding." },
-      { "word": "journey", "meaning": "the act of traveling from one place to another", "japaneseMeaning": "旅、行程", "synonyms": "trip, voyage", "antonyms": "stay, stop", "example": "The journey took five hours by train." },
-      { "word": "platform", "meaning": "the raised area where passengers wait for trains", "japaneseMeaning": "ホーム（プラットフォーム）", "synonyms": "station platform, stand", "antonyms": "", "example": "The train will arrive at platform three." },
-      { "word": "port", "meaning": "a place where ships load and unload", "japaneseMeaning": "港", "synonyms": "harbor, quay", "antonyms": "inland, countryside", "example": "The ship docked at the port at dawn." },
-      { "word": "railway", "meaning": "a system of trains and tracks for travel", "japaneseMeaning": "鉄道", "synonyms": "railroad, train line", "antonyms": "road, highway", "example": "The railway connects major cities." },
-      { "word": "reservation", "meaning": "an arrangement to hold a seat or room in advance", "japaneseMeaning": "予約", "synonyms": "booking, appointment", "antonyms": "walk-in, cancellation", "example": "I made a reservation for two." },
-      { "word": "schedule", "meaning": "a plan that lists times for events or journeys", "japaneseMeaning": "スケジュール、時刻表", "synonyms": "timetable, plan", "antonyms": "spontaneity, delay", "example": "Check the train schedule before leaving." },
-      { "word": "seatbelt", "meaning": "a safety belt in vehicles to protect passengers", "japaneseMeaning": "シートベルト", "synonyms": "safety belt, restraint", "antonyms": "no restraint", "example": "Always fasten your seatbelt in a car." },
-      { "word": "subway", "meaning": "an underground urban railway system", "japaneseMeaning": "地下鉄", "synonyms": "metro, underground", "antonyms": "overground, bus", "example": "Take the subway to the museum." },
-      { "word": "suitcase", "meaning": "a large case for carrying clothes while traveling", "japaneseMeaning": "スーツケース", "synonyms": "luggage, trunk", "antonyms": "", "example": "He packed his clothes into one suitcase." }
-    ]
-  }
-  
+  "lesson_id": "eiken-2-4",
+  "title": "Lesson 4",
+  "paragraph": "During a news event at school, each member studied one topic about water use. The main source was a city report, and the group checked the quality of the data. They discussed the cause of the problem, the level of risk, and the limit on daily water use. One useful feature of their chart was that it explained the situation clearly.",
+  "words": [
+    { "word": "cause", "meaning": "the reason why something happens", "japaneseMeaning": "原因", "synonyms": "reason, source", "antonyms": "result, effect", "forms": "cause, causes", "example": "The cause of the fire was an old wire." },
+    { "word": "event", "meaning": "something important or planned that happens", "japaneseMeaning": "出来事、イベント", "synonyms": "happening, occasion", "antonyms": "routine, nothing", "forms": "event, events", "example": "The school event begins at ten in the morning." },
+    { "word": "level", "meaning": "the amount, height, or degree of something", "japaneseMeaning": "レベル、水準", "synonyms": "degree, amount", "antonyms": "extreme, difference", "forms": "level, levels", "example": "The water level rose after the heavy rain." },
+    { "word": "source", "meaning": "the place, person, or thing that something comes from", "japaneseMeaning": "出所、情報源", "synonyms": "origin, provider", "antonyms": "result, end", "forms": "source, sources", "example": "The article gave no source for the number." },
+    { "word": "topic", "meaning": "a subject that people talk, write, or study about", "japaneseMeaning": "話題、テーマ", "synonyms": "subject, theme", "antonyms": "answer, silence", "forms": "topic, topics", "example": "Our topic for today's class is food waste." },
+    { "word": "feature", "meaning": "an important or noticeable part of something", "japaneseMeaning": "特徴、機能", "synonyms": "part, characteristic", "antonyms": "whole, weakness", "forms": "feature, features", "example": "The best feature of this phone is its clear camera." },
+    { "word": "limit", "meaning": "the greatest amount that is allowed or possible", "japaneseMeaning": "限度、制限", "synonyms": "maximum, boundary", "antonyms": "freedom, minimum", "forms": "limit, limits", "example": "There is a speed limit near the school." },
+    { "word": "member", "meaning": "a person who belongs to a group or team", "japaneseMeaning": "メンバー、会員", "synonyms": "participant, teammate", "antonyms": "outsider, stranger", "forms": "member, members", "example": "Each member of the club brings one idea." },
+    { "word": "quality", "meaning": "how good or bad something is", "japaneseMeaning": "品質、質", "synonyms": "standard, value", "antonyms": "fault, weakness", "forms": "quality, qualities", "example": "The quality of the picture is better in bright light." },
+    { "word": "situation", "meaning": "the set of things that are happening at a certain time", "japaneseMeaning": "状況", "synonyms": "condition, state", "antonyms": "solution, certainty", "forms": "situation, situations", "example": "The nurse stayed calm in a difficult situation." }
+  ]
+}

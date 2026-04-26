@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-42",
-  "title": "Lesson 17",
-  "paragraph": "Physical actions often involving changes of state or cleaning tasks, plus some urgent actions.",
+  "lesson_id": "eiken-2-42",
+  "title": "Lesson 42",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "freeze", "meaning": "to change a liquid into a solid by cold", "japaneseMeaning": "凍らせる／凍る", "synonyms": "ice, chill", "antonyms": "melt, thaw", "example": "Freeze the leftovers for later." },
-    { "word": "melt", "meaning": "to change from solid to liquid by heat", "japaneseMeaning": "溶かす／溶ける", "synonyms": "thaw, liquefy", "antonyms": "freeze, solidify", "example": "Butter will melt if heated." },
-    { "word": "shake", "meaning": "to move back and forth quickly", "japaneseMeaning": "振る／揺れる", "synonyms": "tremble, jolt", "antonyms": "still, steady", "example": "Shake the bottle before using." },
-    { "word": "spill", "meaning": "to allow liquid to run or fall out accidentally", "japaneseMeaning": "こぼす／こぼれる", "synonyms": "slop, overflow", "antonyms": "contain, retain", "example": "Don't spill your coffee." },
-    { "word": "sweep", "meaning": "to clean the floor with a broom", "japaneseMeaning": "掃く", "synonyms": "brush, clear", "antonyms": "scatter, dirty", "example": "Sweep the floor after dinner." },
-    { "word": "wipe", "meaning": "to clean or dry by rubbing with a cloth", "japaneseMeaning": "拭く", "synonyms": "clean, dab", "antonyms": "soil, stain", "example": "Wipe the table when finished." },
-    { "word": "arrest", "meaning": "to take a person into custody by legal authority", "japaneseMeaning": "逮捕する", "synonyms": "detain, capture", "antonyms": "release, free", "example": "The police arrested the suspect." },
-    { "word": "attack", "meaning": "to act violently against someone or something", "japaneseMeaning": "攻撃する", "synonyms": "assault, strike", "antonyms": "defend, protect", "example": "They attacked the fortress at dawn." },
-    { "word": "bite", "meaning": "to cut or hold with the teeth", "japaneseMeaning": "噛む", "synonyms": "nibble, chomp", "antonyms": "lick, release", "example": "The dog might bite if scared." },
-    { "word": "chase", "meaning": "to run after someone or something to catch them", "japaneseMeaning": "追いかける", "synonyms": "pursue, follow", "antonyms": "flee, escape", "example": "The cat chased the mouse." },
-    { "word": "fight", "meaning": "to take part in a violent confrontation", "japaneseMeaning": "戦う／喧嘩する", "synonyms": "battle, combat", "antonyms": "agree, reconcile", "example": "The siblings fought over the toy." },
-    { "word": "guard", "meaning": "to protect or watch over", "japaneseMeaning": "守る／警備する", "synonyms": "protect, watch", "antonyms": "expose, endanger", "example": "A guard stood at the entrance." }
+    { "word": "add", "meaning": "to put something together with something else", "japaneseMeaning": "加える、足す", "synonyms": "include, put in", "antonyms": "remove, subtract", "forms": "add, adds, adding, added, addition", "example": "Add your name at the top of the page." },
+    { "word": "check", "meaning": "to look at something to make sure it is correct", "japaneseMeaning": "確認する", "synonyms": "inspect, confirm", "antonyms": "ignore, miss", "forms": "check, checks, checking, checked", "example": "Check your answers before you leave." },
+    { "word": "clean", "meaning": "to remove dirt from something", "japaneseMeaning": "掃除する、きれいにする", "synonyms": "wash, tidy", "antonyms": "dirty, stain", "forms": "clean, cleans, cleaning, cleaned", "example": "We clean the classroom after lunch." },
+    { "word": "cook", "meaning": "to prepare food with heat", "japaneseMeaning": "料理する", "synonyms": "prepare, make", "antonyms": "burn, freeze", "forms": "cook, cooks, cooking, cooked", "example": "My brother can cook curry very well." },
+    { "word": "count", "meaning": "to find the number of things", "japaneseMeaning": "数える", "synonyms": "number, calculate", "antonyms": "guess, ignore", "forms": "count, counts, counting, counted", "example": "Count the chairs before the meeting." },
+    { "word": "cry", "meaning": "to produce tears because of sadness, pain, or strong feeling", "japaneseMeaning": "泣く", "synonyms": "weep, sob", "antonyms": "laugh, smile", "forms": "cry, cries, crying, cried", "example": "The child began to cry after falling down." },
+    { "word": "dance", "meaning": "to move your body to music", "japaneseMeaning": "踊る", "synonyms": "move, perform", "antonyms": "stand still, stop", "forms": "dance, dances, dancing, danced", "example": "They dance at the festival every year." },
+    { "word": "dress", "meaning": "to put clothes on yourself or someone else", "japaneseMeaning": "服を着る、着せる", "synonyms": "clothe, wear", "antonyms": "undress, remove", "forms": "dress, dresses, dressing, dressed", "example": "Please dress warmly because it is cold." },
+    { "word": "fix", "meaning": "to repair something", "japaneseMeaning": "直す、修理する", "synonyms": "repair, mend", "antonyms": "break, damage", "forms": "fix, fixes, fixing, fixed", "example": "Can you fix this broken chair?" },
+    { "word": "hate", "meaning": "to dislike someone or something very much", "japaneseMeaning": "ひどく嫌う", "synonyms": "dislike, detest", "antonyms": "love, enjoy", "forms": "hate, hates, hating, hated", "example": "I hate waiting in long lines." }
   ]
 }

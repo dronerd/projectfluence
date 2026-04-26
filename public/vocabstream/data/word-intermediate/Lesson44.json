@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-44",
-  "title": "Lesson 19",
-  "paragraph": "Verbs for helping, avoiding, balancing, belonging, calculation and simple checks—useful in many daily situations.",
+  "lesson_id": "eiken-2-44",
+  "title": "Lesson 44",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "assist", "meaning": "to give support or help", "japaneseMeaning": "手伝う／援助する", "synonyms": "help, aid", "antonyms": "hinder, obstruct", "example": "Can you assist me with this form?" },
-    { "word": "attack", "meaning": "to begin aggressive action against", "japaneseMeaning": "攻撃する", "synonyms": "assault, strike", "antonyms": "defend, protect", "example": "The army attacked at dawn." },
-    { "word": "avoid", "meaning": "to keep away from or prevent", "japaneseMeaning": "避ける", "synonyms": "evade, shun", "antonyms": "face, confront", "example": "Avoid eating too much sugar." },
-    { "word": "balance", "meaning": "to keep or put something in a steady position", "japaneseMeaning": "バランスを取る／均衡を保つ", "synonyms": "poise, stabilize", "antonyms": "unbalance, topple", "example": "Balance the tray carefully." },
-    { "word": "belong", "meaning": "to be the property of or be a member of", "japaneseMeaning": "属する／所属する", "synonyms": "fit in, pertain", "antonyms": "exclude, separate", "example": "This book belongs to the library." },
-    { "word": "blame", "meaning": "to assign responsibility for a fault or wrong", "japaneseMeaning": "非難する／責める", "synonyms": "accuse, fault", "antonyms": "praise, absolve", "example": "Don't blame others for your mistake." },
-    { "word": "breathe", "meaning": "to take air into and expel from the lungs", "japaneseMeaning": "呼吸する", "synonyms": "inhale, exhale", "antonyms": "hold breath, suffocate", "example": "Breathe slowly to calm down." },
-    { "word": "calculate", "meaning": "to determine by mathematical methods", "japaneseMeaning": "計算する／算出する", "synonyms": "compute, reckon", "antonyms": "guess, estimate", "example": "Calculate the total cost, please." },
-    { "word": "celebrate", "meaning": "to observe a special occasion with festivities", "japaneseMeaning": "祝う／お祝いする", "synonyms": "commemorate, rejoice", "antonyms": "mourn, lament", "example": "They celebrate their anniversary each year." },
-    { "word": "change", "meaning": "to make or become different", "japaneseMeaning": "変える／変わる", "synonyms": "alter, modify", "antonyms": "preserve, maintain", "example": "Change your clothes before dinner." },
-    { "word": "check", "meaning": "to examine something in order to determine its condition", "japaneseMeaning": "確認する／調べる", "synonyms": "inspect, verify", "antonyms": "ignore, neglect", "example": "Check the oil level in the car." },
-    { "word": "clap", "meaning": "to strike the palms together (reviewed again for reinforcement)", "japaneseMeaning": "拍手する", "synonyms": "applaud, acclaim", "antonyms": "boo, hiss", "example": "The audience clap after the performance." }
+    { "word": "debt", "meaning": "money that you owe to someone", "japaneseMeaning": "借金、負債", "synonyms": "loan, money owed", "antonyms": "profit, savings", "forms": "debt, debts", "example": "He worked hard to pay his debt." },
+    { "word": "depth", "meaning": "the distance from the top to the bottom of something", "japaneseMeaning": "深さ", "synonyms": "deepness, distance down", "antonyms": "height, surface", "forms": "depth, depths", "example": "The depth of the pool is two meters." },
+    { "word": "desert", "meaning": "a very dry area with little rain", "japaneseMeaning": "砂漠", "synonyms": "dry land, wasteland", "antonyms": "forest, wetland", "forms": "desert, deserts", "example": "Very few plants grow in the desert." },
+    { "word": "driver", "meaning": "a person who drives a vehicle", "japaneseMeaning": "運転手", "synonyms": "motorist, operator", "antonyms": "passenger, pedestrian", "forms": "driver, drivers", "example": "The driver stopped at the red light." },
+    { "word": "favor", "meaning": "a kind action that helps someone", "japaneseMeaning": "親切、好意", "synonyms": "kindness, help", "antonyms": "harm, refusal", "forms": "favor, favors", "example": "Can you do me a favor and open the window?" },
+    { "word": "fear", "meaning": "the feeling of being afraid", "japaneseMeaning": "恐れ、不安", "synonyms": "worry, fright", "antonyms": "courage, calm", "forms": "fear, fears", "example": "Her fear of heights made the bridge difficult." },
+    { "word": "heat", "meaning": "warmth or high temperature", "japaneseMeaning": "熱、暑さ", "synonyms": "warmth, temperature", "antonyms": "cold, coolness", "forms": "heat", "example": "The heat in August can be dangerous." },
+    { "word": "item", "meaning": "one thing in a list or group", "japaneseMeaning": "品目、項目", "synonyms": "thing, object", "antonyms": "group, set", "forms": "item, items", "example": "The most expensive item on the menu is fish." },
+    { "word": "moment", "meaning": "a very short period of time", "japaneseMeaning": "瞬間、少しの間", "synonyms": "instant, second", "antonyms": "long time, period", "forms": "moment, moments", "example": "Please wait a moment while I check." },
+    { "word": "owner", "meaning": "a person who owns something", "japaneseMeaning": "所有者、飼い主", "synonyms": "holder, possessor", "antonyms": "borrower, visitor", "forms": "owner, owners", "example": "The owner of the cafe knows every customer." }
   ]
 }

@@ -1,21 +1,17 @@
-
-  {
-    "lesson_id": "eiken-pre2-50",
-    "title": "Lesson 50",
-    "paragraph": "Describing people's personalities and social behaviors — useful for talking about character and attitudes.",
-    "words": [
-      { "word": "humorous", "meaning": "showing or causing amusement; funny", "japaneseMeaning": "ユーモアのある", "synonyms": "funny, amusing", "antonyms": "serious, dull", "example": "His humorous stories made everyone laugh." },
-      { "word": "impatient", "meaning": "not willing to wait; easily annoyed by delay", "japaneseMeaning": "短気な／我慢できない", "synonyms": "restless, eager", "antonyms": "patient, calm", "example": "She was impatient while waiting in the long line." },
-      { "word": "independent", "meaning": "free from outside control; self-reliant", "japaneseMeaning": "自立した／独立した", "synonyms": "self-sufficient, autonomous", "antonyms": "dependent, reliant", "example": "He is independent and does his own research." },
-      { "word": "intelligent", "meaning": "having or showing high mental ability", "japaneseMeaning": "賢い／知的な", "synonyms": "smart, clever", "antonyms": "stupid, dull", "example": "She is very intelligent and learns quickly." },
-      { "word": "jealous", "meaning": "feeling or showing envy of another's achievements or advantages", "japaneseMeaning": "嫉妬深い", "synonyms": "envious, resentful", "antonyms": "content, trusting", "example": "He felt jealous when his friend got the promotion." },
-      { "word": "kind", "meaning": "having a friendly, generous, and considerate nature", "japaneseMeaning": "親切な", "synonyms": "gentle, generous", "antonyms": "cruel, rude", "example": "She was kind to the new student." },
-      { "word": "lazy", "meaning": "unwilling to work or use energy", "japaneseMeaning": "怠惰な／ズボラな", "synonyms": "idle, sluggish", "antonyms": "hard-working, diligent", "example": "Don’t be lazy — finish your homework." },
-      { "word": "lonely", "meaning": "sad because one has no friends or company", "japaneseMeaning": "孤独な／寂しい", "synonyms": "isolated, alone", "antonyms": "sociable, accompanied", "example": "He felt lonely after moving to a new city." },
-      { "word": "lucky", "meaning": "having good fortune", "japaneseMeaning": "運の良い", "synonyms": "fortunate, blessed", "antonyms": "unlucky, unfortunate", "example": "She was lucky to find a ticket at the last minute." },
-      { "word": "nervous", "meaning": "anxious or worried about something", "japaneseMeaning": "神経質な／緊張した", "synonyms": "anxious, tense", "antonyms": "calm, relaxed", "example": "He was nervous before his speech." },
-      { "word": "nice", "meaning": "pleasant, agreeable, or satisfactory", "japaneseMeaning": "感じの良い／素敵な", "synonyms": "pleasant, kind", "antonyms": "rude, unpleasant", "example": "She is a nice person who helps others." },
-      { "word": "noisy", "meaning": "making a lot of noise", "japaneseMeaning": "騒がしい／うるさい", "synonyms": "loud, clamorous", "antonyms": "quiet, silent", "example": "The cafe was too noisy to study." }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-50",
+  "title": "Lesson 50",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "hear", "meaning": "to notice sound with your ears", "japaneseMeaning": "聞こえる、聞く", "synonyms": "listen to, notice", "antonyms": "miss, ignore", "forms": "hear, hears, hearing, heard", "example": "Can you hear the music from outside?" },
+    { "word": "jump", "meaning": "to push your body off the ground with your legs", "japaneseMeaning": "跳ぶ、ジャンプする", "synonyms": "leap, hop", "antonyms": "stand, sit", "forms": "jump, jumps, jumping, jumped", "example": "The children jump over the small stream." },
+    { "word": "know", "meaning": "to have information in your mind", "japaneseMeaning": "知っている", "synonyms": "understand, realize", "antonyms": "ignore, misunderstand", "forms": "know, knows, knowing, knew, known", "example": "Do you know the answer?" },
+    { "word": "laugh", "meaning": "to make sounds because something is funny", "japaneseMeaning": "笑う", "synonyms": "giggle, chuckle", "antonyms": "cry, frown", "forms": "laugh, laughs, laughing, laughed", "example": "We laugh at the funny movie." },
+    { "word": "listen", "meaning": "to give attention to sound", "japaneseMeaning": "聞く、耳を傾ける", "synonyms": "hear, pay attention", "antonyms": "ignore, talk over", "forms": "listen, listens, listening, listened", "example": "Please listen to the instructions." },
+    { "word": "live", "meaning": "to have your home in a place or be alive", "japaneseMeaning": "住む、生きる", "synonyms": "reside, exist", "antonyms": "die, leave", "forms": "live, lives, living, lived", "example": "I live near the school." },
+    { "word": "look", "meaning": "to use your eyes to see", "japaneseMeaning": "見る、〜に見える", "synonyms": "see, glance", "antonyms": "ignore, miss", "forms": "look, looks, looking, looked", "example": "Look at the map before we leave." },
+    { "word": "lose", "meaning": "to not be able to find something or to not win", "japaneseMeaning": "失う、負ける", "synonyms": "misplace, fail", "antonyms": "find, win", "forms": "lose, loses, losing, lost", "example": "Do not lose your ticket." },
+    { "word": "make", "meaning": "to create or produce something", "japaneseMeaning": "作る", "synonyms": "create, produce", "antonyms": "destroy, break", "forms": "make, makes, making, made", "example": "We make dinner together on Sundays." },
+    { "word": "play", "meaning": "to do a game, sport, or music for fun", "japaneseMeaning": "遊ぶ、演奏する", "synonyms": "perform, take part", "antonyms": "work, stop", "forms": "play, plays, playing, played", "example": "They play soccer after school." }
+  ]
+}

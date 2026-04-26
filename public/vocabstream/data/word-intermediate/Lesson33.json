@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-33",
-  "title": "Lesson 8",
-  "paragraph": "Verbs in this lesson relate to money, planning, and promises — essential for talking about transactions, decisions, and commitments.",
+  "lesson_id": "eiken-2-33",
+  "title": "Lesson 33",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "pay", "meaning": "to give money for goods or services", "japaneseMeaning": "支払う", "synonyms": "settle, compensate", "antonyms": "receive, owe", "example": "Please pay the bill at the counter." },
-    { "word": "pick", "meaning": "to choose or to take hold of something", "japaneseMeaning": "選ぶ／拾う", "synonyms": "select, pluck", "antonyms": "drop, abandon", "example": "Pick a card from the deck." },
-    { "word": "plan", "meaning": "to decide on and arrange in advance", "japaneseMeaning": "計画する", "synonyms": "arrange, schedule", "antonyms": "improvise, neglect", "example": "We plan to visit Kyoto next month." },
-    { "word": "prefer", "meaning": "to like one thing more than another", "japaneseMeaning": "〜の方を好む", "synonyms": "favor, choose", "antonyms": "dislike, reject", "example": "I prefer tea to coffee." },
-    { "word": "prepare", "meaning": "to make ready beforehand", "japaneseMeaning": "準備する", "synonyms": "get ready, arrange", "antonyms": "neglect, delay", "example": "Prepare your presentation tonight." },
-    { "word": "promise", "meaning": "to assure someone that one will definitely do something", "japaneseMeaning": "約束する", "synonyms": "assure, vow", "antonyms": "renege, break", "example": "He promised to call later." },
-    { "word": "protect", "meaning": "to keep someone or something safe from harm", "japaneseMeaning": "守る／保護する", "synonyms": "shield, defend", "antonyms": "endanger, expose", "example": "Wear a helmet to protect your head." },
-    { "word": "provide", "meaning": "to supply or make available", "japaneseMeaning": "提供する", "synonyms": "supply, furnish", "antonyms": "withhold, deprive", "example": "They provided food for the refugees." },
-    { "word": "pull", "meaning": "to apply force to move something toward oneself", "japaneseMeaning": "引く", "synonyms": "tug, draw", "antonyms": "push, shove", "example": "Pull the door to open it." },
-    { "word": "push", "meaning": "to apply force to move something away", "japaneseMeaning": "押す", "synonyms": "shove, thrust", "antonyms": "pull, drag", "example": "Push the button to start." },
-    { "word": "reach", "meaning": "to arrive at or attain something", "japaneseMeaning": "到達する／手が届く", "synonyms": "attain, get to", "antonyms": "miss, fall short", "example": "We reached the summit at sunset." },
-    { "word": "receive", "meaning": "to be given or presented with something", "japaneseMeaning": "受け取る", "synonyms": "accept, obtain", "antonyms": "give, send", "example": "I received a parcel today." }
+    { "word": "lock", "meaning": "to close something with a key or code", "japaneseMeaning": "鍵をかける", "synonyms": "secure, close", "antonyms": "unlock, open", "forms": "lock, locks, locking, locked", "example": "Please lock the door when you leave." },
+    { "word": "mail", "meaning": "to send a letter or package", "japaneseMeaning": "郵送する", "synonyms": "send, post", "antonyms": "receive, keep", "forms": "mail, mails, mailing, mailed", "example": "I will mail the form tomorrow." },
+    { "word": "mix", "meaning": "to put different things together", "japaneseMeaning": "混ぜる", "synonyms": "combine, blend", "antonyms": "separate, divide", "forms": "mix, mixes, mixing, mixed", "example": "Mix the eggs with the flour." },
+    { "word": "offer", "meaning": "to say that you will give or do something", "japaneseMeaning": "申し出る、提供する", "synonyms": "provide, suggest", "antonyms": "refuse, withhold", "forms": "offer, offers, offering, offered", "example": "The hotel will offer free breakfast." },
+    { "word": "paint", "meaning": "to cover something with color using paint", "japaneseMeaning": "塗る、描く", "synonyms": "color, decorate", "antonyms": "remove, erase", "forms": "paint, paints, painting, painted", "example": "We will paint the classroom wall blue." },
+    { "word": "pour", "meaning": "to make liquid flow from one container to another", "japaneseMeaning": "注ぐ", "synonyms": "flow, spill", "antonyms": "hold, keep", "forms": "pour, pours, pouring, poured", "example": "Pour the water into the glass slowly." },
+    { "word": "protect", "meaning": "to keep someone or something safe", "japaneseMeaning": "守る、保護する", "synonyms": "guard, defend", "antonyms": "harm, endanger", "forms": "protect, protects, protecting, protected, protection", "example": "A helmet can protect your head." },
+    { "word": "repeat", "meaning": "to say or do something again", "japaneseMeaning": "繰り返す", "synonyms": "say again, redo", "antonyms": "stop, finish", "forms": "repeat, repeats, repeating, repeated, repetition", "example": "Could you repeat the question, please?" },
+    { "word": "rest", "meaning": "to stop working or moving in order to relax", "japaneseMeaning": "休む", "synonyms": "relax, pause", "antonyms": "work, continue", "forms": "rest, rests, resting, rested", "example": "You should rest after the long walk." },
+    { "word": "ride", "meaning": "to travel on a bike, horse, bus, or other vehicle", "japaneseMeaning": "乗る", "synonyms": "travel, sit on", "antonyms": "walk, drive", "forms": "ride, rides, riding, rode, ridden", "example": "I ride my bicycle to school." }
   ]
 }

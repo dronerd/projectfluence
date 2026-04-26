@@ -1,105 +1,17 @@
-
-  {
-    "lesson_id": "eiken-pre2-55",
-    "title": "Lesson 55",
-    "paragraph": "Feelings and emotional reactions — useful words to describe moods and responses.",
-    "words": [
-      {
-        "word": "pleased",
-        "meaning": "feeling happy or satisfied about something",
-        "japaneseMeaning": "満足している／嬉しい",
-        "synonyms": "satisfied, happy",
-        "antonyms": "disappointed, upset",
-        "example": "She was pleased with her exam results."
-      },
-      {
-        "word": "proud",
-        "meaning": "feeling deep pleasure or satisfaction from achievements",
-        "japaneseMeaning": "誇りに思う／誇らしい",
-        "synonyms": "pleased, honored",
-        "antonyms": "ashamed, embarrassed",
-        "example": "His parents were proud of his success."
-      },
-      {
-        "word": "relaxed",
-        "meaning": "free from tension and anxiety; calm",
-        "japaneseMeaning": "リラックスした／落ち着いた",
-        "synonyms": "calm, at ease",
-        "antonyms": "tense, nervous",
-        "example": "She felt relaxed after the massage."
-      },
-      {
-        "word": "sad",
-        "meaning": "feeling sorrow or unhappiness",
-        "japaneseMeaning": "悲しい／寂しい",
-        "synonyms": "unhappy, sorrowful",
-        "antonyms": "happy, cheerful",
-        "example": "He was sad to say goodbye to his friends."
-      },
-      {
-        "word": "satisfied",
-        "meaning": "contented because expectations have been met",
-        "japaneseMeaning": "満足している",
-        "synonyms": "content, pleased",
-        "antonyms": "dissatisfied, unhappy",
-        "example": "I am satisfied with the final design."
-      },
-      {
-        "word": "scared",
-        "meaning": "feeling frightened or worried about danger",
-        "japaneseMeaning": "怖がっている／おびえている",
-        "synonyms": "afraid, frightened",
-        "antonyms": "brave, calm",
-        "example": "The loud noise made the child scared."
-      },
-      {
-        "word": "shocked",
-        "meaning": "surprised and upset by an unexpected event",
-        "japaneseMeaning": "ショックを受けた／びっくりした",
-        "synonyms": "stunned, astonished",
-        "antonyms": "unmoved, unaffected",
-        "example": "We were shocked by the sudden news."
-      },
-      {
-        "word": "stressed",
-        "meaning": "experiencing mental or emotional strain",
-        "japaneseMeaning": "ストレスを感じている",
-        "synonyms": "tense, pressured",
-        "antonyms": "relaxed, calm",
-        "example": "He felt stressed before the deadline."
-      },
-      {
-        "word": "surprised",
-        "meaning": "feeling or showing shock because something was unexpected",
-        "japaneseMeaning": "驚いた",
-        "synonyms": "astonished, amazed",
-        "antonyms": "expectant, unsurprised",
-        "example": "She was surprised by the party her friends planned."
-      },
-      {
-        "word": "tired",
-        "meaning": "in need of sleep or rest; weary",
-        "japaneseMeaning": "疲れた／眠い",
-        "synonyms": "weary, exhausted",
-        "antonyms": "energetic, refreshed",
-        "example": "After the hike, everyone was tired."
-      },
-      {
-        "word": "unhappy",
-        "meaning": "not happy; feeling sorrow or dissatisfaction",
-        "japaneseMeaning": "不幸な／満たされない",
-        "synonyms": "sad, discontent",
-        "antonyms": "happy, content",
-        "example": "She was unhappy with the service."
-      },
-      {
-        "word": "upset",
-        "meaning": "emotionally disturbed or distressed",
-        "japaneseMeaning": "動揺した／腹を立てた",
-        "synonyms": "distressed, bothered",
-        "antonyms": "calm, pleased",
-        "example": "He was upset when he missed the train."
-      }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-55",
+  "title": "Lesson 55",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "garden", "meaning": "an area where people grow flowers or plants", "japaneseMeaning": "庭、庭園", "synonyms": "yard, flower bed", "antonyms": "building, road", "forms": "garden, gardens", "example": "My mother grows tomatoes in the garden." },
+    { "word": "gas", "meaning": "a substance like air, often used as fuel", "japaneseMeaning": "ガス、気体", "synonyms": "fuel, vapor", "antonyms": "solid, liquid", "forms": "gas, gases", "example": "The stove uses gas for cooking." },
+    { "word": "glass", "meaning": "a hard clear material or a container for drinking", "japaneseMeaning": "ガラス、コップ", "synonyms": "cup, pane", "antonyms": "plastic, metal", "forms": "glass, glasses", "example": "She drank a glass of water." },
+    { "word": "hall", "meaning": "a large room or passage inside a building", "japaneseMeaning": "ホール、廊下", "synonyms": "corridor, room", "antonyms": "small room, outside", "forms": "hall, halls", "example": "Students waited in the hall before the concert." },
+    { "word": "heart", "meaning": "the organ that moves blood through the body", "japaneseMeaning": "心臓、心", "synonyms": "core, center", "antonyms": "edge, outside", "forms": "heart, hearts", "example": "Exercise is good for your heart." },
+    { "word": "kitchen", "meaning": "a room where food is cooked", "japaneseMeaning": "台所、キッチン", "synonyms": "cooking room, galley", "antonyms": "bedroom, bathroom", "forms": "kitchen, kitchens", "example": "The kitchen smells like fresh bread." },
+    { "word": "law", "meaning": "a rule made by a country or government", "japaneseMeaning": "法律", "synonyms": "rule, regulation", "antonyms": "crime, disorder", "forms": "law, laws", "example": "The law says drivers must stop here." },
+    { "word": "letter", "meaning": "a written message or a character of the alphabet", "japaneseMeaning": "手紙、文字", "synonyms": "message, character", "antonyms": "number, call", "forms": "letter, letters", "example": "I wrote a letter to my friend." },
+    { "word": "life", "meaning": "the time when someone is alive", "japaneseMeaning": "人生、生命", "synonyms": "existence, living", "antonyms": "death, end", "forms": "life, lives", "example": "City life can be exciting." },
+    { "word": "mark", "meaning": "a sign, spot, or school score", "japaneseMeaning": "印、成績", "synonyms": "score, sign", "antonyms": "blank, erase", "forms": "mark, marks", "example": "She got a high mark on the test." }
+  ]
+}

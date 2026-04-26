@@ -1,19 +1,17 @@
 {
-  "lesson_id": "eiken-pre2-35",
-  "title": "Lesson 10",
-  "paragraph": "Basic communicative and reporting verbs used in conversations, news, and messages.",
+  "lesson_id": "eiken-2-35",
+  "title": "Lesson 35",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "repeat", "meaning": "to say or do something again", "japaneseMeaning": "繰り返す", "synonyms": "restate, reiterate", "antonyms": "stop, cease", "example": "Please repeat the question." },
-    { "word": "reply", "meaning": "to answer in words or writing", "japaneseMeaning": "返信する／答える", "synonyms": "respond, answer", "antonyms": "ignore, silence", "example": "He replied to the email quickly." },
-    { "word": "report", "meaning": "to give information about something observed or investigated", "japaneseMeaning": "報告する", "synonyms": "inform, announce", "antonyms": "conceal, hide", "example": "She reported the incident to the manager." },
-    { "word": "return", "meaning": "to come or go back to a place", "japaneseMeaning": "戻る／返す", "synonyms": "go back, come back", "antonyms": "leave, depart", "example": "He returned the book to the library." },
-    { "word": "ride", "meaning": "to sit on and travel by a vehicle or animal", "japaneseMeaning": "乗る", "synonyms": "travel, mount", "antonyms": "walk, dismount", "example": "We rode the train to the city." },
-    { "word": "ring", "meaning": "to make a bell-like sound or to call by phone", "japaneseMeaning": "鳴る／電話をかける", "synonyms": "call, chime", "antonyms": "silence, mute", "example": "The phone rang during dinner." },
-    { "word": "rise", "meaning": "to move upward or increase", "japaneseMeaning": "上がる／昇る", "synonyms": "ascend, increase", "antonyms": "fall, decrease", "example": "Prices are expected to rise." },
-    { "word": "save", "meaning": "to keep something for future use or to rescue", "japaneseMeaning": "保存する／救う", "synonyms": "store, rescue", "antonyms": "waste, lose", "example": "Save your work often." },
-    { "word": "search", "meaning": "to look carefully for something", "japaneseMeaning": "捜す／検索する", "synonyms": "seek, look for", "antonyms": "ignore, overlook", "example": "Search the site for the document." },
-    { "word": "seem", "meaning": "to give the impression of being", "japaneseMeaning": "〜のように見える", "synonyms": "appear, look", "antonyms": "be, prove", "example": "It seems likely to rain." },
-    { "word": "sell", "meaning": "to give something in exchange for money", "japaneseMeaning": "売る", "synonyms": "vend, trade", "antonyms": "buy, purchase", "example": "They sell fresh bread every morning." },
-    { "word": "send", "meaning": "to cause something to go to a destination", "japaneseMeaning": "送る", "synonyms": "dispatch, transmit", "antonyms": "receive, keep", "example": "Please send the report by Friday." }
+    { "word": "passenger", "meaning": "a person traveling in a vehicle but not driving it", "japaneseMeaning": "乗客", "synonyms": "traveler, rider", "antonyms": "driver, pilot", "forms": "passenger, passengers", "example": "Each passenger must show a ticket." },
+    { "word": "photographer", "meaning": "a person who takes photos as a job or hobby", "japaneseMeaning": "写真家、カメラマン", "synonyms": "camera operator, photo taker", "antonyms": "viewer, subject", "forms": "photographer, photographers", "example": "The photographer took pictures of the wedding." },
+    { "word": "pilot", "meaning": "a person who flies an airplane", "japaneseMeaning": "パイロット", "synonyms": "airplane driver, flyer", "antonyms": "passenger, traveler", "forms": "pilot, pilots", "example": "The pilot spoke to passengers before takeoff." },
+    { "word": "professor", "meaning": "a teacher at a college or university", "japaneseMeaning": "教授", "synonyms": "teacher, academic", "antonyms": "student, learner", "forms": "professor, professors", "example": "The professor explained the experiment clearly." },
+    { "word": "reporter", "meaning": "a person who collects and writes news stories", "japaneseMeaning": "記者、レポーター", "synonyms": "journalist, news writer", "antonyms": "reader, viewer", "forms": "reporter, reporters", "example": "The reporter asked questions after the game." },
+    { "word": "scientist", "meaning": "a person who studies science", "japaneseMeaning": "科学者", "synonyms": "researcher, expert", "antonyms": "amateur, nonscientist", "forms": "scientist, scientists", "example": "The scientist studied water from the river." },
+    { "word": "secretary", "meaning": "a person who helps with office work and messages", "japaneseMeaning": "秘書、事務員", "synonyms": "assistant, office worker", "antonyms": "manager, boss", "forms": "secretary, secretaries", "example": "The secretary answered the phone politely." },
+    { "word": "soldier", "meaning": "a person who serves in an army", "japaneseMeaning": "兵士", "synonyms": "fighter, army member", "antonyms": "civilian, enemy", "forms": "soldier, soldiers", "example": "The soldier carried food to the village." },
+    { "word": "tourist", "meaning": "a person who visits a place for pleasure", "japaneseMeaning": "観光客", "synonyms": "visitor, traveler", "antonyms": "resident, local", "forms": "tourist, tourists", "example": "A tourist asked me the way to the castle." },
+    { "word": "visitor", "meaning": "a person who comes to a place for a short time", "japaneseMeaning": "訪問者、来客", "synonyms": "guest, caller", "antonyms": "resident, host", "forms": "visitor, visitors", "example": "Every visitor must sign in at the desk." }
   ]
 }

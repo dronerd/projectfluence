@@ -1,104 +1,17 @@
- {
-    "lesson_id": "eiken-pre2-47",
-    "title": "Lesson 47",
-    "paragraph": "This lesson (Lesson 47) focuses on commonly used adjectives for norms, status and sound levels.",
-    "words": [
-      {
-        "word": "normal",
-        "meaning": "usual, expected, or typical",
-        "japaneseMeaning": "普通の",
-        "synonyms": "typical, regular",
-        "antonyms": "abnormal, unusual",
-        "example": "It's normal to feel nervous before a test."
-      },
-      {
-        "word": "popular",
-        "meaning": "liked or admired by many people",
-        "japaneseMeaning": "人気のある",
-        "synonyms": "well-liked, favored",
-        "antonyms": "unpopular, disliked",
-        "example": "That cafe is very popular with students."
-      },
-      {
-        "word": "private",
-        "meaning": "for the use of a particular person or group; not public",
-        "japaneseMeaning": "私的な",
-        "synonyms": "personal, confidential",
-        "antonyms": "public, open",
-        "example": "This is a private event for members only."
-      },
-      {
-        "word": "professional",
-        "meaning": "relating to a job that requires special training or education",
-        "japaneseMeaning": "専門的な",
-        "synonyms": "expert, skilled",
-        "antonyms": "amateur, unskilled",
-        "example": "She gave a very professional presentation."
-      },
-      {
-        "word": "public",
-        "meaning": "open to all people; not private",
-        "japaneseMeaning": "公共の／公の",
-        "synonyms": "open, communal",
-        "antonyms": "private, restricted",
-        "example": "The park is public and free to enter."
-      },
-      {
-        "word": "quick",
-        "meaning": "moving or doing something with speed",
-        "japaneseMeaning": "速い",
-        "synonyms": "fast, rapid",
-        "antonyms": "slow, gradual",
-        "example": "She gave a quick answer."
-      },
-      {
-        "word": "quiet",
-        "meaning": "making little or no noise",
-        "japaneseMeaning": "静かな",
-        "synonyms": "silent, calm",
-        "antonyms": "loud, noisy",
-        "example": "Please be quiet in the library."
-      },
-      {
-        "word": "rare",
-        "meaning": "not occurring very often; uncommon",
-        "japaneseMeaning": "珍しい",
-        "synonyms": "uncommon, infrequent",
-        "antonyms": "common, usual",
-        "example": "It is rare to see snow in this city."
-      },
-      {
-        "word": "regular",
-        "meaning": "occurring at fixed intervals; usual",
-        "japaneseMeaning": "定期的な／規則的な",
-        "synonyms": "steady, routine",
-        "antonyms": "irregular, sporadic",
-        "example": "He goes to the gym on a regular basis."
-      },
-      {
-        "word": "safe",
-        "meaning": "protected from danger or risk",
-        "japaneseMeaning": "安全な",
-        "synonyms": "secure, protected",
-        "antonyms": "dangerous, risky",
-        "example": "Make sure the environment is safe for children."
-      },
-      {
-        "word": "serious",
-        "meaning": "showing deep thought or concern; not joking",
-        "japaneseMeaning": "真面目な／深刻な",
-        "synonyms": "grave, solemn",
-        "antonyms": "frivolous, lighthearted",
-        "example": "This is a serious issue that needs action."
-      },
-      {
-        "word": "silent",
-        "meaning": "completely quiet; making no sound",
-        "japaneseMeaning": "音のない／静寂な",
-        "synonyms": "quiet, still",
-        "antonyms": "noisy, loud",
-        "example": "The room was silent during the exam."
-      }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-47",
+  "title": "Lesson 47",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "answer", "meaning": "to reply to a question", "japaneseMeaning": "答える", "synonyms": "reply, respond", "antonyms": "ask, ignore", "forms": "answer, answers, answering, answered", "example": "Please answer the question in a full sentence." },
+    { "word": "begin", "meaning": "to start doing something", "japaneseMeaning": "始める、始まる", "synonyms": "start, open", "antonyms": "end, finish", "forms": "begin, begins, beginning, began, begun", "example": "The class will begin at nine." },
+    { "word": "bring", "meaning": "to carry something or someone to a place", "japaneseMeaning": "持ってくる", "synonyms": "carry, take", "antonyms": "remove, leave", "forms": "bring, brings, bringing, brought", "example": "Please bring your notebook tomorrow." },
+    { "word": "buy", "meaning": "to get something by paying money", "japaneseMeaning": "買う", "synonyms": "purchase, get", "antonyms": "sell, return", "forms": "buy, buys, buying, bought", "example": "I want to buy a warm coat." },
+    { "word": "call", "meaning": "to phone someone or say a name loudly", "japaneseMeaning": "電話する、呼ぶ", "synonyms": "phone, shout", "antonyms": "ignore, whisper", "forms": "call, calls, calling, called", "example": "Call me when you arrive." },
+    { "word": "drink", "meaning": "to take liquid into your mouth", "japaneseMeaning": "飲む", "synonyms": "sip, swallow", "antonyms": "eat, spill", "forms": "drink, drinks, drinking, drank, drunk", "example": "Drink water after exercise." },
+    { "word": "feel", "meaning": "to experience an emotion or physical sense", "japaneseMeaning": "感じる", "synonyms": "sense, experience", "antonyms": "ignore, miss", "forms": "feel, feels, feeling, felt", "example": "I feel nervous before tests." },
+    { "word": "find", "meaning": "to discover something after looking", "japaneseMeaning": "見つける", "synonyms": "discover, locate", "antonyms": "lose, miss", "forms": "find, finds, finding, found", "example": "Can you find my keys?" },
+    { "word": "get", "meaning": "to receive, obtain, or become", "japaneseMeaning": "得る、受け取る", "synonyms": "receive, obtain", "antonyms": "lose, give", "forms": "get, gets, getting, got, gotten", "example": "I get emails from school every week." },
+    { "word": "give", "meaning": "to let someone have something", "japaneseMeaning": "与える、渡す", "synonyms": "offer, provide", "antonyms": "take, receive", "forms": "give, gives, giving, gave, given", "example": "Please give this note to your teacher." }
+  ]
+}

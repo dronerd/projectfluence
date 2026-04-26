@@ -1,0 +1,97 @@
+{
+  "lesson_id": "eiken-pre2-3",
+  "title": "Lesson 3",
+  "paragraph": "Food and drink bring variety to our meals and social occasions. Ingredients like vegetables, meat, and seasonings are combined by chefs to create soups, desserts and main dishes. Healthy choices and balanced portions help you enjoy food while staying fit.",
+  "words": [
+    {
+      "word": "juice",
+      "meaning": "a basic word for juice",
+      "japaneseMeaning": "ジュース",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "juice, juices",
+      "example": "I see a juice."
+    },
+    {
+      "word": "coffee",
+      "meaning": "a basic word for coffee",
+      "japaneseMeaning": "コーヒー",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "coffee, coffees",
+      "example": "I see a coffee."
+    },
+    {
+      "word": "tea",
+      "meaning": "a basic word for tea",
+      "japaneseMeaning": "お茶",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "tea, teas",
+      "example": "I see a tea."
+    },
+    {
+      "word": "breakfast",
+      "meaning": "a basic word for breakfast",
+      "japaneseMeaning": "朝食",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "breakfast, breakfasts",
+      "example": "I see a breakfast."
+    },
+    {
+      "word": "lunch",
+      "meaning": "a basic word for lunch",
+      "japaneseMeaning": "昼食",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "lunch, lunchs",
+      "example": "I see a lunch."
+    },
+    {
+      "word": "dinner",
+      "meaning": "a basic word for dinner",
+      "japaneseMeaning": "夕食",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "dinner, dinners",
+      "example": "I see a dinner."
+    },
+    {
+      "word": "plate",
+      "meaning": "a basic word for plate",
+      "japaneseMeaning": "皿",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "plate, plates",
+      "example": "I see a plate."
+    },
+    {
+      "word": "spoon",
+      "meaning": "a basic word for spoon",
+      "japaneseMeaning": "スプーン",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "spoon, spoons",
+      "example": "I see a spoon."
+    },
+    {
+      "word": "knife",
+      "meaning": "a basic word for knife",
+      "japaneseMeaning": "ナイフ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "knife, knifes",
+      "example": "I see a knife."
+    },
+    {
+      "word": "bottle",
+      "meaning": "a basic word for bottle",
+      "japaneseMeaning": "瓶、ボトル",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "bottle, bottles",
+      "example": "I see a bottle."
+    }
+  ]
+}

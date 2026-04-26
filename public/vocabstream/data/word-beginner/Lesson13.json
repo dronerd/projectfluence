@@ -1,0 +1,117 @@
+{
+  "lesson_id": "eiken-pre2-13",
+  "title": "Lesson 13",
+  "paragraph": "Feelings and emotions describe our inner states and affect behaviour. Words like happy, nervous, proud and surprised help us express how we feel in different situations, from excitement and disappointment to calm and relaxation.",
+  "words": [
+    {
+      "word": "work",
+      "meaning": "to work",
+      "japaneseMeaning": "働く",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "work, works, working, worked",
+      "example": "I work every day."
+    },
+    {
+      "word": "wait",
+      "meaning": "to wait",
+      "japaneseMeaning": "待つ",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "wait, waits, waiting, waited",
+      "example": "I wait every day."
+    },
+    {
+      "word": "help",
+      "meaning": "to help",
+      "japaneseMeaning": "助ける",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "help, helps, helping, helped",
+      "example": "I help every day."
+    },
+    {
+      "word": "wear",
+      "meaning": "to have clothes on your body",
+      "japaneseMeaning": "着ている",
+      "synonyms": [
+        "dress",
+        "put on"
+      ],
+      "antonyms": [
+        "remove"
+      ],
+      "forms": "wear, wears, wearing, wore, worn",
+      "example": "I wear a jacket on cold days."
+    },
+    {
+      "word": "meet",
+      "meaning": "to see and talk to someone",
+      "japaneseMeaning": "会う",
+      "synonyms": [
+        "see",
+        "greet"
+      ],
+      "antonyms": [
+        "miss"
+      ],
+      "forms": "meet, meets, meeting, met",
+      "example": "I meet my friend at the station."
+    },
+    {
+      "word": "cut",
+      "meaning": "to use a knife or scissors on something",
+      "japaneseMeaning": "切る",
+      "synonyms": [
+        "slice",
+        "trim"
+      ],
+      "antonyms": [
+        "join"
+      ],
+      "forms": "cut, cuts, cutting, cut",
+      "example": "Please cut the paper carefully."
+    },
+    {
+      "word": "learn",
+      "meaning": "to get new knowledge or skill",
+      "japaneseMeaning": "学ぶ",
+      "synonyms": [
+        "study",
+        "practice"
+      ],
+      "antonyms": [
+        "forget"
+      ],
+      "forms": "learn, learns, learning, learned",
+      "example": "We learn English at school."
+    },
+    {
+      "word": "clap",
+      "meaning": "to clap",
+      "japaneseMeaning": "拍手する",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "clap, claps, claping, claped",
+      "example": "I clap every day."
+    },
+    {
+      "word": "hug",
+      "meaning": "to hug",
+      "japaneseMeaning": "抱きしめる",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "hug, hugs, huging, huged",
+      "example": "I hug every day."
+    },
+    {
+      "word": "kiss",
+      "meaning": "to kiss",
+      "japaneseMeaning": "キスする",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "kiss, kisss, kissing, kissed",
+      "example": "I kiss every day."
+    }
+  ]
+}

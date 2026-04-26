@@ -1,103 +1,17 @@
-  {
-    "lesson_id": "eiken-pre2-57",
-    "title": "Lesson 57",
-    "paragraph": "Descriptions of appearance, condition and taste — useful for talking about things and situations.",
-    "words": [
-      {
-        "word": "beautiful",
-        "meaning": "pleasing to the senses or mind; attractive",
-        "japaneseMeaning": "美しい",
-        "synonyms": "lovely, gorgeous",
-        "antonyms": "ugly, plain",
-        "example": "She wore a beautiful dress to the party."
-      },
-      {
-        "word": "blank",
-        "meaning": "empty or without any writing or marks",
-        "japaneseMeaning": "空白の",
-        "synonyms": "empty, vacant",
-        "antonyms": "filled, written",
-        "example": "The paper was blank; he hadn't started yet."
-      },
-      {
-        "word": "bright",
-        "meaning": "giving out or reflecting a lot of light; intelligent",
-        "japaneseMeaning": "明るい／利口な",
-        "synonyms": "shiny, intelligent",
-        "antonyms": "dull, dim",
-        "example": "The morning sun made the room bright."
-      },
-      {
-        "word": "broad",
-        "meaning": "wide from one side to the other",
-        "japaneseMeaning": "広い／幅の広い",
-        "synonyms": "wide, expansive",
-        "antonyms": "narrow, limited",
-        "example": "They walked along the broad avenue."
-      },
-      {
-        "word": "cheap",
-        "meaning": "low in price; inexpensive",
-        "japaneseMeaning": "安い",
-        "synonyms": "inexpensive, affordable",
-        "antonyms": "expensive, costly",
-        "example": "We found a cheap hotel near the station."
-      },
-      {
-        "word": "clean",
-        "meaning": "free from dirt or impurities",
-        "japaneseMeaning": "きれいな／清潔な",
-        "synonyms": "tidy, spotless",
-        "antonyms": "dirty, filthy",
-        "example": "Keep the kitchen clean after cooking."
-      },
-      {
-        "word": "clear",
-        "meaning": "easy to perceive, understand, or interpret; transparent",
-        "japaneseMeaning": "明確な／透き通った",
-        "synonyms": "obvious, transparent",
-        "antonyms": "unclear, vague",
-        "example": "The instructions were clear and easy to follow."
-      },
-      {
-        "word": "common",
-        "meaning": "occurring often; ordinary",
-        "japaneseMeaning": "一般的な／普通の",
-        "synonyms": "usual, ordinary",
-        "antonyms": "rare, unusual",
-        "example": "It's common to see bicycles in this town."
-      },
-      {
-        "word": "complete",
-        "meaning": "having all necessary parts or finished",
-        "japaneseMeaning": "完全な／完了した",
-        "synonyms": "finished, whole",
-        "antonyms": "incomplete, partial",
-        "example": "The set is now complete with all pieces."
-      },
-      {
-        "word": "convenient",
-        "meaning": "suiting one's needs or purpose easily and comfortably",
-        "japaneseMeaning": "便利な／都合の良い",
-        "synonyms": "handy, practical",
-        "antonyms": "inconvenient, difficult",
-        "example": "The store’s location is very convenient for commuters."
-      },
-      {
-        "word": "correct",
-        "meaning": "free from error; accurate",
-        "japaneseMeaning": "正しい／正確な",
-        "synonyms": "right, accurate",
-        "antonyms": "wrong, incorrect",
-        "example": "Make sure your answers are correct before turning the test in."
-      },
-      {
-        "word": "dangerous",
-        "meaning": "likely to cause harm or injury",
-        "japaneseMeaning": "危険な",
-        "synonyms": "hazardous, risky",
-        "antonyms": "safe, harmless",
-        "example": "Swimming alone in rough seas can be dangerous."
-      }
-    ]
-  }
+{
+  "lesson_id": "eiken-2-57",
+  "title": "Lesson 57",
+  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
+  "words": [
+    { "word": "black", "meaning": "the darkest color", "japaneseMeaning": "黒い", "synonyms": "dark, dark-colored", "antonyms": "white, light", "forms": "black, blacker, blackest", "example": "He wore a black jacket." },
+    { "word": "blue", "meaning": "the color of the clear sky", "japaneseMeaning": "青い", "synonyms": "sky-colored, navy", "antonyms": "red, orange", "forms": "blue, bluer, bluest", "example": "The blue bag is mine." },
+    { "word": "brown", "meaning": "the color of wood or chocolate", "japaneseMeaning": "茶色の", "synonyms": "tan, chocolate-colored", "antonyms": "bright, pale", "forms": "brown, browner, brownest", "example": "The dog has brown eyes." },
+    { "word": "cold", "meaning": "having a low temperature", "japaneseMeaning": "寒い、冷たい", "synonyms": "cool, chilly", "antonyms": "hot, warm", "forms": "cold, colder, coldest", "example": "The water is cold today." },
+    { "word": "complete", "meaning": "having all parts and not missing anything", "japaneseMeaning": "完全な、完成した", "synonyms": "whole, finished", "antonyms": "incomplete, missing", "forms": "complete, completely, completeness", "example": "The report is complete now." },
+    { "word": "crazy", "meaning": "very strange, silly, or excited", "japaneseMeaning": "おかしな、夢中の", "synonyms": "wild, strange", "antonyms": "calm, sensible", "forms": "crazy, crazier, craziest", "example": "That crazy idea actually worked." },
+    { "word": "cute", "meaning": "pretty or attractive in a sweet way", "japaneseMeaning": "かわいい", "synonyms": "adorable, sweet", "antonyms": "ugly, scary", "forms": "cute, cuter, cutest", "example": "The cute puppy slept under the table." },
+    { "word": "dangerous", "meaning": "able to hurt someone or cause damage", "japaneseMeaning": "危険な", "synonyms": "risky, unsafe", "antonyms": "safe, harmless", "forms": "dangerous, dangerously, danger", "example": "This road is dangerous at night." },
+    { "word": "easy", "meaning": "not difficult", "japaneseMeaning": "簡単な", "synonyms": "simple, clear", "antonyms": "hard, difficult", "forms": "easy, easier, easiest, easily", "example": "The first question was easy." },
+    { "word": "excited", "meaning": "very happy and interested", "japaneseMeaning": "わくわくした、興奮した", "synonyms": "thrilled, eager", "antonyms": "bored, calm", "forms": "excited, excitedly, excitement", "example": "The children were excited about the trip." }
+  ]
+}

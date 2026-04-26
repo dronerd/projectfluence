@@ -1,28 +1,17 @@
 {
-    "lesson_id": "eiken-pre2-5",
-    "title": "Lesson 5",
-    "paragraph": "Education and work shape skills and future opportunities. Students attend classes, submit assignments, and take exams, while professors and employers evaluate progress. Hard work, qualifications, and research can open doors to scholarships and university degrees.",
-    "words": [
-      { "word": "assignment", "meaning": "a task given to students or employees", "japaneseMeaning": "課題、宿題", "synonyms": "task, homework", "antonyms": "free time, leisure", "example": "The teacher gave a new assignment." },
-      { "word": "attend", "meaning": "to be present at an event or place", "japaneseMeaning": "出席する", "synonyms": "go to, participate", "antonyms": "miss, skip", "example": "She will attend the lecture tomorrow." },
-      { "word": "break", "meaning": "a short period of rest from school or work", "japaneseMeaning": "休み（学校の休み）", "synonyms": "rest, recess", "antonyms": "work period, class time", "example": "They have a ten-minute break between classes." },
-      { "word": "certificate", "meaning": "an official document proving completion or achievement", "japaneseMeaning": "証明書、修了証", "synonyms": "diploma, credential", "antonyms": "", "example": "She received a certificate after the course." },
-      { "word": "classroom", "meaning": "a room where lessons take place", "japaneseMeaning": "教室", "synonyms": "lecture room, study room", "antonyms": "outdoors, playground", "example": "The classroom was full of students." },
-      { "word": "degree", "meaning": "an academic qualification awarded by a university", "japaneseMeaning": "学位", "synonyms": "diploma, qualification", "antonyms": "dropout, no degree", "example": "He earned a degree in engineering." },
-      { "word": "exam", "meaning": "a formal test of knowledge or skill", "japaneseMeaning": "試験", "synonyms": "test, assessment", "antonyms": "pass, exemption", "example": "She studied hard for the final exam." },
-      { "word": "lecture", "meaning": "an educational talk given to students", "japaneseMeaning": "講義", "synonyms": "talk, presentation", "antonyms": "discussion, seminar", "example": "The professor's lecture was very informative." },
-      { "word": "library", "meaning": "a place with books and study resources", "japaneseMeaning": "図書館", "synonyms": "book collection, archive", "antonyms": "", "example": "I borrowed a book from the library." },
-      { "word": "mark", "meaning": "a score given for work or an exam", "japaneseMeaning": "成績、点数", "synonyms": "grade, score", "antonyms": "zero, fail", "example": "She received a high mark on the test." },
-      { "word": "notebook", "meaning": "a book of blank pages for writing notes", "japaneseMeaning": "ノート", "synonyms": "notepad, journal", "antonyms": "", "example": "He wrote the homework in his notebook." },
-      { "word": "professor", "meaning": "a senior teacher at a university", "japaneseMeaning": "教授", "synonyms": "lecturer, academic", "antonyms": "student, pupil", "example": "The professor answered our questions after class." },
-      { "word": "pupil", "meaning": "a student, especially at school", "japaneseMeaning": "生徒", "synonyms": "student, learner", "antonyms": "teacher, instructor", "example": "The pupil solved the math problem quickly." },
-      { "word": "qualification", "meaning": "an official requirement or credential", "japaneseMeaning": "資格", "synonyms": "credential, certification", "antonyms": "ineligibility, disqualification", "example": "He has the necessary qualification for the job." },
-      { "word": "research", "meaning": "systematic study to discover new facts", "japaneseMeaning": "研究", "synonyms": "study, investigation", "antonyms": "guesswork, assumption", "example": "Her research was published in a journal." },
-      { "word": "scholarship", "meaning": "financial support awarded for study", "japaneseMeaning": "奨学金", "synonyms": "grant, award", "antonyms": "loan, unpaid study", "example": "She won a scholarship to study abroad." },
-      { "word": "subject", "meaning": "an area of study at school or university", "japaneseMeaning": "科目", "synonyms": "course, topic", "antonyms": "extracurricular, leisure", "example": "Mathematics is my favourite subject." },
-      { "word": "term", "meaning": "a fixed period of the academic year", "japaneseMeaning": "学期", "synonyms": "semester, quarter", "antonyms": "break, holiday", "example": "The term ends in July." },
-      { "word": "uniform", "meaning": "special clothes worn by students or workers", "japaneseMeaning": "制服", "synonyms": "outfit, attire", "antonyms": "casual clothes", "example": "Students must wear the school uniform." },
-      { "word": "university", "meaning": "an institution for higher education", "japaneseMeaning": "大学", "synonyms": "college, institution", "antonyms": "high school, secondary school", "example": "She applied to several universities." }
-    ]
-  }
- 
+  "lesson_id": "eiken-2-5",
+  "title": "Lesson 5",
+  "paragraph": "For our science project, we will mention the weather, confirm each number, and recommend a simple method. The rules require us to produce one chart and replace any broken bottles. Hot days may affect the samples, so we will separate clean water from dirty water, increase the number of checks, and treat the samples carefully.",
+  "words": [
+    { "word": "mention", "meaning": "to say or write something briefly", "japaneseMeaning": "言及する、述べる", "synonyms": "refer to, note", "antonyms": "ignore, omit", "forms": "mention, mentions, mentioning, mentioned", "example": "Please mention your arrival time in the message." },
+    { "word": "confirm", "meaning": "to check or state that something is true or correct", "japaneseMeaning": "確認する", "synonyms": "check, verify", "antonyms": "deny, question", "forms": "confirm, confirms, confirming, confirmed, confirmation", "example": "Please confirm your email address before you log in." },
+    { "word": "recommend", "meaning": "to say that something is good or useful", "japaneseMeaning": "勧める、推薦する", "synonyms": "suggest, advise", "antonyms": "warn against, discourage", "forms": "recommend, recommends, recommending, recommended, recommendation", "example": "I recommend this app for learning new words." },
+    { "word": "require", "meaning": "to need something or make something necessary", "japaneseMeaning": "必要とする、要求する", "synonyms": "need, demand", "antonyms": "allow, remove", "forms": "require, requires, requiring, required, requirement", "example": "This recipe will require two eggs and a cup of milk." },
+    { "word": "produce", "meaning": "to make, grow, or create something", "japaneseMeaning": "作り出す、生産する", "synonyms": "make, create", "antonyms": "destroy, consume", "forms": "produce, produces, producing, produced, production", "example": "The farm can produce fresh tomatoes all summer." },
+    { "word": "replace", "meaning": "to put something new in the place of something old or broken", "japaneseMeaning": "取り替える、置き換える", "synonyms": "change, exchange", "antonyms": "keep, leave", "forms": "replace, replaces, replacing, replaced, replacement", "example": "We need to replace the broken light in the kitchen." },
+    { "word": "affect", "meaning": "to change or influence someone or something", "japaneseMeaning": "影響する", "synonyms": "influence, change", "antonyms": "protect, ignore", "forms": "affect, affects, affecting, affected", "example": "Lack of sleep can affect your memory." },
+    { "word": "increase", "meaning": "to become larger in number, amount, or degree", "japaneseMeaning": "増える、増やす", "synonyms": "grow, rise", "antonyms": "decrease, reduce", "forms": "increase, increases, increasing, increased", "example": "The shop will increase the price next month." },
+    { "word": "treat", "meaning": "to deal with someone or something in a certain way", "japaneseMeaning": "扱う、処置する", "synonyms": "handle, deal with", "antonyms": "ignore, mistreat", "forms": "treat, treats, treating, treated, treatment", "example": "Please treat the glass boxes with care." },
+    { "word": "separate", "meaning": "to keep people or things apart from each other", "japaneseMeaning": "分ける、離す", "synonyms": "divide, split", "antonyms": "join, mix", "forms": "separate, separates, separating, separated, separation", "example": "We separate paper from plastic before recycling." }
+  ]
+}
