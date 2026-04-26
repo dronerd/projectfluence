@@ -16,13 +16,13 @@ const STATIC_GENRES: Lesson[] = [
   { id: "business-entry", title: "入門レベル" },
   { id: "business-intermediate", title: "実践レベル" },
   { id: "business-global", title: "グローバルレベル" },
-  { id: "computer-science", title: "Computer Science & Technology" },
-  { id: "medicine", title: "Medicine & Health" },
-  { id: "economics-business", title: "Business & Economics" },
-  { id: "environment", title: "Environmental Science & Sustainability" },
-  { id: "law", title: "Law" },
-  { id: "politics", title: "Politics" },
-  { id: "engineering", title: "Engineering" },
+  { id: "computer-science", title: "コンピューターサイエンス・テクノロジー" },
+  { id: "medicine", title: "医学・健康" },
+  { id: "economics-business", title: "ビジネス・経済" },
+  { id: "environment", title: "環境科学・サステナビリティ" },
+  { id: "law", title: "法律" },
+  { id: "politics", title: "政治" },
+  { id: "engineering", title: "工学" },
 ];
 
 export default function LearnGenres() {
@@ -68,7 +68,7 @@ export default function LearnGenres() {
     "linear-gradient(135deg, #dce9fb 0%, #aac7f1 100%)",
     "linear-gradient(135deg, #cfe0f8 0%, #8eb1e7 100%)",
   ];
-  const pageBackground = "#e5e7eb";
+  const pageBackground = "#e5e5e5";
 
   const levelOrder: LevelOrder = {
     単語: [
@@ -127,7 +127,7 @@ export default function LearnGenres() {
       <style>{`
         /* global box sizing & remove default margins that cause bleed */
         *, *::before, *::after { box-sizing: border-box; }
-        html, body, #root { height: 100%; margin: 0; padding: 0; overflow-x: hidden; background: #e5e7eb; }
+        html, body, #root { height: 100%; margin: 0; padding: 0; overflow-x: hidden; background: #e5e5e5; }
 
         /* outer wrapper fills vertical space but NOT using 100vw (avoids scroll issues) */
         .outer-root {
@@ -167,10 +167,44 @@ export default function LearnGenres() {
           margin-top: 14px;
           margin-bottom: 24px;
           padding: 18px;
-          background: linear-gradient(180deg, rgba(248,251,255,0.98), rgba(233,240,248,0.96));
-          border: 1px solid rgba(154,176,208,0.22);
-          border-radius: 24px;
-          box-shadow: 0 22px 60px rgba(5,13,30,0.34);
+          background: #ffffff;
+          border: 1px solid rgba(209, 213, 219, 0.8);
+          border-radius: 16px;
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        .about-section {
+          margin-bottom: 24px;
+          padding: 24px;
+          background: #ffffff;
+          border: 1px solid rgba(209, 213, 219, 0.8);
+          border-radius: 16px;
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        .about-heading {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 14px;
+          margin-bottom: 16px;
+        }
+
+        .about-logo {
+          width: 52px;
+          height: 52px;
+          border-radius: 10px;
+          object-fit: cover;
+          flex: 0 0 auto;
+        }
+
+        .about-copy {
+          max-width: 760px;
+          margin: 0 auto;
+          color: #334155;
+          font-size: 16px;
+          line-height: 1.8;
+          text-align: center;
         }
 
         .lesson-card {
@@ -219,26 +253,41 @@ export default function LearnGenres() {
 
         @media (max-width: 720px) {
           .lessons-grid { grid-template-columns: 1fr; gap: 10px; }
+          .about-section { padding: 18px; }
+          .about-heading { flex-direction: column; gap: 10px; }
+          .about-copy { font-size: 14px; text-align: left; }
         }
       `}</style>
 
       <div className="main-container" style={{ paddingTop: basePadding }}>
-      
-        <h2
-          style={{
-            fontSize: isSmall ? 24 : 32,
-            fontWeight: 900, // 最大の太さ
-            textAlign: "center",
-            marginBottom: 10,
-            color: "#1f2937"
-          }}
-        >
-          単語の学習
-        </h2>
 
-        <h3 style={{ fontSize: isSmall ? 16 : 22, fontWeight: 600, textAlign: "center", marginBottom: 24, color: "#374151" }}>
-          学習する分野の選択
-        </h3>
+        <section className="about-section" aria-labelledby="vocabstream-about-title">
+          <div className="about-heading">
+            <img className="about-logo" src="/images/vocabstream.png" alt="VocabStream" />
+            <h2
+              id="vocabstream-about-title"
+              style={{
+                fontSize: isSmall ? 24 : 32,
+                fontWeight: 900,
+                textAlign: "center",
+                margin: 0,
+                color: "#1f2937"
+              }}
+            >
+              VocabStream
+            </h2>
+          </div>
+
+          <p className="about-copy">
+            VocabStreamは、英単語を日本語訳だけで暗記するのではなく、
+            <strong>英語の定義や例文から意味を理解する</strong>ための語彙学習アプリです。
+            文脈の中で使い方やニュアンスをつかみ、記憶ではなく理解を土台に語彙力を伸ばします。
+          </p>
+
+          <p className="about-copy" style={{ marginTop: 18, fontWeight: 700, color: "#173a71" }}>
+            下の一覧から、学習したい分野やレベルを選んで始めましょう。
+          </p>
+        </section>
 
         {Object.entries(categories).map(([categoryName, lessons]) => {
           const order = levelOrder[categoryName];

@@ -331,7 +331,7 @@ export default function ExtraPage() {
               これらのアプリは現在開発中です。今後のアップデートをお楽しみに！
               これらのアプリは<strong>相互にデータを活用</strong>し、学習体験を最適化することを目指しています。
               例えば、<strong>VocabStream</strong>で学習した単語データをもとに、
-              <strong>VidMatcher</strong>では理解しやすい動画を推薦し、
+              <strong>VidMatch</strong>では理解しやすい動画を推薦し、
               <strong>SpeakWiseAI</strong>ではあなたの語彙レベルに合わせた会話練習を提供します。
             </p>
 
@@ -367,11 +367,11 @@ export default function ExtraPage() {
                 </Link>
               </div>
 
-              {/* VidMatcher */}
+              {/* VidMatch */}
               <div className="bg-neutral-50 rounded-xl p-5 shadow-sm flex flex-col">
                 <div className="flex items-center gap-3">
-                  <Image src="/images/videofinder.png" alt="VidMatcher" width={60} height={60} className="rounded-md" />
-                  <h3 className="text-xl font-semibold">VidMatcher</h3>
+                  <Image src="/images/videofinder.png" alt="VidMatch" width={60} height={60} className="rounded-md" />
+                  <h3 className="text-xl font-semibold">VidMatch</h3>
                 </div>
 
                 <p className="mt-3 text-gray-700 text-sm leading-relaxed">
@@ -384,9 +384,8 @@ export default function ExtraPage() {
                   <li>専門分野対応</li>
                 </ul>
 
-                <a
-                  href="https://video.projectfluence.vercel.app"
-                  target="_blank"
+                <Link
+                  href="/vidmatch"
                   className="mt-auto inline-block text-center 
                   bg-gradient-to-r from-indigo-600 to-cyan-500 
                   text-white px-5 py-2.5 rounded-full 
@@ -394,7 +393,7 @@ export default function ExtraPage() {
                   hover:shadow-lg hover:scale-[1.02] hover:brightness-110 
                   transition-all duration-200"                  >
                   アプリを開く →
-                </a>
+                </Link>
               </div>
               
               {/* SpeakWiseAI */}
@@ -584,14 +583,12 @@ export default function ExtraPage() {
                         </ul>
                       </div>
                       <p className="mt-2">この学習方法を効率化するために、最適な英語のYoutube動画を推薦するアプリ
-                         <a
+                         <Link
                           className="underline"
-                          href="https://VidMatcher.projectfluence.vercel.app"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href="/vidmatch"
                           >
-                          <strong>VidMatcher</strong>
-                          </a>
+                          <strong>VidMatch</strong>
+                          </Link>
                           を開発中です。
                         </p>
                     </div>
@@ -683,13 +680,12 @@ export default function ExtraPage() {
                     ・VocabStream
                   </Link>
 
-                  <a
-                    href="https://video.projectfluence.vercel.app"
-                    target="_blank"
+                  <Link
+                    href="/vidmatch"
                     onClick={() => setMenuOpen(false)}
                   >
-                    ・VidMatcher
-                  </a>
+                    ・VidMatch
+                  </Link>
 
                   <a
                     href="/speakwise"

@@ -18,12 +18,13 @@ const STATIC_GENRE_TITLES: Record<string, string> = {
   "business-entry": "入門レベル",
   "business-intermediate": "実践レベル",
   "business-global": "グローバルレベル",
-  "computer-science": "Computer Science & Technology",
-  "medicine": "Medicine & Health",
-  "economics-business": "Business & Economics",
-  "environment": "Environmental Science & Sustainability",
-  "law": "Law & Politics",
-  "engineering": "Engineering",
+  "computer-science": "コンピューターサイエンス・テクノロジー",
+  "medicine": "医学・健康",
+  "economics-business": "ビジネス・経済",
+  "environment": "環境科学・サステナビリティ",
+  "law": "法律",
+  "politics": "政治",
+  "engineering": "工学",
 };
 
 function makeLessons(genreId: string, count: number): Lesson[] {

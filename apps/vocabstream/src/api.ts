@@ -25,13 +25,13 @@ const STATIC_GENRES = [
   { id: "business-entry", title: "入門レベル" },
   { id: "business-intermediate", title: "実践レベル" },
   { id: "business-global", title: "グローバルレベル" },
-  { id: "computer-science", title: "Computer Science & Technology" },
-  { id: "medicine", title: "Medicine & Health" },
-  { id: "economics-business", title: "Business & Economics" },
-  { id: "environment", title: "Environmental Science & Sustainability" },
-  { id: "law", title: "Law" },
-  { id: "politics", title: "Politics" },
-  { id: "engineering", title: "Engineering" },
+  { id: "computer-science", title: "コンピューターサイエンス・テクノロジー" },
+  { id: "medicine", title: "医学・健康" },
+  { id: "economics-business", title: "ビジネス・経済" },
+  { id: "environment", title: "環境科学・サステナビリティ" },
+  { id: "law", title: "法律" },
+  { id: "politics", title: "政治" },
+  { id: "engineering", title: "工学" },
 ];
 
 /* ------------------------
