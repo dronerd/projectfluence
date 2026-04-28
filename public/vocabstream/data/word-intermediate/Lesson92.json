@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-92",
   "title": "Lesson 92",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "impossible",
-      "meaning": "not able to happen or be done",
-      "japaneseMeaning": "不可能な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "impossible, impossiblely",
-      "example": "The task is impossible without help."
+      "word": "climate",
+      "meaning": "weather conditions over time",
+      "japaneseMeaning": "気候",
+      "synonyms": "weather, environment",
+      "antonyms": "instability, unpredictability",
+      "forms": "climate, climates",
+      "example": "Climate change is a global issue."
     },
     {
-      "word": "indirect",
-      "meaning": "not straight or not direct",
-      "japaneseMeaning": "間接的な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "indirect, indirectly",
-      "example": "We took an indirect route home."
+      "word": "trade",
+      "meaning": "a kind of skilled work, or buying and selling",
+      "japaneseMeaning": "職業、取引",
+      "synonyms": "work, business",
+      "antonyms": "hobby, gift",
+      "forms": "trade, trades",
+      "example": "He learned a trade at a local college."
     },
     {
-      "word": "passive",
-      "meaning": "not active or not taking action",
-      "japaneseMeaning": "受け身の、消極的な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "passive, passively",
-      "example": "A passive student rarely asks questions."
+      "word": "impact",
+      "meaning": "strong effect or influence",
+      "japaneseMeaning": "影響",
+      "synonyms": "effect, influence",
+      "antonyms": "insignificance, irrelevance",
+      "forms": "impact, impacts",
+      "example": "The policy had a major impact."
     },
     {
-      "word": "smart",
-      "meaning": "clever or stylish",
-      "japaneseMeaning": "賢い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "smart, smartly",
-      "example": "That was a smart answer."
+      "word": "border",
+      "meaning": "the line between two countries or areas",
+      "japaneseMeaning": "国境、境界",
+      "synonyms": "edge, boundary",
+      "antonyms": "center, inside",
+      "forms": "border, borders",
+      "example": "We crossed the border early in the morning."
     },
     {
-      "word": "silly",
-      "meaning": "not serious or not wise",
-      "japaneseMeaning": "ばかな、 silly",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "silly, sillyly",
-      "example": "The silly joke made us laugh."
+      "word": "metric",
+      "meaning": "a way to measure something",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "metric, metrics",
+      "example": "The metric helped us understand the situation more clearly."
     },
     {
-      "word": "playful",
-      "meaning": "full of fun and play",
-      "japaneseMeaning": "遊び好きな",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "playful, playfully",
-      "example": "The playful dog ran in circles."
+      "word": "tourist",
+      "meaning": "a person who visits a place for fun",
+      "japaneseMeaning": "観光客",
+      "synonyms": "visitor, traveler",
+      "antonyms": "local, resident",
+      "forms": "tourist, tourists",
+      "example": "A tourist asked me the way to the temple."
     },
     {
-      "word": "useless",
-      "meaning": "not helpful",
-      "japaneseMeaning": "役に立たない",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "useless, uselessly",
-      "example": "This broken pen is useless."
+      "word": "community",
+      "meaning": "people who live in the same area or share something",
+      "japaneseMeaning": "地域社会、共同体",
+      "synonyms": "local people, group",
+      "antonyms": "stranger, outsider",
+      "forms": "community, communities",
+      "example": "The community cleaned the beach together."
     },
     {
-      "word": "worthless",
-      "meaning": "having no value",
-      "japaneseMeaning": "価値のない",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "worthless, worthlessly",
-      "example": "The old ticket is worthless now."
+      "word": "responsibility",
+      "meaning": "duty or accountability",
+      "japaneseMeaning": "責任",
+      "synonyms": "duty, obligation",
+      "antonyms": "negligence, irresponsibility",
+      "forms": "responsibility, responsibilities",
+      "example": "He accepted responsibility for the error."
     },
     {
-      "word": "global",
-      "meaning": "connected with the whole world",
-      "japaneseMeaning": "世界的な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "global, globally",
-      "example": "Climate change is a global problem."
+      "word": "signal",
+      "meaning": "a sound, light, or action that sends a message",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "signal, signals",
+      "example": "The signal helped us understand the situation more clearly."
     },
     {
-      "word": "manual",
-      "meaning": "done by hand, not automatic",
-      "japaneseMeaning": "手動の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "manual, manually",
-      "example": "This is a manual door."
+      "word": "research",
+      "meaning": "careful study to find new facts",
+      "japaneseMeaning": "研究",
+      "synonyms": "study, investigation",
+      "antonyms": "guess, neglect",
+      "forms": "research, researches",
+      "example": "Her research showed that sleep helps memory."
     }
   ]
 }

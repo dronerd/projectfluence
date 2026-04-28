@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-61",
   "title": "Lesson 61",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "plant", "meaning": "a living thing that grows in soil and has leaves or flowers", "japaneseMeaning": "植物", "synonyms": "flower, greenery", "antonyms": "animal, machine", "forms": "plant, plants", "example": "This plant needs water every day." },
-    { "word": "police", "meaning": "the official group that protects people and stops crime", "japaneseMeaning": "警察", "synonyms": "officers, law enforcement", "antonyms": "criminals, offenders", "forms": "police", "example": "The police helped the lost child." },
-    { "word": "problem", "meaning": "something difficult that needs a solution", "japaneseMeaning": "問題", "synonyms": "difficulty, issue", "antonyms": "solution, answer", "forms": "problem, problems", "example": "We solved the problem together." },
-    { "word": "road", "meaning": "a hard path for cars, buses, and bikes", "japaneseMeaning": "道路", "synonyms": "street, route", "antonyms": "field, sidewalk", "forms": "road, roads", "example": "The road is closed after the storm." },
-    { "word": "room", "meaning": "a part of a building with walls, a floor, and a ceiling", "japaneseMeaning": "部屋、空間", "synonyms": "space, chamber", "antonyms": "outside, hall", "forms": "room, rooms", "example": "This room is warm and quiet." },
-    { "word": "sea", "meaning": "a large area of salt water", "japaneseMeaning": "海", "synonyms": "ocean, water", "antonyms": "land, desert", "forms": "sea, seas", "example": "The sea was calm in the morning." },
-    { "word": "season", "meaning": "one of the four parts of the year", "japaneseMeaning": "季節", "synonyms": "period, time", "antonyms": "day, moment", "forms": "season, seasons", "example": "Spring is my favorite season." },
-    { "word": "shop", "meaning": "a place where people buy things", "japaneseMeaning": "店", "synonyms": "store, market", "antonyms": "home, factory", "forms": "shop, shops", "example": "The shop sells old books." },
-    { "word": "side", "meaning": "one of the left, right, top, or bottom parts of something", "japaneseMeaning": "側、面", "synonyms": "edge, part", "antonyms": "middle, center", "forms": "side, sides", "example": "Write your name on the left side of the page." },
-    { "word": "sign", "meaning": "a board, mark, or action that gives information", "japaneseMeaning": "標識、印", "synonyms": "notice, signal", "antonyms": "secret, silence", "forms": "sign, signs", "example": "The sign says the road is closed." }
+    {
+      "word": "courageous",
+      "meaning": "brave enough to face danger or difficulty",
+      "japaneseMeaning": "勇敢な",
+      "synonyms": "brave, bold",
+      "antonyms": "fearful, timid",
+      "forms": "courageous, courageously",
+      "example": "Her courageous decision helped the whole team."
+    },
+    {
+      "word": "familiar",
+      "meaning": "well known from long or close association",
+      "japaneseMeaning": "馴染みのある",
+      "synonyms": "known, recognizable",
+      "antonyms": "strange, unfamiliar",
+      "forms": "familiar, more familiar, most familiar",
+      "example": "That melody sounded familiar to me."
+    },
+    {
+      "word": "likely",
+      "meaning": "probably going to happen or be true",
+      "japaneseMeaning": "ありそうな、可能性が高い",
+      "synonyms": "probable, expected",
+      "antonyms": "unlikely, doubtful",
+      "forms": "likely, more likely, most likely",
+      "example": "It is likely to rain this afternoon."
+    },
+    {
+      "word": "reserved",
+      "meaning": "slow to show feelings or talk about yourself",
+      "japaneseMeaning": "控えめな、無口な",
+      "synonyms": "quiet, private",
+      "antonyms": "open, talkative",
+      "forms": "reserved",
+      "example": "He is reserved at first but friendly once you know him."
+    },
+    {
+      "word": "incapable",
+      "meaning": "not able to do something",
+      "japaneseMeaning": "能力がない、できない",
+      "synonyms": "unable, unfit",
+      "antonyms": "capable, able",
+      "forms": "incapable",
+      "example": "The old printer is incapable of printing color pages."
+    },
+    {
+      "word": "powerful",
+      "meaning": "having great power or strength",
+      "japaneseMeaning": "強力な／力のある",
+      "synonyms": "strong, potent",
+      "antonyms": "weak, powerless",
+      "forms": "powerful, more powerful, most powerful",
+      "example": "She gave a powerful speech."
+    },
+    {
+      "word": "unavailable",
+      "meaning": "not able to be used or not free to help",
+      "japaneseMeaning": "利用できない、都合がつかない",
+      "synonyms": "not free, absent",
+      "antonyms": "available, free",
+      "forms": "unavailable, unavailability",
+      "example": "The meeting room is unavailable after three o'clock."
+    },
+    {
+      "word": "flexible",
+      "meaning": "able to adjust easily",
+      "japaneseMeaning": "柔軟な",
+      "synonyms": "adaptable, versatile",
+      "antonyms": "rigid, inflexible",
+      "forms": "flexible, flexibly, flexibility",
+      "example": "A flexible approach helps solve problems."
+    },
+    {
+      "word": "essential",
+      "meaning": "very needed",
+      "japaneseMeaning": "不可欠な、本質的な",
+      "synonyms": "vital, crucial",
+      "antonyms": "unnecessary, extra",
+      "forms": "essential, more essential, most essential",
+      "example": "Water is essential for life."
+    },
+    {
+      "word": "unique",
+      "meaning": "being the only one of its kind",
+      "japaneseMeaning": "独特の、唯一の",
+      "synonyms": "special, distinctive",
+      "antonyms": "common, ordinary",
+      "forms": "unique, uniquely",
+      "example": "The town has a unique festival every winter."
+    }
   ]
 }

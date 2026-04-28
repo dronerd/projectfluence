@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-83",
   "title": "Lesson 83",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "silver",
-      "meaning": "having the color of silver",
-      "japaneseMeaning": "銀色の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "silver, silverly",
-      "example": "The silver watch was on the desk."
+      "word": "certificate",
+      "meaning": "an official paper that shows you finished a course or passed a test",
+      "japaneseMeaning": "証明書、修了証",
+      "synonyms": "document, proof",
+      "antonyms": "failure, refusal",
+      "forms": "certificate, certificates",
+      "example": "She received a certificate after the training course."
     },
     {
-      "word": "purple",
-      "meaning": "having a color made from red and blue",
-      "japaneseMeaning": "紫の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "purple, purplely",
-      "example": "She wore a purple scarf."
+      "word": "emergency",
+      "meaning": "a sudden, dangerous situation requiring immediate action",
+      "japaneseMeaning": "緊急事態",
+      "synonyms": "crisis, urgent situation",
+      "antonyms": "routine",
+      "forms": "emergency, emergencies",
+      "example": "Call this number in an emergency."
     },
     {
-      "word": "metal",
-      "meaning": "made of metal",
-      "japaneseMeaning": "金属の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "metal, metally",
-      "example": "The metal door was heavy."
+      "word": "holiday",
+      "meaning": "a day with no school or work, or a trip for fun",
+      "japaneseMeaning": "休日、休暇",
+      "synonyms": "vacation, break",
+      "antonyms": "workday, school day",
+      "forms": "holiday, holidays",
+      "example": "We went camping during the holiday."
     },
     {
-      "word": "cotton",
-      "meaning": "made from cotton cloth",
-      "japaneseMeaning": "綿の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "cotton, cottonly",
-      "example": "He bought a cotton shirt."
+      "word": "method",
+      "meaning": "a way of doing something",
+      "japaneseMeaning": "方法",
+      "synonyms": "way, system",
+      "antonyms": "mistake, guess",
+      "forms": "method, methods",
+      "example": "This method helps me learn new words faster."
     },
     {
-      "word": "woollen",
-      "meaning": "made from wool",
-      "japaneseMeaning": "ウールの",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "woollen, woollenly",
-      "example": "The woollen hat kept me warm."
+      "word": "advice",
+      "meaning": "an idea about what someone should do",
+      "japaneseMeaning": "助言、アドバイス",
+      "synonyms": "suggestion, guidance",
+      "antonyms": "warning, order",
+      "forms": "advice, advices",
+      "example": "My teacher gave me advice before the interview."
     },
     {
-      "word": "oval",
-      "meaning": "shaped like an egg",
-      "japaneseMeaning": "楕円形の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "oval, ovally",
-      "example": "The table is oval."
+      "word": "technology",
+      "meaning": "machines and knowledge used to do practical things",
+      "japaneseMeaning": "技術、テクノロジー",
+      "synonyms": "machines, tools",
+      "antonyms": "nature, old ways",
+      "forms": "technology, technologies",
+      "example": "Technology helps doctors find problems early."
     },
     {
-      "word": "steep",
-      "meaning": "rising or falling sharply",
-      "japaneseMeaning": "急な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "steep, steeply",
-      "example": "The steep hill was hard to climb."
+      "word": "choice",
+      "meaning": "something you can choose",
+      "japaneseMeaning": "選択、選択肢",
+      "synonyms": "option, selection",
+      "antonyms": "order, duty",
+      "forms": "choice, choices",
+      "example": "This restaurant has a good choice of lunches."
     },
     {
-      "word": "shallow",
-      "meaning": "not deep",
-      "japaneseMeaning": "浅い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "shallow, shallowly",
-      "example": "Children played in the shallow water."
+      "word": "platform",
+      "meaning": "a raised area or a place where trains stop",
+      "japaneseMeaning": "ホーム、台、プラットフォーム",
+      "synonyms": "stage, train stop",
+      "antonyms": "floor, road",
+      "forms": "platform, platforms",
+      "example": "Wait on platform three for the next train."
     },
     {
-      "word": "public",
-      "meaning": "for everyone to use or know about",
-      "japaneseMeaning": "公共の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "public, publicly",
-      "example": "This is a public library."
+      "word": "engine",
+      "meaning": "the part of a machine that gives it power",
+      "japaneseMeaning": "エンジン",
+      "synonyms": "motor, machine",
+      "antonyms": "brake, wheel",
+      "forms": "engine, engines",
+      "example": "The car engine stopped on the hill."
     },
     {
-      "word": "rude",
-      "meaning": "not polite",
-      "japaneseMeaning": "失礼な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "rude, rudely",
-      "example": "The rude comment hurt her feelings."
+      "word": "president",
+      "meaning": "the leader of a country, company, or club",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "president, presidents",
+      "example": "The president helped us understand the situation more clearly."
     }
   ]
 }

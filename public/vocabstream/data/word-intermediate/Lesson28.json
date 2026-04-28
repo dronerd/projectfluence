@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-28",
   "title": "Lesson 28",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "afraid", "meaning": "feeling fear or worry", "japaneseMeaning": "怖がっている、心配している", "synonyms": "scared, worried", "antonyms": "brave, calm", "forms": "afraid", "example": "She is afraid of walking home alone at night." },
-    { "word": "alive", "meaning": "living and not dead", "japaneseMeaning": "生きている", "synonyms": "living, active", "antonyms": "dead, lifeless", "forms": "alive", "example": "The plant is still alive after a week without water." },
-    { "word": "angry", "meaning": "feeling strong displeasure", "japaneseMeaning": "怒っている", "synonyms": "mad, upset", "antonyms": "calm, pleased", "forms": "angry, angrily, anger", "example": "My father was angry about the broken window." },
-    { "word": "beautiful", "meaning": "very pleasant to look at or hear", "japaneseMeaning": "美しい", "synonyms": "lovely, attractive", "antonyms": "ugly, unpleasant", "forms": "beautiful, beautifully, beauty", "example": "The sunset was beautiful over the sea." },
-    { "word": "blind", "meaning": "unable to see", "japaneseMeaning": "目の見えない", "synonyms": "sightless, unable to see", "antonyms": "sighted, seeing", "forms": "blind, blindly, blindness", "example": "The blind man crossed the street with a guide dog." },
-    { "word": "clever", "meaning": "quick to understand or learn", "japaneseMeaning": "賢い、利口な", "synonyms": "smart, bright", "antonyms": "foolish, slow", "forms": "clever, cleverly, cleverness", "example": "Her clever idea saved us time." },
-    { "word": "cloudy", "meaning": "covered with clouds", "japaneseMeaning": "曇った", "synonyms": "overcast, gray", "antonyms": "clear, sunny", "forms": "cloudy, cloudiness", "example": "It was cloudy, so we carried umbrellas." },
-    { "word": "curious", "meaning": "wanting to know or learn about something", "japaneseMeaning": "好奇心の強い", "synonyms": "interested, questioning", "antonyms": "uninterested, bored", "forms": "curious, curiously, curiosity", "example": "The curious child asked many questions." },
-    { "word": "dry", "meaning": "not wet or with little rain", "japaneseMeaning": "乾いた、乾燥した", "synonyms": "not wet, arid", "antonyms": "wet, damp", "forms": "dry, drier, driest, dryness", "example": "My clothes are dry after an hour in the sun." },
-    { "word": "favorite", "meaning": "liked more than others", "japaneseMeaning": "お気に入りの", "synonyms": "best-liked, preferred", "antonyms": "least favorite, disliked", "forms": "favorite, favorites", "example": "My favorite subject is history." }
+    {
+      "word": "valid",
+      "meaning": "accepted because it is true or correct",
+      "japaneseMeaning": "有効な、妥当な",
+      "synonyms": "accepted, correct",
+      "antonyms": "invalid, wrong",
+      "forms": "valid, more valid, most valid",
+      "example": "Your ticket is valid until the end of the month."
+    },
+    {
+      "word": "decisive",
+      "meaning": "able to make decisions quickly and clearly",
+      "japaneseMeaning": "決断力のある、決定的な",
+      "synonyms": "firm, clear",
+      "antonyms": "uncertain, hesitant",
+      "forms": "decisive, decisively",
+      "example": "A decisive leader helped the team choose a plan."
+    },
+    {
+      "word": "helpful",
+      "meaning": "providing assistance or useful information",
+      "japaneseMeaning": "役に立つ／助けになる",
+      "synonyms": "useful, beneficial",
+      "antonyms": "unhelpful, useless",
+      "forms": "helpful, more helpful, most helpful",
+      "example": "Her advice was very helpful for my project."
+    },
+    {
+      "word": "regional",
+      "meaning": "connected with a particular area of a country",
+      "japaneseMeaning": "地域の、地方の",
+      "synonyms": "local, area",
+      "antonyms": "national, central",
+      "forms": "regional, regionally",
+      "example": "The company opened a regional office in Fukuoka."
+    },
+    {
+      "word": "social",
+      "meaning": "liking to be with other people",
+      "japaneseMeaning": "社交的な",
+      "synonyms": "sociable, friendly",
+      "antonyms": "lonely, antisocial",
+      "forms": "social, more social, most social",
+      "example": "He is social and makes friends easily."
+    },
+    {
+      "word": "youthful",
+      "meaning": "having the energy or appearance of a young person",
+      "japaneseMeaning": "若々しい",
+      "synonyms": "lively, fresh",
+      "antonyms": "aged, tired",
+      "forms": "youthful, youthfully",
+      "example": "Her youthful energy made the workshop lively."
+    },
+    {
+      "word": "engaging",
+      "meaning": "interesting and keeping your attention",
+      "japaneseMeaning": "人を引きつける、魅力的な",
+      "synonyms": "interesting, attractive",
+      "antonyms": "boring, dull",
+      "forms": "engaging, engagingly",
+      "example": "The speaker gave an engaging talk about travel."
+    },
+    {
+      "word": "exhausted",
+      "meaning": "extremely tired",
+      "japaneseMeaning": "疲れ果てた",
+      "synonyms": "very tired, worn out",
+      "antonyms": "energetic, refreshed",
+      "forms": "exhausted, exhaustion",
+      "example": "After the long hike, everyone was exhausted."
+    },
+    {
+      "word": "stable",
+      "meaning": "not changing or falling easily",
+      "japaneseMeaning": "安定した",
+      "synonyms": "steady, secure",
+      "antonyms": "unstable, weak",
+      "forms": "stable, more stable, most stable",
+      "example": "The patient's condition is stable today."
+    },
+    {
+      "word": "frequent",
+      "meaning": "happening often",
+      "japaneseMeaning": "頻繁な",
+      "synonyms": "common, regular",
+      "antonyms": "rare, occasional",
+      "forms": "frequent, more frequent, most frequent",
+      "example": "Frequent breaks help students stay focused."
+    }
   ]
 }

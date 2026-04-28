@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-33",
   "title": "Lesson 33",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "lock", "meaning": "to close something with a key or code", "japaneseMeaning": "鍵をかける", "synonyms": "secure, close", "antonyms": "unlock, open", "forms": "lock, locks, locking, locked", "example": "Please lock the door when you leave." },
-    { "word": "mail", "meaning": "to send a letter or package", "japaneseMeaning": "郵送する", "synonyms": "send, post", "antonyms": "receive, keep", "forms": "mail, mails, mailing, mailed", "example": "I will mail the form tomorrow." },
-    { "word": "mix", "meaning": "to put different things together", "japaneseMeaning": "混ぜる", "synonyms": "combine, blend", "antonyms": "separate, divide", "forms": "mix, mixes, mixing, mixed", "example": "Mix the eggs with the flour." },
-    { "word": "offer", "meaning": "to say that you will give or do something", "japaneseMeaning": "申し出る、提供する", "synonyms": "provide, suggest", "antonyms": "refuse, withhold", "forms": "offer, offers, offering, offered", "example": "The hotel will offer free breakfast." },
-    { "word": "paint", "meaning": "to cover something with color using paint", "japaneseMeaning": "塗る、描く", "synonyms": "color, decorate", "antonyms": "remove, erase", "forms": "paint, paints, painting, painted", "example": "We will paint the classroom wall blue." },
-    { "word": "pour", "meaning": "to make liquid flow from one container to another", "japaneseMeaning": "注ぐ", "synonyms": "flow, spill", "antonyms": "hold, keep", "forms": "pour, pours, pouring, poured", "example": "Pour the water into the glass slowly." },
-    { "word": "protect", "meaning": "to keep someone or something safe", "japaneseMeaning": "守る、保護する", "synonyms": "guard, defend", "antonyms": "harm, endanger", "forms": "protect, protects, protecting, protected, protection", "example": "A helmet can protect your head." },
-    { "word": "repeat", "meaning": "to say or do something again", "japaneseMeaning": "繰り返す", "synonyms": "say again, redo", "antonyms": "stop, finish", "forms": "repeat, repeats, repeating, repeated, repetition", "example": "Could you repeat the question, please?" },
-    { "word": "rest", "meaning": "to stop working or moving in order to relax", "japaneseMeaning": "休む", "synonyms": "relax, pause", "antonyms": "work, continue", "forms": "rest, rests, resting, rested", "example": "You should rest after the long walk." },
-    { "word": "ride", "meaning": "to travel on a bike, horse, bus, or other vehicle", "japaneseMeaning": "乗る", "synonyms": "travel, sit on", "antonyms": "walk, drive", "forms": "ride, rides, riding, rode, ridden", "example": "I ride my bicycle to school." }
+    {
+      "word": "admire",
+      "meaning": "to regard with respect or warm approval",
+      "japaneseMeaning": "称賛する／感嘆する",
+      "synonyms": "respect, appreciate",
+      "antonyms": "criticize, dislike",
+      "forms": "admire, admires, admiring, admired",
+      "example": "I admire her dedication."
+    },
+    {
+      "word": "connect",
+      "meaning": "to join two or more things together",
+      "japaneseMeaning": "つなぐ、関連づける",
+      "synonyms": "link, join",
+      "antonyms": "separate, divide",
+      "forms": "connect, connects, connecting, connected",
+      "example": "The teacher helped us connect the story to real life."
+    },
+    {
+      "word": "include",
+      "meaning": "to contain as part of something",
+      "japaneseMeaning": "含める",
+      "synonyms": "incorporate, involve",
+      "antonyms": "exclude, omit",
+      "forms": "include, includes, including, included",
+      "example": "Please include all receipts."
+    },
+    {
+      "word": "recognize",
+      "meaning": "to identify or acknowledge",
+      "japaneseMeaning": "認識する",
+      "synonyms": "identify, notice",
+      "antonyms": "ignore, overlook",
+      "forms": "recognize, recognizes, recognizing, recognized",
+      "example": "He recognized his old friend in the crowd."
+    },
+    {
+      "word": "wander",
+      "meaning": "to walk slowly without a fixed plan",
+      "japaneseMeaning": "歩き回る",
+      "synonyms": "walk, roam",
+      "antonyms": "rush, stay",
+      "forms": "wander, wanders, wandering, wandered",
+      "example": "They wander through the market after lunch."
+    },
+    {
+      "word": "exercise",
+      "meaning": "to move your body to be healthy",
+      "japaneseMeaning": "運動、練習問題",
+      "synonyms": "training, activity",
+      "antonyms": "rest, sleep",
+      "forms": "exercise, exercises, exercising, exercised",
+      "example": "Daily exercise helps me sleep well."
+    },
+    {
+      "word": "reflect",
+      "meaning": "to think carefully about something",
+      "japaneseMeaning": "よく考える、振り返る",
+      "synonyms": "think, consider",
+      "antonyms": "ignore, forget",
+      "forms": "reflect, reflects, reflecting, reflected",
+      "example": "Students reflected on what they learned after the project."
+    },
+    {
+      "word": "interpret",
+      "meaning": "to explain the meaning of",
+      "japaneseMeaning": "解釈する",
+      "synonyms": "explain, understand",
+      "antonyms": "misunderstand, confuse",
+      "forms": "interpret, interprets, interpreting, interpreted",
+      "example": "She interpreted the poem's meaning."
+    },
+    {
+      "word": "grasp",
+      "meaning": "to understand something fully",
+      "japaneseMeaning": "理解する",
+      "synonyms": "comprehend, seize",
+      "antonyms": "misunderstand, lose",
+      "forms": "grasp, grasps, grasping, grasped",
+      "example": "He grasped the main idea quickly."
+    },
+    {
+      "word": "conduct",
+      "meaning": "to organize or do a special activity",
+      "japaneseMeaning": "実施する、行う",
+      "synonyms": "carry out, organize",
+      "antonyms": "cancel, stop",
+      "forms": "conduct, conducts, conducting, conducted",
+      "example": "The class conducted a survey about school lunches."
+    }
   ]
 }

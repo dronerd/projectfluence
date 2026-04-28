@@ -1,97 +1,101 @@
 {
   "lesson_id": "eiken-2-90",
   "title": "Lesson 90",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "cloud",
-      "meaning": "white or grey water vapor in the sky",
-      "japaneseMeaning": "雲",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "cloud, clouds",
-      "example": "A dark cloud covered the sun."
+      "word": "check",
+      "meaning": "to examine something in order to determine its condition",
+      "japaneseMeaning": "確認する／調べる",
+      "synonyms": "inspect, verify",
+      "antonyms": "ignore, neglect",
+      "forms": "check, checks, checking, checked",
+      "example": "Check the oil level in the car."
     },
     {
-      "word": "coat",
-      "meaning": "warm clothing worn outside",
-      "japaneseMeaning": "コート、上着",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "coat, coats",
-      "example": "Wear a coat because it is cold."
+      "word": "fill",
+      "meaning": "to make something full",
+      "japaneseMeaning": "満たす／詰める",
+      "synonyms": "pack, load",
+      "antonyms": "empty, drain",
+      "forms": "fill, fills, filling, filled",
+      "example": "Fill the bottle with water."
     },
     {
-      "word": "computer",
-      "meaning": "an electronic machine for storing and using information",
-      "japaneseMeaning": "コンピューター",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "computer, computers",
-      "example": "This computer is very fast."
+      "word": "prepare",
+      "meaning": "to make ready beforehand",
+      "japaneseMeaning": "準備する",
+      "synonyms": "get ready, arrange",
+      "antonyms": "neglect, delay",
+      "forms": "prepare, prepares, preparing, prepared",
+      "example": "Prepare your presentation tonight."
     },
     {
-      "word": "corner",
-      "meaning": "the point where two sides meet",
-      "japaneseMeaning": "角、隅",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "corner, corners",
-      "example": "The shop is on the corner."
+      "word": "teach",
+      "meaning": "to give instruction or impart knowledge",
+      "japaneseMeaning": "教える",
+      "synonyms": "instruct, educate",
+      "antonyms": "learn, ignore",
+      "forms": "teach, teaches, teaching, taught, taught",
+      "example": "She teaches math at the school."
     },
     {
-      "word": "cup",
-      "meaning": "a small container for drinking",
-      "japaneseMeaning": "カップ",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "cup, cups",
-      "example": "She filled the cup with tea."
+      "word": "determine",
+      "meaning": "to decide or conclude",
+      "japaneseMeaning": "決定する",
+      "synonyms": "decide, conclude",
+      "antonyms": "hesitate, question",
+      "forms": "determine, determines, determining, determined",
+      "example": "They determined the next steps."
     },
     {
-      "word": "danger",
-      "meaning": "the chance of being hurt",
-      "japaneseMeaning": "危険",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "danger, dangers",
-      "example": "The sign warns of danger."
+      "word": "pay",
+      "meaning": "to give money for something",
+      "japaneseMeaning": "支払う",
+      "synonyms": [
+        "spend",
+        "buy"
+      ],
+      "antonyms": [
+        "receive"
+      ],
+      "forms": "pay, pays, paying, paid, paid",
+      "example": "I pay for the ticket at the station."
     },
     {
-      "word": "desk",
-      "meaning": "a table used for work or study",
-      "japaneseMeaning": "机",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "desk, desks",
-      "example": "Books covered his desk."
+      "word": "upload",
+      "meaning": "to send a file from your computer to the internet",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "upload, uploads, uploading, uploaded",
+      "example": "We need to upload the plan before Friday."
     },
     {
-      "word": "dog",
-      "meaning": "a common animal often kept as a pet",
-      "japaneseMeaning": "犬",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "dog, dogs",
-      "example": "The dog barked at the mail carrier."
+      "word": "proceed",
+      "meaning": "to continue or go forward",
+      "japaneseMeaning": "進む",
+      "synonyms": "advance, continue",
+      "antonyms": "halt, stop",
+      "forms": "proceed, proceeds, proceeding, proceeded",
+      "example": "We will proceed with the plan."
     },
     {
-      "word": "ear",
-      "meaning": "the body part used for hearing",
-      "japaneseMeaning": "耳",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "ear, ears",
-      "example": "My left ear hurts."
+      "word": "fluctuate",
+      "meaning": "to vary irregularly",
+      "japaneseMeaning": "変動する",
+      "synonyms": "waver, oscillate",
+      "antonyms": "stabilize, remain",
+      "forms": "fluctuate, fluctuates, fluctuating, fluctuated",
+      "example": "Prices fluctuate daily."
     },
     {
-      "word": "east",
-      "meaning": "the direction where the sun rises",
-      "japaneseMeaning": "東",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "east, easts",
-      "example": "The station is east of the park."
+      "word": "sort",
+      "meaning": "to put things into groups or in order",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "sort, sorts, sorting, sorted",
+      "example": "We need to sort the plan before Friday."
     }
   ]
 }

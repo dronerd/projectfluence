@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-30",
   "title": "Lesson 30",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "encourage", "meaning": "to give someone hope or support", "japaneseMeaning": "励ます、促す", "synonyms": "support, cheer", "antonyms": "discourage, stop", "forms": "encourage, encourages, encouraging, encouraged, encouragement", "example": "Teachers encourage students to speak in English." },
-    { "word": "exist", "meaning": "to be real or present", "japaneseMeaning": "存在する", "synonyms": "be, live", "antonyms": "disappear, vanish", "forms": "exist, exists, existing, existed, existence", "example": "Many kinds of plants exist in this forest." },
-    { "word": "fold", "meaning": "to bend paper, cloth, or another flat thing", "japaneseMeaning": "折る、たたむ", "synonyms": "bend, crease", "antonyms": "unfold, spread", "forms": "fold, folds, folding, folded", "example": "Fold the paper in half before cutting it." },
-    { "word": "guide", "meaning": "to show someone where to go or what to do", "japaneseMeaning": "案内する、導く", "synonyms": "lead, direct", "antonyms": "mislead, follow", "forms": "guide, guides, guiding, guided", "example": "The teacher will guide us through the museum." },
-    { "word": "hurry", "meaning": "to move or do something quickly", "japaneseMeaning": "急ぐ", "synonyms": "rush, speed up", "antonyms": "delay, slow down", "forms": "hurry, hurries, hurrying, hurried", "example": "We need to hurry or we will miss the train." },
-    { "word": "invent", "meaning": "to create something new", "japaneseMeaning": "発明する", "synonyms": "create, design", "antonyms": "copy, destroy", "forms": "invent, invents, inventing, invented, invention", "example": "Students tried to invent a useful kitchen tool." },
-    { "word": "invite", "meaning": "to ask someone to come to an event or place", "japaneseMeaning": "招待する", "synonyms": "ask, welcome", "antonyms": "exclude, reject", "forms": "invite, invites, inviting, invited, invitation", "example": "We invite our neighbors to dinner every summer." },
-    { "word": "knock", "meaning": "to hit a door or surface to get attention", "japaneseMeaning": "ノックする、たたく", "synonyms": "tap, hit", "antonyms": "ignore, miss", "forms": "knock, knocks, knocking, knocked", "example": "Please knock before you enter the room." },
-    { "word": "lend", "meaning": "to give something to someone for a short time", "japaneseMeaning": "貸す", "synonyms": "loan, give temporarily", "antonyms": "borrow, keep", "forms": "lend, lends, lending, lent", "example": "Can you lend me your pen for a minute?" },
-    { "word": "lift", "meaning": "to move something to a higher position", "japaneseMeaning": "持ち上げる", "synonyms": "raise, pick up", "antonyms": "lower, drop", "forms": "lift, lifts, lifting, lifted", "example": "Do not lift the heavy box alone." }
+    {
+      "word": "convince",
+      "meaning": "to make someone believe or agree with you",
+      "japaneseMeaning": "納得させる",
+      "synonyms": "persuade, satisfy",
+      "antonyms": "doubt, discourage",
+      "forms": "convince, convinces, convincing, convinced",
+      "example": "The facts helped convince me to change my plan."
+    },
+    {
+      "word": "complete",
+      "meaning": "to finish something",
+      "japaneseMeaning": "完了する",
+      "synonyms": "finish, accomplish",
+      "antonyms": "start, neglect",
+      "forms": "complete, completes, completing, completed",
+      "example": "She completed the assignment on time."
+    },
+    {
+      "word": "imagine",
+      "meaning": "to form a mental picture of something not present",
+      "japaneseMeaning": "想像する",
+      "synonyms": "envision, picture",
+      "antonyms": "forget, ignore",
+      "forms": "imagine, imagines, imagining, imagined",
+      "example": "Imagine living by the sea."
+    },
+    {
+      "word": "receive",
+      "meaning": "to be given or presented with something",
+      "japaneseMeaning": "受け取る",
+      "synonyms": "accept, obtain",
+      "antonyms": "give, send",
+      "forms": "receive, receives, receiving, received",
+      "example": "I received a parcel today."
+    },
+    {
+      "word": "anticipate",
+      "meaning": "to expect something to happen and prepare for it",
+      "japaneseMeaning": "予想する、期待する",
+      "synonyms": "expect, predict",
+      "antonyms": "doubt, ignore",
+      "forms": "anticipate, anticipates, anticipating, anticipated",
+      "example": "We anticipate more visitors during the festival."
+    },
+    {
+      "word": "defeat",
+      "meaning": "to win against someone in a game, contest, or argument",
+      "japaneseMeaning": "打ち負かす",
+      "synonyms": "beat, overcome",
+      "antonyms": "lose, surrender",
+      "forms": "defeat, defeats, defeating, defeated",
+      "example": "Our team defeated last year's champions."
+    },
+    {
+      "word": "prove",
+      "meaning": "to show that something is true",
+      "japaneseMeaning": "証明する",
+      "synonyms": "show, confirm",
+      "antonyms": "disprove, deny",
+      "forms": "prove, proves, proving, proved",
+      "example": "The data may prove that the new method works."
+    },
+    {
+      "word": "resist",
+      "meaning": "to oppose or withstand",
+      "japaneseMeaning": "抵抗する",
+      "synonyms": "oppose, refuse",
+      "antonyms": "accept, give in",
+      "forms": "resist, resists, resisting, resisted",
+      "example": "She resisted peer pressure."
+    },
+    {
+      "word": "tackle",
+      "meaning": "to try to solve a problem",
+      "japaneseMeaning": "取り組む",
+      "synonyms": "address, confront",
+      "antonyms": "ignore, avoid",
+      "forms": "tackle, tackles, tackling, tackled",
+      "example": "He tackled the project efficiently."
+    },
+    {
+      "word": "stimulate",
+      "meaning": "to encourage activity",
+      "japaneseMeaning": "刺激する",
+      "synonyms": "encourage, excite",
+      "antonyms": "discourage, slow",
+      "forms": "stimulate, stimulates, stimulating, stimulated",
+      "example": "The teacher used photos to stimulate interest in history."
+    }
   ]
 }

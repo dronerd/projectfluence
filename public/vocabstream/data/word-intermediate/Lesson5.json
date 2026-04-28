@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-5",
   "title": "Lesson 5",
-  "paragraph": "For our science project, we will mention the weather, confirm each number, and recommend a simple method. The rules require us to produce one chart and replace any broken bottles. Hot days may affect the samples, so we will separate clean water from dirty water, increase the number of checks, and treat the samples carefully.",
   "words": [
-    { "word": "mention", "meaning": "to say or write something briefly", "japaneseMeaning": "言及する、述べる", "synonyms": "refer to, note", "antonyms": "ignore, omit", "forms": "mention, mentions, mentioning, mentioned", "example": "Please mention your arrival time in the message." },
-    { "word": "confirm", "meaning": "to check or state that something is true or correct", "japaneseMeaning": "確認する", "synonyms": "check, verify", "antonyms": "deny, question", "forms": "confirm, confirms, confirming, confirmed, confirmation", "example": "Please confirm your email address before you log in." },
-    { "word": "recommend", "meaning": "to say that something is good or useful", "japaneseMeaning": "勧める、推薦する", "synonyms": "suggest, advise", "antonyms": "warn against, discourage", "forms": "recommend, recommends, recommending, recommended, recommendation", "example": "I recommend this app for learning new words." },
-    { "word": "require", "meaning": "to need something or make something necessary", "japaneseMeaning": "必要とする、要求する", "synonyms": "need, demand", "antonyms": "allow, remove", "forms": "require, requires, requiring, required, requirement", "example": "This recipe will require two eggs and a cup of milk." },
-    { "word": "produce", "meaning": "to make, grow, or create something", "japaneseMeaning": "作り出す、生産する", "synonyms": "make, create", "antonyms": "destroy, consume", "forms": "produce, produces, producing, produced, production", "example": "The farm can produce fresh tomatoes all summer." },
-    { "word": "replace", "meaning": "to put something new in the place of something old or broken", "japaneseMeaning": "取り替える、置き換える", "synonyms": "change, exchange", "antonyms": "keep, leave", "forms": "replace, replaces, replacing, replaced, replacement", "example": "We need to replace the broken light in the kitchen." },
-    { "word": "affect", "meaning": "to change or influence someone or something", "japaneseMeaning": "影響する", "synonyms": "influence, change", "antonyms": "protect, ignore", "forms": "affect, affects, affecting, affected", "example": "Lack of sleep can affect your memory." },
-    { "word": "increase", "meaning": "to become larger in number, amount, or degree", "japaneseMeaning": "増える、増やす", "synonyms": "grow, rise", "antonyms": "decrease, reduce", "forms": "increase, increases, increasing, increased", "example": "The shop will increase the price next month." },
-    { "word": "treat", "meaning": "to deal with someone or something in a certain way", "japaneseMeaning": "扱う、処置する", "synonyms": "handle, deal with", "antonyms": "ignore, mistreat", "forms": "treat, treats, treating, treated, treatment", "example": "Please treat the glass boxes with care." },
-    { "word": "separate", "meaning": "to keep people or things apart from each other", "japaneseMeaning": "分ける、離す", "synonyms": "divide, split", "antonyms": "join, mix", "forms": "separate, separates, separating, separated, separation", "example": "We separate paper from plastic before recycling." }
+    {
+      "word": "mention",
+      "meaning": "to say or write something briefly",
+      "japaneseMeaning": "言及する、述べる",
+      "synonyms": "refer to, note",
+      "antonyms": "ignore, omit",
+      "forms": "mention, mentions, mentioning, mentioned",
+      "example": "Please mention your arrival time in the message."
+    },
+    {
+      "word": "confirm",
+      "meaning": "to check or state that something is true or correct",
+      "japaneseMeaning": "確認する",
+      "synonyms": "check, verify",
+      "antonyms": "deny, question",
+      "forms": "confirm, confirms, confirming, confirmed, confirmation",
+      "example": "Please confirm your email address before you log in."
+    },
+    {
+      "word": "recommend",
+      "meaning": "to say that something is good or useful",
+      "japaneseMeaning": "勧める、推薦する",
+      "synonyms": "suggest, advise",
+      "antonyms": "warn against, discourage",
+      "forms": "recommend, recommends, recommending, recommended, recommendation",
+      "example": "I recommend this app for learning new words."
+    },
+    {
+      "word": "require",
+      "meaning": "to need something or make something necessary",
+      "japaneseMeaning": "必要とする、要求する",
+      "synonyms": "need, demand",
+      "antonyms": "allow, remove",
+      "forms": "require, requires, requiring, required, requirement",
+      "example": "This recipe will require two eggs and a cup of milk."
+    },
+    {
+      "word": "produce",
+      "meaning": "to make, grow, or create something",
+      "japaneseMeaning": "作り出す、生産する",
+      "synonyms": "make, create",
+      "antonyms": "destroy, consume",
+      "forms": "produce, produces, producing, produced, production",
+      "example": "The farm can produce fresh tomatoes all summer."
+    },
+    {
+      "word": "replace",
+      "meaning": "to put something new in the place of something old or broken",
+      "japaneseMeaning": "取り替える、置き換える",
+      "synonyms": "change, exchange",
+      "antonyms": "keep, leave",
+      "forms": "replace, replaces, replacing, replaced, replacement",
+      "example": "We need to replace the broken light in the kitchen."
+    },
+    {
+      "word": "affect",
+      "meaning": "to change or influence someone or something",
+      "japaneseMeaning": "影響する",
+      "synonyms": "influence, change",
+      "antonyms": "protect, ignore",
+      "forms": "affect, affects, affecting, affected",
+      "example": "Lack of sleep can affect your memory."
+    },
+    {
+      "word": "increase",
+      "meaning": "to become larger in number, amount, or degree",
+      "japaneseMeaning": "増える、増やす",
+      "synonyms": "grow, rise",
+      "antonyms": "decrease, reduce",
+      "forms": "increase, increases, increasing, increased",
+      "example": "The shop will increase the price next month."
+    },
+    {
+      "word": "treat",
+      "meaning": "to deal with someone or something in a certain way",
+      "japaneseMeaning": "扱う、処置する",
+      "synonyms": "handle, deal with",
+      "antonyms": "ignore, mistreat",
+      "forms": "treat, treats, treating, treated, treatment",
+      "example": "Please treat the glass boxes with care."
+    },
+    {
+      "word": "separate",
+      "meaning": "to keep people or things apart from each other",
+      "japaneseMeaning": "分ける、離す",
+      "synonyms": "divide, split",
+      "antonyms": "join, mix",
+      "forms": "separate, separates, separating, separated, separation",
+      "example": "We separate paper from plastic before recycling."
+    }
   ]
 }

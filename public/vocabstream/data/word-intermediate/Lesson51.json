@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-51",
   "title": "Lesson 51",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "narrow", "meaning": "not wide", "japaneseMeaning": "狭い、細い", "synonyms": "thin, tight", "antonyms": "wide, broad", "forms": "narrow, narrower, narrowest, narrowly", "example": "The narrow street is hard for buses to use." },
-    { "word": "nervous", "meaning": "worried or afraid about something", "japaneseMeaning": "緊張した、不安な", "synonyms": "anxious, worried", "antonyms": "calm, relaxed", "forms": "nervous, nervously, nervousness", "example": "I feel nervous before a speech." },
-    { "word": "open", "meaning": "not closed or ready for people to enter", "japaneseMeaning": "開いている、開放的な", "synonyms": "unclosed, available", "antonyms": "closed, shut", "forms": "open, openly, openness", "example": "The shop is open until nine." },
-    { "word": "rich", "meaning": "having a lot of money or full of something good", "japaneseMeaning": "裕福な、豊かな", "synonyms": "wealthy, full", "antonyms": "poor, lacking", "forms": "rich, richer, richest", "example": "The rich soil is good for farming." },
-    { "word": "warm", "meaning": "a little hot in a pleasant way", "japaneseMeaning": "暖かい", "synonyms": "mild, heated", "antonyms": "cold, cool", "forms": "warm, warmer, warmest, warmth", "example": "This warm soup is perfect for winter." },
-    { "word": "wide", "meaning": "having a large distance from side to side", "japaneseMeaning": "広い、幅広い", "synonyms": "broad, large", "antonyms": "narrow, thin", "forms": "wide, wider, widest, widely", "example": "The wide road has space for bicycles." },
-    { "word": "weekly", "meaning": "happening once a week", "japaneseMeaning": "毎週の", "synonyms": "every week, regular", "antonyms": "daily, monthly", "forms": "weekly", "example": "We have a weekly meeting on Monday." },
-    { "word": "square", "meaning": "having four equal sides and four corners", "japaneseMeaning": "正方形の、四角い", "synonyms": "box-shaped, even", "antonyms": "round, curved", "forms": "square, squares", "example": "Cut the paper into a square shape." },
-    { "word": "sure", "meaning": "certain that something is true", "japaneseMeaning": "確かな、自信がある", "synonyms": "certain, confident", "antonyms": "unsure, doubtful", "forms": "sure, surely", "example": "Are you sure this is the right train?" },
-    { "word": "late", "meaning": "after the expected or usual time", "japaneseMeaning": "遅い、遅れた", "synonyms": "delayed, overdue", "antonyms": "early, on time", "forms": "late, later, latest", "example": "The bus was late because of traffic." }
+    {
+      "word": "appear",
+      "meaning": "to become visible or to seem a certain way",
+      "japaneseMeaning": "現れる／〜のように見える",
+      "synonyms": "emerge, seem",
+      "antonyms": "disappear, vanish",
+      "forms": "appear, appears, appearing, appeared",
+      "example": "He appeared tired after the trip."
+    },
+    {
+      "word": "deliver",
+      "meaning": "to bring and hand over something to a recipient",
+      "japaneseMeaning": "配達する／届ける",
+      "synonyms": "dispatch, bring",
+      "antonyms": "receive, take",
+      "forms": "deliver, delivers, delivering, delivered",
+      "example": "The courier delivered the package."
+    },
+    {
+      "word": "list",
+      "meaning": "to write things one below another",
+      "japaneseMeaning": "リスト、一覧",
+      "synonyms": "record, menu",
+      "antonyms": "mess, pile",
+      "forms": "list, lists, listing, listed",
+      "example": "I made a shopping list before going to the store."
+    },
+    {
+      "word": "review",
+      "meaning": "to study material again to remember it",
+      "japaneseMeaning": "復習する、見直す",
+      "synonyms": "revise, go over",
+      "antonyms": "ignore, forget",
+      "forms": "review, reviews, reviewing, reviewed",
+      "example": "Review your notes before the test."
+    },
+    {
+      "word": "assist",
+      "meaning": "to give support or help",
+      "japaneseMeaning": "手伝う／援助する",
+      "synonyms": "help, aid",
+      "antonyms": "hinder, obstruct",
+      "forms": "assist, assists, assisting, assisted",
+      "example": "Can you assist me with this form?"
+    },
+    {
+      "word": "gain",
+      "meaning": "to get more of something",
+      "japaneseMeaning": "得る、増す",
+      "synonyms": "get, earn",
+      "antonyms": "lose, reduce",
+      "forms": "gain, gains, gaining, gained",
+      "example": "She gained confidence after the speech contest."
+    },
+    {
+      "word": "withstand",
+      "meaning": "to remain strong against pressure, damage, or difficulty",
+      "japaneseMeaning": "耐える、持ちこたえる",
+      "synonyms": "resist, endure",
+      "antonyms": "collapse, fail",
+      "forms": "withstand, withstands, withstanding, withstood, withstood",
+      "example": "The old bridge can withstand strong winds."
+    },
+    {
+      "word": "observe",
+      "meaning": "to notice carefully",
+      "japaneseMeaning": "観察する",
+      "synonyms": "watch, monitor",
+      "antonyms": "ignore, neglect",
+      "forms": "observe, observes, observing, observed",
+      "example": "She observed the behavior of the birds."
+    },
+    {
+      "word": "coordinate",
+      "meaning": "to organize people or things so they work well together",
+      "japaneseMeaning": "調整する",
+      "synonyms": "organize, align",
+      "antonyms": "disorder, confuse",
+      "forms": "coordinate, coordinates, coordinating, coordinated",
+      "example": "She coordinated the event efficiently."
+    },
+    {
+      "word": "intend",
+      "meaning": "to plan or want to do something",
+      "japaneseMeaning": "意図する、〜するつもりである",
+      "synonyms": "plan, mean",
+      "antonyms": "avoid, cancel",
+      "forms": "intend, intends, intending, intended",
+      "example": "I intend to apply for the program next month."
+    }
   ]
 }

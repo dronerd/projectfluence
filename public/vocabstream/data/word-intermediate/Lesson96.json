@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-96",
   "title": "Lesson 96",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "fruit",
-      "meaning": "sweet food that grows on trees or plants",
-      "japaneseMeaning": "果物",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "fruit, fruits",
-      "example": "Fruit is good for breakfast."
+      "word": "collect",
+      "meaning": "to bring things together as a group",
+      "japaneseMeaning": "集める",
+      "synonyms": "gather, assemble",
+      "antonyms": "scatter, disperse",
+      "forms": "collect, collects, collecting, collected",
+      "example": "She collects stamps as a hobby."
     },
     {
-      "word": "gift",
-      "meaning": "something given to someone",
-      "japaneseMeaning": "贈り物",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "gift, gifts",
-      "example": "This gift is for my mother."
+      "word": "focus",
+      "meaning": "to give your attention to one thing",
+      "japaneseMeaning": "集中する、集中力",
+      "synonyms": "concentration, attention",
+      "antonyms": "distraction",
+      "forms": "focus, focuses, focusing, focused",
+      "example": "Find a quiet place to focus."
     },
     {
-      "word": "girl",
-      "meaning": "a female child or young person",
-      "japaneseMeaning": "女の子",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "girl, girls",
-      "example": "The girl carried a school bag."
+      "word": "provide",
+      "meaning": "to supply or make available",
+      "japaneseMeaning": "提供する",
+      "synonyms": "supply, furnish",
+      "antonyms": "withhold, deprive",
+      "forms": "provide, provides, providing, provided",
+      "example": "They provided food for the refugees."
     },
     {
-      "word": "grass",
-      "meaning": "short green plants covering the ground",
-      "japaneseMeaning": "草",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "grass, grasss",
-      "example": "The grass was wet with rain."
+      "word": "trust",
+      "meaning": "to believe someone is good and honest",
+      "japaneseMeaning": "信頼",
+      "synonyms": "confidence, faith",
+      "antonyms": "distrust, suspicion",
+      "forms": "trust, trusts, trusting, trusted",
+      "example": "Trust is essential in relationships."
     },
     {
-      "word": "hair",
-      "meaning": "the thin strands growing on the head",
-      "japaneseMeaning": "髪",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "hair, hairs",
-      "example": "Her hair is long and black."
+      "word": "disappear",
+      "meaning": "to become impossible to see or find",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "disappear, disappears, disappearing, disappeared",
+      "example": "We need to disappear the plan before Friday."
     },
     {
-      "word": "hand",
-      "meaning": "the body part at the end of the arm",
-      "japaneseMeaning": "手",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "hand, hands",
-      "example": "Raise your hand to answer."
+      "word": "point",
+      "meaning": "to point",
+      "japaneseMeaning": "指さす",
+      "synonyms": "do, act",
+      "antonyms": "whole, area",
+      "forms": "point, points, pointing, pointed",
+      "example": "I point every day."
     },
     {
-      "word": "head",
-      "meaning": "the top part of the body",
-      "japaneseMeaning": "頭",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "head, heads",
-      "example": "He hit his head on the door."
+      "word": "wish",
+      "meaning": "to hope for something that is not guaranteed",
+      "japaneseMeaning": "願う",
+      "synonyms": "desire, long for",
+      "antonyms": "dread, reject",
+      "forms": "wish, wishes, wishing, wished",
+      "example": "I wish you good luck."
     },
     {
-      "word": "hill",
-      "meaning": "a raised area of land smaller than a mountain",
-      "japaneseMeaning": "丘",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "hill, hills",
-      "example": "We walked up the hill."
+      "word": "initiate",
+      "meaning": "to start something",
+      "japaneseMeaning": "開始する",
+      "synonyms": "launch, commence",
+      "antonyms": "stop, end",
+      "forms": "initiate, initiates, initiating, initiated",
+      "example": "They will initiate the project next week."
     },
     {
-      "word": "horse",
-      "meaning": "a large animal people can ride",
-      "japaneseMeaning": "馬",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "horse, horses",
-      "example": "The horse ran across the field."
+      "word": "escalate",
+      "meaning": "to increase or intensify",
+      "japaneseMeaning": "エスカレートする",
+      "synonyms": "intensify, rise",
+      "antonyms": "decrease, lessen",
+      "forms": "escalate, escalates, escalating, escalated",
+      "example": "Tensions escalated between the two countries."
     },
     {
-      "word": "hour",
-      "meaning": "sixty minutes",
-      "japaneseMeaning": "時間",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "hour, hours",
-      "example": "The trip took one hour."
+      "word": "tend",
+      "meaning": "to usually do or be something",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "tend, tends, tending, tended",
+      "example": "We need to tend the plan before Friday."
     }
   ]
 }

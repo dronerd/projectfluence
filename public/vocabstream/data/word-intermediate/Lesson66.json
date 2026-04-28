@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-66",
   "title": "Lesson 66",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "account",
-      "meaning": "a record for money or online access",
-      "japaneseMeaning": "口座、説明",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "account, accounts",
-      "example": "I opened a bank account yesterday."
+      "word": "behave",
+      "meaning": "to act in a good or bad way",
+      "japaneseMeaning": "行動する／振る舞う",
+      "synonyms": "act, conduct oneself",
+      "antonyms": "misbehave, act up",
+      "forms": "behave, behaves, behaving, behaved",
+      "example": "Please behave politely."
     },
     {
-      "word": "appointment",
-      "meaning": "an arranged meeting or visit",
-      "japaneseMeaning": "予約、約束",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "appointment, appointments",
-      "example": "My dentist appointment is at three."
+      "word": "discover",
+      "meaning": "to find or learn something for the first time",
+      "japaneseMeaning": "発見する",
+      "synonyms": "find, learn",
+      "antonyms": "miss, lose",
+      "forms": "discover, discovers, discovering, discovered",
+      "example": "Scientists discover new information from the data."
     },
     {
-      "word": "application",
-      "meaning": "a formal request for a job, school, or service",
-      "japaneseMeaning": "申請、応募",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "application, applications",
-      "example": "She sent her application before the deadline."
+      "word": "offer",
+      "meaning": "to present or propose something for acceptance",
+      "japaneseMeaning": "申し出る／提供する",
+      "synonyms": "propose, present",
+      "antonyms": "withdraw, refuse",
+      "forms": "offer, offers, offering, offered",
+      "example": "They offered help immediately."
     },
     {
-      "word": "arrangement",
-      "meaning": "a plan made before something happens",
-      "japaneseMeaning": "手配、取り決め",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "arrangement, arrangements",
-      "example": "The travel arrangement includes a hotel."
+      "word": "distribute",
+      "meaning": "to give things to several people or places",
+      "japaneseMeaning": "配る、分配する",
+      "synonyms": "give out, share",
+      "antonyms": "collect, keep",
+      "forms": "distribute, distributes, distributing, distributed",
+      "example": "The teacher distributed the worksheets before class."
     },
     {
-      "word": "budget",
-      "meaning": "a plan for how money will be spent",
-      "japaneseMeaning": "予算",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "budget, budgets",
-      "example": "Our monthly budget is small."
+      "word": "calculate",
+      "meaning": "to find an answer using numbers",
+      "japaneseMeaning": "計算する／算出する",
+      "synonyms": "work out, count",
+      "antonyms": "guess, estimate",
+      "forms": "calculate, calculates, calculating, calculated",
+      "example": "Calculate the total cost, please."
     },
     {
-      "word": "contract",
-      "meaning": "a written legal agreement",
-      "japaneseMeaning": "契約",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "contract, contracts",
-      "example": "Read the contract before you sign it."
+      "word": "investigate",
+      "meaning": "to try to find out the truth about something",
+      "japaneseMeaning": "調査する、捜査する",
+      "synonyms": "examine, research",
+      "antonyms": "ignore, overlook",
+      "forms": "investigate, investigates, investigating, investigated",
+      "example": "The school will investigate the cause of the accident."
     },
     {
-      "word": "deadline",
-      "meaning": "the latest time when work must be finished",
-      "japaneseMeaning": "締め切り",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "deadline, deadlines",
-      "example": "The deadline for the essay is Friday."
+      "word": "succeed",
+      "meaning": "to achieve the desired result",
+      "japaneseMeaning": "成功する",
+      "synonyms": "do well, achieve",
+      "antonyms": "fail, lose",
+      "forms": "succeed, succeeds, succeeding, succeeded",
+      "example": "She succeeded in the competition."
     },
     {
-      "word": "income",
-      "meaning": "money that a person or business receives",
-      "japaneseMeaning": "収入",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "income, incomes",
-      "example": "His income comes from two jobs."
+      "word": "confront",
+      "meaning": "to face boldly",
+      "japaneseMeaning": "立ち向かう",
+      "synonyms": "face, challenge",
+      "antonyms": "avoid, evade",
+      "forms": "confront, confronts, confronting, confronted",
+      "example": "He confronted his fears."
     },
     {
-      "word": "invoice",
-      "meaning": "a document that asks for payment",
-      "japaneseMeaning": "請求書",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "invoice, invoices",
-      "example": "The company sent an invoice by email."
+      "word": "negotiate",
+      "meaning": "to discuss to reach agreement",
+      "japaneseMeaning": "交渉する",
+      "synonyms": "bargain, mediate",
+      "antonyms": "ignore, refuse",
+      "forms": "negotiate, negotiates, negotiating, negotiated",
+      "example": "They negotiated a fair contract."
     },
     {
-      "word": "receipt",
-      "meaning": "a paper or message proving payment",
-      "japaneseMeaning": "領収書、レシート",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "receipt, receipts",
-      "example": "Keep the receipt after you buy the camera."
+      "word": "occur",
+      "meaning": "to happen",
+      "japaneseMeaning": "起こる、発生する",
+      "synonyms": "happen, take place",
+      "antonyms": "stop, disappear",
+      "forms": "occur, occurs, occurring, occurred",
+      "example": "Small errors can occur when people work too quickly."
     }
   ]
 }

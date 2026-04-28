@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-19",
   "title": "Lesson 19",
-  "paragraph": "In the museum, an adult author gave a talk about family history. She showed a balance used in old shops, a wooden board, and a code from a travel campaign. Her story covered birth records, blood tests, and the body. She also explained how a small business grew from a simple base.",
   "words": [
-    { "word": "adult", "meaning": "a fully grown person", "japaneseMeaning": "大人、成人", "synonyms": "grown-up, mature person", "antonyms": "child, minor", "forms": "adult, adults", "example": "Each child must come with an adult." },
-    { "word": "author", "meaning": "a person who writes a book, story, or article", "japaneseMeaning": "著者、作者", "synonyms": "writer, novelist", "antonyms": "reader, audience", "forms": "author, authors", "example": "The author signed books after the talk." },
-    { "word": "balance", "meaning": "a state in which different parts are equal or steady", "japaneseMeaning": "バランス、均衡", "synonyms": "stability, equality", "antonyms": "imbalance, disorder", "forms": "balance, balances", "example": "Good balance helps you ride a bicycle safely." },
-    { "word": "base", "meaning": "the bottom part or main place for an activity", "japaneseMeaning": "土台、拠点", "synonyms": "foundation, center", "antonyms": "top, branch", "forms": "base, bases", "example": "The lamp has a heavy base, so it does not fall." },
-    { "word": "birth", "meaning": "the time when a baby is born", "japaneseMeaning": "誕生、出生", "synonyms": "delivery, beginning", "antonyms": "death, end", "forms": "birth, births", "example": "The form asks for your date of birth." },
-    { "word": "blood", "meaning": "the red liquid that moves through the body", "japaneseMeaning": "血液、血", "synonyms": "red fluid, life fluid", "antonyms": "water, air", "forms": "blood", "example": "The doctor checked my blood after the test." },
-    { "word": "board", "meaning": "a flat piece of wood or a group that manages something", "japaneseMeaning": "板、委員会", "synonyms": "plank, committee", "antonyms": "hole, individual", "forms": "board, boards", "example": "The teacher wrote the answer on the board." },
-    { "word": "body", "meaning": "the physical part of a person or animal", "japaneseMeaning": "体、身体", "synonyms": "figure, form", "antonyms": "mind, spirit", "forms": "body, bodies", "example": "Exercise keeps your body strong." },
-    { "word": "business", "meaning": "work that involves buying or selling goods or services", "japaneseMeaning": "事業、商売", "synonyms": "company, trade", "antonyms": "hobby, leisure", "forms": "business, businesses", "example": "Her family runs a small business near the station." },
-    { "word": "campaign", "meaning": "a planned set of actions to reach a goal", "japaneseMeaning": "キャンペーン、運動", "synonyms": "movement, drive", "antonyms": "inaction, silence", "forms": "campaign, campaigns", "example": "The city started a campaign to reduce plastic bags." }
+    {
+      "word": "resident",
+      "meaning": "a person who lives in a particular place",
+      "japaneseMeaning": "住民、居住者",
+      "synonyms": "local, inhabitant",
+      "antonyms": "visitor, tourist",
+      "forms": "resident, residents",
+      "example": "Residents complained about the noise near the station."
+    },
+    {
+      "word": "author",
+      "meaning": "a person who writes a book, story, or article",
+      "japaneseMeaning": "著者、作者",
+      "synonyms": "writer, novelist",
+      "antonyms": "reader, audience",
+      "forms": "author, authors",
+      "example": "The author signed books after the talk."
+    },
+    {
+      "word": "balance",
+      "meaning": "a state in which different parts are equal or steady",
+      "japaneseMeaning": "バランス、均衡",
+      "synonyms": "stability, equality",
+      "antonyms": "imbalance, disorder",
+      "forms": "balance, balances",
+      "example": "Good balance helps you ride a bicycle safely."
+    },
+    {
+      "word": "base",
+      "meaning": "the bottom part or main place for an activity",
+      "japaneseMeaning": "土台、拠点",
+      "synonyms": "foundation, center",
+      "antonyms": "top, branch",
+      "forms": "base, bases",
+      "example": "The lamp has a heavy base, so it does not fall."
+    },
+    {
+      "word": "origin",
+      "meaning": "the place or situation where something begins",
+      "japaneseMeaning": "起源、由来",
+      "synonyms": "source, beginning",
+      "antonyms": "result, end",
+      "forms": "origin, origins",
+      "example": "The teacher explained the origin of the festival."
+    },
+    {
+      "word": "symptom",
+      "meaning": "a change in your body that shows you may be ill",
+      "japaneseMeaning": "症状",
+      "synonyms": "sign, problem",
+      "antonyms": "health, recovery",
+      "forms": "symptom, symptoms",
+      "example": "A high fever can be a symptom of the flu."
+    },
+    {
+      "word": "board",
+      "meaning": "a flat piece of wood or a group that manages something",
+      "japaneseMeaning": "板、委員会",
+      "synonyms": "plank, committee",
+      "antonyms": "hole, individual",
+      "forms": "board, boards",
+      "example": "The teacher wrote the answer on the board."
+    },
+    {
+      "word": "figure",
+      "meaning": "a number, amount, or the shape of a person",
+      "japaneseMeaning": "数字、姿",
+      "synonyms": "number, shape",
+      "antonyms": "guess, word",
+      "forms": "figure, figures",
+      "example": "The report includes figures for sales in each city."
+    },
+    {
+      "word": "business",
+      "meaning": "work that involves buying or selling goods or services",
+      "japaneseMeaning": "事業、商売",
+      "synonyms": "company, trade",
+      "antonyms": "hobby, leisure",
+      "forms": "business, businesses",
+      "example": "Her family runs a small business near the station."
+    },
+    {
+      "word": "campaign",
+      "meaning": "a planned set of actions to reach a goal",
+      "japaneseMeaning": "キャンペーン、運動",
+      "synonyms": "movement, drive",
+      "antonyms": "inaction, silence",
+      "forms": "campaign, campaigns",
+      "example": "The city started a campaign to reduce plastic bags."
+    }
   ]
 }

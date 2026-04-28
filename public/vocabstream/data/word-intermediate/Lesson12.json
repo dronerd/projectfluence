@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-12",
   "title": "Lesson 12",
-  "paragraph": "The film crew worked under pressure during a long shooting period. One scene showed a bank loan, while another section explained stress at work. The director offered a reward for the best idea, used a series of short interviews, and followed the latest trend in local news. A careful reference helped the team avoid mistakes.",
   "words": [
-    { "word": "loan", "meaning": "money that you borrow and must pay back", "japaneseMeaning": "ローン、貸付金", "synonyms": "borrowed money, credit", "antonyms": "gift, repayment", "forms": "loan, loans", "example": "They used a bank loan to open the cafe." },
-    { "word": "period", "meaning": "a length of time", "japaneseMeaning": "期間、時期", "synonyms": "time, span", "antonyms": "moment, instant", "forms": "period, periods", "example": "The rainy period usually lasts for several weeks." },
-    { "word": "pressure", "meaning": "worry or difficulty caused by too many demands", "japaneseMeaning": "圧力、プレッシャー", "synonyms": "stress, strain", "antonyms": "relief, ease", "forms": "pressure, pressures", "example": "He felt pressure before the final exam." },
-    { "word": "reward", "meaning": "something good received for work or good behavior", "japaneseMeaning": "報酬、ごほうび", "synonyms": "prize, payment", "antonyms": "punishment, penalty", "forms": "reward, rewards", "example": "The teacher gave a reward for perfect attendance." },
-    { "word": "scene", "meaning": "a part of a play, movie, or event", "japaneseMeaning": "場面、シーン", "synonyms": "part, setting", "antonyms": "whole, ending", "forms": "scene, scenes", "example": "My favorite scene is at the end of the movie." },
-    { "word": "section", "meaning": "one part of something larger", "japaneseMeaning": "部分、区分", "synonyms": "part, division", "antonyms": "whole, total", "forms": "section, sections", "example": "Read the first section of the article for homework." },
-    { "word": "series", "meaning": "several things of the same kind that come one after another", "japaneseMeaning": "連続、シリーズ", "synonyms": "sequence, set", "antonyms": "single item", "forms": "series", "example": "The library has a series of books about science." },
-    { "word": "stress", "meaning": "worry caused by difficult situations", "japaneseMeaning": "ストレス、緊張", "synonyms": "pressure, worry", "antonyms": "relaxation, calm", "forms": "stress, stresses", "example": "Exercise helps me reduce stress after work." },
-    { "word": "trend", "meaning": "a general change or popular style", "japaneseMeaning": "傾向、流行", "synonyms": "fashion, direction", "antonyms": "tradition, habit", "forms": "trend, trends", "example": "The trend toward online shopping is growing." },
-    { "word": "crew", "meaning": "a group of people who work together, especially on a ship, plane, or film", "japaneseMeaning": "乗組員、作業チーム", "synonyms": "team, staff", "antonyms": "individual, passenger", "forms": "crew, crews", "example": "The film crew arrived before sunrise." }
+    {
+      "word": "loan",
+      "meaning": "money that you borrow and must pay back",
+      "japaneseMeaning": "ローン、貸付金",
+      "synonyms": "borrowed money, credit",
+      "antonyms": "gift, repayment",
+      "forms": "loan, loans",
+      "example": "They used a bank loan to open the cafe."
+    },
+    {
+      "word": "period",
+      "meaning": "a length of time",
+      "japaneseMeaning": "期間、時期",
+      "synonyms": "time, span",
+      "antonyms": "moment, instant",
+      "forms": "period, periods",
+      "example": "The rainy period usually lasts for several weeks."
+    },
+    {
+      "word": "pressure",
+      "meaning": "worry or difficulty caused by too many demands",
+      "japaneseMeaning": "圧力、プレッシャー",
+      "synonyms": "stress, strain",
+      "antonyms": "relief, ease",
+      "forms": "pressure, pressures",
+      "example": "He felt pressure before the final exam."
+    },
+    {
+      "word": "reward",
+      "meaning": "something good received for work or good behavior",
+      "japaneseMeaning": "報酬、ごほうび",
+      "synonyms": "prize, payment",
+      "antonyms": "punishment, penalty",
+      "forms": "reward, rewards",
+      "example": "The teacher gave a reward for perfect attendance."
+    },
+    {
+      "word": "scene",
+      "meaning": "a part of a play, movie, or event",
+      "japaneseMeaning": "場面、シーン",
+      "synonyms": "part, setting",
+      "antonyms": "whole, ending",
+      "forms": "scene, scenes",
+      "example": "My favorite scene is at the end of the movie."
+    },
+    {
+      "word": "section",
+      "meaning": "one part of something larger",
+      "japaneseMeaning": "部分、区分",
+      "synonyms": "part, division",
+      "antonyms": "whole, total",
+      "forms": "section, sections",
+      "example": "Read the first section of the article for homework."
+    },
+    {
+      "word": "series",
+      "meaning": "several things of the same kind that come one after another",
+      "japaneseMeaning": "連続、シリーズ",
+      "synonyms": "sequence, set",
+      "antonyms": "single item",
+      "forms": "series",
+      "example": "The library has a series of books about science."
+    },
+    {
+      "word": "stress",
+      "meaning": "worry caused by difficult situations",
+      "japaneseMeaning": "ストレス、緊張",
+      "synonyms": "pressure, worry",
+      "antonyms": "relaxation, calm",
+      "forms": "stress, stresses",
+      "example": "Exercise helps me reduce stress after work."
+    },
+    {
+      "word": "trend",
+      "meaning": "a general change or popular style",
+      "japaneseMeaning": "傾向、流行",
+      "synonyms": "fashion, direction",
+      "antonyms": "tradition, habit",
+      "forms": "trend, trends",
+      "example": "The trend toward online shopping is growing."
+    },
+    {
+      "word": "crew",
+      "meaning": "a group of people who work together, especially on a ship, plane, or film",
+      "japaneseMeaning": "乗組員、作業チーム",
+      "synonyms": "team, staff",
+      "antonyms": "individual, passenger",
+      "forms": "crew, crews",
+      "example": "The film crew arrived before sunrise."
+    }
   ]
 }

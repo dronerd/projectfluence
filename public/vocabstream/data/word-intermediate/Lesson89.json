@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-89",
   "title": "Lesson 89",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "closed",
-      "meaning": "not open",
-      "japaneseMeaning": "閉まった",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "closed, closedly",
-      "example": "The closed shop had a sign on the door."
+      "word": "charity",
+      "meaning": "an organization that helps people in need",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "charity, charities",
+      "example": "The charity helped us understand the situation more clearly."
     },
     {
-      "word": "stale",
-      "meaning": "not fresh anymore",
-      "japaneseMeaning": "新鮮でない",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "stale, stalely",
-      "example": "The stale bread was hard."
+      "word": "employee",
+      "meaning": "a person who works for a company or person",
+      "japaneseMeaning": "従業員",
+      "synonyms": "worker, staff member",
+      "antonyms": "boss, customer",
+      "forms": "employee, employees",
+      "example": "Every employee must wear an ID card."
     },
     {
-      "word": "unsafe",
-      "meaning": "not safe",
-      "japaneseMeaning": "危険な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "unsafe, unsafely",
-      "example": "The broken bridge is unsafe."
+      "word": "image",
+      "meaning": "a picture or the idea people have of something",
+      "japaneseMeaning": "画像、印象",
+      "synonyms": "picture, photo",
+      "antonyms": "text, sound",
+      "forms": "image, images",
+      "example": "The image on the screen was too dark."
     },
     {
-      "word": "helpful",
-      "meaning": "giving useful help",
-      "japaneseMeaning": "役に立つ",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "helpful, helpfully",
-      "example": "The helpful guide answered our questions."
+      "word": "moment",
+      "meaning": "a very short time",
+      "japaneseMeaning": "瞬間、少しの間",
+      "synonyms": "second, instant",
+      "antonyms": "long time, hour",
+      "forms": "moment, moments",
+      "example": "Please wait a moment while I find the key."
     },
     {
-      "word": "careless",
-      "meaning": "not careful",
-      "japaneseMeaning": "不注意な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "careless, carelessly",
-      "example": "A careless driver caused the crash."
+      "word": "backup",
+      "meaning": "something kept ready to use if the first one fails",
+      "japaneseMeaning": "予備、バックアップ",
+      "synonyms": "reserve, spare",
+      "antonyms": "main item, original",
+      "forms": "backup, backups",
+      "example": "Keep a backup of the file on another drive."
     },
     {
-      "word": "hopeful",
-      "meaning": "feeling that good things may happen",
-      "japaneseMeaning": "希望を持った",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "hopeful, hopefully",
-      "example": "She felt hopeful after the interview."
+      "word": "ticket",
+      "meaning": "a small paper or message that lets you enter or ride",
+      "japaneseMeaning": "切符、チケット",
+      "synonyms": "pass, entry card",
+      "antonyms": "bill, notice",
+      "forms": "ticket, tickets",
+      "example": "I bought a train ticket at the station."
     },
     {
-      "word": "hopeless",
-      "meaning": "having no hope",
-      "japaneseMeaning": "絶望的な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "hopeless, hopelessly",
-      "example": "The lost phone seemed hopeless to find."
+      "word": "coach",
+      "meaning": "a person who trains a team or person",
+      "japaneseMeaning": "コーチ、指導者",
+      "synonyms": "trainer, teacher",
+      "antonyms": "player, student",
+      "forms": "coach, coaches",
+      "example": "The coach told us to practice every day."
     },
     {
-      "word": "dishonest",
-      "meaning": "not honest",
-      "japaneseMeaning": "不正直な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "dishonest, dishonestly",
-      "example": "The dishonest seller lied about the price."
+      "word": "excuse",
+      "meaning": "a reason someone gives for doing or not doing something",
+      "japaneseMeaning": "言い訳、理由",
+      "synonyms": "reason, explanation",
+      "antonyms": "truth, blame",
+      "forms": "excuse, excuses",
+      "example": "His excuse for being late sounded weak."
     },
     {
-      "word": "real",
-      "meaning": "true or actually existing",
-      "japaneseMeaning": "本物の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "real, really",
-      "example": "This is a real diamond."
+      "word": "exam",
+      "meaning": "a test at school or work",
+      "japaneseMeaning": "試験",
+      "synonyms": "test, examination",
+      "antonyms": "lesson, practice",
+      "forms": "exam, exams",
+      "example": "The final exam starts at nine."
     },
     {
-      "word": "fake",
-      "meaning": "not real",
-      "japaneseMeaning": "偽物の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "fake, fakely",
-      "example": "He bought a fake ticket by mistake."
+      "word": "reply",
+      "meaning": "to answer in words or writing",
+      "japaneseMeaning": "返信する／答える",
+      "synonyms": "respond, answer",
+      "antonyms": "ignore, silence",
+      "forms": "reply, replies",
+      "example": "Please reply to the email before noon."
     }
   ]
 }

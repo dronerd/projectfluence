@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-74",
   "title": "Lesson 74",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "allergic",
-      "meaning": "having a bad reaction to something",
-      "japaneseMeaning": "アレルギーの",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "allergic, allergicly",
-      "example": "I am allergic to cats."
+      "word": "career",
+      "meaning": "the work someone does for many years",
+      "japaneseMeaning": "職業、経歴",
+      "synonyms": "job, profession",
+      "antonyms": "hobby, rest",
+      "forms": "career, careers",
+      "example": "She wants a career in medicine."
     },
     {
-      "word": "dizzy",
-      "meaning": "feeling that you may fall",
-      "japaneseMeaning": "めまいがする",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "dizzy, dizzyly",
-      "example": "She felt dizzy after standing up."
+      "word": "difference",
+      "meaning": "the way two things are not the same",
+      "japaneseMeaning": "違い",
+      "synonyms": "change, contrast",
+      "antonyms": "similarity, sameness",
+      "forms": "difference, differences",
+      "example": "What is the difference between these two plans?"
     },
     {
-      "word": "feverish",
-      "meaning": "feeling hot because of illness",
-      "japaneseMeaning": "熱っぽい",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "feverish, feverishly",
-      "example": "The feverish child stayed in bed."
+      "word": "growth",
+      "meaning": "an increase in size, number, or amount",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "growth, growths",
+      "example": "The growth helped us understand the situation more clearly."
     },
     {
-      "word": "injured",
-      "meaning": "hurt or damaged",
-      "japaneseMeaning": "けがをした",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "injured, injuredly",
-      "example": "The injured player left the field."
+      "word": "material",
+      "meaning": "what something is made from or used for study",
+      "japaneseMeaning": "材料、資料",
+      "synonyms": "cloth, substance",
+      "antonyms": "product, result",
+      "forms": "material, materials",
+      "example": "This jacket uses a warm material for winter."
     },
     {
-      "word": "unwell",
-      "meaning": "not feeling healthy",
-      "japaneseMeaning": "具合が悪い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "unwell, unwellly",
-      "example": "She felt unwell after lunch."
+      "word": "reaction",
+      "meaning": "what you do, say, or feel because of something",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "reaction, reactions",
+      "example": "The reaction helped us understand the situation more clearly."
     },
     {
-      "word": "painful",
-      "meaning": "causing pain",
-      "japaneseMeaning": "痛い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "painful, painfully",
-      "example": "The painful cut made writing hard."
+      "word": "system",
+      "meaning": "a set of parts that work together",
+      "japaneseMeaning": "制度、仕組み、システム",
+      "synonyms": "method, structure",
+      "antonyms": "mess, disorder",
+      "forms": "system, systems",
+      "example": "The new system makes online booking easier."
     },
     {
-      "word": "sick",
-      "meaning": "ill or not healthy",
-      "japaneseMeaning": "病気の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "sick, sickly",
-      "example": "A sick student stayed home."
+      "word": "interval",
+      "meaning": "time between events",
+      "japaneseMeaning": "間隔",
+      "synonyms": "gap, period",
+      "antonyms": "continuity, unbroken",
+      "forms": "interval, intervals",
+      "example": "Short intervals improved efficiency."
     },
     {
-      "word": "sore",
-      "meaning": "painful, often from use or illness",
-      "japaneseMeaning": "痛い、ひりひりする",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "sore, sorely",
-      "example": "My throat is sore today."
+      "word": "officer",
+      "meaning": "a person with an official job, often in police or army",
+      "japaneseMeaning": "職員、警官、将校",
+      "synonyms": "official, policeman",
+      "antonyms": "citizen, visitor",
+      "forms": "officer, officers",
+      "example": "A police officer helped the lost child."
     },
     {
-      "word": "swollen",
-      "meaning": "larger than usual because of injury",
-      "japaneseMeaning": "腫れた",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "swollen, swollenly",
-      "example": "His swollen ankle needed ice."
+      "word": "diet",
+      "meaning": "the food that a person usually eats",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "diet, diets",
+      "example": "The diet helped us understand the situation more clearly."
     },
     {
-      "word": "weak",
-      "meaning": "not strong",
-      "japaneseMeaning": "弱い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "weak, weakly",
-      "example": "She felt weak after the fever."
+      "word": "path",
+      "meaning": "a way or track that people walk on",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "path, paths",
+      "example": "The path helped us understand the situation more clearly."
     }
   ]
 }

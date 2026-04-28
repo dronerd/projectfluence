@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-69",
   "title": "Lesson 69",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "council",
-      "meaning": "a group chosen to make decisions",
-      "japaneseMeaning": "議会、評議会",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "council, councils",
-      "example": "The student council planned the event."
+      "word": "belong",
+      "meaning": "to be the property of or be a member of",
+      "japaneseMeaning": "属する／所属する",
+      "synonyms": "fit in, pertain",
+      "antonyms": "exclude, separate",
+      "forms": "belong, belongs, belonging, belonged",
+      "example": "This book belongs to the library."
     },
     {
-      "word": "candidate",
-      "meaning": "a person trying to get a job or position",
-      "japaneseMeaning": "候補者",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "candidate, candidates",
-      "example": "Each candidate gave a short speech."
+      "word": "discuss",
+      "meaning": "to talk about something in detail",
+      "japaneseMeaning": "議論する／話し合う",
+      "synonyms": "debate, talk over",
+      "antonyms": "ignore, silence",
+      "forms": "discuss, discusses, discussing, discussed",
+      "example": "We discussed the plan at length."
     },
     {
-      "word": "committee",
-      "meaning": "a group chosen to do a job",
-      "japaneseMeaning": "委員会",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "committee, committees",
-      "example": "The committee meets every month."
+      "word": "highlight",
+      "meaning": "to show that something is important",
+      "japaneseMeaning": "強調する",
+      "synonyms": "emphasize, mark",
+      "antonyms": "hide, ignore",
+      "forms": "highlight, highlights, highlighting, highlighted",
+      "example": "Please highlight the main dates in your notes."
     },
     {
-      "word": "election",
-      "meaning": "a vote to choose a leader or plan",
-      "japaneseMeaning": "選挙",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "election, elections",
-      "example": "The election is next Sunday."
+      "word": "show",
+      "meaning": "to present something so others can see",
+      "japaneseMeaning": "見せる／示す",
+      "synonyms": "display, exhibit",
+      "antonyms": "hide, conceal",
+      "forms": "show, shows, showing, showed",
+      "example": "Please show me your ticket."
     },
     {
-      "word": "majority",
-      "meaning": "more than half of a group",
-      "japaneseMeaning": "多数派、過半数",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "majority, majorities",
-      "example": "The majority agreed with the idea."
+      "word": "carry",
+      "meaning": "to support and move something from one place to another",
+      "japaneseMeaning": "運ぶ",
+      "synonyms": "transport, bear",
+      "antonyms": "drop, leave",
+      "forms": "carry, carries, carrying, carried",
+      "example": "We need to carry the plan before Friday."
     },
     {
-      "word": "minority",
-      "meaning": "less than half of a group",
-      "japaneseMeaning": "少数派",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "minority, minorities",
-      "example": "A minority wanted a different plan."
+      "word": "lend",
+      "meaning": "to give something temporarily expecting it back",
+      "japaneseMeaning": "貸す",
+      "synonyms": "loan, give temporarily",
+      "antonyms": "borrow, keep",
+      "forms": "lend, lends, lending, lent, lent",
+      "example": "Can you lend me $10?"
     },
     {
-      "word": "opponent",
-      "meaning": "a person you compete or disagree with",
-      "japaneseMeaning": "相手、反対者",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "opponent, opponents",
-      "example": "He shook hands with his opponent."
+      "word": "taste",
+      "meaning": "to sample a small amount to check flavor",
+      "japaneseMeaning": "味見する",
+      "synonyms": "sample, try",
+      "antonyms": "ignore, avoid",
+      "forms": "taste, tastes, tasting, tasted",
+      "example": "Taste the sauce and adjust seasoning."
     },
     {
-      "word": "proposal",
-      "meaning": "a plan or suggestion",
-      "japaneseMeaning": "提案",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "proposal, proposals",
-      "example": "The proposal explains the new park."
+      "word": "persist",
+      "meaning": "to continue firmly",
+      "japaneseMeaning": "持続する",
+      "synonyms": "persevere, endure",
+      "antonyms": "quit, surrender",
+      "forms": "persist, persists, persisting, persisted",
+      "example": "They persisted despite difficulties."
     },
     {
-      "word": "representative",
-      "meaning": "a person chosen to speak for others",
-      "japaneseMeaning": "代表者",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "representative, representatives",
-      "example": "Our class representative joined the meeting."
+      "word": "collaborate",
+      "meaning": "to work with other people on the same task",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "collaborate, collaborates, collaborating, collaborated",
+      "example": "We need to collaborate the plan before Friday."
     },
     {
-      "word": "poll",
-      "meaning": "a vote or survey of opinions",
-      "japaneseMeaning": "投票、世論調査",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "poll, polls",
-      "example": "The poll showed strong support."
+      "word": "permit",
+      "meaning": "to allow someone to do something",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "permit, permits, permiting, permited",
+      "example": "We need to permit the plan before Friday."
     }
   ]
 }

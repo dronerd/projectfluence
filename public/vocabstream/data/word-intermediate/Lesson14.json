@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-14",
   "title": "Lesson 14",
-  "paragraph": "The ideal school clinic gives both medical and mental support. A national guide says positive messages help students, while negative comments can make them nervous. The nurse keeps a round table, sharp scissors, straight shelves, and wooden chairs in the room. Clear signs explain basic care in simple language.",
   "words": [
-    { "word": "ideal", "meaning": "perfect or best for a purpose", "japaneseMeaning": "理想的な", "synonyms": "perfect, best", "antonyms": "poor, unsuitable", "forms": "ideal, ideally", "example": "This quiet room is ideal for studying." },
-    { "word": "medical", "meaning": "connected with doctors, nurses, or health treatment", "japaneseMeaning": "医療の、医学の", "synonyms": "health, clinical", "antonyms": "nonmedical, social", "forms": "medical, medically", "example": "She needs medical advice about her back pain." },
-    { "word": "mental", "meaning": "connected with the mind", "japaneseMeaning": "精神の、心の", "synonyms": "psychological, inner", "antonyms": "physical, bodily", "forms": "mental, mentally", "example": "Sleep is important for mental health." },
-    { "word": "national", "meaning": "connected with a whole country", "japaneseMeaning": "国の、全国的な", "synonyms": "countrywide, public", "antonyms": "local, regional", "forms": "national, nationally", "example": "The national news reported the election result." },
-    { "word": "negative", "meaning": "bad, harmful, or saying no", "japaneseMeaning": "否定的な、悪い", "synonyms": "bad, harmful", "antonyms": "positive, helpful", "forms": "negative, negatively", "example": "Too much screen time can have a negative effect." },
-    { "word": "positive", "meaning": "good, hopeful, or saying yes", "japaneseMeaning": "前向きな、肯定的な", "synonyms": "good, hopeful", "antonyms": "negative, harmful", "forms": "positive, positively", "example": "Her positive attitude helped the team continue." },
-    { "word": "round", "meaning": "shaped like a circle or ball", "japaneseMeaning": "丸い", "synonyms": "circular, curved", "antonyms": "square, straight", "forms": "round, roundly, roundness", "example": "The children sat at a round table." },
-    { "word": "sharp", "meaning": "having a thin edge or point that can cut", "japaneseMeaning": "鋭い、よく切れる", "synonyms": "pointed, keen", "antonyms": "dull, blunt", "forms": "sharp, sharply, sharpness", "example": "Be careful with the sharp knife." },
-    { "word": "straight", "meaning": "not curved or bent", "japaneseMeaning": "まっすぐな", "synonyms": "direct, level", "antonyms": "curved, bent", "forms": "straight, straightly, straightness", "example": "Draw a straight line across the page." },
-    { "word": "wooden", "meaning": "made of wood", "japaneseMeaning": "木製の", "synonyms": "wood, timber", "antonyms": "metal, plastic", "forms": "wooden", "example": "The old house has a wooden door." }
+    {
+      "word": "ideal",
+      "meaning": "perfect or best for a purpose",
+      "japaneseMeaning": "理想的な",
+      "synonyms": "perfect, best",
+      "antonyms": "poor, unsuitable",
+      "forms": "ideal, ideally",
+      "example": "This quiet room is ideal for studying."
+    },
+    {
+      "word": "medical",
+      "meaning": "connected with doctors, nurses, or health treatment",
+      "japaneseMeaning": "医療の、医学の",
+      "synonyms": "health, clinical",
+      "antonyms": "nonmedical, social",
+      "forms": "medical, medically",
+      "example": "She needs medical advice about her back pain."
+    },
+    {
+      "word": "mental",
+      "meaning": "connected with the mind",
+      "japaneseMeaning": "精神の、心の",
+      "synonyms": "psychological, inner",
+      "antonyms": "physical, bodily",
+      "forms": "mental, mentally",
+      "example": "Sleep is important for mental health."
+    },
+    {
+      "word": "national",
+      "meaning": "connected with a whole country",
+      "japaneseMeaning": "国の、全国的な",
+      "synonyms": "countrywide, public",
+      "antonyms": "local, regional",
+      "forms": "national, nationally",
+      "example": "The national news reported the election result."
+    },
+    {
+      "word": "negative",
+      "meaning": "bad, harmful, or saying no",
+      "japaneseMeaning": "否定的な、悪い",
+      "synonyms": "bad, harmful",
+      "antonyms": "positive, helpful",
+      "forms": "negative, negatively",
+      "example": "Too much screen time can have a negative effect."
+    },
+    {
+      "word": "positive",
+      "meaning": "good, hopeful, or saying yes",
+      "japaneseMeaning": "前向きな、肯定的な",
+      "synonyms": "good, hopeful",
+      "antonyms": "negative, harmful",
+      "forms": "positive, positively",
+      "example": "Her positive attitude helped the team continue."
+    },
+    {
+      "word": "circular",
+      "meaning": "shaped like a circle",
+      "japaneseMeaning": "円形の、循環する",
+      "synonyms": "round, curved",
+      "antonyms": "straight, square",
+      "forms": "circular, circularly",
+      "example": "The walking route around the lake is circular."
+    },
+    {
+      "word": "critical",
+      "meaning": "very important or involving careful judgment",
+      "japaneseMeaning": "重大な、批判的な",
+      "synonyms": "important, serious",
+      "antonyms": "minor, unimportant",
+      "forms": "critical, critically",
+      "example": "Clear communication is critical during an emergency."
+    },
+    {
+      "word": "vertical",
+      "meaning": "going straight up and down",
+      "japaneseMeaning": "垂直の、縦の",
+      "synonyms": "upright, standing",
+      "antonyms": "horizontal, flat",
+      "forms": "vertical, vertically",
+      "example": "The graph uses a vertical line to show temperature."
+    },
+    {
+      "word": "durable",
+      "meaning": "strong and able to last for a long time",
+      "japaneseMeaning": "耐久性のある、長持ちする",
+      "synonyms": "strong, lasting",
+      "antonyms": "weak, fragile",
+      "forms": "durable, durability",
+      "example": "We chose a durable bag for the hiking trip."
+    }
   ]
 }

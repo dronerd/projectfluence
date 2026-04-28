@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-64",
   "title": "Lesson 64",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "song", "meaning": "a short piece of music with words", "japaneseMeaning": "歌", "synonyms": "tune, music", "antonyms": "speech, silence", "forms": "song, songs", "example": "This song is easy to sing." },
-    { "word": "sport", "meaning": "a game or activity using physical skill", "japaneseMeaning": "スポーツ", "synonyms": "game, athletics", "antonyms": "rest, study", "forms": "sport, sports", "example": "Tennis is my favorite sport." },
-    { "word": "street", "meaning": "a road in a town or city with buildings beside it", "japaneseMeaning": "通り、街路", "synonyms": "road, avenue", "antonyms": "field, path", "forms": "street, streets", "example": "The street is busy at lunchtime." },
-    { "word": "student", "meaning": "a person who studies at a school or college", "japaneseMeaning": "学生、生徒", "synonyms": "learner, pupil", "antonyms": "teacher, professor", "forms": "student, students", "example": "Each student must bring a pencil." },
-    { "word": "town", "meaning": "a place where people live, smaller than a city", "japaneseMeaning": "町", "synonyms": "small city, community", "antonyms": "village, capital", "forms": "town, towns", "example": "Our town has a small station." },
-    { "word": "tree", "meaning": "a tall plant with a trunk and branches", "japaneseMeaning": "木", "synonyms": "plant, trunk", "antonyms": "flower, grass", "forms": "tree, trees", "example": "A big tree stands near the gate." },
-    { "word": "village", "meaning": "a very small town in the countryside", "japaneseMeaning": "村", "synonyms": "small town, settlement", "antonyms": "city, capital", "forms": "village, villages", "example": "The village is quiet in winter." },
-    { "word": "water", "meaning": "the clear liquid people drink", "japaneseMeaning": "水", "synonyms": "liquid, H2O", "antonyms": "fire, dryness", "forms": "water", "example": "Drink water after running." },
-    { "word": "window", "meaning": "an opening in a wall or vehicle with glass", "japaneseMeaning": "窓", "synonyms": "glass opening, pane", "antonyms": "wall, door", "forms": "window, windows", "example": "Open the window for fresh air." },
-    { "word": "world", "meaning": "the earth and all its people and places", "japaneseMeaning": "世界", "synonyms": "earth, globe", "antonyms": "space, local area", "forms": "world, worlds", "example": "People around the world use the internet." }
+    {
+      "word": "concise",
+      "meaning": "short but clear and complete",
+      "japaneseMeaning": "簡潔な",
+      "synonyms": "brief, clear",
+      "antonyms": "long, wordy",
+      "forms": "concise, concisely",
+      "example": "Please write a concise summary of the article."
+    },
+    {
+      "word": "preferred",
+      "meaning": "liked or wanted more than another choice",
+      "japaneseMeaning": "好ましい、優先される",
+      "synonyms": "chosen, favored",
+      "antonyms": "unwanted, rejected",
+      "forms": "preferred",
+      "example": "Email is the preferred way to contact the office."
+    },
+    {
+      "word": "local",
+      "meaning": "near the place where you live",
+      "japaneseMeaning": "地元の",
+      "synonyms": "regional, nearby",
+      "antonyms": "global, national",
+      "forms": "local, more local, most local",
+      "example": "We support local businesses."
+    },
+    {
+      "word": "recent",
+      "meaning": "having happened or started only a short time ago",
+      "japaneseMeaning": "最近の／新しい",
+      "synonyms": "new, current",
+      "antonyms": "ancient, distant",
+      "forms": "recent, more recent, most recent",
+      "example": "Have you read the recent report?"
+    },
+    {
+      "word": "biased",
+      "meaning": "unfairly supporting one side or opinion",
+      "japaneseMeaning": "偏った、先入観のある",
+      "synonyms": "unfair, one-sided",
+      "antonyms": "fair, neutral",
+      "forms": "biased",
+      "example": "The article seemed biased against young workers."
+    },
+    {
+      "word": "rare",
+      "meaning": "not happening or seen often",
+      "japaneseMeaning": "珍しい",
+      "synonyms": "uncommon, infrequent",
+      "antonyms": "common, usual",
+      "forms": "rare, more rare, most rare",
+      "example": "It is rare to see snow in this city."
+    },
+    {
+      "word": "recreational",
+      "meaning": "connected with activities done for enjoyment",
+      "japaneseMeaning": "娯楽の、レクリエーションの",
+      "synonyms": "leisure, fun",
+      "antonyms": "work-related, serious",
+      "forms": "recreational, recreationally",
+      "example": "The city built a recreational area near the river."
+    },
+    {
+      "word": "careless",
+      "meaning": "not giving enough attention",
+      "japaneseMeaning": "不注意な",
+      "synonyms": "thoughtless, sloppy",
+      "antonyms": "careful, exact",
+      "forms": "careless, more careless, most careless",
+      "example": "A careless mistake changed the final answer."
+    },
+    {
+      "word": "logical",
+      "meaning": "characterized by clear, sound reasoning",
+      "japaneseMeaning": "論理的な、筋の通った",
+      "synonyms": "rational, coherent",
+      "antonyms": "illogical, irrational",
+      "forms": "logical, more logical, most logical",
+      "example": "Her argument was logical and persuasive."
+    },
+    {
+      "word": "urgent",
+      "meaning": "needing to be done very soon",
+      "japaneseMeaning": "緊急の、差し迫った",
+      "synonyms": "pressing, immediate",
+      "antonyms": "minor, nonurgent",
+      "forms": "urgent, more urgent, most urgent",
+      "example": "The doctor received an urgent call from the hospital."
+    }
   ]
 }

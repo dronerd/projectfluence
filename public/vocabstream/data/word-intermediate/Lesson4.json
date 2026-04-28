@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-4",
   "title": "Lesson 4",
-  "paragraph": "During a news event at school, each member studied one topic about water use. The main source was a city report, and the group checked the quality of the data. They discussed the cause of the problem, the level of risk, and the limit on daily water use. One useful feature of their chart was that it explained the situation clearly.",
   "words": [
-    { "word": "cause", "meaning": "the reason why something happens", "japaneseMeaning": "原因", "synonyms": "reason, source", "antonyms": "result, effect", "forms": "cause, causes", "example": "The cause of the fire was an old wire." },
-    { "word": "event", "meaning": "something important or planned that happens", "japaneseMeaning": "出来事、イベント", "synonyms": "happening, occasion", "antonyms": "routine, nothing", "forms": "event, events", "example": "The school event begins at ten in the morning." },
-    { "word": "level", "meaning": "the amount, height, or degree of something", "japaneseMeaning": "レベル、水準", "synonyms": "degree, amount", "antonyms": "extreme, difference", "forms": "level, levels", "example": "The water level rose after the heavy rain." },
-    { "word": "source", "meaning": "the place, person, or thing that something comes from", "japaneseMeaning": "出所、情報源", "synonyms": "origin, provider", "antonyms": "result, end", "forms": "source, sources", "example": "The article gave no source for the number." },
-    { "word": "topic", "meaning": "a subject that people talk, write, or study about", "japaneseMeaning": "話題、テーマ", "synonyms": "subject, theme", "antonyms": "answer, silence", "forms": "topic, topics", "example": "Our topic for today's class is food waste." },
-    { "word": "feature", "meaning": "an important or noticeable part of something", "japaneseMeaning": "特徴、機能", "synonyms": "part, characteristic", "antonyms": "whole, weakness", "forms": "feature, features", "example": "The best feature of this phone is its clear camera." },
-    { "word": "limit", "meaning": "the greatest amount that is allowed or possible", "japaneseMeaning": "限度、制限", "synonyms": "maximum, boundary", "antonyms": "freedom, minimum", "forms": "limit, limits", "example": "There is a speed limit near the school." },
-    { "word": "member", "meaning": "a person who belongs to a group or team", "japaneseMeaning": "メンバー、会員", "synonyms": "participant, teammate", "antonyms": "outsider, stranger", "forms": "member, members", "example": "Each member of the club brings one idea." },
-    { "word": "quality", "meaning": "how good or bad something is", "japaneseMeaning": "品質、質", "synonyms": "standard, value", "antonyms": "fault, weakness", "forms": "quality, qualities", "example": "The quality of the picture is better in bright light." },
-    { "word": "situation", "meaning": "the set of things that are happening at a certain time", "japaneseMeaning": "状況", "synonyms": "condition, state", "antonyms": "solution, certainty", "forms": "situation, situations", "example": "The nurse stayed calm in a difficult situation." }
+    {
+      "word": "cause",
+      "meaning": "the reason why something happens",
+      "japaneseMeaning": "原因",
+      "synonyms": "reason, source",
+      "antonyms": "result, effect",
+      "forms": "cause, causes",
+      "example": "The cause of the fire was an old wire."
+    },
+    {
+      "word": "incident",
+      "meaning": "an unusual or unpleasant event",
+      "japaneseMeaning": "出来事、事件",
+      "synonyms": "event, accident",
+      "antonyms": "routine, plan",
+      "forms": "incident, incidents",
+      "example": "The teacher wrote a report about the incident."
+    },
+    {
+      "word": "level",
+      "meaning": "the amount, height, or degree of something",
+      "japaneseMeaning": "レベル、水準",
+      "synonyms": "degree, amount",
+      "antonyms": "extreme, difference",
+      "forms": "level, levels",
+      "example": "The water level rose after the heavy rain."
+    },
+    {
+      "word": "source",
+      "meaning": "the place, person, or thing that something comes from",
+      "japaneseMeaning": "出所、情報源",
+      "synonyms": "origin, provider",
+      "antonyms": "result, end",
+      "forms": "source, sources",
+      "example": "The article gave no source for the number."
+    },
+    {
+      "word": "theme",
+      "meaning": "the main subject of a talk, book, lesson, or event",
+      "japaneseMeaning": "主題、テーマ",
+      "synonyms": "subject, idea",
+      "antonyms": "detail, example",
+      "forms": "theme, themes",
+      "example": "The main theme of the story is friendship."
+    },
+    {
+      "word": "feature",
+      "meaning": "an important or noticeable part of something",
+      "japaneseMeaning": "特徴、機能",
+      "synonyms": "part, characteristic",
+      "antonyms": "whole, weakness",
+      "forms": "feature, features",
+      "example": "The best feature of this phone is its clear camera."
+    },
+    {
+      "word": "limit",
+      "meaning": "the greatest amount that is allowed or possible",
+      "japaneseMeaning": "限度、制限",
+      "synonyms": "maximum, boundary",
+      "antonyms": "freedom, minimum",
+      "forms": "limit, limits",
+      "example": "There is a speed limit near the school."
+    },
+    {
+      "word": "participant",
+      "meaning": "a person who takes part in an activity or event",
+      "japaneseMeaning": "参加者",
+      "synonyms": "member, player",
+      "antonyms": "outsider, observer",
+      "forms": "participant, participants",
+      "example": "Each participant received a name card at the workshop."
+    },
+    {
+      "word": "quality",
+      "meaning": "how good or bad something is",
+      "japaneseMeaning": "品質、質",
+      "synonyms": "standard, value",
+      "antonyms": "fault, weakness",
+      "forms": "quality, qualities",
+      "example": "The quality of the picture is better in bright light."
+    },
+    {
+      "word": "situation",
+      "meaning": "the set of things that are happening at a certain time",
+      "japaneseMeaning": "状況",
+      "synonyms": "condition, state",
+      "antonyms": "solution, certainty",
+      "forms": "situation, situations",
+      "example": "The nurse stayed calm in a difficult situation."
+    }
   ]
 }

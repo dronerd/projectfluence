@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-62",
   "title": "Lesson 62",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "care", "meaning": "to feel concern or look after someone or something", "japaneseMeaning": "気にかける、世話をする", "synonyms": "look after, mind", "antonyms": "ignore, neglect", "forms": "care, cares, caring, cared", "example": "Parents care about their children's safety." },
-    { "word": "collect", "meaning": "to bring things together from different places", "japaneseMeaning": "集める", "synonyms": "gather, pick up", "antonyms": "spread, scatter", "forms": "collect, collects, collecting, collected, collection", "example": "Students collect cans for recycling." },
-    { "word": "cost", "meaning": "to have a price", "japaneseMeaning": "費用がかかる", "synonyms": "be priced at, require", "antonyms": "save, earn", "forms": "cost, costs, costing, cost", "example": "The ticket will cost ten dollars." },
-    { "word": "decide", "meaning": "to choose after thinking", "japaneseMeaning": "決める", "synonyms": "choose, determine", "antonyms": "hesitate, delay", "forms": "decide, decides, deciding, decided, decision", "example": "We need to decide where to eat." },
-    { "word": "deliver", "meaning": "to take something to a person or place", "japaneseMeaning": "配達する、届ける", "synonyms": "bring, transport", "antonyms": "keep, hold", "forms": "deliver, delivers, delivering, delivered, delivery", "example": "The store will deliver the sofa tomorrow." },
-    { "word": "drive", "meaning": "to control a car or other vehicle", "japaneseMeaning": "運転する", "synonyms": "operate, steer", "antonyms": "ride, walk", "forms": "drive, drives, driving, drove, driven", "example": "My mother can drive a truck." },
-    { "word": "end", "meaning": "to finish or stop", "japaneseMeaning": "終わる、終える", "synonyms": "finish, stop", "antonyms": "begin, start", "forms": "end, ends, ending, ended", "example": "The meeting will end at four." },
-    { "word": "enter", "meaning": "to go into a place or put information into a system", "japaneseMeaning": "入る、入力する", "synonyms": "go in, input", "antonyms": "leave, exit", "forms": "enter, enters, entering, entered", "example": "Please enter your name on the screen." },
-    { "word": "explain", "meaning": "to make something clear or easy to understand", "japaneseMeaning": "説明する", "synonyms": "describe, clarify", "antonyms": "confuse, hide", "forms": "explain, explains, explaining, explained, explanation", "example": "Can you explain this rule again?" },
-    { "word": "fight", "meaning": "to use force or argue strongly against someone", "japaneseMeaning": "戦う、けんかする", "synonyms": "battle, argue", "antonyms": "agree, surrender", "forms": "fight, fights, fighting, fought", "example": "The brothers sometimes fight over toys." }
+    {
+      "word": "assessment",
+      "meaning": "evaluation of knowledge or skills",
+      "japaneseMeaning": "評価",
+      "synonyms": "evaluation, test",
+      "antonyms": "guesswork, ignorance",
+      "forms": "assessment, assessments",
+      "example": "Assessment helps measure student progress."
+    },
+    {
+      "word": "demand",
+      "meaning": "a strong request, or the need for something",
+      "japaneseMeaning": "要求、需要",
+      "synonyms": "request, need",
+      "antonyms": "supply, refusal",
+      "forms": "demand, demands",
+      "example": "There is high demand for nurses in this city."
+    },
+    {
+      "word": "initiative",
+      "meaning": "the ability to take action independently",
+      "japaneseMeaning": "主導権、自発性",
+      "synonyms": "enterprise, drive",
+      "antonyms": "passivity, hesitation",
+      "forms": "initiative, initiatives",
+      "example": "She showed great initiative in the project."
+    },
+    {
+      "word": "location",
+      "meaning": "specific place",
+      "japaneseMeaning": "場所",
+      "synonyms": "site, position",
+      "antonyms": "lack, absence",
+      "forms": "location, locations",
+      "example": "The location of the hotel is central."
+    },
+    {
+      "word": "boundary",
+      "meaning": "limit or border",
+      "japaneseMeaning": "境界",
+      "synonyms": "border, edge",
+      "antonyms": "interior, center",
+      "forms": "boundary, boundaries",
+      "example": "The river forms the boundary."
+    },
+    {
+      "word": "strategy",
+      "meaning": "plan for achieving goals",
+      "japaneseMeaning": "戦略",
+      "synonyms": "plan, approach",
+      "antonyms": "improvisation, randomness",
+      "forms": "strategy, strategies",
+      "example": "The strategy led to success."
+    },
+    {
+      "word": "quantity",
+      "meaning": "an amount or number of something",
+      "japaneseMeaning": "量、数量",
+      "synonyms": "amount, total",
+      "antonyms": "shortage, lack",
+      "forms": "quantity, quantities",
+      "example": "The store ordered a large quantity of paper."
+    },
+    {
+      "word": "attention",
+      "meaning": "careful listening, looking, or thinking",
+      "japaneseMeaning": "注意、注目",
+      "synonyms": "focus, notice",
+      "antonyms": "inattention, neglect",
+      "forms": "attention",
+      "example": "Please give your attention to the safety rules."
+    },
+    {
+      "word": "cluster",
+      "meaning": "a small group of things or people close together",
+      "japaneseMeaning": "集まり、群れ",
+      "synonyms": "group, bunch",
+      "antonyms": "single item, separation",
+      "forms": "cluster, clusters",
+      "example": "A cluster of small shops stands near the station."
+    },
+    {
+      "word": "catalog",
+      "meaning": "a list of things that are available to buy, use, or study",
+      "japaneseMeaning": "カタログ、目録",
+      "synonyms": "list, guide",
+      "antonyms": "single item, disorder",
+      "forms": "catalog, catalogs",
+      "example": "Students searched the online catalog for library books."
+    }
   ]
 }

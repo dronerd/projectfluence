@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-9",
   "title": "Lesson 9",
-  "paragraph": "The newspaper article gave the background of a road debate. A broken branch caused damage to a shop sign, but the main barrier to repairs was a lack of money. The owner found one error in the bill, asked about the fee, and waited for goods from another town. The story also described calm behavior during the problem.",
   "words": [
-    { "word": "background", "meaning": "information that helps explain a situation", "japaneseMeaning": "背景、経歴", "synonyms": "context, history", "antonyms": "foreground, result", "forms": "background, backgrounds", "example": "The guide explained the background of the old castle." },
-    { "word": "barrier", "meaning": "something that blocks movement or makes progress difficult", "japaneseMeaning": "障壁、柵", "synonyms": "block, obstacle", "antonyms": "opening, help", "forms": "barrier, barriers", "example": "Language can be a barrier when people travel." },
-    { "word": "behavior", "meaning": "the way a person or animal acts", "japaneseMeaning": "行動、ふるまい", "synonyms": "actions, conduct", "antonyms": "inaction, silence", "forms": "behavior, behaviors", "example": "The teacher praised the student's kind behavior." },
-    { "word": "branch", "meaning": "a part of a tree or an office of a larger organization", "japaneseMeaning": "枝、支店", "synonyms": "limb, office", "antonyms": "root, headquarters", "forms": "branch, branches", "example": "A branch fell from the tree during the storm." },
-    { "word": "damage", "meaning": "harm that makes something broken or worse", "japaneseMeaning": "損害、被害", "synonyms": "harm, injury", "antonyms": "repair, improvement", "forms": "damage, damages", "example": "The flood caused serious damage to the road." },
-    { "word": "debate", "meaning": "a serious discussion with different opinions", "japaneseMeaning": "討論、議論", "synonyms": "discussion, argument", "antonyms": "agreement, silence", "forms": "debate, debates", "example": "The class had a debate about school uniforms." },
-    { "word": "error", "meaning": "a mistake", "japaneseMeaning": "誤り、ミス", "synonyms": "mistake, fault", "antonyms": "correction, accuracy", "forms": "error, errors", "example": "There is an error in the first line of the report." },
-    { "word": "fee", "meaning": "money paid for a service or permission", "japaneseMeaning": "料金、手数料", "synonyms": "charge, payment", "antonyms": "refund, discount", "forms": "fee, fees", "example": "The museum has a small entrance fee." },
-    { "word": "goods", "meaning": "things that are made, bought, or sold", "japaneseMeaning": "商品、品物", "synonyms": "products, items", "antonyms": "services, waste", "forms": "goods", "example": "The store sells local goods from small farms." },
-    { "word": "lack", "meaning": "not having enough of something", "japaneseMeaning": "不足、欠如", "synonyms": "shortage, absence", "antonyms": "supply, plenty", "forms": "lack, lacks", "example": "A lack of sleep can make it hard to study." }
+    {
+      "word": "background",
+      "meaning": "information that helps explain a situation",
+      "japaneseMeaning": "背景、経歴",
+      "synonyms": "context, history",
+      "antonyms": "foreground, result",
+      "forms": "background, backgrounds",
+      "example": "The guide explained the background of the old castle."
+    },
+    {
+      "word": "barrier",
+      "meaning": "something that blocks movement or makes progress difficult",
+      "japaneseMeaning": "障壁、柵",
+      "synonyms": "block, obstacle",
+      "antonyms": "opening, help",
+      "forms": "barrier, barriers",
+      "example": "Language can be a barrier when people travel."
+    },
+    {
+      "word": "behavior",
+      "meaning": "the way a person or animal acts",
+      "japaneseMeaning": "行動、ふるまい",
+      "synonyms": "actions, conduct",
+      "antonyms": "inaction, silence",
+      "forms": "behavior, behaviors",
+      "example": "The teacher praised the student's kind behavior."
+    },
+    {
+      "word": "headquarters",
+      "meaning": "the main office of an organization or company",
+      "japaneseMeaning": "本部、本社",
+      "synonyms": "main office, center",
+      "antonyms": "branch, local office",
+      "forms": "headquarters",
+      "example": "The company moved its headquarters to Osaka."
+    },
+    {
+      "word": "damage",
+      "meaning": "harm that makes something broken or worse",
+      "japaneseMeaning": "損害、被害",
+      "synonyms": "harm, injury",
+      "antonyms": "repair, improvement",
+      "forms": "damage, damages",
+      "example": "The flood caused serious damage to the road."
+    },
+    {
+      "word": "debate",
+      "meaning": "a serious discussion with different opinions",
+      "japaneseMeaning": "討論、議論",
+      "synonyms": "discussion, argument",
+      "antonyms": "agreement, silence",
+      "forms": "debate, debates",
+      "example": "The class had a debate about school uniforms."
+    },
+    {
+      "word": "error",
+      "meaning": "a mistake",
+      "japaneseMeaning": "誤り、ミス",
+      "synonyms": "mistake, fault",
+      "antonyms": "correction, accuracy",
+      "forms": "error, errors",
+      "example": "There is an error in the first line of the report."
+    },
+    {
+      "word": "fee",
+      "meaning": "money paid for a service or permission",
+      "japaneseMeaning": "料金、手数料",
+      "synonyms": "charge, payment",
+      "antonyms": "refund, discount",
+      "forms": "fee, fees",
+      "example": "The museum has a small entrance fee."
+    },
+    {
+      "word": "goods",
+      "meaning": "things that are made, bought, or sold",
+      "japaneseMeaning": "商品、品物",
+      "synonyms": "products, items",
+      "antonyms": "services, waste",
+      "forms": "goods",
+      "example": "The store sells local goods from small farms."
+    },
+    {
+      "word": "lack",
+      "meaning": "not having enough of something",
+      "japaneseMeaning": "不足、欠如",
+      "synonyms": "shortage, absence",
+      "antonyms": "supply, plenty",
+      "forms": "lack, lacks",
+      "example": "A lack of sleep can make it hard to study."
+    }
   ]
 }

@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-82",
   "title": "Lesson 82",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "boil",
-      "meaning": "to heat liquid until it bubbles",
-      "japaneseMeaning": "沸かす、沸騰する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "boil, boils, boiling, boiled",
-      "example": "Boil the water before making tea."
+      "word": "clever",
+      "meaning": "quick to understand, learn, or devise",
+      "japaneseMeaning": "賢い／利口な",
+      "synonyms": "smart, bright",
+      "antonyms": "dull, stupid",
+      "forms": "clever, more clever, most clever",
+      "example": "She is clever and solves problems quickly."
     },
     {
-      "word": "scratch",
-      "meaning": "to make a thin mark on a surface",
-      "japaneseMeaning": "ひっかく、傷をつける",
-      "synonyms": "mark, scrape",
-      "antonyms": "polish, protect",
-      "forms": "scratch, scratches, scratching, scratched",
-      "example": "Do not scratch the wooden table."
+      "word": "fresh",
+      "meaning": "new or made a short time ago",
+      "japaneseMeaning": "新鮮な",
+      "synonyms": "new, crisp",
+      "antonyms": "stale, old",
+      "forms": "fresh, more fresh, most fresh",
+      "example": "We bought fresh vegetables at the market."
     },
     {
-      "word": "disappear",
-      "meaning": "to stop being seen",
-      "japaneseMeaning": "消える",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "disappear, disappears, disappearing, disappeared",
-      "example": "The sun will disappear behind the clouds."
+      "word": "mobile",
+      "meaning": "easy to move or carry",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "mobile, more mobile, most mobile",
+      "example": "The mobile choice made the whole plan easier."
     },
     {
-      "word": "divide",
-      "meaning": "to separate into parts",
-      "japaneseMeaning": "分ける",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "divide, divides, dividing, divided",
-      "example": "Divide the cake into six pieces."
+      "word": "rough",
+      "meaning": "not smooth or not gentle",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "rough, more rough, most rough",
+      "example": "The rough choice made the whole plan easier."
     },
     {
-      "word": "draw",
-      "meaning": "to make a picture with a pen or pencil",
-      "japaneseMeaning": "描く、引く",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "draw, draws, drawing, drew, drawn",
-      "example": "Draw a map of your town."
+      "word": "usual",
+      "meaning": "normal and happening most of the time",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "usual, more usual, most usual",
+      "example": "The usual choice made the whole plan easier."
     },
     {
-      "word": "fill",
-      "meaning": "to make something full",
-      "japaneseMeaning": "満たす、記入する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "fill, fills, filling, filled",
-      "example": "Fill the bottle with water."
+      "word": "broken",
+      "meaning": "damaged and not working",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "broken, more broken, most broken",
+      "example": "The broken choice made the whole plan easier."
     },
     {
-      "word": "float",
-      "meaning": "to stay on the surface of liquid or air",
-      "japaneseMeaning": "浮く",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "float, floats, floating, floated",
-      "example": "Leaves float on the river."
+      "word": "sick",
+      "meaning": "ill or not well",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "sick, more sick, most sick",
+      "example": "The sick choice made the whole plan easier."
     },
     {
-      "word": "flow",
-      "meaning": "to move like water",
-      "japaneseMeaning": "流れる",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "flow, flows, flowing, flowed",
-      "example": "The river flows through the city."
+      "word": "objective",
+      "meaning": "goal or aim",
+      "japaneseMeaning": "目的",
+      "synonyms": "goal, target",
+      "antonyms": "aimlessness, randomness",
+      "forms": "objective, objectives",
+      "example": "The objective was achieved."
     },
     {
-      "word": "guess",
-      "meaning": "to answer without being sure",
-      "japaneseMeaning": "推測する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "guess, guesss, guessing, guessed",
-      "example": "Can you guess the meaning of this word?"
+      "word": "casual",
+      "meaning": "relaxed and not formal",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "casual, more casual, most casual",
+      "example": "The casual choice made the whole plan easier."
     },
     {
-      "word": "hit",
-      "meaning": "to touch something with force",
-      "japaneseMeaning": "打つ、ぶつかる",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "hit, hits, hiting, hited",
-      "example": "Do not hit the ball too hard."
+      "word": "secondary",
+      "meaning": "less important than the main thing",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "secondary, more secondary, most secondary",
+      "example": "The secondary choice made the whole plan easier."
     }
   ]
 }

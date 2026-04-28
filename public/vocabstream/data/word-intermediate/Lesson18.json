@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-18",
   "title": "Lesson 18",
-  "paragraph": "A daily walk is a comfortable habit for many people. It is convenient when the path is legal, safe, and ordinary enough for beginners. A creative teacher made an accurate map of an ancient street, and an aware guide warned students about rough stones. The gentle pace helped everyone enjoy the walk.",
   "words": [
-    { "word": "accurate", "meaning": "correct and without mistakes", "japaneseMeaning": "正確な", "synonyms": "correct, exact", "antonyms": "wrong, inaccurate", "forms": "accurate, accurately, accuracy", "example": "The map is accurate, so we will not get lost." },
-    { "word": "ancient", "meaning": "very old or from a long time ago", "japaneseMeaning": "古代の、とても古い", "synonyms": "old, historic", "antonyms": "modern, new", "forms": "ancient, anciently", "example": "We visited an ancient temple in the mountains." },
-    { "word": "aware", "meaning": "knowing about something", "japaneseMeaning": "気づいている、認識している", "synonyms": "conscious, informed", "antonyms": "unaware, ignorant", "forms": "aware, awareness", "example": "Drivers should be aware of children near schools." },
-    { "word": "legal", "meaning": "allowed by law", "japaneseMeaning": "合法の、法律の", "synonyms": "lawful, official", "antonyms": "illegal, unlawful", "forms": "legal, legally", "example": "You need a legal document to prove your name." },
-    { "word": "daily", "meaning": "happening every day", "japaneseMeaning": "毎日の、日々の", "synonyms": "everyday, regular", "antonyms": "rare, yearly", "forms": "daily", "example": "Daily practice helps you remember new words." },
-    { "word": "comfortable", "meaning": "making you feel relaxed or physically good", "japaneseMeaning": "快適な、心地よい", "synonyms": "relaxed, pleasant", "antonyms": "uncomfortable, painful", "forms": "comfortable, comfortably, comfort", "example": "This chair is comfortable for long study sessions." },
-    { "word": "convenient", "meaning": "easy and useful for a situation", "japaneseMeaning": "便利な", "synonyms": "handy, useful", "antonyms": "inconvenient, difficult", "forms": "convenient, conveniently, convenience", "example": "The hotel is convenient because it is near the station." },
-    { "word": "creative", "meaning": "good at making new ideas or things", "japaneseMeaning": "創造的な", "synonyms": "imaginative, original", "antonyms": "uncreative, dull", "forms": "creative, creatively, creativity", "example": "A creative student designed the class poster." },
-    { "word": "gentle", "meaning": "kind, soft, or not strong", "japaneseMeaning": "優しい、穏やかな", "synonyms": "kind, mild", "antonyms": "rough, harsh", "forms": "gentle, gently, gentleness", "example": "The nurse spoke in a gentle voice." },
-    { "word": "ordinary", "meaning": "normal and not special or unusual", "japaneseMeaning": "普通の、平凡な", "synonyms": "normal, usual", "antonyms": "special, unusual", "forms": "ordinary, ordinarily", "example": "It was an ordinary school day until the snow started." }
+    {
+      "word": "accurate",
+      "meaning": "correct and without mistakes",
+      "japaneseMeaning": "正確な",
+      "synonyms": "correct, exact",
+      "antonyms": "wrong, inaccurate",
+      "forms": "accurate, accurately, accuracy",
+      "example": "The map is accurate, so we will not get lost."
+    },
+    {
+      "word": "ancient",
+      "meaning": "very old or from a long time ago",
+      "japaneseMeaning": "古代の、とても古い",
+      "synonyms": "old, historic",
+      "antonyms": "modern, new",
+      "forms": "ancient, anciently",
+      "example": "We visited an ancient temple in the mountains."
+    },
+    {
+      "word": "aware",
+      "meaning": "knowing about something",
+      "japaneseMeaning": "気づいている、認識している",
+      "synonyms": "conscious, informed",
+      "antonyms": "unaware, ignorant",
+      "forms": "aware, awareness",
+      "example": "Drivers should be aware of children near schools."
+    },
+    {
+      "word": "legal",
+      "meaning": "allowed by law",
+      "japaneseMeaning": "合法の、法律の",
+      "synonyms": "lawful, official",
+      "antonyms": "illegal, unlawful",
+      "forms": "legal, legally",
+      "example": "You need a legal document to prove your name."
+    },
+    {
+      "word": "routine",
+      "meaning": "usual and done regularly",
+      "japaneseMeaning": "日常的な、決まった",
+      "synonyms": "regular, usual",
+      "antonyms": "unusual, special",
+      "forms": "routine, routinely",
+      "example": "The nurse did a routine check before breakfast."
+    },
+    {
+      "word": "comfortable",
+      "meaning": "making you feel relaxed or physically good",
+      "japaneseMeaning": "快適な、心地よい",
+      "synonyms": "relaxed, pleasant",
+      "antonyms": "uncomfortable, painful",
+      "forms": "comfortable, comfortably, comfort",
+      "example": "This chair is comfortable for long study sessions."
+    },
+    {
+      "word": "convenient",
+      "meaning": "easy and useful for a situation",
+      "japaneseMeaning": "便利な",
+      "synonyms": "handy, useful",
+      "antonyms": "inconvenient, difficult",
+      "forms": "convenient, conveniently, convenience",
+      "example": "The hotel is convenient because it is near the station."
+    },
+    {
+      "word": "creative",
+      "meaning": "good at making new ideas or things",
+      "japaneseMeaning": "創造的な",
+      "synonyms": "imaginative, original",
+      "antonyms": "uncreative, dull",
+      "forms": "creative, creatively, creativity",
+      "example": "A creative student designed the class poster."
+    },
+    {
+      "word": "delicate",
+      "meaning": "easily damaged or needing careful treatment",
+      "japaneseMeaning": "繊細な、壊れやすい",
+      "synonyms": "fragile, sensitive",
+      "antonyms": "strong, rough",
+      "forms": "delicate, delicately",
+      "example": "Please be careful with the delicate glass model."
+    },
+    {
+      "word": "conventional",
+      "meaning": "following the usual way of doing something",
+      "japaneseMeaning": "従来の、伝統的な",
+      "synonyms": "traditional, usual",
+      "antonyms": "modern, unusual",
+      "forms": "conventional, conventionally",
+      "example": "The company still uses conventional paper forms."
+    }
   ]
 }

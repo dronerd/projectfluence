@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-58",
   "title": "Lesson 58",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "mind", "meaning": "the part of you that thinks and feels", "japaneseMeaning": "心、考え", "synonyms": "thoughts, brain", "antonyms": "body, matter", "forms": "mind, minds", "example": "Keep an open mind when you hear new ideas." },
-    { "word": "minute", "meaning": "sixty seconds or a very short time", "japaneseMeaning": "分、少しの時間", "synonyms": "moment, sixty seconds", "antonyms": "hour, long time", "forms": "minute, minutes", "example": "Wait one minute before opening the door." },
-    { "word": "money", "meaning": "coins, bills, or digital value used to buy things", "japaneseMeaning": "お金", "synonyms": "cash, funds", "antonyms": "debt, goods", "forms": "money", "example": "I saved money for a new bicycle." },
-    { "word": "music", "meaning": "sounds made with voices or instruments", "japaneseMeaning": "音楽", "synonyms": "song, melody", "antonyms": "noise, silence", "forms": "music", "example": "Soft music played in the cafe." },
-    { "word": "name", "meaning": "the word used to call a person, place, or thing", "japaneseMeaning": "名前", "synonyms": "title, label", "antonyms": "number, unknown", "forms": "name, names", "example": "Write your name at the top." },
-    { "word": "news", "meaning": "new information about recent events", "japaneseMeaning": "ニュース、知らせ", "synonyms": "reports, information", "antonyms": "old story, silence", "forms": "news", "example": "I watch the news after dinner." },
-    { "word": "paper", "meaning": "thin material used for writing or printing", "japaneseMeaning": "紙、新聞", "synonyms": "sheet, document", "antonyms": "screen, cloth", "forms": "paper, papers", "example": "Please write your answer on this paper." },
-    { "word": "park", "meaning": "a public outdoor area with grass, trees, or paths", "japaneseMeaning": "公園", "synonyms": "garden, green space", "antonyms": "building, road", "forms": "park, parks", "example": "We ate lunch in the park." },
-    { "word": "party", "meaning": "a social event with food, music, or games", "japaneseMeaning": "パーティー、政党", "synonyms": "celebration, gathering", "antonyms": "work, meeting", "forms": "party, parties", "example": "Her birthday party starts at six." },
-    { "word": "person", "meaning": "a human being", "japaneseMeaning": "人", "synonyms": "human, individual", "antonyms": "thing, animal", "forms": "person, people", "example": "One person is waiting outside." }
+    {
+      "word": "fundamental",
+      "meaning": "most basic and important",
+      "japaneseMeaning": "基本的な、根本的な",
+      "synonyms": "basic, essential",
+      "antonyms": "minor, extra",
+      "forms": "fundamental, fundamentally",
+      "example": "Trust is fundamental to good teamwork."
+    },
+    {
+      "word": "fair",
+      "meaning": "right and equal for everyone",
+      "japaneseMeaning": "公平な／公正な",
+      "synonyms": "just, impartial",
+      "antonyms": "unfair, biased",
+      "forms": "fair, more fair, most fair",
+      "example": "The judge made a fair decision."
+    },
+    {
+      "word": "contemporary",
+      "meaning": "modern or existing at the present time",
+      "japaneseMeaning": "現代の、同時代の",
+      "synonyms": "modern, current",
+      "antonyms": "ancient, old-fashioned",
+      "forms": "contemporary",
+      "example": "The museum shows contemporary Japanese art."
+    },
+    {
+      "word": "civic",
+      "meaning": "connected with a city or the duties of citizens",
+      "japaneseMeaning": "市民の、都市の",
+      "synonyms": "public, community",
+      "antonyms": "private, personal",
+      "forms": "civic",
+      "example": "Students joined a civic project to clean the river."
+    },
+    {
+      "word": "typical",
+      "meaning": "having the usual characteristics of a type",
+      "japaneseMeaning": "典型的な／普通の",
+      "synonyms": "representative, characteristic",
+      "antonyms": "atypical, unusual",
+      "forms": "typical, more typical, most typical",
+      "example": "A typical summer day here is warm and sunny."
+    },
+    {
+      "word": "contrasting",
+      "meaning": "clearly different from something else",
+      "japaneseMeaning": "対照的な",
+      "synonyms": "different, opposite",
+      "antonyms": "similar, matching",
+      "forms": "contrasting, contrast",
+      "example": "The article presents two contrasting opinions."
+    },
+    {
+      "word": "fortunate",
+      "meaning": "having good luck or a good result",
+      "japaneseMeaning": "幸運な、恵まれた",
+      "synonyms": "lucky, successful",
+      "antonyms": "unfortunate, unlucky",
+      "forms": "fortunate, fortunately",
+      "example": "We were fortunate to get seats on the last train."
+    },
+    {
+      "word": "considerate",
+      "meaning": "thoughtful of others",
+      "japaneseMeaning": "思いやりのある",
+      "synonyms": "thoughtful, kind",
+      "antonyms": "inconsiderate, selfish",
+      "forms": "considerate, considerately",
+      "example": "Being considerate improves relationships."
+    },
+    {
+      "word": "dramatic",
+      "meaning": "very sudden, exciting, or easy to notice",
+      "japaneseMeaning": "劇的な、演劇の",
+      "synonyms": "theatrical, striking",
+      "antonyms": "ordinary, mundane",
+      "forms": "dramatic, more dramatic, most dramatic",
+      "example": "The play had a dramatic climax."
+    },
+    {
+      "word": "geometric",
+      "meaning": "connected with shapes, lines, and angles",
+      "japaneseMeaning": "幾何学的な",
+      "synonyms": "shape-based, mathematical",
+      "antonyms": "natural, irregular",
+      "forms": "geometric, geometrically",
+      "example": "The building has a simple geometric design."
+    }
   ]
 }

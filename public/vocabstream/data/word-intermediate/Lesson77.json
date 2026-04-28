@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-77",
   "title": "Lesson 77",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "abroad",
-      "meaning": "in or to another country",
-      "japaneseMeaning": "海外の、海外へ",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "abroad, abroadly",
-      "example": "She studied abroad for one year."
+      "word": "category",
+      "meaning": "a group of things of the same type",
+      "japaneseMeaning": "部類、カテゴリー",
+      "synonyms": "group, type",
+      "antonyms": "mix, difference",
+      "forms": "category, categories",
+      "example": "Put each book in the correct category."
     },
     {
-      "word": "coastal",
-      "meaning": "near the sea",
-      "japaneseMeaning": "沿岸の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "coastal, coastally",
-      "example": "The coastal town is popular in summer."
+      "word": "lane",
+      "meaning": "one part of a road for one line of cars",
+      "japaneseMeaning": "車線、レーン",
+      "synonyms": "roadway, path",
+      "antonyms": "sidewalk, shoulder",
+      "forms": "lane, lanes",
+      "example": "The bus moved into the left lane."
     },
     {
-      "word": "distant",
-      "meaning": "far away",
-      "japaneseMeaning": "遠い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "distant, distantly",
-      "example": "We saw distant mountains."
+      "word": "habit",
+      "meaning": "something you often do",
+      "japaneseMeaning": "習慣",
+      "synonyms": "routine, custom",
+      "antonyms": "change, one-time act",
+      "forms": "habit, habits",
+      "example": "Drinking water after waking up is a good habit."
     },
     {
-      "word": "regional",
-      "meaning": "connected with a particular area",
-      "japaneseMeaning": "地域の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "regional, regionally",
-      "example": "The regional train stops here."
+      "word": "meeting",
+      "meaning": "a time when people come together to talk",
+      "japaneseMeaning": "会議、集まり",
+      "synonyms": "discussion, gathering",
+      "antonyms": "break, silence",
+      "forms": "meeting, meetings",
+      "example": "The meeting starts at nine in room 204."
     },
     {
-      "word": "local",
-      "meaning": "from or connected with an area nearby",
-      "japaneseMeaning": "地元の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "local, locally",
-      "example": "The local bus stops here."
+      "word": "receipt",
+      "meaning": "a paper that shows you paid for something",
+      "japaneseMeaning": "領収書、レシート",
+      "synonyms": "proof, bill",
+      "antonyms": "payment, product",
+      "forms": "receipt, receipts",
+      "example": "Keep the receipt in case you need a refund."
     },
     {
-      "word": "lost",
-      "meaning": "unable to find the way or missing",
-      "japaneseMeaning": "道に迷った、失われた",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "lost, lostly",
-      "example": "The lost tourist asked for help."
+      "word": "talent",
+      "meaning": "a natural skill or ability",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "talent, talents",
+      "example": "The talent helped us understand the situation more clearly."
     },
     {
-      "word": "overseas",
-      "meaning": "across the sea in another country",
-      "japaneseMeaning": "海外の、海外へ",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "overseas, overseasly",
-      "example": "The company has overseas offices."
+      "word": "case",
+      "meaning": "a situation, example, or container",
+      "japaneseMeaning": "場合、事例、ケース",
+      "synonyms": "situation, example",
+      "antonyms": "rule, normal state",
+      "forms": "case, cases",
+      "example": "In this case, we should ask the teacher."
     },
     {
-      "word": "remote",
-      "meaning": "far from towns or people",
-      "japaneseMeaning": "遠く離れた",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "remote, remotely",
-      "example": "They visited a remote village."
+      "word": "opinion",
+      "meaning": "what someone thinks about something",
+      "japaneseMeaning": "意見",
+      "synonyms": "view, idea",
+      "antonyms": "fact, proof",
+      "forms": "opinion, opinions",
+      "example": "In my opinion, this plan is fair."
     },
     {
-      "word": "scenic",
-      "meaning": "having beautiful views",
-      "japaneseMeaning": "景色の良い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "scenic, scenicly",
-      "example": "We took the scenic road."
+      "word": "doubt",
+      "meaning": "a feeling that something may not be true",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "doubt, doubts",
+      "example": "The doubt helped us understand the situation more clearly."
     },
     {
-      "word": "urban",
-      "meaning": "connected with a city",
-      "japaneseMeaning": "都市の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "urban, urbanly",
-      "example": "Urban transport is often busy."
+      "word": "timetable",
+      "meaning": "a plan showing study times and subjects",
+      "japaneseMeaning": "時間割、スケジュール",
+      "synonyms": "schedule, planner",
+      "antonyms": "impromptu plan",
+      "forms": "timetable, timetables",
+      "example": "Make a timetable for exam revision."
     }
   ]
 }

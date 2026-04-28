@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-75",
   "title": "Lesson 75",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "airport",
-      "meaning": "a place where planes arrive and leave",
-      "japaneseMeaning": "空港",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "airport, airports",
-      "example": "The airport was crowded today."
+      "word": "borrow",
+      "meaning": "to take and use something belonging to someone with intention to return",
+      "japaneseMeaning": "借りる",
+      "synonyms": "loan (receive), take temporarily",
+      "antonyms": "lend, give",
+      "forms": "borrow, borrows, borrowing, borrowed",
+      "example": "Can I borrow your pen?"
     },
     {
-      "word": "baggage",
-      "meaning": "bags and suitcases for travel",
-      "japaneseMeaning": "手荷物",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "baggage, baggages",
-      "example": "Our baggage arrived late."
+      "word": "earn",
+      "meaning": "to receive money for work or achieve something through effort",
+      "japaneseMeaning": "稼ぐ／得る",
+      "synonyms": "gain, obtain",
+      "antonyms": "lose, forfeit",
+      "forms": "earn, earns, earning, earned",
+      "example": "He earned a promotion."
     },
     {
-      "word": "boarding",
-      "meaning": "the act of getting on a plane, ship, or train",
-      "japaneseMeaning": "搭乗",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "boarding, boardings",
-      "example": "Boarding begins at gate five."
+      "word": "attach",
+      "meaning": "to join one thing to another",
+      "japaneseMeaning": "取り付ける、添付する",
+      "synonyms": "connect, fasten",
+      "antonyms": "remove, separate",
+      "forms": "attach, attaches, attaching, attached",
+      "example": "Please attach a photo to the form."
     },
     {
-      "word": "departure",
-      "meaning": "the act of leaving a place",
-      "japaneseMeaning": "出発",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "departure, departures",
-      "example": "Our departure time is six o’clock."
+      "word": "spend",
+      "meaning": "to use money or time for something",
+      "japaneseMeaning": "使う／過ごす",
+      "synonyms": "use, expend",
+      "antonyms": "save, conserve",
+      "forms": "spend, spends, spending, spent, spent",
+      "example": "We need to spend the plan before Friday."
     },
     {
-      "word": "destination",
-      "meaning": "the place someone is going to",
-      "japaneseMeaning": "目的地",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "destination, destinations",
-      "example": "Kyoto is our final destination."
+      "word": "combine",
+      "meaning": "to join two or more things together",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "combine, combines, combining, combined",
+      "example": "We need to combine the plan before Friday."
     },
     {
-      "word": "journey",
-      "meaning": "travel from one place to another",
-      "japaneseMeaning": "旅、移動",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "journey, journeies",
-      "example": "The journey took three hours."
+      "word": "lose",
+      "meaning": "to no longer have something or be unable to find it",
+      "japaneseMeaning": "失う／なくす",
+      "synonyms": "misplace, forfeit",
+      "antonyms": "find, win",
+      "forms": "lose, loses, losing, lost, lost",
+      "example": "We need to lose the plan before Friday."
     },
     {
-      "word": "platform",
-      "meaning": "the place where people wait for trains",
-      "japaneseMeaning": "ホーム",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "platform, platforms",
-      "example": "The train leaves from platform two."
+      "word": "throw",
+      "meaning": "to propel something with force through the air",
+      "japaneseMeaning": "投げる",
+      "synonyms": "toss, hurl",
+      "antonyms": "catch, hold",
+      "forms": "throw, throws, throwing, throwed",
+      "example": "Throw the ball to me."
     },
     {
-      "word": "route",
-      "meaning": "the way from one place to another",
-      "japaneseMeaning": "経路",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "route, routes",
-      "example": "This route avoids the busy road."
+      "word": "struggle",
+      "meaning": "to strive against difficulty",
+      "japaneseMeaning": "奮闘する",
+      "synonyms": "fight, contend",
+      "antonyms": "relax, surrender",
+      "forms": "struggle, struggles, struggling, struggled",
+      "example": "They struggled to finish on time."
     },
     {
-      "word": "traffic",
-      "meaning": "vehicles moving on roads",
-      "japaneseMeaning": "交通、渋滞",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "traffic, traffics",
-      "example": "Traffic is heavy this morning."
+      "word": "comply",
+      "meaning": "to obey a rule or request",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "comply, complies, complying, complied",
+      "example": "We need to comply the plan before Friday."
     },
     {
-      "word": "transport",
-      "meaning": "ways of moving people or goods",
-      "japaneseMeaning": "交通機関、輸送",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "transport, transports",
-      "example": "Public transport is convenient here."
+      "word": "raise",
+      "meaning": "to lift something up or make it higher",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "raise, raises, raising, raised",
+      "example": "We need to raise the plan before Friday."
     }
   ]
 }

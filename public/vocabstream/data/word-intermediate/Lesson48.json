@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-48",
   "title": "Lesson 48",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "able", "meaning": "having the skill or chance to do something", "japaneseMeaning": "できる、有能な", "synonyms": "capable, skilled", "antonyms": "unable, incapable", "forms": "able, ably, ability", "example": "She is able to swim across the pool." },
-    { "word": "sorry", "meaning": "feeling sadness or regret", "japaneseMeaning": "申し訳ない、残念な", "synonyms": "regretful, sad", "antonyms": "glad, proud", "forms": "sorry, sorrier, sorriest", "example": "I am sorry for being late." },
-    { "word": "tired", "meaning": "needing rest or sleep", "japaneseMeaning": "疲れた", "synonyms": "sleepy, exhausted", "antonyms": "rested, energetic", "forms": "tired, tiredly, tiredness", "example": "I felt tired after the long walk." },
-    { "word": "wet", "meaning": "covered with water or another liquid", "japaneseMeaning": "濡れた", "synonyms": "damp, soaked", "antonyms": "dry, clean", "forms": "wet, wetter, wettest", "example": "My shoes are wet from the rain." },
-    { "word": "wise", "meaning": "showing good judgment from knowledge or experience", "japaneseMeaning": "賢い、賢明な", "synonyms": "sensible, smart", "antonyms": "foolish, careless", "forms": "wise, wisely, wisdom", "example": "It is wise to save some money." },
-    { "word": "wrong", "meaning": "not correct or not good", "japaneseMeaning": "間違った、悪い", "synonyms": "incorrect, false", "antonyms": "right, correct", "forms": "wrong, wrongly", "example": "The wrong answer is crossed out." },
-    { "word": "young", "meaning": "not old", "japaneseMeaning": "若い", "synonyms": "youthful, little", "antonyms": "old, elderly", "forms": "young, younger, youngest", "example": "The young child learned quickly." },
-    { "word": "light", "meaning": "not heavy or not dark", "japaneseMeaning": "軽い、明るい", "synonyms": "bright, lightweight", "antonyms": "heavy, dark", "forms": "light, lighter, lightest", "example": "This bag is light enough to carry." },
-    { "word": "loud", "meaning": "making a lot of noise", "japaneseMeaning": "大きな音の、うるさい", "synonyms": "noisy, strong", "antonyms": "quiet, soft", "forms": "loud, loudly, loudness", "example": "The loud music woke the baby." },
-    { "word": "lucky", "meaning": "having good things happen by chance", "japaneseMeaning": "幸運な", "synonyms": "fortunate, blessed", "antonyms": "unlucky, unfortunate", "forms": "lucky, luckily, luck", "example": "We were lucky to catch the last train." }
+    {
+      "word": "analyze",
+      "meaning": "to study something carefully",
+      "japaneseMeaning": "分析する",
+      "synonyms": "examine, study",
+      "antonyms": "ignore, neglect",
+      "forms": "analyze, analyzes, analyzing, analyzed",
+      "example": "We need to analyze the data carefully."
+    },
+    {
+      "word": "assess",
+      "meaning": "to judge the quality, value, or importance of something",
+      "japaneseMeaning": "評価する、判断する",
+      "synonyms": "judge, evaluate",
+      "antonyms": "ignore, guess",
+      "forms": "assess, assesses, assessing, assessed",
+      "example": "The teacher assessed each student's speaking level."
+    },
+    {
+      "word": "acquire",
+      "meaning": "to get knowledge, a skill, or something useful",
+      "japaneseMeaning": "身につける、獲得する",
+      "synonyms": "gain, obtain",
+      "antonyms": "lose, give up",
+      "forms": "acquire, acquires, acquiring, acquired",
+      "example": "Students acquire confidence through regular practice."
+    },
+    {
+      "word": "respond",
+      "meaning": "to react to something",
+      "japaneseMeaning": "反応する",
+      "synonyms": "reply, react",
+      "antonyms": "ignore, neglect",
+      "forms": "respond, responds, responding, responded",
+      "example": "She responded quickly to the call."
+    },
+    {
+      "word": "emerge",
+      "meaning": "to appear or become known",
+      "japaneseMeaning": "現れる、明らかになる",
+      "synonyms": "appear, develop",
+      "antonyms": "disappear, hide",
+      "forms": "emerge, emerges, emerging, emerged",
+      "example": "New problems emerged during the project."
+    },
+    {
+      "word": "function",
+      "meaning": "to work in the right way",
+      "japaneseMeaning": "機能する、働く",
+      "synonyms": "work, operate",
+      "antonyms": "fail, break",
+      "forms": "function, functions, functioning, functioned",
+      "example": "The machine cannot function without electricity."
+    },
+    {
+      "word": "seal",
+      "meaning": "to close something tightly so nothing can get in or out",
+      "japaneseMeaning": "密閉する、封をする",
+      "synonyms": "close, cover",
+      "antonyms": "open, uncover",
+      "forms": "seal, seals, sealing, sealed",
+      "example": "Seal the bag before you put it in the fridge."
+    },
+    {
+      "word": "associate",
+      "meaning": "to connect ideas or things",
+      "japaneseMeaning": "結びつける",
+      "synonyms": "link, connect",
+      "antonyms": "disconnect, separate",
+      "forms": "associate, associates, associating, associated",
+      "example": "People often associate smell with memories."
+    },
+    {
+      "word": "generate",
+      "meaning": "to produce or create",
+      "japaneseMeaning": "生み出す",
+      "synonyms": "produce, create",
+      "antonyms": "destroy, waste",
+      "forms": "generate, generates, generating, generated",
+      "example": "They generated innovative ideas quickly."
+    },
+    {
+      "word": "inform",
+      "meaning": "to tell someone about something",
+      "japaneseMeaning": "知らせる、通知する",
+      "synonyms": "tell, notify",
+      "antonyms": "hide, mislead",
+      "forms": "inform, informs, informing, informed",
+      "example": "Please inform the office if your address changes."
+    }
   ]
 }

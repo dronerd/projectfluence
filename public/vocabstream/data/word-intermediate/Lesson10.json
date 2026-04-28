@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-10",
   "title": "Lesson 10",
-  "paragraph": "On Saturday, students will volunteer at a small theater. They will accompany guests to their seats, consider special requests, and cover the ticket desk during breaks. The team must face problems calmly, finish cleaning before noon, handle lost items, hang posters, hide extra cables, lower the lights, and welcome everyone with a smile.",
   "words": [
-    { "word": "accompany", "meaning": "to go somewhere with someone", "japaneseMeaning": "同行する、付き添う", "synonyms": "go with, escort", "antonyms": "leave, abandon", "forms": "accompany, accompanies, accompanying, accompanied", "example": "A teacher will accompany the students on the trip." },
-    { "word": "consider", "meaning": "to think carefully about something", "japaneseMeaning": "よく考える、検討する", "synonyms": "think about, review", "antonyms": "ignore, dismiss", "forms": "consider, considers, considering, considered, consideration", "example": "Please consider other people's feelings before you speak." },
-    { "word": "cover", "meaning": "to put something over something or deal with a duty", "japaneseMeaning": "覆う、担当する", "synonyms": "hide, protect", "antonyms": "uncover, expose", "forms": "cover, covers, covering, covered", "example": "Use a cloth to cover the food." },
-    { "word": "face", "meaning": "to deal with a difficult situation", "japaneseMeaning": "直面する、向き合う", "synonyms": "meet, confront", "antonyms": "avoid, escape", "forms": "face, faces, facing, faced", "example": "New students often face many changes." },
-    { "word": "finish", "meaning": "to complete something", "japaneseMeaning": "終える、完成する", "synonyms": "complete, end", "antonyms": "start, begin", "forms": "finish, finishes, finishing, finished", "example": "I want to finish my homework before dinner." },
-    { "word": "handle", "meaning": "to manage or deal with something", "japaneseMeaning": "扱う、処理する", "synonyms": "manage, control", "antonyms": "mishandle, ignore", "forms": "handle, handles, handling, handled", "example": "She can handle difficult customers politely." },
-    { "word": "hang", "meaning": "to put something on a wall or from a high place", "japaneseMeaning": "掛ける、つるす", "synonyms": "put up, suspend", "antonyms": "remove, lower", "forms": "hang, hangs, hanging, hung", "example": "Let's hang the picture above the sofa." },
-    { "word": "hide", "meaning": "to put something where it cannot be seen", "japaneseMeaning": "隠す", "synonyms": "cover, conceal", "antonyms": "show, reveal", "forms": "hide, hides, hiding, hid, hidden", "example": "Do not hide important information from your team." },
-    { "word": "lower", "meaning": "to move something down or make it less", "japaneseMeaning": "下げる、低くする", "synonyms": "reduce, drop", "antonyms": "raise, increase", "forms": "lower, lowers, lowering, lowered", "example": "Please lower your voice in the library." },
-    { "word": "volunteer", "meaning": "to offer to do something without being forced or paid", "japaneseMeaning": "ボランティアをする、志願する", "synonyms": "offer, help", "antonyms": "refuse, demand", "forms": "volunteer, volunteers, volunteering, volunteered", "example": "Many students volunteer at the city festival." }
+    {
+      "word": "accompany",
+      "meaning": "to go somewhere with someone",
+      "japaneseMeaning": "同行する、付き添う",
+      "synonyms": "go with, escort",
+      "antonyms": "leave, abandon",
+      "forms": "accompany, accompanies, accompanying, accompanied",
+      "example": "A teacher will accompany the students on the trip."
+    },
+    {
+      "word": "consider",
+      "meaning": "to think carefully about something",
+      "japaneseMeaning": "よく考える、検討する",
+      "synonyms": "think about, review",
+      "antonyms": "ignore, dismiss",
+      "forms": "consider, considers, considering, considered, consideration",
+      "example": "Please consider other people's feelings before you speak."
+    },
+    {
+      "word": "cover",
+      "meaning": "to include or deal with a subject or duty",
+      "japaneseMeaning": "扱う、含む、担当する",
+      "synonyms": "include, handle",
+      "antonyms": "skip, ignore",
+      "forms": "cover, covers, covering, covered",
+      "example": "The test will cover five chapters from the textbook."
+    },
+    {
+      "word": "face",
+      "meaning": "to deal with a difficult situation",
+      "japaneseMeaning": "直面する、向き合う",
+      "synonyms": "meet, confront",
+      "antonyms": "avoid, escape",
+      "forms": "face, faces, facing, faced",
+      "example": "New students often face many changes."
+    },
+    {
+      "word": "conclude",
+      "meaning": "to end something or decide something after thinking",
+      "japaneseMeaning": "終える、結論を出す",
+      "synonyms": "end, decide",
+      "antonyms": "begin, continue",
+      "forms": "conclude, concludes, concluding, concluded",
+      "example": "The speaker concluded the talk with a short story."
+    },
+    {
+      "word": "handle",
+      "meaning": "to manage or deal with something",
+      "japaneseMeaning": "扱う、処理する",
+      "synonyms": "manage, control",
+      "antonyms": "mishandle, ignore",
+      "forms": "handle, handles, handling, handled",
+      "example": "She can handle difficult customers politely."
+    },
+    {
+      "word": "hang",
+      "meaning": "to put something where it is held from above",
+      "japaneseMeaning": "掛ける、つるす",
+      "synonyms": "put up, hold up",
+      "antonyms": "remove, lower",
+      "forms": "hang, hangs, hanging, hung",
+      "example": "The staff will hang the posters before the event."
+    },
+    {
+      "word": "hide",
+      "meaning": "to put something where it cannot be seen",
+      "japaneseMeaning": "隠す",
+      "synonyms": "cover, conceal",
+      "antonyms": "show, reveal",
+      "forms": "hide, hides, hiding, hid, hidden",
+      "example": "Do not hide important information from your team."
+    },
+    {
+      "word": "lower",
+      "meaning": "to move something down or make it less",
+      "japaneseMeaning": "下げる、低くする",
+      "synonyms": "reduce, drop",
+      "antonyms": "raise, increase",
+      "forms": "lower, lowers, lowering, lowered",
+      "example": "Please lower your voice in the library."
+    },
+    {
+      "word": "volunteer",
+      "meaning": "to offer to do something without being forced or paid",
+      "japaneseMeaning": "ボランティアをする、志願する",
+      "synonyms": "offer, help",
+      "antonyms": "refuse, demand",
+      "forms": "volunteer, volunteers, volunteering, volunteered",
+      "example": "Many students volunteer at the city festival."
+    }
   ]
 }

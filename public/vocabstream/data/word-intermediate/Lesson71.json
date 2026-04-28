@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-71",
   "title": "Lesson 71",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "advanced",
-      "meaning": "at a high level",
-      "japaneseMeaning": "上級の、進んだ",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "advanced, advancedly",
-      "example": "This is an advanced math class."
+      "word": "candidate",
+      "meaning": "a person who tries to get a job, prize, or position",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "candidate, candidates",
+      "example": "The candidate helped us understand the situation more clearly."
     },
     {
-      "word": "basic",
-      "meaning": "simple and important",
-      "japaneseMeaning": "基本的な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "basic, basicly",
-      "example": "We learned basic cooking skills."
+      "word": "device",
+      "meaning": "a small machine or tool",
+      "japaneseMeaning": "装置、機器",
+      "synonyms": "machine, tool",
+      "antonyms": "hand, idea",
+      "forms": "device, devices",
+      "example": "This device measures room temperature."
     },
     {
-      "word": "confident",
-      "meaning": "sure about your ability",
-      "japaneseMeaning": "自信のある",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "confident, confidently",
-      "example": "He sounded confident during the interview."
+      "word": "goal",
+      "meaning": "something you want to do or get",
+      "japaneseMeaning": "目標、ゴール",
+      "synonyms": "aim, target",
+      "antonyms": "failure, start",
+      "forms": "goal, goals",
+      "example": "My goal is to read one book each month."
     },
     {
-      "word": "eager",
-      "meaning": "wanting very much to do or get something",
-      "japaneseMeaning": "熱心な、 eager",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "eager, eagerly",
-      "example": "The eager students asked many questions."
+      "word": "market",
+      "meaning": "a place where people buy and sell goods",
+      "japaneseMeaning": "市場",
+      "synonyms": "bazaar",
+      "antonyms": "home, factory",
+      "forms": "market, markets",
+      "example": "The market is crowded on weekends."
     },
     {
-      "word": "experienced",
-      "meaning": "having done something many times",
-      "japaneseMeaning": "経験豊富な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "experienced, experiencedly",
-      "example": "An experienced nurse helped us."
+      "word": "purpose",
+      "meaning": "the reason why something is done or used",
+      "japaneseMeaning": "目的",
+      "synonyms": "aim, intention",
+      "antonyms": "pointlessness, futility",
+      "forms": "purpose, purposes",
+      "example": "The purpose of the study is clear."
     },
     {
-      "word": "independent",
-      "meaning": "able to do things without much help",
-      "japaneseMeaning": "自立した",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "independent, independently",
-      "example": "She became independent after moving out."
+      "word": "suggestion",
+      "meaning": "an idea that someone gives to help or solve a problem",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "suggestion, suggestions",
+      "example": "The suggestion helped us understand the situation more clearly."
     },
     {
-      "word": "motivated",
-      "meaning": "wanting strongly to do well",
-      "japaneseMeaning": "やる気のある",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "motivated, motivatedly",
-      "example": "The motivated class studied hard."
+      "word": "bank",
+      "meaning": "a place where people keep or borrow money",
+      "japaneseMeaning": "銀行",
+      "synonyms": "financial office, lender",
+      "antonyms": "home, shop",
+      "forms": "bank, banks",
+      "example": "The bank closes at three on Fridays."
     },
     {
-      "word": "patient",
-      "meaning": "able to wait calmly",
-      "japaneseMeaning": "忍耐強い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "patient, patiently",
-      "example": "A patient teacher explains things twice."
+      "word": "newspaper",
+      "meaning": "large paper pages or a website with news",
+      "japaneseMeaning": "新聞",
+      "synonyms": "paper, news site",
+      "antonyms": "novel, letter",
+      "forms": "newspaper, newspapers",
+      "example": "My grandfather reads the newspaper every morning."
     },
     {
-      "word": "skilled",
-      "meaning": "good at doing something",
-      "japaneseMeaning": "熟練した",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "skilled, skilledly",
-      "example": "A skilled worker repaired the machine."
+      "word": "diary",
+      "meaning": "a book where you write about your daily life",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "diary, diaries",
+      "example": "The diary helped us understand the situation more clearly."
     },
     {
-      "word": "talented",
-      "meaning": "having natural ability",
-      "japaneseMeaning": "才能のある",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "talented, talentedly",
-      "example": "The talented singer joined the concert."
+      "word": "mechanic",
+      "meaning": "a person who repairs machines or cars",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "mechanic, mechanics",
+      "example": "The mechanic helped us understand the situation more clearly."
     }
   ]
 }

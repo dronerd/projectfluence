@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-80",
   "title": "Lesson 80",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "bent",
-      "meaning": "not straight",
-      "japaneseMeaning": "曲がった",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "bent, bently",
-      "example": "The bent key would not open the door."
+      "word": "ceremony",
+      "meaning": "a formal event for an important time",
+      "japaneseMeaning": "式典、儀式",
+      "synonyms": "event, service",
+      "antonyms": "daily life, routine",
+      "forms": "ceremony, ceremonies",
+      "example": "The award ceremony started at ten o’clock."
     },
     {
-      "word": "cracked",
-      "meaning": "having a line of damage",
-      "japaneseMeaning": "ひびの入った",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "cracked, crackedly",
-      "example": "The cracked plate is unsafe."
+      "word": "district",
+      "meaning": "an area of a town or country",
+      "japaneseMeaning": "地区、地域",
+      "synonyms": "area, zone",
+      "antonyms": "center, whole country",
+      "forms": "district, districts",
+      "example": "This district is famous for old shops."
     },
     {
-      "word": "damaged",
-      "meaning": "harmed or broken",
-      "japaneseMeaning": "損傷した",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "damaged, damagedly",
-      "example": "The damaged phone needs repair."
+      "word": "headline",
+      "meaning": "the title of a news story",
+      "japaneseMeaning": "見出し",
+      "synonyms": "title, heading",
+      "antonyms": "text, detail",
+      "forms": "headline, headlines",
+      "example": "The headline made me want to read the article."
     },
     {
-      "word": "loose",
-      "meaning": "not firmly fixed",
-      "japaneseMeaning": "ゆるい",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "loose, loosely",
-      "example": "This loose button may fall off."
+      "word": "memory",
+      "meaning": "something you remember",
+      "japaneseMeaning": "記憶、思い出",
+      "synonyms": "recollection, thought",
+      "antonyms": "forgetting, mistake",
+      "forms": "memory, memories",
+      "example": "My best memory is our trip to Hokkaido."
     },
     {
-      "word": "neat",
-      "meaning": "tidy and in order",
-      "japaneseMeaning": "きちんとした",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "neat, neatly",
-      "example": "Her desk is always neat."
+      "word": "recognition",
+      "meaning": "acknowledgment or appreciation",
+      "japaneseMeaning": "認識、評価",
+      "synonyms": "acknowledgment, appreciation",
+      "antonyms": "ignorance, neglect",
+      "forms": "recognition, recognitions",
+      "example": "Her efforts received recognition."
     },
     {
-      "word": "plastic",
-      "meaning": "made of plastic",
-      "japaneseMeaning": "プラスチックの",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "plastic, plasticly",
-      "example": "Use a plastic cup for the picnic."
+      "word": "task",
+      "meaning": "a piece of work that must be done",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "task, tasks",
+      "example": "The task helped us understand the situation more clearly."
     },
     {
-      "word": "smooth",
-      "meaning": "even and not rough",
-      "japaneseMeaning": "なめらかな",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "smooth, smoothly",
-      "example": "The smooth road is easy to cycle on."
+      "word": "charge",
+      "meaning": "the money you must pay for something",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "charge, charges",
+      "example": "The charge helped us understand the situation more clearly."
     },
     {
-      "word": "solid",
-      "meaning": "hard, strong, or not liquid",
-      "japaneseMeaning": "固体の、しっかりした",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "solid, solidly",
-      "example": "The table is made of solid wood."
+      "word": "pattern",
+      "meaning": "a repeated design or a regular way something happens",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "pattern, patterns",
+      "example": "The pattern helped us understand the situation more clearly."
     },
     {
-      "word": "tight",
-      "meaning": "fitting closely or firmly fixed",
-      "japaneseMeaning": "きつい、しっかりした",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "tight, tightly",
-      "example": "These shoes are too tight."
+      "word": "edge",
+      "meaning": "the outside line or border of something",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "edge, edges",
+      "example": "The edge helped us understand the situation more clearly."
     },
     {
-      "word": "useful",
-      "meaning": "helpful for doing something",
-      "japaneseMeaning": "役に立つ",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "useful, usefully",
-      "example": "This tool is useful in the kitchen."
+      "word": "ritual",
+      "meaning": "ceremonial act",
+      "japaneseMeaning": "儀式",
+      "synonyms": "ceremony, tradition",
+      "antonyms": "casual, informal",
+      "forms": "ritual, rituals",
+      "example": "Morning rituals prepare us for the day."
     }
   ]
 }

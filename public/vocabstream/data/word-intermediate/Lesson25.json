@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-25",
   "title": "Lesson 25",
-  "paragraph": "A radio report said the city will start a new program for young workers. The research shows that a clear policy can improve job performance and support a better product. A manager asked one question about property rules, while another speaker discussed race and fairness. The organization will share the report with every office.",
   "words": [
-    { "word": "job", "meaning": "work that someone does to earn money", "japaneseMeaning": "仕事、職", "synonyms": "work, position", "antonyms": "unemployment, hobby", "forms": "job, jobs", "example": "She found a summer job at a hotel." },
-    { "word": "manager", "meaning": "a person who controls a team, shop, or business", "japaneseMeaning": "管理者、店長", "synonyms": "supervisor, director", "antonyms": "worker, assistant", "forms": "manager, managers", "example": "The manager answered the customer's question." },
-    { "word": "office", "meaning": "a room or building where people work at desks", "japaneseMeaning": "事務所、オフィス", "synonyms": "workplace, bureau", "antonyms": "home, field", "forms": "office, offices", "example": "The office opens at nine o'clock." },
-    { "word": "performance", "meaning": "how well someone does a job or activity", "japaneseMeaning": "成績、実績、公演", "synonyms": "result, achievement", "antonyms": "failure, weakness", "forms": "performance, performances", "example": "Her performance improved after more practice." },
-    { "word": "policy", "meaning": "a rule or plan used by a group or organization", "japaneseMeaning": "方針、政策", "synonyms": "rule, plan", "antonyms": "habit, exception", "forms": "policy, policies", "example": "The school has a new policy about phones." },
-    { "word": "product", "meaning": "something that is made or sold", "japaneseMeaning": "製品、商品", "synonyms": "item, goods", "antonyms": "service, material", "forms": "product, products", "example": "This product is popular with young people." },
-    { "word": "program", "meaning": "a planned set of activities or a computer application", "japaneseMeaning": "プログラム、計画", "synonyms": "plan, course", "antonyms": "accident, disorder", "forms": "program, programs", "example": "The library has a reading program for children." },
-    { "word": "property", "meaning": "something that a person or group owns", "japaneseMeaning": "財産、所有物、不動産", "synonyms": "belongings, land", "antonyms": "debt, public goods", "forms": "property, properties", "example": "The sign says this land is private property." },
-    { "word": "question", "meaning": "a sentence or problem that asks for an answer", "japaneseMeaning": "質問、問題", "synonyms": "inquiry, problem", "antonyms": "answer, reply", "forms": "question, questions", "example": "I have one question about the homework." },
-    { "word": "race", "meaning": "a competition to see who is fastest or a large human group", "japaneseMeaning": "競走、人種", "synonyms": "contest, group", "antonyms": "rest, individual", "forms": "race, races", "example": "The race around the park starts at noon." }
+    {
+      "word": "occupation",
+      "meaning": "the work that a person does to earn money",
+      "japaneseMeaning": "職業",
+      "synonyms": "profession, work",
+      "antonyms": "unemployment, free time",
+      "forms": "occupation, occupations",
+      "example": "Her occupation is shown at the top of the application form."
+    },
+    {
+      "word": "manager",
+      "meaning": "a person who controls a team, shop, or business",
+      "japaneseMeaning": "管理者、店長",
+      "synonyms": "supervisor, director",
+      "antonyms": "worker, assistant",
+      "forms": "manager, managers",
+      "example": "The manager answered the customer's question."
+    },
+    {
+      "word": "branch",
+      "meaning": "a local office or part of a larger organization",
+      "japaneseMeaning": "支店、部門",
+      "synonyms": "local office, division",
+      "antonyms": "headquarters, main office",
+      "forms": "branch, branches",
+      "example": "The bank opened a new branch near the station."
+    },
+    {
+      "word": "performance",
+      "meaning": "how well someone does a job or activity",
+      "japaneseMeaning": "成績、実績、公演",
+      "synonyms": "result, achievement",
+      "antonyms": "failure, weakness",
+      "forms": "performance, performances",
+      "example": "Her performance improved after more practice."
+    },
+    {
+      "word": "policy",
+      "meaning": "a rule or plan used by a group or organization",
+      "japaneseMeaning": "方針、政策",
+      "synonyms": "rule, plan",
+      "antonyms": "habit, exception",
+      "forms": "policy, policies",
+      "example": "The school has a new policy about phones."
+    },
+    {
+      "word": "merchandise",
+      "meaning": "goods that are bought and sold",
+      "japaneseMeaning": "商品、販売品",
+      "synonyms": "goods, products",
+      "antonyms": "service, waste",
+      "forms": "merchandise",
+      "example": "The store displays new merchandise near the entrance."
+    },
+    {
+      "word": "program",
+      "meaning": "a planned set of activities or a computer application",
+      "japaneseMeaning": "プログラム、計画",
+      "synonyms": "plan, course",
+      "antonyms": "accident, disorder",
+      "forms": "program, programs",
+      "example": "The library has a reading program for children."
+    },
+    {
+      "word": "property",
+      "meaning": "something that a person or group owns",
+      "japaneseMeaning": "財産、所有物、不動産",
+      "synonyms": "belongings, land",
+      "antonyms": "debt, public goods",
+      "forms": "property, properties",
+      "example": "The sign says this land is private property."
+    },
+    {
+      "word": "inquiry",
+      "meaning": "a request for information",
+      "japaneseMeaning": "問い合わせ、質問",
+      "synonyms": "question, request",
+      "antonyms": "answer, reply",
+      "forms": "inquiry, inquiries",
+      "example": "Please send your inquiry to the customer service desk."
+    },
+    {
+      "word": "ethnicity",
+      "meaning": "a person's cultural background or group",
+      "japaneseMeaning": "民族性、民族的背景",
+      "synonyms": "background, culture",
+      "antonyms": "individuality, sameness",
+      "forms": "ethnicity, ethnicities",
+      "example": "The survey did not ask about age or ethnicity."
+    }
   ]
 }

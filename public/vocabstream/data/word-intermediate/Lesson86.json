@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-86",
   "title": "Lesson 86",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "special",
-      "meaning": "different and important",
-      "japaneseMeaning": "特別な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "special, specially",
-      "example": "We made a special dinner."
+      "word": "outcome",
+      "meaning": "final result",
+      "japaneseMeaning": "結果",
+      "synonyms": "result, consequence",
+      "antonyms": "cause, beginning",
+      "forms": "outcome, outcomes",
+      "example": "The outcome was positive."
     },
     {
-      "word": "usual",
-      "meaning": "normal or common",
-      "japaneseMeaning": "いつもの",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "usual, usually",
-      "example": "We met at the usual place."
+      "word": "feeling",
+      "meaning": "an emotion or idea that you have inside",
+      "japaneseMeaning": "感情、気持ち",
+      "synonyms": "emotion, sense",
+      "antonyms": "thoughtlessness, emptiness",
+      "forms": "feeling, feelings",
+      "example": "I had a strange feeling before the phone rang."
     },
     {
-      "word": "spare",
-      "meaning": "extra and available if needed",
-      "japaneseMeaning": "予備の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "spare, sparely",
-      "example": "Bring a spare pen to the test."
+      "word": "identity",
+      "meaning": "sense of self or group",
+      "japaneseMeaning": "アイデンティティ",
+      "synonyms": "selfhood, personality",
+      "antonyms": "anonymity, obscurity",
+      "forms": "identity, identities",
+      "example": "Cultural identity shapes behavior."
     },
     {
-      "word": "sleepy",
-      "meaning": "wanting to sleep",
-      "japaneseMeaning": "眠い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "sleepy, sleepyly",
-      "example": "I felt sleepy after lunch."
+      "word": "model",
+      "meaning": "a small copy of something or a person who shows clothes",
+      "japaneseMeaning": "模型、モデル",
+      "synonyms": "copy, example",
+      "antonyms": "original, real thing",
+      "forms": "model, models",
+      "example": "He built a model of a famous ship."
     },
     {
-      "word": "awake",
-      "meaning": "not sleeping",
-      "japaneseMeaning": "起きている",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "awake, awakely",
-      "example": "The baby is awake now."
+      "word": "zone",
+      "meaning": "an area with a special use or rule",
+      "japaneseMeaning": "区域、ゾーン",
+      "synonyms": "area, section",
+      "antonyms": "whole, outside",
+      "forms": "zone, zones",
+      "example": "This zone is only for buses and taxis."
     },
     {
-      "word": "broad",
-      "meaning": "wide from side to side",
-      "japaneseMeaning": "広い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "broad, broadly",
-      "example": "The broad street has many trees."
+      "word": "textbook",
+      "meaning": "a book used for studying a subject",
+      "japaneseMeaning": "教科書",
+      "synonyms": "coursebook, book",
+      "antonyms": "notebook, magazine",
+      "forms": "textbook, textbooks",
+      "example": "Please bring your textbook to class."
     },
     {
-      "word": "first",
-      "meaning": "coming before all others",
-      "japaneseMeaning": "最初の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "first, firstly",
-      "example": "My first class starts at nine."
+      "word": "client",
+      "meaning": "a person who pays for a service",
+      "japaneseMeaning": "顧客、依頼人",
+      "synonyms": "customer, buyer",
+      "antonyms": "seller, worker",
+      "forms": "client, clients",
+      "example": "The lawyer called her client after the meeting."
     },
     {
-      "word": "rapid",
-      "meaning": "very fast",
-      "japaneseMeaning": "急速な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "rapid, rapidly",
-      "example": "The city saw rapid growth."
+      "word": "price",
+      "meaning": "the money you pay to buy something",
+      "japaneseMeaning": "価格、値段",
+      "synonyms": "cost, charge",
+      "antonyms": "free gift, refund",
+      "forms": "price, prices",
+      "example": "The price of this jacket is too high."
     },
     {
-      "word": "equal",
-      "meaning": "the same in amount or level",
-      "japaneseMeaning": "等しい",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "equal, equally",
-      "example": "Everyone gets an equal chance."
+      "word": "setting",
+      "meaning": "the place or situation where something happens",
+      "japaneseMeaning": "環境、舞台",
+      "synonyms": "place, scene",
+      "antonyms": "nowhere, emptiness",
+      "forms": "setting, settings",
+      "example": "The quiet setting helped everyone focus."
     },
     {
-      "word": "unfair",
-      "meaning": "not fair or equal",
-      "japaneseMeaning": "不公平な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "unfair, unfairly",
-      "example": "The unfair rule made students angry."
+      "word": "prize",
+      "meaning": "something given to a winner",
+      "japaneseMeaning": "賞、賞品",
+      "synonyms": "award, reward",
+      "antonyms": "punishment, loss",
+      "forms": "prize, prizes",
+      "example": "The first prize was a new bicycle."
     }
   ]
 }

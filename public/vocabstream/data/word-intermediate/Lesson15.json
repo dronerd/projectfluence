@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-15",
   "title": "Lesson 15",
-  "paragraph": "In the writing lesson, each student chooses a character and uses one clue to build a story. The teacher checks the content, asks an expert for a reference, and gives a grade. A college group donated money to the class fund, and students need permission to use more than ten percent of it for prizes.",
   "words": [
-    { "word": "reference", "meaning": "a source of information that you use to check facts", "japaneseMeaning": "参考資料、参照", "synonyms": "source, guide", "antonyms": "guess, memory", "forms": "reference, references", "example": "Use a dictionary as a reference when you write." },
-    { "word": "character", "meaning": "a person in a story, movie, or play", "japaneseMeaning": "登場人物、性格", "synonyms": "person, role", "antonyms": "reader, audience", "forms": "character, characters", "example": "My favorite character in the story is the brave sister." },
-    { "word": "clue", "meaning": "information that helps you find an answer", "japaneseMeaning": "手がかり、ヒント", "synonyms": "hint, sign", "antonyms": "mystery, confusion", "forms": "clue, clues", "example": "The first clue helped us solve the puzzle." },
-    { "word": "college", "meaning": "a school for higher education after high school", "japaneseMeaning": "大学、専門学校", "synonyms": "university, school", "antonyms": "kindergarten, workplace", "forms": "college, colleges", "example": "She wants to study science at college." },
-    { "word": "content", "meaning": "the information, ideas, or material in something", "japaneseMeaning": "内容、コンテンツ", "synonyms": "material, information", "antonyms": "form, container", "forms": "content, contents", "example": "The content of the speech was easy to understand." },
-    { "word": "expert", "meaning": "a person with special knowledge or skill", "japaneseMeaning": "専門家", "synonyms": "specialist, professional", "antonyms": "beginner, amateur", "forms": "expert, experts", "example": "An expert checked the old painting." },
-    { "word": "fund", "meaning": "money saved or collected for a special purpose", "japaneseMeaning": "基金、資金", "synonyms": "money, reserve", "antonyms": "debt, shortage", "forms": "fund, funds", "example": "The club started a fund for new sports equipment." },
-    { "word": "grade", "meaning": "a mark for schoolwork or a level in school", "japaneseMeaning": "成績、学年", "synonyms": "mark, score", "antonyms": "failure, zero", "forms": "grade, grades", "example": "I got a good grade on my history test." },
-    { "word": "percent", "meaning": "one part in every hundred", "japaneseMeaning": "パーセント、百分率", "synonyms": "percentage, rate", "antonyms": "whole, total", "forms": "percent, percentage", "example": "Only ten percent of the class chose art." },
-    { "word": "permission", "meaning": "the right to do something because someone allows it", "japaneseMeaning": "許可", "synonyms": "approval, allowance", "antonyms": "refusal, ban", "forms": "permission", "example": "You need permission to leave school early." }
+    {
+      "word": "reference",
+      "meaning": "a source of information that you use to check facts",
+      "japaneseMeaning": "参考資料、参照",
+      "synonyms": "source, guide",
+      "antonyms": "guess, memory",
+      "forms": "reference, references",
+      "example": "Use a dictionary as a reference when you write."
+    },
+    {
+      "word": "character",
+      "meaning": "a person in a story, movie, or play",
+      "japaneseMeaning": "登場人物、性格",
+      "synonyms": "person, role",
+      "antonyms": "reader, audience",
+      "forms": "character, characters",
+      "example": "My favorite character in the story is the brave sister."
+    },
+    {
+      "word": "clue",
+      "meaning": "information that helps you find an answer",
+      "japaneseMeaning": "手がかり、ヒント",
+      "synonyms": "hint, sign",
+      "antonyms": "mystery, confusion",
+      "forms": "clue, clues",
+      "example": "The first clue helped us solve the puzzle."
+    },
+    {
+      "word": "institution",
+      "meaning": "a large organization such as a school, bank, or hospital",
+      "japaneseMeaning": "機関、施設",
+      "synonyms": "organization, group",
+      "antonyms": "individual, person",
+      "forms": "institution, institutions",
+      "example": "The language school is a respected institution."
+    },
+    {
+      "word": "content",
+      "meaning": "the information, ideas, or material in something",
+      "japaneseMeaning": "内容、コンテンツ",
+      "synonyms": "material, information",
+      "antonyms": "form, container",
+      "forms": "content, contents",
+      "example": "The content of the speech was easy to understand."
+    },
+    {
+      "word": "expert",
+      "meaning": "a person with special knowledge or skill",
+      "japaneseMeaning": "専門家",
+      "synonyms": "specialist, professional",
+      "antonyms": "beginner, amateur",
+      "forms": "expert, experts",
+      "example": "An expert checked the old painting."
+    },
+    {
+      "word": "fund",
+      "meaning": "money saved or collected for a special purpose",
+      "japaneseMeaning": "基金、資金",
+      "synonyms": "money, reserve",
+      "antonyms": "debt, shortage",
+      "forms": "fund, funds",
+      "example": "The club started a fund for new sports equipment."
+    },
+    {
+      "word": "evaluation",
+      "meaning": "a judgment about the quality or value of something",
+      "japaneseMeaning": "評価",
+      "synonyms": "assessment, review",
+      "antonyms": "guess, neglect",
+      "forms": "evaluation, evaluations",
+      "example": "The teacher gave each student a short evaluation."
+    },
+    {
+      "word": "proportion",
+      "meaning": "the part of a whole that is compared with other parts",
+      "japaneseMeaning": "割合、比率",
+      "synonyms": "share, ratio",
+      "antonyms": "whole, total",
+      "forms": "proportion, proportions",
+      "example": "A large proportion of students use the library after school."
+    },
+    {
+      "word": "permission",
+      "meaning": "the right to do something because someone allows it",
+      "japaneseMeaning": "許可",
+      "synonyms": "approval, allowance",
+      "antonyms": "refusal, ban",
+      "forms": "permission",
+      "example": "You need permission to leave school early."
+    }
   ]
 }

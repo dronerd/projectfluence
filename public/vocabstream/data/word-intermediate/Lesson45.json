@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-45",
   "title": "Lesson 45",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "ask", "meaning": "to say or write a question", "japaneseMeaning": "尋ねる、頼む", "synonyms": "question, request", "antonyms": "answer, tell", "forms": "ask, asks, asking, asked", "example": "Please ask the teacher before you leave." },
-    { "word": "believe", "meaning": "to think that something is true", "japaneseMeaning": "信じる", "synonyms": "trust, accept", "antonyms": "doubt, deny", "forms": "believe, believes, believing, believed, belief", "example": "I believe the story because I saw it happen." },
-    { "word": "carry", "meaning": "to hold and move something from one place to another", "japaneseMeaning": "運ぶ、持つ", "synonyms": "bring, transport", "antonyms": "drop, leave", "forms": "carry, carries, carrying, carried", "example": "Can you carry this box upstairs?" },
-    { "word": "catch", "meaning": "to stop and hold something that is moving", "japaneseMeaning": "捕まえる、受け止める", "synonyms": "grab, capture", "antonyms": "drop, miss", "forms": "catch, catches, catching, caught", "example": "Try to catch the ball with both hands." },
-    { "word": "change", "meaning": "to become different or make something different", "japaneseMeaning": "変える、変わる", "synonyms": "alter, switch", "antonyms": "keep, remain", "forms": "change, changes, changing, changed", "example": "The leaves change color in autumn." },
-    { "word": "choose", "meaning": "to decide which thing or person you want", "japaneseMeaning": "選ぶ", "synonyms": "select, pick", "antonyms": "reject, refuse", "forms": "choose, chooses, choosing, chose, chosen", "example": "You can choose one topic for your speech." },
-    { "word": "drop", "meaning": "to let something fall", "japaneseMeaning": "落とす、下がる", "synonyms": "let fall, lower", "antonyms": "catch, lift", "forms": "drop, drops, dropping, dropped", "example": "Do not drop your phone on the floor." },
-    { "word": "enjoy", "meaning": "to like doing or experiencing something", "japaneseMeaning": "楽しむ", "synonyms": "like, appreciate", "antonyms": "dislike, hate", "forms": "enjoy, enjoys, enjoying, enjoyed, enjoyment", "example": "I enjoy reading before bed." },
-    { "word": "forget", "meaning": "to not remember something", "japaneseMeaning": "忘れる", "synonyms": "fail to remember, overlook", "antonyms": "remember, recall", "forms": "forget, forgets, forgetting, forgot, forgotten", "example": "Do not forget your umbrella." },
-    { "word": "grow", "meaning": "to become bigger or develop", "japaneseMeaning": "成長する、育つ", "synonyms": "develop, increase", "antonyms": "shrink, decline", "forms": "grow, grows, growing, grew, grown", "example": "Plants grow faster in warm weather." }
+    {
+      "word": "propose",
+      "meaning": "to suggest an idea",
+      "japaneseMeaning": "提案する",
+      "synonyms": "suggest, recommend",
+      "antonyms": "reject, oppose",
+      "forms": "propose, proposes, proposing, proposed",
+      "example": "He proposed a new plan."
+    },
+    {
+      "word": "deal",
+      "meaning": "to handle a problem or situation",
+      "japaneseMeaning": "対処する",
+      "synonyms": "handle, manage",
+      "antonyms": "avoid, ignore",
+      "forms": "deal, deals, dealing, dealt, dealt",
+      "example": "We deal with customer questions every morning."
+    },
+    {
+      "word": "join",
+      "meaning": "to become part of something",
+      "japaneseMeaning": "参加する／加わる",
+      "synonyms": "enter, connect",
+      "antonyms": "leave, separate",
+      "forms": "join, joins, joining, joined",
+      "example": "She joined the club last month."
+    },
+    {
+      "word": "report",
+      "meaning": "to tell people about something",
+      "japaneseMeaning": "報告する",
+      "synonyms": "inform, announce",
+      "antonyms": "conceal, hide",
+      "forms": "report, reports, reporting, reported",
+      "example": "She reported the incident to the manager."
+    },
+    {
+      "word": "insert",
+      "meaning": "to put something into something else",
+      "japaneseMeaning": "挿入する、差し込む",
+      "synonyms": "put in, include",
+      "antonyms": "remove, take out",
+      "forms": "insert, inserts, inserting, inserted",
+      "example": "Insert your student card before printing the file."
+    },
+    {
+      "word": "fight",
+      "meaning": "to take part in a violent confrontation",
+      "japaneseMeaning": "戦う／喧嘩する",
+      "synonyms": "battle, struggle",
+      "antonyms": "agree, surrender",
+      "forms": "fight, fights, fighting, fought, fought",
+      "example": "The two teams fought hard for a place in the final."
+    },
+    {
+      "word": "shake",
+      "meaning": "to move back and forth quickly",
+      "japaneseMeaning": "振る／揺れる",
+      "synonyms": "tremble, jolt",
+      "antonyms": "still, steady",
+      "forms": "shake, shakes, shaking, shook, shaken",
+      "example": "Shake the bottle before using."
+    },
+    {
+      "word": "retain",
+      "meaning": "to keep in memory",
+      "japaneseMeaning": "保持する",
+      "synonyms": "remember, preserve",
+      "antonyms": "forget, lose",
+      "forms": "retain, retains, retaining, retained",
+      "example": "He retained the information from class."
+    },
+    {
+      "word": "imply",
+      "meaning": "to suggest without stating directly",
+      "japaneseMeaning": "ほのめかす",
+      "synonyms": "suggest, indicate",
+      "antonyms": "state, declare",
+      "forms": "imply, implies, implying, implied",
+      "example": "His message seemed to imply that the meeting was canceled."
+    },
+    {
+      "word": "graduate",
+      "meaning": "to finish school, college, or university",
+      "japaneseMeaning": "卒業する",
+      "synonyms": "finish school, complete",
+      "antonyms": "drop out, fail",
+      "forms": "graduate, graduates, graduating, graduated",
+      "example": "My sister will graduate from college next spring."
+    }
   ]
 }

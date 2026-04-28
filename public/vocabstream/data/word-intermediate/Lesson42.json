@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-42",
   "title": "Lesson 42",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "add", "meaning": "to put something together with something else", "japaneseMeaning": "加える、足す", "synonyms": "include, put in", "antonyms": "remove, subtract", "forms": "add, adds, adding, added, addition", "example": "Add your name at the top of the page." },
-    { "word": "check", "meaning": "to look at something to make sure it is correct", "japaneseMeaning": "確認する", "synonyms": "inspect, confirm", "antonyms": "ignore, miss", "forms": "check, checks, checking, checked", "example": "Check your answers before you leave." },
-    { "word": "clean", "meaning": "to remove dirt from something", "japaneseMeaning": "掃除する、きれいにする", "synonyms": "wash, tidy", "antonyms": "dirty, stain", "forms": "clean, cleans, cleaning, cleaned", "example": "We clean the classroom after lunch." },
-    { "word": "cook", "meaning": "to prepare food with heat", "japaneseMeaning": "料理する", "synonyms": "prepare, make", "antonyms": "burn, freeze", "forms": "cook, cooks, cooking, cooked", "example": "My brother can cook curry very well." },
-    { "word": "count", "meaning": "to find the number of things", "japaneseMeaning": "数える", "synonyms": "number, calculate", "antonyms": "guess, ignore", "forms": "count, counts, counting, counted", "example": "Count the chairs before the meeting." },
-    { "word": "cry", "meaning": "to produce tears because of sadness, pain, or strong feeling", "japaneseMeaning": "泣く", "synonyms": "weep, sob", "antonyms": "laugh, smile", "forms": "cry, cries, crying, cried", "example": "The child began to cry after falling down." },
-    { "word": "dance", "meaning": "to move your body to music", "japaneseMeaning": "踊る", "synonyms": "move, perform", "antonyms": "stand still, stop", "forms": "dance, dances, dancing, danced", "example": "They dance at the festival every year." },
-    { "word": "dress", "meaning": "to put clothes on yourself or someone else", "japaneseMeaning": "服を着る、着せる", "synonyms": "clothe, wear", "antonyms": "undress, remove", "forms": "dress, dresses, dressing, dressed", "example": "Please dress warmly because it is cold." },
-    { "word": "fix", "meaning": "to repair something", "japaneseMeaning": "直す、修理する", "synonyms": "repair, mend", "antonyms": "break, damage", "forms": "fix, fixes, fixing, fixed", "example": "Can you fix this broken chair?" },
-    { "word": "hate", "meaning": "to dislike someone or something very much", "japaneseMeaning": "ひどく嫌う", "synonyms": "dislike, detest", "antonyms": "love, enjoy", "forms": "hate, hates, hating, hated", "example": "I hate waiting in long lines." }
+    {
+      "word": "rank",
+      "meaning": "to put people or things in order by level",
+      "japaneseMeaning": "順位をつける",
+      "synonyms": "order, rate",
+      "antonyms": "mix, disorder",
+      "forms": "rank, ranks, ranking, ranked",
+      "example": "The judges rank the photos from best to worst."
+    },
+    {
+      "word": "create",
+      "meaning": "to make something new",
+      "japaneseMeaning": "創造する",
+      "synonyms": "produce, make",
+      "antonyms": "destroy, ruin",
+      "forms": "create, creates, creating, created",
+      "example": "She created a beautiful design."
+    },
+    {
+      "word": "invite",
+      "meaning": "to ask someone to go somewhere or do something",
+      "japaneseMeaning": "招待する／誘う",
+      "synonyms": "ask, request",
+      "antonyms": "exclude, reject",
+      "forms": "invite, invites, inviting, invited",
+      "example": "We invited them to dinner."
+    },
+    {
+      "word": "repeat",
+      "meaning": "to say or do something again",
+      "japaneseMeaning": "繰り返す",
+      "synonyms": "say again, redo",
+      "antonyms": "stop, skip",
+      "forms": "repeat, repeats, repeating, repeated",
+      "example": "Please repeat the question."
+    },
+    {
+      "word": "compose",
+      "meaning": "to write a letter, story, song, or piece of music",
+      "japaneseMeaning": "書く、作曲する",
+      "synonyms": "write, create",
+      "antonyms": "copy, erase",
+      "forms": "compose, composes, composing, composed",
+      "example": "She composed a short message to thank her teacher."
+    },
+    {
+      "word": "feed",
+      "meaning": "to give food to a person or animal",
+      "japaneseMeaning": "えさをやる",
+      "synonyms": "give food, serve",
+      "antonyms": "starve, neglect",
+      "forms": "feed, feeds, feeding, fed, fed",
+      "example": "I feed my cat every morning."
+    },
+    {
+      "word": "transfer",
+      "meaning": "to move someone or something from one place to another",
+      "japaneseMeaning": "移す、転送する",
+      "synonyms": "move, pass",
+      "antonyms": "keep, hold",
+      "forms": "transfer, transfers, transferring, transferred",
+      "example": "The office will transfer the files to the new computer."
+    },
+    {
+      "word": "perceive",
+      "meaning": "to notice or understand something in a particular way",
+      "japaneseMeaning": "知覚する",
+      "synonyms": "notice, understand",
+      "antonyms": "ignore, overlook",
+      "forms": "perceive, perceives, perceiving, perceived",
+      "example": "Students may perceive the rule as unfair at first."
+    },
+    {
+      "word": "illustrate",
+      "meaning": "to explain with examples",
+      "japaneseMeaning": "例示する",
+      "synonyms": "show, explain",
+      "antonyms": "hide, confuse",
+      "forms": "illustrate, illustrates, illustrating, illustrated",
+      "example": "The chart illustrates how the number changed over time."
+    },
+    {
+      "word": "gather",
+      "meaning": "to come together or bring things together",
+      "japaneseMeaning": "集める、集まる",
+      "synonyms": "collect, meet",
+      "antonyms": "separate, scatter",
+      "forms": "gather, gathers, gathering, gathered",
+      "example": "We gathered information before writing the report."
+    }
   ]
 }

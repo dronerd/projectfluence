@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-43",
   "title": "Lesson 43",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "poor", "meaning": "having little money or low quality", "japaneseMeaning": "貧しい、質の悪い", "synonyms": "low-income, weak", "antonyms": "rich, excellent", "forms": "poor, poorly, poverty", "example": "The poor sound quality made the video hard to hear." },
-    { "word": "proud", "meaning": "pleased because of something you did or have", "japaneseMeaning": "誇りに思う", "synonyms": "pleased, satisfied", "antonyms": "ashamed, humble", "forms": "proud, proudly, pride", "example": "She felt proud of her test score." },
-    { "word": "quick", "meaning": "fast or taking little time", "japaneseMeaning": "速い、素早い", "synonyms": "fast, rapid", "antonyms": "slow, late", "forms": "quick, quickly, quickness", "example": "We had a quick lunch before class." },
-    { "word": "rare", "meaning": "not common or not often seen", "japaneseMeaning": "珍しい、まれな", "synonyms": "unusual, uncommon", "antonyms": "common, usual", "forms": "rare, rarely, rarity", "example": "It is rare to see snow here." },
-    { "word": "safe", "meaning": "not dangerous", "japaneseMeaning": "安全な", "synonyms": "secure, protected", "antonyms": "dangerous, risky", "forms": "safe, safely, safety", "example": "This path is safe for children." },
-    { "word": "serious", "meaning": "important, not funny, or needing careful thought", "japaneseMeaning": "深刻な、真剣な", "synonyms": "important, severe", "antonyms": "funny, minor", "forms": "serious, seriously, seriousness", "example": "The doctor found a serious problem." },
-    { "word": "short", "meaning": "small in length, height, or time", "japaneseMeaning": "短い、背が低い", "synonyms": "brief, small", "antonyms": "long, tall", "forms": "short, shorter, shortest, shortly", "example": "We took a short break after lunch." },
-    { "word": "silent", "meaning": "making no sound", "japaneseMeaning": "静かな、無言の", "synonyms": "quiet, soundless", "antonyms": "noisy, loud", "forms": "silent, silently, silence", "example": "The room became silent before the speech." },
-    { "word": "slow", "meaning": "not fast", "japaneseMeaning": "遅い、ゆっくりした", "synonyms": "not fast, gradual", "antonyms": "fast, quick", "forms": "slow, slowly, slowness", "example": "The slow bus made us late." },
-    { "word": "soft", "meaning": "not hard, rough, or loud", "japaneseMeaning": "柔らかい、穏やかな", "synonyms": "gentle, smooth", "antonyms": "hard, loud", "forms": "soft, softly, softness", "example": "The baby slept on a soft blanket." }
+    {
+      "word": "ambitious",
+      "meaning": "wanting strongly to succeed",
+      "japaneseMeaning": "野心的な、意欲的な",
+      "synonyms": "determined, eager",
+      "antonyms": "uninterested, lazy",
+      "forms": "ambitious, ambitiously",
+      "example": "She has an ambitious plan to start a business."
+    },
+    {
+      "word": "extensive",
+      "meaning": "covering a large area or including many things",
+      "japaneseMeaning": "広範囲の、大規模な",
+      "synonyms": "wide, large",
+      "antonyms": "limited, small",
+      "forms": "extensive, extensively",
+      "example": "The library has an extensive collection of science books."
+    },
+    {
+      "word": "independent",
+      "meaning": "able to do things without help or control from others",
+      "japaneseMeaning": "独立した",
+      "synonyms": "free, self-reliant",
+      "antonyms": "dependent, controlled",
+      "forms": "independent, independently",
+      "example": "She is an independent thinker."
+    },
+    {
+      "word": "modest",
+      "meaning": "not large, expensive, or proud",
+      "japaneseMeaning": "控えめな、質素な",
+      "synonyms": "simple, humble",
+      "antonyms": "proud, impressive",
+      "forms": "modest, modestly",
+      "example": "They live in a modest apartment near the park."
+    },
+    {
+      "word": "delighted",
+      "meaning": "very happy",
+      "japaneseMeaning": "とても喜んだ",
+      "synonyms": "happy, pleased",
+      "antonyms": "sad, upset",
+      "forms": "delighted, more delighted, most delighted",
+      "example": "She was delighted with the birthday surprise."
+    },
+    {
+      "word": "dangerous",
+      "meaning": "likely to cause harm or injury",
+      "japaneseMeaning": "危険な",
+      "synonyms": "hazardous, risky",
+      "antonyms": "safe, harmless",
+      "forms": "dangerous, more dangerous, most dangerous",
+      "example": "Crossing the road here is dangerous without a signal."
+    },
+    {
+      "word": "guilty",
+      "meaning": "feeling responsible for wrongdoing",
+      "japaneseMeaning": "罪悪感がある",
+      "synonyms": "remorseful, ashamed",
+      "antonyms": "innocent, blameless",
+      "forms": "guilty, more guilty, most guilty",
+      "example": "He felt guilty about breaking the vase."
+    },
+    {
+      "word": "cautious",
+      "meaning": "careful to avoid danger",
+      "japaneseMeaning": "慎重な",
+      "synonyms": "careful, wary",
+      "antonyms": "reckless, careless",
+      "forms": "cautious, cautiously",
+      "example": "Being cautious prevented accidents."
+    },
+    {
+      "word": "prepared",
+      "meaning": "ready for something",
+      "japaneseMeaning": "準備ができた",
+      "synonyms": "ready, organized",
+      "antonyms": "unprepared, careless",
+      "forms": "prepared, more prepared, most prepared",
+      "example": "She came prepared with notes and questions."
+    },
+    {
+      "word": "confidential",
+      "meaning": "private and not to be shared with other people",
+      "japaneseMeaning": "機密の、内密の",
+      "synonyms": "private, secret",
+      "antonyms": "public, open",
+      "forms": "confidential, confidentially",
+      "example": "Please keep this information confidential."
+    }
   ]
 }

@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-81",
   "title": "Lesson 81",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "advice",
-      "meaning": "an idea that helps someone decide what to do",
-      "japaneseMeaning": "助言",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "advice, advices",
-      "example": "My teacher gave me useful advice."
+      "word": "track",
+      "meaning": "to follow where someone or something goes",
+      "japaneseMeaning": "追跡する",
+      "synonyms": "follow, trace",
+      "antonyms": "lose, miss",
+      "forms": "track, tracks, tracking, tracked",
+      "example": "The app can track how far you walk."
     },
     {
-      "word": "advantage",
-      "meaning": "something that helps you succeed",
-      "japaneseMeaning": "利点",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "advantage, advantages",
-      "example": "Living near school is an advantage."
+      "word": "enter",
+      "meaning": "to come or go into a place",
+      "japaneseMeaning": "入る",
+      "synonyms": "go in, come in",
+      "antonyms": "exit, leave",
+      "forms": "enter, enters, entering, entered",
+      "example": "Please enter the room quietly."
     },
     {
-      "word": "alarm",
-      "meaning": "a sound or device that warns people",
-      "japaneseMeaning": "警報、目覚まし",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "alarm, alarms",
-      "example": "The fire alarm rang loudly."
+      "word": "postpone",
+      "meaning": "to delay something until a later time",
+      "japaneseMeaning": "延期する",
+      "synonyms": "delay, put off",
+      "antonyms": "advance, continue",
+      "forms": "postpone, postpones, postponing, postponed",
+      "example": "They postpone the meeting because the manager is sick."
     },
     {
-      "word": "amount",
-      "meaning": "how much there is of something",
-      "japaneseMeaning": "量、金額",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "amount, amounts",
-      "example": "The amount of rain was surprising."
+      "word": "donate",
+      "meaning": "to give money or things to help people",
+      "japaneseMeaning": "寄付する",
+      "synonyms": "give, contribute",
+      "antonyms": "keep, take",
+      "forms": "donate, donates, donating, donated",
+      "example": "Many families donate food before the holiday."
     },
     {
-      "word": "animal",
-      "meaning": "a living thing that is not a plant",
-      "japaneseMeaning": "動物",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "animal, animals",
-      "example": "The zoo has a rare animal."
+      "word": "count",
+      "meaning": "to say numbers in order to find how many things there are",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "count, counts, counting, counted",
+      "example": "We need to count the plan before Friday."
     },
     {
-      "word": "area",
-      "meaning": "a part of a place or subject",
-      "japaneseMeaning": "地域、範囲",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "area, areas",
-      "example": "This area is quiet at night."
+      "word": "move",
+      "meaning": "to change position or location",
+      "japaneseMeaning": "動く／移動する",
+      "synonyms": "shift, relocate",
+      "antonyms": "stay, remain",
+      "forms": "move, moves, moving, moved",
+      "example": "They moved to a new city."
     },
     {
-      "word": "arm",
-      "meaning": "the body part from shoulder to hand",
-      "japaneseMeaning": "腕",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "arm, arms",
-      "example": "He broke his arm last winter."
+      "word": "translate",
+      "meaning": "to change words from one language into another",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "translate, translates, translating, translated",
+      "example": "We need to translate the plan before Friday."
     },
     {
-      "word": "baby",
-      "meaning": "a very young child",
-      "japaneseMeaning": "赤ちゃん",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "baby, babies",
-      "example": "The baby slept in the car."
+      "word": "persuade",
+      "meaning": "to make someone agree to do or believe something",
+      "japaneseMeaning": "説得する",
+      "synonyms": "convince, influence",
+      "antonyms": "dissuade, discourage",
+      "forms": "persuade, persuades, persuading, persuaded",
+      "example": "She persuaded him to join."
     },
     {
-      "word": "bag",
-      "meaning": "a container used for carrying things",
-      "japaneseMeaning": "かばん、袋",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bag, bags",
-      "example": "Put the books in this bag."
+      "word": "vary",
+      "meaning": "to change or differ",
+      "japaneseMeaning": "変わる、異なる",
+      "synonyms": "differ, fluctuate",
+      "antonyms": "remain, stay",
+      "forms": "vary, varies, varying, varied",
+      "example": "Temperatures vary across regions."
     },
     {
-      "word": "ball",
-      "meaning": "a round object used in games",
-      "japaneseMeaning": "ボール",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "ball, balls",
-      "example": "The ball rolled under the table."
+      "word": "regard",
+      "meaning": "to think of someone or something in a certain way",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "regard, regards, regarding, regarded",
+      "example": "We need to regard the plan before Friday."
     }
   ]
 }

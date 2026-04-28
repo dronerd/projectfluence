@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-6",
   "title": "Lesson 6",
-  "paragraph": "At the training center, attendance is checked before each class. Students read the instruction sheet, fill in a form, and save every document in a folder. The teacher writes a short note about each student, checks the equipment and supply box, and talks about any trouble. A good relationship in class helps everyone enjoy a variety of tasks.",
   "words": [
-    { "word": "attendance", "meaning": "the act of being present at a class, meeting, or event", "japaneseMeaning": "出席、参加", "synonyms": "presence, participation", "antonyms": "absence, nonattendance", "forms": "attendance", "example": "Attendance is important because the class meets only once a week." },
-    { "word": "document", "meaning": "a paper or computer file with written information", "japaneseMeaning": "書類、文書", "synonyms": "paper, file", "antonyms": "blank, speech", "forms": "document, documents", "example": "Please sign the document before you leave the office." },
-    { "word": "equipment", "meaning": "the tools or machines needed for a job or activity", "japaneseMeaning": "設備、用具", "synonyms": "tools, gear", "antonyms": "supplies, materials", "forms": "equipment", "example": "The sports club bought new equipment for the gym." },
-    { "word": "form", "meaning": "a paper or online page where you write information", "japaneseMeaning": "用紙、フォーム", "synonyms": "application, sheet", "antonyms": "letter, note", "forms": "form, forms", "example": "I wrote my phone number on the form." },
-    { "word": "instruction", "meaning": "information that tells you how to do something", "japaneseMeaning": "指示、説明", "synonyms": "direction, guidance", "antonyms": "confusion, mistake", "forms": "instruction, instructions", "example": "The instruction on the box says to add hot water." },
-    { "word": "note", "meaning": "a short piece of writing used to remember or tell something", "japaneseMeaning": "メモ、短い記録", "synonyms": "message, memo", "antonyms": "silence, speech", "forms": "note, notes", "example": "She left a note on the kitchen table." },
-    { "word": "supply", "meaning": "an amount of something that is ready to be used", "japaneseMeaning": "供給、備え", "synonyms": "stock, amount", "antonyms": "shortage, lack", "forms": "supply, supplies", "example": "The school keeps a supply of paper in the office." },
-    { "word": "relationship", "meaning": "the way two people or groups are connected", "japaneseMeaning": "関係、人間関係", "synonyms": "connection, link", "antonyms": "separation, distance", "forms": "relationship, relationships", "example": "A good relationship with classmates makes group work easier." },
-    { "word": "trouble", "meaning": "a problem or difficulty", "japaneseMeaning": "問題、困難", "synonyms": "problem, difficulty", "antonyms": "ease, peace", "forms": "trouble, troubles", "example": "Call me if you have trouble with the new printer." },
-    { "word": "variety", "meaning": "a number of different types of things", "japaneseMeaning": "多様性、さまざまな種類", "synonyms": "range, mix", "antonyms": "sameness, uniformity", "forms": "variety, varieties", "example": "The store sells a variety of fresh fruit." }
+    {
+      "word": "attendance",
+      "meaning": "the act of being present at a class, meeting, or event",
+      "japaneseMeaning": "出席、参加",
+      "synonyms": "presence, participation",
+      "antonyms": "absence, nonattendance",
+      "forms": "attendance",
+      "example": "Attendance is important because the class meets only once a week."
+    },
+    {
+      "word": "document",
+      "meaning": "a paper or computer file with written information",
+      "japaneseMeaning": "書類、文書",
+      "synonyms": "paper, file",
+      "antonyms": "blank, speech",
+      "forms": "document, documents",
+      "example": "Please sign the document before you leave the office."
+    },
+    {
+      "word": "equipment",
+      "meaning": "the tools or machines needed for a job or activity",
+      "japaneseMeaning": "設備、用具",
+      "synonyms": "tools, gear",
+      "antonyms": "supplies, materials",
+      "forms": "equipment",
+      "example": "The sports club bought new equipment for the gym."
+    },
+    {
+      "word": "application",
+      "meaning": "a formal request for a job, school place, or permission",
+      "japaneseMeaning": "応募、申請",
+      "synonyms": "request, form",
+      "antonyms": "refusal, rejection",
+      "forms": "application, applications",
+      "example": "She sent her application before the deadline."
+    },
+    {
+      "word": "instruction",
+      "meaning": "information that tells you how to do something",
+      "japaneseMeaning": "指示、説明",
+      "synonyms": "direction, guidance",
+      "antonyms": "confusion, mistake",
+      "forms": "instruction, instructions",
+      "example": "The instruction on the box says to add hot water."
+    },
+    {
+      "word": "guideline",
+      "meaning": "advice or a rule that helps people decide what to do",
+      "japaneseMeaning": "指針、ガイドライン",
+      "synonyms": "rule, advice",
+      "antonyms": "confusion, disorder",
+      "forms": "guideline, guidelines",
+      "example": "The teacher gave us clear guidelines for the report."
+    },
+    {
+      "word": "supply",
+      "meaning": "an amount of something that is ready to be used",
+      "japaneseMeaning": "供給、備え",
+      "synonyms": "stock, amount",
+      "antonyms": "shortage, lack",
+      "forms": "supply, supplies",
+      "example": "The school keeps a supply of paper in the office."
+    },
+    {
+      "word": "relationship",
+      "meaning": "the way two people or groups are connected",
+      "japaneseMeaning": "関係、人間関係",
+      "synonyms": "connection, link",
+      "antonyms": "separation, distance",
+      "forms": "relationship, relationships",
+      "example": "A good relationship with classmates makes group work easier."
+    },
+    {
+      "word": "trouble",
+      "meaning": "a problem or difficulty",
+      "japaneseMeaning": "問題、困難",
+      "synonyms": "problem, difficulty",
+      "antonyms": "ease, peace",
+      "forms": "trouble, troubles",
+      "example": "Call me if you have trouble with the new printer."
+    },
+    {
+      "word": "variety",
+      "meaning": "a number of different types of things",
+      "japaneseMeaning": "多様性、さまざまな種類",
+      "synonyms": "range, mix",
+      "antonyms": "sameness, uniformity",
+      "forms": "variety, varieties",
+      "example": "The store sells a variety of fresh fruit."
+    }
   ]
 }

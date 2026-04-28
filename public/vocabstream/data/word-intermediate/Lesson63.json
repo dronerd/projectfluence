@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-63",
   "title": "Lesson 63",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "important", "meaning": "having great value or effect", "japaneseMeaning": "重要な", "synonyms": "key, major", "antonyms": "unimportant, minor", "forms": "important, importantly, importance", "example": "Sleep is important for health." },
-    { "word": "interesting", "meaning": "making you want to know more", "japaneseMeaning": "興味深い", "synonyms": "engaging, exciting", "antonyms": "boring, dull", "forms": "interesting, interestingly, interest", "example": "The museum had an interesting map." },
-    { "word": "large", "meaning": "big in size or amount", "japaneseMeaning": "大きい、多い", "synonyms": "big, wide", "antonyms": "small, little", "forms": "large, larger, largest", "example": "A large tree grows beside the school." },
-    { "word": "left", "meaning": "on the side of your body with the weaker hand for most people", "japaneseMeaning": "左の、残った", "synonyms": "left-hand, remaining", "antonyms": "right, gone", "forms": "left", "example": "Turn left at the bank." },
-    { "word": "little", "meaning": "small in size or amount", "japaneseMeaning": "小さい、少しの", "synonyms": "small, tiny", "antonyms": "big, much", "forms": "little, less, least", "example": "A little child waved at us." },
-    { "word": "long", "meaning": "having a great length or lasting much time", "japaneseMeaning": "長い", "synonyms": "lengthy, extended", "antonyms": "short, brief", "forms": "long, longer, longest", "example": "It was a long walk to the station." },
-    { "word": "low", "meaning": "not high or below the usual level", "japaneseMeaning": "低い", "synonyms": "short, reduced", "antonyms": "high, tall", "forms": "low, lower, lowest", "example": "The price is low this week." },
-    { "word": "married", "meaning": "having a husband or wife", "japaneseMeaning": "結婚している", "synonyms": "wed, partnered", "antonyms": "single, unmarried", "forms": "married, marry, marriage", "example": "My sister is married and lives in Kyoto." },
-    { "word": "middle", "meaning": "in the center or halfway between two sides", "japaneseMeaning": "真ん中の", "synonyms": "central, halfway", "antonyms": "edge, end", "forms": "middle", "example": "The middle seat is empty." },
-    { "word": "new", "meaning": "recently made or not used before", "japaneseMeaning": "新しい", "synonyms": "recent, fresh", "antonyms": "old, used", "forms": "new, newer, newest", "example": "I bought a new notebook." }
+    {
+      "word": "avoid",
+      "meaning": "to keep away from someone or something",
+      "japaneseMeaning": "避ける",
+      "synonyms": "evade, prevent",
+      "antonyms": "confront, face",
+      "forms": "avoid, avoids, avoiding, avoided",
+      "example": "Try to avoid heavy traffic."
+    },
+    {
+      "word": "prohibit",
+      "meaning": "to officially not allow something",
+      "japaneseMeaning": "禁止する",
+      "synonyms": "ban, forbid",
+      "antonyms": "allow, permit",
+      "forms": "prohibit, prohibits, prohibiting, prohibited",
+      "example": "The rules prohibit smoking near the school."
+    },
+    {
+      "word": "target",
+      "meaning": "to choose someone or something as the aim",
+      "japaneseMeaning": "目標にする",
+      "synonyms": "aim at, focus on",
+      "antonyms": "avoid, ignore",
+      "forms": "target, targets, targeting, targeted",
+      "example": "The lesson will target common writing mistakes."
+    },
+    {
+      "word": "seek",
+      "meaning": "to try to find or get something",
+      "japaneseMeaning": "探し求める、求める",
+      "synonyms": "look for, request",
+      "antonyms": "avoid, ignore",
+      "forms": "seek, seeks, seeking, sought, sought",
+      "example": "Many students seek advice before choosing a course."
+    },
+    {
+      "word": "ignite",
+      "meaning": "to start burning or make something start to burn",
+      "japaneseMeaning": "火をつける、燃え始める",
+      "synonyms": "light, start",
+      "antonyms": "put out, cool",
+      "forms": "ignite, ignites, igniting, ignited",
+      "example": "A small spark can ignite dry leaves."
+    },
+    {
+      "word": "invent",
+      "meaning": "to create something new",
+      "japaneseMeaning": "発明する",
+      "synonyms": "create, innovate",
+      "antonyms": "imitate, copy",
+      "forms": "invent, invents, inventing, invented",
+      "example": "He invented a useful device."
+    },
+    {
+      "word": "adhere",
+      "meaning": "to stick firmly to something or follow a rule",
+      "japaneseMeaning": "くっつく、従う",
+      "synonyms": "stick, follow",
+      "antonyms": "separate, ignore",
+      "forms": "adhere, adheres, adhering, adhered",
+      "example": "Students must adhere to the safety rules."
+    },
+    {
+      "word": "acknowledge",
+      "meaning": "to recognize as true",
+      "japaneseMeaning": "認める",
+      "synonyms": "admit, recognize",
+      "antonyms": "deny, ignore",
+      "forms": "acknowledge, acknowledges, acknowledging, acknowledged",
+      "example": "She acknowledged his contribution."
+    },
+    {
+      "word": "infer",
+      "meaning": "to guess from the facts you have",
+      "japaneseMeaning": "推測する",
+      "synonyms": "conclude, guess",
+      "antonyms": "misunderstand, ignore",
+      "forms": "infer, infers, inferring, inferred",
+      "example": "From her smile, I inferred that she liked the idea."
+    },
+    {
+      "word": "obtain",
+      "meaning": "to get something",
+      "japaneseMeaning": "得る、入手する",
+      "synonyms": "get, acquire",
+      "antonyms": "lose, give",
+      "forms": "obtain, obtains, obtaining, obtained",
+      "example": "You need to obtain permission before using the photo."
+    }
   ]
 }

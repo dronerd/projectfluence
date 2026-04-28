@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-47",
   "title": "Lesson 47",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "answer", "meaning": "to reply to a question", "japaneseMeaning": "答える", "synonyms": "reply, respond", "antonyms": "ask, ignore", "forms": "answer, answers, answering, answered", "example": "Please answer the question in a full sentence." },
-    { "word": "begin", "meaning": "to start doing something", "japaneseMeaning": "始める、始まる", "synonyms": "start, open", "antonyms": "end, finish", "forms": "begin, begins, beginning, began, begun", "example": "The class will begin at nine." },
-    { "word": "bring", "meaning": "to carry something or someone to a place", "japaneseMeaning": "持ってくる", "synonyms": "carry, take", "antonyms": "remove, leave", "forms": "bring, brings, bringing, brought", "example": "Please bring your notebook tomorrow." },
-    { "word": "buy", "meaning": "to get something by paying money", "japaneseMeaning": "買う", "synonyms": "purchase, get", "antonyms": "sell, return", "forms": "buy, buys, buying, bought", "example": "I want to buy a warm coat." },
-    { "word": "call", "meaning": "to phone someone or say a name loudly", "japaneseMeaning": "電話する、呼ぶ", "synonyms": "phone, shout", "antonyms": "ignore, whisper", "forms": "call, calls, calling, called", "example": "Call me when you arrive." },
-    { "word": "drink", "meaning": "to take liquid into your mouth", "japaneseMeaning": "飲む", "synonyms": "sip, swallow", "antonyms": "eat, spill", "forms": "drink, drinks, drinking, drank, drunk", "example": "Drink water after exercise." },
-    { "word": "feel", "meaning": "to experience an emotion or physical sense", "japaneseMeaning": "感じる", "synonyms": "sense, experience", "antonyms": "ignore, miss", "forms": "feel, feels, feeling, felt", "example": "I feel nervous before tests." },
-    { "word": "find", "meaning": "to discover something after looking", "japaneseMeaning": "見つける", "synonyms": "discover, locate", "antonyms": "lose, miss", "forms": "find, finds, finding, found", "example": "Can you find my keys?" },
-    { "word": "get", "meaning": "to receive, obtain, or become", "japaneseMeaning": "得る、受け取る", "synonyms": "receive, obtain", "antonyms": "lose, give", "forms": "get, gets, getting, got, gotten", "example": "I get emails from school every week." },
-    { "word": "give", "meaning": "to let someone have something", "japaneseMeaning": "与える、渡す", "synonyms": "offer, provide", "antonyms": "take, receive", "forms": "give, gives, giving, gave, given", "example": "Please give this note to your teacher." }
+    {
+      "word": "anxiety",
+      "meaning": "a strong feeling of worry or fear",
+      "japaneseMeaning": "不安、心配",
+      "synonyms": "worry, fear",
+      "antonyms": "calm, confidence",
+      "forms": "anxiety, anxieties",
+      "example": "He felt anxiety before the exam."
+    },
+    {
+      "word": "course",
+      "meaning": "a set of classes about one subject",
+      "japaneseMeaning": "講座、コース",
+      "synonyms": "class, program",
+      "antonyms": "break, holiday",
+      "forms": "course, courses",
+      "example": "This course teaches basic computer skills."
+    },
+    {
+      "word": "facility",
+      "meaning": "a place, building, or service made for a special use",
+      "japaneseMeaning": "施設、設備",
+      "synonyms": "building, service",
+      "antonyms": "shortage, lack",
+      "forms": "facility, facilities",
+      "example": "The sports facility is open until nine."
+    },
+    {
+      "word": "journey",
+      "meaning": "travel from one place to another",
+      "japaneseMeaning": "旅",
+      "synonyms": "trip, travel",
+      "antonyms": "stay, stop",
+      "forms": "journey, journeys",
+      "example": "The journey was exhausting but rewarding."
+    },
+    {
+      "word": "payment",
+      "meaning": "money given for something you buy or use",
+      "japaneseMeaning": "支払い",
+      "synonyms": "money, fee",
+      "antonyms": "refund, debt",
+      "forms": "payment, payments",
+      "example": "The payment is due by the end of the month."
+    },
+    {
+      "word": "license",
+      "meaning": "an official card or paper that lets you do something",
+      "japaneseMeaning": "免許、許可証",
+      "synonyms": "permit, certificate",
+      "antonyms": "ban, refusal",
+      "forms": "license, licenses",
+      "example": "You need a license to drive a car."
+    },
+    {
+      "word": "workplace",
+      "meaning": "a place where people do their jobs",
+      "japaneseMeaning": "職場",
+      "synonyms": "office, work site",
+      "antonyms": "home, school",
+      "forms": "workplace, workplaces",
+      "example": "The workplace has a small kitchen for staff."
+    },
+    {
+      "word": "consequence",
+      "meaning": "a result of an action or event",
+      "japaneseMeaning": "結果",
+      "synonyms": "result, effect",
+      "antonyms": "cause, reason",
+      "forms": "consequence, consequences",
+      "example": "One consequence of heavy rain was a late train."
+    },
+    {
+      "word": "channel",
+      "meaning": "a TV station, or a way to send information",
+      "japaneseMeaning": "チャンネル、伝達経路",
+      "synonyms": "station, route",
+      "antonyms": "block, barrier",
+      "forms": "channel, channels",
+      "example": "Email is the main channel for school notices."
+    },
+    {
+      "word": "judge",
+      "meaning": "a person who decides cases in a court or contest",
+      "japaneseMeaning": "裁判官、審査員",
+      "synonyms": "official, referee",
+      "antonyms": "player, contestant",
+      "forms": "judge, judges",
+      "example": "The judge listened carefully to both sides."
+    }
   ]
 }

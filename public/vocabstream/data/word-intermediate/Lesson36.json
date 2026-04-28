@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-36",
   "title": "Lesson 36",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "ring", "meaning": "to make the sound of a bell or phone", "japaneseMeaning": "鳴る、鳴らす", "synonyms": "sound, chime", "antonyms": "silence, stop", "forms": "ring, rings, ringing, rang, rung", "example": "The phone will ring when someone calls." },
-    { "word": "shake", "meaning": "to move quickly from side to side or up and down", "japaneseMeaning": "振る、震える", "synonyms": "tremble, wave", "antonyms": "steady, hold still", "forms": "shake, shakes, shaking, shook, shaken", "example": "Shake the bottle before you drink it." },
-    { "word": "shout", "meaning": "to speak very loudly", "japaneseMeaning": "叫ぶ、大声で言う", "synonyms": "yell, call out", "antonyms": "whisper, mumble", "forms": "shout, shouts, shouting, shouted", "example": "Do not shout in the library." },
-    { "word": "ski", "meaning": "to move over snow using skis", "japaneseMeaning": "スキーをする", "synonyms": "snow ski, glide", "antonyms": "walk, stop", "forms": "ski, skis, skiing, skied", "example": "We ski in the mountains every winter." },
-    { "word": "smell", "meaning": "to notice something with your nose", "japaneseMeaning": "においがする、においをかぐ", "synonyms": "sniff, scent", "antonyms": "ignore, miss", "forms": "smell, smells, smelling, smelled, smelt", "example": "I can smell fresh bread from the kitchen." },
-    { "word": "smile", "meaning": "to show happiness with your mouth", "japaneseMeaning": "ほほえむ、笑顔になる", "synonyms": "grin, beam", "antonyms": "frown, cry", "forms": "smile, smiles, smiling, smiled", "example": "She will smile when she sees the gift." },
-    { "word": "spell", "meaning": "to say or write the letters of a word in order", "japaneseMeaning": "つづる", "synonyms": "write, name letters", "antonyms": "misspell, confuse", "forms": "spell, spells, spelling, spelled, spelt", "example": "Can you spell your family name?" },
-    { "word": "stand", "meaning": "to be on your feet", "japaneseMeaning": "立つ", "synonyms": "be upright, rise", "antonyms": "sit, lie", "forms": "stand, stands, standing, stood", "example": "Please stand near the door." },
-    { "word": "steal", "meaning": "to take something that belongs to someone else", "japaneseMeaning": "盗む", "synonyms": "rob, take", "antonyms": "return, give", "forms": "steal, steals, stealing, stole, stolen", "example": "It is wrong to steal money from a friend." },
-    { "word": "stretch", "meaning": "to make your body or something else longer or wider", "japaneseMeaning": "伸ばす、広げる", "synonyms": "extend, lengthen", "antonyms": "shrink, shorten", "forms": "stretch, stretches, stretching, stretched", "example": "Stretch your legs after sitting for a long time." }
+    {
+      "word": "admit",
+      "meaning": "to confess or acknowledge something",
+      "japaneseMeaning": "認める／告白する",
+      "synonyms": "confess, acknowledge",
+      "antonyms": "deny, reject",
+      "forms": "admit, admits, admitting, admitted",
+      "example": "He admitted his mistake."
+    },
+    {
+      "word": "continue",
+      "meaning": "to keep doing something",
+      "japaneseMeaning": "続ける",
+      "synonyms": "persist, carry on",
+      "antonyms": "stop, cease",
+      "forms": "continue, continues, continuing, continued",
+      "example": "We continue to work on the task."
+    },
+    {
+      "word": "influence",
+      "meaning": "to change how someone thinks or acts",
+      "japaneseMeaning": "影響を与える",
+      "synonyms": "affect, shape",
+      "antonyms": "ignore, prevent",
+      "forms": "influence, influences, influencing, influenced",
+      "example": "Friends can influence the choices we make."
+    },
+    {
+      "word": "import",
+      "meaning": "to bring goods from another country",
+      "japaneseMeaning": "輸入する",
+      "synonyms": "bring in, buy in",
+      "antonyms": "export, send out",
+      "forms": "import, imports, importing, imported",
+      "example": "The shop will import coffee from Brazil."
+    },
+    {
+      "word": "equip",
+      "meaning": "to provide someone or something with what is needed",
+      "japaneseMeaning": "備え付ける、装備する",
+      "synonyms": "provide, prepare",
+      "antonyms": "remove, lack",
+      "forms": "equip, equips, equipping, equipped",
+      "example": "The school equipped each classroom with a projector."
+    },
+    {
+      "word": "exist",
+      "meaning": "to be real or be present",
+      "japaneseMeaning": "存在する",
+      "synonyms": "be, live",
+      "antonyms": "disappear, vanish",
+      "forms": "exist, exists, existing, existed",
+      "example": "Many different opinions exist in our class."
+    },
+    {
+      "word": "rule",
+      "meaning": "to control a country or group",
+      "japaneseMeaning": "支配する、統治する",
+      "synonyms": "govern, control",
+      "antonyms": "obey, follow",
+      "forms": "rule, rules, ruling, ruled",
+      "example": "The king ruled the country for many years."
+    },
+    {
+      "word": "adjust",
+      "meaning": "to change slightly to improve",
+      "japaneseMeaning": "調整する",
+      "synonyms": "modify, adapt",
+      "antonyms": "ignore, neglect",
+      "forms": "adjust, adjusts, adjusting, adjusted",
+      "example": "Adjust the settings for better results."
+    },
+    {
+      "word": "convey",
+      "meaning": "to communicate a message",
+      "japaneseMeaning": "伝える",
+      "synonyms": "express, communicate",
+      "antonyms": "hide, withhold",
+      "forms": "convey, conveys, conveying, conveyed",
+      "example": "The letter conveyed her feelings."
+    },
+    {
+      "word": "display",
+      "meaning": "to show something where people can see it",
+      "japaneseMeaning": "展示する、表示する",
+      "synonyms": "show, present",
+      "antonyms": "hide, remove",
+      "forms": "display, displays, displaying, displayed",
+      "example": "The museum will display student artwork this weekend."
+    }
   ]
 }

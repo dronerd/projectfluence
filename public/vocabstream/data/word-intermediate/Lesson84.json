@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-84",
   "title": "Lesson 84",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "band",
-      "meaning": "a music group or a strip of material",
-      "japaneseMeaning": "楽団、帯",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "band, bands",
-      "example": "The band played at the festival."
+      "word": "challenge",
+      "meaning": "to question or dispute",
+      "japaneseMeaning": "挑戦する、異議を唱える",
+      "synonyms": "question, confront",
+      "antonyms": "accept, comply",
+      "forms": "challenge, challenges, challenging, challenged",
+      "example": "They challenged the decision."
     },
     {
-      "word": "bar",
-      "meaning": "a long piece of metal or a place that serves drinks",
-      "japaneseMeaning": "棒、バー",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bar, bars",
-      "example": "Hold the metal bar for safety."
+      "word": "explain",
+      "meaning": "to make something clear or understandable",
+      "japaneseMeaning": "説明する",
+      "synonyms": "clarify, describe",
+      "antonyms": "obscure, confuse",
+      "forms": "explain, explains, explaining, explained",
+      "example": "Please explain your answer."
     },
     {
-      "word": "basket",
-      "meaning": "a container made of thin pieces of wood or plastic",
-      "japaneseMeaning": "かご",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "basket, baskets",
-      "example": "She carried fruit in a basket."
+      "word": "practice",
+      "meaning": "to do something repeatedly to improve",
+      "japaneseMeaning": "練習する",
+      "synonyms": "train, rehearse",
+      "antonyms": "neglect",
+      "forms": "practice, practices, practicing, practiced",
+      "example": "Practice speaking English every day."
     },
     {
-      "word": "bath",
-      "meaning": "a wash in a tub of water",
-      "japaneseMeaning": "風呂",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bath, baths",
-      "example": "I take a bath before bed."
+      "word": "support",
+      "meaning": "to back up an idea or person",
+      "japaneseMeaning": "支援する",
+      "synonyms": "endorse, assist",
+      "antonyms": "oppose, reject",
+      "forms": "support, supports, supporting, supported",
+      "example": "He supported his friend's argument."
     },
     {
-      "word": "bed",
-      "meaning": "a piece of furniture for sleeping",
-      "japaneseMeaning": "ベッド",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bed, beds",
-      "example": "The bed was soft and warm."
+      "word": "define",
+      "meaning": "to explain the meaning of a word or idea",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "define, defines, defining, defined",
+      "example": "We need to define the plan before Friday."
     },
     {
-      "word": "bell",
-      "meaning": "a metal object or device that makes a ringing sound",
-      "japaneseMeaning": "ベル、鐘",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bell, bells",
-      "example": "The bell rang at noon."
+      "word": "own",
+      "meaning": "to have something as property",
+      "japaneseMeaning": "所有する",
+      "synonyms": "possess, hold",
+      "antonyms": "lack, relinquish",
+      "forms": "own, owns, owning, owned",
+      "example": "She owns a small business."
     },
     {
-      "word": "belt",
-      "meaning": "a strip worn around the waist",
-      "japaneseMeaning": "ベルト",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "belt, belts",
-      "example": "This belt is too loose."
+      "word": "turn",
+      "meaning": "to change direction or to rotate",
+      "japaneseMeaning": "回す／曲がる",
+      "synonyms": "rotate, twist",
+      "antonyms": "remain, stay",
+      "forms": "turn, turns, turning, turned",
+      "example": "Turn left at the corner."
     },
     {
-      "word": "bicycle",
-      "meaning": "a vehicle with two wheels moved by pedals",
-      "japaneseMeaning": "自転車",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bicycle, bicycles",
-      "example": "He rides a bicycle to school."
+      "word": "inspire",
+      "meaning": "to motivate or encourage",
+      "japaneseMeaning": "鼓舞する",
+      "synonyms": "motivate, stimulate",
+      "antonyms": "discourage, demotivate",
+      "forms": "inspire, inspires, inspiring, inspired",
+      "example": "His speech inspired the students."
     },
     {
-      "word": "bird",
-      "meaning": "an animal with wings and feathers",
-      "japaneseMeaning": "鳥",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bird, birds",
-      "example": "A small bird sat on the roof."
+      "word": "contrast",
+      "meaning": "to compare differences",
+      "japaneseMeaning": "対比する",
+      "synonyms": "differ, oppose",
+      "antonyms": "compare, resemble",
+      "forms": "contrast, contrasts, contrasting, contrasted",
+      "example": "Light contrasts with dark."
     },
     {
-      "word": "bottom",
-      "meaning": "the lowest part of something",
-      "japaneseMeaning": "底、下部",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bottom, bottoms",
-      "example": "Write your name at the bottom of the page."
+      "word": "release",
+      "meaning": "to let someone or something go free, or make something public",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "release, releases, releasing, released",
+      "example": "We need to release the plan before Friday."
     }
   ]
 }

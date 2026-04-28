@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-8",
   "title": "Lesson 8",
-  "paragraph": "The museum added an additional room about cultural life in the city. An efficient electronic guide helps elderly visitors, and each flat screen shows internal parts of old machines. The major story is about a native artist, while a minor display explains local tools.",
   "words": [
-    { "word": "additional", "meaning": "more than what was already there", "japaneseMeaning": "追加の", "synonyms": "extra, further", "antonyms": "fewer, missing", "forms": "additional, additionally", "example": "We need an additional chair for the guest." },
-    { "word": "cultural", "meaning": "connected with the customs, art, or ideas of a group", "japaneseMeaning": "文化の、文化的な", "synonyms": "traditional, artistic", "antonyms": "natural, personal", "forms": "cultural, culturally, culture", "example": "The city holds a cultural festival every spring." },
-    { "word": "efficient", "meaning": "working well without wasting time or energy", "japaneseMeaning": "効率的な", "synonyms": "effective, organized", "antonyms": "wasteful, slow", "forms": "efficient, efficiently, efficiency", "example": "The efficient bus system saves us time." },
-    { "word": "elderly", "meaning": "old, especially used politely for people", "japaneseMeaning": "年配の、高齢の", "synonyms": "older, senior", "antonyms": "young, youthful", "forms": "elderly", "example": "An elderly man offered his seat to a child." },
-    { "word": "electronic", "meaning": "using electricity or computer parts", "japaneseMeaning": "電子の", "synonyms": "digital, electric", "antonyms": "manual, paper", "forms": "electronic, electronically", "example": "The shop sells electronic dictionaries." },
-    { "word": "flat", "meaning": "level and smooth, not curved or raised", "japaneseMeaning": "平らな", "synonyms": "level, smooth", "antonyms": "uneven, bumpy", "forms": "flat, flatly, flatness", "example": "Put the cup on a flat table." },
-    { "word": "internal", "meaning": "inside something", "japaneseMeaning": "内部の、内側の", "synonyms": "inner, inside", "antonyms": "external, outside", "forms": "internal, internally", "example": "The mechanic checked the internal parts of the engine." },
-    { "word": "major", "meaning": "large, important, or serious", "japaneseMeaning": "主要な、大きな", "synonyms": "important, main", "antonyms": "minor, small", "forms": "major, majority", "example": "Traffic is a major problem in this city." },
-    { "word": "minor", "meaning": "small or not very serious", "japaneseMeaning": "小さな、軽い", "synonyms": "small, slight", "antonyms": "major, serious", "forms": "minor, minority", "example": "The car had only minor damage after the storm." },
-    { "word": "native", "meaning": "connected with the place where someone was born", "japaneseMeaning": "生まれ故郷の、現地の", "synonyms": "local, original", "antonyms": "foreign, outside", "forms": "native, natively", "example": "She speaks both English and her native language." }
+    {
+      "word": "additional",
+      "meaning": "more than what was already there",
+      "japaneseMeaning": "追加の",
+      "synonyms": "extra, further",
+      "antonyms": "fewer, missing",
+      "forms": "additional, additionally",
+      "example": "We need an additional chair for the guest."
+    },
+    {
+      "word": "cultural",
+      "meaning": "connected with the customs, art, or ideas of a group",
+      "japaneseMeaning": "文化の、文化的な",
+      "synonyms": "traditional, artistic",
+      "antonyms": "natural, personal",
+      "forms": "cultural, culturally, culture",
+      "example": "The city holds a cultural festival every spring."
+    },
+    {
+      "word": "efficient",
+      "meaning": "working well without wasting time or energy",
+      "japaneseMeaning": "効率的な",
+      "synonyms": "effective, organized",
+      "antonyms": "wasteful, slow",
+      "forms": "efficient, efficiently, efficiency",
+      "example": "The efficient bus system saves us time."
+    },
+    {
+      "word": "elderly",
+      "meaning": "old, especially used politely for people",
+      "japaneseMeaning": "年配の、高齢の",
+      "synonyms": "older, senior",
+      "antonyms": "young, youthful",
+      "forms": "elderly",
+      "example": "An elderly man offered his seat to a child."
+    },
+    {
+      "word": "electronic",
+      "meaning": "using electricity or computer parts",
+      "japaneseMeaning": "電子の",
+      "synonyms": "digital, electric",
+      "antonyms": "manual, paper",
+      "forms": "electronic, electronically",
+      "example": "The shop sells electronic dictionaries."
+    },
+    {
+      "word": "compact",
+      "meaning": "small but containing everything needed",
+      "japaneseMeaning": "小型の、まとまった",
+      "synonyms": "small, neat",
+      "antonyms": "large, spread out",
+      "forms": "compact, compactly",
+      "example": "This compact camera is easy to carry when traveling."
+    },
+    {
+      "word": "internal",
+      "meaning": "inside something",
+      "japaneseMeaning": "内部の、内側の",
+      "synonyms": "inner, inside",
+      "antonyms": "external, outside",
+      "forms": "internal, internally",
+      "example": "The mechanic checked the internal parts of the engine."
+    },
+    {
+      "word": "major",
+      "meaning": "large, important, or serious",
+      "japaneseMeaning": "主要な、大きな",
+      "synonyms": "important, main",
+      "antonyms": "minor, small",
+      "forms": "major, majority",
+      "example": "Traffic is a major problem in this city."
+    },
+    {
+      "word": "minor",
+      "meaning": "small or not very serious",
+      "japaneseMeaning": "小さな、軽い",
+      "synonyms": "small, slight",
+      "antonyms": "major, serious",
+      "forms": "minor, minority",
+      "example": "The car had only minor damage after the storm."
+    },
+    {
+      "word": "native",
+      "meaning": "connected with the place where someone was born",
+      "japaneseMeaning": "生まれ故郷の、現地の",
+      "synonyms": "local, original",
+      "antonyms": "foreign, outside",
+      "forms": "native, natively",
+      "example": "She speaks both English and her native language."
+    }
   ]
 }

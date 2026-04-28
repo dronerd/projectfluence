@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-56",
   "title": "Lesson 56",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "study", "meaning": "to learn about a subject", "japaneseMeaning": "勉強する、研究する", "synonyms": "learn, review", "antonyms": "ignore, forget", "forms": "study, studies, studying, studied", "example": "I study English for thirty minutes every day." },
-    { "word": "take", "meaning": "to get, carry, or use something", "japaneseMeaning": "取る、持っていく", "synonyms": "get, carry", "antonyms": "give, leave", "forms": "take, takes, taking, took, taken", "example": "Take an umbrella because it may rain." },
-    { "word": "talk", "meaning": "to speak with someone", "japaneseMeaning": "話す", "synonyms": "speak, chat", "antonyms": "listen, stay silent", "forms": "talk, talks, talking, talked", "example": "Can we talk after class?" },
-    { "word": "teach", "meaning": "to help someone learn something", "japaneseMeaning": "教える", "synonyms": "instruct, train", "antonyms": "learn, confuse", "forms": "teach, teaches, teaching, taught", "example": "My aunt will teach me how to cook." },
-    { "word": "tell", "meaning": "to give information using words", "japaneseMeaning": "伝える、言う", "synonyms": "say, inform", "antonyms": "hide, ask", "forms": "tell, tells, telling, told", "example": "Please tell me your address." },
-    { "word": "think", "meaning": "to use your mind to consider something", "japaneseMeaning": "考える、思う", "synonyms": "consider, believe", "antonyms": "ignore, forget", "forms": "think, thinks, thinking, thought", "example": "I think this answer is correct." },
-    { "word": "try", "meaning": "to make an effort to do something", "japaneseMeaning": "試す、努力する", "synonyms": "attempt, test", "antonyms": "quit, avoid", "forms": "try, tries, trying, tried", "example": "Try this soup and tell me what you think." },
-    { "word": "turn", "meaning": "to move in a different direction or change position", "japaneseMeaning": "曲がる、回す", "synonyms": "rotate, change", "antonyms": "stay, stop", "forms": "turn, turns, turning, turned", "example": "Turn left at the next corner." },
-    { "word": "use", "meaning": "to do something with a tool, method, or object", "japaneseMeaning": "使う", "synonyms": "employ, utilize", "antonyms": "waste, avoid", "forms": "use, uses, using, used", "example": "Use a pencil for this form." },
-    { "word": "walk", "meaning": "to move on foot at a normal speed", "japaneseMeaning": "歩く", "synonyms": "go on foot, stroll", "antonyms": "run, ride", "forms": "walk, walks, walking, walked", "example": "I walk to school every morning." }
+    {
+      "word": "setup",
+      "meaning": "the way things are arranged or prepared",
+      "japaneseMeaning": "設定、配置",
+      "synonyms": "arrangement, plan",
+      "antonyms": "mess, disorder",
+      "forms": "setup, setups",
+      "example": "The classroom setup made group work easy."
+    },
+    {
+      "word": "deadline",
+      "meaning": "the time by which work must be finished",
+      "japaneseMeaning": "締め切り",
+      "synonyms": "due date, cutoff",
+      "antonyms": "start, free time",
+      "forms": "deadline, deadlines",
+      "example": "Finish your project before the deadline."
+    },
+    {
+      "word": "festival",
+      "meaning": "a special event with music, food, or shows",
+      "japaneseMeaning": "祭り、フェスティバル",
+      "synonyms": "celebration, event",
+      "antonyms": "workday, silence",
+      "forms": "festival, festivals",
+      "example": "The summer festival has music and fireworks."
+    },
+    {
+      "word": "linguistic",
+      "meaning": "connected with language",
+      "japaneseMeaning": "言語の、言語学の",
+      "synonyms": "language-related, verbal",
+      "antonyms": "nonverbal, visual",
+      "forms": "linguistic, linguistically",
+      "example": "The two regions have different linguistic traditions."
+    },
+    {
+      "word": "procedure",
+      "meaning": "the correct way to do something",
+      "japaneseMeaning": "手順、手続き",
+      "synonyms": "process, method",
+      "antonyms": "disorder, mistake",
+      "forms": "procedure, procedures",
+      "example": "Please follow the safety procedure in the laboratory."
+    },
+    {
+      "word": "structure",
+      "meaning": "the way parts of something are arranged",
+      "japaneseMeaning": "構造、仕組み",
+      "synonyms": "arrangement, form",
+      "antonyms": "disorder, surface",
+      "forms": "structure, structures",
+      "example": "The essay has a clear structure with three main points."
+    },
+    {
+      "word": "consent",
+      "meaning": "permission to do something",
+      "japaneseMeaning": "同意、許可",
+      "synonyms": "permission, agreement",
+      "antonyms": "refusal, denial",
+      "forms": "consent, consents",
+      "example": "You need consent before you use the photo."
+    },
+    {
+      "word": "file",
+      "meaning": "a set of papers or computer information kept together",
+      "japaneseMeaning": "ファイル、書類",
+      "synonyms": "document, folder",
+      "antonyms": "mess, single page",
+      "forms": "file, files",
+      "example": "Save the file before you close the computer."
+    },
+    {
+      "word": "intersection",
+      "meaning": "a place where two roads or lines cross",
+      "japaneseMeaning": "交差点、交わる所",
+      "synonyms": "crossing, junction",
+      "antonyms": "straight road, separation",
+      "forms": "intersection, intersections",
+      "example": "Turn left at the next intersection."
+    },
+    {
+      "word": "storage",
+      "meaning": "the act or place of keeping things for later use",
+      "japaneseMeaning": "保管、収納場所",
+      "synonyms": "keeping, warehouse",
+      "antonyms": "use, disposal",
+      "forms": "storage",
+      "example": "The school needs more storage for sports equipment."
+    }
   ]
 }

@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-21",
   "title": "Lesson 21",
-  "paragraph": "The new shopping street has a cheap cafe, a commercial bank, and a domestic travel office. The school made an educational video about the area and an environmental poster about recycling. A financial guide explains prices. The old station is historical, the map is international, and the whole street feels pleasant and valuable to residents.",
   "words": [
-    { "word": "cheap", "meaning": "costing little money", "japaneseMeaning": "安い", "synonyms": "low-cost, inexpensive", "antonyms": "expensive, costly", "forms": "cheap, cheaply, cheapness", "example": "This cheap lunch is good for students." },
-    { "word": "commercial", "meaning": "connected with buying and selling", "japaneseMeaning": "商業の、営利の", "synonyms": "business, trade", "antonyms": "nonprofit, personal", "forms": "commercial, commercially", "example": "The commercial area is busy on weekends." },
-    { "word": "domestic", "meaning": "connected with the home or with your own country", "japaneseMeaning": "家庭の、国内の", "synonyms": "home, national", "antonyms": "foreign, international", "forms": "domestic, domestically", "example": "Domestic flights are usually shorter than international flights." },
-    { "word": "educational", "meaning": "connected with learning or teaching", "japaneseMeaning": "教育の、教育的な", "synonyms": "instructional, learning", "antonyms": "unhelpful, recreational", "forms": "educational, educationally, education", "example": "The museum has an educational program for children." },
-    { "word": "environmental", "meaning": "connected with nature and the world around us", "japaneseMeaning": "環境の", "synonyms": "ecological, natural", "antonyms": "artificial, industrial", "forms": "environmental, environmentally, environment", "example": "The class studied environmental problems in the river." },
-    { "word": "financial", "meaning": "connected with money", "japaneseMeaning": "財政の、金融の", "synonyms": "money, economic", "antonyms": "nonfinancial, personal", "forms": "financial, financially, finance", "example": "The family made a financial plan before moving." },
-    { "word": "historical", "meaning": "connected with history or past events", "japaneseMeaning": "歴史の、歴史的な", "synonyms": "historic, past", "antonyms": "modern, future", "forms": "historical, historically, history", "example": "The guide showed us historical photos of the town." },
-    { "word": "international", "meaning": "connected with two or more countries", "japaneseMeaning": "国際的な", "synonyms": "global, worldwide", "antonyms": "domestic, local", "forms": "international, internationally", "example": "The school holds an international food day." },
-    { "word": "pleasant", "meaning": "nice and enjoyable", "japaneseMeaning": "楽しい、心地よい", "synonyms": "nice, enjoyable", "antonyms": "unpleasant, awful", "forms": "pleasant, pleasantly, pleasantness", "example": "We had a pleasant walk in the park." },
-    { "word": "valuable", "meaning": "worth a lot of money or very useful", "japaneseMeaning": "価値のある、貴重な", "synonyms": "useful, precious", "antonyms": "worthless, useless", "forms": "valuable, valuably, value", "example": "Her advice was valuable during the project." }
+    {
+      "word": "affordable",
+      "meaning": "not too expensive for someone to buy or pay for",
+      "japaneseMeaning": "手頃な価格の",
+      "synonyms": "reasonable, low-cost",
+      "antonyms": "expensive, costly",
+      "forms": "affordable, affordably",
+      "example": "The town needs more affordable apartments for students."
+    },
+    {
+      "word": "commercial",
+      "meaning": "connected with buying and selling",
+      "japaneseMeaning": "商業の、営利の",
+      "synonyms": "business, trade",
+      "antonyms": "nonprofit, personal",
+      "forms": "commercial, commercially",
+      "example": "The commercial area is busy on weekends."
+    },
+    {
+      "word": "domestic",
+      "meaning": "connected with the home or with your own country",
+      "japaneseMeaning": "家庭の、国内の",
+      "synonyms": "home, national",
+      "antonyms": "foreign, international",
+      "forms": "domestic, domestically",
+      "example": "Domestic flights are usually shorter than international flights."
+    },
+    {
+      "word": "educational",
+      "meaning": "connected with learning or teaching",
+      "japaneseMeaning": "教育の、教育的な",
+      "synonyms": "learning, teaching",
+      "antonyms": "unhelpful, noneducational",
+      "forms": "educational, educationally, education",
+      "example": "The museum has an educational program for children."
+    },
+    {
+      "word": "environmental",
+      "meaning": "connected with nature and the world around us",
+      "japaneseMeaning": "環境の",
+      "synonyms": "green, natural",
+      "antonyms": "artificial, industrial",
+      "forms": "environmental, environmentally, environment",
+      "example": "The class studied environmental problems in the river."
+    },
+    {
+      "word": "financial",
+      "meaning": "connected with money",
+      "japaneseMeaning": "財政の、金融の",
+      "synonyms": "money, economic",
+      "antonyms": "nonfinancial, personal",
+      "forms": "financial, financially, finance",
+      "example": "The family made a financial plan before moving."
+    },
+    {
+      "word": "historical",
+      "meaning": "connected with history or past events",
+      "japaneseMeaning": "歴史の、歴史的な",
+      "synonyms": "historic, past",
+      "antonyms": "modern, future",
+      "forms": "historical, historically, history",
+      "example": "The guide showed us historical photos of the town."
+    },
+    {
+      "word": "international",
+      "meaning": "connected with two or more countries",
+      "japaneseMeaning": "国際的な",
+      "synonyms": "global, worldwide",
+      "antonyms": "domestic, local",
+      "forms": "international, internationally",
+      "example": "The school holds an international food day."
+    },
+    {
+      "word": "pleasant",
+      "meaning": "nice and enjoyable",
+      "japaneseMeaning": "楽しい、心地よい",
+      "synonyms": "nice, enjoyable",
+      "antonyms": "unpleasant, awful",
+      "forms": "pleasant, pleasantly, pleasantness",
+      "example": "We had a pleasant walk in the park."
+    },
+    {
+      "word": "valuable",
+      "meaning": "worth a lot of money or very useful",
+      "japaneseMeaning": "価値のある、貴重な",
+      "synonyms": "useful, precious",
+      "antonyms": "worthless, useless",
+      "forms": "valuable, valuably, value",
+      "example": "Her advice was valuable during the project."
+    }
   ]
 }

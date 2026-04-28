@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-13",
   "title": "Lesson 13",
-  "paragraph": "Before the school newspaper is printed, students address each reader politely and phone two teachers for comments. They place photos beside the story, post the article online, and wonder how many people will read it. If they regret a word choice, they can roll the page back to an older version. The editor checks that every title sounds clear and that the first story will land on the front page.",
   "words": [
-    { "word": "land", "meaning": "to arrive on the ground or in a particular place", "japaneseMeaning": "着陸する、到着する", "synonyms": "arrive, touch down", "antonyms": "take off, leave", "forms": "land, lands, landing, landed", "example": "The plane will land at six o'clock." },
-    { "word": "phone", "meaning": "to call someone by telephone", "japaneseMeaning": "電話する", "synonyms": "call, contact", "antonyms": "ignore, text", "forms": "phone, phones, phoning, phoned", "example": "I will phone my grandmother after dinner." },
-    { "word": "place", "meaning": "to put something somewhere", "japaneseMeaning": "置く、配置する", "synonyms": "put, set", "antonyms": "remove, take", "forms": "place, places, placing, placed", "example": "Please place your bag under the desk." },
-    { "word": "regret", "meaning": "to feel sorry about something you did or did not do", "japaneseMeaning": "後悔する", "synonyms": "feel sorry, rue", "antonyms": "celebrate, welcome", "forms": "regret, regrets, regretting, regretted", "example": "I regret sending the message too quickly." },
-    { "word": "address", "meaning": "to speak or write to someone in a particular way", "japaneseMeaning": "呼びかける、対処する", "synonyms": "speak to, deal with", "antonyms": "ignore, avoid", "forms": "address, addresses, addressing, addressed", "example": "The principal will address the students after lunch." },
-    { "word": "print", "meaning": "to produce words or pictures on paper", "japaneseMeaning": "印刷する", "synonyms": "copy, publish", "antonyms": "erase, delete", "forms": "print, prints, printing, printed", "example": "Can you print the schedule for me?" },
-    { "word": "post", "meaning": "to put information online or send something by mail", "japaneseMeaning": "投稿する、郵送する", "synonyms": "publish, mail", "antonyms": "delete, keep", "forms": "post, posts, posting, posted", "example": "The club will post the photos on its website." },
-    { "word": "roll", "meaning": "to move by turning over and over", "japaneseMeaning": "転がる、転がす", "synonyms": "turn, rotate", "antonyms": "stop, hold", "forms": "roll, rolls, rolling, rolled", "example": "The ball will roll down the hill." },
-    { "word": "sound", "meaning": "to seem a certain way when heard or described", "japaneseMeaning": "聞こえる、思われる", "synonyms": "seem, appear", "antonyms": "look, stay silent", "forms": "sound, sounds, sounding, sounded", "example": "Your idea sounds interesting to me." },
-    { "word": "wonder", "meaning": "to think about something because you want to know more", "japaneseMeaning": "不思議に思う、知りたいと思う", "synonyms": "ask oneself, think", "antonyms": "know, ignore", "forms": "wonder, wonders, wondering, wondered", "example": "I wonder why the bus is late today." }
+    {
+      "word": "land",
+      "meaning": "to come down to the ground after flying",
+      "japaneseMeaning": "着陸する、到着する",
+      "synonyms": "arrive, touch down",
+      "antonyms": "take off, leave",
+      "forms": "land, lands, landing, landed",
+      "example": "The plane will land at six o'clock."
+    },
+    {
+      "word": "notify",
+      "meaning": "to tell someone officially about something",
+      "japaneseMeaning": "知らせる、通知する",
+      "synonyms": "inform, tell",
+      "antonyms": "hide, ignore",
+      "forms": "notify, notifies, notifying, notified",
+      "example": "The school will notify parents about the schedule change."
+    },
+    {
+      "word": "locate",
+      "meaning": "to find the position of something or put something in a place",
+      "japaneseMeaning": "位置を見つける、位置づける",
+      "synonyms": "find, position",
+      "antonyms": "lose, remove",
+      "forms": "locate, locates, locating, located",
+      "example": "The map helped us locate the nearest station."
+    },
+    {
+      "word": "regret",
+      "meaning": "to feel sorry about something you did or did not do",
+      "japaneseMeaning": "後悔する",
+      "synonyms": "feel sorry, rue",
+      "antonyms": "celebrate, welcome",
+      "forms": "regret, regrets, regretting, regretted",
+      "example": "I regret sending the message too quickly."
+    },
+    {
+      "word": "address",
+      "meaning": "to speak or write to someone",
+      "japaneseMeaning": "呼びかける、対処する",
+      "synonyms": "speak to, deal with",
+      "antonyms": "ignore, avoid",
+      "forms": "address, addresses, addressing, addressed",
+      "example": "The principal will address the students after lunch."
+    },
+    {
+      "word": "duplicate",
+      "meaning": "to make an exact copy of something",
+      "japaneseMeaning": "複製する",
+      "synonyms": "copy, repeat",
+      "antonyms": "delete, remove",
+      "forms": "duplicate, duplicates, duplicating, duplicated",
+      "example": "Please duplicate the file before you edit it."
+    },
+    {
+      "word": "post",
+      "meaning": "to put information online or send something by mail",
+      "japaneseMeaning": "投稿する、郵送する",
+      "synonyms": "publish, mail",
+      "antonyms": "delete, keep",
+      "forms": "post, posts, posting, posted",
+      "example": "The club will post the photos on its website."
+    },
+    {
+      "word": "rotate",
+      "meaning": "to turn around a central point",
+      "japaneseMeaning": "回転する、交替する",
+      "synonyms": "turn, spin",
+      "antonyms": "stop, stay still",
+      "forms": "rotate, rotates, rotating, rotated",
+      "example": "Students rotate roles during the group activity."
+    },
+    {
+      "word": "indicate",
+      "meaning": "to show or suggest something",
+      "japaneseMeaning": "示す、表す",
+      "synonyms": "show, suggest",
+      "antonyms": "hide, deny",
+      "forms": "indicate, indicates, indicating, indicated",
+      "example": "The results indicate that students need more practice."
+    },
+    {
+      "word": "wonder",
+      "meaning": "to think about something because you want to know more",
+      "japaneseMeaning": "不思議に思う、知りたいと思う",
+      "synonyms": "ask oneself, think",
+      "antonyms": "know, ignore",
+      "forms": "wonder, wonders, wondering, wondered",
+      "example": "I wonder why the bus is late today."
+    }
   ]
 }

@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-2",
   "title": "Lesson 2",
-  "paragraph": "Before the community lunch, staff members repair old tables and select music for the room. They record the number of guests, remind everyone about allergies, and warn cooks about hot dishes. Good planning can prevent waste, solve small problems, improve the event, and serve visitors better because the team can depend on clear notes.",
   "words": [
-    { "word": "repair", "meaning": "to fix something that is broken or damaged", "japaneseMeaning": "修理する", "synonyms": "fix, mend", "antonyms": "break, damage", "forms": "repair, repairs, repairing, repaired", "example": "My brother can repair a bicycle in one afternoon." },
-    { "word": "remind", "meaning": "to help someone remember something", "japaneseMeaning": "思い出させる、注意する", "synonyms": "prompt, tell again", "antonyms": "forget, ignore", "forms": "remind, reminds, reminding, reminded", "example": "Please remind me to call the dentist after lunch." },
-    { "word": "improve", "meaning": "to make something better", "japaneseMeaning": "改善する、上達する", "synonyms": "better, develop", "antonyms": "worsen, damage", "forms": "improve, improves, improving, improved, improvement", "example": "I read English news every day to improve my vocabulary." },
-    { "word": "prevent", "meaning": "to stop something from happening", "japaneseMeaning": "防ぐ、予防する", "synonyms": "stop, avoid", "antonyms": "allow, cause", "forms": "prevent, prevents, preventing, prevented, prevention", "example": "Careful driving can prevent many accidents." },
-    { "word": "solve", "meaning": "to find an answer to a problem", "japaneseMeaning": "解決する", "synonyms": "answer, fix", "antonyms": "cause, confuse", "forms": "solve, solves, solving, solved, solution", "example": "The team worked together to solve the computer problem." },
-    { "word": "warn", "meaning": "to tell someone about possible danger or trouble", "japaneseMeaning": "警告する、注意する", "synonyms": "alert, caution", "antonyms": "encourage, ignore", "forms": "warn, warns, warning, warned", "example": "The sign will warn drivers about the sharp turn." },
-    { "word": "depend", "meaning": "to need someone or something for help or support", "japaneseMeaning": "頼る、依存する", "synonyms": "rely, count on", "antonyms": "ignore, distrust", "forms": "depend, depends, depending, depended, dependence", "example": "Small children depend on adults for food and safety." },
-    { "word": "record", "meaning": "to write down or save information", "japaneseMeaning": "記録する", "synonyms": "note, save", "antonyms": "erase, forget", "forms": "record, records, recording, recorded", "example": "Please record your hours on this sheet." },
-    { "word": "select", "meaning": "to choose someone or something from a group", "japaneseMeaning": "選ぶ、選択する", "synonyms": "choose, pick", "antonyms": "reject, refuse", "forms": "select, selects, selecting, selected, selection", "example": "You can select one topic for your final report." },
-    { "word": "serve", "meaning": "to give food, drinks, or help to people", "japaneseMeaning": "提供する、仕える", "synonyms": "provide, help", "antonyms": "receive, ignore", "forms": "serve, serves, serving, served, service", "example": "The cafe will serve lunch until three o'clock." }
+    {
+      "word": "repair",
+      "meaning": "to fix something that is broken or damaged",
+      "japaneseMeaning": "修理する",
+      "synonyms": "fix, mend",
+      "antonyms": "break, damage",
+      "forms": "repair, repairs, repairing, repaired",
+      "example": "My brother can repair a bicycle in one afternoon."
+    },
+    {
+      "word": "remind",
+      "meaning": "to help someone remember something",
+      "japaneseMeaning": "思い出させる、注意する",
+      "synonyms": "prompt, tell again",
+      "antonyms": "forget, ignore",
+      "forms": "remind, reminds, reminding, reminded",
+      "example": "Please remind me to call the dentist after lunch."
+    },
+    {
+      "word": "improve",
+      "meaning": "to make something better",
+      "japaneseMeaning": "改善する、上達する",
+      "synonyms": "better, develop",
+      "antonyms": "worsen, damage",
+      "forms": "improve, improves, improving, improved, improvement",
+      "example": "I read English news every day to improve my vocabulary."
+    },
+    {
+      "word": "prevent",
+      "meaning": "to stop something from happening",
+      "japaneseMeaning": "防ぐ、予防する",
+      "synonyms": "stop, avoid",
+      "antonyms": "allow, cause",
+      "forms": "prevent, prevents, preventing, prevented, prevention",
+      "example": "Careful driving can prevent many accidents."
+    },
+    {
+      "word": "solve",
+      "meaning": "to find an answer to a problem",
+      "japaneseMeaning": "解決する",
+      "synonyms": "answer, fix",
+      "antonyms": "cause, confuse",
+      "forms": "solve, solves, solving, solved, solution",
+      "example": "The team worked together to solve the computer problem."
+    },
+    {
+      "word": "warn",
+      "meaning": "to tell someone about possible danger or trouble",
+      "japaneseMeaning": "警告する、注意する",
+      "synonyms": "alert, caution",
+      "antonyms": "encourage, ignore",
+      "forms": "warn, warns, warning, warned",
+      "example": "The sign will warn drivers about the sharp turn."
+    },
+    {
+      "word": "depend",
+      "meaning": "to need someone or something for help or support",
+      "japaneseMeaning": "頼る、依存する",
+      "synonyms": "rely, count on",
+      "antonyms": "ignore, distrust",
+      "forms": "depend, depends, depending, depended, dependence",
+      "example": "Small children depend on adults for food and safety."
+    },
+    {
+      "word": "record",
+      "meaning": "to write down or save information",
+      "japaneseMeaning": "記録する",
+      "synonyms": "note, save",
+      "antonyms": "erase, forget",
+      "forms": "record, records, recording, recorded",
+      "example": "Please record your hours on this sheet."
+    },
+    {
+      "word": "select",
+      "meaning": "to choose someone or something from a group",
+      "japaneseMeaning": "選ぶ、選択する",
+      "synonyms": "choose, pick",
+      "antonyms": "reject, refuse",
+      "forms": "select, selects, selecting, selected, selection",
+      "example": "You can select one topic for your final report."
+    },
+    {
+      "word": "serve",
+      "meaning": "to give food, drinks, or help to people",
+      "japaneseMeaning": "提供する、仕える",
+      "synonyms": "provide, help",
+      "antonyms": "receive, ignore",
+      "forms": "serve, serves, serving, served, service",
+      "example": "The cafe will serve lunch until three o'clock."
+    }
   ]
 }

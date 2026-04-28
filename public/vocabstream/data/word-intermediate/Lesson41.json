@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-41",
   "title": "Lesson 41",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "ability", "meaning": "the skill or power to do something", "japaneseMeaning": "能力、才能", "synonyms": "skill, talent", "antonyms": "inability, weakness", "forms": "ability, abilities", "example": "Her ability to explain ideas is impressive." },
-    { "word": "accident", "meaning": "something bad that happens unexpectedly", "japaneseMeaning": "事故", "synonyms": "crash, mishap", "antonyms": "plan, intention", "forms": "accident, accidents", "example": "The accident happened on a rainy road." },
-    { "word": "apartment", "meaning": "a set of rooms for living in, usually in a large building", "japaneseMeaning": "アパート、マンション", "synonyms": "flat, unit", "antonyms": "house, office", "forms": "apartment, apartments", "example": "They rent an apartment near the river." },
-    { "word": "army", "meaning": "a large organized group of soldiers", "japaneseMeaning": "軍隊、陸軍", "synonyms": "military, troops", "antonyms": "civilians, peace group", "forms": "army, armies", "example": "The army helped after the flood." },
-    { "word": "bank", "meaning": "a business that keeps and lends money", "japaneseMeaning": "銀行、土手", "synonyms": "financial institution, lender", "antonyms": "borrower, cash", "forms": "bank, banks", "example": "I opened a new account at the bank." },
-    { "word": "beach", "meaning": "an area of sand or stones beside the sea or a lake", "japaneseMeaning": "浜、ビーチ", "synonyms": "shore, coast", "antonyms": "mountain, inland", "forms": "beach, beaches", "example": "We walked along the beach at sunset." },
-    { "word": "building", "meaning": "a structure with walls and a roof", "japaneseMeaning": "建物", "synonyms": "structure, block", "antonyms": "open space, field", "forms": "building, buildings", "example": "The tallest building in town is a hotel." },
-    { "word": "career", "meaning": "the work someone does over many years", "japaneseMeaning": "職業、経歴", "synonyms": "profession, work life", "antonyms": "hobby, pastime", "forms": "career, careers", "example": "She wants a career in design." },
-    { "word": "channel", "meaning": "a television station or a way for information to pass", "japaneseMeaning": "チャンネル、経路", "synonyms": "station, route", "antonyms": "block, barrier", "forms": "channel, channels", "example": "This channel shows news every morning." },
-    { "word": "chart", "meaning": "a picture or table that shows information", "japaneseMeaning": "図表、グラフ", "synonyms": "graph, table", "antonyms": "paragraph, story", "forms": "chart, charts", "example": "The chart shows sales for each month." }
+    {
+      "word": "aim",
+      "meaning": "desired outcome",
+      "japaneseMeaning": "狙い",
+      "synonyms": "goal, objective",
+      "antonyms": "randomness, accident",
+      "forms": "aim, aims",
+      "example": "The aim was to improve quality."
+    },
+    {
+      "word": "contract",
+      "meaning": "to decrease in size",
+      "japaneseMeaning": "縮小する",
+      "synonyms": "shrink, reduce",
+      "antonyms": "expand, enlarge",
+      "forms": "contract, contracts, contracting, contracted",
+      "example": "The metal contracts in cold weather."
+    },
+    {
+      "word": "experiment",
+      "meaning": "a test done to discover or prove something",
+      "japaneseMeaning": "実験",
+      "synonyms": "trial, test",
+      "antonyms": "guess, assumption",
+      "forms": "experiment, experiments",
+      "example": "The experiment confirmed the hypothesis."
+    },
+    {
+      "word": "opening",
+      "meaning": "the first part of an event, story, or speech",
+      "japaneseMeaning": "始まり、冒頭",
+      "synonyms": "start, beginning",
+      "antonyms": "ending, close",
+      "forms": "opening, openings",
+      "example": "The opening of the movie was quiet but powerful."
+    },
+    {
+      "word": "passenger",
+      "meaning": "a person traveling in a car, bus, train, or plane",
+      "japaneseMeaning": "乗客",
+      "synonyms": "traveler, rider",
+      "antonyms": "driver, pilot",
+      "forms": "passenger, passengers",
+      "example": "One passenger left a bag on the bus."
+    },
+    {
+      "word": "salary",
+      "meaning": "money a worker gets for a month or year of work",
+      "japaneseMeaning": "給料、給与",
+      "synonyms": "pay, income",
+      "antonyms": "expense, debt",
+      "forms": "salary, salaries",
+      "example": "The job offers a good salary and flexible hours."
+    },
+    {
+      "word": "portal",
+      "meaning": "a website or service that gives access to information",
+      "japaneseMeaning": "ポータルサイト、入口",
+      "synonyms": "site, gateway",
+      "antonyms": "block, barrier",
+      "forms": "portal, portals",
+      "example": "Students submit homework through the school portal."
+    },
+    {
+      "word": "stage",
+      "meaning": "one step in a process or event",
+      "japaneseMeaning": "段階、舞台",
+      "synonyms": "step, period",
+      "antonyms": "end, finish",
+      "forms": "stage, stages",
+      "example": "The project is now in its final stage."
+    },
+    {
+      "word": "interface",
+      "meaning": "the way a person uses a computer program or machine",
+      "japaneseMeaning": "インターフェース、接点",
+      "synonyms": "screen, control system",
+      "antonyms": "background, hardware",
+      "forms": "interface, interfaces",
+      "example": "The app has a simple interface for new users."
+    },
+    {
+      "word": "heritage",
+      "meaning": "traditions, buildings, or culture from the past",
+      "japaneseMeaning": "遺産、伝統",
+      "synonyms": "tradition, culture",
+      "antonyms": "modern trend, new custom",
+      "forms": "heritage",
+      "example": "The town protects its cultural heritage."
+    }
   ]
 }

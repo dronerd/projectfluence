@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-20",
   "title": "Lesson 20",
-  "paragraph": "A good team can press the right button, pull heavy boxes together, and push carts safely. They do not destroy shared tools or use them unfairly. If trouble comes, they escape danger, exchange information, identify the problem, recover quickly, reserve a new room, and return borrowed items.",
   "words": [
-    { "word": "press", "meaning": "to push something with your finger or hand", "japaneseMeaning": "押す", "synonyms": "push, click", "antonyms": "release, lift", "forms": "press, presses, pressing, pressed", "example": "Press the green button to start the machine." },
-    { "word": "pull", "meaning": "to move something toward you", "japaneseMeaning": "引く", "synonyms": "draw, drag", "antonyms": "push, release", "forms": "pull, pulls, pulling, pulled", "example": "Pull the door gently to open it." },
-    { "word": "push", "meaning": "to move something away from you by using force", "japaneseMeaning": "押す", "synonyms": "press, move", "antonyms": "pull, hold", "forms": "push, pushes, pushing, pushed", "example": "Push the cart slowly through the store." },
-    { "word": "recover", "meaning": "to become well again or return to a normal state", "japaneseMeaning": "回復する、取り戻す", "synonyms": "get better, regain", "antonyms": "worsen, lose", "forms": "recover, recovers, recovering, recovered, recovery", "example": "She will recover from the cold in a few days." },
-    { "word": "destroy", "meaning": "to damage something so badly that it cannot be used", "japaneseMeaning": "破壊する", "synonyms": "ruin, wreck", "antonyms": "build, repair", "forms": "destroy, destroys, destroying, destroyed, destruction", "example": "A fire can destroy a wooden house quickly." },
-    { "word": "reserve", "meaning": "to arrange to keep a seat, room, or item for later use", "japaneseMeaning": "予約する、取っておく", "synonyms": "book, save", "antonyms": "cancel, release", "forms": "reserve, reserves, reserving, reserved, reservation", "example": "We should reserve a table before the restaurant gets full." },
-    { "word": "return", "meaning": "to go or give something back", "japaneseMeaning": "戻る、返す", "synonyms": "go back, give back", "antonyms": "leave, keep", "forms": "return, returns, returning, returned", "example": "Please return the library book by Monday." },
-    { "word": "escape", "meaning": "to get away from danger or a difficult place", "japaneseMeaning": "逃げる、脱出する", "synonyms": "get away, flee", "antonyms": "stay, remain", "forms": "escape, escapes, escaping, escaped", "example": "The family used the back door to escape the fire." },
-    { "word": "exchange", "meaning": "to give something and receive something else", "japaneseMeaning": "交換する", "synonyms": "trade, swap", "antonyms": "keep, hold", "forms": "exchange, exchanges, exchanging, exchanged", "example": "We exchange gifts at the end of the year." },
-    { "word": "identify", "meaning": "to recognize or name someone or something", "japaneseMeaning": "特定する、識別する", "synonyms": "recognize, name", "antonyms": "miss, confuse", "forms": "identify, identifies, identifying, identified, identification", "example": "Can you identify the bird in this photo?" }
+    {
+      "word": "activate",
+      "meaning": "to make a machine, system, or process start working",
+      "japaneseMeaning": "作動させる、有効にする",
+      "synonyms": "start, turn on",
+      "antonyms": "stop, disable",
+      "forms": "activate, activates, activating, activated",
+      "example": "You need a code to activate the online account."
+    },
+    {
+      "word": "withdraw",
+      "meaning": "to take something back or remove yourself from an activity",
+      "japaneseMeaning": "引き出す、撤回する",
+      "synonyms": "remove, take back",
+      "antonyms": "add, join",
+      "forms": "withdraw, withdraws, withdrawing, withdrew, withdrawn",
+      "example": "He decided to withdraw from the race because of an injury."
+    },
+    {
+      "word": "promote",
+      "meaning": "to help something grow, improve, or become known",
+      "japaneseMeaning": "促進する、宣伝する",
+      "synonyms": "support, advertise",
+      "antonyms": "prevent, discourage",
+      "forms": "promote, promotes, promoting, promoted",
+      "example": "The campaign promotes healthy eating at school."
+    },
+    {
+      "word": "recover",
+      "meaning": "to become well again or return to a normal state",
+      "japaneseMeaning": "回復する、取り戻す",
+      "synonyms": "get better, regain",
+      "antonyms": "worsen, lose",
+      "forms": "recover, recovers, recovering, recovered, recovery",
+      "example": "She will recover from the cold in a few days."
+    },
+    {
+      "word": "destroy",
+      "meaning": "to damage something so badly that it cannot be used",
+      "japaneseMeaning": "破壊する",
+      "synonyms": "ruin, wreck",
+      "antonyms": "build, repair",
+      "forms": "destroy, destroys, destroying, destroyed, destruction",
+      "example": "A fire can destroy a wooden house quickly."
+    },
+    {
+      "word": "reserve",
+      "meaning": "to arrange to keep a seat, room, or item for later use",
+      "japaneseMeaning": "予約する、取っておく",
+      "synonyms": "book, save",
+      "antonyms": "cancel, release",
+      "forms": "reserve, reserves, reserving, reserved, reservation",
+      "example": "We should reserve a table before the restaurant gets full."
+    },
+    {
+      "word": "restore",
+      "meaning": "to bring something back to its earlier condition",
+      "japaneseMeaning": "回復させる、復元する",
+      "synonyms": "repair, recover",
+      "antonyms": "damage, destroy",
+      "forms": "restore, restores, restoring, restored",
+      "example": "Volunteers helped restore the old community center."
+    },
+    {
+      "word": "escape",
+      "meaning": "to get away from danger or a difficult place",
+      "japaneseMeaning": "逃げる、脱出する",
+      "synonyms": "get away, flee",
+      "antonyms": "stay, remain",
+      "forms": "escape, escapes, escaping, escaped",
+      "example": "The family used the back door to escape the fire."
+    },
+    {
+      "word": "exchange",
+      "meaning": "to give something and receive something else",
+      "japaneseMeaning": "交換する",
+      "synonyms": "trade, swap",
+      "antonyms": "keep, hold",
+      "forms": "exchange, exchanges, exchanging, exchanged",
+      "example": "We exchange gifts at the end of the year."
+    },
+    {
+      "word": "identify",
+      "meaning": "to recognize or name someone or something",
+      "japaneseMeaning": "特定する、識別する",
+      "synonyms": "recognize, name",
+      "antonyms": "miss, confuse",
+      "forms": "identify, identifies, identifying, identified, identification",
+      "example": "Can you identify the bird in this photo?"
+    }
   ]
 }

@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-97",
   "title": "Lesson 97",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "quiet",
-      "meaning": "making little noise",
-      "japaneseMeaning": "静かな",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "quiet, quietly",
-      "example": "The quiet room is good for study."
+      "word": "current",
+      "meaning": "happening now or used now",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "current, more current, most current",
+      "example": "The current choice made the whole plan easier."
     },
     {
-      "word": "thin",
-      "meaning": "not thick or wide",
-      "japaneseMeaning": "薄い、細い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "thin, thinly",
-      "example": "The thin paper tore easily."
+      "word": "grateful",
+      "meaning": "feeling thankful",
+      "japaneseMeaning": "感謝している",
+      "synonyms": "thankful, appreciative",
+      "antonyms": "ungrateful, thankless",
+      "forms": "grateful, more grateful, most grateful",
+      "example": "I’m grateful for your help."
     },
     {
-      "word": "thick",
-      "meaning": "having a large distance between sides",
-      "japaneseMeaning": "厚い、太い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "thick, thickly",
-      "example": "The thick book was heavy."
+      "word": "nervous",
+      "meaning": "anxious or worried about something",
+      "japaneseMeaning": "神経質な／緊張した",
+      "synonyms": "anxious, tense",
+      "antonyms": "calm, relaxed",
+      "forms": "nervous, more nervous, most nervous",
+      "example": "He was nervous before his speech."
     },
     {
-      "word": "early",
-      "meaning": "before the usual time",
-      "japaneseMeaning": "早い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "early, earlyly",
-      "example": "We took an early train."
+      "word": "simple",
+      "meaning": "easy to understand or do",
+      "japaneseMeaning": "簡単な",
+      "synonyms": "easy, straightforward",
+      "antonyms": "complex, complicated",
+      "forms": "simple, more simple, most simple",
+      "example": "The instructions are simple to follow."
     },
     {
-      "word": "dirty",
-      "meaning": "not clean",
-      "japaneseMeaning": "汚れた",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "dirty, dirtyly",
-      "example": "His dirty shoes were by the door."
+      "word": "willing",
+      "meaning": "ready and happy to do something",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "willing, more willing, most willing",
+      "example": "The willing choice made the whole plan easier."
     },
     {
-      "word": "relaxed",
-      "meaning": "calm and not worried",
-      "japaneseMeaning": "リラックスした",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "relaxed, relaxedly",
-      "example": "She felt relaxed after the bath."
-    },
-    {
-      "word": "dim",
-      "meaning": "not bright",
-      "japaneseMeaning": "薄暗い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "dim, dimly",
-      "example": "The dim light made reading hard."
-    },
-    {
-      "word": "heavy",
-      "meaning": "having a lot of weight",
-      "japaneseMeaning": "重い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "heavy, heavyly",
-      "example": "The heavy box needed two people."
+      "word": "delicious",
+      "meaning": "tasting very good",
+      "japaneseMeaning": "おいしい／美味な",
+      "synonyms": "tasty, scrumptious",
+      "antonyms": "tasteless, awful",
+      "forms": "delicious, more delicious, most delicious",
+      "example": "The soup was delicious and warmed us up."
     },
     {
       "word": "strong",
-      "meaning": "having power or strength",
+      "meaning": "having great physical power or emotional resilience",
       "japaneseMeaning": "強い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "strong, strongly",
-      "example": "A strong wind shook the trees."
+      "synonyms": "powerful, robust",
+      "antonyms": "weak, frail",
+      "forms": "strong, more strong, most strong",
+      "example": "She is strong enough to lift the box."
     },
     {
-      "word": "kind",
-      "meaning": "friendly and helpful",
-      "japaneseMeaning": "親切な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "kind, kindly",
-      "example": "A kind stranger helped me."
+      "word": "stubborn",
+      "meaning": "unwilling to change",
+      "japaneseMeaning": "頑固な",
+      "synonyms": "obstinate, inflexible",
+      "antonyms": "flexible, compliant",
+      "forms": "stubborn, stubbornly",
+      "example": "He was stubborn about his opinion."
+    },
+    {
+      "word": "enjoyable",
+      "meaning": "pleasant and fun",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "enjoyable, more enjoyable, most enjoyable",
+      "example": "The enjoyable choice made the whole plan easier."
+    },
+    {
+      "word": "mutual",
+      "meaning": "felt or done by two or more people toward each other",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "mutual, more mutual, most mutual",
+      "example": "The mutual choice made the whole plan easier."
     }
   ]
 }

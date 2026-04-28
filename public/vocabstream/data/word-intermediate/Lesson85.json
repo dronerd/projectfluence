@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-85",
   "title": "Lesson 85",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "kick",
-      "meaning": "to hit something with your foot",
-      "japaneseMeaning": "蹴る",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "kick, kicks, kicking, kicked",
-      "example": "Kick the ball toward the goal."
+      "word": "common",
+      "meaning": "happening often or seen often",
+      "japaneseMeaning": "一般的な",
+      "synonyms": "ordinary, frequent",
+      "antonyms": "rare, unusual",
+      "forms": "common, more common, most common",
+      "example": "It's common to see cherry blossoms here in spring."
     },
     {
-      "word": "lead",
-      "meaning": "to guide or be in charge",
-      "japaneseMeaning": "導く、率いる",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "lead, leads, leading, leaded",
-      "example": "She will lead the group discussion."
+      "word": "friendly",
+      "meaning": "kind and pleasant to others",
+      "japaneseMeaning": "親しみやすい",
+      "synonyms": "amiable, kind",
+      "antonyms": "unfriendly, hostile",
+      "forms": "friendly, more friendly, most friendly",
+      "example": "Our neighbors are very friendly."
     },
     {
-      "word": "lie",
-      "meaning": "to rest flat or say something false",
-      "japaneseMeaning": "横になる、嘘をつく",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "lie, lies, liing, lied",
-      "example": "Lie down if you feel dizzy."
+      "word": "modern",
+      "meaning": "new or used now",
+      "japaneseMeaning": "現代的な／モダンな",
+      "synonyms": "contemporary, current",
+      "antonyms": "ancient, old-fashioned",
+      "forms": "modern, more modern, most modern",
+      "example": "They live in a modern house with smart systems."
     },
     {
-      "word": "match",
-      "meaning": "to be the same or suitable",
-      "japaneseMeaning": "合う、一致する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "match, matchs, matching, matched",
-      "example": "These socks do not match."
+      "word": "safe",
+      "meaning": "protected from danger or risk",
+      "japaneseMeaning": "安全な",
+      "synonyms": "secure, protected",
+      "antonyms": "dangerous, risky",
+      "forms": "safe, more safe, most safe",
+      "example": "Make sure the environment is safe for children."
     },
     {
-      "word": "nod",
-      "meaning": "to move your head to show yes",
-      "japaneseMeaning": "うなずく",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "nod, nods, noding, noded",
-      "example": "Nod if you understand."
+      "word": "weak",
+      "meaning": "lacking strength or power",
+      "japaneseMeaning": "弱い",
+      "synonyms": "feeble, frail",
+      "antonyms": "strong, powerful",
+      "forms": "weak, more weak, most weak",
+      "example": "He felt weak after the long illness."
     },
     {
-      "word": "obey",
-      "meaning": "to do what a rule or person says",
-      "japaneseMeaning": "従う",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "obey, obeys, obeying, obeyed",
-      "example": "Drivers must obey traffic lights."
+      "word": "civil",
+      "meaning": "connected with ordinary people and their rights",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "civil, more civil, most civil",
+      "example": "The civil choice made the whole plan easier."
     },
     {
-      "word": "perform",
-      "meaning": "to do a task or show for people",
-      "japaneseMeaning": "演じる、行う",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "perform, performs, performing, performed",
-      "example": "The students perform a play every year."
+      "word": "slow",
+      "meaning": "moving or operating at low speed",
+      "japaneseMeaning": "遅い／ゆっくりした",
+      "synonyms": "unhurried, sluggish",
+      "antonyms": "fast, quick",
+      "forms": "slow, more slow, most slow",
+      "example": "The traffic was slow during rush hour."
     },
     {
-      "word": "wake",
-      "meaning": "to stop sleeping",
-      "japaneseMeaning": "目覚める、起こす",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "wake, wakes, waking, woke, woken",
-      "example": "I wake up at six every day."
+      "word": "suspicious",
+      "meaning": "feeling that something may be wrong or false",
+      "japaneseMeaning": "疑わしい",
+      "synonyms": "doubtful, unsure",
+      "antonyms": "trusting, sure",
+      "forms": "suspicious, more suspicious, most suspicious",
+      "example": "The guard became suspicious of the open door."
     },
     {
-      "word": "wave",
-      "meaning": "to move your hand as a greeting",
-      "japaneseMeaning": "手を振る",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "wave, waves, waving, waved",
-      "example": "Wave to your friends from the bus."
+      "word": "chief",
+      "meaning": "main or most important",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "chief, more chief, most chief",
+      "example": "The chief choice made the whole plan easier."
     },
     {
-      "word": "wish",
-      "meaning": "to want something to happen",
-      "japaneseMeaning": "願う",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "wish, wishs, wishing, wished",
-      "example": "I wish you good luck."
+      "word": "main",
+      "meaning": "most important or principal",
+      "japaneseMeaning": "主要な",
+      "synonyms": "primary, principal",
+      "antonyms": "minor, secondary",
+      "forms": "main, more main, most main",
+      "example": "The main reason is lack of time."
     }
   ]
 }

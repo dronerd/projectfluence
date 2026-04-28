@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-95",
   "title": "Lesson 95",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "strange",
-      "meaning": "unusual or surprising",
-      "japaneseMeaning": "奇妙な",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "strange, strangely",
-      "example": "I heard a strange sound outside."
+      "word": "colleague",
+      "meaning": "a person you work with",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "colleague, colleagues",
+      "example": "The colleague helped us understand the situation more clearly."
     },
     {
-      "word": "sweet",
-      "meaning": "tasting like sugar or kind",
-      "japaneseMeaning": "甘い、優しい",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "sweet, sweetly",
-      "example": "This cake is very sweet."
+      "word": "energy",
+      "meaning": "power for movement, heat, work, or activity",
+      "japaneseMeaning": "エネルギー、活力",
+      "synonyms": "power, strength",
+      "antonyms": "tiredness, weakness",
+      "forms": "energy, energies",
+      "example": "Solar energy can make electricity."
     },
     {
-      "word": "tall",
-      "meaning": "higher than average",
-      "japaneseMeaning": "背が高い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "tall, tallly",
-      "example": "The tall building is a hotel."
+      "word": "impression",
+      "meaning": "an effect produced on the mind or feelings",
+      "japaneseMeaning": "印象、感銘",
+      "synonyms": "impact, effect",
+      "antonyms": "indifference, apathy",
+      "forms": "impression, impressions",
+      "example": "The speech left a lasting impression on the audience."
     },
     {
-      "word": "thirsty",
-      "meaning": "needing a drink",
-      "japaneseMeaning": "喉が渇いた",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "thirsty, thirstyly",
-      "example": "I am thirsty after running."
+      "word": "network",
+      "meaning": "a group of people or things that are connected",
+      "japaneseMeaning": "ネットワーク、人脈",
+      "synonyms": "system, connection",
+      "antonyms": "separation, single part",
+      "forms": "network, networks",
+      "example": "The train network connects many small towns."
     },
     {
-      "word": "true",
-      "meaning": "real or correct",
-      "japaneseMeaning": "本当の",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "true, truely",
-      "example": "The true story was surprising."
+      "word": "priority",
+      "meaning": "something that is more important than other things",
+      "japaneseMeaning": "優先事項",
+      "synonyms": "main concern, first choice",
+      "antonyms": "last choice, delay",
+      "forms": "priority, priorities",
+      "example": "Safety is our first priority during the trip."
     },
     {
-      "word": "white",
-      "meaning": "having the color of snow or milk",
-      "japaneseMeaning": "白い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "white, whitely",
-      "example": "She wore a white shirt."
+      "word": "traffic",
+      "meaning": "cars, buses, and other vehicles on a road",
+      "japaneseMeaning": "交通、車の流れ",
+      "synonyms": "vehicles, road flow",
+      "antonyms": "empty road, quiet",
+      "forms": "traffic, traffics",
+      "example": "Traffic is heavy near the school in the morning."
     },
     {
-      "word": "yellow",
-      "meaning": "having the color of a lemon",
-      "japaneseMeaning": "黄色い",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "yellow, yellowly",
-      "example": "The yellow bus stopped here."
+      "word": "company",
+      "meaning": "a business that sells goods or services",
+      "japaneseMeaning": "会社",
+      "synonyms": "business, firm",
+      "antonyms": "customer, school",
+      "forms": "company, companies",
+      "example": "My father works for a small company."
     },
     {
-      "word": "grateful",
-      "meaning": "feeling thankful",
-      "japaneseMeaning": "感謝している",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "grateful, gratefully",
-      "example": "I am grateful for your help."
+      "word": "society",
+      "meaning": "people living together in a country or group",
+      "japaneseMeaning": "社会",
+      "synonyms": "community, people",
+      "antonyms": "individual, isolation",
+      "forms": "society, societies",
+      "example": "A kind society helps old people and children."
     },
     {
-      "word": "sad",
-      "meaning": "unhappy",
-      "japaneseMeaning": "悲しい",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "sad, sadly",
-      "example": "The sad movie made me cry."
+      "word": "factor",
+      "meaning": "one thing that helps cause a result",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "factor, factors",
+      "example": "The factor helped us understand the situation more clearly."
     },
     {
-      "word": "shy",
-      "meaning": "nervous around other people",
-      "japaneseMeaning": "恥ずかしがりの",
-      "synonyms": "quality, state",
-      "antonyms": "opposite, not",
-      "forms": "shy, shyly",
-      "example": "The shy child spoke quietly."
+      "word": "parliament",
+      "meaning": "legislative body",
+      "japaneseMeaning": "議会",
+      "synonyms": "assembly, congress",
+      "antonyms": "dictatorship, autocracy",
+      "forms": "parliament, parliaments",
+      "example": "Parliament debated the bill."
     }
   ]
 }

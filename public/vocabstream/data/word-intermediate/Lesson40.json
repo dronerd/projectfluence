@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-40",
   "title": "Lesson 40",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "funny", "meaning": "making people laugh or seeming strange", "japaneseMeaning": "おもしろい、変な", "synonyms": "amusing, strange", "antonyms": "serious, normal", "forms": "funny, funnier, funniest", "example": "The funny story made everyone laugh." },
-    { "word": "glad", "meaning": "happy or pleased", "japaneseMeaning": "うれしい", "synonyms": "happy, pleased", "antonyms": "sad, sorry", "forms": "glad, gladly, gladness", "example": "I am glad to hear that you passed." },
-    { "word": "honest", "meaning": "telling the truth and not cheating", "japaneseMeaning": "正直な", "synonyms": "truthful, fair", "antonyms": "dishonest, false", "forms": "honest, honestly, honesty", "example": "An honest person admits mistakes." },
-    { "word": "huge", "meaning": "very large", "japaneseMeaning": "巨大な、とても大きい", "synonyms": "enormous, giant", "antonyms": "tiny, small", "forms": "huge, hugely", "example": "A huge crowd waited outside the stadium." },
-    { "word": "hungry", "meaning": "wanting or needing food", "japaneseMeaning": "空腹の", "synonyms": "starving, empty", "antonyms": "full, satisfied", "forms": "hungry, hungrily, hunger", "example": "I was hungry after soccer practice." },
-    { "word": "lazy", "meaning": "not wanting to work or move", "japaneseMeaning": "怠けた、だらけた", "synonyms": "idle, inactive", "antonyms": "hardworking, active", "forms": "lazy, lazily, laziness", "example": "A lazy weekend at home can feel nice." },
-    { "word": "lonely", "meaning": "sad because you are alone", "japaneseMeaning": "寂しい、孤独な", "synonyms": "alone, isolated", "antonyms": "connected, social", "forms": "lonely, loneliness", "example": "She felt lonely after moving to a new town." },
-    { "word": "noisy", "meaning": "making a lot of noise", "japaneseMeaning": "騒がしい", "synonyms": "loud, rowdy", "antonyms": "quiet, silent", "forms": "noisy, noisily, noise", "example": "The noisy street made it hard to sleep." },
-    { "word": "perfect", "meaning": "as good as possible, with no mistakes", "japaneseMeaning": "完璧な", "synonyms": "excellent, complete", "antonyms": "imperfect, poor", "forms": "perfect, perfectly, perfection", "example": "The weather was perfect for a picnic." },
-    { "word": "polite", "meaning": "showing good manners and respect", "japaneseMeaning": "礼儀正しい", "synonyms": "respectful, courteous", "antonyms": "rude, impolite", "forms": "polite, politely, politeness", "example": "The polite student thanked the bus driver." }
+    {
+      "word": "aggressive",
+      "meaning": "ready to argue or attack",
+      "japaneseMeaning": "攻撃的な",
+      "synonyms": "forceful, hostile",
+      "antonyms": "calm, gentle",
+      "forms": "aggressive, aggressively",
+      "example": "The aggressive tone made the meeting difficult."
+    },
+    {
+      "word": "vacant",
+      "meaning": "available because no one is using it",
+      "japaneseMeaning": "空いている、空席の",
+      "synonyms": "available, free",
+      "antonyms": "occupied, full",
+      "forms": "vacant, vacancy",
+      "example": "There were no vacant seats on the train."
+    },
+    {
+      "word": "impossible",
+      "meaning": "not able to occur, exist, or be done",
+      "japaneseMeaning": "不可能な",
+      "synonyms": "unachievable, impractical",
+      "antonyms": "possible, feasible",
+      "forms": "impossible, more impossible, most impossible",
+      "example": "It seemed impossible to finish on time."
+    },
+    {
+      "word": "physical",
+      "meaning": "connected with the body or real things you can touch",
+      "japaneseMeaning": "身体の、物理的な",
+      "synonyms": "bodily, real",
+      "antonyms": "mental, emotional",
+      "forms": "physical, more physical, most physical",
+      "example": "The job requires physical strength."
+    },
+    {
+      "word": "strict",
+      "meaning": "demanding that rules are followed",
+      "japaneseMeaning": "厳格な",
+      "synonyms": "firm, severe",
+      "antonyms": "lenient, permissive",
+      "forms": "strict, more strict, most strict",
+      "example": "My teacher is strict about homework."
+    },
+    {
+      "word": "complex",
+      "meaning": "not simple, with many parts",
+      "japaneseMeaning": "複雑な",
+      "synonyms": "complicated, detailed",
+      "antonyms": "simple, basic",
+      "forms": "complex, more complex, most complex",
+      "example": "The instructions were too complex for new users."
+    },
+    {
+      "word": "reluctant",
+      "meaning": "not willing to do something",
+      "japaneseMeaning": "気が進まない",
+      "synonyms": "unwilling, hesitant",
+      "antonyms": "willing, eager",
+      "forms": "reluctant, reluctantly",
+      "example": "He was reluctant to speak in front of the class."
+    },
+    {
+      "word": "assertive",
+      "meaning": "confidently expressing opinions",
+      "japaneseMeaning": "自己主張の強い",
+      "synonyms": "confident, decisive",
+      "antonyms": "submissive, passive",
+      "forms": "assertive, assertively",
+      "example": "Being assertive helps in negotiations."
+    },
+    {
+      "word": "wise",
+      "meaning": "able to make good choices because of experience",
+      "japaneseMeaning": "賢明な",
+      "synonyms": "sensible, smart",
+      "antonyms": "foolish, careless",
+      "forms": "wise, more wise, most wise",
+      "example": "It was wise to check the train times before leaving."
+    },
+    {
+      "word": "proper",
+      "meaning": "right or suitable for the situation",
+      "japaneseMeaning": "適切な、正式な",
+      "synonyms": "suitable, correct",
+      "antonyms": "wrong, unsuitable",
+      "forms": "proper, more proper, most proper",
+      "example": "You need proper shoes for the mountain path."
+    }
   ]
 }

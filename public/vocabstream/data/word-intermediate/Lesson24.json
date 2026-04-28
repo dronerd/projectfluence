@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-24",
   "title": "Lesson 24",
-  "paragraph": "The previous owner of the old house left a traditional garden and a visible stone path. The room felt bright and cheerful, but the busy road outside made it noisy. A careful check found a deep crack in one wall. The kitchen was delicious-smelling after lunch, and the small room felt difficult to heat in winter. Still, the house had an early design and excellent windows.",
   "words": [
-    { "word": "previous", "meaning": "happening or existing before now or before another thing", "japaneseMeaning": "前の、以前の", "synonyms": "earlier, former", "antonyms": "next, later", "forms": "previous, previously", "example": "The previous lesson was easier than this one." },
-    { "word": "traditional", "meaning": "following old customs or ways", "japaneseMeaning": "伝統的な", "synonyms": "customary, old-style", "antonyms": "modern, new", "forms": "traditional, traditionally, tradition", "example": "They wore traditional clothes for the festival." },
-    { "word": "visible", "meaning": "able to be seen", "japaneseMeaning": "見える、目に見える", "synonyms": "seen, clear", "antonyms": "hidden, invisible", "forms": "visible, visibly, visibility", "example": "The mountain is visible from our classroom." },
-    { "word": "bright", "meaning": "full of light or strong in color", "japaneseMeaning": "明るい、鮮やかな", "synonyms": "light, shining", "antonyms": "dark, dull", "forms": "bright, brightly, brightness", "example": "The bright room helped me wake up." },
-    { "word": "busy", "meaning": "having a lot to do or full of activity", "japaneseMeaning": "忙しい、混雑した", "synonyms": "active, crowded", "antonyms": "quiet, free", "forms": "busy, busily, busyness", "example": "The station is busy every morning." },
-    { "word": "careful", "meaning": "thinking about what you do so you avoid mistakes", "japaneseMeaning": "注意深い、慎重な", "synonyms": "cautious, thoughtful", "antonyms": "careless, reckless", "forms": "careful, carefully, carefulness", "example": "Be careful when you carry hot soup." },
-    { "word": "cheerful", "meaning": "happy and positive", "japaneseMeaning": "陽気な、明るい", "synonyms": "happy, bright", "antonyms": "sad, gloomy", "forms": "cheerful, cheerfully, cheerfulness", "example": "Her cheerful greeting made everyone smile." },
-    { "word": "deep", "meaning": "going far down or far in", "japaneseMeaning": "深い", "synonyms": "profound, low", "antonyms": "shallow, surface", "forms": "deep, deeply, depth", "example": "The lake is too deep for children to swim in." },
-    { "word": "difficult", "meaning": "not easy to do or understand", "japaneseMeaning": "難しい", "synonyms": "hard, challenging", "antonyms": "easy, simple", "forms": "difficult, difficulty", "example": "This puzzle is difficult, but it is fun." },
-    { "word": "excellent", "meaning": "very good", "japaneseMeaning": "優れた、素晴らしい", "synonyms": "great, wonderful", "antonyms": "poor, bad", "forms": "excellent, excellently, excellence", "example": "She gave an excellent presentation." }
+    {
+      "word": "previous",
+      "meaning": "happening or existing before now or before another thing",
+      "japaneseMeaning": "前の、以前の",
+      "synonyms": "earlier, former",
+      "antonyms": "next, later",
+      "forms": "previous, previously",
+      "example": "The previous lesson was easier than this one."
+    },
+    {
+      "word": "traditional",
+      "meaning": "following old customs or ways",
+      "japaneseMeaning": "伝統的な",
+      "synonyms": "customary, old-style",
+      "antonyms": "modern, new",
+      "forms": "traditional, traditionally, tradition",
+      "example": "They wore traditional clothes for the festival."
+    },
+    {
+      "word": "visible",
+      "meaning": "able to be seen",
+      "japaneseMeaning": "見える、目に見える",
+      "synonyms": "seen, clear",
+      "antonyms": "hidden, invisible",
+      "forms": "visible, visibly, visibility",
+      "example": "The mountain is visible from our classroom."
+    },
+    {
+      "word": "vivid",
+      "meaning": "very clear, bright, or easy to imagine",
+      "japaneseMeaning": "鮮やかな、生き生きとした",
+      "synonyms": "clear, lively",
+      "antonyms": "dull, unclear",
+      "forms": "vivid, vividly",
+      "example": "The writer gave a vivid description of the market."
+    },
+    {
+      "word": "occupied",
+      "meaning": "being used or busy with an activity",
+      "japaneseMeaning": "使用中の、忙しい",
+      "synonyms": "busy, taken",
+      "antonyms": "free, available",
+      "forms": "occupied, occupation",
+      "example": "All meeting rooms were occupied after lunch."
+    },
+    {
+      "word": "attentive",
+      "meaning": "listening or watching carefully",
+      "japaneseMeaning": "注意深い、気配りのある",
+      "synonyms": "careful, focused",
+      "antonyms": "careless, distracted",
+      "forms": "attentive, attentively",
+      "example": "The guide was attentive to every visitor's question."
+    },
+    {
+      "word": "encouraging",
+      "meaning": "making someone feel more confident or hopeful",
+      "japaneseMeaning": "励みになる、勇気づける",
+      "synonyms": "hopeful, supportive",
+      "antonyms": "discouraging, negative",
+      "forms": "encouraging, encouragingly",
+      "example": "The teacher gave encouraging comments on my essay."
+    },
+    {
+      "word": "profound",
+      "meaning": "very great or strongly felt",
+      "japaneseMeaning": "深い、大きな",
+      "synonyms": "deep, serious",
+      "antonyms": "small, shallow",
+      "forms": "profound, profoundly",
+      "example": "The experience had a profound effect on her."
+    },
+    {
+      "word": "challenging",
+      "meaning": "difficult in a way that tests your ability",
+      "japaneseMeaning": "やりがいのある、難しい",
+      "synonyms": "difficult, demanding",
+      "antonyms": "easy, simple",
+      "forms": "challenging, challenge",
+      "example": "The course is challenging, but I am learning a lot."
+    },
+    {
+      "word": "outstanding",
+      "meaning": "extremely good or clearly better than others",
+      "japaneseMeaning": "傑出した、非常に優れた",
+      "synonyms": "excellent, remarkable",
+      "antonyms": "poor, ordinary",
+      "forms": "outstanding, outstandingly",
+      "example": "She gave an outstanding presentation at the contest."
+    }
   ]
 }

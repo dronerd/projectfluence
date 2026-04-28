@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-53",
   "title": "Lesson 53",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "put", "meaning": "to place something somewhere", "japaneseMeaning": "置く", "synonyms": "place, set", "antonyms": "remove, take", "forms": "put, puts, putting, put", "example": "Put your bag under the desk." },
-    { "word": "read", "meaning": "to look at and understand written words", "japaneseMeaning": "読む", "synonyms": "study, look at", "antonyms": "write, ignore", "forms": "read, reads, reading, read", "example": "I read the news every morning." },
-    { "word": "run", "meaning": "to move quickly on foot", "japaneseMeaning": "走る", "synonyms": "jog, race", "antonyms": "walk, stop", "forms": "run, runs, running, ran, run", "example": "She can run five kilometers." },
-    { "word": "say", "meaning": "to speak words", "japaneseMeaning": "言う", "synonyms": "tell, state", "antonyms": "listen, stay silent", "forms": "say, says, saying, said", "example": "Please say your name clearly." },
-    { "word": "sell", "meaning": "to give something to someone for money", "japaneseMeaning": "売る", "synonyms": "trade, offer", "antonyms": "buy, keep", "forms": "sell, sells, selling, sold", "example": "They sell fresh bread at the market." },
-    { "word": "sit", "meaning": "to rest your body on a chair or other surface", "japaneseMeaning": "座る", "synonyms": "take a seat, rest", "antonyms": "stand, rise", "forms": "sit, sits, sitting, sat", "example": "Please sit near the window." },
-    { "word": "speak", "meaning": "to use your voice to say words", "japaneseMeaning": "話す", "synonyms": "talk, say", "antonyms": "listen, stay silent", "forms": "speak, speaks, speaking, spoke, spoken", "example": "Can you speak more slowly?" },
-    { "word": "start", "meaning": "to begin doing something", "japaneseMeaning": "始める、始まる", "synonyms": "begin, open", "antonyms": "finish, stop", "forms": "start, starts, starting, started", "example": "The movie will start at seven." },
-    { "word": "stay", "meaning": "to remain in a place", "japaneseMeaning": "滞在する、とどまる", "synonyms": "remain, wait", "antonyms": "leave, go", "forms": "stay, stays, staying, stayed", "example": "We will stay at a hotel tonight." },
-    { "word": "stop", "meaning": "to end an action or movement", "japaneseMeaning": "止まる、止める", "synonyms": "end, halt", "antonyms": "start, continue", "forms": "stop, stops, stopping, stopped", "example": "Stop talking during the test." }
+    {
+      "word": "software",
+      "meaning": "programs used by a computer or phone",
+      "japaneseMeaning": "ソフトウェア",
+      "synonyms": "program, app",
+      "antonyms": "hardware, machine",
+      "forms": "software",
+      "example": "This software helps us edit short videos."
+    },
+    {
+      "word": "culture",
+      "meaning": "the ideas, art, food, and ways of life of a group",
+      "japaneseMeaning": "文化",
+      "synonyms": "way of life, customs",
+      "antonyms": "nature, biology",
+      "forms": "culture, cultures",
+      "example": "Food is an important part of culture."
+    },
+    {
+      "word": "assistance",
+      "meaning": "help or support given to someone",
+      "japaneseMeaning": "援助、支援",
+      "synonyms": "help, support",
+      "antonyms": "opposition, neglect",
+      "forms": "assistance",
+      "example": "Please ask the staff for assistance if you need it."
+    },
+    {
+      "word": "laboratory",
+      "meaning": "a room where people do science tests",
+      "japaneseMeaning": "実験室、研究室",
+      "synonyms": "lab, science room",
+      "antonyms": "classroom, office",
+      "forms": "laboratory, laboratories",
+      "example": "Students wear glasses in the laboratory."
+    },
+    {
+      "word": "position",
+      "meaning": "a place, job, or opinion",
+      "japaneseMeaning": "位置、職、立場",
+      "synonyms": "place, role",
+      "antonyms": "movement, change",
+      "forms": "position, positions",
+      "example": "She got a new position at the hotel."
+    },
+    {
+      "word": "service",
+      "meaning": "work done to help people or a system that helps them",
+      "japaneseMeaning": "サービス",
+      "synonyms": "help, support",
+      "antonyms": "problem, harm",
+      "forms": "service, services",
+      "example": "The restaurant gives friendly service."
+    },
+    {
+      "word": "account",
+      "meaning": "a record of money in a bank or online service",
+      "japaneseMeaning": "口座、アカウント",
+      "synonyms": "record, profile",
+      "antonyms": "cash, logout",
+      "forms": "account, accounts",
+      "example": "I opened a new account at the bank."
+    },
+    {
+      "word": "field",
+      "meaning": "an area of land or a subject of work or study",
+      "japaneseMeaning": "畑、分野",
+      "synonyms": "area, subject",
+      "antonyms": "building, general topic",
+      "forms": "field, fields",
+      "example": "She wants to work in the field of environmental science."
+    },
+    {
+      "word": "shoreline",
+      "meaning": "the edge of the land where it meets the sea or a lake",
+      "japaneseMeaning": "海岸線、湖岸線",
+      "synonyms": "coast, edge",
+      "antonyms": "inland, center",
+      "forms": "shoreline, shorelines",
+      "example": "Volunteers cleaned trash along the shoreline."
+    },
+    {
+      "word": "sequence",
+      "meaning": "a set of things that happen or are arranged in order",
+      "japaneseMeaning": "順序、連続",
+      "synonyms": "order, series",
+      "antonyms": "disorder, mix",
+      "forms": "sequence, sequences",
+      "example": "Put the events in the correct sequence."
+    }
   ]
 }

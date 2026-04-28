@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-60",
   "title": "Lesson 60",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "expensive", "meaning": "costing a lot of money", "japaneseMeaning": "高価な", "synonyms": "costly, high-priced", "antonyms": "cheap, inexpensive", "forms": "expensive, expensively", "example": "The restaurant was too expensive for students." },
-    { "word": "false", "meaning": "not true or not real", "japaneseMeaning": "偽の、誤った", "synonyms": "wrong, untrue", "antonyms": "true, correct", "forms": "false, falsely, falseness", "example": "The website gave false information." },
-    { "word": "friendly", "meaning": "kind and pleasant to other people", "japaneseMeaning": "親切な、友好的な", "synonyms": "kind, warm", "antonyms": "unfriendly, cold", "forms": "friendly, friendliness", "example": "The friendly waiter helped us choose food." },
-    { "word": "good", "meaning": "pleasant, useful, or of high quality", "japaneseMeaning": "良い", "synonyms": "nice, fine", "antonyms": "bad, poor", "forms": "good, better, best", "example": "This is a good place to study." },
-    { "word": "green", "meaning": "the color of grass or leaves", "japaneseMeaning": "緑の", "synonyms": "leaf-colored, eco-friendly", "antonyms": "red, dry", "forms": "green, greener, greenest", "example": "The green shirt looks nice on you." },
-    { "word": "grey", "meaning": "the color between black and white", "japaneseMeaning": "灰色の", "synonyms": "gray, silver", "antonyms": "colorful, bright", "forms": "grey, greyer, greyest", "example": "The sky was grey before the storm." },
-    { "word": "happy", "meaning": "feeling pleased or joyful", "japaneseMeaning": "幸せな、うれしい", "synonyms": "glad, joyful", "antonyms": "sad, unhappy", "forms": "happy, happier, happiest, happily", "example": "She looked happy after the concert." },
-    { "word": "hard", "meaning": "difficult or not soft", "japaneseMeaning": "難しい、硬い", "synonyms": "difficult, solid", "antonyms": "easy, soft", "forms": "hard, harder, hardest", "example": "The hard test took two hours." },
-    { "word": "high", "meaning": "far above the ground or large in amount", "japaneseMeaning": "高い", "synonyms": "tall, elevated", "antonyms": "low, short", "forms": "high, higher, highest", "example": "The mountain is very high." },
-    { "word": "hot", "meaning": "having a high temperature", "japaneseMeaning": "熱い、暑い", "synonyms": "warm, heated", "antonyms": "cold, cool", "forms": "hot, hotter, hottest", "example": "The tea is too hot to drink." }
+    {
+      "word": "submit",
+      "meaning": "to send work or a form to someone officially",
+      "japaneseMeaning": "提出する",
+      "synonyms": "send, hand in",
+      "antonyms": "keep, withdraw",
+      "forms": "submit, submits, submitting, submitted",
+      "example": "Please submit your report by Friday."
+    },
+    {
+      "word": "install",
+      "meaning": "to put software or equipment in place to use it",
+      "japaneseMeaning": "設置する、インストールする",
+      "synonyms": "set up, add",
+      "antonyms": "remove, uninstall",
+      "forms": "install, installs, installing, installed",
+      "example": "Can you install this app on my phone?"
+    },
+    {
+      "word": "measure",
+      "meaning": "to find the size, amount, or level of something",
+      "japaneseMeaning": "測定する／測る",
+      "synonyms": "check, assess",
+      "antonyms": "guess, estimate",
+      "forms": "measure, measures, measuring, measured",
+      "example": "Measure the length carefully."
+    },
+    {
+      "word": "save",
+      "meaning": "to keep something for future use or to rescue",
+      "japaneseMeaning": "保存する／救う",
+      "synonyms": "store, rescue",
+      "antonyms": "waste, lose",
+      "forms": "save, saves, saving, saved",
+      "example": "Save your work often."
+    },
+    {
+      "word": "build",
+      "meaning": "to construct by putting parts together",
+      "japaneseMeaning": "建てる／作る",
+      "synonyms": "construct, create",
+      "antonyms": "destroy, demolish",
+      "forms": "build, builds, building, built, built",
+      "example": "They plan to build a new bridge."
+    },
+    {
+      "word": "ignore",
+      "meaning": "to pay no attention to someone or something",
+      "japaneseMeaning": "無視する",
+      "synonyms": "avoid, overlook",
+      "antonyms": "notice, consider",
+      "forms": "ignore, ignores, ignoring, ignored",
+      "example": "Do not ignore important safety warnings."
+    },
+    {
+      "word": "transition",
+      "meaning": "to change from one state or situation to another",
+      "japaneseMeaning": "移行する、変化する",
+      "synonyms": "change, shift",
+      "antonyms": "remain, stay",
+      "forms": "transition, transitions, transitioning, transitioned",
+      "example": "Many students transition to online learning during bad weather."
+    },
+    {
+      "word": "comprehend",
+      "meaning": "to understand",
+      "japaneseMeaning": "理解する",
+      "synonyms": "understand, grasp",
+      "antonyms": "misunderstand, ignore",
+      "forms": "comprehend, comprehends, comprehending, comprehended",
+      "example": "He comprehended the instructions."
+    },
+    {
+      "word": "evaluate",
+      "meaning": "to judge how good or useful something is",
+      "japaneseMeaning": "評価する",
+      "synonyms": "assess, judge",
+      "antonyms": "ignore, neglect",
+      "forms": "evaluate, evaluates, evaluating, evaluated",
+      "example": "We must evaluate the risks."
+    },
+    {
+      "word": "match",
+      "meaning": "to be the same as something or go well with it",
+      "japaneseMeaning": "一致する、合う",
+      "synonyms": "fit, correspond",
+      "antonyms": "differ, clash",
+      "forms": "match, matches, matching, matched",
+      "example": "The numbers in the report do not match the chart."
+    }
   ]
 }

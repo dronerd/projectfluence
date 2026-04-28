@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-99",
   "title": "Lesson 99",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "milk",
-      "meaning": "a white drink from cows or other animals",
-      "japaneseMeaning": "牛乳",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "milk, milks",
-      "example": "Milk is in the fridge."
+      "word": "vote",
+      "meaning": "to choose someone or something in an election or group decision",
+      "japaneseMeaning": "投票する",
+      "synonyms": "choose, elect",
+      "antonyms": "reject, ignore",
+      "forms": "vote, votes, voting, voted",
+      "example": "Students will vote for the class leader tomorrow."
     },
     {
-      "word": "mother",
-      "meaning": "a female parent",
-      "japaneseMeaning": "母",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "mother, mothers",
-      "example": "My mother called me last night."
+      "word": "follow",
+      "meaning": "to go after or come behind someone/something",
+      "japaneseMeaning": "従う／ついていく",
+      "synonyms": "pursue, adhere",
+      "antonyms": "lead, ignore",
+      "forms": "follow, follows, following, followed",
+      "example": "Follow the instructions carefully."
     },
     {
-      "word": "movie",
-      "meaning": "a story shown with moving pictures",
-      "japaneseMeaning": "映画",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "movie, movies",
-      "example": "We watched a movie after dinner."
+      "word": "reach",
+      "meaning": "to arrive at or attain something",
+      "japaneseMeaning": "到達する／手が届く",
+      "synonyms": "attain, get to",
+      "antonyms": "miss, fall short",
+      "forms": "reach, reaches, reaching, reached",
+      "example": "We reached the summit at sunset."
     },
     {
-      "word": "mouth",
-      "meaning": "the part of the face used for eating and speaking",
-      "japaneseMeaning": "口",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "mouth, mouths",
-      "example": "Open your mouth for the dentist."
+      "word": "understand",
+      "meaning": "to grasp the meaning of something",
+      "japaneseMeaning": "理解する",
+      "synonyms": "comprehend, grasp",
+      "antonyms": "misunderstand, confuse",
+      "forms": "understand, understands, understanding, understood, understood",
+      "example": "I understand the problem now."
     },
     {
-      "word": "neck",
-      "meaning": "the body part between the head and shoulders",
-      "japaneseMeaning": "首",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "neck, necks",
-      "example": "My neck hurts after sleeping badly."
+      "word": "download",
+      "meaning": "to get a file from the internet onto your device",
+      "japaneseMeaning": "ダウンロードする",
+      "synonyms": "save, get",
+      "antonyms": "upload, send",
+      "forms": "download, downloads, downloading, downloaded",
+      "example": "Please download the map before we leave."
     },
     {
-      "word": "north",
-      "meaning": "the direction opposite south",
-      "japaneseMeaning": "北",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "north, norths",
-      "example": "The mountains are north of the city."
+      "word": "praise",
+      "meaning": "to say that someone or something is good",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "praise, praises, praising, praised",
+      "example": "We need to praise the plan before Friday."
     },
     {
-      "word": "nose",
-      "meaning": "the part of the face used for smelling",
-      "japaneseMeaning": "鼻",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "nose, noses",
-      "example": "My nose is cold in winter."
+      "word": "extend",
+      "meaning": "to make something longer or last longer",
+      "japaneseMeaning": "延ばす、広げる",
+      "synonyms": "lengthen, expand",
+      "antonyms": "shorten, reduce",
+      "forms": "extend, extends, extending, extended",
+      "example": "They will extend the deadline by one week."
     },
     {
-      "word": "number",
-      "meaning": "a word or sign that shows amount or order",
-      "japaneseMeaning": "数字、番号",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "number, numbers",
-      "example": "Write your phone number here."
+      "word": "execute",
+      "meaning": "to do a plan or order",
+      "japaneseMeaning": "実行する",
+      "synonyms": "implement, perform",
+      "antonyms": "neglect, fail",
+      "forms": "execute, executes, executing, executed",
+      "example": "The team executed the strategy perfectly."
     },
     {
-      "word": "picture",
-      "meaning": "an image made by drawing or using a camera",
-      "japaneseMeaning": "写真、絵",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "picture, pictures",
-      "example": "This picture shows my family."
+      "word": "enhance",
+      "meaning": "to improve or increase",
+      "japaneseMeaning": "高める",
+      "synonyms": "improve, boost",
+      "antonyms": "weaken, reduce",
+      "forms": "enhance, enhances, enhancing, enhanced",
+      "example": "The new lighting enhances the room's atmosphere."
     },
     {
-      "word": "plane",
-      "meaning": "a vehicle that flies in the air",
-      "japaneseMeaning": "飛行機",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "plane, planes",
-      "example": "The plane arrived early."
+      "word": "delegate",
+      "meaning": "to assign responsibility",
+      "japaneseMeaning": "委任する",
+      "synonyms": "assign, entrust",
+      "antonyms": "retain, withhold",
+      "forms": "delegate, delegates, delegating, delegated",
+      "example": "She delegated tasks to her team."
     }
   ]
 }

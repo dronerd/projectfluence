@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-1",
   "title": "Lesson 1",
-  "paragraph": "At work, Mina read a customer request and looked for a simple solution. She found one mistake in the order, wrote a notice about the issue for the team, and sent a survey after the service was finished. Her listening skill helped her handle a complaint and prepare a refund when the customer chose that option.",
   "words": [
-    { "word": "request", "meaning": "something you ask for politely or officially", "japaneseMeaning": "依頼、要求", "synonyms": "appeal, petition", "antonyms": "refusal, denial", "forms": "request, requests", "example": "The customer sent a request for a later delivery date." },
-    { "word": "solution", "meaning": "a way to solve a problem", "japaneseMeaning": "解決策", "synonyms": "answer, fix", "antonyms": "problem, difficulty", "forms": "solution, solutions", "example": "The teacher gave us a simple solution to the math problem." },
-    { "word": "mistake", "meaning": "something that is wrong or not correct", "japaneseMeaning": "間違い", "synonyms": "error, fault", "antonyms": "correction, accuracy", "forms": "mistake, mistakes", "example": "I found one mistake in my email before I sent it." },
-    { "word": "option", "meaning": "one thing that you can choose", "japaneseMeaning": "選択肢", "synonyms": "choice, possibility", "antonyms": "requirement, necessity", "forms": "option, options", "example": "Taking the bus is the cheapest option today." },
-    { "word": "issue", "meaning": "a problem or subject that people discuss", "japaneseMeaning": "問題、論点", "synonyms": "problem, matter", "antonyms": "solution, answer", "forms": "issue, issues", "example": "The manager wants to discuss the issue at the meeting." },
-    { "word": "notice", "meaning": "written or spoken information about something important", "japaneseMeaning": "通知、お知らせ", "synonyms": "message, announcement", "antonyms": "silence, secret", "forms": "notice, notices", "example": "A notice on the door said the shop was closed." },
-    { "word": "skill", "meaning": "an ability to do something well", "japaneseMeaning": "技能、スキル", "synonyms": "ability, talent", "antonyms": "weakness, inability", "forms": "skill, skills", "example": "Cooking is a useful skill for living alone." },
-    { "word": "survey", "meaning": "a set of questions used to collect opinions or facts", "japaneseMeaning": "調査、アンケート", "synonyms": "questionnaire, poll", "antonyms": "guess, assumption", "forms": "survey, surveys", "example": "The school used a survey to learn what students wanted." },
-    { "word": "complaint", "meaning": "a statement that something is wrong or unsatisfactory", "japaneseMeaning": "苦情、不満", "synonyms": "criticism, protest", "antonyms": "praise, compliment", "forms": "complaint, complaints", "example": "The hotel received a complaint about the noisy room." },
-    { "word": "refund", "meaning": "money that is given back after you return something or cancel something", "japaneseMeaning": "返金", "synonyms": "repayment, money back", "antonyms": "payment, charge", "forms": "refund, refunds", "example": "I asked for a refund because the camera did not work." }
+    {
+      "word": "request",
+      "meaning": "something you ask for politely or officially",
+      "japaneseMeaning": "依頼、要求",
+      "synonyms": "ask, demand",
+      "antonyms": "refusal, answer",
+      "forms": "request, requests",
+      "example": "The customer sent a request for a later delivery date."
+    },
+    {
+      "word": "solution",
+      "meaning": "a way to solve a problem",
+      "japaneseMeaning": "解決策",
+      "synonyms": "answer, fix",
+      "antonyms": "problem, difficulty",
+      "forms": "solution, solutions",
+      "example": "The teacher gave us a simple solution to the math problem."
+    },
+    {
+      "word": "misunderstanding",
+      "meaning": "a situation in which someone understands something wrongly",
+      "japaneseMeaning": "誤解",
+      "synonyms": "confusion, error",
+      "antonyms": "understanding, agreement",
+      "forms": "misunderstanding, misunderstandings",
+      "example": "A small misunderstanding caused the team to miss the meeting."
+    },
+    {
+      "word": "option",
+      "meaning": "one thing that you can choose",
+      "japaneseMeaning": "選択肢",
+      "synonyms": "choice, possibility",
+      "antonyms": "requirement, necessity",
+      "forms": "option, options",
+      "example": "Taking the bus is the cheapest option today."
+    },
+    {
+      "word": "issue",
+      "meaning": "a problem or subject that people discuss",
+      "japaneseMeaning": "問題、論点",
+      "synonyms": "problem, matter",
+      "antonyms": "solution, answer",
+      "forms": "issue, issues",
+      "example": "The manager wants to discuss the issue at the meeting."
+    },
+    {
+      "word": "announcement",
+      "meaning": "an official statement that tells people important news",
+      "japaneseMeaning": "発表、お知らせ",
+      "synonyms": "notice, message",
+      "antonyms": "secret, silence",
+      "forms": "announcement, announcements",
+      "example": "The principal made an announcement about the school trip."
+    },
+    {
+      "word": "qualification",
+      "meaning": "an exam, course, or skill that shows you can do a job",
+      "japaneseMeaning": "資格、能力",
+      "synonyms": "certificate, ability",
+      "antonyms": "inexperience, weakness",
+      "forms": "qualification, qualifications",
+      "example": "This job requires a teaching qualification."
+    },
+    {
+      "word": "survey",
+      "meaning": "a set of questions used to collect opinions or facts",
+      "japaneseMeaning": "調査、アンケート",
+      "synonyms": "questionnaire, poll",
+      "antonyms": "guess, assumption",
+      "forms": "survey, surveys",
+      "example": "The school used a survey to learn what students wanted."
+    },
+    {
+      "word": "complaint",
+      "meaning": "a statement that something is wrong or unsatisfactory",
+      "japaneseMeaning": "苦情、不満",
+      "synonyms": "criticism, objection",
+      "antonyms": "praise, compliment",
+      "forms": "complaint, complaints",
+      "example": "The hotel received a complaint about the noisy room."
+    },
+    {
+      "word": "refund",
+      "meaning": "money that is given back after you return something or cancel something",
+      "japaneseMeaning": "返金",
+      "synonyms": "repayment, money back",
+      "antonyms": "payment, charge",
+      "forms": "refund, refunds",
+      "example": "I asked for a refund because the camera did not work."
+    }
   ]
 }

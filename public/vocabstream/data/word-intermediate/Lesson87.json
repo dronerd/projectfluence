@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-87",
   "title": "Lesson 87",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "bowl",
-      "meaning": "a round deep dish",
-      "japaneseMeaning": "鉢、ボウル",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bowl, bowls",
-      "example": "Put the rice in a bowl."
+      "word": "change",
+      "meaning": "to make or become different",
+      "japaneseMeaning": "変える／変わる",
+      "synonyms": "alter, modify",
+      "antonyms": "preserve, maintain",
+      "forms": "change, changes, changing, changed",
+      "example": "Change your clothes before dinner."
     },
     {
-      "word": "brain",
-      "meaning": "the organ in your head used for thinking",
-      "japaneseMeaning": "脳、頭脳",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "brain, brains",
-      "example": "Sleep helps your brain work well."
+      "word": "explore",
+      "meaning": "to travel around a place to learn about it",
+      "japaneseMeaning": "探検する、詳しく調べる",
+      "synonyms": "discover, examine",
+      "antonyms": "ignore, avoid",
+      "forms": "explore, explores, exploring, explored",
+      "example": "We explore the old part of the city on foot."
     },
     {
-      "word": "bus",
-      "meaning": "a large road vehicle for passengers",
-      "japaneseMeaning": "バス",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "bus, buss",
-      "example": "The bus stops near my house."
+      "word": "prefer",
+      "meaning": "to like one thing more than another",
+      "japaneseMeaning": "〜の方を好む",
+      "synonyms": "favor, choose",
+      "antonyms": "dislike, reject",
+      "forms": "prefer, prefers, prefering, prefered",
+      "example": "I prefer tea to coffee."
     },
     {
-      "word": "cake",
-      "meaning": "a sweet baked food",
-      "japaneseMeaning": "ケーキ",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "cake, cakes",
-      "example": "We ate cake at the party."
+      "word": "suppose",
+      "meaning": "to assume something is true without proof",
+      "japaneseMeaning": "仮定する／思う",
+      "synonyms": "assume, presume",
+      "antonyms": "know, verify",
+      "forms": "suppose, supposes, supposing, supposed",
+      "example": "I suppose he's busy today."
     },
     {
-      "word": "chair",
-      "meaning": "a seat for one person",
-      "japaneseMeaning": "椅子",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "chair, chairs",
-      "example": "This chair is comfortable."
+      "word": "delay",
+      "meaning": "to make something happen later",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "delay, delays, delaying, delayed",
+      "example": "We need to delay the plan before Friday."
     },
     {
-      "word": "chicken",
-      "meaning": "a bird kept for meat or eggs",
-      "japaneseMeaning": "鶏肉、鶏",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "chicken, chickens",
-      "example": "We had chicken for dinner."
+      "word": "pack",
+      "meaning": "to put items into a container for transport",
+      "japaneseMeaning": "詰める／荷造りする",
+      "synonyms": "load, bundle",
+      "antonyms": "unpack, scatter",
+      "forms": "pack, packs, packing, packed",
+      "example": "Pack your suitcase tonight."
     },
     {
-      "word": "child",
-      "meaning": "a young person",
-      "japaneseMeaning": "子ども",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "child, childs",
-      "example": "Every child needs a ticket."
+      "word": "update",
+      "meaning": "to make information or a thing more recent",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "update, updates, updating, updated",
+      "example": "We need to update the plan before Friday."
     },
     {
-      "word": "church",
-      "meaning": "a building used for Christian worship",
-      "japaneseMeaning": "教会",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "church, churchs",
-      "example": "The old church is near the river."
+      "word": "motivate",
+      "meaning": "to provide reason or incentive",
+      "japaneseMeaning": "やる気を起こさせる",
+      "synonyms": "inspire, encourage",
+      "antonyms": "discourage, demotivate",
+      "forms": "motivate, motivates, motivating, motivated",
+      "example": "Rewards motivate employees."
     },
     {
-      "word": "circle",
-      "meaning": "a round shape",
-      "japaneseMeaning": "円、輪",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "circle, circles",
-      "example": "Draw a circle around the answer."
+      "word": "consist",
+      "meaning": "to be made of parts",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "consist, consists, consisting, consisted",
+      "example": "We need to consist the plan before Friday."
     },
     {
-      "word": "clock",
-      "meaning": "a device that shows time",
-      "japaneseMeaning": "時計",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "clock, clocks",
-      "example": "The clock on the wall is slow."
+      "word": "represent",
+      "meaning": "to speak or act for another person or group",
+      "japaneseMeaning": "動詞",
+      "synonyms": "do, act",
+      "antonyms": "stop, avoid",
+      "forms": "represent, represents, representing, represented",
+      "example": "We need to represent the plan before Friday."
     }
   ]
 }

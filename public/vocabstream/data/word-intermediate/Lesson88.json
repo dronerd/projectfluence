@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-88",
   "title": "Lesson 88",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "prefer",
-      "meaning": "to like one thing more than another",
-      "japaneseMeaning": "好む",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "prefer, prefers, prefering, prefered",
-      "example": "I prefer tea to coffee."
+      "word": "confident",
+      "meaning": "self-assured",
+      "japaneseMeaning": "自信のある",
+      "synonyms": "assured, self-reliant",
+      "antonyms": "insecure, doubtful",
+      "forms": "confident, confidently",
+      "example": "She felt confident about the presentation."
     },
     {
-      "word": "promise",
-      "meaning": "to say that you will do something",
-      "japaneseMeaning": "約束する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "promise, promises, promising, promised",
-      "example": "Promise to call me tonight."
+      "word": "full",
+      "meaning": "having no empty space",
+      "japaneseMeaning": "満杯の／いっぱいの",
+      "synonyms": "packed, complete",
+      "antonyms": "empty, vacant",
+      "forms": "full, more full, most full",
+      "example": "The bus was full, so we waited for the next one."
     },
     {
-      "word": "raise",
-      "meaning": "to lift or increase something",
-      "japaneseMeaning": "上げる、育てる",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "raise, raises, raising, raised",
-      "example": "Raise your hand before speaking."
+      "word": "narrow",
+      "meaning": "of small width in relation to length",
+      "japaneseMeaning": "狭い／細い",
+      "synonyms": "tight, slim",
+      "antonyms": "wide, broad",
+      "forms": "narrow, more narrow, most narrow",
+      "example": "The street is too narrow for two cars."
     },
     {
-      "word": "realize",
-      "meaning": "to understand something clearly",
-      "japaneseMeaning": "気づく",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "realize, realizes, realizing, realized",
-      "example": "I realize the mistake now."
+      "word": "serious",
+      "meaning": "not joking, or needing careful thought",
+      "japaneseMeaning": "真面目な／深刻な",
+      "synonyms": "grave, solemn",
+      "antonyms": "frivolous, lighthearted",
+      "forms": "serious, more serious, most serious",
+      "example": "This is a serious issue that needs action."
     },
     {
-      "word": "remain",
-      "meaning": "to stay in the same place or state",
-      "japaneseMeaning": "残る、とどまる",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "remain, remains, remaining, remained",
-      "example": "Please remain quiet during the test."
+      "word": "western",
+      "meaning": "in or from the west of a place",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "western, more western, most western",
+      "example": "The western choice made the whole plan easier."
     },
     {
-      "word": "reply",
-      "meaning": "to answer someone",
-      "japaneseMeaning": "返事をする",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "reply, replys, replying, replyed",
-      "example": "Please reply before Friday."
+      "word": "thoughtful",
+      "meaning": "kind and thinking about other people",
+      "japaneseMeaning": "思いやりのある",
+      "synonyms": "kind, considerate",
+      "antonyms": "careless, selfish",
+      "forms": "thoughtful, more thoughtful, most thoughtful",
+      "example": "Her thoughtful message made me feel better."
     },
     {
-      "word": "rise",
-      "meaning": "to go up",
-      "japaneseMeaning": "上がる",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "rise, rises, rising, rose, risen",
-      "example": "Prices often rise in summer."
+      "word": "smart",
+      "meaning": "intelligent or well-dressed",
+      "japaneseMeaning": "賢い／きちんとした",
+      "synonyms": "clever, bright",
+      "antonyms": "dull, unkempt",
+      "forms": "smart, more smart, most smart",
+      "example": "She is smart and always prepared for class."
     },
     {
-      "word": "worry",
-      "meaning": "to feel nervous about a problem",
-      "japaneseMeaning": "心配する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "worry, worrys, worrying, worryed",
-      "example": "Do not worry about the small mistake."
+      "word": "distinct",
+      "meaning": "clearly different",
+      "japaneseMeaning": "明確な、はっきりした",
+      "synonyms": "unique, separate",
+      "antonyms": "similar, indistinct",
+      "forms": "distinct, distincts",
+      "example": "Each culture has distinct traits."
     },
     {
-      "word": "wrap",
-      "meaning": "to cover something with paper or cloth",
-      "japaneseMeaning": "包む",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "wrap, wraps, wraping, wraped",
-      "example": "Wrap the gift before the party."
+      "word": "appealing",
+      "meaning": "interesting or attractive",
+      "japaneseMeaning": "魅力的な",
+      "synonyms": "attractive, interesting",
+      "antonyms": "unpleasant, boring",
+      "forms": "appealing, more appealing, most appealing",
+      "example": "The small cafe looked appealing after our walk."
     },
     {
-      "word": "whisper",
-      "meaning": "to speak very quietly",
-      "japaneseMeaning": "ささやく",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "whisper, whispers, whispering, whispered",
-      "example": "Whisper in the library."
+      "word": "remote",
+      "meaning": "far away from towns or people",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "remote, more remote, most remote",
+      "example": "The remote choice made the whole plan easier."
     }
   ]
 }

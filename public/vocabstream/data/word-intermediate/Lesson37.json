@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-37",
   "title": "Lesson 37",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "central", "meaning": "in the middle or most important", "japaneseMeaning": "中央の、中心的な", "synonyms": "middle, main", "antonyms": "outer, minor", "forms": "central, centrally, center", "example": "The station is in the central part of the city." },
-    { "word": "common", "meaning": "happening often or found in many places", "japaneseMeaning": "一般的な、よくある", "synonyms": "usual, frequent", "antonyms": "rare, unusual", "forms": "common, commonly", "example": "It is common to see bikes near the station." },
-    { "word": "correct", "meaning": "right and without mistakes", "japaneseMeaning": "正しい、正確な", "synonyms": "right, accurate", "antonyms": "wrong, incorrect", "forms": "correct, correctly, correctness", "example": "Please write the correct answer." },
-    { "word": "direct", "meaning": "going straight to a place or saying something clearly", "japaneseMeaning": "直接の、率直な", "synonyms": "straight, clear", "antonyms": "indirect, unclear", "forms": "direct, directly", "example": "There is a direct bus to the airport." },
-    { "word": "empty", "meaning": "with nothing inside", "japaneseMeaning": "空の、空いている", "synonyms": "blank, vacant", "antonyms": "full, crowded", "forms": "empty, emptily, emptiness", "example": "The empty bottle is on the table." },
-    { "word": "fair", "meaning": "treating people equally and honestly", "japaneseMeaning": "公平な、公正な", "synonyms": "just, equal", "antonyms": "unfair, biased", "forms": "fair, fairly, fairness", "example": "The teacher made a fair decision." },
-    { "word": "fast", "meaning": "moving or happening quickly", "japaneseMeaning": "速い", "synonyms": "quick, rapid", "antonyms": "slow, late", "forms": "fast, faster, fastest", "example": "The fast train reaches the city in one hour." },
-    { "word": "foreign", "meaning": "from another country", "japaneseMeaning": "外国の", "synonyms": "overseas, international", "antonyms": "local, domestic", "forms": "foreign", "example": "She enjoys learning foreign languages." },
-    { "word": "fresh", "meaning": "new, clean, or recently made", "japaneseMeaning": "新鮮な、新しい", "synonyms": "new, clean", "antonyms": "stale, old", "forms": "fresh, freshly, freshness", "example": "The bakery sells fresh bread every morning." },
-    { "word": "full", "meaning": "containing as much as possible", "japaneseMeaning": "いっぱいの、満腹の", "synonyms": "filled, complete", "antonyms": "empty, hungry", "forms": "full, fully, fullness", "example": "The bus was full after the concert." }
+    {
+      "word": "fearful",
+      "meaning": "worried or afraid that something bad may happen",
+      "japaneseMeaning": "恐れている、不安な",
+      "synonyms": "afraid, worried",
+      "antonyms": "confident, calm",
+      "forms": "fearful, fearfully",
+      "example": "Some residents were fearful after the strong storm."
+    },
+    {
+      "word": "confused",
+      "meaning": "not able to understand clearly",
+      "japaneseMeaning": "混乱した",
+      "synonyms": "mixed up, unsure",
+      "antonyms": "clear, certain",
+      "forms": "confused, more confused, most confused",
+      "example": "I felt confused by the new bus route."
+    },
+    {
+      "word": "infectious",
+      "meaning": "able to pass from one person to another",
+      "japaneseMeaning": "感染性の、人にうつる",
+      "synonyms": "catching, spreading",
+      "antonyms": "noninfectious, safe",
+      "forms": "infectious, infectiously",
+      "example": "The clinic gave advice about infectious diseases."
+    },
+    {
+      "word": "peaceful",
+      "meaning": "quiet and calm",
+      "japaneseMeaning": "平和な／穏やかな",
+      "synonyms": "calm, tranquil",
+      "antonyms": "chaotic, noisy",
+      "forms": "peaceful, more peaceful, most peaceful",
+      "example": "The countryside was peaceful and quiet."
+    },
+    {
+      "word": "exceptional",
+      "meaning": "unusually good or different from others",
+      "japaneseMeaning": "例外的な、非常に優れた",
+      "synonyms": "excellent, unusual",
+      "antonyms": "ordinary, average",
+      "forms": "exceptional, exceptionally",
+      "example": "Her science project showed exceptional creativity."
+    },
+    {
+      "word": "artistic",
+      "meaning": "connected with art or artists",
+      "japaneseMeaning": "芸術的な",
+      "synonyms": "creative, visual",
+      "antonyms": "plain, practical",
+      "forms": "artistic, more artistic, most artistic",
+      "example": "The poster has a strong artistic style."
+    },
+    {
+      "word": "worthwhile",
+      "meaning": "useful or important enough to spend time on",
+      "japaneseMeaning": "価値のある、やりがいのある",
+      "synonyms": "useful, valuable",
+      "antonyms": "useless, pointless",
+      "forms": "worthwhile",
+      "example": "Volunteering at the event was a worthwhile experience."
+    },
+    {
+      "word": "worth",
+      "meaning": "value or importance",
+      "japaneseMeaning": "価値",
+      "synonyms": "value, merit",
+      "antonyms": "lack of value, weakness",
+      "forms": "worth",
+      "example": "The old letter has great worth to her family."
+    },
+    {
+      "word": "notable",
+      "meaning": "important or interesting enough to notice",
+      "japaneseMeaning": "注目すべき、著しい",
+      "synonyms": "important, remarkable",
+      "antonyms": "ordinary, minor",
+      "forms": "notable, notably",
+      "example": "There was a notable increase in test scores."
+    },
+    {
+      "word": "underlying",
+      "meaning": "important but not immediately obvious",
+      "japaneseMeaning": "根本的な、潜在的な",
+      "synonyms": "basic, hidden",
+      "antonyms": "obvious, surface",
+      "forms": "underlying",
+      "example": "We need to understand the underlying cause of the problem."
+    }
   ]
 }

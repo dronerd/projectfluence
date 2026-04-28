@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-16",
   "title": "Lesson 16",
-  "paragraph": "A good company cares about worker attitude and safety. The monthly bill must match the budget, and every sample should meet the same standard. If there is a crime, a duty problem, or too much waste, the team reports it. Strong belief in honest work helps the business make a fair profit.",
   "words": [
-    { "word": "attitude", "meaning": "the way you think or feel about something", "japaneseMeaning": "態度、考え方", "synonyms": "view, approach", "antonyms": "indifference, dislike", "forms": "attitude, attitudes", "example": "Her positive attitude helped the team stay calm." },
-    { "word": "bill", "meaning": "a paper or message that says how much money you must pay", "japaneseMeaning": "請求書、勘定", "synonyms": "invoice, charge", "antonyms": "refund, payment", "forms": "bill, bills", "example": "The electricity bill was higher this month." },
-    { "word": "crime", "meaning": "an action that is against the law", "japaneseMeaning": "犯罪", "synonyms": "offense, illegal act", "antonyms": "lawful act, good deed", "forms": "crime, crimes", "example": "Stealing a phone is a crime." },
-    { "word": "duty", "meaning": "something that you must do because it is your responsibility", "japaneseMeaning": "義務、任務", "synonyms": "responsibility, task", "antonyms": "choice, freedom", "forms": "duty, duties", "example": "It is my duty to lock the door after class." },
-    { "word": "profit", "meaning": "money that remains after costs are paid", "japaneseMeaning": "利益、もうけ", "synonyms": "gain, earnings", "antonyms": "loss, debt", "forms": "profit, profits", "example": "The shop made a small profit during the festival." },
-    { "word": "safety", "meaning": "the condition of being protected from danger", "japaneseMeaning": "安全", "synonyms": "protection, security", "antonyms": "danger, risk", "forms": "safety", "example": "Safety is important when students use tools." },
-    { "word": "sample", "meaning": "a small amount or example used to show what something is like", "japaneseMeaning": "見本、サンプル", "synonyms": "example, specimen", "antonyms": "whole, full amount", "forms": "sample, samples", "example": "The nurse took a blood sample for the test." },
-    { "word": "standard", "meaning": "a level of quality that people expect or accept", "japaneseMeaning": "基準、水準", "synonyms": "level, rule", "antonyms": "exception, failure", "forms": "standard, standards", "example": "This hotel has a high standard of service." },
-    { "word": "waste", "meaning": "materials, food, or time that are not used well", "japaneseMeaning": "無駄、廃棄物", "synonyms": "rubbish, misuse", "antonyms": "saving, use", "forms": "waste, wastes", "example": "Food waste is a serious problem in many cities." },
-    { "word": "belief", "meaning": "an idea that you think is true", "japaneseMeaning": "信念、考え", "synonyms": "opinion, faith", "antonyms": "doubt, disbelief", "forms": "belief, beliefs", "example": "Her belief in teamwork made the project stronger." }
+    {
+      "word": "attitude",
+      "meaning": "the way you think or feel about something",
+      "japaneseMeaning": "態度、考え方",
+      "synonyms": "view, approach",
+      "antonyms": "indifference, dislike",
+      "forms": "attitude, attitudes",
+      "example": "Her positive attitude helped the team stay calm."
+    },
+    {
+      "word": "bill",
+      "meaning": "a paper or message that says how much money you must pay",
+      "japaneseMeaning": "請求書、勘定",
+      "synonyms": "invoice, charge",
+      "antonyms": "refund, payment",
+      "forms": "bill, bills",
+      "example": "The electricity bill was higher this month."
+    },
+    {
+      "word": "crime",
+      "meaning": "an action that is against the law",
+      "japaneseMeaning": "犯罪",
+      "synonyms": "offense, illegal act",
+      "antonyms": "lawful act, good deed",
+      "forms": "crime, crimes",
+      "example": "Stealing a phone is a crime."
+    },
+    {
+      "word": "duty",
+      "meaning": "something that you must do because it is your responsibility",
+      "japaneseMeaning": "義務、任務",
+      "synonyms": "responsibility, task",
+      "antonyms": "choice, freedom",
+      "forms": "duty, duties",
+      "example": "It is my duty to lock the door after class."
+    },
+    {
+      "word": "profit",
+      "meaning": "money that remains after costs are paid",
+      "japaneseMeaning": "利益、もうけ",
+      "synonyms": "gain, earnings",
+      "antonyms": "loss, debt",
+      "forms": "profit, profits",
+      "example": "The shop made a small profit during the festival."
+    },
+    {
+      "word": "safety",
+      "meaning": "the condition of being protected from danger",
+      "japaneseMeaning": "安全",
+      "synonyms": "protection, security",
+      "antonyms": "danger, risk",
+      "forms": "safety",
+      "example": "Safety is important when students use tools."
+    },
+    {
+      "word": "sample",
+      "meaning": "a small amount or example used to show what something is like",
+      "japaneseMeaning": "見本、サンプル",
+      "synonyms": "example, specimen",
+      "antonyms": "whole, full amount",
+      "forms": "sample, samples",
+      "example": "The nurse took a blood sample for the test."
+    },
+    {
+      "word": "standard",
+      "meaning": "a level of quality that people expect or accept",
+      "japaneseMeaning": "基準、水準",
+      "synonyms": "level, rule",
+      "antonyms": "exception, failure",
+      "forms": "standard, standards",
+      "example": "This hotel has a high standard of service."
+    },
+    {
+      "word": "waste",
+      "meaning": "materials, food, or time that are not used well",
+      "japaneseMeaning": "無駄、廃棄物",
+      "synonyms": "rubbish, misuse",
+      "antonyms": "saving, use",
+      "forms": "waste, wastes",
+      "example": "Food waste is a serious problem in many cities."
+    },
+    {
+      "word": "belief",
+      "meaning": "an idea that you think is true",
+      "japaneseMeaning": "信念、考え",
+      "synonyms": "opinion, faith",
+      "antonyms": "doubt, disbelief",
+      "forms": "belief, beliefs",
+      "example": "Her belief in teamwork made the project stronger."
+    }
   ]
 }

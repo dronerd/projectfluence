@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-32",
   "title": "Lesson 32",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "forest", "meaning": "a large area covered with trees", "japaneseMeaning": "森林、森", "synonyms": "woods, woodland", "antonyms": "desert, city", "forms": "forest, forests", "example": "The forest is quiet in the early morning." },
-    { "word": "freedom", "meaning": "the right or ability to do what you choose", "japaneseMeaning": "自由", "synonyms": "liberty, independence", "antonyms": "control, restriction", "forms": "freedom, freedoms", "example": "Students have the freedom to choose one club." },
-    { "word": "friendship", "meaning": "a friendly relationship between people", "japaneseMeaning": "友情", "synonyms": "companionship, closeness", "antonyms": "hostility, dislike", "forms": "friendship, friendships", "example": "Their friendship began in elementary school." },
-    { "word": "highway", "meaning": "a large road for fast travel between places", "japaneseMeaning": "高速道路、幹線道路", "synonyms": "main road, expressway", "antonyms": "path, side street", "forms": "highway, highways", "example": "The highway was busy during the holiday." },
-    { "word": "holiday", "meaning": "a day or period when people do not work or go to school", "japaneseMeaning": "休日、休暇", "synonyms": "vacation, break", "antonyms": "workday, school day", "forms": "holiday, holidays", "example": "We visited our grandparents during the holiday." },
-    { "word": "hospital", "meaning": "a place where sick or injured people receive care", "japaneseMeaning": "病院", "synonyms": "medical center, clinic", "antonyms": "home, office", "forms": "hospital, hospitals", "example": "The hospital is next to the station." },
-    { "word": "industry", "meaning": "businesses that make or sell a certain type of product or service", "japaneseMeaning": "産業、業界", "synonyms": "business field, trade", "antonyms": "hobby, home use", "forms": "industry, industries", "example": "The tourist industry creates many jobs." },
-    { "word": "instrument", "meaning": "a tool or a device used to make music", "japaneseMeaning": "楽器、器具", "synonyms": "tool, device", "antonyms": "voice, hand", "forms": "instrument, instruments", "example": "The guitar is her favorite instrument." },
-    { "word": "lawyer", "meaning": "a person whose job is to help people with the law", "japaneseMeaning": "弁護士", "synonyms": "attorney, legal adviser", "antonyms": "client, witness", "forms": "lawyer, lawyers", "example": "The lawyer explained the contract clearly." },
-    { "word": "magazine", "meaning": "a regular publication with articles and pictures", "japaneseMeaning": "雑誌", "synonyms": "journal, publication", "antonyms": "book, newspaper", "forms": "magazine, magazines", "example": "I read a travel magazine on the train." }
+    {
+      "word": "advertisement",
+      "meaning": "a picture, video, or notice that tells people about something to buy",
+      "japaneseMeaning": "広告、宣伝",
+      "synonyms": "ad, notice",
+      "antonyms": "warning, private message",
+      "forms": "advertisement, advertisements",
+      "example": "The advertisement showed a new language course."
+    },
+    {
+      "word": "concentration",
+      "meaning": "the ability to give all your attention to something",
+      "japaneseMeaning": "濃度、集中",
+      "synonyms": "focus, attention",
+      "antonyms": "distraction, confusion",
+      "forms": "concentration, concentrations",
+      "example": "Music can disturb my concentration while I study."
+    },
+    {
+      "word": "exhibition",
+      "meaning": "a public show of art, goods, or other things",
+      "japaneseMeaning": "展示会、展覧会",
+      "synonyms": "show, display",
+      "antonyms": "storage, private collection",
+      "forms": "exhibition, exhibitions",
+      "example": "Our class visited a science exhibition."
+    },
+    {
+      "word": "instrument",
+      "meaning": "a tool or a thing used to make music",
+      "japaneseMeaning": "楽器、器具",
+      "synonyms": "tool, device",
+      "antonyms": "toy, result",
+      "forms": "instrument, instruments",
+      "example": "She learned to play a traditional instrument."
+    },
+    {
+      "word": "council",
+      "meaning": "a group chosen to make plans or rules",
+      "japaneseMeaning": "議会、委員会",
+      "synonyms": "committee, board",
+      "antonyms": "individual, outsider",
+      "forms": "council, councils",
+      "example": "The student council planned a school event."
+    },
+    {
+      "word": "risk",
+      "meaning": "the chance of something bad happening",
+      "japaneseMeaning": "リスク、危険性",
+      "synonyms": "hazard, exposure",
+      "antonyms": "safety, certainty",
+      "forms": "risk, risks",
+      "example": "Assess the risk before starting the task."
+    },
+    {
+      "word": "version",
+      "meaning": "one form of something that is a little different from others",
+      "japaneseMeaning": "版、バージョン",
+      "synonyms": "form, edition",
+      "antonyms": "original, copy",
+      "forms": "version, versions",
+      "example": "Please download the latest version of the app."
+    },
+    {
+      "word": "customer",
+      "meaning": "a person who buys something from a shop or business",
+      "japaneseMeaning": "客、顧客",
+      "synonyms": "buyer, shopper",
+      "antonyms": "seller, worker",
+      "forms": "customer, customers",
+      "example": "The customer asked for a larger size."
+    },
+    {
+      "word": "access",
+      "meaning": "the chance or right to use or enter something",
+      "japaneseMeaning": "利用権、アクセス",
+      "synonyms": "entry, use",
+      "antonyms": "block, refusal",
+      "forms": "access",
+      "example": "Students need a password to get access to the site."
+    },
+    {
+      "word": "auditorium",
+      "meaning": "a large room where people watch a performance or listen to a talk",
+      "japaneseMeaning": "講堂、ホール",
+      "synonyms": "hall, theater",
+      "antonyms": "classroom, office",
+      "forms": "auditorium, auditoriums",
+      "example": "The speech contest was held in the auditorium."
+    }
   ]
 }

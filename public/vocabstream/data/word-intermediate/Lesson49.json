@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-49",
   "title": "Lesson 49",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "age", "meaning": "the number of years someone or something has lived or existed", "japaneseMeaning": "年齢、時代", "synonyms": "years, lifetime", "antonyms": "youth, newness", "forms": "age, ages", "example": "Write your age on the form." },
-    { "word": "air", "meaning": "the mixture of gases that we breathe", "japaneseMeaning": "空気", "synonyms": "atmosphere, breeze", "antonyms": "vacuum, water", "forms": "air", "example": "Fresh air came through the window." },
-    { "word": "artist", "meaning": "a person who creates art", "japaneseMeaning": "芸術家、アーティスト", "synonyms": "creator, painter", "antonyms": "viewer, critic", "forms": "artist, artists", "example": "The artist painted a picture of the river." },
-    { "word": "bit", "meaning": "a small amount or piece of something", "japaneseMeaning": "少し、小片", "synonyms": "piece, amount", "antonyms": "whole, lot", "forms": "bit, bits", "example": "Add a bit of salt to the soup." },
-    { "word": "boat", "meaning": "a small vehicle that travels on water", "japaneseMeaning": "ボート、船", "synonyms": "ship, vessel", "antonyms": "car, plane", "forms": "boat, boats", "example": "The boat crossed the lake." },
-    { "word": "brush", "meaning": "a tool with hairs used for cleaning, painting, or hair", "japaneseMeaning": "ブラシ、筆", "synonyms": "paintbrush, comb", "antonyms": "cloth, hand", "forms": "brush, brushes", "example": "Use a brush to clean your shoes." },
-    { "word": "calendar", "meaning": "a chart that shows days, weeks, and months", "japaneseMeaning": "カレンダー", "synonyms": "schedule, date chart", "antonyms": "clock, timer", "forms": "calendar, calendars", "example": "Mark the test date on your calendar." },
-    { "word": "camera", "meaning": "a device used to take photos or videos", "japaneseMeaning": "カメラ", "synonyms": "video camera, recorder", "antonyms": "screen, printer", "forms": "camera, cameras", "example": "My camera takes clear pictures." },
-    { "word": "captain", "meaning": "the leader of a team, ship, or aircraft", "japaneseMeaning": "キャプテン、船長", "synonyms": "leader, commander", "antonyms": "member, passenger", "forms": "captain, captains", "example": "The captain spoke to the team before the game." },
-    { "word": "carpet", "meaning": "thick cloth used to cover a floor", "japaneseMeaning": "じゅうたん", "synonyms": "rug, floor covering", "antonyms": "bare floor", "forms": "carpet, carpets", "example": "The carpet in the hotel room was red." }
+    {
+      "word": "anxious",
+      "meaning": "worried or nervous about something",
+      "japaneseMeaning": "不安な",
+      "synonyms": "worried, nervous",
+      "antonyms": "calm, relaxed",
+      "forms": "anxious, anxiously",
+      "example": "He felt anxious before the interview."
+    },
+    {
+      "word": "equivalent",
+      "meaning": "having the same value, meaning, or effect as something else",
+      "japaneseMeaning": "同等の、相当する",
+      "synonyms": "equal, similar",
+      "antonyms": "different, unequal",
+      "forms": "equivalent, equivalently",
+      "example": "This certificate is equivalent to one year of study."
+    },
+    {
+      "word": "informal",
+      "meaning": "relaxed and not official",
+      "japaneseMeaning": "非公式の、くだけた",
+      "synonyms": "casual, relaxed",
+      "antonyms": "formal, official",
+      "forms": "informal, more informal, most informal",
+      "example": "The meeting was informal, so students could speak freely."
+    },
+    {
+      "word": "popular",
+      "meaning": "liked or admired by many people",
+      "japaneseMeaning": "人気のある",
+      "synonyms": "well-liked, favored",
+      "antonyms": "unpopular, disliked",
+      "forms": "popular, more popular, most popular",
+      "example": "That cafe is very popular with students."
+    },
+    {
+      "word": "surprised",
+      "meaning": "feeling or showing shock because something was unexpected",
+      "japaneseMeaning": "驚いた",
+      "synonyms": "astonished, amazed",
+      "antonyms": "expectant, unsurprised",
+      "forms": "surprised, more surprised, most surprised",
+      "example": "She was surprised by the party her friends planned."
+    },
+    {
+      "word": "costly",
+      "meaning": "expensive or causing a serious loss",
+      "japaneseMeaning": "費用のかかる、犠牲の大きい",
+      "synonyms": "expensive, damaging",
+      "antonyms": "cheap, harmless",
+      "forms": "costly, costlier, costliest",
+      "example": "A small mistake can be costly in a large project."
+    },
+    {
+      "word": "biological",
+      "meaning": "connected with living things or the body",
+      "japaneseMeaning": "生物学の、生物の",
+      "synonyms": "natural, body-related",
+      "antonyms": "artificial, mechanical",
+      "forms": "biological, biologically",
+      "example": "The class studied biological changes in plants."
+    },
+    {
+      "word": "loyal",
+      "meaning": "faithful and devoted",
+      "japaneseMeaning": "忠実な",
+      "synonyms": "faithful, devoted",
+      "antonyms": "disloyal, unfaithful",
+      "forms": "loyal, loyally",
+      "example": "A loyal friend stands by you."
+    },
+    {
+      "word": "automatic",
+      "meaning": "working by itself without human control",
+      "japaneseMeaning": "自動の",
+      "synonyms": "self-operating, mechanized",
+      "antonyms": "manual, operated",
+      "forms": "automatic, more automatic, most automatic",
+      "example": "The doors open automatically when you approach."
+    },
+    {
+      "word": "slight",
+      "meaning": "small in amount or degree",
+      "japaneseMeaning": "わずかな、少しの",
+      "synonyms": "small, minor",
+      "antonyms": "large, serious",
+      "forms": "slight, more slight, most slight",
+      "example": "There was a slight delay because of the rain."
+    }
   ]
 }

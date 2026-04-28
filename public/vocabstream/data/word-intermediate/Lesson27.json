@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-27",
   "title": "Lesson 27",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "admire", "meaning": "to respect or like someone because of what they do", "japaneseMeaning": "称賛する、尊敬する", "synonyms": "respect, appreciate", "antonyms": "dislike, criticize", "forms": "admire, admires, admiring, admired, admiration", "example": "I admire my sister because she works hard." },
-    { "word": "admit", "meaning": "to say that something is true, especially something difficult", "japaneseMeaning": "認める、入れる", "synonyms": "accept, confess", "antonyms": "deny, reject", "forms": "admit, admits, admitting, admitted, admission", "example": "He will admit his mistake to the teacher." },
-    { "word": "appear", "meaning": "to become visible or seem to be a certain way", "japaneseMeaning": "現れる、〜のように見える", "synonyms": "show up, seem", "antonyms": "disappear, hide", "forms": "appear, appears, appearing, appeared, appearance", "example": "Dark clouds appear before the storm." },
-    { "word": "attach", "meaning": "to fasten or connect one thing to another", "japaneseMeaning": "取り付ける、添付する", "synonyms": "fasten, connect", "antonyms": "remove, separate", "forms": "attach, attaches, attaching, attached, attachment", "example": "Please attach the photo to your email." },
-    { "word": "bake", "meaning": "to cook food in an oven", "japaneseMeaning": "焼く", "synonyms": "cook, roast", "antonyms": "freeze, cool", "forms": "bake, bakes, baking, baked", "example": "We bake bread every Saturday morning." },
-    { "word": "burn", "meaning": "to be damaged by fire or heat", "japaneseMeaning": "燃える、焦げる", "synonyms": "catch fire, scorch", "antonyms": "cool, freeze", "forms": "burn, burns, burning, burned, burnt", "example": "Do not burn the toast in the oven." },
-    { "word": "chase", "meaning": "to run after someone or something", "japaneseMeaning": "追いかける", "synonyms": "follow, pursue", "antonyms": "escape, ignore", "forms": "chase, chases, chasing, chased", "example": "The dog likes to chase a ball in the park." },
-    { "word": "climb", "meaning": "to go up something using your feet and often your hands", "japaneseMeaning": "登る", "synonyms": "go up, scale", "antonyms": "descend, fall", "forms": "climb, climbs, climbing, climbed", "example": "We climb the hill to see the town." },
-    { "word": "discover", "meaning": "to find something for the first time", "japaneseMeaning": "発見する", "synonyms": "find, learn", "antonyms": "lose, miss", "forms": "discover, discovers, discovering, discovered, discovery", "example": "Scientists discover new facts about the ocean." },
-    { "word": "earn", "meaning": "to get money by working", "japaneseMeaning": "稼ぐ、得る", "synonyms": "make, receive", "antonyms": "spend, lose", "forms": "earn, earns, earning, earned", "example": "Students can earn extra money with a part-time job." }
+    {
+      "word": "communicate",
+      "meaning": "to share ideas or information with someone",
+      "japaneseMeaning": "伝える、意思疎通する",
+      "synonyms": "share, tell",
+      "antonyms": "hide, confuse",
+      "forms": "communicate, communicates, communicating, communicated",
+      "example": "We communicate with our team every morning."
+    },
+    {
+      "word": "consult",
+      "meaning": "to ask someone for advice or information",
+      "japaneseMeaning": "相談する",
+      "synonyms": "ask, discuss",
+      "antonyms": "ignore, decide alone",
+      "forms": "consult, consults, consulting, consulted",
+      "example": "You should consult a doctor if the pain continues."
+    },
+    {
+      "word": "predict",
+      "meaning": "to say what you think will happen in the future",
+      "japaneseMeaning": "予測する",
+      "synonyms": "forecast, expect",
+      "antonyms": "doubt, ignore",
+      "forms": "predict, predicts, predicting, predicted",
+      "example": "The report predicts heavy rain this weekend."
+    },
+    {
+      "word": "realize",
+      "meaning": "to become aware of",
+      "japaneseMeaning": "気づく",
+      "synonyms": "understand, notice",
+      "antonyms": "ignore, overlook",
+      "forms": "realize, realizes, realizing, realized",
+      "example": "She realized her mistake immediately."
+    },
+    {
+      "word": "forgive",
+      "meaning": "to stop being angry at someone for a mistake",
+      "japaneseMeaning": "許す",
+      "synonyms": "excuse, pardon",
+      "antonyms": "blame, punish",
+      "forms": "forgive, forgives, forgiving, forgave, forgiven",
+      "example": "I forgive my friend because he said sorry."
+    },
+    {
+      "word": "guide",
+      "meaning": "to show someone where to go or what to do",
+      "japaneseMeaning": "案内する、導く",
+      "synonyms": "lead, direct",
+      "antonyms": "mislead, follow",
+      "forms": "guide, guides, guiding, guided",
+      "example": "The map will guide us through the old city."
+    },
+    {
+      "word": "promise",
+      "meaning": "to assure someone that one will definitely do something",
+      "japaneseMeaning": "約束する",
+      "synonyms": "assure, agree",
+      "antonyms": "break, refuse",
+      "forms": "promise, promises, promising, promised",
+      "example": "He promised to call later."
+    },
+    {
+      "word": "engage",
+      "meaning": "to participate or become involved",
+      "japaneseMeaning": "関与する",
+      "synonyms": "participate, involve",
+      "antonyms": "withdraw, avoid",
+      "forms": "engage, engages, engaging, engaged",
+      "example": "The teacher engaged the students in discussion."
+    },
+    {
+      "word": "implement",
+      "meaning": "to start using a plan or idea",
+      "japaneseMeaning": "実施する",
+      "synonyms": "carry out, introduce",
+      "antonyms": "stop, abandon",
+      "forms": "implement, implements, implementing, implemented",
+      "example": "The company will implement new policies."
+    },
+    {
+      "word": "evolve",
+      "meaning": "to develop gradually",
+      "japaneseMeaning": "進化する",
+      "synonyms": "develop, progress",
+      "antonyms": "stop, decline",
+      "forms": "evolve, evolves, evolving, evolved",
+      "example": "Technology continues to evolve."
+    }
   ]
 }

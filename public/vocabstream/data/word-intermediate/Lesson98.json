@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-98",
   "title": "Lesson 98",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "house",
-      "meaning": "a building where people live",
-      "japaneseMeaning": "家",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "house, houses",
-      "example": "Their house has a red roof."
+      "word": "range",
+      "meaning": "a group of different things of the same kind",
+      "japaneseMeaning": "範囲、種類",
+      "synonyms": "variety, series",
+      "antonyms": "limit, single item",
+      "forms": "range, ranges",
+      "example": "The shop sells a wide range of bags."
     },
     {
-      "word": "husband",
-      "meaning": "a married man in relation to his partner",
-      "japaneseMeaning": "夫",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "husband, husbands",
-      "example": "Her husband cooked dinner."
+      "word": "entrance",
+      "meaning": "a way into a place",
+      "japaneseMeaning": "入口",
+      "synonyms": "entry, doorway",
+      "antonyms": "exit",
+      "forms": "entrance, entrances",
+      "example": "The entrance is on the left side."
     },
     {
-      "word": "ice",
-      "meaning": "frozen water",
-      "japaneseMeaning": "氷",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "ice, ices",
-      "example": "Ice covered the road."
+      "word": "progress",
+      "meaning": "movement toward a better or finished state",
+      "japaneseMeaning": "進歩、進展",
+      "synonyms": "improvement, growth",
+      "antonyms": "decline, delay",
+      "forms": "progress, progresses",
+      "example": "She made progress after practicing every day."
     },
     {
-      "word": "key",
-      "meaning": "a small object used to open a lock",
-      "japaneseMeaning": "鍵",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "key, keies",
-      "example": "I lost my key yesterday."
+      "word": "occasion",
+      "meaning": "a special time or event",
+      "japaneseMeaning": "機会、出来事",
+      "synonyms": "event, moment",
+      "antonyms": "lack, absence",
+      "forms": "occasion, occasions",
+      "example": "It was a special occasion."
     },
     {
-      "word": "lake",
-      "meaning": "a large area of water surrounded by land",
-      "japaneseMeaning": "湖",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "lake, lakes",
-      "example": "The lake was quiet in the morning."
+      "word": "booking",
+      "meaning": "an arrangement to have a seat, room, or service later",
+      "japaneseMeaning": "予約",
+      "synonyms": "reservation, appointment",
+      "antonyms": "cancellation, refusal",
+      "forms": "booking, bookings",
+      "example": "Our hotel booking was ready when we arrived."
     },
     {
-      "word": "leg",
-      "meaning": "one of the body parts used for standing or walking",
-      "japaneseMeaning": "脚",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "leg, legs",
-      "example": "My leg hurts after running."
+      "word": "transportation",
+      "meaning": "ways of moving people or things from one place to another",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "transportation, transportations",
+      "example": "The transportation helped us understand the situation more clearly."
     },
     {
-      "word": "lesson",
-      "meaning": "a period of learning or teaching",
-      "japaneseMeaning": "授業、レッスン",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "lesson, lessons",
-      "example": "The lesson starts at nine."
+      "word": "condition",
+      "meaning": "the state that someone or something is in",
+      "japaneseMeaning": "状態、条件",
+      "synonyms": "state, situation",
+      "antonyms": "change, result",
+      "forms": "condition, conditions",
+      "example": "The old bike is in good condition."
     },
     {
-      "word": "map",
-      "meaning": "a drawing that shows places and roads",
-      "japaneseMeaning": "地図",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "map, maps",
-      "example": "Use a map to find the station."
+      "word": "station",
+      "meaning": "a place where trains or buses stop",
+      "japaneseMeaning": "駅",
+      "synonyms": "stop, terminal",
+      "antonyms": "road, field",
+      "forms": "station, stations",
+      "example": "Meet me at the station after school."
     },
     {
-      "word": "meal",
-      "meaning": "food eaten at one time",
-      "japaneseMeaning": "食事",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "meal, meals",
-      "example": "Dinner is my biggest meal."
+      "word": "fault",
+      "meaning": "a mistake or a problem in something",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "fault, faults",
+      "example": "The fault helped us understand the situation more clearly."
     },
     {
-      "word": "meat",
-      "meaning": "food from animals",
-      "japaneseMeaning": "肉",
-      "synonyms": "item, thing",
-      "antonyms": "opposite, lack",
-      "forms": "meat, meats",
-      "example": "He does not eat meat."
+      "word": "sale",
+      "meaning": "an act of selling something, or a time when prices are lower",
+      "japaneseMeaning": "名詞",
+      "synonyms": "item, idea",
+      "antonyms": "lack, absence",
+      "forms": "sale, sales",
+      "example": "The sale helped us understand the situation more clearly."
     }
   ]
 }

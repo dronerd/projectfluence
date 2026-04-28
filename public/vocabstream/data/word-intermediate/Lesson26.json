@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-26",
   "title": "Lesson 26",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "admission", "meaning": "permission to enter a place, school, or event", "japaneseMeaning": "入場、入学許可", "synonyms": "entry, permission", "antonyms": "refusal, rejection", "forms": "admission, admissions", "example": "Admission to the museum is free on Sundays." },
-    { "word": "arrival", "meaning": "the act of reaching a place", "japaneseMeaning": "到着", "synonyms": "coming, entry", "antonyms": "departure, leaving", "forms": "arrival, arrivals", "example": "Our arrival at the hotel was later than planned." },
-    { "word": "assistant", "meaning": "a person who helps someone with a job", "japaneseMeaning": "助手、アシスタント", "synonyms": "helper, aide", "antonyms": "manager, leader", "forms": "assistant, assistants", "example": "The shop assistant helped me find a jacket." },
-    { "word": "audience", "meaning": "the people who watch or listen to a performance or speech", "japaneseMeaning": "観客、聴衆", "synonyms": "crowd, listeners", "antonyms": "performer, speaker", "forms": "audience, audiences", "example": "The audience clapped after the final song." },
-    { "word": "border", "meaning": "the line between two countries or areas", "japaneseMeaning": "国境、境界", "synonyms": "boundary, edge", "antonyms": "center, inside", "forms": "border, borders", "example": "The river forms the border between the two towns." },
-    { "word": "bridge", "meaning": "a structure built over a road, river, or railway", "japaneseMeaning": "橋", "synonyms": "crossing, overpass", "antonyms": "barrier, gap", "forms": "bridge, bridges", "example": "The old bridge crosses the wide river." },
-    { "word": "ceremony", "meaning": "a formal event for an important occasion", "japaneseMeaning": "式、儀式", "synonyms": "event, service", "antonyms": "casual meeting, routine", "forms": "ceremony, ceremonies", "example": "The graduation ceremony starts at ten." },
-    { "word": "charity", "meaning": "an organization or action that helps people in need", "japaneseMeaning": "慈善団体、慈善活動", "synonyms": "aid, donation", "antonyms": "selfishness, harm", "forms": "charity, charities", "example": "The class raised money for a local charity." },
-    { "word": "climate", "meaning": "the usual weather of a place over a long time", "japaneseMeaning": "気候", "synonyms": "weather pattern, conditions", "antonyms": "daily weather", "forms": "climate, climates", "example": "The climate in this region is warm and dry." },
-    { "word": "degree", "meaning": "a university qualification or a level of something", "japaneseMeaning": "学位、程度", "synonyms": "qualification, level", "antonyms": "lack, zero", "forms": "degree, degrees", "example": "She earned a degree in education." }
+    {
+      "word": "award",
+      "meaning": "a prize given for good work or success",
+      "japaneseMeaning": "賞",
+      "synonyms": "prize, honor",
+      "antonyms": "loss, penalty",
+      "forms": "award, awards",
+      "example": "Mina won an award for her science project."
+    },
+    {
+      "word": "applicant",
+      "meaning": "a person who asks officially for a job, school place, or chance",
+      "japaneseMeaning": "応募者、申請者",
+      "synonyms": "candidate, requester",
+      "antonyms": "employer, judge",
+      "forms": "applicant, applicants",
+      "example": "Each applicant must send a short letter with the form."
+    },
+    {
+      "word": "estimate",
+      "meaning": "a guess about the size, cost, or amount of something",
+      "japaneseMeaning": "見積もり",
+      "synonyms": "guess, forecast",
+      "antonyms": "fact, exact number",
+      "forms": "estimate, estimates",
+      "example": "The builder gave us an estimate for the repair."
+    },
+    {
+      "word": "income",
+      "meaning": "money that a person or business gets",
+      "japaneseMeaning": "収入",
+      "synonyms": "pay, earnings",
+      "antonyms": "cost, loss",
+      "forms": "income, incomes",
+      "example": "His income comes from two part-time jobs."
+    },
+    {
+      "word": "opportunity",
+      "meaning": "a good chance to do something",
+      "japaneseMeaning": "機会",
+      "synonyms": "chance, opening",
+      "antonyms": "problem, barrier",
+      "forms": "opportunity, opportunities",
+      "example": "She had an opportunity to study abroad."
+    },
+    {
+      "word": "resource",
+      "meaning": "a supply that can be used",
+      "japaneseMeaning": "資源",
+      "synonyms": "supply, material",
+      "antonyms": "shortage, lack",
+      "forms": "resource, resources",
+      "example": "Water is a vital natural resource."
+    },
+    {
+      "word": "relief",
+      "meaning": "help that makes pain or worry smaller",
+      "japaneseMeaning": "安心、軽減",
+      "synonyms": "help, comfort",
+      "antonyms": "pain, worry",
+      "forms": "relief, reliefs",
+      "example": "The medicine gave him relief after a long night."
+    },
+    {
+      "word": "conference",
+      "meaning": "a large meeting for people with the same work or interest",
+      "japaneseMeaning": "会議、協議会",
+      "synonyms": "meeting, event",
+      "antonyms": "party, break",
+      "forms": "conference, conferences",
+      "example": "Doctors from many countries joined the conference."
+    },
+    {
+      "word": "assistant",
+      "meaning": "a person who helps someone with their work",
+      "japaneseMeaning": "助手、アシスタント",
+      "synonyms": "helper, aide",
+      "antonyms": "leader, manager",
+      "forms": "assistant, assistants",
+      "example": "The assistant checked the list before the meeting."
+    },
+    {
+      "word": "budget",
+      "meaning": "a plan for how much money you can spend",
+      "japaneseMeaning": "予算",
+      "synonyms": "plan, limit",
+      "antonyms": "overspending, waste",
+      "forms": "budget, budgets",
+      "example": "We made a budget before planning the school trip."
+    }
   ]
 }

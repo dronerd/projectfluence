@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-52",
   "title": "Lesson 52",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "color", "meaning": "red, blue, green, or another visual quality", "japaneseMeaning": "色", "synonyms": "shade, hue", "antonyms": "colorlessness", "forms": "color, colors", "example": "Blue is my favorite color." },
-    { "word": "country", "meaning": "a nation with its own government", "japaneseMeaning": "国、田舎", "synonyms": "nation, state", "antonyms": "city, region", "forms": "country, countries", "example": "Japan is a country in Asia." },
-    { "word": "doctor", "meaning": "a person trained to treat sick or injured people", "japaneseMeaning": "医者", "synonyms": "physician, medical worker", "antonyms": "patient", "forms": "doctor, doctors", "example": "The doctor checked my throat." },
-    { "word": "dream", "meaning": "pictures in your mind while sleeping or a strong hope", "japaneseMeaning": "夢", "synonyms": "vision, hope", "antonyms": "reality, fact", "forms": "dream, dreams", "example": "Her dream is to become a pilot." },
-    { "word": "farm", "meaning": "land used for growing crops or keeping animals", "japaneseMeaning": "農場", "synonyms": "field, ranch", "antonyms": "city, factory", "forms": "farm, farms", "example": "The farm grows rice and vegetables." },
-    { "word": "fire", "meaning": "flames and heat from burning", "japaneseMeaning": "火、火事", "synonyms": "flames, blaze", "antonyms": "water, ice", "forms": "fire, fires", "example": "The fire kept us warm at night." },
-    { "word": "floor", "meaning": "the flat surface you walk on inside a room", "japaneseMeaning": "床、階", "synonyms": "ground, level", "antonyms": "ceiling, roof", "forms": "floor, floors", "example": "Please clean the floor after dinner." },
-    { "word": "food", "meaning": "things that people or animals eat", "japaneseMeaning": "食べ物", "synonyms": "meal, nourishment", "antonyms": "drink, poison", "forms": "food, foods", "example": "The food at the party was delicious." },
-    { "word": "front", "meaning": "the part of something that faces forward", "japaneseMeaning": "前、正面", "synonyms": "face, entrance", "antonyms": "back, rear", "forms": "front, fronts", "example": "Wait at the front of the building." },
-    { "word": "game", "meaning": "an activity or sport with rules", "japaneseMeaning": "ゲーム、試合", "synonyms": "match, contest", "antonyms": "work, practice", "forms": "game, games", "example": "The game starts at three." }
+    {
+      "word": "ashamed",
+      "meaning": "feeling embarrassed or guilty about one's actions",
+      "japaneseMeaning": "恥ずかしい／罪悪感のある",
+      "synonyms": "embarrassed, guilty",
+      "antonyms": "proud, unashamed",
+      "forms": "ashamed, more ashamed, most ashamed",
+      "example": "He was ashamed of his behavior."
+    },
+    {
+      "word": "exact",
+      "meaning": "completely accurate and precise",
+      "japaneseMeaning": "正確な、精密な",
+      "synonyms": "precise, accurate",
+      "antonyms": "approximate, imprecise",
+      "forms": "exact, more exact, most exact",
+      "example": "Please provide the exact measurements."
+    },
+    {
+      "word": "junior",
+      "meaning": "lower in age, rank, or position",
+      "japaneseMeaning": "年下の、下位の",
+      "synonyms": "younger, lower-level",
+      "antonyms": "senior, higher-level",
+      "forms": "junior, more junior, most junior",
+      "example": "A junior staff member helped us at the desk."
+    },
+    {
+      "word": "private",
+      "meaning": "only for one person or group",
+      "japaneseMeaning": "私的な",
+      "synonyms": "personal, confidential",
+      "antonyms": "public, open",
+      "forms": "private, more private, most private",
+      "example": "This is a private event for members only."
+    },
+    {
+      "word": "technical",
+      "meaning": "connected with machines, science, or a special skill",
+      "japaneseMeaning": "技術的な、専門的な",
+      "synonyms": "specialized, practical",
+      "antonyms": "general, simple",
+      "forms": "technical, more technical, most technical",
+      "example": "The website had a technical problem this morning."
+    },
+    {
+      "word": "significant",
+      "meaning": "large or important enough to notice",
+      "japaneseMeaning": "重要な、かなりの",
+      "synonyms": "important, major",
+      "antonyms": "minor, small",
+      "forms": "significant, significantly",
+      "example": "There was a significant change in the results."
+    },
+    {
+      "word": "lonely",
+      "meaning": "sad because one has no friends or company",
+      "japaneseMeaning": "孤独な／寂しい",
+      "synonyms": "isolated, alone",
+      "antonyms": "sociable, accompanied",
+      "forms": "lonely, more lonely, most lonely",
+      "example": "He felt lonely after moving to a new city."
+    },
+    {
+      "word": "generous",
+      "meaning": "happy to give or share with others",
+      "japaneseMeaning": "気前のよい",
+      "synonyms": "giving, kind",
+      "antonyms": "selfish, mean",
+      "forms": "generous, more generous, most generous",
+      "example": "My generous neighbor shared fresh vegetables."
+    },
+    {
+      "word": "balanced",
+      "meaning": "with the right amount of each part",
+      "japaneseMeaning": "バランスのとれた、公正な",
+      "synonyms": "stable, rational",
+      "antonyms": "biased, unstable",
+      "forms": "balanced, more balanced, most balanced",
+      "example": "She offered a balanced perspective on the issue."
+    },
+    {
+      "word": "solid",
+      "meaning": "hard, strong, and not easy to break",
+      "japaneseMeaning": "しっかりした、確かな",
+      "synonyms": "strong, reliable",
+      "antonyms": "weak, uncertain",
+      "forms": "solid, more solid, most solid",
+      "example": "The report gives solid evidence for the idea."
+    }
   ]
 }

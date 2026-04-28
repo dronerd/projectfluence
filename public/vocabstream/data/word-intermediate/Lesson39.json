@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-39",
   "title": "Lesson 39",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "suggest", "meaning": "to give an idea or plan for someone to think about", "japaneseMeaning": "提案する", "synonyms": "recommend, propose", "antonyms": "order, reject", "forms": "suggest, suggests, suggesting, suggested, suggestion", "example": "I suggest taking the earlier train." },
-    { "word": "taste", "meaning": "to notice flavor with your mouth", "japaneseMeaning": "味がする、味見する", "synonyms": "sample, try", "antonyms": "ignore, smell", "forms": "taste, tastes, tasting, tasted", "example": "Taste the soup before you add salt." },
-    { "word": "thank", "meaning": "to tell someone you are grateful", "japaneseMeaning": "感謝する", "synonyms": "appreciate, praise", "antonyms": "criticize, blame", "forms": "thank, thanks, thanking, thanked", "example": "Remember to thank your host after dinner." },
-    { "word": "throw", "meaning": "to send something through the air with your hand", "japaneseMeaning": "投げる", "synonyms": "toss, cast", "antonyms": "catch, hold", "forms": "throw, throws, throwing, threw, thrown", "example": "Please throw the ball to me." },
-    { "word": "tie", "meaning": "to fasten something with string or a similar object", "japaneseMeaning": "結ぶ", "synonyms": "fasten, bind", "antonyms": "untie, loosen", "forms": "tie, ties, tying, tied", "example": "Tie your shoes before you run." },
-    { "word": "touch", "meaning": "to put your hand or finger on something", "japaneseMeaning": "触れる", "synonyms": "feel, contact", "antonyms": "avoid, release", "forms": "touch, touches, touching, touched", "example": "Do not touch the hot pan." },
-    { "word": "train", "meaning": "to teach or practice a skill", "japaneseMeaning": "訓練する、研修する", "synonyms": "teach, practice", "antonyms": "neglect, confuse", "forms": "train, trains, training, trained", "example": "The company will train new workers." },
-    { "word": "visit", "meaning": "to go and spend time in a place or with someone", "japaneseMeaning": "訪れる、訪問する", "synonyms": "go to, call on", "antonyms": "leave, avoid", "forms": "visit, visits, visiting, visited", "example": "We visit our grandparents every month." },
-    { "word": "vote", "meaning": "to choose someone or something in an election or group decision", "japaneseMeaning": "投票する", "synonyms": "choose, elect", "antonyms": "abstain, ignore", "forms": "vote, votes, voting, voted", "example": "Students vote for the class leader." },
-    { "word": "wash", "meaning": "to clean something with water", "japaneseMeaning": "洗う", "synonyms": "clean, rinse", "antonyms": "dirty, stain", "forms": "wash, washes, washing, washed", "example": "Wash your hands before lunch." }
+    {
+      "word": "afford",
+      "meaning": "to have enough money to pay for",
+      "japaneseMeaning": "余裕がある／買う余裕がある",
+      "synonyms": "pay for, bear",
+      "antonyms": "lack, be unable",
+      "forms": "afford, affords, affording, afforded",
+      "example": "I can't afford a new car now."
+    },
+    {
+      "word": "control",
+      "meaning": "to make someone or something do what you want",
+      "japaneseMeaning": "制御する、管理する",
+      "synonyms": "manage, direct",
+      "antonyms": "release, lose",
+      "forms": "control, controls, controlling, controlled",
+      "example": "He lost control of the situation."
+    },
+    {
+      "word": "inspect",
+      "meaning": "to look at something carefully",
+      "japaneseMeaning": "点検する",
+      "synonyms": "check, examine",
+      "antonyms": "ignore, miss",
+      "forms": "inspect, inspects, inspecting, inspected",
+      "example": "Workers inspect the bridge every spring."
+    },
+    {
+      "word": "remain",
+      "meaning": "to stay in the same place or condition",
+      "japaneseMeaning": "残る、〜のままでいる",
+      "synonyms": "stay, continue",
+      "antonyms": "leave, change",
+      "forms": "remain, remains, remaining, remained",
+      "example": "Please remain seated until the bus stops."
+    },
+    {
+      "word": "prevail",
+      "meaning": "to win or succeed after difficulty",
+      "japaneseMeaning": "勝る、打ち勝つ",
+      "synonyms": "succeed, win",
+      "antonyms": "fail, lose",
+      "forms": "prevail, prevails, prevailing, prevailed",
+      "example": "The team prevailed after a difficult final match."
+    },
+    {
+      "word": "expand",
+      "meaning": "to increase in size",
+      "japaneseMeaning": "拡大する",
+      "synonyms": "enlarge, grow",
+      "antonyms": "contract, shrink",
+      "forms": "expand, expands, expanding, expanded",
+      "example": "The company plans to expand its operations."
+    },
+    {
+      "word": "seem",
+      "meaning": "to give the impression of being",
+      "japaneseMeaning": "〜のように見える",
+      "synonyms": "appear, look",
+      "antonyms": "be, prove",
+      "forms": "seem, seems, seeming, seemed",
+      "example": "It seems likely to rain."
+    },
+    {
+      "word": "recall",
+      "meaning": "to remember",
+      "japaneseMeaning": "思い出す",
+      "synonyms": "remember, recollect",
+      "antonyms": "forget, overlook",
+      "forms": "recall, recalls, recalling, recalled",
+      "example": "He recalled the details of the event."
+    },
+    {
+      "word": "emphasize",
+      "meaning": "to give special importance",
+      "japaneseMeaning": "強調する",
+      "synonyms": "highlight, stress",
+      "antonyms": "understate, downplay",
+      "forms": "emphasize, emphasizes, emphasizing, emphasized",
+      "example": "She emphasized the key points."
+    },
+    {
+      "word": "edit",
+      "meaning": "to change writing, video, or sound to make it better",
+      "japaneseMeaning": "編集する、修正する",
+      "synonyms": "revise, correct",
+      "antonyms": "ignore, publish",
+      "forms": "edit, edits, editing, edited",
+      "example": "Please edit your essay before you submit it."
+    }
   ]
 }

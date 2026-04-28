@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-11",
   "title": "Lesson 11",
-  "paragraph": "The famous theater started a classical music program for young listeners. Some seats were absent from the old hall map, and one child felt alone because his friend was asleep. The first song seemed boring, but the second song was cool and different. The guide was certain that visitors from the eastern side of town would enjoy the warm sound.",
   "words": [
-    { "word": "absent", "meaning": "not present in a place", "japaneseMeaning": "欠席している、不在の", "synonyms": "missing, away", "antonyms": "present, there", "forms": "absent, absence", "example": "Three students were absent from class today." },
-    { "word": "alone", "meaning": "without other people", "japaneseMeaning": "一人で、孤独な", "synonyms": "by oneself, solo", "antonyms": "together, accompanied", "forms": "alone", "example": "She felt alone in the new city at first." },
-    { "word": "asleep", "meaning": "sleeping", "japaneseMeaning": "眠っている", "synonyms": "sleeping, resting", "antonyms": "awake, alert", "forms": "asleep", "example": "The baby is asleep in the next room." },
-    { "word": "boring", "meaning": "not interesting", "japaneseMeaning": "退屈な", "synonyms": "dull, uninteresting", "antonyms": "interesting, exciting", "forms": "boring, boringly", "example": "The long speech was boring for many students." },
-    { "word": "certain", "meaning": "sure that something is true", "japaneseMeaning": "確かな、確信している", "synonyms": "sure, confident", "antonyms": "unsure, doubtful", "forms": "certain, certainly, certainty", "example": "I am certain that I locked the door." },
-    { "word": "classical", "meaning": "connected with traditional serious music or old styles", "japaneseMeaning": "クラシックの、古典的な", "synonyms": "traditional, classic", "antonyms": "modern, popular", "forms": "classical, classically", "example": "My sister listens to classical music while studying." },
-    { "word": "cool", "meaning": "slightly cold or fashionable and attractive", "japaneseMeaning": "涼しい、かっこいい", "synonyms": "chilly, stylish", "antonyms": "warm, uncool", "forms": "cool, coolly, coolness", "example": "The evening air felt cool after the rain." },
-    { "word": "different", "meaning": "not the same as another person or thing", "japaneseMeaning": "異なる、違った", "synonyms": "unlike, separate", "antonyms": "same, similar", "forms": "different, differently, difference", "example": "This answer is different from mine." },
-    { "word": "eastern", "meaning": "in or from the east", "japaneseMeaning": "東の、東部の", "synonyms": "east, oriental", "antonyms": "western, west", "forms": "eastern", "example": "The eastern entrance is closer to the station." },
-    { "word": "famous", "meaning": "known by many people", "japaneseMeaning": "有名な", "synonyms": "well-known, popular", "antonyms": "unknown, ordinary", "forms": "famous, famously", "example": "Kyoto is famous for old temples." }
+    {
+      "word": "absent",
+      "meaning": "not present in a place",
+      "japaneseMeaning": "欠席している、不在の",
+      "synonyms": "missing, away",
+      "antonyms": "present, there",
+      "forms": "absent, absence",
+      "example": "Three students were absent from class today."
+    },
+    {
+      "word": "isolated",
+      "meaning": "far from other people or places, or feeling separate from others",
+      "japaneseMeaning": "孤立した、離れた",
+      "synonyms": "separate, lonely",
+      "antonyms": "connected, included",
+      "forms": "isolated, isolation",
+      "example": "Some students felt isolated during online classes."
+    },
+    {
+      "word": "drowsy",
+      "meaning": "feeling sleepy and slow to react",
+      "japaneseMeaning": "眠そうな、眠気を感じる",
+      "synonyms": "sleepy, tired",
+      "antonyms": "alert, awake",
+      "forms": "drowsy, drowsily, drowsiness",
+      "example": "The medicine made him feel drowsy in class."
+    },
+    {
+      "word": "tedious",
+      "meaning": "boring because it takes too long or repeats too much",
+      "japaneseMeaning": "退屈な、面倒な",
+      "synonyms": "boring, dull",
+      "antonyms": "interesting, lively",
+      "forms": "tedious, tediously",
+      "example": "Checking every number was tedious but necessary."
+    },
+    {
+      "word": "certain",
+      "meaning": "sure that something is true",
+      "japaneseMeaning": "確かな、確信している",
+      "synonyms": "sure, confident",
+      "antonyms": "unsure, doubtful",
+      "forms": "certain, certainly, certainty",
+      "example": "I am certain that I locked the door."
+    },
+    {
+      "word": "classical",
+      "meaning": "connected with traditional serious music or old styles",
+      "japaneseMeaning": "クラシックの、古典的な",
+      "synonyms": "traditional, classic",
+      "antonyms": "modern, popular",
+      "forms": "classical, classically",
+      "example": "My sister listens to classical music while studying."
+    },
+    {
+      "word": "composed",
+      "meaning": "calm and in control of your feelings",
+      "japaneseMeaning": "落ち着いた、冷静な",
+      "synonyms": "calm, controlled",
+      "antonyms": "nervous, upset",
+      "forms": "composed, composure",
+      "example": "She stayed composed during the difficult interview."
+    },
+    {
+      "word": "unfamiliar",
+      "meaning": "not known to you or not often experienced",
+      "japaneseMeaning": "なじみのない、よく知らない",
+      "synonyms": "unknown, new",
+      "antonyms": "familiar, known",
+      "forms": "unfamiliar, unfamiliarity",
+      "example": "The city felt unfamiliar on my first day there."
+    },
+    {
+      "word": "eastern",
+      "meaning": "in or from the east",
+      "japaneseMeaning": "東の、東部の",
+      "synonyms": "east, oriental",
+      "antonyms": "western, west",
+      "forms": "eastern",
+      "example": "The eastern entrance is closer to the station."
+    },
+    {
+      "word": "renowned",
+      "meaning": "well known and respected",
+      "japaneseMeaning": "有名な、名高い",
+      "synonyms": "famous, respected",
+      "antonyms": "unknown, ordinary",
+      "forms": "renowned",
+      "example": "The city is renowned for its traditional food."
+    }
   ]
 }

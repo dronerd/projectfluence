@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-38",
   "title": "Lesson 38",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "activity", "meaning": "something that people do for work, school, or fun", "japaneseMeaning": "活動、行事", "synonyms": "action, event", "antonyms": "rest, inactivity", "forms": "activity, activities", "example": "Swimming is my favorite summer activity." },
-    { "word": "agreement", "meaning": "a decision or promise accepted by two or more people", "japaneseMeaning": "同意、契約", "synonyms": "deal, promise", "antonyms": "disagreement, conflict", "forms": "agreement, agreements", "example": "We made an agreement to share the cost." },
-    { "word": "attention", "meaning": "careful listening, looking, or thought", "japaneseMeaning": "注意、注目", "synonyms": "focus, notice", "antonyms": "inattention, neglect", "forms": "attention", "example": "Please give your attention to the speaker." },
-    { "word": "control", "meaning": "the power to manage or direct something", "japaneseMeaning": "管理、支配", "synonyms": "management, command", "antonyms": "freedom, disorder", "forms": "control, controls", "example": "The driver lost control of the car on the ice." },
-    { "word": "course", "meaning": "a series of lessons or a direction of movement", "japaneseMeaning": "講座、進路", "synonyms": "class, route", "antonyms": "single lesson, stop", "forms": "course, courses", "example": "I joined an online course in business English." },
-    { "word": "customer", "meaning": "a person who buys goods or services", "japaneseMeaning": "客、顧客", "synonyms": "buyer, client", "antonyms": "seller, worker", "forms": "customer, customers", "example": "The customer asked for a larger size." },
-    { "word": "deal", "meaning": "an agreement or arrangement", "japaneseMeaning": "取引、契約", "synonyms": "agreement, bargain", "antonyms": "disagreement, refusal", "forms": "deal, deals", "example": "The two companies made a deal yesterday." },
-    { "word": "edge", "meaning": "the outside line or limit of something", "japaneseMeaning": "端、縁", "synonyms": "border, side", "antonyms": "center, middle", "forms": "edge, edges", "example": "Do not stand near the edge of the platform." },
-    { "word": "example", "meaning": "something that shows what a group or idea is like", "japaneseMeaning": "例、見本", "synonyms": "sample, case", "antonyms": "rule, theory", "forms": "example, examples", "example": "This sentence is an example of the new grammar." },
-    { "word": "ground", "meaning": "the surface of the earth or floor outside", "japaneseMeaning": "地面、土地", "synonyms": "earth, land", "antonyms": "sky, ceiling", "forms": "ground, grounds", "example": "The ground was wet after the rain." }
+    {
+      "word": "agency",
+      "meaning": "a business or office that gives a special service",
+      "japaneseMeaning": "代理店、機関",
+      "synonyms": "office, company",
+      "antonyms": "customer, client",
+      "forms": "agency, agencies",
+      "example": "The travel agency booked our hotel."
+    },
+    {
+      "word": "contact",
+      "meaning": "talking or writing to someone",
+      "japaneseMeaning": "連絡、接触",
+      "synonyms": "communication, touch",
+      "antonyms": "separation, silence",
+      "forms": "contact, contacts",
+      "example": "Please contact the office if you are late."
+    },
+    {
+      "word": "experience",
+      "meaning": "something that happens to you or skill from doing things",
+      "japaneseMeaning": "経験",
+      "synonyms": "event, practice",
+      "antonyms": "inexperience, theory",
+      "forms": "experience, experiences",
+      "example": "Travel gave her experience with new cultures."
+    },
+    {
+      "word": "interview",
+      "meaning": "a meeting where someone asks questions",
+      "japaneseMeaning": "面接、インタビュー",
+      "synonyms": "meeting, talk",
+      "antonyms": "speech, silence",
+      "forms": "interview, interviews",
+      "example": "She has a job interview on Monday."
+    },
+    {
+      "word": "partner",
+      "meaning": "a person you do something with",
+      "japaneseMeaning": "相手、パートナー",
+      "synonyms": "teammate, helper",
+      "antonyms": "opponent, stranger",
+      "forms": "partner, partners",
+      "example": "My partner and I finished the project together."
+    },
+    {
+      "word": "route",
+      "meaning": "the way from one place to another",
+      "japaneseMeaning": "道順、ルート",
+      "synonyms": "way, path",
+      "antonyms": "stop, end",
+      "forms": "route, routes",
+      "example": "This bus route goes past the hospital."
+    },
+    {
+      "word": "audience",
+      "meaning": "the people who watch or listen to a show or talk",
+      "japaneseMeaning": "観客、聴衆",
+      "synonyms": "crowd, listeners",
+      "antonyms": "performer, speaker",
+      "forms": "audience, audiences",
+      "example": "The audience clapped after the final song."
+    },
+    {
+      "word": "detail",
+      "meaning": "attention given to small elements of work or design",
+      "japaneseMeaning": "細部、詳細",
+      "synonyms": "small part, point",
+      "antonyms": "whole, summary",
+      "forms": "detail, details",
+      "example": "The painting’s detail reveals the artist’s dedication."
+    },
+    {
+      "word": "conflict",
+      "meaning": "a serious disagreement or fight",
+      "japaneseMeaning": "対立、争い",
+      "synonyms": "disagreement, fight",
+      "antonyms": "agreement, peace",
+      "forms": "conflict, conflicts",
+      "example": "The manager helped solve the conflict between workers."
+    },
+    {
+      "word": "temperature",
+      "meaning": "how hot or cold something is",
+      "japaneseMeaning": "温度、気温",
+      "synonyms": "heat level, degree",
+      "antonyms": "coldness, coolness",
+      "forms": "temperature, temperatures",
+      "example": "The temperature dropped quickly after sunset."
+    }
   ]
 }

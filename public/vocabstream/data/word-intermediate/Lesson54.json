@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-54",
   "title": "Lesson 54",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "dead", "meaning": "not alive", "japaneseMeaning": "死んだ、枯れた", "synonyms": "not living, lifeless", "antonyms": "alive, living", "forms": "dead, deadly", "example": "The dead plant needs to be removed." },
-    { "word": "dark", "meaning": "with little or no light", "japaneseMeaning": "暗い", "synonyms": "dim, black", "antonyms": "bright, light", "forms": "dark, darker, darkest, darkness", "example": "The room was dark after sunset." },
-    { "word": "clear", "meaning": "easy to see, hear, or understand", "japaneseMeaning": "明確な、澄んだ", "synonyms": "obvious, clean", "antonyms": "unclear, cloudy", "forms": "clear, clearly, clarity", "example": "The teacher gave a clear explanation." },
-    { "word": "active", "meaning": "moving often or doing many things", "japaneseMeaning": "活動的な", "synonyms": "busy, energetic", "antonyms": "inactive, still", "forms": "active, actively, activity", "example": "My grandfather is still active every day." },
-    { "word": "actual", "meaning": "real, not imagined", "japaneseMeaning": "実際の", "synonyms": "real, true", "antonyms": "imaginary, false", "forms": "actual, actually", "example": "The actual price was lower than we expected." },
-    { "word": "awful", "meaning": "very bad or unpleasant", "japaneseMeaning": "ひどい、とても悪い", "synonyms": "terrible, bad", "antonyms": "wonderful, excellent", "forms": "awful, awfully", "example": "The weather was awful during the trip." },
-    { "word": "bad", "meaning": "not good or not pleasant", "japaneseMeaning": "悪い", "synonyms": "poor, wrong", "antonyms": "good, excellent", "forms": "bad, worse, worst, badly", "example": "The milk has a bad smell." },
-    { "word": "better", "meaning": "of higher quality or more suitable", "japaneseMeaning": "より良い", "synonyms": "improved, stronger", "antonyms": "worse, poorer", "forms": "better, best", "example": "This plan is better than the old one." },
-    { "word": "big", "meaning": "large in size or amount", "japaneseMeaning": "大きい", "synonyms": "large, huge", "antonyms": "small, little", "forms": "big, bigger, biggest", "example": "They live in a big house." },
-    { "word": "bitter", "meaning": "having a strong sharp taste that is not sweet", "japaneseMeaning": "苦い", "synonyms": "sharp, harsh", "antonyms": "sweet, mild", "forms": "bitter, bitterly, bitterness", "example": "The coffee tasted bitter without sugar." }
+    {
+      "word": "register",
+      "meaning": "to put your name on an official list",
+      "japaneseMeaning": "登録する",
+      "synonyms": "sign up, record",
+      "antonyms": "cancel, remove",
+      "forms": "register, registers, registering, registered",
+      "example": "You must register before you join the class."
+    },
+    {
+      "word": "describe",
+      "meaning": "to say what someone or something is like",
+      "japaneseMeaning": "説明する／描写する",
+      "synonyms": "explain, show",
+      "antonyms": "hide, confuse",
+      "forms": "describe, describes, describing, described",
+      "example": "Describe the scene in detail."
+    },
+    {
+      "word": "maintain",
+      "meaning": "to keep in good condition",
+      "japaneseMeaning": "維持する",
+      "synonyms": "preserve, continue",
+      "antonyms": "neglect, abandon",
+      "forms": "maintain, maintains, maintaining, maintained",
+      "example": "He maintained the garden beautifully."
+    },
+    {
+      "word": "revise",
+      "meaning": "to change or study again to improve",
+      "japaneseMeaning": "見直す、復習する",
+      "synonyms": "edit, review",
+      "antonyms": "neglect",
+      "forms": "revise, revises, revising, revised",
+      "example": "Revise the essay for clarity."
+    },
+    {
+      "word": "attack",
+      "meaning": "to act violently against someone or something",
+      "japaneseMeaning": "攻撃する",
+      "synonyms": "strike, hit",
+      "antonyms": "defend, protect",
+      "forms": "attack, attacks, attacking, attacked",
+      "example": "The dog may attack if it feels afraid."
+    },
+    {
+      "word": "strengthen",
+      "meaning": "to make something stronger or more effective",
+      "japaneseMeaning": "強化する",
+      "synonyms": "improve, support",
+      "antonyms": "weaken, damage",
+      "forms": "strengthen, strengthens, strengthening, strengthened",
+      "example": "Daily practice will strengthen your speaking skills."
+    },
+    {
+      "word": "launch",
+      "meaning": "to start a new project, product, or activity",
+      "japaneseMeaning": "開始する、発売する",
+      "synonyms": "begin, introduce",
+      "antonyms": "end, cancel",
+      "forms": "launch, launches, launching, launched",
+      "example": "The club will launch a new website next month."
+    },
+    {
+      "word": "detect",
+      "meaning": "to discover or identify",
+      "japaneseMeaning": "検出する",
+      "synonyms": "discover, notice",
+      "antonyms": "miss, overlook",
+      "forms": "detect, detects, detecting, detected",
+      "example": "He detected a mistake in the report."
+    },
+    {
+      "word": "outline",
+      "meaning": "to give only the main ideas",
+      "japaneseMeaning": "概要を説明する",
+      "synonyms": "summarize, sketch",
+      "antonyms": "detail, expand",
+      "forms": "outline, outlines, outlining, outlined",
+      "example": "The teacher outlined the plan for the next lesson."
+    },
+    {
+      "word": "involve",
+      "meaning": "to include someone or something in an activity",
+      "japaneseMeaning": "含む、関わらせる",
+      "synonyms": "include, require",
+      "antonyms": "exclude, avoid",
+      "forms": "involve, involves, involving, involved",
+      "example": "The project will involve students from three classes."
+    }
   ]
 }

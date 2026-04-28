@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-17",
   "title": "Lesson 17",
-  "paragraph": "At the town meeting, leaders advise residents to listen carefully. They announce a new plan, approve small repairs, and argue about the best schedule. The park can attract families, but people should blame no one before they know the facts. Speakers breathe slowly, claim their turn politely, complain only about real problems, and contain their anger.",
   "words": [
-    { "word": "advise", "meaning": "to tell someone what you think they should do", "japaneseMeaning": "助言する、忠告する", "synonyms": "recommend, guide", "antonyms": "mislead, ignore", "forms": "advise, advises, advising, advised, advice", "example": "The doctor will advise me to rest for a few days." },
-    { "word": "announce", "meaning": "to tell people about something publicly", "japaneseMeaning": "発表する、知らせる", "synonyms": "declare, report", "antonyms": "hide, keep secret", "forms": "announce, announces, announcing, announced, announcement", "example": "The school will announce the results tomorrow." },
-    { "word": "approve", "meaning": "to officially accept or agree to something", "japaneseMeaning": "承認する、賛成する", "synonyms": "accept, allow", "antonyms": "reject, refuse", "forms": "approve, approves, approving, approved, approval", "example": "The manager must approve the new schedule." },
-    { "word": "argue", "meaning": "to speak angrily or give reasons for an idea", "japaneseMeaning": "口論する、主張する", "synonyms": "debate, disagree", "antonyms": "agree, accept", "forms": "argue, argues, arguing, argued, argument", "example": "Please do not argue during the group activity." },
-    { "word": "attract", "meaning": "to make someone interested or make them come closer", "japaneseMeaning": "引きつける、魅了する", "synonyms": "draw, interest", "antonyms": "repel, discourage", "forms": "attract, attracts, attracting, attracted, attraction", "example": "The bright sign can attract many customers." },
-    { "word": "blame", "meaning": "to say that someone is responsible for something bad", "japaneseMeaning": "責める、非難する", "synonyms": "accuse, fault", "antonyms": "praise, excuse", "forms": "blame, blames, blaming, blamed", "example": "Do not blame your friend for a simple mistake." },
-    { "word": "breathe", "meaning": "to take air into and out of your lungs", "japaneseMeaning": "呼吸する", "synonyms": "inhale, exhale", "antonyms": "choke, suffocate", "forms": "breathe, breathes, breathing, breathed, breath", "example": "Breathe slowly when you feel nervous." },
-    { "word": "claim", "meaning": "to say that something is true, often without proof", "japaneseMeaning": "主張する、請求する", "synonyms": "state, insist", "antonyms": "deny, reject", "forms": "claim, claims, claiming, claimed", "example": "The company will claim that the product saves energy." },
-    { "word": "complain", "meaning": "to say that you are unhappy about something", "japaneseMeaning": "不満を言う、苦情を言う", "synonyms": "protest, object", "antonyms": "praise, accept", "forms": "complain, complains, complaining, complained, complaint", "example": "Customers complain when the delivery is late." },
-    { "word": "contain", "meaning": "to have something inside or keep something under control", "japaneseMeaning": "含む、抑える", "synonyms": "hold, include", "antonyms": "release, exclude", "forms": "contain, contains, containing, contained", "example": "This box can contain twenty small books." }
+    {
+      "word": "advise",
+      "meaning": "to tell someone what you think they should do",
+      "japaneseMeaning": "助言する、忠告する",
+      "synonyms": "recommend, guide",
+      "antonyms": "mislead, ignore",
+      "forms": "advise, advises, advising, advised, advice",
+      "example": "The doctor will advise me to rest for a few days."
+    },
+    {
+      "word": "announce",
+      "meaning": "to tell people about something publicly",
+      "japaneseMeaning": "発表する、知らせる",
+      "synonyms": "declare, report",
+      "antonyms": "hide, keep secret",
+      "forms": "announce, announces, announcing, announced, announcement",
+      "example": "The school will announce the results tomorrow."
+    },
+    {
+      "word": "approve",
+      "meaning": "to officially accept or agree to something",
+      "japaneseMeaning": "承認する、賛成する",
+      "synonyms": "accept, allow",
+      "antonyms": "reject, refuse",
+      "forms": "approve, approves, approving, approved, approval",
+      "example": "The manager must approve the new schedule."
+    },
+    {
+      "word": "argue",
+      "meaning": "to speak angrily or give reasons for an idea",
+      "japaneseMeaning": "口論する、主張する",
+      "synonyms": "debate, disagree",
+      "antonyms": "agree, accept",
+      "forms": "argue, argues, arguing, argued, argument",
+      "example": "Please do not argue during the group activity."
+    },
+    {
+      "word": "attract",
+      "meaning": "to make someone interested or make them come closer",
+      "japaneseMeaning": "引きつける、魅了する",
+      "synonyms": "draw, interest",
+      "antonyms": "repel, discourage",
+      "forms": "attract, attracts, attracting, attracted, attraction",
+      "example": "The bright sign can attract many customers."
+    },
+    {
+      "word": "blame",
+      "meaning": "to say that someone is responsible for something bad",
+      "japaneseMeaning": "責める、非難する",
+      "synonyms": "accuse, fault",
+      "antonyms": "praise, excuse",
+      "forms": "blame, blames, blaming, blamed",
+      "example": "Do not blame your friend for a simple mistake."
+    },
+    {
+      "word": "inhale",
+      "meaning": "to breathe air, smoke, or gas into your lungs",
+      "japaneseMeaning": "吸い込む",
+      "synonyms": "breathe in, draw in",
+      "antonyms": "exhale, breathe out",
+      "forms": "inhale, inhales, inhaling, inhaled",
+      "example": "The doctor told him not to inhale the smoke."
+    },
+    {
+      "word": "claim",
+      "meaning": "to say that something is true, often without proof",
+      "japaneseMeaning": "主張する、請求する",
+      "synonyms": "state, insist",
+      "antonyms": "deny, reject",
+      "forms": "claim, claims, claiming, claimed",
+      "example": "The company will claim that the product saves energy."
+    },
+    {
+      "word": "complain",
+      "meaning": "to say that you are unhappy about something",
+      "japaneseMeaning": "不満を言う、苦情を言う",
+      "synonyms": "protest, object",
+      "antonyms": "praise, accept",
+      "forms": "complain, complains, complaining, complained, complaint",
+      "example": "Customers complain when the delivery is late."
+    },
+    {
+      "word": "contain",
+      "meaning": "to have something inside or keep something under control",
+      "japaneseMeaning": "含む、抑える",
+      "synonyms": "hold, include",
+      "antonyms": "release, exclude",
+      "forms": "contain, contains, containing, contained",
+      "example": "This box can contain twenty small books."
+    }
   ]
 }

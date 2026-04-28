@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-59",
   "title": "Lesson 59",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "want", "meaning": "to wish to have or do something", "japaneseMeaning": "欲しい、したい", "synonyms": "wish, need", "antonyms": "refuse, reject", "forms": "want, wants, wanting, wanted", "example": "I want a quiet place to study." },
-    { "word": "watch", "meaning": "to look at something for a period of time", "japaneseMeaning": "見る、見守る", "synonyms": "look at, observe", "antonyms": "ignore, miss", "forms": "watch, watches, watching, watched", "example": "We watch a movie every Friday." },
-    { "word": "win", "meaning": "to be the best or first in a game or contest", "japaneseMeaning": "勝つ", "synonyms": "succeed, beat", "antonyms": "lose, fail", "forms": "win, wins, winning, won", "example": "Our team can win if we practice." },
-    { "word": "write", "meaning": "to make words with a pen, pencil, or keyboard", "japaneseMeaning": "書く", "synonyms": "record, type", "antonyms": "erase, read", "forms": "write, writes, writing, wrote, written", "example": "Please write your email address clearly." },
-    { "word": "accept", "meaning": "to agree to take or receive something", "japaneseMeaning": "受け入れる", "synonyms": "receive, agree to", "antonyms": "refuse, reject", "forms": "accept, accepts, accepting, accepted, acceptance", "example": "She will accept the job offer." },
-    { "word": "arrive", "meaning": "to reach a place", "japaneseMeaning": "到着する", "synonyms": "reach, come", "antonyms": "leave, depart", "forms": "arrive, arrives, arriving, arrived, arrival", "example": "The train will arrive at noon." },
-    { "word": "borrow", "meaning": "to use something and return it later", "japaneseMeaning": "借りる", "synonyms": "use temporarily, take", "antonyms": "lend, keep", "forms": "borrow, borrows, borrowing, borrowed", "example": "Can I borrow your dictionary?" },
-    { "word": "break", "meaning": "to damage something or make it stop working", "japaneseMeaning": "壊す、壊れる", "synonyms": "damage, crack", "antonyms": "fix, repair", "forms": "break, breaks, breaking, broke, broken", "example": "Do not break the glass cup." },
-    { "word": "build", "meaning": "to make something by putting parts together", "japaneseMeaning": "建てる、作る", "synonyms": "construct, create", "antonyms": "destroy, remove", "forms": "build, builds, building, built", "example": "They will build a new library." },
-    { "word": "cancel", "meaning": "to decide that a plan or event will not happen", "japaneseMeaning": "取り消す、中止する", "synonyms": "stop, call off", "antonyms": "continue, arrange", "forms": "cancel, cancels, canceling, canceled, cancellation", "example": "We may cancel the picnic if it rains." }
+    {
+      "word": "arrival",
+      "meaning": "the time when someone or something gets to a place",
+      "japaneseMeaning": "到着",
+      "synonyms": "coming, reaching",
+      "antonyms": "departure, leaving",
+      "forms": "arrival, arrivals",
+      "example": "The train's arrival was ten minutes late."
+    },
+    {
+      "word": "delivery",
+      "meaning": "the act of bringing something to a place",
+      "japaneseMeaning": "配達",
+      "synonyms": "drop-off, transport",
+      "antonyms": "pickup, collection",
+      "forms": "delivery, deliveries",
+      "example": "The delivery arrived before lunch."
+    },
+    {
+      "word": "flight",
+      "meaning": "a trip by plane",
+      "japaneseMeaning": "飛行、便",
+      "synonyms": "plane trip, journey",
+      "antonyms": "arrival, landing",
+      "forms": "flight, flights",
+      "example": "Our flight to Seoul leaves at noon."
+    },
+    {
+      "word": "lecture",
+      "meaning": "a talk that teaches people about a subject",
+      "japaneseMeaning": "講義",
+      "synonyms": "talk, class",
+      "antonyms": "conversation, silence",
+      "forms": "lecture, lectures",
+      "example": "The lecture explained how cities grow."
+    },
+    {
+      "word": "process",
+      "meaning": "a series of actions done to achieve a result",
+      "japaneseMeaning": "過程",
+      "synonyms": "procedure, method",
+      "antonyms": "disorder, accident",
+      "forms": "process, processes",
+      "example": "The hiring process took two weeks."
+    },
+    {
+      "word": "speech",
+      "meaning": "a talk given to a group of people",
+      "japaneseMeaning": "スピーチ、演説",
+      "synonyms": "talk, address",
+      "antonyms": "silence, writing",
+      "forms": "speech, speeches",
+      "example": "Her speech about kindness was easy to understand."
+    },
+    {
+      "word": "terminal",
+      "meaning": "a building where passengers arrive or leave at an airport, bus station, or port",
+      "japaneseMeaning": "ターミナル、乗り場",
+      "synonyms": "station, gate area",
+      "antonyms": "destination, street",
+      "forms": "terminal, terminals",
+      "example": "Our bus leaves from terminal three."
+    },
+    {
+      "word": "territory",
+      "meaning": "an area of land controlled by a country, group, or animal",
+      "japaneseMeaning": "領土",
+      "synonyms": "region, area",
+      "antonyms": "foreign land, outside",
+      "forms": "territory, territories",
+      "example": "The lion defended its territory."
+    },
+    {
+      "word": "partnership",
+      "meaning": "a relationship in which people or groups work together",
+      "japaneseMeaning": "協力関係、提携",
+      "synonyms": "cooperation, relationship",
+      "antonyms": "conflict, separation",
+      "forms": "partnership, partnerships",
+      "example": "The two schools formed a partnership for the exchange program."
+    },
+    {
+      "word": "correspondence",
+      "meaning": "letters or messages exchanged between people",
+      "japaneseMeaning": "通信、文通",
+      "synonyms": "messages, letters",
+      "antonyms": "silence, no contact",
+      "forms": "correspondence",
+      "example": "The office keeps copies of all official correspondence."
+    }
   ]
 }

@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-67",
   "title": "Lesson 67",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "arrange",
-      "meaning": "to plan or put things in order",
-      "japaneseMeaning": "手配する、整理する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "arrange, arranges, arranging, arranged",
-      "example": "We arrange the chairs before the meeting."
+      "word": "broad",
+      "meaning": "covering many things or a wide area",
+      "japaneseMeaning": "幅広い、広範な",
+      "synonyms": "wide, general",
+      "antonyms": "narrow, limited",
+      "forms": "broad, more broad, most broad",
+      "example": "The course gives students a broad knowledge of history."
     },
     {
-      "word": "verify",
-      "meaning": "to check that something is true or correct",
-      "japaneseMeaning": "確認する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "verify, verifys, verifying, verifyed",
-      "example": "Verify the time before you leave."
+      "word": "feminine",
+      "meaning": "traditionally connected with women or girls",
+      "japaneseMeaning": "女性らしい、女性の",
+      "synonyms": "female, womanly",
+      "antonyms": "masculine, male",
+      "forms": "feminine, femininely",
+      "example": "The designer used a soft, feminine style."
     },
     {
-      "word": "contact",
-      "meaning": "to communicate with someone",
-      "japaneseMeaning": "連絡する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "contact, contacts, contacting, contacted",
-      "example": "Contact the office if you are late."
+      "word": "charming",
+      "meaning": "pleasant and attractive",
+      "japaneseMeaning": "魅力的な、感じのよい",
+      "synonyms": "pleasant, attractive",
+      "antonyms": "unpleasant, dull",
+      "forms": "charming, charmingly",
+      "example": "The small town has a charming old shopping street."
     },
     {
-      "word": "discuss",
-      "meaning": "to talk about something with others",
-      "japaneseMeaning": "話し合う",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "discuss, discusss, discussing, discussed",
-      "example": "We discuss the plan after lunch."
+      "word": "optimistic",
+      "meaning": "thinking good things will happen",
+      "japaneseMeaning": "楽観的な",
+      "synonyms": "hopeful, positive",
+      "antonyms": "pessimistic, negative",
+      "forms": "optimistic, more optimistic, most optimistic",
+      "example": "She stayed optimistic after the first test."
     },
     {
-      "word": "estimate",
-      "meaning": "to guess an amount using information",
-      "japaneseMeaning": "見積もる、推定する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "estimate, estimates, estimating, estimated",
-      "example": "The builder will estimate the cost today."
+      "word": "dissatisfied",
+      "meaning": "not pleased because something is not good enough",
+      "japaneseMeaning": "不満な",
+      "synonyms": "unhappy, disappointed",
+      "antonyms": "satisfied, pleased",
+      "forms": "dissatisfied, dissatisfaction",
+      "example": "Several customers were dissatisfied with the slow service."
     },
     {
-      "word": "inform",
-      "meaning": "to tell someone information",
-      "japaneseMeaning": "知らせる",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "inform, informs, informing, informed",
-      "example": "Please inform the teacher about your absence."
+      "word": "strange",
+      "meaning": "unusual or surprising in a way that is unsettling",
+      "japaneseMeaning": "奇妙な／変わった",
+      "synonyms": "odd, peculiar",
+      "antonyms": "normal, familiar",
+      "forms": "strange, more strange, most strange",
+      "example": "It felt strange to be back after so long."
     },
     {
-      "word": "organize",
-      "meaning": "to plan or arrange things well",
-      "japaneseMeaning": "整理する、企画する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "organize, organizes, organizing, organized",
-      "example": "Students organize a concert every year."
+      "word": "flawless",
+      "meaning": "having no mistakes or faults",
+      "japaneseMeaning": "欠点のない、完璧な",
+      "synonyms": "perfect, faultless",
+      "antonyms": "flawed, imperfect",
+      "forms": "flawless, flawlessly",
+      "example": "Her pronunciation was almost flawless."
     },
     {
-      "word": "prepare",
-      "meaning": "to make ready",
-      "japaneseMeaning": "準備する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "prepare, prepares, preparing, prepared",
-      "example": "I prepare my bag before bed."
+      "word": "sensitive",
+      "meaning": "aware of and affected by others' feelings",
+      "japaneseMeaning": "敏感な",
+      "synonyms": "touchy, empathetic",
+      "antonyms": "insensitive, indifferent",
+      "forms": "sensitive, sensitively",
+      "example": "She is sensitive to criticism."
     },
     {
-      "word": "notify",
-      "meaning": "to tell someone officially or clearly",
-      "japaneseMeaning": "知らせる",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "notify, notifys, notifying, notifyed",
-      "example": "Notify the office if your address changes."
+      "word": "organized",
+      "meaning": "planned and kept in good order",
+      "japaneseMeaning": "整理された",
+      "synonyms": "neat, planned",
+      "antonyms": "messy, confused",
+      "forms": "organized, more organized, most organized",
+      "example": "His organized notes helped him study faster."
     },
     {
-      "word": "submit",
-      "meaning": "to give work or documents officially",
-      "japaneseMeaning": "提出する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "submit, submits, submiting, submited",
-      "example": "Submit your report before noon."
+      "word": "violent",
+      "meaning": "using force to hurt people or damage things",
+      "japaneseMeaning": "暴力的な、激しい",
+      "synonyms": "aggressive, harmful",
+      "antonyms": "peaceful, gentle",
+      "forms": "violent, more violent, most violent",
+      "example": "The movie was too violent for young children."
     }
   ]
 }

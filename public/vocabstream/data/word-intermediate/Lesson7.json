@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-7",
   "title": "Lesson 7",
-  "paragraph": "The outdoor course will enable students to examine plants and express their ideas in a notebook. The guide says the walk should last two hours, so students must wear shoes that fit well. They will reduce trash, refuse to touch wild animals, remove litter from the path, settle into groups quickly, and learn how small plants survive in dry weather.",
   "words": [
-    { "word": "enable", "meaning": "to make it possible for someone to do something", "japaneseMeaning": "可能にする", "synonyms": "allow, permit", "antonyms": "prevent, stop", "forms": "enable, enables, enabling, enabled", "example": "The new ramp will enable wheelchair users to enter the hall." },
-    { "word": "examine", "meaning": "to look at something carefully", "japaneseMeaning": "調べる、検査する", "synonyms": "inspect, study", "antonyms": "ignore, miss", "forms": "examine, examines, examining, examined, examination", "example": "The doctor will examine my knee this afternoon." },
-    { "word": "express", "meaning": "to show or say what you think or feel", "japaneseMeaning": "表現する、述べる", "synonyms": "show, state", "antonyms": "hide, suppress", "forms": "express, expresses, expressing, expressed, expression", "example": "Students can express their opinions in the survey." },
-    { "word": "fit", "meaning": "to be the right size or shape", "japaneseMeaning": "合う、適合する", "synonyms": "suit, match", "antonyms": "misfit, clash", "forms": "fit, fits, fitting, fitted", "example": "These shoes fit me better than the old pair." },
-    { "word": "last", "meaning": "to continue for a period of time", "japaneseMeaning": "続く、持続する", "synonyms": "continue, remain", "antonyms": "end, stop", "forms": "last, lasts, lasting, lasted", "example": "The meeting will last about one hour." },
-    { "word": "reduce", "meaning": "to make something smaller or less", "japaneseMeaning": "減らす", "synonyms": "decrease, lower", "antonyms": "increase, raise", "forms": "reduce, reduces, reducing, reduced, reduction", "example": "We should reduce food waste at lunch." },
-    { "word": "refuse", "meaning": "to say no to something", "japaneseMeaning": "断る、拒否する", "synonyms": "reject, decline", "antonyms": "accept, agree", "forms": "refuse, refuses, refusing, refused, refusal", "example": "You can refuse a plastic bag at the store." },
-    { "word": "remove", "meaning": "to take something away from a place", "japaneseMeaning": "取り除く、外す", "synonyms": "take away, clear", "antonyms": "add, place", "forms": "remove, removes, removing, removed, removal", "example": "Please remove your shoes before entering the room." },
-    { "word": "settle", "meaning": "to become calm or make a decision after discussion", "japaneseMeaning": "落ち着く、解決する", "synonyms": "calm down, decide", "antonyms": "argue, disturb", "forms": "settle, settles, settling, settled, settlement", "example": "The class will settle into groups before the game starts." },
-    { "word": "survive", "meaning": "to continue living after danger or difficulty", "japaneseMeaning": "生き残る", "synonyms": "live, remain", "antonyms": "die, fail", "forms": "survive, survives, surviving, survived, survival", "example": "Some plants survive with very little water." }
+    {
+      "word": "enable",
+      "meaning": "to make it possible for someone to do something",
+      "japaneseMeaning": "可能にする",
+      "synonyms": "allow, permit",
+      "antonyms": "prevent, stop",
+      "forms": "enable, enables, enabling, enabled",
+      "example": "The new ramp will enable wheelchair users to enter the hall."
+    },
+    {
+      "word": "examine",
+      "meaning": "to look at something carefully",
+      "japaneseMeaning": "調べる、検査する",
+      "synonyms": "inspect, study",
+      "antonyms": "ignore, miss",
+      "forms": "examine, examines, examining, examined, examination",
+      "example": "The doctor will examine my knee this afternoon."
+    },
+    {
+      "word": "express",
+      "meaning": "to show or say what you think or feel",
+      "japaneseMeaning": "表現する、述べる",
+      "synonyms": "show, state",
+      "antonyms": "hide, suppress",
+      "forms": "express, expresses, expressing, expressed, expression",
+      "example": "Students can express their opinions in the survey."
+    },
+    {
+      "word": "adapt",
+      "meaning": "to change so that you can deal with a new situation",
+      "japaneseMeaning": "適応する、合わせる",
+      "synonyms": "adjust, change",
+      "antonyms": "resist, refuse",
+      "forms": "adapt, adapts, adapting, adapted",
+      "example": "New students need time to adapt to school life."
+    },
+    {
+      "word": "endure",
+      "meaning": "to continue through something difficult",
+      "japaneseMeaning": "耐える、持ちこたえる",
+      "synonyms": "survive, bear",
+      "antonyms": "quit, fail",
+      "forms": "endure, endures, enduring, endured",
+      "example": "The runners endured the heat during the race."
+    },
+    {
+      "word": "reduce",
+      "meaning": "to make something smaller or less",
+      "japaneseMeaning": "減らす",
+      "synonyms": "decrease, lower",
+      "antonyms": "increase, raise",
+      "forms": "reduce, reduces, reducing, reduced, reduction",
+      "example": "We should reduce food waste at lunch."
+    },
+    {
+      "word": "refuse",
+      "meaning": "to say no to something",
+      "japaneseMeaning": "断る、拒否する",
+      "synonyms": "reject, decline",
+      "antonyms": "accept, agree",
+      "forms": "refuse, refuses, refusing, refused, refusal",
+      "example": "You can refuse a plastic bag at the store."
+    },
+    {
+      "word": "remove",
+      "meaning": "to take something away from a place",
+      "japaneseMeaning": "取り除く、外す",
+      "synonyms": "take away, clear",
+      "antonyms": "add, place",
+      "forms": "remove, removes, removing, removed, removal",
+      "example": "Please remove your shoes before entering the room."
+    },
+    {
+      "word": "settle",
+      "meaning": "to become calm or make a decision after discussion",
+      "japaneseMeaning": "落ち着く、解決する",
+      "synonyms": "calm down, decide",
+      "antonyms": "argue, disturb",
+      "forms": "settle, settles, settling, settled, settlement",
+      "example": "The class will settle into groups before the game starts."
+    },
+    {
+      "word": "survive",
+      "meaning": "to continue living after danger or difficulty",
+      "japaneseMeaning": "生き残る",
+      "synonyms": "live, remain",
+      "antonyms": "die, fail",
+      "forms": "survive, survives, surviving, survived, survival",
+      "example": "Some plants survive with very little water."
+    }
   ]
 }

@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-65",
   "title": "Lesson 65",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "nice", "meaning": "pleasant, kind, or enjoyable", "japaneseMeaning": "良い、親切な", "synonyms": "pleasant, kind", "antonyms": "mean, unpleasant", "forms": "nice, nicer, nicest, nicely", "example": "The nice clerk helped me." },
-    { "word": "old", "meaning": "having lived or existed for many years", "japaneseMeaning": "古い、年老いた", "synonyms": "aged, ancient", "antonyms": "new, young", "forms": "old, older, oldest", "example": "This old photo shows my grandfather." },
-    { "word": "orange", "meaning": "having the color of an orange fruit", "japaneseMeaning": "オレンジ色の", "synonyms": "orange-colored, bright", "antonyms": "blue, green", "forms": "orange", "example": "She wore an orange coat." },
-    { "word": "own", "meaning": "belonging to a particular person", "japaneseMeaning": "自分自身の", "synonyms": "personal, private", "antonyms": "shared, borrowed", "forms": "own", "example": "I have my own room." },
-    { "word": "pink", "meaning": "having a pale red color", "japaneseMeaning": "ピンクの", "synonyms": "rose-colored, light red", "antonyms": "dark, green", "forms": "pink", "example": "The pink flowers are beautiful." },
-    { "word": "possible", "meaning": "able to happen or be done", "japaneseMeaning": "可能な", "synonyms": "able, achievable", "antonyms": "impossible, unlikely", "forms": "possible, possibly, possibility", "example": "It is possible to finish today." },
-    { "word": "red", "meaning": "having the color of blood or tomatoes", "japaneseMeaning": "赤い", "synonyms": "scarlet, crimson", "antonyms": "blue, green", "forms": "red, redder, reddest", "example": "The red car stopped outside." },
-    { "word": "right", "meaning": "correct or on the opposite side from left", "japaneseMeaning": "正しい、右の", "synonyms": "correct, proper", "antonyms": "wrong, left", "forms": "right, rightly", "example": "You gave the right answer." },
-    { "word": "same", "meaning": "not different", "japaneseMeaning": "同じ", "synonyms": "identical, equal", "antonyms": "different, opposite", "forms": "same", "example": "We are in the same class." },
-    { "word": "small", "meaning": "not large in size or amount", "japaneseMeaning": "小さい", "synonyms": "little, tiny", "antonyms": "large, big", "forms": "small, smaller, smallest", "example": "The small cafe has only four tables." }
+    {
+      "word": "attempt",
+      "meaning": "a try to do something",
+      "japaneseMeaning": "試み、挑戦",
+      "synonyms": "try, effort",
+      "antonyms": "success, refusal",
+      "forms": "attempt, attempts",
+      "example": "Her first attempt at the speech went well."
+    },
+    {
+      "word": "description",
+      "meaning": "words that tell what someone or something is like",
+      "japaneseMeaning": "説明、描写",
+      "synonyms": "explanation, account",
+      "antonyms": "silence, summary",
+      "forms": "description, descriptions",
+      "example": "The police asked for a description of the missing bag."
+    },
+    {
+      "word": "gallery",
+      "meaning": "a room or building where art is shown",
+      "japaneseMeaning": "ギャラリー、美術展示室",
+      "synonyms": "art room, exhibition space",
+      "antonyms": "storage, office",
+      "forms": "gallery, galleries",
+      "example": "The gallery displays photos by local students."
+    },
+    {
+      "word": "luggage",
+      "meaning": "bags and cases used for travel",
+      "japaneseMeaning": "荷物、手荷物",
+      "synonyms": "bags, baggage",
+      "antonyms": "empty hands, cargo",
+      "forms": "luggage",
+      "example": "Please keep your luggage with you on the train."
+    },
+    {
+      "word": "project",
+      "meaning": "a planned piece of work",
+      "japaneseMeaning": "計画、プロジェクト",
+      "synonyms": "task, plan",
+      "antonyms": "accident, rest",
+      "forms": "project, projects",
+      "example": "Our project is about clean energy."
+    },
+    {
+      "word": "discipline",
+      "meaning": "an area of study or training",
+      "japaneseMeaning": "学問分野、訓練",
+      "synonyms": "field, subject",
+      "antonyms": "hobby, disorder",
+      "forms": "discipline, disciplines",
+      "example": "Biology is a scientific discipline."
+    },
+    {
+      "word": "appointment",
+      "meaning": "a planned time to meet someone",
+      "japaneseMeaning": "予約、約束",
+      "synonyms": "meeting, booking",
+      "antonyms": "cancellation, free time",
+      "forms": "appointment, appointments",
+      "example": "I have a dentist appointment at ten."
+    },
+    {
+      "word": "statement",
+      "meaning": "something that someone says or writes as a fact",
+      "japaneseMeaning": "発言、声明、記述",
+      "synonyms": "comment, declaration",
+      "antonyms": "question, silence",
+      "forms": "statement, statements",
+      "example": "The mayor made a statement about the new park."
+    },
+    {
+      "word": "data",
+      "meaning": "facts or information collected",
+      "japaneseMeaning": "データ",
+      "synonyms": "information, statistics",
+      "antonyms": "fiction, guesswork",
+      "forms": "data",
+      "example": "The data supports the conclusion."
+    },
+    {
+      "word": "mindset",
+      "meaning": "a usual way of thinking about something",
+      "japaneseMeaning": "考え方、心構え",
+      "synonyms": "attitude, view",
+      "antonyms": "confusion, uncertainty",
+      "forms": "mindset, mindsets",
+      "example": "A positive mindset helps students keep trying."
+    }
   ]
 }

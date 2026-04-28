@@ -1,97 +1,96 @@
 {
   "lesson_id": "eiken-2-91",
   "title": "Lesson 91",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
     {
-      "word": "search",
-      "meaning": "to look for something carefully",
-      "japaneseMeaning": "探す",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "search, searchs, searching, searched",
-      "example": "Search your bag for the ticket."
+      "word": "correct",
+      "meaning": "right and with no mistakes",
+      "japaneseMeaning": "正しい",
+      "synonyms": "right, accurate",
+      "antonyms": "wrong, incorrect",
+      "forms": "correct, more correct, most correct",
+      "example": "Make sure your answer is correct before submitting."
     },
     {
-      "word": "seem",
-      "meaning": "to appear to be",
-      "japaneseMeaning": "〜のように見える",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "seem, seems, seeming, seemed",
-      "example": "You seem tired today."
+      "word": "funny",
+      "meaning": "causing laughter or amusement",
+      "japaneseMeaning": "面白い",
+      "synonyms": "humorous, amusing",
+      "antonyms": "serious, dull",
+      "forms": "funny, more funny, most funny",
+      "example": "He told a funny story at lunch."
     },
     {
-      "word": "support",
-      "meaning": "to help someone or something",
-      "japaneseMeaning": "支える、支持する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "support, supports, supporting, supported",
-      "example": "Friends support each other."
+      "word": "natural",
+      "meaning": "from nature and not made by people",
+      "japaneseMeaning": "自然の／天然の",
+      "synonyms": "organic, innate",
+      "antonyms": "artificial, man-made",
+      "forms": "natural, more natural, most natural",
+      "example": "They prefer natural fabrics like cotton."
     },
     {
-      "word": "suppose",
-      "meaning": "to think something is probably true",
-      "japaneseMeaning": "思う、仮定する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "suppose, supposes, supposing, supposed",
-      "example": "I suppose the shop is closed."
+      "word": "short",
+      "meaning": "not long",
+      "japaneseMeaning": "短い／短時間の",
+      "synonyms": "brief, concise",
+      "antonyms": "long, lengthy",
+      "forms": "short, more short, most short",
+      "example": "He gave a short summary of the meeting."
     },
     {
-      "word": "surprise",
-      "meaning": "to make someone feel sudden wonder",
-      "japaneseMeaning": "驚かせる",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "surprise, surprises, surprising, surprised",
-      "example": "The news will surprise everyone."
+      "word": "wide",
+      "meaning": "having a great extent from side to side",
+      "japaneseMeaning": "広い／幅のある",
+      "synonyms": "broad, expansive",
+      "antonyms": "narrow, limited",
+      "forms": "wide, more wide, most wide",
+      "example": "They walked down a wide boulevard."
     },
     {
-      "word": "email",
-      "meaning": "to send a message by email",
-      "japaneseMeaning": "メールする",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "email, emails, emailing, emailed",
-      "example": "Email me the report tonight."
+      "word": "precise",
+      "meaning": "exact and careful",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "precise, more precise, most precise",
+      "example": "The precise choice made the whole plan easier."
     },
     {
-      "word": "exercise",
-      "meaning": "to move your body to stay healthy",
-      "japaneseMeaning": "運動する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "exercise, exercises, exercising, exercised",
-      "example": "Exercise for twenty minutes every day."
+      "word": "sorry",
+      "meaning": "feeling bad about something wrong or sad",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "sorry, more sorry, most sorry",
+      "example": "The sorry choice made the whole plan easier."
     },
     {
-      "word": "greet",
-      "meaning": "to say hello to someone",
-      "japaneseMeaning": "挨拶する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "greet, greets, greeting, greeted",
-      "example": "Greet visitors at the door."
+      "word": "sincere",
+      "meaning": "genuine and honest",
+      "japaneseMeaning": "誠実な",
+      "synonyms": "genuine, honest",
+      "antonyms": "insincere, deceitful",
+      "forms": "sincere, sincerely",
+      "example": "His apology was sincere."
     },
     {
-      "word": "interview",
-      "meaning": "to ask someone questions formally",
-      "japaneseMeaning": "面接する",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "interview, interviews, interviewing, interviewed",
-      "example": "They interview three people for the job."
+      "word": "constant",
+      "meaning": "happening all the time or not changing",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "constant, more constant, most constant",
+      "example": "The constant choice made the whole plan easier."
     },
     {
-      "word": "yawn",
-      "meaning": "to open your mouth because you are tired",
-      "japaneseMeaning": "あくびをする",
-      "synonyms": "do, perform",
-      "antonyms": "stop, avoid",
-      "forms": "yawn, yawns, yawning, yawned",
-      "example": "I yawn when I feel sleepy."
+      "word": "rural",
+      "meaning": "connected with the countryside",
+      "japaneseMeaning": "形容詞",
+      "synonyms": "good, clear",
+      "antonyms": "opposite, different",
+      "forms": "rural, more rural, most rural",
+      "example": "The rural choice made the whole plan easier."
     }
   ]
 }

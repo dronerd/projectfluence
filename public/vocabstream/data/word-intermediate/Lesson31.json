@@ -1,17 +1,96 @@
 {
   "lesson_id": "eiken-2-31",
   "title": "Lesson 31",
-  "paragraph": "This lesson focuses on practical B1 vocabulary for everyday communication.",
   "words": [
-    { "word": "automatic", "meaning": "working by itself without a person controlling it", "japaneseMeaning": "自動の", "synonyms": "self-operating, mechanical", "antonyms": "manual, hand-operated", "forms": "automatic, automatically", "example": "The automatic door opens when people come close." },
-    { "word": "broken", "meaning": "damaged and not working", "japaneseMeaning": "壊れた", "synonyms": "damaged, not working", "antonyms": "fixed, working", "forms": "broken, break", "example": "The broken clock stopped at noon." },
-    { "word": "crowded", "meaning": "full of many people or things", "japaneseMeaning": "混雑した", "synonyms": "full, packed", "antonyms": "empty, quiet", "forms": "crowded, crowd", "example": "The crowded train was hard to enter." },
-    { "word": "electric", "meaning": "using electricity", "japaneseMeaning": "電気の", "synonyms": "powered, electrical", "antonyms": "manual, non-electric", "forms": "electric, electrically, electricity", "example": "My father bought an electric car." },
-    { "word": "extra", "meaning": "more than usual or more than needed", "japaneseMeaning": "余分な、追加の", "synonyms": "additional, spare", "antonyms": "missing, fewer", "forms": "extra, extras", "example": "Bring an extra shirt for the trip." },
-    { "word": "female", "meaning": "connected with women or girls", "japaneseMeaning": "女性の、雌の", "synonyms": "woman, feminine", "antonyms": "male, masculine", "forms": "female, females", "example": "The school hired a female coach for the team." },
-    { "word": "final", "meaning": "last or coming at the end", "japaneseMeaning": "最後の、最終の", "synonyms": "last, ending", "antonyms": "first, initial", "forms": "final, finally", "example": "The final question was the most difficult." },
-    { "word": "golden", "meaning": "bright yellow like gold or very special", "japaneseMeaning": "金色の、貴重な", "synonyms": "gold-colored, valuable", "antonyms": "dull, ordinary", "forms": "golden", "example": "The golden light made the room warm." },
-    { "word": "monthly", "meaning": "happening once every month", "japaneseMeaning": "毎月の", "synonyms": "every month, regular", "antonyms": "daily, yearly", "forms": "monthly", "example": "Our monthly meeting is on Friday." },
-    { "word": "natural", "meaning": "existing in nature or not made by people", "japaneseMeaning": "自然の、当然の", "synonyms": "normal, nature-made", "antonyms": "artificial, unnatural", "forms": "natural, naturally, nature", "example": "The park has a natural lake." }
+    {
+      "word": "academic",
+      "meaning": "connected with school, study, or research",
+      "japaneseMeaning": "学問の、学校の",
+      "synonyms": "educational, scholarly",
+      "antonyms": "practical, nonacademic",
+      "forms": "academic, academically",
+      "example": "The academic year starts in spring."
+    },
+    {
+      "word": "disappointed",
+      "meaning": "sad because something was not as good as expected",
+      "japaneseMeaning": "がっかりした",
+      "synonyms": "sad, unhappy",
+      "antonyms": "pleased, satisfied",
+      "forms": "disappointed, disappointedly",
+      "example": "I was disappointed with the low score."
+    },
+    {
+      "word": "honest",
+      "meaning": "telling the truth and not cheating",
+      "japaneseMeaning": "正直な",
+      "synonyms": "truthful, sincere",
+      "antonyms": "dishonest, deceitful",
+      "forms": "honest, more honest, most honest",
+      "example": "He is honest and returns lost items."
+    },
+    {
+      "word": "obvious",
+      "meaning": "easy to see or understand",
+      "japaneseMeaning": "明らかな",
+      "synonyms": "clear, plain",
+      "antonyms": "unclear, hidden",
+      "forms": "obvious, obviously",
+      "example": "The mistake was obvious after she checked the answer."
+    },
+    {
+      "word": "subtle",
+      "meaning": "not easy to notice or understand at first",
+      "japaneseMeaning": "微妙な、かすかな",
+      "synonyms": "slight, gentle",
+      "antonyms": "obvious, clear",
+      "forms": "subtle, subtly",
+      "example": "There was a subtle difference between the two answers."
+    },
+    {
+      "word": "alternative",
+      "meaning": "another option or choice",
+      "japaneseMeaning": "代替案",
+      "synonyms": "option, substitute",
+      "antonyms": "necessity, requirement",
+      "forms": "alternative, alternatives",
+      "example": "They proposed an alternative plan."
+    },
+    {
+      "word": "experienced",
+      "meaning": "having done something many times before",
+      "japaneseMeaning": "経験豊富な",
+      "synonyms": "skilled, trained",
+      "antonyms": "inexperienced, new",
+      "forms": "experienced, more experienced, most experienced",
+      "example": "An experienced guide led us through the museum."
+    },
+    {
+      "word": "genuine",
+      "meaning": "real, sincere, and not false",
+      "japaneseMeaning": "本物の、心からの",
+      "synonyms": "real, sincere",
+      "antonyms": "fake, false",
+      "forms": "genuine, genuinely",
+      "example": "She showed genuine interest in the project."
+    },
+    {
+      "word": "detached",
+      "meaning": "separate or not emotionally involved",
+      "japaneseMeaning": "離れた、客観的な",
+      "synonyms": "separate, neutral",
+      "antonyms": "attached, involved",
+      "forms": "detached",
+      "example": "A detached view helped her judge the problem fairly."
+    },
+    {
+      "word": "immediate",
+      "meaning": "happening now or very soon",
+      "japaneseMeaning": "即時の、すぐの",
+      "synonyms": "quick, urgent",
+      "antonyms": "later, delayed",
+      "forms": "immediate, more immediate, most immediate",
+      "example": "The injury needed immediate attention."
+    }
   ]
 }
