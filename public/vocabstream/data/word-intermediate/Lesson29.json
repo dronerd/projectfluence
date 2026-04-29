@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-29",
-  "title": "Lesson 4",
-  "paragraph": "These verbs are useful for drawing, earning, and encouraging — verbs you’ll use when talking about creativity, money, and emotions.",
+  "lesson_id": "eiken-2-29",
+  "title": "Lesson 29",
   "words": [
-    { "word": "draw", "meaning": "to produce an image with a pen/pencil or to attract", "japaneseMeaning": "描く／引きつける", "synonyms": "sketch, attract", "antonyms": "erase, repel", "example": "She drew a picture of the park." },
-    { "word": "earn", "meaning": "to receive money for work or achieve something through effort", "japaneseMeaning": "稼ぐ／得る", "synonyms": "gain, obtain", "antonyms": "lose, forfeit", "example": "He earned a promotion." },
-    { "word": "encourage", "meaning": "to give support or confidence to someone", "japaneseMeaning": "励ます", "synonyms": "support, motivate", "antonyms": "discourage, dishearten", "example": "Her coach encouraged her to try." },
-    { "word": "enjoy", "meaning": "to take pleasure in something", "japaneseMeaning": "楽しむ", "synonyms": "like, relish", "antonyms": "hate, dislike", "example": "I enjoy reading on weekends." },
-    { "word": "enter", "meaning": "to come or go into a place", "japaneseMeaning": "入る", "synonyms": "go in, come in", "antonyms": "exit, leave", "example": "Please enter the room quietly." },
-    { "word": "escape", "meaning": "to get away from a place or situation", "japaneseMeaning": "逃げる", "synonyms": "flee, avoid", "antonyms": "stay, remain", "example": "They escaped the rising floodwaters." },
-    { "word": "explain", "meaning": "to make something clear or understandable", "japaneseMeaning": "説明する", "synonyms": "clarify, describe", "antonyms": "obscure, confuse", "example": "Please explain your answer." },
-    { "word": "fail", "meaning": "to be unsuccessful in achieving a goal", "japaneseMeaning": "失敗する", "synonyms": "flop, fall short", "antonyms": "succeed, pass", "example": "He failed the test but learned from it." },
-    { "word": "fall", "meaning": "to move downward freely", "japaneseMeaning": "落ちる／倒れる", "synonyms": "drop, tumble", "antonyms": "rise, lift", "example": "Leaves fall in autumn." },
-    { "word": "feed", "meaning": "to give food to someone or something", "japaneseMeaning": "餌を与える／食べさせる", "synonyms": "nourish, supply", "antonyms": "starve, deprive", "example": "Please feed the cat." },
-    { "word": "fill", "meaning": "to make something full", "japaneseMeaning": "満たす／詰める", "synonyms": "pack, load", "antonyms": "empty, drain", "example": "Fill the bottle with water." },
-    { "word": "find", "meaning": "to discover or locate something", "japaneseMeaning": "見つける", "synonyms": "discover, locate", "antonyms": "lose, misplace", "example": "I couldn't find my keys." }
+    {
+      "word": "accommodation",
+      "meaning": "a place to stay when traveling",
+      "japaneseMeaning": "宿泊施設",
+      "synonyms": "lodging, room",
+      "antonyms": "homelessness, outdoors",
+      "forms": "accommodation, accommodations",
+      "example": "The hotel provided clean accommodation near the station."
+    },
+    {
+      "word": "committee",
+      "meaning": "a group chosen to make plans or decisions",
+      "japaneseMeaning": "委員会",
+      "synonyms": "group, board",
+      "antonyms": "individual, crowd",
+      "forms": "committee, committees",
+      "example": "The committee planned the school festival."
+    },
+    {
+      "word": "evidence",
+      "meaning": "facts or objects that help show whether something is true",
+      "japaneseMeaning": "証拠",
+      "synonyms": "proof, facts",
+      "antonyms": "doubt, guess",
+      "forms": "evidence",
+      "example": "The police found evidence near the broken window."
+    },
+    {
+      "word": "industry",
+      "meaning": "businesses that make the same kind of thing",
+      "japaneseMeaning": "産業、業界",
+      "synonyms": "business field, trade",
+      "antonyms": "hobby, home",
+      "forms": "industry, industries",
+      "example": "The tourism industry is important to this town."
+    },
+    {
+      "word": "order",
+      "meaning": "to request goods or services or to command",
+      "japaneseMeaning": "注文する／命じる",
+      "synonyms": "request, command",
+      "antonyms": "cancel, refuse",
+      "forms": "order, orders, ordering, ordered",
+      "example": "I ordered dinner online."
+    },
+    {
+      "word": "result",
+      "meaning": "what happens because of an action or event",
+      "japaneseMeaning": "結果",
+      "synonyms": "outcome, answer",
+      "antonyms": "cause, start",
+      "forms": "result, results",
+      "example": "The test result arrived by email."
+    },
+    {
+      "word": "campus",
+      "meaning": "the buildings and land of a school or university",
+      "japaneseMeaning": "キャンパス、校地",
+      "synonyms": "school grounds, site",
+      "antonyms": "office, home",
+      "forms": "campus, campuses",
+      "example": "Visitors can walk around the campus after the tour."
+    },
+    {
+      "word": "context",
+      "meaning": "situation surrounding something",
+      "japaneseMeaning": "文脈、状況",
+      "synonyms": "circumstance, setting",
+      "antonyms": "lack, absence",
+      "forms": "context, contexts",
+      "example": "The meaning changes in context."
+    },
+    {
+      "word": "term",
+      "meaning": "a word, phrase, or period of time",
+      "japaneseMeaning": "用語、期間、学期",
+      "synonyms": "word, period",
+      "antonyms": "sentence, break",
+      "forms": "term, terms",
+      "example": "This term has three science projects."
+    },
+    {
+      "word": "foundation",
+      "meaning": "the basic idea, rule, or support that something is built on",
+      "japaneseMeaning": "基礎、土台",
+      "synonyms": "base, support",
+      "antonyms": "surface, detail",
+      "forms": "foundation, foundations",
+      "example": "Good grammar is a foundation for clear writing."
+    }
   ]
 }

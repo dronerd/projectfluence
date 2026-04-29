@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-43",
-  "title": "Lesson 18",
-  "paragraph": "Verbs for injuries, crime, admiration, and polite interactions.",
+  "lesson_id": "eiken-2-43",
+  "title": "Lesson 43",
   "words": [
-    { "word": "hit", "meaning": "to strike someone or something", "japaneseMeaning": "打つ／殴る", "synonyms": "strike, slap", "antonyms": "miss, avoid", "example": "Don't hit your brother." },
-    { "word": "injure", "meaning": "to cause physical harm or damage", "japaneseMeaning": "けがをさせる／損傷する", "synonyms": "harm, wound", "antonyms": "heal, help", "example": "He injured his arm playing soccer." },
-    { "word": "rob", "meaning": "to take property illegally from a person or place", "japaneseMeaning": "奪う／強盗する", "synonyms": "steal, burglarize", "antonyms": "give, return", "example": "The bank was robbed last night." },
-    { "word": "shoot", "meaning": "to fire a weapon or send out a projectile", "japaneseMeaning": "撃つ／発射する", "synonyms": "fire, discharge", "antonyms": "miss, refrain", "example": "He learned to shoot at the range." },
-    { "word": "admire", "meaning": "to regard with respect or warm approval", "japaneseMeaning": "称賛する／感嘆する", "synonyms": "appreciate, esteem", "antonyms": "despise, criticize", "example": "I admire her dedication." },
-    { "word": "admit", "meaning": "to confess or acknowledge something", "japaneseMeaning": "認める／告白する", "synonyms": "confess, acknowledge", "antonyms": "deny, reject", "example": "He admitted his mistake." },
-    { "word": "afford", "meaning": "to have enough money to pay for", "japaneseMeaning": "余裕がある／買う余裕がある", "synonyms": "pay for, bear", "antonyms": "lack, be unable", "example": "I can't afford a new car now." },
-    { "word": "annoy", "meaning": "to make someone slightly angry or irritated", "japaneseMeaning": "イライラさせる／悩ます", "synonyms": "irritate, bother", "antonyms": "please, delight", "example": "Loud music annoys me." },
-    { "word": "apologize", "meaning": "to express regret for something done wrong", "japaneseMeaning": "謝る", "synonyms": "say sorry, repent", "antonyms": "blame, accuse", "example": "He apologized for being late." },
-    { "word": "approach", "meaning": "to come near in distance or time", "japaneseMeaning": "近づく／アプローチする", "synonyms": "near, come close", "antonyms": "recede, withdraw", "example": "Winter is approaching quickly." },
-    { "word": "approve", "meaning": "to officially agree or accept", "japaneseMeaning": "承認する／賛成する", "synonyms": "authorize, endorse", "antonyms": "reject, deny", "example": "The committee approved the plan." },
-    { "word": "arrange", "meaning": "to put things in a neat or required order", "japaneseMeaning": "手配する／整える", "synonyms": "organize, plan", "antonyms": "disorder, neglect", "example": "Arrange the chairs for the meeting." }
+    {
+      "word": "ambitious",
+      "meaning": "wanting strongly to succeed",
+      "japaneseMeaning": "野心的な、意欲的な",
+      "synonyms": "determined, eager",
+      "antonyms": "uninterested, lazy",
+      "forms": "ambitious, ambitiously",
+      "example": "She has an ambitious plan to start a business."
+    },
+    {
+      "word": "extensive",
+      "meaning": "covering a large area or including many things",
+      "japaneseMeaning": "広範囲の、大規模な",
+      "synonyms": "wide, large",
+      "antonyms": "limited, small",
+      "forms": "extensive, extensively",
+      "example": "The library has an extensive collection of science books."
+    },
+    {
+      "word": "independent",
+      "meaning": "able to do things without help or control from others",
+      "japaneseMeaning": "独立した",
+      "synonyms": "free, self-reliant",
+      "antonyms": "dependent, controlled",
+      "forms": "independent, independently",
+      "example": "She is an independent thinker."
+    },
+    {
+      "word": "modest",
+      "meaning": "not large, expensive, or proud",
+      "japaneseMeaning": "控えめな、質素な",
+      "synonyms": "simple, humble",
+      "antonyms": "proud, impressive",
+      "forms": "modest, modestly",
+      "example": "They live in a modest apartment near the park."
+    },
+    {
+      "word": "delighted",
+      "meaning": "very happy",
+      "japaneseMeaning": "とても喜んだ",
+      "synonyms": "happy, pleased",
+      "antonyms": "sad, upset",
+      "forms": "delighted, more delighted, most delighted",
+      "example": "She was delighted with the birthday surprise."
+    },
+    {
+      "word": "dangerous",
+      "meaning": "likely to cause harm or injury",
+      "japaneseMeaning": "危険な",
+      "synonyms": "hazardous, risky",
+      "antonyms": "safe, harmless",
+      "forms": "dangerous, more dangerous, most dangerous",
+      "example": "Crossing the road here is dangerous without a signal."
+    },
+    {
+      "word": "guilty",
+      "meaning": "feeling responsible for wrongdoing",
+      "japaneseMeaning": "罪悪感がある",
+      "synonyms": "remorseful, ashamed",
+      "antonyms": "innocent, blameless",
+      "forms": "guilty, more guilty, most guilty",
+      "example": "He felt guilty about breaking the vase."
+    },
+    {
+      "word": "cautious",
+      "meaning": "careful to avoid danger",
+      "japaneseMeaning": "慎重な",
+      "synonyms": "careful, wary",
+      "antonyms": "reckless, careless",
+      "forms": "cautious, cautiously",
+      "example": "Being cautious prevented accidents."
+    },
+    {
+      "word": "prepared",
+      "meaning": "ready for something",
+      "japaneseMeaning": "準備ができた",
+      "synonyms": "ready, organized",
+      "antonyms": "unprepared, careless",
+      "forms": "prepared, more prepared, most prepared",
+      "example": "She came prepared with notes and questions."
+    },
+    {
+      "word": "confidential",
+      "meaning": "private and not to be shared with other people",
+      "japaneseMeaning": "機密の、内密の",
+      "synonyms": "private, secret",
+      "antonyms": "public, open",
+      "forms": "confidential, confidentially",
+      "example": "Please keep this information confidential."
+    }
   ]
 }

@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-27",
-  "title": "Lesson 2",
-  "paragraph": "This lesson focuses on verbs that describe handling objects, movement, and basic interactions — useful for daily conversations and practical tasks.",
+  "lesson_id": "eiken-2-27",
+  "title": "Lesson 27",
   "words": [
-    { "word": "break", "meaning": "to separate into pieces or stop working", "japaneseMeaning": "壊す／壊れる", "synonyms": "fracture, damage", "antonyms": "fix, mend", "example": "He accidentally broke the glass." },
-    { "word": "bring", "meaning": "to carry something to a place", "japaneseMeaning": "持って来る", "synonyms": "carry, deliver", "antonyms": "take away, remove", "example": "Please bring your textbook tomorrow." },
-    { "word": "build", "meaning": "to construct by putting parts together", "japaneseMeaning": "建てる／作る", "synonyms": "construct, create", "antonyms": "destroy, demolish", "example": "They plan to build a new bridge." },
-    { "word": "cancel", "meaning": "to decide that an arranged event will not happen", "japaneseMeaning": "キャンセルする", "synonyms": "call off, revoke", "antonyms": "confirm, proceed", "example": "The flight was canceled due to weather." },
-    { "word": "carry", "meaning": "to support and move something from one place to another", "japaneseMeaning": "運ぶ", "synonyms": "transport, bear", "antonyms": "drop, leave", "example": "She carried the box upstairs." },
-    { "word": "catch", "meaning": "to capture or take hold of something", "japaneseMeaning": "捕まえる", "synonyms": "grab, seize", "antonyms": "miss, release", "example": "He caught the ball easily." },
-    { "word": "choose", "meaning": "to select from two or more options", "japaneseMeaning": "選ぶ", "synonyms": "select, pick", "antonyms": "reject, refuse", "example": "Choose the best answer." },
-    { "word": "collect", "meaning": "to bring things together as a group", "japaneseMeaning": "集める", "synonyms": "gather, assemble", "antonyms": "scatter, disperse", "example": "She collects stamps as a hobby." },
-    { "word": "compare", "meaning": "to examine similarities and differences", "japaneseMeaning": "比較する", "synonyms": "contrast, evaluate", "antonyms": "ignore, separate", "example": "Compare the two products before buying." },
-    { "word": "complain", "meaning": "to express dissatisfaction or annoyance", "japaneseMeaning": "不平を言う", "synonyms": "grumble, protest", "antonyms": "praise, compliment", "example": "He complained about the noise." },
-    { "word": "complete", "meaning": "to finish something", "japaneseMeaning": "完了する", "synonyms": "finish, accomplish", "antonyms": "start, neglect", "example": "She completed the assignment on time." },
-    { "word": "concentrate", "meaning": "to direct attention or effort toward something", "japaneseMeaning": "集中する", "synonyms": "focus, attend", "antonyms": "distract, neglect", "example": "Concentrate on the task at hand." }
+    {
+      "word": "communicate",
+      "meaning": "to share ideas or information with someone",
+      "japaneseMeaning": "伝える、意思疎通する",
+      "synonyms": "share, tell",
+      "antonyms": "hide, confuse",
+      "forms": "communicate, communicates, communicating, communicated",
+      "example": "We communicate with our team every morning."
+    },
+    {
+      "word": "consult",
+      "meaning": "to ask someone for advice or information",
+      "japaneseMeaning": "相談する",
+      "synonyms": "ask, discuss",
+      "antonyms": "ignore, decide alone",
+      "forms": "consult, consults, consulting, consulted",
+      "example": "You should consult a doctor if the pain continues."
+    },
+    {
+      "word": "predict",
+      "meaning": "to say what you think will happen in the future",
+      "japaneseMeaning": "予測する",
+      "synonyms": "forecast, expect",
+      "antonyms": "doubt, ignore",
+      "forms": "predict, predicts, predicting, predicted",
+      "example": "The report predicts heavy rain this weekend."
+    },
+    {
+      "word": "realize",
+      "meaning": "to become aware of",
+      "japaneseMeaning": "気づく",
+      "synonyms": "understand, notice",
+      "antonyms": "ignore, overlook",
+      "forms": "realize, realizes, realizing, realized",
+      "example": "She realized her mistake immediately."
+    },
+    {
+      "word": "forgive",
+      "meaning": "to stop being angry at someone for a mistake",
+      "japaneseMeaning": "許す",
+      "synonyms": "excuse, pardon",
+      "antonyms": "blame, punish",
+      "forms": "forgive, forgives, forgiving, forgave, forgiven",
+      "example": "I forgive my friend because he said sorry."
+    },
+    {
+      "word": "guide",
+      "meaning": "to show someone where to go or what to do",
+      "japaneseMeaning": "案内する、導く",
+      "synonyms": "lead, direct",
+      "antonyms": "mislead, follow",
+      "forms": "guide, guides, guiding, guided",
+      "example": "The map will guide us through the old city."
+    },
+    {
+      "word": "promise",
+      "meaning": "to assure someone that one will definitely do something",
+      "japaneseMeaning": "約束する",
+      "synonyms": "assure, agree",
+      "antonyms": "break, refuse",
+      "forms": "promise, promises, promising, promised",
+      "example": "He promised to call later."
+    },
+    {
+      "word": "engage",
+      "meaning": "to participate or become involved",
+      "japaneseMeaning": "関与する",
+      "synonyms": "participate, involve",
+      "antonyms": "withdraw, avoid",
+      "forms": "engage, engages, engaging, engaged",
+      "example": "The teacher engaged the students in discussion."
+    },
+    {
+      "word": "implement",
+      "meaning": "to start using a plan or idea",
+      "japaneseMeaning": "実施する",
+      "synonyms": "carry out, introduce",
+      "antonyms": "stop, abandon",
+      "forms": "implement, implements, implementing, implemented",
+      "example": "The company will implement new policies."
+    },
+    {
+      "word": "evolve",
+      "meaning": "to develop gradually",
+      "japaneseMeaning": "進化する",
+      "synonyms": "develop, progress",
+      "antonyms": "stop, decline",
+      "forms": "evolve, evolves, evolving, evolved",
+      "example": "Technology continues to evolve."
+    }
   ]
 }

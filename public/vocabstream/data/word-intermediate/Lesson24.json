@@ -1,27 +1,96 @@
- {
-    "lesson_id": "eiken-pre2-24",
-    "title": "Lesson 24",
-    "paragraph": "Health and safety at work protect people from accidents and illness. Wearing protective equipment, following rules and receiving proper training reduce risks and keep workplaces safer.",
-    "words": [
-      { "word": "hazard", "meaning": "something that can cause harm or danger", "japaneseMeaning": "危険、ハザード", "synonyms": "danger, risk", "antonyms": "safety, protection", "example": "Wet floors are a hazard at the entrance." },
-      { "word": "first aid", "meaning": "immediate care given to someone who is injured", "japaneseMeaning": "応急処置", "synonyms": "emergency care", "antonyms": "", "example": "Learn basic first aid for injuries." },
-      { "word": "helmet", "meaning": "protective headgear to prevent injury", "japaneseMeaning": "ヘルメット", "synonyms": "hard hat, head protector", "antonyms": "", "example": "Wear a helmet when riding a bike." },
-      { "word": "goggles", "meaning": "protective eyewear", "japaneseMeaning": "ゴーグル、保護眼鏡", "synonyms": "safety glasses", "antonyms": "", "example": "Use goggles when working with chemicals." },
-      { "word": "safety", "meaning": "the condition of being protected from danger", "japaneseMeaning": "安全", "synonyms": "security, protection", "antonyms": "danger, risk", "example": "Safety is the company's top priority." },
-      { "word": "risk", "meaning": "the chance of something bad happening", "japaneseMeaning": "リスク、危険性", "synonyms": "hazard, exposure", "antonyms": "safety, certainty", "example": "Assess the risk before starting the task." },
-      { "word": "emergency", "meaning": "a sudden, dangerous situation requiring immediate action", "japaneseMeaning": "緊急事態", "synonyms": "crisis, urgent situation", "antonyms": "routine", "example": "Call this number in an emergency." },
-      { "word": "fire extinguisher", "meaning": "a device used to put out small fires", "japaneseMeaning": "消火器", "synonyms": "fire suppressor", "antonyms": "", "example": "Locate the nearest fire extinguisher." },
-      { "word": "precaution", "meaning": "an action taken to prevent harm", "japaneseMeaning": "予防策、用心", "synonyms": "measure, safeguard", "antonyms": "carelessness", "example": "Take extra precautions in icy weather." },
-      { "word": "protective", "meaning": "intended to keep someone safe from harm", "japaneseMeaning": "保護する、安全を守る", "synonyms": "shielding, defensive", "antonyms": "exposed", "example": "Protective gloves kept hands safe." },
-      { "word": "injury", "meaning": "harm or damage to the body", "japaneseMeaning": "けが、負傷", "synonyms": "wound, harm", "antonyms": "health, wellbeing", "example": "He had a small injury on his arm." },
-      { "word": "regulation", "meaning": "a rule made by authority to control activity", "japaneseMeaning": "規則、規制", "synonyms": "rule, law", "antonyms": "freedom (unregulated)", "example": "Follow safety regulations at all times." },
-      { "word": "insurance", "meaning": "protection against financial loss", "japaneseMeaning": "保険", "synonyms": "coverage, policy", "antonyms": "", "example": "The company offers health insurance to staff." },
-      { "word": "inspection", "meaning": "a careful check to ensure safety or quality", "japaneseMeaning": "点検、検査", "synonyms": "examination, review", "antonyms": "", "example": "An inspection found a broken ladder." },
-      { "word": "training", "meaning": "instruction to learn skills or safety procedures", "japaneseMeaning": "研修、訓練", "synonyms": "coaching, education", "antonyms": "ignorance", "example": "Attend safety training next week." },
-      { "word": "protocol", "meaning": "an official set of procedures to follow", "japaneseMeaning": "手順、プロトコル", "synonyms": "procedure, guideline", "antonyms": "", "example": "Follow the emergency protocol during drills." },
-      { "word": "evacuation", "meaning": "the process of moving people away from danger", "japaneseMeaning": "避難、立ち退き", "synonyms": "withdrawal, escape", "antonyms": "", "example": "Evacuation routes are posted by the exits." },
-      { "word": "compliance", "meaning": "following rules or requests", "japaneseMeaning": "遵守、従うこと", "synonyms": "adherence, conformity", "antonyms": "violation", "example": "Ensure compliance with safety standards." },
-      { "word": "helmet", "meaning": "protective headwear to reduce injury", "japaneseMeaning": "ヘルメット", "synonyms": "hard hat", "antonyms": "", "example": "Construction workers must wear a helmet." }
-    ]
-  }
-  
+{
+  "lesson_id": "eiken-2-24",
+  "title": "Lesson 24",
+  "words": [
+    {
+      "word": "previous",
+      "meaning": "happening or existing before now or before another thing",
+      "japaneseMeaning": "前の、以前の",
+      "synonyms": "earlier, former",
+      "antonyms": "next, later",
+      "forms": "previous, previously",
+      "example": "The previous lesson was easier than this one."
+    },
+    {
+      "word": "traditional",
+      "meaning": "following old customs or ways",
+      "japaneseMeaning": "伝統的な",
+      "synonyms": "customary, old-style",
+      "antonyms": "modern, new",
+      "forms": "traditional, traditionally, tradition",
+      "example": "They wore traditional clothes for the festival."
+    },
+    {
+      "word": "visible",
+      "meaning": "able to be seen",
+      "japaneseMeaning": "見える、目に見える",
+      "synonyms": "seen, clear",
+      "antonyms": "hidden, invisible",
+      "forms": "visible, visibly, visibility",
+      "example": "The mountain is visible from our classroom."
+    },
+    {
+      "word": "vivid",
+      "meaning": "very clear, bright, or easy to imagine",
+      "japaneseMeaning": "鮮やかな、生き生きとした",
+      "synonyms": "clear, lively",
+      "antonyms": "dull, unclear",
+      "forms": "vivid, vividly",
+      "example": "The writer gave a vivid description of the market."
+    },
+    {
+      "word": "occupied",
+      "meaning": "being used or busy with an activity",
+      "japaneseMeaning": "使用中の、忙しい",
+      "synonyms": "busy, taken",
+      "antonyms": "free, available",
+      "forms": "occupied, occupation",
+      "example": "All meeting rooms were occupied after lunch."
+    },
+    {
+      "word": "attentive",
+      "meaning": "listening or watching carefully",
+      "japaneseMeaning": "注意深い、気配りのある",
+      "synonyms": "careful, focused",
+      "antonyms": "careless, distracted",
+      "forms": "attentive, attentively",
+      "example": "The guide was attentive to every visitor's question."
+    },
+    {
+      "word": "encouraging",
+      "meaning": "making someone feel more confident or hopeful",
+      "japaneseMeaning": "励みになる、勇気づける",
+      "synonyms": "hopeful, supportive",
+      "antonyms": "discouraging, negative",
+      "forms": "encouraging, encouragingly",
+      "example": "The teacher gave encouraging comments on my essay."
+    },
+    {
+      "word": "profound",
+      "meaning": "very great or strongly felt",
+      "japaneseMeaning": "深い、大きな",
+      "synonyms": "deep, serious",
+      "antonyms": "small, shallow",
+      "forms": "profound, profoundly",
+      "example": "The experience had a profound effect on her."
+    },
+    {
+      "word": "challenging",
+      "meaning": "difficult in a way that tests your ability",
+      "japaneseMeaning": "やりがいのある、難しい",
+      "synonyms": "difficult, demanding",
+      "antonyms": "easy, simple",
+      "forms": "challenging, challenge",
+      "example": "The course is challenging, but I am learning a lot."
+    },
+    {
+      "word": "outstanding",
+      "meaning": "extremely good or clearly better than others",
+      "japaneseMeaning": "傑出した、非常に優れた",
+      "synonyms": "excellent, remarkable",
+      "antonyms": "poor, ordinary",
+      "forms": "outstanding, outstandingly",
+      "example": "She gave an outstanding presentation at the contest."
+    }
+  ]
+}

@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-30",
-  "title": "Lesson 5",
-  "paragraph": "This lesson groups verbs about fixing, following, forgetting, and emotional responses — important for describing relationships and troubleshooting.",
+  "lesson_id": "eiken-2-30",
+  "title": "Lesson 30",
   "words": [
-    { "word": "fix", "meaning": "to repair or make something work correctly", "japaneseMeaning": "修理する／直す", "synonyms": "repair, mend", "antonyms": "break, damage", "example": "Can you fix the printer?" },
-    { "word": "follow", "meaning": "to go after or come behind someone/something", "japaneseMeaning": "従う／ついていく", "synonyms": "pursue, adhere", "antonyms": "lead, ignore", "example": "Follow the instructions carefully." },
-    { "word": "forget", "meaning": "to fail to remember", "japaneseMeaning": "忘れる", "synonyms": "omit, overlook", "antonyms": "remember, recall", "example": "I forgot my password." },
-    { "word": "forgive", "meaning": "to stop feeling angry toward someone for an offense", "japaneseMeaning": "許す", "synonyms": "pardon, excuse", "antonyms": "blame, resent", "example": "She forgave him for the mistake." },
-    { "word": "guess", "meaning": "to form an opinion without sufficient information", "japaneseMeaning": "推測する", "synonyms": "estimate, suppose", "antonyms": "know, calculate", "example": "Can you guess the answer?" },
-    { "word": "happen", "meaning": "to take place; occur", "japaneseMeaning": "起こる", "synonyms": "occur, transpire", "antonyms": "stop, prevent", "example": "What happened here?" },
-    { "word": "hate", "meaning": "to feel intense dislike", "japaneseMeaning": "嫌う／憎む", "synonyms": "detest, loathe", "antonyms": "love, like", "example": "I hate being late." },
-    { "word": "hear", "meaning": "to perceive sound with the ear", "japaneseMeaning": "聞く／聞こえる", "synonyms": "listen, perceive", "antonyms": "ignore, miss", "example": "Did you hear that noise?" },
-    { "word": "help", "meaning": "to give assistance", "japaneseMeaning": "助ける", "synonyms": "assist, aid", "antonyms": "hinder, obstruct", "example": "Can you help me move this?" },
-    { "word": "hope", "meaning": "to want something to happen and think it possible", "japaneseMeaning": "望む／期待する", "synonyms": "wish, desire", "antonyms": "despair, doubt", "example": "I hope it doesn't rain tomorrow." },
-    { "word": "imagine", "meaning": "to form a mental picture of something not present", "japaneseMeaning": "想像する", "synonyms": "envision, picture", "antonyms": "forget, ignore", "example": "Imagine living by the sea." },
-    { "word": "include", "meaning": "to contain as part of something", "japaneseMeaning": "含める", "synonyms": "incorporate, involve", "antonyms": "exclude, omit", "example": "Please include all receipts." }
+    {
+      "word": "convince",
+      "meaning": "to make someone believe or agree with you",
+      "japaneseMeaning": "納得させる",
+      "synonyms": "persuade, satisfy",
+      "antonyms": "doubt, discourage",
+      "forms": "convince, convinces, convincing, convinced",
+      "example": "The facts helped convince me to change my plan."
+    },
+    {
+      "word": "complete",
+      "meaning": "to finish something",
+      "japaneseMeaning": "完了する",
+      "synonyms": "finish, accomplish",
+      "antonyms": "start, neglect",
+      "forms": "complete, completes, completing, completed",
+      "example": "She completed the assignment on time."
+    },
+    {
+      "word": "imagine",
+      "meaning": "to form a mental picture of something not present",
+      "japaneseMeaning": "想像する",
+      "synonyms": "envision, picture",
+      "antonyms": "forget, ignore",
+      "forms": "imagine, imagines, imagining, imagined",
+      "example": "Imagine living by the sea."
+    },
+    {
+      "word": "receive",
+      "meaning": "to be given or presented with something",
+      "japaneseMeaning": "受け取る",
+      "synonyms": "accept, obtain",
+      "antonyms": "give, send",
+      "forms": "receive, receives, receiving, received",
+      "example": "I received a parcel today."
+    },
+    {
+      "word": "anticipate",
+      "meaning": "to expect something to happen and prepare for it",
+      "japaneseMeaning": "予想する、期待する",
+      "synonyms": "expect, predict",
+      "antonyms": "doubt, ignore",
+      "forms": "anticipate, anticipates, anticipating, anticipated",
+      "example": "We anticipate more visitors during the festival."
+    },
+    {
+      "word": "defeat",
+      "meaning": "to win against someone in a game, contest, or argument",
+      "japaneseMeaning": "打ち負かす",
+      "synonyms": "beat, overcome",
+      "antonyms": "lose, surrender",
+      "forms": "defeat, defeats, defeating, defeated",
+      "example": "Our team defeated last year's champions."
+    },
+    {
+      "word": "prove",
+      "meaning": "to show that something is true",
+      "japaneseMeaning": "証明する",
+      "synonyms": "show, confirm",
+      "antonyms": "disprove, deny",
+      "forms": "prove, proves, proving, proved",
+      "example": "The data may prove that the new method works."
+    },
+    {
+      "word": "resist",
+      "meaning": "to oppose or withstand",
+      "japaneseMeaning": "抵抗する",
+      "synonyms": "oppose, refuse",
+      "antonyms": "accept, give in",
+      "forms": "resist, resists, resisting, resisted",
+      "example": "She resisted peer pressure."
+    },
+    {
+      "word": "tackle",
+      "meaning": "to try to solve a problem",
+      "japaneseMeaning": "取り組む",
+      "synonyms": "address, confront",
+      "antonyms": "ignore, avoid",
+      "forms": "tackle, tackles, tackling, tackled",
+      "example": "He tackled the project efficiently."
+    },
+    {
+      "word": "stimulate",
+      "meaning": "to encourage activity",
+      "japaneseMeaning": "刺激する",
+      "synonyms": "encourage, excite",
+      "antonyms": "discourage, slow",
+      "forms": "stimulate, stimulates, stimulating, stimulated",
+      "example": "The teacher used photos to stimulate interest in history."
+    }
   ]
 }

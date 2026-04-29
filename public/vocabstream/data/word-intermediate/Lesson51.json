@@ -1,20 +1,96 @@
- {
-    "lesson_id": "eiken-pre2-51",
-    "title": "Lesson 51",
-    "paragraph": "More personality adjectives — attitudes, organization, and social style.",
-    "words": [
-      { "word": "optimistic", "meaning": "hopeful and confident about the future", "japaneseMeaning": "楽観的な", "synonyms": "positive, hopeful", "antonyms": "pessimistic, doubtful", "example": "She is optimistic about the job interview." },
-      { "word": "organized", "meaning": "arranged in a systematic and efficient way", "japaneseMeaning": "組織的な／整理された", "synonyms": "systematic, tidy", "antonyms": "chaotic, messy", "example": "An organized schedule helps reduce stress." },
-      { "word": "patient", "meaning": "able to wait calmly without frustration", "japaneseMeaning": "忍耐強い／我慢強い", "synonyms": "tolerant, calm", "antonyms": "impatient, hasty", "example": "The teacher is patient with beginners." },
-      { "word": "polite", "meaning": "showing good manners toward others", "japaneseMeaning": "礼儀正しい", "synonyms": "courteous, respectful", "antonyms": "rude, impolite", "example": "Be polite when you meet new people." },
-      { "word": "popular", "meaning": "liked or admired by many people", "japaneseMeaning": "人気のある", "synonyms": "well-liked, favored", "antonyms": "unpopular, disliked", "example": "That singer is very popular among teenagers." },
-      { "word": "rude", "meaning": "offensive or impolite in behavior or speech", "japaneseMeaning": "無礼な", "synonyms": "impolite, discourteous", "antonyms": "polite, respectful", "example": "It’s rude to interrupt someone." },
-      { "word": "selfish", "meaning": "concerned only with one's own interests", "japaneseMeaning": "利己的な", "synonyms": "self-centered, greedy", "antonyms": "generous, unselfish", "example": "Don’t be selfish — share with others." },
-      { "word": "shy", "meaning": "nervous or timid in the company of others", "japaneseMeaning": "内気な／恥ずかしがりの", "synonyms": "timid, reserved", "antonyms": "outgoing, confident", "example": "He is shy and doesn’t speak much." },
-      { "word": "smart", "meaning": "intelligent or well-dressed", "japaneseMeaning": "賢い／きちんとした", "synonyms": "clever, bright", "antonyms": "dull, unkempt", "example": "She is smart and always prepared for class." },
-      { "word": "social", "meaning": "enjoying the company of others; outgoing", "japaneseMeaning": "社交的な", "synonyms": "sociable, friendly", "antonyms": "lonely, antisocial", "example": "He is social and makes friends easily." },
-      { "word": "strict", "meaning": "demanding that rules are followed", "japaneseMeaning": "厳格な", "synonyms": "firm, severe", "antonyms": "lenient, permissive", "example": "My teacher is strict about homework." },
-      { "word": "strong", "meaning": "having great physical power or emotional resilience", "japaneseMeaning": "強い", "synonyms": "powerful, robust", "antonyms": "weak, frail", "example": "She is strong enough to lift the box." }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-51",
+  "title": "Lesson 51",
+  "words": [
+    {
+      "word": "appear",
+      "meaning": "to become visible or to seem a certain way",
+      "japaneseMeaning": "現れる／〜のように見える",
+      "synonyms": "emerge, seem",
+      "antonyms": "disappear, vanish",
+      "forms": "appear, appears, appearing, appeared",
+      "example": "He appeared tired after the trip."
+    },
+    {
+      "word": "deliver",
+      "meaning": "to bring and hand over something to a recipient",
+      "japaneseMeaning": "配達する／届ける",
+      "synonyms": "dispatch, bring",
+      "antonyms": "receive, take",
+      "forms": "deliver, delivers, delivering, delivered",
+      "example": "The courier delivered the package."
+    },
+    {
+      "word": "list",
+      "meaning": "to write things one below another",
+      "japaneseMeaning": "リスト、一覧",
+      "synonyms": "record, menu",
+      "antonyms": "mess, pile",
+      "forms": "list, lists, listing, listed",
+      "example": "I made a shopping list before going to the store."
+    },
+    {
+      "word": "review",
+      "meaning": "to study material again to remember it",
+      "japaneseMeaning": "復習する、見直す",
+      "synonyms": "revise, go over",
+      "antonyms": "ignore, forget",
+      "forms": "review, reviews, reviewing, reviewed",
+      "example": "Review your notes before the test."
+    },
+    {
+      "word": "assist",
+      "meaning": "to give support or help",
+      "japaneseMeaning": "手伝う／援助する",
+      "synonyms": "help, aid",
+      "antonyms": "hinder, obstruct",
+      "forms": "assist, assists, assisting, assisted",
+      "example": "Can you assist me with this form?"
+    },
+    {
+      "word": "gain",
+      "meaning": "to get more of something",
+      "japaneseMeaning": "得る、増す",
+      "synonyms": "get, earn",
+      "antonyms": "lose, reduce",
+      "forms": "gain, gains, gaining, gained",
+      "example": "She gained confidence after the speech contest."
+    },
+    {
+      "word": "withstand",
+      "meaning": "to remain strong against pressure, damage, or difficulty",
+      "japaneseMeaning": "耐える、持ちこたえる",
+      "synonyms": "resist, endure",
+      "antonyms": "collapse, fail",
+      "forms": "withstand, withstands, withstanding, withstood, withstood",
+      "example": "The old bridge can withstand strong winds."
+    },
+    {
+      "word": "observe",
+      "meaning": "to notice carefully",
+      "japaneseMeaning": "観察する",
+      "synonyms": "watch, monitor",
+      "antonyms": "ignore, neglect",
+      "forms": "observe, observes, observing, observed",
+      "example": "She observed the behavior of the birds."
+    },
+    {
+      "word": "coordinate",
+      "meaning": "to organize people or things so they work well together",
+      "japaneseMeaning": "調整する",
+      "synonyms": "organize, align",
+      "antonyms": "disorder, confuse",
+      "forms": "coordinate, coordinates, coordinating, coordinated",
+      "example": "She coordinated the event efficiently."
+    },
+    {
+      "word": "intend",
+      "meaning": "to plan or want to do something",
+      "japaneseMeaning": "意図する、〜するつもりである",
+      "synonyms": "plan, mean",
+      "antonyms": "avoid, cancel",
+      "forms": "intend, intends, intending, intended",
+      "example": "I intend to apply for the program next month."
+    }
+  ]
+}

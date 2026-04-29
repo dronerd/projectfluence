@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-33",
-  "title": "Lesson 8",
-  "paragraph": "Verbs in this lesson relate to money, planning, and promises — essential for talking about transactions, decisions, and commitments.",
+  "lesson_id": "eiken-2-33",
+  "title": "Lesson 33",
   "words": [
-    { "word": "pay", "meaning": "to give money for goods or services", "japaneseMeaning": "支払う", "synonyms": "settle, compensate", "antonyms": "receive, owe", "example": "Please pay the bill at the counter." },
-    { "word": "pick", "meaning": "to choose or to take hold of something", "japaneseMeaning": "選ぶ／拾う", "synonyms": "select, pluck", "antonyms": "drop, abandon", "example": "Pick a card from the deck." },
-    { "word": "plan", "meaning": "to decide on and arrange in advance", "japaneseMeaning": "計画する", "synonyms": "arrange, schedule", "antonyms": "improvise, neglect", "example": "We plan to visit Kyoto next month." },
-    { "word": "prefer", "meaning": "to like one thing more than another", "japaneseMeaning": "〜の方を好む", "synonyms": "favor, choose", "antonyms": "dislike, reject", "example": "I prefer tea to coffee." },
-    { "word": "prepare", "meaning": "to make ready beforehand", "japaneseMeaning": "準備する", "synonyms": "get ready, arrange", "antonyms": "neglect, delay", "example": "Prepare your presentation tonight." },
-    { "word": "promise", "meaning": "to assure someone that one will definitely do something", "japaneseMeaning": "約束する", "synonyms": "assure, vow", "antonyms": "renege, break", "example": "He promised to call later." },
-    { "word": "protect", "meaning": "to keep someone or something safe from harm", "japaneseMeaning": "守る／保護する", "synonyms": "shield, defend", "antonyms": "endanger, expose", "example": "Wear a helmet to protect your head." },
-    { "word": "provide", "meaning": "to supply or make available", "japaneseMeaning": "提供する", "synonyms": "supply, furnish", "antonyms": "withhold, deprive", "example": "They provided food for the refugees." },
-    { "word": "pull", "meaning": "to apply force to move something toward oneself", "japaneseMeaning": "引く", "synonyms": "tug, draw", "antonyms": "push, shove", "example": "Pull the door to open it." },
-    { "word": "push", "meaning": "to apply force to move something away", "japaneseMeaning": "押す", "synonyms": "shove, thrust", "antonyms": "pull, drag", "example": "Push the button to start." },
-    { "word": "reach", "meaning": "to arrive at or attain something", "japaneseMeaning": "到達する／手が届く", "synonyms": "attain, get to", "antonyms": "miss, fall short", "example": "We reached the summit at sunset." },
-    { "word": "receive", "meaning": "to be given or presented with something", "japaneseMeaning": "受け取る", "synonyms": "accept, obtain", "antonyms": "give, send", "example": "I received a parcel today." }
+    {
+      "word": "admire",
+      "meaning": "to regard with respect or warm approval",
+      "japaneseMeaning": "称賛する／感嘆する",
+      "synonyms": "respect, appreciate",
+      "antonyms": "criticize, dislike",
+      "forms": "admire, admires, admiring, admired",
+      "example": "I admire her dedication."
+    },
+    {
+      "word": "connect",
+      "meaning": "to join two or more things together",
+      "japaneseMeaning": "つなぐ、関連づける",
+      "synonyms": "link, join",
+      "antonyms": "separate, divide",
+      "forms": "connect, connects, connecting, connected",
+      "example": "The teacher helped us connect the story to real life."
+    },
+    {
+      "word": "include",
+      "meaning": "to contain as part of something",
+      "japaneseMeaning": "含める",
+      "synonyms": "incorporate, involve",
+      "antonyms": "exclude, omit",
+      "forms": "include, includes, including, included",
+      "example": "Please include all receipts."
+    },
+    {
+      "word": "recognize",
+      "meaning": "to identify or acknowledge",
+      "japaneseMeaning": "認識する",
+      "synonyms": "identify, notice",
+      "antonyms": "ignore, overlook",
+      "forms": "recognize, recognizes, recognizing, recognized",
+      "example": "He recognized his old friend in the crowd."
+    },
+    {
+      "word": "wander",
+      "meaning": "to walk slowly without a fixed plan",
+      "japaneseMeaning": "歩き回る",
+      "synonyms": "walk, roam",
+      "antonyms": "rush, stay",
+      "forms": "wander, wanders, wandering, wandered",
+      "example": "They wander through the market after lunch."
+    },
+    {
+      "word": "exercise",
+      "meaning": "to move your body to be healthy",
+      "japaneseMeaning": "運動、練習問題",
+      "synonyms": "training, activity",
+      "antonyms": "rest, sleep",
+      "forms": "exercise, exercises, exercising, exercised",
+      "example": "Daily exercise helps me sleep well."
+    },
+    {
+      "word": "reflect",
+      "meaning": "to think carefully about something",
+      "japaneseMeaning": "よく考える、振り返る",
+      "synonyms": "think, consider",
+      "antonyms": "ignore, forget",
+      "forms": "reflect, reflects, reflecting, reflected",
+      "example": "Students reflected on what they learned after the project."
+    },
+    {
+      "word": "interpret",
+      "meaning": "to explain the meaning of",
+      "japaneseMeaning": "解釈する",
+      "synonyms": "explain, understand",
+      "antonyms": "misunderstand, confuse",
+      "forms": "interpret, interprets, interpreting, interpreted",
+      "example": "She interpreted the poem's meaning."
+    },
+    {
+      "word": "grasp",
+      "meaning": "to understand something fully",
+      "japaneseMeaning": "理解する",
+      "synonyms": "comprehend, seize",
+      "antonyms": "misunderstand, lose",
+      "forms": "grasp, grasps, grasping, grasped",
+      "example": "He grasped the main idea quickly."
+    },
+    {
+      "word": "conduct",
+      "meaning": "to organize or do a special activity",
+      "japaneseMeaning": "実施する、行う",
+      "synonyms": "carry out, organize",
+      "antonyms": "cancel, stop",
+      "forms": "conduct, conducts, conducting, conducted",
+      "example": "The class conducted a survey about school lunches."
+    }
   ]
 }

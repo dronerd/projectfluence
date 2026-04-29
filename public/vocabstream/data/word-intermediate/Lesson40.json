@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-40",
-  "title": "Lesson 15",
-  "paragraph": "Actions often done with the body—coughing, crossing, diving—and brief physical interactions.",
+  "lesson_id": "eiken-2-40",
+  "title": "Lesson 40",
   "words": [
-    { "word": "cough", "meaning": "to expel air from the lungs with a sudden sound", "japaneseMeaning": "咳をする", "synonyms": "hack, clear throat", "antonyms": "silence, be quiet", "example": "He coughed during the meeting." },
-    { "word": "cross", "meaning": "to go from one side to the other", "japaneseMeaning": "渡る／横切る", "synonyms": "traverse, pass", "antonyms": "stay, remain", "example": "Cross the street carefully." },
-    { "word": "dive", "meaning": "to jump into water headfirst or plunge", "japaneseMeaning": "飛び込む／潜る", "synonyms": "plunge, submerge", "antonyms": "surface, rise", "example": "He can dive from the high board." },
-    { "word": "drag", "meaning": "to pull something with effort", "japaneseMeaning": "引きずる／引く", "synonyms": "haul, pull", "antonyms": "push, lift", "example": "Drag the box to the corner." },
-    { "word": "hug", "meaning": "to hold someone tightly for warmth or affection", "japaneseMeaning": "抱きしめる", "synonyms": "embrace, cuddle", "antonyms": "ignore, avoid", "example": "She hugged her friend goodbye." },
-    { "word": "knock", "meaning": "to strike a surface to attract attention", "japaneseMeaning": "ノックする／打つ", "synonyms": "tap, rap", "antonyms": "enter silently, sneak", "example": "Knock before entering the room." },
-    { "word": "pack", "meaning": "to put items into a container for transport", "japaneseMeaning": "詰める／荷造りする", "synonyms": "load, bundle", "antonyms": "unpack, scatter", "example": "Pack your suitcase tonight." },
-    { "word": "press", "meaning": "to apply force to something", "japaneseMeaning": "押す／圧迫する", "synonyms": "push, compress", "antonyms": "pull, release", "example": "Press the button to start." },
-    { "word": "pronounce", "meaning": "to make the sound of a word correctly", "japaneseMeaning": "発音する", "synonyms": "articulate, enunciate", "antonyms": "mumble, slur", "example": "Please pronounce this word slowly." },
-    { "word": "relax", "meaning": "to become less tense or anxious", "japaneseMeaning": "リラックスする", "synonyms": "rest, unwind", "antonyms": "stress, strain", "example": "Relax and take deep breaths." },
-    { "word": "scream", "meaning": "to give a loud, high cry from fear or excitement", "japaneseMeaning": "叫ぶ", "synonyms": "shriek, yell", "antonyms": "whisper, murmur", "example": "She screamed at the scary scene." },
-    { "word": "ski", "meaning": "to glide over snow on skis", "japaneseMeaning": "スキーをする", "synonyms": "slide, glide", "antonyms": "walk, climb", "example": "We ski every winter." }
+    {
+      "word": "aggressive",
+      "meaning": "ready to argue or attack",
+      "japaneseMeaning": "攻撃的な",
+      "synonyms": "forceful, hostile",
+      "antonyms": "calm, gentle",
+      "forms": "aggressive, aggressively",
+      "example": "The aggressive tone made the meeting difficult."
+    },
+    {
+      "word": "vacant",
+      "meaning": "available because no one is using it",
+      "japaneseMeaning": "空いている、空席の",
+      "synonyms": "available, free",
+      "antonyms": "occupied, full",
+      "forms": "vacant, vacancy",
+      "example": "There were no vacant seats on the train."
+    },
+    {
+      "word": "impossible",
+      "meaning": "not able to occur, exist, or be done",
+      "japaneseMeaning": "不可能な",
+      "synonyms": "unachievable, impractical",
+      "antonyms": "possible, feasible",
+      "forms": "impossible, more impossible, most impossible",
+      "example": "It seemed impossible to finish on time."
+    },
+    {
+      "word": "physical",
+      "meaning": "connected with the body or real things you can touch",
+      "japaneseMeaning": "身体の、物理的な",
+      "synonyms": "bodily, real",
+      "antonyms": "mental, emotional",
+      "forms": "physical, more physical, most physical",
+      "example": "The job requires physical strength."
+    },
+    {
+      "word": "strict",
+      "meaning": "demanding that rules are followed",
+      "japaneseMeaning": "厳格な",
+      "synonyms": "firm, severe",
+      "antonyms": "lenient, permissive",
+      "forms": "strict, more strict, most strict",
+      "example": "My teacher is strict about homework."
+    },
+    {
+      "word": "complex",
+      "meaning": "not simple, with many parts",
+      "japaneseMeaning": "複雑な",
+      "synonyms": "complicated, detailed",
+      "antonyms": "simple, basic",
+      "forms": "complex, more complex, most complex",
+      "example": "The instructions were too complex for new users."
+    },
+    {
+      "word": "reluctant",
+      "meaning": "not willing to do something",
+      "japaneseMeaning": "気が進まない",
+      "synonyms": "unwilling, hesitant",
+      "antonyms": "willing, eager",
+      "forms": "reluctant, reluctantly",
+      "example": "He was reluctant to speak in front of the class."
+    },
+    {
+      "word": "assertive",
+      "meaning": "confidently expressing opinions",
+      "japaneseMeaning": "自己主張の強い",
+      "synonyms": "confident, decisive",
+      "antonyms": "submissive, passive",
+      "forms": "assertive, assertively",
+      "example": "Being assertive helps in negotiations."
+    },
+    {
+      "word": "wise",
+      "meaning": "able to make good choices because of experience",
+      "japaneseMeaning": "賢明な",
+      "synonyms": "sensible, smart",
+      "antonyms": "foolish, careless",
+      "forms": "wise, more wise, most wise",
+      "example": "It was wise to check the train times before leaving."
+    },
+    {
+      "word": "proper",
+      "meaning": "right or suitable for the situation",
+      "japaneseMeaning": "適切な、正式な",
+      "synonyms": "suitable, correct",
+      "antonyms": "wrong, unsuitable",
+      "forms": "proper, more proper, most proper",
+      "example": "You need proper shoes for the mountain path."
+    }
   ]
 }

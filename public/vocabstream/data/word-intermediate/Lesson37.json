@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-37",
-  "title": "Lesson 12",
-  "paragraph": "Verbs for stopping, learning, advising, and speaking — useful in study and advice contexts.",
+  "lesson_id": "eiken-2-37",
+  "title": "Lesson 37",
   "words": [
-    { "word": "stay", "meaning": "to remain in the same place", "japaneseMeaning": "滞在する／留まる", "synonyms": "remain, linger", "antonyms": "leave, go", "example": "Please stay until the end." },
-    { "word": "steal", "meaning": "to take something without permission", "japaneseMeaning": "盗む", "synonyms": "pilfer, rob", "antonyms": "return, give", "example": "Someone tried to steal her bag." },
-    { "word": "stop", "meaning": "to cease movement or action", "japaneseMeaning": "やめる／止める", "synonyms": "halt, cease", "antonyms": "go, continue", "example": "Stop talking during the exam." },
-    { "word": "study", "meaning": "to apply the mind to learning", "japaneseMeaning": "勉強する", "synonyms": "learn, review", "antonyms": "ignore, neglect", "example": "I will study for the test tonight." },
-    { "word": "succeed", "meaning": "to achieve the desired result", "japaneseMeaning": "成功する", "synonyms": "triumph, prosper", "antonyms": "fail, falter", "example": "She succeeded in the competition." },
-    { "word": "suggest", "meaning": "to offer an idea or plan for consideration", "japaneseMeaning": "提案する", "synonyms": "propose, recommend", "antonyms": "dissuade, oppose", "example": "I suggest taking a break." },
-    { "word": "support", "meaning": "to give help or encouragement", "japaneseMeaning": "支援する／支持する", "synonyms": "assist, back", "antonyms": "oppose, hinder", "example": "They support the new policy." },
-    { "word": "suppose", "meaning": "to assume something is true without proof", "japaneseMeaning": "仮定する／思う", "synonyms": "assume, presume", "antonyms": "know, verify", "example": "I suppose he's busy today." },
-    { "word": "swim", "meaning": "to move through water using the body", "japaneseMeaning": "泳ぐ", "synonyms": "bathe, paddle", "antonyms": "float (passive), sink", "example": "We swim in the lake every summer." },
-    { "word": "talk", "meaning": "to speak in order to communicate", "japaneseMeaning": "話す", "synonyms": "speak, converse", "antonyms": "listen, be silent", "example": "Let's talk after class." },
-    { "word": "teach", "meaning": "to give instruction or impart knowledge", "japaneseMeaning": "教える", "synonyms": "instruct, educate", "antonyms": "learn, ignore", "example": "She teaches math at the school." },
-    { "word": "tell", "meaning": "to communicate information to someone", "japaneseMeaning": "伝える／話す", "synonyms": "inform, say", "antonyms": "hide, conceal", "example": "Tell me the truth." }
+    {
+      "word": "fearful",
+      "meaning": "worried or afraid that something bad may happen",
+      "japaneseMeaning": "恐れている、不安な",
+      "synonyms": "afraid, worried",
+      "antonyms": "confident, calm",
+      "forms": "fearful, fearfully",
+      "example": "Some residents were fearful after the strong storm."
+    },
+    {
+      "word": "confused",
+      "meaning": "not able to understand clearly",
+      "japaneseMeaning": "混乱した",
+      "synonyms": "mixed up, unsure",
+      "antonyms": "clear, certain",
+      "forms": "confused, more confused, most confused",
+      "example": "I felt confused by the new bus route."
+    },
+    {
+      "word": "infectious",
+      "meaning": "able to pass from one person to another",
+      "japaneseMeaning": "感染性の、人にうつる",
+      "synonyms": "catching, spreading",
+      "antonyms": "noninfectious, safe",
+      "forms": "infectious, infectiously",
+      "example": "The clinic gave advice about infectious diseases."
+    },
+    {
+      "word": "peaceful",
+      "meaning": "quiet and calm",
+      "japaneseMeaning": "平和な／穏やかな",
+      "synonyms": "calm, tranquil",
+      "antonyms": "chaotic, noisy",
+      "forms": "peaceful, more peaceful, most peaceful",
+      "example": "The countryside was peaceful and quiet."
+    },
+    {
+      "word": "exceptional",
+      "meaning": "unusually good or different from others",
+      "japaneseMeaning": "例外的な、非常に優れた",
+      "synonyms": "excellent, unusual",
+      "antonyms": "ordinary, average",
+      "forms": "exceptional, exceptionally",
+      "example": "Her science project showed exceptional creativity."
+    },
+    {
+      "word": "artistic",
+      "meaning": "connected with art or artists",
+      "japaneseMeaning": "芸術的な",
+      "synonyms": "creative, visual",
+      "antonyms": "plain, practical",
+      "forms": "artistic, more artistic, most artistic",
+      "example": "The poster has a strong artistic style."
+    },
+    {
+      "word": "worthwhile",
+      "meaning": "useful or important enough to spend time on",
+      "japaneseMeaning": "価値のある、やりがいのある",
+      "synonyms": "useful, valuable",
+      "antonyms": "useless, pointless",
+      "forms": "worthwhile",
+      "example": "Volunteering at the event was a worthwhile experience."
+    },
+    {
+      "word": "worth",
+      "meaning": "value or importance",
+      "japaneseMeaning": "価値",
+      "synonyms": "value, merit",
+      "antonyms": "lack of value, weakness",
+      "forms": "worth",
+      "example": "The old letter has great worth to her family."
+    },
+    {
+      "word": "notable",
+      "meaning": "important or interesting enough to notice",
+      "japaneseMeaning": "注目すべき、著しい",
+      "synonyms": "important, remarkable",
+      "antonyms": "ordinary, minor",
+      "forms": "notable, notably",
+      "example": "There was a notable increase in test scores."
+    },
+    {
+      "word": "underlying",
+      "meaning": "important but not immediately obvious",
+      "japaneseMeaning": "根本的な、潜在的な",
+      "synonyms": "basic, hidden",
+      "antonyms": "obvious, surface",
+      "forms": "underlying",
+      "example": "We need to understand the underlying cause of the problem."
+    }
   ]
 }

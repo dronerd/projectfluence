@@ -1,104 +1,96 @@
- {
-    "lesson_id": "eiken-pre2-49",
-    "title": "Lesson 49",
-    "paragraph": "This lesson (Lesson 49) continues describing people: intelligence, creativity and friendliness among common traits.",
-    "words": [
-      {
-        "word": "clever",
-        "meaning": "quick to understand, learn, or devise",
-        "japaneseMeaning": "賢い／利口な",
-        "synonyms": "smart, bright",
-        "antonyms": "dull, stupid",
-        "example": "She is clever and solves problems quickly."
-      },
-      {
-        "word": "confident",
-        "meaning": "feeling sure of oneself; self-assured",
-        "japaneseMeaning": "自信のある",
-        "synonyms": "self-assured, poised",
-        "antonyms": "insecure, unsure",
-        "example": "He felt confident before the interview."
-      },
-      {
-        "word": "creative",
-        "meaning": "using imagination to produce original ideas",
-        "japaneseMeaning": "創造的な",
-        "synonyms": "innovative, inventive",
-        "antonyms": "unimaginative, dull",
-        "example": "The team proposed a creative solution."
-      },
-      {
-        "word": "cruel",
-        "meaning": "willfully causing pain or suffering to others",
-        "japaneseMeaning": "残酷な",
-        "synonyms": "brutal, heartless",
-        "antonyms": "kind, compassionate",
-        "example": "It was cruel to tease the puppy."
-      },
-      {
-        "word": "curious",
-        "meaning": "eager to know or learn something",
-        "japaneseMeaning": "好奇心の強い",
-        "synonyms": "inquisitive, interested",
-        "antonyms": "indifferent, uninterested",
-        "example": "The child was curious about the insects."
-      },
-      {
-        "word": "energetic",
-        "meaning": "having or showing a lot of energy",
-        "japaneseMeaning": "精力的な",
-        "synonyms": "active, lively",
-        "antonyms": "lethargic, sluggish",
-        "example": "She is energetic and always on the move."
-      },
-      {
-        "word": "friendly",
-        "meaning": "kind and pleasant to others",
-        "japaneseMeaning": "親しみやすい",
-        "synonyms": "amiable, kind",
-        "antonyms": "unfriendly, hostile",
-        "example": "Our neighbors are very friendly."
-      },
-      {
-        "word": "funny",
-        "meaning": "causing laughter or amusement",
-        "japaneseMeaning": "面白い",
-        "synonyms": "humorous, amusing",
-        "antonyms": "serious, dull",
-        "example": "He told a funny story at lunch."
-      },
-      {
-        "word": "generous",
-        "meaning": "willing to give more of something than is necessary",
-        "japaneseMeaning": "寛大な",
-        "synonyms": "giving, liberal",
-        "antonyms": "stingy, selfish",
-        "example": "She was generous with her time and helped everyone."
-      },
-      {
-        "word": "gentle",
-        "meaning": "kind, mild, or soft in manner",
-        "japaneseMeaning": "優しい／穏やかな",
-        "synonyms": "kind, mild",
-        "antonyms": "rough, harsh",
-        "example": "The doctor has a gentle manner with patients."
-      },
-      {
-        "word": "hard-working",
-        "meaning": "putting a lot of effort into work",
-        "japaneseMeaning": "勤勉な／よく働く",
-        "synonyms": "diligent, industrious",
-        "antonyms": "lazy, idle",
-        "example": "She is hard-working and always completes tasks on time."
-      },
-      {
-        "word": "honest",
-        "meaning": "truthful; free from deceit",
-        "japaneseMeaning": "正直な",
-        "synonyms": "truthful, sincere",
-        "antonyms": "dishonest, deceitful",
-        "example": "He is honest and returns lost items."
-      }
-    ]
-  }
-
+{
+  "lesson_id": "eiken-2-49",
+  "title": "Lesson 49",
+  "words": [
+    {
+      "word": "anxious",
+      "meaning": "worried or nervous about something",
+      "japaneseMeaning": "不安な",
+      "synonyms": "worried, nervous",
+      "antonyms": "calm, relaxed",
+      "forms": "anxious, anxiously",
+      "example": "He felt anxious before the interview."
+    },
+    {
+      "word": "equivalent",
+      "meaning": "having the same value, meaning, or effect as something else",
+      "japaneseMeaning": "同等の、相当する",
+      "synonyms": "equal, similar",
+      "antonyms": "different, unequal",
+      "forms": "equivalent, equivalently",
+      "example": "This certificate is equivalent to one year of study."
+    },
+    {
+      "word": "informal",
+      "meaning": "relaxed and not official",
+      "japaneseMeaning": "非公式の、くだけた",
+      "synonyms": "casual, relaxed",
+      "antonyms": "formal, official",
+      "forms": "informal, more informal, most informal",
+      "example": "The meeting was informal, so students could speak freely."
+    },
+    {
+      "word": "popular",
+      "meaning": "liked or admired by many people",
+      "japaneseMeaning": "人気のある",
+      "synonyms": "well-liked, favored",
+      "antonyms": "unpopular, disliked",
+      "forms": "popular, more popular, most popular",
+      "example": "That cafe is very popular with students."
+    },
+    {
+      "word": "surprised",
+      "meaning": "feeling or showing shock because something was unexpected",
+      "japaneseMeaning": "驚いた",
+      "synonyms": "astonished, amazed",
+      "antonyms": "expectant, unsurprised",
+      "forms": "surprised, more surprised, most surprised",
+      "example": "She was surprised by the party her friends planned."
+    },
+    {
+      "word": "costly",
+      "meaning": "expensive or causing a serious loss",
+      "japaneseMeaning": "費用のかかる、犠牲の大きい",
+      "synonyms": "expensive, damaging",
+      "antonyms": "cheap, harmless",
+      "forms": "costly, costlier, costliest",
+      "example": "A small mistake can be costly in a large project."
+    },
+    {
+      "word": "biological",
+      "meaning": "connected with living things or the body",
+      "japaneseMeaning": "生物学の、生物の",
+      "synonyms": "natural, body-related",
+      "antonyms": "artificial, mechanical",
+      "forms": "biological, biologically",
+      "example": "The class studied biological changes in plants."
+    },
+    {
+      "word": "loyal",
+      "meaning": "faithful and devoted",
+      "japaneseMeaning": "忠実な",
+      "synonyms": "faithful, devoted",
+      "antonyms": "disloyal, unfaithful",
+      "forms": "loyal, loyally",
+      "example": "A loyal friend stands by you."
+    },
+    {
+      "word": "automatic",
+      "meaning": "working by itself without human control",
+      "japaneseMeaning": "自動の",
+      "synonyms": "self-operating, mechanized",
+      "antonyms": "manual, operated",
+      "forms": "automatic, more automatic, most automatic",
+      "example": "The doors open automatically when you approach."
+    },
+    {
+      "word": "slight",
+      "meaning": "small in amount or degree",
+      "japaneseMeaning": "わずかな、少しの",
+      "synonyms": "small, minor",
+      "antonyms": "large, serious",
+      "forms": "slight, more slight, most slight",
+      "example": "There was a slight delay because of the rain."
+    }
+  ]
+}

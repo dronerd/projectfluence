@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-32",
-  "title": "Lesson 7",
-  "paragraph": "This lesson covers strong feelings, management verbs, and meeting-related actions — practical for social and administrative contexts.",
+  "lesson_id": "eiken-2-32",
+  "title": "Lesson 32",
   "words": [
-    { "word": "love", "meaning": "to have a deep affection or strong liking for", "japaneseMeaning": "愛する／大好きである", "synonyms": "adore, cherish", "antonyms": "hate, dislike", "example": "I love spending time with family." },
-    { "word": "manage", "meaning": "to be in charge of or succeed in doing something", "japaneseMeaning": "管理する／なんとかやり遂げる", "synonyms": "handle, oversee", "antonyms": "mismanage, fail", "example": "She manages a small team." },
-    { "word": "mean", "meaning": "to intend to convey or express", "japaneseMeaning": "意味する／意図する", "synonyms": "intend, signify", "antonyms": "misinterpret, confuse", "example": "What do you mean by that?" },
-    { "word": "measure", "meaning": "to ascertain the size, amount, or degree of something", "japaneseMeaning": "測定する／測る", "synonyms": "gauge, assess", "antonyms": "guess, estimate", "example": "Measure the length carefully." },
-    { "word": "meet", "meaning": "to come into the presence of someone or be introduced", "japaneseMeaning": "会う／出会う", "synonyms": "encounter, greet", "antonyms": "avoid, part", "example": "I will meet him at the station." },
-    { "word": "miss", "meaning": "to fail to hit, reach, or attend", "japaneseMeaning": "逃す／会えない", "synonyms": "fail to catch, skip", "antonyms": "hit, attend", "example": "I missed the bus." },
-    { "word": "move", "meaning": "to change position or location", "japaneseMeaning": "動く／移動する", "synonyms": "shift, relocate", "antonyms": "stay, remain", "example": "They moved to a new city." },
-    { "word": "need", "meaning": "to require something because it is necessary", "japaneseMeaning": "必要とする", "synonyms": "require, demand", "antonyms": "want, reject", "example": "You need a passport to travel." },
-    { "word": "offer", "meaning": "to present or propose something for acceptance", "japaneseMeaning": "申し出る／提供する", "synonyms": "propose, present", "antonyms": "withdraw, refuse", "example": "They offered help immediately." },
-    { "word": "open", "meaning": "to move something so it is no longer closed", "japaneseMeaning": "開ける／開く", "synonyms": "unfasten, unlock", "antonyms": "close, shut", "example": "Open the window, please." },
-    { "word": "order", "meaning": "to request goods or services or to command", "japaneseMeaning": "注文する／命じる", "synonyms": "request, command", "antonyms": "cancel, refuse", "example": "I ordered dinner online." },
-    { "word": "own", "meaning": "to have something as property", "japaneseMeaning": "所有する", "synonyms": "possess, hold", "antonyms": "lack, relinquish", "example": "She owns a small business." }
+    {
+      "word": "advertisement",
+      "meaning": "a picture, video, or notice that tells people about something to buy",
+      "japaneseMeaning": "広告、宣伝",
+      "synonyms": "ad, notice",
+      "antonyms": "warning, private message",
+      "forms": "advertisement, advertisements",
+      "example": "The advertisement showed a new language course."
+    },
+    {
+      "word": "concentration",
+      "meaning": "the ability to give all your attention to something",
+      "japaneseMeaning": "濃度、集中",
+      "synonyms": "focus, attention",
+      "antonyms": "distraction, confusion",
+      "forms": "concentration, concentrations",
+      "example": "Music can disturb my concentration while I study."
+    },
+    {
+      "word": "exhibition",
+      "meaning": "a public show of art, goods, or other things",
+      "japaneseMeaning": "展示会、展覧会",
+      "synonyms": "show, display",
+      "antonyms": "storage, private collection",
+      "forms": "exhibition, exhibitions",
+      "example": "Our class visited a science exhibition."
+    },
+    {
+      "word": "instrument",
+      "meaning": "a tool or a thing used to make music",
+      "japaneseMeaning": "楽器、器具",
+      "synonyms": "tool, device",
+      "antonyms": "toy, result",
+      "forms": "instrument, instruments",
+      "example": "She learned to play a traditional instrument."
+    },
+    {
+      "word": "council",
+      "meaning": "a group chosen to make plans or rules",
+      "japaneseMeaning": "議会、委員会",
+      "synonyms": "committee, board",
+      "antonyms": "individual, outsider",
+      "forms": "council, councils",
+      "example": "The student council planned a school event."
+    },
+    {
+      "word": "risk",
+      "meaning": "the chance of something bad happening",
+      "japaneseMeaning": "リスク、危険性",
+      "synonyms": "hazard, exposure",
+      "antonyms": "safety, certainty",
+      "forms": "risk, risks",
+      "example": "Assess the risk before starting the task."
+    },
+    {
+      "word": "version",
+      "meaning": "one form of something that is a little different from others",
+      "japaneseMeaning": "版、バージョン",
+      "synonyms": "form, edition",
+      "antonyms": "original, copy",
+      "forms": "version, versions",
+      "example": "Please download the latest version of the app."
+    },
+    {
+      "word": "customer",
+      "meaning": "a person who buys something from a shop or business",
+      "japaneseMeaning": "客、顧客",
+      "synonyms": "buyer, shopper",
+      "antonyms": "seller, worker",
+      "forms": "customer, customers",
+      "example": "The customer asked for a larger size."
+    },
+    {
+      "word": "access",
+      "meaning": "the chance or right to use or enter something",
+      "japaneseMeaning": "利用権、アクセス",
+      "synonyms": "entry, use",
+      "antonyms": "block, refusal",
+      "forms": "access",
+      "example": "Students need a password to get access to the site."
+    },
+    {
+      "word": "auditorium",
+      "meaning": "a large room where people watch a performance or listen to a talk",
+      "japaneseMeaning": "講堂、ホール",
+      "synonyms": "hall, theater",
+      "antonyms": "classroom, office",
+      "forms": "auditorium, auditoriums",
+      "example": "The speech contest was held in the auditorium."
+    }
   ]
 }

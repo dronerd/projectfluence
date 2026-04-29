@@ -1,29 +1,96 @@
-
-  {
-    "lesson_id": "eiken-pre2-22",
-    "title": "Lesson 22",
-    "paragraph": "Jobs and occupations shape daily life and the economy. People choose careers based on skills and interests — teachers, engineers, nurses and many others help society run smoothly.",
-    "words": [
-      { "word": "teacher", "meaning": "a person who helps students learn", "japaneseMeaning": "教師", "synonyms": "instructor, educator", "antonyms": "", "example": "The teacher explained the lesson clearly." },
-      { "word": "doctor", "meaning": "a medical professional who treats patients", "japaneseMeaning": "医者", "synonyms": "physician, clinician", "antonyms": "", "example": "The doctor checked my throat." },
-      { "word": "engineer", "meaning": "a person who designs or builds machines and structures", "japaneseMeaning": "技術者、エンジニア", "synonyms": "technician, designer", "antonyms": "", "example": "An engineer fixed the bridge plans." },
-      { "word": "farmer", "meaning": "a person who grows crops or raises animals", "japaneseMeaning": "農夫、農家", "synonyms": "agriculturist, grower", "antonyms": "", "example": "The farmer harvested the rice." },
-      { "word": "chef", "meaning": "a professional cook", "japaneseMeaning": "シェフ", "synonyms": "cook, culinary artist", "antonyms": "", "example": "The chef prepared a special dinner." },
-      { "word": "nurse", "meaning": "a healthcare worker who cares for patients", "japaneseMeaning": "看護師", "synonyms": "caregiver, medical staff", "antonyms": "", "example": "The nurse gave the medicine on time." },
-      { "word": "driver", "meaning": "a person who operates a vehicle", "japaneseMeaning": "運転手", "synonyms": "motorist, chauffeur", "antonyms": "", "example": "The driver arrived at the station early." },
-      { "word": "cashier", "meaning": "a person who handles payments at a store", "japaneseMeaning": "レジ係", "synonyms": "clerk, clerk", "antonyms": "", "example": "The cashier counted the change." },
-      { "word": "plumber", "meaning": "a worker who repairs and installs pipes and taps", "japaneseMeaning": "配管工", "synonyms": "pipefitter", "antonyms": "", "example": "Call a plumber for the leaking sink." },
-      { "word": "electrician", "meaning": "a worker who installs and repairs electrical systems", "japaneseMeaning": "電気技師", "synonyms": "wireman, technician", "antonyms": "", "example": "The electrician fixed the wiring." },
-      { "word": "artist", "meaning": "a person who creates visual or performing art", "japaneseMeaning": "芸術家、アーティスト", "synonyms": "painter, creator", "antonyms": "", "example": "The artist painted a mural." },
-      { "word": "designer", "meaning": "a person who plans and creates styles or products", "japaneseMeaning": "デザイナー", "synonyms": "stylist, creator", "antonyms": "", "example": "The designer chose bright colours." },
-      { "word": "dentist", "meaning": "a doctor who treats teeth", "japaneseMeaning": "歯科医", "synonyms": "dental surgeon", "antonyms": "", "example": "The dentist cleaned my teeth." },
-      { "word": "pilot", "meaning": "a person who flies an aircraft", "japaneseMeaning": "操縦士、パイロット", "synonyms": "aviator", "antonyms": "", "example": "The pilot announced the flight path." },
-      { "word": "firefighter", "meaning": "a person who fights fires and rescues people", "japaneseMeaning": "消防士", "synonyms": "fireman, rescuer", "antonyms": "", "example": "The firefighter rescued the cat from the tree." },
-      { "word": "police officer", "meaning": "a person who enforces the law", "japaneseMeaning": "警官", "synonyms": "constable, officer", "antonyms": "", "example": "The police officer helped at the scene." },
-      { "word": "scientist", "meaning": "a person who studies the natural world", "japaneseMeaning": "科学者", "synonyms": "researcher", "antonyms": "", "example": "The scientist tested the new material." },
-      { "word": "lawyer", "meaning": "a person who gives legal advice and represents clients", "japaneseMeaning": "弁護士", "synonyms": "attorney, counsel", "antonyms": "", "example": "Consult a lawyer about the contract." },
-      { "word": "mechanic", "meaning": "a person who repairs vehicles and machines", "japaneseMeaning": "整備士、メカニック", "synonyms": "technician", "antonyms": "", "example": "The mechanic changed the brake pads." },
-      { "word": "photographer", "meaning": "a person who takes photographs professionally", "japaneseMeaning": "写真家、カメラマン", "synonyms": "shooter", "antonyms": "", "example": "The photographer took pictures at the wedding." }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-22",
+  "title": "Lesson 22",
+  "words": [
+    {
+      "word": "capital",
+      "meaning": "the main city of a country or money used for business",
+      "japaneseMeaning": "首都、資本",
+      "synonyms": "main city, funds",
+      "antonyms": "village, debt",
+      "forms": "capital, capitals",
+      "example": "Tokyo is the capital of Japan."
+    },
+    {
+      "word": "competition",
+      "meaning": "an event where people try to win",
+      "japaneseMeaning": "競争、コンテスト",
+      "synonyms": "contest, match",
+      "antonyms": "cooperation, practice",
+      "forms": "competition, competitions",
+      "example": "She entered a cooking competition at school."
+    },
+    {
+      "word": "department",
+      "meaning": "one part of a large organization",
+      "japaneseMeaning": "部門、学科",
+      "synonyms": "section, division",
+      "antonyms": "whole, company",
+      "forms": "department, departments",
+      "example": "The sales department is on the third floor."
+    },
+    {
+      "word": "disease",
+      "meaning": "an illness that affects people, animals, or plants",
+      "japaneseMeaning": "病気、疾患",
+      "synonyms": "illness, sickness",
+      "antonyms": "health, wellness",
+      "forms": "disease, diseases",
+      "example": "Clean water helps prevent disease."
+    },
+    {
+      "word": "education",
+      "meaning": "learning and teaching, especially at school",
+      "japaneseMeaning": "教育",
+      "synonyms": "schooling, learning",
+      "antonyms": "ignorance, neglect",
+      "forms": "education",
+      "example": "Education gives people more choices in life."
+    },
+    {
+      "word": "venue",
+      "meaning": "a place where an event or activity happens",
+      "japaneseMeaning": "会場、開催地",
+      "synonyms": "place, site",
+      "antonyms": "home, office",
+      "forms": "venue, venues",
+      "example": "The concert venue is next to the station."
+    },
+    {
+      "word": "force",
+      "meaning": "strong power or physical strength",
+      "japaneseMeaning": "力、強制力",
+      "synonyms": "power, strength",
+      "antonyms": "weakness, calm",
+      "forms": "force, forces",
+      "example": "The force of the wind broke the umbrella."
+    },
+    {
+      "word": "prospect",
+      "meaning": "the chance that something good may happen in the future",
+      "japaneseMeaning": "見込み、可能性",
+      "synonyms": "chance, possibility",
+      "antonyms": "risk, problem",
+      "forms": "prospect, prospects",
+      "example": "The new project has good prospects for success."
+    },
+    {
+      "word": "government",
+      "meaning": "the group of people who control a country or city",
+      "japaneseMeaning": "政府、行政",
+      "synonyms": "authority, administration",
+      "antonyms": "citizens, public",
+      "forms": "government, governments",
+      "example": "The government announced a new safety rule."
+    },
+    {
+      "word": "appliance",
+      "meaning": "a machine used in the home, such as a fridge or washing machine",
+      "japaneseMeaning": "電化製品、器具",
+      "synonyms": "device, machine",
+      "antonyms": "tool, furniture",
+      "forms": "appliance, appliances",
+      "example": "The store sells kitchen appliances on the second floor."
+    }
+  ]
+}

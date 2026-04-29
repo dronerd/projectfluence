@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-42",
-  "title": "Lesson 17",
-  "paragraph": "Physical actions often involving changes of state or cleaning tasks, plus some urgent actions.",
+  "lesson_id": "eiken-2-42",
+  "title": "Lesson 42",
   "words": [
-    { "word": "freeze", "meaning": "to change a liquid into a solid by cold", "japaneseMeaning": "凍らせる／凍る", "synonyms": "ice, chill", "antonyms": "melt, thaw", "example": "Freeze the leftovers for later." },
-    { "word": "melt", "meaning": "to change from solid to liquid by heat", "japaneseMeaning": "溶かす／溶ける", "synonyms": "thaw, liquefy", "antonyms": "freeze, solidify", "example": "Butter will melt if heated." },
-    { "word": "shake", "meaning": "to move back and forth quickly", "japaneseMeaning": "振る／揺れる", "synonyms": "tremble, jolt", "antonyms": "still, steady", "example": "Shake the bottle before using." },
-    { "word": "spill", "meaning": "to allow liquid to run or fall out accidentally", "japaneseMeaning": "こぼす／こぼれる", "synonyms": "slop, overflow", "antonyms": "contain, retain", "example": "Don't spill your coffee." },
-    { "word": "sweep", "meaning": "to clean the floor with a broom", "japaneseMeaning": "掃く", "synonyms": "brush, clear", "antonyms": "scatter, dirty", "example": "Sweep the floor after dinner." },
-    { "word": "wipe", "meaning": "to clean or dry by rubbing with a cloth", "japaneseMeaning": "拭く", "synonyms": "clean, dab", "antonyms": "soil, stain", "example": "Wipe the table when finished." },
-    { "word": "arrest", "meaning": "to take a person into custody by legal authority", "japaneseMeaning": "逮捕する", "synonyms": "detain, capture", "antonyms": "release, free", "example": "The police arrested the suspect." },
-    { "word": "attack", "meaning": "to act violently against someone or something", "japaneseMeaning": "攻撃する", "synonyms": "assault, strike", "antonyms": "defend, protect", "example": "They attacked the fortress at dawn." },
-    { "word": "bite", "meaning": "to cut or hold with the teeth", "japaneseMeaning": "噛む", "synonyms": "nibble, chomp", "antonyms": "lick, release", "example": "The dog might bite if scared." },
-    { "word": "chase", "meaning": "to run after someone or something to catch them", "japaneseMeaning": "追いかける", "synonyms": "pursue, follow", "antonyms": "flee, escape", "example": "The cat chased the mouse." },
-    { "word": "fight", "meaning": "to take part in a violent confrontation", "japaneseMeaning": "戦う／喧嘩する", "synonyms": "battle, combat", "antonyms": "agree, reconcile", "example": "The siblings fought over the toy." },
-    { "word": "guard", "meaning": "to protect or watch over", "japaneseMeaning": "守る／警備する", "synonyms": "protect, watch", "antonyms": "expose, endanger", "example": "A guard stood at the entrance." }
+    {
+      "word": "rank",
+      "meaning": "to put people or things in order by level",
+      "japaneseMeaning": "順位をつける",
+      "synonyms": "order, rate",
+      "antonyms": "mix, disorder",
+      "forms": "rank, ranks, ranking, ranked",
+      "example": "The judges rank the photos from best to worst."
+    },
+    {
+      "word": "create",
+      "meaning": "to make something new",
+      "japaneseMeaning": "創造する",
+      "synonyms": "produce, make",
+      "antonyms": "destroy, ruin",
+      "forms": "create, creates, creating, created",
+      "example": "She created a beautiful design."
+    },
+    {
+      "word": "invite",
+      "meaning": "to ask someone to go somewhere or do something",
+      "japaneseMeaning": "招待する／誘う",
+      "synonyms": "ask, request",
+      "antonyms": "exclude, reject",
+      "forms": "invite, invites, inviting, invited",
+      "example": "We invited them to dinner."
+    },
+    {
+      "word": "repeat",
+      "meaning": "to say or do something again",
+      "japaneseMeaning": "繰り返す",
+      "synonyms": "say again, redo",
+      "antonyms": "stop, skip",
+      "forms": "repeat, repeats, repeating, repeated",
+      "example": "Please repeat the question."
+    },
+    {
+      "word": "compose",
+      "meaning": "to write a letter, story, song, or piece of music",
+      "japaneseMeaning": "書く、作曲する",
+      "synonyms": "write, create",
+      "antonyms": "copy, erase",
+      "forms": "compose, composes, composing, composed",
+      "example": "She composed a short message to thank her teacher."
+    },
+    {
+      "word": "feed",
+      "meaning": "to give food to a person or animal",
+      "japaneseMeaning": "えさをやる",
+      "synonyms": "give food, serve",
+      "antonyms": "starve, neglect",
+      "forms": "feed, feeds, feeding, fed, fed",
+      "example": "I feed my cat every morning."
+    },
+    {
+      "word": "transfer",
+      "meaning": "to move someone or something from one place to another",
+      "japaneseMeaning": "移す、転送する",
+      "synonyms": "move, pass",
+      "antonyms": "keep, hold",
+      "forms": "transfer, transfers, transferring, transferred",
+      "example": "The office will transfer the files to the new computer."
+    },
+    {
+      "word": "perceive",
+      "meaning": "to notice or understand something in a particular way",
+      "japaneseMeaning": "知覚する",
+      "synonyms": "notice, understand",
+      "antonyms": "ignore, overlook",
+      "forms": "perceive, perceives, perceiving, perceived",
+      "example": "Students may perceive the rule as unfair at first."
+    },
+    {
+      "word": "illustrate",
+      "meaning": "to explain with examples",
+      "japaneseMeaning": "例示する",
+      "synonyms": "show, explain",
+      "antonyms": "hide, confuse",
+      "forms": "illustrate, illustrates, illustrating, illustrated",
+      "example": "The chart illustrates how the number changed over time."
+    },
+    {
+      "word": "gather",
+      "meaning": "to come together or bring things together",
+      "japaneseMeaning": "集める、集まる",
+      "synonyms": "collect, meet",
+      "antonyms": "separate, scatter",
+      "forms": "gather, gathers, gathering, gathered",
+      "example": "We gathered information before writing the report."
+    }
   ]
 }

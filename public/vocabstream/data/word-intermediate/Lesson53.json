@@ -1,20 +1,96 @@
-  {
-    "lesson_id": "eiken-pre2-53",
-    "title": "Lesson 53",
-    "paragraph": "Feelings and emotional states — words to describe moods and reactions.",
-    "words": [
-      { "word": "calm", "meaning": "not showing or feeling nervousness, anger, or other strong emotions", "japaneseMeaning": "落ち着いた／冷静な", "synonyms": "peaceful, composed", "antonyms": "agitated, nervous", "example": "Try to stay calm during the test." },
-      { "word": "cheerful", "meaning": "noticeably happy and optimistic", "japaneseMeaning": "陽気な／快活な", "synonyms": "happy, upbeat", "antonyms": "sad, gloomy", "example": "She was cheerful despite the rain." },
-      { "word": "comfortable", "meaning": "feeling physically relaxed and at ease", "japaneseMeaning": "快適な／心地よい", "synonyms": "cozy, relaxed", "antonyms": "uncomfortable, uneasy", "example": "This chair is very comfortable to sit in." },
-      { "word": "confident", "meaning": "feeling sure of oneself; self-assured", "japaneseMeaning": "自信のある", "synonyms": "self-assured, poised", "antonyms": "insecure, doubtful", "example": "She felt confident about her performance." },
-      { "word": "confused", "meaning": "unable to think clearly or understand", "japaneseMeaning": "混乱した／わからない", "synonyms": "perplexed, bewildered", "antonyms": "clear, certain", "example": "I was confused by the instructions." },
-      { "word": "depressed", "meaning": "in a very low mood; sad and without hope", "japaneseMeaning": "落ち込んでいる／憂鬱な", "synonyms": "downcast, despondent", "antonyms": "cheerful, upbeat", "example": "He felt depressed after losing his job." },
-      { "word": "disappointed", "meaning": "sad because something was not as good as expected", "japaneseMeaning": "失望した", "synonyms": "let down, dissatisfied", "antonyms": "pleased, satisfied", "example": "She was disappointed by the exam results." },
-      { "word": "embarrassed", "meaning": "feeling awkward or self-conscious", "japaneseMeaning": "恥ずかしい／当惑した", "synonyms": "ashamed, humiliated", "antonyms": "proud, confident", "example": "He felt embarrassed when he forgot her name." },
-      { "word": "excited", "meaning": "very enthusiastic and eager", "japaneseMeaning": "わくわくした／興奮した", "synonyms": "thrilled, eager", "antonyms": "calm, indifferent", "example": "The children were excited about the trip." },
-      { "word": "frightened", "meaning": "feeling afraid or anxious because of danger", "japaneseMeaning": "怖がっている／おびえている", "synonyms": "scared, terrified", "antonyms": "brave, confident", "example": "She was frightened by the thunder." },
-      { "word": "frustrated", "meaning": "feeling annoyed because of inability to change or achieve something", "japaneseMeaning": "欲求不満の／いらいらした", "synonyms": "irritated, exasperated", "antonyms": "satisfied, content", "example": "He was frustrated by the slow progress." },
-      { "word": "glad", "meaning": "feeling pleasure or happiness", "japaneseMeaning": "うれしい／満足した", "synonyms": "happy, pleased", "antonyms": "sad, unhappy", "example": "I’m glad you could come." }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-53",
+  "title": "Lesson 53",
+  "words": [
+    {
+      "word": "software",
+      "meaning": "programs used by a computer or phone",
+      "japaneseMeaning": "ソフトウェア",
+      "synonyms": "program, app",
+      "antonyms": "hardware, machine",
+      "forms": "software",
+      "example": "This software helps us edit short videos."
+    },
+    {
+      "word": "culture",
+      "meaning": "the ideas, art, food, and ways of life of a group",
+      "japaneseMeaning": "文化",
+      "synonyms": "way of life, customs",
+      "antonyms": "nature, biology",
+      "forms": "culture, cultures",
+      "example": "Food is an important part of culture."
+    },
+    {
+      "word": "assistance",
+      "meaning": "help or support given to someone",
+      "japaneseMeaning": "援助、支援",
+      "synonyms": "help, support",
+      "antonyms": "opposition, neglect",
+      "forms": "assistance",
+      "example": "Please ask the staff for assistance if you need it."
+    },
+    {
+      "word": "laboratory",
+      "meaning": "a room where people do science tests",
+      "japaneseMeaning": "実験室、研究室",
+      "synonyms": "lab, science room",
+      "antonyms": "classroom, office",
+      "forms": "laboratory, laboratories",
+      "example": "Students wear glasses in the laboratory."
+    },
+    {
+      "word": "position",
+      "meaning": "a place, job, or opinion",
+      "japaneseMeaning": "位置、職、立場",
+      "synonyms": "place, role",
+      "antonyms": "movement, change",
+      "forms": "position, positions",
+      "example": "She got a new position at the hotel."
+    },
+    {
+      "word": "service",
+      "meaning": "work done to help people or a system that helps them",
+      "japaneseMeaning": "サービス",
+      "synonyms": "help, support",
+      "antonyms": "problem, harm",
+      "forms": "service, services",
+      "example": "The restaurant gives friendly service."
+    },
+    {
+      "word": "account",
+      "meaning": "a record of money in a bank or online service",
+      "japaneseMeaning": "口座、アカウント",
+      "synonyms": "record, profile",
+      "antonyms": "cash, logout",
+      "forms": "account, accounts",
+      "example": "I opened a new account at the bank."
+    },
+    {
+      "word": "field",
+      "meaning": "an area of land or a subject of work or study",
+      "japaneseMeaning": "畑、分野",
+      "synonyms": "area, subject",
+      "antonyms": "building, general topic",
+      "forms": "field, fields",
+      "example": "She wants to work in the field of environmental science."
+    },
+    {
+      "word": "shoreline",
+      "meaning": "the edge of the land where it meets the sea or a lake",
+      "japaneseMeaning": "海岸線、湖岸線",
+      "synonyms": "coast, edge",
+      "antonyms": "inland, center",
+      "forms": "shoreline, shorelines",
+      "example": "Volunteers cleaned trash along the shoreline."
+    },
+    {
+      "word": "sequence",
+      "meaning": "a set of things that happen or are arranged in order",
+      "japaneseMeaning": "順序、連続",
+      "synonyms": "order, series",
+      "antonyms": "disorder, mix",
+      "forms": "sequence, sequences",
+      "example": "Put the events in the correct sequence."
+    }
+  ]
+}

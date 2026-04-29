@@ -1,27 +1,96 @@
- {
-    "lesson_id": "eiken-pre2-23",
-    "title": "Lesson 23",
-    "paragraph": "Environment and conservation focus on protecting nature and resources. Actions like recycling, conserving water and supporting wildlife reserves help keep ecosystems healthy for future generations.",
-    "words": [
-      { "word": "ecosystem", "meaning": "a community of living things and their environment", "japaneseMeaning": "生態系", "synonyms": "biome, habitat", "antonyms": "", "example": "A healthy ecosystem supports many species." },
-      { "word": "biodiversity", "meaning": "the variety of plant and animal life in an area", "japaneseMeaning": "生物多様性", "synonyms": "variety, diversity", "antonyms": "uniformity", "example": "Protecting biodiversity is important for ecosystems." },
-      { "word": "recycle", "meaning": "to process waste so it can be used again", "japaneseMeaning": "リサイクルする", "synonyms": "reuse, repurpose", "antonyms": "discard, waste", "example": "Sort plastics to recycle them." },
-      { "word": "conserve", "meaning": "to protect and save resources", "japaneseMeaning": "保存する、保護する", "synonyms": "preserve, save", "antonyms": "waste, squander", "example": "Conserve water during dry seasons." },
-      { "word": "renewable", "meaning": "able to be replaced naturally and used again", "japaneseMeaning": "再生可能な", "synonyms": "sustainable, inexhaustible", "antonyms": "nonrenewable, finite", "example": "Solar and wind are renewable energy sources." },
-      { "word": "solar", "meaning": "relating to energy from the sun", "japaneseMeaning": "太陽の、太陽エネルギーの", "synonyms": "sun-powered", "antonyms": "", "example": "They installed solar panels on the roof." },
-      { "word": "wind", "meaning": "air movement used to generate energy", "japaneseMeaning": "風力（の）、風", "synonyms": "", "antonyms": "", "example": "Wind turbines produce electricity." },
-      { "word": "emission", "meaning": "pollutants released into the air", "japaneseMeaning": "排出（物）", "synonyms": "discharge, release", "antonyms": "absorption", "example": "Car emissions affect air quality." },
-      { "word": "sustainability", "meaning": "meeting current needs without harming the future", "japaneseMeaning": "持続可能性", "synonyms": "durability, viability", "antonyms": "unsustainability", "example": "We must aim for sustainability in industry." },
-      { "word": "habitat", "meaning": "the place where a plant or animal naturally lives", "japaneseMeaning": "生息地", "synonyms": "environment, home", "antonyms": "destruction", "example": "Urban growth can destroy animal habitats." },
-      { "word": "endangered", "meaning": "at risk of extinction", "japaneseMeaning": "絶滅危惧の", "synonyms": "threatened, at risk", "antonyms": "safe, secure", "example": "Many species are endangered by habitat loss." },
-      { "word": "deforestation", "meaning": "the removal of large areas of forest", "japaneseMeaning": "森林破壊", "synonyms": "clearance, logging", "antonyms": "reforestation, afforestation", "example": "Deforestation reduces biodiversity." },
-      { "word": "compost", "meaning": "organic matter used as fertilizer", "japaneseMeaning": "堆肥、コンポスト", "synonyms": "mulch, fertilizer", "antonyms": "chemical fertilizer (contrast)", "example": "We add kitchen waste to the compost bin." },
-      { "word": "landfill", "meaning": "a site for waste disposal by burying", "japaneseMeaning": "埋立地、ゴミ処分場", "synonyms": "dump, tip", "antonyms": "recycling centre", "example": "Reduce waste to avoid filling landfills." },
-      { "word": "reserve", "meaning": "an area protected for nature", "japaneseMeaning": "保護区、リザーブ", "synonyms": "sanctuary, park", "antonyms": "development", "example": "The wildlife reserve supports rare birds." },
-      { "word": "wildlife", "meaning": "animals living in their natural environment", "japaneseMeaning": "野生生物", "synonyms": "fauna, animals", "antonyms": "domestic animals", "example": "Protecting wetlands helps local wildlife." },
-      { "word": "organic", "meaning": "grown without chemical pesticides or fertilizers", "japaneseMeaning": "有機の", "synonyms": "natural, chemical-free", "antonyms": "chemical-based, conventional", "example": "They prefer organic vegetables." },
-      { "word": "carbon", "meaning": "a chemical element; often used when talking about emissions", "japaneseMeaning": "炭素", "synonyms": "", "antonyms": "", "example": "Reduce carbon emissions to fight climate change." },
-      { "word": "climate change", "meaning": "long-term changes in average weather patterns", "japaneseMeaning": "気候変動", "synonyms": "global warming (related)", "antonyms": "", "example": "Climate change affects sea levels and weather." }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-23",
+  "title": "Lesson 23",
+  "words": [
+    {
+      "word": "apologize",
+      "meaning": "to say sorry for something",
+      "japaneseMeaning": "謝る",
+      "synonyms": "say sorry, regret",
+      "antonyms": "blame, accuse",
+      "forms": "apologize, apologizes, apologizing, apologized, apology",
+      "example": "I apologize for arriving late."
+    },
+    {
+      "word": "publish",
+      "meaning": "to make a book, article, or information available to people",
+      "japaneseMeaning": "出版する、公開する",
+      "synonyms": "release, print",
+      "antonyms": "hide, withdraw",
+      "forms": "publish, publishes, publishing, published, publication",
+      "example": "The club will publish the newsletter online."
+    },
+    {
+      "word": "rent",
+      "meaning": "to pay money to use a room, house, or object for a time",
+      "japaneseMeaning": "借りる、賃貸する",
+      "synonyms": "hire, lease",
+      "antonyms": "buy, own",
+      "forms": "rent, rents, renting, rented",
+      "example": "We rent a small apartment near the station."
+    },
+    {
+      "word": "allow",
+      "meaning": "to let someone do something",
+      "japaneseMeaning": "許す、許可する",
+      "synonyms": "permit, let",
+      "antonyms": "forbid, stop",
+      "forms": "allow, allows, allowing, allowed, allowance",
+      "example": "The rules allow students to use tablets in class."
+    },
+    {
+      "word": "attend",
+      "meaning": "to go to a class, meeting, or event",
+      "japaneseMeaning": "出席する、参加する",
+      "synonyms": "go to, join",
+      "antonyms": "miss, skip",
+      "forms": "attend, attends, attending, attended, attendance",
+      "example": "I attend a music lesson every Wednesday."
+    },
+    {
+      "word": "suspend",
+      "meaning": "to stop something for a time",
+      "japaneseMeaning": "一時停止する、停学にする",
+      "synonyms": "pause, stop",
+      "antonyms": "continue, restart",
+      "forms": "suspend, suspends, suspending, suspended",
+      "example": "The school may suspend outdoor activities during the storm."
+    },
+    {
+      "word": "reproduce",
+      "meaning": "to make a copy of something",
+      "japaneseMeaning": "複製する、再現する",
+      "synonyms": "copy, repeat",
+      "antonyms": "change, destroy",
+      "forms": "reproduce, reproduces, reproducing, reproduced",
+      "example": "The museum cannot reproduce the old photo clearly."
+    },
+    {
+      "word": "navigate",
+      "meaning": "to find the right way through a place or situation",
+      "japaneseMeaning": "進路を見つける、うまく対処する",
+      "synonyms": "guide, manage",
+      "antonyms": "lose, confuse",
+      "forms": "navigate, navigates, navigating, navigated",
+      "example": "The app helps tourists navigate the city."
+    },
+    {
+      "word": "fail",
+      "meaning": "to not succeed or not pass a test",
+      "japaneseMeaning": "失敗する、不合格になる",
+      "synonyms": "not succeed, lose",
+      "antonyms": "succeed, pass",
+      "forms": "fail, fails, failing, failed, failure",
+      "example": "You may fail the test if you do not study."
+    },
+    {
+      "word": "organize",
+      "meaning": "to plan or arrange an activity or group",
+      "japaneseMeaning": "組織する、準備する",
+      "synonyms": "arrange, plan",
+      "antonyms": "cancel, confuse",
+      "forms": "organize, organizes, organizing, organized",
+      "example": "Students will organize a charity event next month."
+    }
+  ]
+}

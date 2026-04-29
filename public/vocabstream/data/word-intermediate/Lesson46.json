@@ -1,104 +1,96 @@
 {
-    "lesson_id": "eiken-pre2-46",
-    "title": "Lesson 46",
-    "paragraph": "This lesson (Lesson 46) covers adjectives describing quality, size and social scope.",
-    "words": [
-      {
-        "word": "excellent",
-        "meaning": "extremely good; outstanding",
-        "japaneseMeaning": "素晴らしい",
-        "synonyms": "outstanding, superb",
-        "antonyms": "poor, mediocre",
-        "example": "Her presentation was excellent."
-      },
-      {
-        "word": "familiar",
-        "meaning": "well known from long or close association",
-        "japaneseMeaning": "馴染みのある",
-        "synonyms": "known, recognizable",
-        "antonyms": "strange, unfamiliar",
-        "example": "That melody sounded familiar to me."
-      },
-      {
-        "word": "fresh",
-        "meaning": "recently made or obtained; new",
-        "japaneseMeaning": "新鮮な",
-        "synonyms": "new, crisp",
-        "antonyms": "stale, old",
-        "example": "We bought fresh vegetables at the market."
-      },
-      {
-        "word": "global",
-        "meaning": "relating to the whole world",
-        "japaneseMeaning": "世界的な／国際的な",
-        "synonyms": "worldwide, international",
-        "antonyms": "local, regional",
-        "example": "Climate change is a global issue."
-      },
-      {
-        "word": "heavy",
-        "meaning": "weighing a lot",
-        "japaneseMeaning": "重い",
-        "synonyms": "weighty, burdensome",
-        "antonyms": "light, lightweight",
-        "example": "This box is too heavy for me to lift."
-      },
-      {
-        "word": "huge",
-        "meaning": "extremely large in size or amount",
-        "japaneseMeaning": "巨大な",
-        "synonyms": "enormous, vast",
-        "antonyms": "tiny, small",
-        "example": "They live in a huge house."
-      },
-      {
-        "word": "legal",
-        "meaning": "allowed or required by law",
-        "japaneseMeaning": "合法的な",
-        "synonyms": "lawful, legitimate",
-        "antonyms": "illegal, unlawful",
-        "example": "You should check the legal requirements first."
-      },
-      {
-        "word": "local",
-        "meaning": "relating to a particular area or neighborhood",
-        "japaneseMeaning": "地元の",
-        "synonyms": "regional, nearby",
-        "antonyms": "global, national",
-        "example": "We support local businesses."
-      },
-      {
-        "word": "loud",
-        "meaning": "producing much noise",
-        "japaneseMeaning": "うるさい／大きな音の",
-        "synonyms": "noisy, booming",
-        "antonyms": "quiet, silent",
-        "example": "The music was too loud for the room."
-      },
-      {
-        "word": "main",
-        "meaning": "most important or principal",
-        "japaneseMeaning": "主要な",
-        "synonyms": "primary, principal",
-        "antonyms": "minor, secondary",
-        "example": "The main reason is lack of time."
-      },
-      {
-        "word": "natural",
-        "meaning": "existing in nature; not made or altered by people",
-        "japaneseMeaning": "自然の／天然の",
-        "synonyms": "organic, innate",
-        "antonyms": "artificial, man-made",
-        "example": "They prefer natural fabrics like cotton."
-      },
-      {
-        "word": "noisy",
-        "meaning": "making a lot of noise",
-        "japaneseMeaning": "騒がしい",
-        "synonyms": "loud, clamorous",
-        "antonyms": "quiet, peaceful",
-        "example": "The street outside is very noisy at night."
-      }
-    ]
-  }
- 
+  "lesson_id": "eiken-2-46",
+  "title": "Lesson 46",
+  "words": [
+    {
+      "word": "annual",
+      "meaning": "happening once every year",
+      "japaneseMeaning": "年一回の、毎年の",
+      "synonyms": "yearly, once-a-year",
+      "antonyms": "daily, weekly",
+      "forms": "annual, annually",
+      "example": "The annual festival is held every August."
+    },
+    {
+      "word": "enthusiastic",
+      "meaning": "very interested and excited about something",
+      "japaneseMeaning": "熱心な",
+      "synonyms": "excited, eager",
+      "antonyms": "bored, uninterested",
+      "forms": "enthusiastic, enthusiastically",
+      "example": "The enthusiastic students asked many questions."
+    },
+    {
+      "word": "individual",
+      "meaning": "one person or thing, seen separately",
+      "japaneseMeaning": "個々の、個人の",
+      "synonyms": "separate, personal",
+      "antonyms": "shared, group",
+      "forms": "individual, more individual, most individual",
+      "example": "Each student received individual feedback."
+    },
+    {
+      "word": "polite",
+      "meaning": "showing good manners toward others",
+      "japaneseMeaning": "礼儀正しい",
+      "synonyms": "courteous, respectful",
+      "antonyms": "rude, impolite",
+      "forms": "polite, more polite, most polite",
+      "example": "Be polite when you meet new people."
+    },
+    {
+      "word": "sudden",
+      "meaning": "happening quickly and unexpectedly",
+      "japaneseMeaning": "突然の／急な",
+      "synonyms": "abrupt, unexpected",
+      "antonyms": "gradual, expected",
+      "forms": "sudden, more sudden, most sudden",
+      "example": "There was a sudden change in the weather."
+    },
+    {
+      "word": "arid",
+      "meaning": "very dry because there is little rain",
+      "japaneseMeaning": "乾燥した、不毛の",
+      "synonyms": "dry, desert-like",
+      "antonyms": "wet, fertile",
+      "forms": "arid",
+      "example": "Few plants can grow in an arid region."
+    },
+    {
+      "word": "energetic",
+      "meaning": "having a lot of energy",
+      "japaneseMeaning": "元気な、精力的な",
+      "synonyms": "active, lively",
+      "antonyms": "tired, weak",
+      "forms": "energetic, more energetic, most energetic",
+      "example": "The energetic students cleaned the park quickly."
+    },
+    {
+      "word": "tolerant",
+      "meaning": "accepting of differences",
+      "japaneseMeaning": "寛容な",
+      "synonyms": "open-minded, accepting",
+      "antonyms": "intolerant, biased",
+      "forms": "tolerant, tolerantly",
+      "example": "A tolerant society respects diversity."
+    },
+    {
+      "word": "curious",
+      "meaning": "wanting to know or learn more",
+      "japaneseMeaning": "好奇心の強い",
+      "synonyms": "interested, eager",
+      "antonyms": "bored, uninterested",
+      "forms": "curious, more curious, most curious",
+      "example": "The curious child asked many questions."
+    },
+    {
+      "word": "sensible",
+      "meaning": "showing good thinking and careful choices",
+      "japaneseMeaning": "賢明な、分別のある",
+      "synonyms": "wise, reasonable",
+      "antonyms": "foolish, careless",
+      "forms": "sensible, more sensible, most sensible",
+      "example": "It is sensible to save money before a trip."
+    }
+  ]
+}

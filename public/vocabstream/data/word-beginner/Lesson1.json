@@ -1,0 +1,97 @@
+{
+  "lesson_id": "eiken-pre2-1",
+  "title": "Lesson 1",
+  "paragraph": "People form many types of relationships during their lives. Family members, friends, colleagues and partners each play different roles, and meeting strangers or guests can lead to new connections. Respect and trust help maintain healthy relationships across generations.",
+  "words": [
+    {
+      "word": "apple",
+      "meaning": "a basic word for apple",
+      "japaneseMeaning": "りんご",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "apple, apples",
+      "example": "I see a apple."
+    },
+    {
+      "word": "banana",
+      "meaning": "a basic word for banana",
+      "japaneseMeaning": "バナナ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "banana, bananas",
+      "example": "I see a banana."
+    },
+    {
+      "word": "grape",
+      "meaning": "a basic word for grape",
+      "japaneseMeaning": "ぶどう",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "grape, grapes",
+      "example": "I see a grape."
+    },
+    {
+      "word": "lemon",
+      "meaning": "a basic word for lemon",
+      "japaneseMeaning": "レモン",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "lemon, lemons",
+      "example": "I see a lemon."
+    },
+    {
+      "word": "potato",
+      "meaning": "a basic word for potato",
+      "japaneseMeaning": "じゃがいも",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "potato, potatos",
+      "example": "I see a potato."
+    },
+    {
+      "word": "tomato",
+      "meaning": "a basic word for tomato",
+      "japaneseMeaning": "トマト",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "tomato, tomatos",
+      "example": "I see a tomato."
+    },
+    {
+      "word": "onion",
+      "meaning": "a basic word for onion",
+      "japaneseMeaning": "玉ねぎ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "onion, onions",
+      "example": "I see a onion."
+    },
+    {
+      "word": "carrot",
+      "meaning": "a basic word for carrot",
+      "japaneseMeaning": "にんじん",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "carrot, carrots",
+      "example": "I see a carrot."
+    },
+    {
+      "word": "bread",
+      "meaning": "a basic word for bread",
+      "japaneseMeaning": "パン",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "bread, breads",
+      "example": "I see a bread."
+    },
+    {
+      "word": "cheese",
+      "meaning": "a basic word for cheese",
+      "japaneseMeaning": "チーズ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "cheese, cheeses",
+      "example": "I see a cheese."
+    }
+  ]
+}

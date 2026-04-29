@@ -1,21 +1,96 @@
-
-  {
-    "lesson_id": "eiken-pre2-50",
-    "title": "Lesson 50",
-    "paragraph": "Describing people's personalities and social behaviors — useful for talking about character and attitudes.",
-    "words": [
-      { "word": "humorous", "meaning": "showing or causing amusement; funny", "japaneseMeaning": "ユーモアのある", "synonyms": "funny, amusing", "antonyms": "serious, dull", "example": "His humorous stories made everyone laugh." },
-      { "word": "impatient", "meaning": "not willing to wait; easily annoyed by delay", "japaneseMeaning": "短気な／我慢できない", "synonyms": "restless, eager", "antonyms": "patient, calm", "example": "She was impatient while waiting in the long line." },
-      { "word": "independent", "meaning": "free from outside control; self-reliant", "japaneseMeaning": "自立した／独立した", "synonyms": "self-sufficient, autonomous", "antonyms": "dependent, reliant", "example": "He is independent and does his own research." },
-      { "word": "intelligent", "meaning": "having or showing high mental ability", "japaneseMeaning": "賢い／知的な", "synonyms": "smart, clever", "antonyms": "stupid, dull", "example": "She is very intelligent and learns quickly." },
-      { "word": "jealous", "meaning": "feeling or showing envy of another's achievements or advantages", "japaneseMeaning": "嫉妬深い", "synonyms": "envious, resentful", "antonyms": "content, trusting", "example": "He felt jealous when his friend got the promotion." },
-      { "word": "kind", "meaning": "having a friendly, generous, and considerate nature", "japaneseMeaning": "親切な", "synonyms": "gentle, generous", "antonyms": "cruel, rude", "example": "She was kind to the new student." },
-      { "word": "lazy", "meaning": "unwilling to work or use energy", "japaneseMeaning": "怠惰な／ズボラな", "synonyms": "idle, sluggish", "antonyms": "hard-working, diligent", "example": "Don’t be lazy — finish your homework." },
-      { "word": "lonely", "meaning": "sad because one has no friends or company", "japaneseMeaning": "孤独な／寂しい", "synonyms": "isolated, alone", "antonyms": "sociable, accompanied", "example": "He felt lonely after moving to a new city." },
-      { "word": "lucky", "meaning": "having good fortune", "japaneseMeaning": "運の良い", "synonyms": "fortunate, blessed", "antonyms": "unlucky, unfortunate", "example": "She was lucky to find a ticket at the last minute." },
-      { "word": "nervous", "meaning": "anxious or worried about something", "japaneseMeaning": "神経質な／緊張した", "synonyms": "anxious, tense", "antonyms": "calm, relaxed", "example": "He was nervous before his speech." },
-      { "word": "nice", "meaning": "pleasant, agreeable, or satisfactory", "japaneseMeaning": "感じの良い／素敵な", "synonyms": "pleasant, kind", "antonyms": "rude, unpleasant", "example": "She is a nice person who helps others." },
-      { "word": "noisy", "meaning": "making a lot of noise", "japaneseMeaning": "騒がしい／うるさい", "synonyms": "loud, clamorous", "antonyms": "quiet, silent", "example": "The cafe was too noisy to study." }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-50",
+  "title": "Lesson 50",
+  "words": [
+    {
+      "word": "residence",
+      "meaning": "the place where someone lives",
+      "japaneseMeaning": "住居、居住地",
+      "synonyms": "home, address",
+      "antonyms": "workplace, shelter",
+      "forms": "residence, residences",
+      "example": "Students must report a change of residence to the office."
+    },
+    {
+      "word": "credit",
+      "meaning": "praise, trust, or money borrowed from a bank",
+      "japaneseMeaning": "信用、称賛、単位",
+      "synonyms": "praise, trust",
+      "antonyms": "blame, cash",
+      "forms": "credit, credits",
+      "example": "She deserves credit for helping the team."
+    },
+    {
+      "word": "failure",
+      "meaning": "a time when someone or something does not succeed",
+      "japaneseMeaning": "失敗、不成功",
+      "synonyms": "defeat, mistake",
+      "antonyms": "success, achievement",
+      "forms": "failure, failures",
+      "example": "The failure of the plan taught us an important lesson."
+    },
+    {
+      "word": "knowledge",
+      "meaning": "information and understanding in your mind",
+      "japaneseMeaning": "知識",
+      "synonyms": "information, learning",
+      "antonyms": "ignorance, confusion",
+      "forms": "knowledge",
+      "example": "Reading gives you knowledge about the world."
+    },
+    {
+      "word": "population",
+      "meaning": "all the people who live in a place",
+      "japaneseMeaning": "人口",
+      "synonyms": "people, residents",
+      "antonyms": "empty place, desert",
+      "forms": "population, populations",
+      "example": "The population of this city is growing."
+    },
+    {
+      "word": "semester",
+      "meaning": "one of the main study periods in a school year",
+      "japaneseMeaning": "学期",
+      "synonyms": "term, period",
+      "antonyms": "vacation, break",
+      "forms": "semester, semesters",
+      "example": "The new semester begins in April."
+    },
+    {
+      "word": "setback",
+      "meaning": "a problem that delays or prevents progress",
+      "japaneseMeaning": "挫折、遅れ",
+      "synonyms": "problem, delay",
+      "antonyms": "progress, success",
+      "forms": "setback, setbacks",
+      "example": "The team recovered quickly after the setback."
+    },
+    {
+      "word": "effort",
+      "meaning": "hard work used to do something",
+      "japaneseMeaning": "努力",
+      "synonyms": "hard work, attempt",
+      "antonyms": "laziness, ease",
+      "forms": "effort, efforts",
+      "example": "Her effort helped the team finish on time."
+    },
+    {
+      "word": "diagram",
+      "meaning": "a simple drawing that explains how something works",
+      "japaneseMeaning": "図、図表",
+      "synonyms": "chart, drawing",
+      "antonyms": "text, explanation",
+      "forms": "diagram, diagrams",
+      "example": "The diagram shows how water moves through the machine."
+    },
+    {
+      "word": "principle",
+      "meaning": "a basic rule or belief that guides actions",
+      "japaneseMeaning": "原則、信念",
+      "synonyms": "rule, belief",
+      "antonyms": "exception, detail",
+      "forms": "principle, principles",
+      "example": "Honesty is an important principle in our club."
+    }
+  ]
+}

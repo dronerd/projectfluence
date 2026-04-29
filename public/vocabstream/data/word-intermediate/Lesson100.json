@@ -1,0 +1,96 @@
+{
+  "lesson_id": "eiken-2-100",
+  "title": "Lesson 100",
+  "words": [
+    {
+      "word": "dependent",
+      "meaning": "needing help or support from someone or something",
+      "japaneseMeaning": "依存している、頼っている",
+      "synonyms": "reliant, supported",
+      "antonyms": "independent, free",
+      "forms": "dependent, more dependent, most dependent",
+      "example": "The small village is dependent on tourism."
+    },
+    {
+      "word": "harmful",
+      "meaning": "able to hurt or damage someone or something",
+      "japaneseMeaning": "有害な",
+      "synonyms": "dangerous, damaging",
+      "antonyms": "safe, helpful",
+      "forms": "harmful, more harmful, most harmful",
+      "example": "Too much sun can be harmful to your skin."
+    },
+    {
+      "word": "ordinary",
+      "meaning": "not special or unusual",
+      "japaneseMeaning": "普通の、平凡な",
+      "synonyms": "usual, normal",
+      "antonyms": "special, unusual",
+      "forms": "ordinary, more ordinary, most ordinary",
+      "example": "It looked like an ordinary day at first."
+    },
+    {
+      "word": "sole",
+      "meaning": "being the only one",
+      "japaneseMeaning": "唯一の",
+      "synonyms": "only, single",
+      "antonyms": "many, shared",
+      "forms": "sole",
+      "example": "Her sole reason for moving was her new job."
+    },
+    {
+      "word": "worried",
+      "meaning": "anxious or troubled about actual or potential problems",
+      "japaneseMeaning": "心配している",
+      "synonyms": "concerned, anxious",
+      "antonyms": "carefree, untroubled",
+      "forms": "worried, more worried, most worried",
+      "example": "She was worried about the exam results."
+    },
+    {
+      "word": "digital",
+      "meaning": "using computers or electronic information",
+      "japaneseMeaning": "デジタルの",
+      "synonyms": "electronic, online",
+      "antonyms": "paper, analog",
+      "forms": "digital",
+      "example": "The library keeps digital copies of old photos."
+    },
+    {
+      "word": "assured",
+      "meaning": "confident and certain",
+      "japaneseMeaning": "自信のある、確信している",
+      "synonyms": "confident, certain",
+      "antonyms": "unsure, doubtful",
+      "forms": "assured, more assured, most assured",
+      "example": "She sounded assured during the interview."
+    },
+    {
+      "word": "secure",
+      "meaning": "to make safe",
+      "japaneseMeaning": "確保する、安全にする",
+      "synonyms": "protect, safeguard",
+      "antonyms": "endanger, threaten",
+      "forms": "secure, secures, securing, secured",
+      "example": "They secured the building before the storm."
+    },
+    {
+      "word": "external",
+      "meaning": "on the outside, or coming from outside",
+      "japaneseMeaning": "外部の、外側の",
+      "synonyms": "outside, outer",
+      "antonyms": "internal, inside",
+      "forms": "external",
+      "example": "The laptop uses an external keyboard."
+    },
+    {
+      "word": "overall",
+      "meaning": "including everything",
+      "japaneseMeaning": "全体的な、総合的な",
+      "synonyms": "total, general",
+      "antonyms": "partial, specific",
+      "forms": "overall",
+      "example": "The overall result was better than expected."
+    }
+  ]
+}

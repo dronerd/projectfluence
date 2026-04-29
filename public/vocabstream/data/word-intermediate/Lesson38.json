@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-38",
-  "title": "Lesson 13",
-  "paragraph": "Verbs useful for thought, movement, training, visits, and waiting—common in everyday planning and communication.",
+  "lesson_id": "eiken-2-38",
+  "title": "Lesson 38",
   "words": [
-    { "word": "thank", "meaning": "to express gratitude", "japaneseMeaning": "感謝する", "synonyms": "appreciate, acknowledge", "antonyms": "blame, criticize", "example": "Thank you for your help." },
-    { "word": "think", "meaning": "to use the mind to form ideas or judgments", "japaneseMeaning": "考える", "synonyms": "consider, ponder", "antonyms": "ignore, forget", "example": "I think it's a good idea." },
-    { "word": "throw", "meaning": "to propel something with force through the air", "japaneseMeaning": "投げる", "synonyms": "toss, hurl", "antonyms": "catch, hold", "example": "Throw the ball to me." },
-    { "word": "touch", "meaning": "to make physical contact with something", "japaneseMeaning": "触る", "synonyms": "feel, handle", "antonyms": "avoid, ignore", "example": "Don't touch the wet paint." },
-    { "word": "train", "meaning": "to teach a skill or practice to improve", "japaneseMeaning": "訓練する／鍛える", "synonyms": "coach, educate", "antonyms": "neglect, spoil", "example": "They train every morning." },
-    { "word": "travel", "meaning": "to go from one place to another", "japaneseMeaning": "旅行する／移動する", "synonyms": "journey, voyage", "antonyms": "stay, remain", "example": "We travel abroad once a year." },
-    { "word": "try", "meaning": "to attempt to do something", "japaneseMeaning": "試す／努力する", "synonyms": "attempt, endeavor", "antonyms": "give up, quit", "example": "Try your best on the exam." },
-    { "word": "turn", "meaning": "to change direction or to rotate", "japaneseMeaning": "回す／曲がる", "synonyms": "rotate, twist", "antonyms": "remain, stay", "example": "Turn left at the corner." },
-    { "word": "understand", "meaning": "to grasp the meaning of something", "japaneseMeaning": "理解する", "synonyms": "comprehend, grasp", "antonyms": "misunderstand, confuse", "example": "I understand the problem now." },
-    { "word": "use", "meaning": "to employ something for a purpose", "japaneseMeaning": "使う", "synonyms": "utilize, employ", "antonyms": "abstain, avoid", "example": "Use this tool carefully." },
-    { "word": "visit", "meaning": "to go to see a place or person", "japaneseMeaning": "訪問する／訪れる", "synonyms": "call on, drop by", "antonyms": "leave, avoid", "example": "We will visit the museum tomorrow." },
-    { "word": "wait", "meaning": "to stay in expectation of something", "japaneseMeaning": "待つ", "synonyms": "remain, await", "antonyms": "rush, hurry", "example": "Please wait here a moment." }
+    {
+      "word": "agency",
+      "meaning": "a business or office that gives a special service",
+      "japaneseMeaning": "代理店、機関",
+      "synonyms": "office, company",
+      "antonyms": "customer, client",
+      "forms": "agency, agencies",
+      "example": "The travel agency booked our hotel."
+    },
+    {
+      "word": "contact",
+      "meaning": "talking or writing to someone",
+      "japaneseMeaning": "連絡、接触",
+      "synonyms": "communication, touch",
+      "antonyms": "separation, silence",
+      "forms": "contact, contacts",
+      "example": "Please contact the office if you are late."
+    },
+    {
+      "word": "experience",
+      "meaning": "something that happens to you or skill from doing things",
+      "japaneseMeaning": "経験",
+      "synonyms": "event, practice",
+      "antonyms": "inexperience, theory",
+      "forms": "experience, experiences",
+      "example": "Travel gave her experience with new cultures."
+    },
+    {
+      "word": "interview",
+      "meaning": "a meeting where someone asks questions",
+      "japaneseMeaning": "面接、インタビュー",
+      "synonyms": "meeting, talk",
+      "antonyms": "speech, silence",
+      "forms": "interview, interviews",
+      "example": "She has a job interview on Monday."
+    },
+    {
+      "word": "partner",
+      "meaning": "a person you do something with",
+      "japaneseMeaning": "相手、パートナー",
+      "synonyms": "teammate, helper",
+      "antonyms": "opponent, stranger",
+      "forms": "partner, partners",
+      "example": "My partner and I finished the project together."
+    },
+    {
+      "word": "route",
+      "meaning": "the way from one place to another",
+      "japaneseMeaning": "道順、ルート",
+      "synonyms": "way, path",
+      "antonyms": "stop, end",
+      "forms": "route, routes",
+      "example": "This bus route goes past the hospital."
+    },
+    {
+      "word": "audience",
+      "meaning": "the people who watch or listen to a show or talk",
+      "japaneseMeaning": "観客、聴衆",
+      "synonyms": "crowd, listeners",
+      "antonyms": "performer, speaker",
+      "forms": "audience, audiences",
+      "example": "The audience clapped after the final song."
+    },
+    {
+      "word": "detail",
+      "meaning": "attention given to small elements of work or design",
+      "japaneseMeaning": "細部、詳細",
+      "synonyms": "small part, point",
+      "antonyms": "whole, summary",
+      "forms": "detail, details",
+      "example": "The painting’s detail reveals the artist’s dedication."
+    },
+    {
+      "word": "conflict",
+      "meaning": "a serious disagreement or fight",
+      "japaneseMeaning": "対立、争い",
+      "synonyms": "disagreement, fight",
+      "antonyms": "agreement, peace",
+      "forms": "conflict, conflicts",
+      "example": "The manager helped solve the conflict between workers."
+    },
+    {
+      "word": "temperature",
+      "meaning": "how hot or cold something is",
+      "japaneseMeaning": "温度、気温",
+      "synonyms": "heat level, degree",
+      "antonyms": "coldness, coolness",
+      "forms": "temperature, temperatures",
+      "example": "The temperature dropped quickly after sunset."
+    }
   ]
 }

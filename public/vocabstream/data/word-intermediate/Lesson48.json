@@ -1,104 +1,96 @@
- {
-    "lesson_id": "eiken-pre2-48",
-    "title": "Lesson 48",
-    "paragraph": "This lesson (Lesson 48) includes adjectives for simplicity, tradition and character traits used to describe people.",
-    "words": [
-      {
-        "word": "simple",
-        "meaning": "easy to understand or do; not complicated",
-        "japaneseMeaning": "簡単な",
-        "synonyms": "easy, straightforward",
-        "antonyms": "complex, complicated",
-        "example": "The instructions are simple to follow."
-      },
-      {
-        "word": "traditional",
-        "meaning": "based on customs or long-established practices",
-        "japaneseMeaning": "伝統的な",
-        "synonyms": "conventional, classic",
-        "antonyms": "modern, innovative",
-        "example": "They wore traditional clothes for the festival."
-      },
-      {
-        "word": "useful",
-        "meaning": "able to be used effectively for a purpose",
-        "japaneseMeaning": "役に立つ",
-        "synonyms": "helpful, practical",
-        "antonyms": "useless, pointless",
-        "example": "This app is very useful for learning vocabulary."
-      },
-      {
-        "word": "weak",
-        "meaning": "lacking strength or power",
-        "japaneseMeaning": "弱い",
-        "synonyms": "feeble, frail",
-        "antonyms": "strong, powerful",
-        "example": "He felt weak after the long illness."
-      },
-      {
-        "word": "active",
-        "meaning": "engaging in physical or mental activity",
-        "japaneseMeaning": "活動的な／活発な",
-        "synonyms": "energetic, dynamic",
-        "antonyms": "inactive, passive",
-        "example": "She is very active in community events."
-      },
-      {
-        "word": "ambitious",
-        "meaning": "having a strong desire to achieve success",
-        "japaneseMeaning": "野心的な",
-        "synonyms": "driven, aspiring",
-        "antonyms": "unambitious, complacent",
-        "example": "He is ambitious and aims to be a manager."
-      },
-      {
-        "word": "arrogant",
-        "meaning": "having an exaggerated sense of one's importance",
-        "japaneseMeaning": "傲慢な",
-        "synonyms": "haughty, conceited",
-        "antonyms": "humble, modest",
-        "example": "He came across as arrogant during the meeting."
-      },
-      {
-        "word": "attractive",
-        "meaning": "pleasing or appealing to the senses",
-        "japaneseMeaning": "魅力的な",
-        "synonyms": "appealing, charming",
-        "antonyms": "unattractive, plain",
-        "example": "The design is very attractive to customers."
-      },
-      {
-        "word": "average",
-        "meaning": "typical or ordinary; the middle value",
-        "japaneseMeaning": "平均的な／普通の",
-        "synonyms": "typical, ordinary",
-        "antonyms": "exceptional, extraordinary",
-        "example": "Her test score was about average."
-      },
-      {
-        "word": "brave",
-        "meaning": "ready to face danger or pain without showing fear",
-        "japaneseMeaning": "勇敢な",
-        "synonyms": "courageous, bold",
-        "antonyms": "cowardly, timid",
-        "example": "The firefighter was brave during the rescue."
-      },
-      {
-        "word": "careless",
-        "meaning": "not giving enough attention; negligent",
-        "japaneseMeaning": "不注意な",
-        "synonyms": "negligent, sloppy",
-        "antonyms": "careful, cautious",
-        "example": "His careless mistake caused the delay."
-      },
-      {
-        "word": "charming",
-        "meaning": "pleasant or delightful in manner",
-        "japaneseMeaning": "魅力的な",
-        "synonyms": "delightful, pleasant",
-        "antonyms": "offensive, rude",
-        "example": "She has a charming smile."
-      }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-48",
+  "title": "Lesson 48",
+  "words": [
+    {
+      "word": "analyze",
+      "meaning": "to study something carefully",
+      "japaneseMeaning": "分析する",
+      "synonyms": "examine, study",
+      "antonyms": "ignore, neglect",
+      "forms": "analyze, analyzes, analyzing, analyzed",
+      "example": "We need to analyze the data carefully."
+    },
+    {
+      "word": "assess",
+      "meaning": "to judge the quality, value, or importance of something",
+      "japaneseMeaning": "評価する、判断する",
+      "synonyms": "judge, evaluate",
+      "antonyms": "ignore, guess",
+      "forms": "assess, assesses, assessing, assessed",
+      "example": "The teacher assessed each student's speaking level."
+    },
+    {
+      "word": "acquire",
+      "meaning": "to get knowledge, a skill, or something useful",
+      "japaneseMeaning": "身につける、獲得する",
+      "synonyms": "gain, obtain",
+      "antonyms": "lose, give up",
+      "forms": "acquire, acquires, acquiring, acquired",
+      "example": "Students acquire confidence through regular practice."
+    },
+    {
+      "word": "respond",
+      "meaning": "to react to something",
+      "japaneseMeaning": "反応する",
+      "synonyms": "reply, react",
+      "antonyms": "ignore, neglect",
+      "forms": "respond, responds, responding, responded",
+      "example": "She responded quickly to the call."
+    },
+    {
+      "word": "emerge",
+      "meaning": "to appear or become known",
+      "japaneseMeaning": "現れる、明らかになる",
+      "synonyms": "appear, develop",
+      "antonyms": "disappear, hide",
+      "forms": "emerge, emerges, emerging, emerged",
+      "example": "New problems emerged during the project."
+    },
+    {
+      "word": "function",
+      "meaning": "to work in the right way",
+      "japaneseMeaning": "機能する、働く",
+      "synonyms": "work, operate",
+      "antonyms": "fail, break",
+      "forms": "function, functions, functioning, functioned",
+      "example": "The machine cannot function without electricity."
+    },
+    {
+      "word": "seal",
+      "meaning": "to close something tightly so nothing can get in or out",
+      "japaneseMeaning": "密閉する、封をする",
+      "synonyms": "close, cover",
+      "antonyms": "open, uncover",
+      "forms": "seal, seals, sealing, sealed",
+      "example": "Seal the bag before you put it in the fridge."
+    },
+    {
+      "word": "associate",
+      "meaning": "to connect ideas or things",
+      "japaneseMeaning": "結びつける",
+      "synonyms": "link, connect",
+      "antonyms": "disconnect, separate",
+      "forms": "associate, associates, associating, associated",
+      "example": "People often associate smell with memories."
+    },
+    {
+      "word": "generate",
+      "meaning": "to produce or create",
+      "japaneseMeaning": "生み出す",
+      "synonyms": "produce, create",
+      "antonyms": "destroy, waste",
+      "forms": "generate, generates, generating, generated",
+      "example": "They generated innovative ideas quickly."
+    },
+    {
+      "word": "inform",
+      "meaning": "to tell someone about something",
+      "japaneseMeaning": "知らせる、通知する",
+      "synonyms": "tell, notify",
+      "antonyms": "hide, mislead",
+      "forms": "inform, informs, informing, informed",
+      "example": "Please inform the office if your address changes."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "lesson_id": "eiken-2-99",
+  "title": "Lesson 99",
+  "words": [
+    {
+      "word": "elect",
+      "meaning": "to choose someone for a position by voting",
+      "japaneseMeaning": "選出する、当選させる",
+      "synonyms": "choose, vote for",
+      "antonyms": "reject, remove",
+      "forms": "elect, elects, electing, elected",
+      "example": "Students will elect a class leader tomorrow."
+    },
+    {
+      "word": "obey",
+      "meaning": "to do what a rule or person tells you to do",
+      "japaneseMeaning": "従う、守る",
+      "synonyms": "follow, respect",
+      "antonyms": "disobey, ignore",
+      "forms": "obey, obeys, obeying, obeyed",
+      "example": "Drivers must obey traffic rules."
+    },
+    {
+      "word": "achieve",
+      "meaning": "to succeed in doing something after effort",
+      "japaneseMeaning": "達成する",
+      "synonyms": "succeed, reach",
+      "antonyms": "fail, miss",
+      "forms": "achieve, achieves, achieving, achieved",
+      "example": "She achieved her goal after months of practice."
+    },
+    {
+      "word": "master",
+      "meaning": "to learn a skill or subject very well",
+      "japaneseMeaning": "習得する、極める",
+      "synonyms": "learn, understand",
+      "antonyms": "forget, fail",
+      "forms": "master, masters, mastering, mastered",
+      "example": "It takes practice to master a new language."
+    },
+    {
+      "word": "retrieve",
+      "meaning": "to get information or an object back",
+      "japaneseMeaning": "取り戻す、検索して取り出す",
+      "synonyms": "get back, recover",
+      "antonyms": "lose, send",
+      "forms": "retrieve, retrieves, retrieving, retrieved",
+      "example": "The system can retrieve old emails quickly."
+    },
+    {
+      "word": "praise",
+      "meaning": "to say that someone or something is good",
+      "japaneseMeaning": "ほめる、称賛する",
+      "synonyms": "commend, admire",
+      "antonyms": "criticize, blame",
+      "forms": "praise, praises, praising, praised",
+      "example": "The teacher praised her careful work."
+    },
+    {
+      "word": "extend",
+      "meaning": "to make something longer or last longer",
+      "japaneseMeaning": "延ばす、広げる",
+      "synonyms": "lengthen, expand",
+      "antonyms": "shorten, reduce",
+      "forms": "extend, extends, extending, extended",
+      "example": "They will extend the deadline by one week."
+    },
+    {
+      "word": "perform",
+      "meaning": "to do a task, job, or action",
+      "japaneseMeaning": "行う、演じる",
+      "synonyms": "do, carry out",
+      "antonyms": "fail, neglect",
+      "forms": "perform, performs, performing, performed",
+      "example": "The team performed the task carefully."
+    },
+    {
+      "word": "upgrade",
+      "meaning": "to improve something by making it newer or better",
+      "japaneseMeaning": "改良する、アップグレードする",
+      "synonyms": "improve, update",
+      "antonyms": "weaken, downgrade",
+      "forms": "upgrade, upgrades, upgrading, upgraded",
+      "example": "The school upgraded its computer room."
+    },
+    {
+      "word": "assign",
+      "meaning": "to give someone a task or responsibility",
+      "japaneseMeaning": "割り当てる、任命する",
+      "synonyms": "give, appoint",
+      "antonyms": "remove, take back",
+      "forms": "assign, assigns, assigning, assigned",
+      "example": "The teacher assigned each group a topic."
+    }
+  ]
+}

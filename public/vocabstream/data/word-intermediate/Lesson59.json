@@ -1,104 +1,96 @@
-  {
-    "lesson_id": "eiken-pre2-59",
-    "title": "Lesson 59",
-    "paragraph": "More descriptive adjectives — nationality, freshness, helpfulness and size among them.",
-    "words": [
-      {
-        "word": "foreign",
-        "meaning": "from or relating to a country that is not one's own",
-        "japaneseMeaning": "外国の／海外の",
-        "synonyms": "overseas, international",
-        "antonyms": "domestic, local",
-        "example": "She enjoys reading foreign literature."
-      },
-      {
-        "word": "fresh",
-        "meaning": "recently made or obtained; new and not stale",
-        "japaneseMeaning": "新鮮な",
-        "synonyms": "new, crisp",
-        "antonyms": "stale, old",
-        "example": "We bought fresh bread from the bakery."
-      },
-      {
-        "word": "friendly",
-        "meaning": "kind and pleasant to others",
-        "japaneseMeaning": "友好的な／親しみやすい",
-        "synonyms": "amiable, cordial",
-        "antonyms": "hostile, unfriendly",
-        "example": "The staff at the hotel were very friendly."
-      },
-      {
-        "word": "full",
-        "meaning": "containing as much as possible; not empty",
-        "japaneseMeaning": "満杯の／いっぱいの",
-        "synonyms": "packed, complete",
-        "antonyms": "empty, vacant",
-        "example": "The bus was full, so we waited for the next one."
-      },
-      {
-        "word": "global",
-        "meaning": "relating to the whole world; worldwide",
-        "japaneseMeaning": "世界的な／グローバルな",
-        "synonyms": "worldwide, international",
-        "antonyms": "local, regional",
-        "example": "The company has a global presence in many countries."
-      },
-      {
-        "word": "heavy",
-        "meaning": "weighing a lot; difficult to lift or move",
-        "japaneseMeaning": "重い",
-        "synonyms": "weighty, burdensome",
-        "antonyms": "light, lightweight",
-        "example": "The package is too heavy to carry alone."
-      },
-      {
-        "word": "helpful",
-        "meaning": "providing assistance or useful information",
-        "japaneseMeaning": "役に立つ／助けになる",
-        "synonyms": "useful, beneficial",
-        "antonyms": "unhelpful, useless",
-        "example": "Her advice was very helpful for my project."
-      },
-      {
-        "word": "hot",
-        "meaning": "having a high temperature; very warm",
-        "japaneseMeaning": "熱い／暑い",
-        "synonyms": "warm, scorching",
-        "antonyms": "cold, cool",
-        "example": "Be careful — the soup is hot."
-      },
-      {
-        "word": "huge",
-        "meaning": "extremely large in size or amount",
-        "japaneseMeaning": "巨大な",
-        "synonyms": "enormous, massive",
-        "antonyms": "tiny, small",
-        "example": "They moved into a huge new office."
-      },
-      {
-        "word": "important",
-        "meaning": "of great significance or value; essential",
-        "japaneseMeaning": "重要な",
-        "synonyms": "significant, crucial",
-        "antonyms": "trivial, unimportant",
-        "example": "It's important to read the instructions carefully."
-      },
-      {
-        "word": "impossible",
-        "meaning": "not able to occur, exist, or be done",
-        "japaneseMeaning": "不可能な",
-        "synonyms": "unachievable, impractical",
-        "antonyms": "possible, feasible",
-        "example": "It seemed impossible to finish on time."
-      },
-      {
-        "word": "interesting",
-        "meaning": "arousing curiosity or holding attention",
-        "japaneseMeaning": "興味深い／面白い",
-        "synonyms": "engaging, fascinating",
-        "antonyms": "dull, boring",
-        "example": "The lecture was interesting and informative."
-      }
-    ]
-  }
-
+{
+  "lesson_id": "eiken-2-59",
+  "title": "Lesson 59",
+  "words": [
+    {
+      "word": "arrival",
+      "meaning": "the time when someone or something gets to a place",
+      "japaneseMeaning": "到着",
+      "synonyms": "coming, reaching",
+      "antonyms": "departure, leaving",
+      "forms": "arrival, arrivals",
+      "example": "The train's arrival was ten minutes late."
+    },
+    {
+      "word": "delivery",
+      "meaning": "the act of bringing something to a place",
+      "japaneseMeaning": "配達",
+      "synonyms": "drop-off, transport",
+      "antonyms": "pickup, collection",
+      "forms": "delivery, deliveries",
+      "example": "The delivery arrived before lunch."
+    },
+    {
+      "word": "flight",
+      "meaning": "a trip by plane",
+      "japaneseMeaning": "飛行、便",
+      "synonyms": "plane trip, journey",
+      "antonyms": "arrival, landing",
+      "forms": "flight, flights",
+      "example": "Our flight to Seoul leaves at noon."
+    },
+    {
+      "word": "lecture",
+      "meaning": "a talk that teaches people about a subject",
+      "japaneseMeaning": "講義",
+      "synonyms": "talk, class",
+      "antonyms": "conversation, silence",
+      "forms": "lecture, lectures",
+      "example": "The lecture explained how cities grow."
+    },
+    {
+      "word": "process",
+      "meaning": "a series of actions done to achieve a result",
+      "japaneseMeaning": "過程",
+      "synonyms": "procedure, method",
+      "antonyms": "disorder, accident",
+      "forms": "process, processes",
+      "example": "The hiring process took two weeks."
+    },
+    {
+      "word": "speech",
+      "meaning": "a talk given to a group of people",
+      "japaneseMeaning": "スピーチ、演説",
+      "synonyms": "talk, address",
+      "antonyms": "silence, writing",
+      "forms": "speech, speeches",
+      "example": "Her speech about kindness was easy to understand."
+    },
+    {
+      "word": "terminal",
+      "meaning": "a building where passengers arrive or leave at an airport, bus station, or port",
+      "japaneseMeaning": "ターミナル、乗り場",
+      "synonyms": "station, gate area",
+      "antonyms": "destination, street",
+      "forms": "terminal, terminals",
+      "example": "Our bus leaves from terminal three."
+    },
+    {
+      "word": "territory",
+      "meaning": "an area of land controlled by a country, group, or animal",
+      "japaneseMeaning": "領土",
+      "synonyms": "region, area",
+      "antonyms": "foreign land, outside",
+      "forms": "territory, territories",
+      "example": "The lion defended its territory."
+    },
+    {
+      "word": "partnership",
+      "meaning": "a relationship in which people or groups work together",
+      "japaneseMeaning": "協力関係、提携",
+      "synonyms": "cooperation, relationship",
+      "antonyms": "conflict, separation",
+      "forms": "partnership, partnerships",
+      "example": "The two schools formed a partnership for the exchange program."
+    },
+    {
+      "word": "correspondence",
+      "meaning": "letters or messages exchanged between people",
+      "japaneseMeaning": "通信、文通",
+      "synonyms": "messages, letters",
+      "antonyms": "silence, no contact",
+      "forms": "correspondence",
+      "example": "The office keeps copies of all official correspondence."
+    }
+  ]
+}

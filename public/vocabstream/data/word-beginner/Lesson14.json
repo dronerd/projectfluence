@@ -1,0 +1,122 @@
+{
+  "lesson_id": "eiken-pre2-14",
+  "title": "Lesson 14",
+  "paragraph": "Work and business include jobs, careers and workplaces where employees and employers cooperate to reach goals. Contracts, meetings and training help staff develop skills, and tasks, deadlines and teamwork shape professional success.",
+  "words": [
+    {
+      "word": "comb",
+      "meaning": "to comb",
+      "japaneseMeaning": "とかす",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "comb, combs, combing, combed",
+      "example": "I comb every day."
+    },
+    {
+      "word": "text",
+      "meaning": "to text",
+      "japaneseMeaning": "メッセージを送る",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "text, texts, texting, texted",
+      "example": "I text every day."
+    },
+    {
+      "word": "type",
+      "meaning": "to type",
+      "japaneseMeaning": "タイプする",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "type, types, typeing, typeed",
+      "example": "I type every day."
+    },
+    {
+      "word": "point",
+      "meaning": "to point",
+      "japaneseMeaning": "指さす",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "point, points, pointing, pointed",
+      "example": "I point every day."
+    },
+    {
+      "word": "skip",
+      "meaning": "to skip",
+      "japaneseMeaning": "スキップする",
+      "synonyms": "do, act",
+      "antonyms": "opposite, not",
+      "forms": "skip, skips, skiping, skiped",
+      "example": "I skip every day."
+    },
+    {
+      "word": "fly",
+      "meaning": "to move in the air",
+      "japaneseMeaning": "飛ぶ",
+      "synonyms": [
+        "soar",
+        "travel"
+      ],
+      "antonyms": [
+        "land"
+      ],
+      "forms": "fly, flies, flying, flew, flown",
+      "example": "Birds fly over the park."
+    },
+    {
+      "word": "feed",
+      "meaning": "to give food to a person or animal",
+      "japaneseMeaning": "えさをやる",
+      "synonyms": [
+        "give food",
+        "serve"
+      ],
+      "antonyms": [
+        "starve"
+      ],
+      "forms": "feed, feeds, feeding, fed",
+      "example": "I feed my cat every morning."
+    },
+    {
+      "word": "iron",
+      "meaning": "to make clothes flat with a hot tool",
+      "japaneseMeaning": "アイロンをかける",
+      "synonyms": [
+        "press",
+        "smooth"
+      ],
+      "antonyms": [
+        "wrinkle"
+      ],
+      "forms": "iron, irons, ironing, ironed",
+      "example": "I iron my shirt before school."
+    },
+    {
+      "word": "rain",
+      "meaning": "to have water falling from the sky",
+      "japaneseMeaning": "雨が降る",
+      "synonyms": [
+        "shower",
+        "pour"
+      ],
+      "antonyms": [
+        "clear"
+      ],
+      "forms": "rain, rains, raining, rained",
+      "example": "It may rain this afternoon."
+    },
+    {
+      "word": "snow",
+      "meaning": "to have white ice falling from the sky",
+      "japaneseMeaning": "雪が降る",
+      "synonyms": [
+        "fall",
+        "flake"
+      ],
+      "antonyms": [
+        "melt"
+      ],
+      "forms": "snow, snows, snowing, snowed",
+      "example": "It can snow in January."
+    }
+  ]
+}

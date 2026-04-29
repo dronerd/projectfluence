@@ -1,0 +1,102 @@
+{
+  "lesson_id": "eiken-pre2-2",
+  "title": "Lesson 2",
+  "paragraph": "Home life includes many everyday items that make living comfortable. From furniture and appliances to simple things like towels and cushions, organized spaces help you relax. Regular care of these items keeps a home clean and welcoming.",
+  "words": [
+    {
+      "word": "butter",
+      "meaning": "a basic word for butter",
+      "japaneseMeaning": "バター",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "butter, butters",
+      "example": "I see a butter."
+    },
+    {
+      "word": "cereal",
+      "meaning": "a basic word for cereal",
+      "japaneseMeaning": "シリアル",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "cereal, cereals",
+      "example": "I see a cereal."
+    },
+    {
+      "word": "soup",
+      "meaning": "a basic word for soup",
+      "japaneseMeaning": "スープ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "soup, soups",
+      "example": "I see a soup."
+    },
+    {
+      "word": "pizza",
+      "meaning": "a basic word for pizza",
+      "japaneseMeaning": "ピザ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "pizza, pizzas",
+      "example": "I see a pizza."
+    },
+    {
+      "word": "sandwich",
+      "meaning": "a basic word for sandwich",
+      "japaneseMeaning": "サンドイッチ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "sandwich, sandwichs",
+      "example": "I see a sandwich."
+    },
+    {
+      "word": "salad",
+      "meaning": "a basic word for salad",
+      "japaneseMeaning": "サラダ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "salad, salads",
+      "example": "I see a salad."
+    },
+    {
+      "word": "cookie",
+      "meaning": "a basic word for cookie",
+      "japaneseMeaning": "クッキー",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "cookie, cookies",
+      "example": "I see a cookie."
+    },
+    {
+      "word": "chocolate",
+      "meaning": "a basic word for chocolate",
+      "japaneseMeaning": "チョコレート",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "chocolate, chocolates",
+      "example": "I see a chocolate."
+    },
+    {
+      "word": "donut",
+      "meaning": "a small sweet round food",
+      "japaneseMeaning": "ドーナツ",
+      "synonyms": [
+        "sweet",
+        "snack"
+      ],
+      "antonyms": [
+        "vegetable"
+      ],
+      "forms": "donut, donuts",
+      "example": "I eat a donut after lunch."
+    },
+    {
+      "word": "sugar",
+      "meaning": "a basic word for sugar",
+      "japaneseMeaning": "砂糖",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "sugar, sugars",
+      "example": "I see a sugar."
+    }
+  ]
+}

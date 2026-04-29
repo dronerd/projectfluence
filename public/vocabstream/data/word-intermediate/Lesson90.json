@@ -1,0 +1,96 @@
+{
+  "lesson_id": "eiken-2-90",
+  "title": "Lesson 90",
+  "words": [
+    {
+      "word": "screen",
+      "meaning": "to check someone or something for a problem",
+      "japaneseMeaning": "検査する、審査する",
+      "synonyms": "check, test",
+      "antonyms": "ignore, accept",
+      "forms": "screen, screens, screening, screened",
+      "example": "The clinic screens visitors for fever."
+    },
+    {
+      "word": "load",
+      "meaning": "to put things into a vehicle, machine, or container",
+      "japaneseMeaning": "積む、読み込む",
+      "synonyms": "pack, place",
+      "antonyms": "unload, empty",
+      "forms": "load, loads, loading, loaded",
+      "example": "We loaded the boxes into the truck."
+    },
+    {
+      "word": "prepare",
+      "meaning": "to make ready beforehand",
+      "japaneseMeaning": "準備する",
+      "synonyms": "get ready, arrange",
+      "antonyms": "neglect, delay",
+      "forms": "prepare, prepares, preparing, prepared",
+      "example": "Prepare your presentation tonight."
+    },
+    {
+      "word": "instruct",
+      "meaning": "to teach someone how to do something",
+      "japaneseMeaning": "教える、指示する",
+      "synonyms": "teach, guide",
+      "antonyms": "learn, mislead",
+      "forms": "instruct, instructs, instructing, instructed",
+      "example": "The coach instructed us to warm up first."
+    },
+    {
+      "word": "determine",
+      "meaning": "to decide or conclude",
+      "japaneseMeaning": "決定する",
+      "synonyms": "decide, conclude",
+      "antonyms": "hesitate, question",
+      "forms": "determine, determines, determining, determined",
+      "example": "They determined the next steps."
+    },
+    {
+      "word": "purchase",
+      "meaning": "to buy something",
+      "japaneseMeaning": "購入する",
+      "synonyms": "buy, obtain",
+      "antonyms": "sell, return",
+      "forms": "purchase, purchases, purchasing, purchased",
+      "example": "You can purchase tickets online."
+    },
+    {
+      "word": "upload",
+      "meaning": "to send a file from your computer to the internet",
+      "japaneseMeaning": "アップロードする",
+      "synonyms": "send, post",
+      "antonyms": "download, delete",
+      "forms": "upload, uploads, uploading, uploaded",
+      "example": "Please upload the report by Friday."
+    },
+    {
+      "word": "proceed",
+      "meaning": "to continue or go forward",
+      "japaneseMeaning": "進む",
+      "synonyms": "advance, continue",
+      "antonyms": "halt, stop",
+      "forms": "proceed, proceeds, proceeding, proceeded",
+      "example": "We will proceed with the plan."
+    },
+    {
+      "word": "shift",
+      "meaning": "to change position, direction, or focus",
+      "japaneseMeaning": "移す、変わる",
+      "synonyms": "change, move",
+      "antonyms": "stay, remain",
+      "forms": "shift, shifts, shifting, shifted",
+      "example": "The discussion shifted to the budget."
+    },
+    {
+      "word": "sort",
+      "meaning": "to put things into groups or in order",
+      "japaneseMeaning": "分類する、並べ替える",
+      "synonyms": "classify, arrange",
+      "antonyms": "mix, scatter",
+      "forms": "sort, sorts, sorting, sorted",
+      "example": "Please sort the papers by date."
+    }
+  ]
+}

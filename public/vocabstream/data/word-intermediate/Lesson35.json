@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-35",
-  "title": "Lesson 10",
-  "paragraph": "Basic communicative and reporting verbs used in conversations, news, and messages.",
+  "lesson_id": "eiken-2-35",
+  "title": "Lesson 35",
   "words": [
-    { "word": "repeat", "meaning": "to say or do something again", "japaneseMeaning": "繰り返す", "synonyms": "restate, reiterate", "antonyms": "stop, cease", "example": "Please repeat the question." },
-    { "word": "reply", "meaning": "to answer in words or writing", "japaneseMeaning": "返信する／答える", "synonyms": "respond, answer", "antonyms": "ignore, silence", "example": "He replied to the email quickly." },
-    { "word": "report", "meaning": "to give information about something observed or investigated", "japaneseMeaning": "報告する", "synonyms": "inform, announce", "antonyms": "conceal, hide", "example": "She reported the incident to the manager." },
-    { "word": "return", "meaning": "to come or go back to a place", "japaneseMeaning": "戻る／返す", "synonyms": "go back, come back", "antonyms": "leave, depart", "example": "He returned the book to the library." },
-    { "word": "ride", "meaning": "to sit on and travel by a vehicle or animal", "japaneseMeaning": "乗る", "synonyms": "travel, mount", "antonyms": "walk, dismount", "example": "We rode the train to the city." },
-    { "word": "ring", "meaning": "to make a bell-like sound or to call by phone", "japaneseMeaning": "鳴る／電話をかける", "synonyms": "call, chime", "antonyms": "silence, mute", "example": "The phone rang during dinner." },
-    { "word": "rise", "meaning": "to move upward or increase", "japaneseMeaning": "上がる／昇る", "synonyms": "ascend, increase", "antonyms": "fall, decrease", "example": "Prices are expected to rise." },
-    { "word": "save", "meaning": "to keep something for future use or to rescue", "japaneseMeaning": "保存する／救う", "synonyms": "store, rescue", "antonyms": "waste, lose", "example": "Save your work often." },
-    { "word": "search", "meaning": "to look carefully for something", "japaneseMeaning": "捜す／検索する", "synonyms": "seek, look for", "antonyms": "ignore, overlook", "example": "Search the site for the document." },
-    { "word": "seem", "meaning": "to give the impression of being", "japaneseMeaning": "〜のように見える", "synonyms": "appear, look", "antonyms": "be, prove", "example": "It seems likely to rain." },
-    { "word": "sell", "meaning": "to give something in exchange for money", "japaneseMeaning": "売る", "synonyms": "vend, trade", "antonyms": "buy, purchase", "example": "They sell fresh bread every morning." },
-    { "word": "send", "meaning": "to cause something to go to a destination", "japaneseMeaning": "送る", "synonyms": "dispatch, transmit", "antonyms": "receive, keep", "example": "Please send the report by Friday." }
+    {
+      "word": "advantage",
+      "meaning": "superior position or gain",
+      "japaneseMeaning": "有利",
+      "synonyms": "benefit, edge",
+      "antonyms": "disadvantage, drawback",
+      "forms": "advantage, advantages",
+      "example": "He has an advantage in experience."
+    },
+    {
+      "word": "connection",
+      "meaning": "a relationship or link between people or things",
+      "japaneseMeaning": "つながり、関連",
+      "synonyms": "link, relationship",
+      "antonyms": "separation, gap",
+      "forms": "connection, connections",
+      "example": "The article explains the connection between sleep and memory."
+    },
+    {
+      "word": "expense",
+      "meaning": "money that you spend on something",
+      "japaneseMeaning": "費用、出費",
+      "synonyms": "cost, payment",
+      "antonyms": "income, profit",
+      "forms": "expense, expenses",
+      "example": "Travel is our biggest expense this month."
+    },
+    {
+      "word": "intention",
+      "meaning": "plan or purpose",
+      "japaneseMeaning": "意図",
+      "synonyms": "aim, purpose",
+      "antonyms": "accident, chance",
+      "forms": "intention, intentions",
+      "example": "Her intention was honest."
+    },
+    {
+      "word": "shipment",
+      "meaning": "goods sent from one place to another",
+      "japaneseMeaning": "発送品、出荷",
+      "synonyms": "delivery, goods",
+      "antonyms": "return, storage",
+      "forms": "shipment, shipments",
+      "example": "The shipment arrived two days later than expected."
+    },
+    {
+      "word": "role",
+      "meaning": "the part or responsibility someone has in a situation",
+      "japaneseMeaning": "役割",
+      "synonyms": "position, duty",
+      "antonyms": "irrelevance, absence",
+      "forms": "role, roles",
+      "example": "He understood his role in the team."
+    },
+    {
+      "word": "view",
+      "meaning": "an opinion or way of thinking about something",
+      "japaneseMeaning": "意見、見解",
+      "synonyms": "opinion, idea",
+      "antonyms": "fact, certainty",
+      "forms": "view, views",
+      "example": "She shared her view during the class discussion."
+    },
+    {
+      "word": "decision",
+      "meaning": "a choice you make after thinking",
+      "japaneseMeaning": "決定",
+      "synonyms": "choice, answer",
+      "antonyms": "question, doubt",
+      "forms": "decision, decisions",
+      "example": "Her decision to study abroad surprised us."
+    },
+    {
+      "word": "warning",
+      "meaning": "something that tells people about possible danger or trouble",
+      "japaneseMeaning": "警告、注意",
+      "synonyms": "alert, notice",
+      "antonyms": "permission, approval",
+      "forms": "warning, warnings",
+      "example": "The weather warning told people to stay indoors."
+    },
+    {
+      "word": "core",
+      "meaning": "the most important or central part of something",
+      "japaneseMeaning": "中心、核心",
+      "synonyms": "center, main part",
+      "antonyms": "edge, surface",
+      "forms": "core, cores",
+      "example": "Trust is at the core of a good team."
+    }
   ]
 }

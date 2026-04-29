@@ -1,103 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-20",
+  "lesson_id": "eiken-2-20",
   "title": "Lesson 20",
-  "paragraph": "Clothing helps people stay comfortable and show their style. Different materials, designs, and accessories let individuals express their personality through what they wear every day.",
   "words": [
     {
-      "word": "shirt",
-      "meaning": "a piece of clothing worn on the upper body",
-      "japaneseMeaning": "シャツ",
-      "synonyms": "top, blouse",
-      "antonyms": "",
-      "example": "He wore a clean shirt to the meeting."
+      "word": "activate",
+      "meaning": "to make a machine, system, or process start working",
+      "japaneseMeaning": "作動させる、有効にする",
+      "synonyms": "start, turn on",
+      "antonyms": "stop, disable",
+      "forms": "activate, activates, activating, activated",
+      "example": "You need a code to activate the online account."
     },
     {
-      "word": "jacket",
-      "meaning": "a short coat worn for warmth or style",
-      "japaneseMeaning": "ジャケット",
-      "synonyms": "coat, blazer",
-      "antonyms": "",
-      "example": "She put on a jacket before going outside."
+      "word": "withdraw",
+      "meaning": "to take something back or remove yourself from an activity",
+      "japaneseMeaning": "引き出す、撤回する",
+      "synonyms": "remove, take back",
+      "antonyms": "add, join",
+      "forms": "withdraw, withdraws, withdrawing, withdrew, withdrawn",
+      "example": "He decided to withdraw from the race because of an injury."
     },
     {
-      "word": "dress",
-      "meaning": "a piece of clothing that covers the body and legs",
-      "japaneseMeaning": "ドレス、ワンピース",
-      "synonyms": "gown, outfit",
-      "antonyms": "",
-      "example": "The dress looked beautiful in the sunlight."
+      "word": "promote",
+      "meaning": "to help something grow, improve, or become known",
+      "japaneseMeaning": "促進する、宣伝する",
+      "synonyms": "support, advertise",
+      "antonyms": "prevent, discourage",
+      "forms": "promote, promotes, promoting, promoted",
+      "example": "The campaign promotes healthy eating at school."
     },
     {
-      "word": "jeans",
-      "meaning": "trousers made from denim",
-      "japaneseMeaning": "ジーンズ",
-      "synonyms": "denim pants",
-      "antonyms": "",
-      "example": "He wears jeans almost every day."
+      "word": "recover",
+      "meaning": "to become well again or return to a normal state",
+      "japaneseMeaning": "回復する、取り戻す",
+      "synonyms": "get better, regain",
+      "antonyms": "worsen, lose",
+      "forms": "recover, recovers, recovering, recovered, recovery",
+      "example": "She will recover from the cold in a few days."
     },
     {
-      "word": "hat",
-      "meaning": "something worn on the head for style or protection",
-      "japaneseMeaning": "帽子",
-      "synonyms": "cap, headwear",
-      "antonyms": "",
-      "example": "The hat protected her from the sun."
+      "word": "destroy",
+      "meaning": "to damage something so badly that it cannot be used",
+      "japaneseMeaning": "破壊する",
+      "synonyms": "ruin, wreck",
+      "antonyms": "build, repair",
+      "forms": "destroy, destroys, destroying, destroyed, destruction",
+      "example": "A fire can destroy a wooden house quickly."
     },
     {
-      "word": "scarf",
-      "meaning": "a long piece of cloth worn around the neck",
-      "japaneseMeaning": "マフラー、スカーフ",
-      "synonyms": "wrap, shawl",
-      "antonyms": "",
-      "example": "He wrapped a scarf around his neck."
+      "word": "reserve",
+      "meaning": "to arrange to keep a seat, room, or item for later use",
+      "japaneseMeaning": "予約する、取っておく",
+      "synonyms": "book, save",
+      "antonyms": "cancel, release",
+      "forms": "reserve, reserves, reserving, reserved, reservation",
+      "example": "We should reserve a table before the restaurant gets full."
     },
     {
-      "word": "shoe",
-      "meaning": "something worn on the feet",
-      "japaneseMeaning": "靴",
-      "synonyms": "footwear, sneaker",
-      "antonyms": "",
-      "example": "Her shoe was very comfortable for walking."
+      "word": "restore",
+      "meaning": "to bring something back to its earlier condition",
+      "japaneseMeaning": "回復させる、復元する",
+      "synonyms": "repair, recover",
+      "antonyms": "damage, destroy",
+      "forms": "restore, restores, restoring, restored",
+      "example": "Volunteers helped restore the old community center."
     },
     {
-      "word": "sweater",
-      "meaning": "a warm knitted piece of clothing for the upper body",
-      "japaneseMeaning": "セーター",
-      "synonyms": "jumper, knitwear",
-      "antonyms": "",
-      "example": "He wore a thick sweater in winter."
+      "word": "escape",
+      "meaning": "to get away from danger or a difficult place",
+      "japaneseMeaning": "逃げる、脱出する",
+      "synonyms": "get away, flee",
+      "antonyms": "stay, remain",
+      "forms": "escape, escapes, escaping, escaped",
+      "example": "The family used the back door to escape the fire."
     },
     {
-      "word": "pocket",
-      "meaning": "a small bag sewn into clothes for carrying small items",
-      "japaneseMeaning": "ポケット",
-      "synonyms": "compartment",
-      "antonyms": "",
-      "example": "She put her keys in her pocket."
+      "word": "exchange",
+      "meaning": "to give something and receive something else",
+      "japaneseMeaning": "交換する",
+      "synonyms": "trade, swap",
+      "antonyms": "keep, hold",
+      "forms": "exchange, exchanges, exchanging, exchanged",
+      "example": "We exchange gifts at the end of the year."
     },
     {
-      "word": "necklace",
-      "meaning": "a piece of jewelry worn around the neck",
-      "japaneseMeaning": "ネックレス",
-      "synonyms": "chain, pendant",
-      "antonyms": "",
-      "example": "The necklace sparkled under the light."
-    },
-    {
-      "word": "uniform",
-      "meaning": "special clothes worn by members of an organization",
-      "japaneseMeaning": "制服",
-      "synonyms": "workwear, outfit",
-      "antonyms": "",
-      "example": "Students wear a uniform to school."
-    },
-    {
-      "word": "glasses",
-      "meaning": "lenses in frames worn to help you see",
-      "japaneseMeaning": "メガネ",
-      "synonyms": "spectacles, eyewear",
-      "antonyms": "",
-      "example": "She wears glasses when reading."
+      "word": "identify",
+      "meaning": "to recognize or name someone or something",
+      "japaneseMeaning": "特定する、識別する",
+      "synonyms": "recognize, name",
+      "antonyms": "miss, confuse",
+      "forms": "identify, identifies, identifying, identified, identification",
+      "example": "Can you identify the bird in this photo?"
     }
   ]
 }

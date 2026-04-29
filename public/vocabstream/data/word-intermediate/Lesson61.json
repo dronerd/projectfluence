@@ -1,20 +1,96 @@
-  {
-    "lesson_id": "eiken-pre2-61",
-    "title": "Lesson 61",
-    "paragraph": "Adjectives for novelty, typicality and quality — good for opinions and comparisons.",
-    "words": [
-      { "word": "new", "meaning": "recently created, discovered, or come into existence", "japaneseMeaning": "新しい", "synonyms": "brand-new, fresh", "antonyms": "old, used", "example": "I bought a new laptop yesterday." },
-      { "word": "normal", "meaning": "usual, expected, or typical", "japaneseMeaning": "普通の／通常の", "synonyms": "typical, ordinary", "antonyms": "abnormal, unusual", "example": "It’s normal to feel nervous before exams." },
-      { "word": "old-fashioned", "meaning": "not modern; out of date", "japaneseMeaning": "古風な／時代遅れの", "synonyms": "outdated, traditional", "antonyms": "modern, trendy", "example": "That hat looks old-fashioned but charming." },
-      { "word": "ordinary", "meaning": "with no special or distinctive features; normal", "japaneseMeaning": "普通の／ありふれた", "synonyms": "common, usual", "antonyms": "extraordinary, special", "example": "It was just an ordinary day at work." },
-      { "word": "original", "meaning": "existing from the beginning; unique and creative", "japaneseMeaning": "独創的な／元の", "synonyms": "innovative, unique", "antonyms": "unoriginal, copied", "example": "Her idea for the project was very original." },
-      { "word": "particular", "meaning": "specific or special; single out", "japaneseMeaning": "特定の／特別な", "synonyms": "specific, distinct", "antonyms": "general, vague", "example": "I was looking for a particular book about history." },
-      { "word": "perfect", "meaning": "having all the required qualities; without faults", "japaneseMeaning": "完璧な／申し分のない", "synonyms": "flawless, ideal", "antonyms": "imperfect, flawed", "example": "The performance was nearly perfect." },
-      { "word": "pleasant", "meaning": "giving a sense of happy satisfaction or enjoyment", "japaneseMeaning": "快い／心地よい", "synonyms": "enjoyable, agreeable", "antonyms": "unpleasant, disagreeable", "example": "We had a pleasant afternoon at the park." },
-      { "word": "poor", "meaning": "lacking sufficient money or of low quality", "japaneseMeaning": "貧しい／品質が悪い", "synonyms": "impoverished, inferior", "antonyms": "rich, excellent", "example": "The roads are in poor condition after the storm." },
-      { "word": "possible", "meaning": "able to be done or achieved; feasible", "japaneseMeaning": "可能な／あり得る", "synonyms": "feasible, achievable", "antonyms": "impossible, unattainable", "example": "Is it possible to finish this by Friday?" },
-      { "word": "powerful", "meaning": "having great power or strength", "japaneseMeaning": "強力な／力のある", "synonyms": "strong, potent", "antonyms": "weak, powerless", "example": "She gave a powerful speech." },
-      { "word": "quick", "meaning": "moving or doing something with speed", "japaneseMeaning": "速い／迅速な", "synonyms": "fast, rapid", "antonyms": "slow, leisurely", "example": "He is quick to understand new ideas." }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-61",
+  "title": "Lesson 61",
+  "words": [
+    {
+      "word": "courageous",
+      "meaning": "brave enough to face danger or difficulty",
+      "japaneseMeaning": "勇敢な",
+      "synonyms": "brave, bold",
+      "antonyms": "fearful, timid",
+      "forms": "courageous, courageously",
+      "example": "Her courageous decision helped the whole team."
+    },
+    {
+      "word": "familiar",
+      "meaning": "well known from long or close association",
+      "japaneseMeaning": "馴染みのある",
+      "synonyms": "known, recognizable",
+      "antonyms": "strange, unfamiliar",
+      "forms": "familiar, more familiar, most familiar",
+      "example": "That melody sounded familiar to me."
+    },
+    {
+      "word": "likely",
+      "meaning": "probably going to happen or be true",
+      "japaneseMeaning": "ありそうな、可能性が高い",
+      "synonyms": "probable, expected",
+      "antonyms": "unlikely, doubtful",
+      "forms": "likely, more likely, most likely",
+      "example": "It is likely to rain this afternoon."
+    },
+    {
+      "word": "reserved",
+      "meaning": "slow to show feelings or talk about yourself",
+      "japaneseMeaning": "控えめな、無口な",
+      "synonyms": "quiet, private",
+      "antonyms": "open, talkative",
+      "forms": "reserved",
+      "example": "He is reserved at first but friendly once you know him."
+    },
+    {
+      "word": "incapable",
+      "meaning": "not able to do something",
+      "japaneseMeaning": "能力がない、できない",
+      "synonyms": "unable, unfit",
+      "antonyms": "capable, able",
+      "forms": "incapable",
+      "example": "The old printer is incapable of printing color pages."
+    },
+    {
+      "word": "powerful",
+      "meaning": "having great power or strength",
+      "japaneseMeaning": "強力な／力のある",
+      "synonyms": "strong, potent",
+      "antonyms": "weak, powerless",
+      "forms": "powerful, more powerful, most powerful",
+      "example": "She gave a powerful speech."
+    },
+    {
+      "word": "unavailable",
+      "meaning": "not able to be used or not free to help",
+      "japaneseMeaning": "利用できない、都合がつかない",
+      "synonyms": "not free, absent",
+      "antonyms": "available, free",
+      "forms": "unavailable, unavailability",
+      "example": "The meeting room is unavailable after three o'clock."
+    },
+    {
+      "word": "flexible",
+      "meaning": "able to adjust easily",
+      "japaneseMeaning": "柔軟な",
+      "synonyms": "adaptable, versatile",
+      "antonyms": "rigid, inflexible",
+      "forms": "flexible, flexibly, flexibility",
+      "example": "A flexible approach helps solve problems."
+    },
+    {
+      "word": "essential",
+      "meaning": "very needed",
+      "japaneseMeaning": "不可欠な、本質的な",
+      "synonyms": "vital, crucial",
+      "antonyms": "unnecessary, extra",
+      "forms": "essential, more essential, most essential",
+      "example": "Water is essential for life."
+    },
+    {
+      "word": "unique",
+      "meaning": "being the only one of its kind",
+      "japaneseMeaning": "独特の、唯一の",
+      "synonyms": "special, distinctive",
+      "antonyms": "common, ordinary",
+      "forms": "unique, uniquely",
+      "example": "The town has a unique festival every winter."
+    }
+  ]
+}

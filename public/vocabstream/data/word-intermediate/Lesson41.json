@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-41",
-  "title": "Lesson 16",
-  "paragraph": "Kitchen verbs and simple actions used in cooking and quick tasks.",
+  "lesson_id": "eiken-2-41",
+  "title": "Lesson 41",
   "words": [
-    { "word": "spell", "meaning": "to form a word with letters in correct order", "japaneseMeaning": "つづる／スペルする", "synonyms": "write, form", "antonyms": "mis-spell, confuse", "example": "Can you spell your name?" },
-    { "word": "text", "meaning": "to send a written electronic message", "japaneseMeaning": "テキストを送る／メールする", "synonyms": "message, SMS", "antonyms": "call, speak", "example": "Text me when you arrive." },
-    { "word": "whistle", "meaning": "to produce a high sound by blowing or pursing lips", "japaneseMeaning": "口笛を吹く", "synonyms": "tweet, chirp", "antonyms": "silent, mute", "example": "He whistled a happy tune." },
-    { "word": "yell", "meaning": "to shout loudly, often from anger", "japaneseMeaning": "大声で叫ぶ", "synonyms": "shout, scream", "antonyms": "whisper, murmur", "example": "Don't yell at your sister." },
-    { "word": "boil", "meaning": "to heat a liquid until it bubbles", "japaneseMeaning": "沸かす／煮る", "synonyms": "simmer, cook", "antonyms": "freeze, cool", "example": "Boil the water for tea." },
-    { "word": "fry", "meaning": "to cook in hot fat or oil", "japaneseMeaning": "揚げる／炒める", "synonyms": "saute, cook", "antonyms": "boil, bake", "example": "Fry the onions until golden." },
-    { "word": "pour", "meaning": "to cause liquid to flow from a container", "japaneseMeaning": "注ぐ", "synonyms": "tip, stream", "antonyms": "drain, retain", "example": "Pour the sauce over the pasta." },
-    { "word": "roast", "meaning": "to cook food, especially meat, by dry heat", "japaneseMeaning": "ローストする／焼く", "synonyms": "bake, grill", "antonyms": "boil, steam", "example": "Roast the chicken for an hour." },
-    { "word": "slice", "meaning": "to cut into thin pieces", "japaneseMeaning": "薄切りにする", "synonyms": "cut, carve", "antonyms": "join, combine", "example": "Slice the bread before serving." },
-    { "word": "stir", "meaning": "to mix gently with a spoon", "japaneseMeaning": "かき混ぜる", "synonyms": "mix, blend", "antonyms": "separate, leave", "example": "Stir the soup occasionally." },
-    { "word": "taste", "meaning": "to sample a small amount to check flavor", "japaneseMeaning": "味見する", "synonyms": "sample, try", "antonyms": "ignore, avoid", "example": "Taste the sauce and adjust seasoning." },
-    { "word": "burn", "meaning": "to be damaged by fire or heat", "japaneseMeaning": "燃やす／焦がす", "synonyms": "scorch, char", "antonyms": "extinguish, cool", "example": "Be careful not to burn the toast." }
+    {
+      "word": "aim",
+      "meaning": "desired outcome",
+      "japaneseMeaning": "狙い",
+      "synonyms": "goal, objective",
+      "antonyms": "randomness, accident",
+      "forms": "aim, aims",
+      "example": "The aim was to improve quality."
+    },
+    {
+      "word": "contract",
+      "meaning": "to decrease in size",
+      "japaneseMeaning": "縮小する",
+      "synonyms": "shrink, reduce",
+      "antonyms": "expand, enlarge",
+      "forms": "contract, contracts, contracting, contracted",
+      "example": "The metal contracts in cold weather."
+    },
+    {
+      "word": "experiment",
+      "meaning": "a test done to discover or prove something",
+      "japaneseMeaning": "実験",
+      "synonyms": "trial, test",
+      "antonyms": "guess, assumption",
+      "forms": "experiment, experiments",
+      "example": "The experiment confirmed the hypothesis."
+    },
+    {
+      "word": "opening",
+      "meaning": "the first part of an event, story, or speech",
+      "japaneseMeaning": "始まり、冒頭",
+      "synonyms": "start, beginning",
+      "antonyms": "ending, close",
+      "forms": "opening, openings",
+      "example": "The opening of the movie was quiet but powerful."
+    },
+    {
+      "word": "passenger",
+      "meaning": "a person traveling in a car, bus, train, or plane",
+      "japaneseMeaning": "乗客",
+      "synonyms": "traveler, rider",
+      "antonyms": "driver, pilot",
+      "forms": "passenger, passengers",
+      "example": "One passenger left a bag on the bus."
+    },
+    {
+      "word": "salary",
+      "meaning": "money a worker gets for a month or year of work",
+      "japaneseMeaning": "給料、給与",
+      "synonyms": "pay, income",
+      "antonyms": "expense, debt",
+      "forms": "salary, salaries",
+      "example": "The job offers a good salary and flexible hours."
+    },
+    {
+      "word": "portal",
+      "meaning": "a website or service that gives access to information",
+      "japaneseMeaning": "ポータルサイト、入口",
+      "synonyms": "site, gateway",
+      "antonyms": "block, barrier",
+      "forms": "portal, portals",
+      "example": "Students submit homework through the school portal."
+    },
+    {
+      "word": "stage",
+      "meaning": "one step in a process or event",
+      "japaneseMeaning": "段階、舞台",
+      "synonyms": "step, period",
+      "antonyms": "end, finish",
+      "forms": "stage, stages",
+      "example": "The project is now in its final stage."
+    },
+    {
+      "word": "interface",
+      "meaning": "the way a person uses a computer program or machine",
+      "japaneseMeaning": "インターフェース、接点",
+      "synonyms": "screen, control system",
+      "antonyms": "background, hardware",
+      "forms": "interface, interfaces",
+      "example": "The app has a simple interface for new users."
+    },
+    {
+      "word": "heritage",
+      "meaning": "traditions, buildings, or culture from the past",
+      "japaneseMeaning": "遺産、伝統",
+      "synonyms": "tradition, culture",
+      "antonyms": "modern trend, new custom",
+      "forms": "heritage",
+      "example": "The town protects its cultural heritage."
+    }
   ]
 }

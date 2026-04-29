@@ -1,105 +1,96 @@
-
-  {
-    "lesson_id": "eiken-pre2-55",
-    "title": "Lesson 55",
-    "paragraph": "Feelings and emotional reactions — useful words to describe moods and responses.",
-    "words": [
-      {
-        "word": "pleased",
-        "meaning": "feeling happy or satisfied about something",
-        "japaneseMeaning": "満足している／嬉しい",
-        "synonyms": "satisfied, happy",
-        "antonyms": "disappointed, upset",
-        "example": "She was pleased with her exam results."
-      },
-      {
-        "word": "proud",
-        "meaning": "feeling deep pleasure or satisfaction from achievements",
-        "japaneseMeaning": "誇りに思う／誇らしい",
-        "synonyms": "pleased, honored",
-        "antonyms": "ashamed, embarrassed",
-        "example": "His parents were proud of his success."
-      },
-      {
-        "word": "relaxed",
-        "meaning": "free from tension and anxiety; calm",
-        "japaneseMeaning": "リラックスした／落ち着いた",
-        "synonyms": "calm, at ease",
-        "antonyms": "tense, nervous",
-        "example": "She felt relaxed after the massage."
-      },
-      {
-        "word": "sad",
-        "meaning": "feeling sorrow or unhappiness",
-        "japaneseMeaning": "悲しい／寂しい",
-        "synonyms": "unhappy, sorrowful",
-        "antonyms": "happy, cheerful",
-        "example": "He was sad to say goodbye to his friends."
-      },
-      {
-        "word": "satisfied",
-        "meaning": "contented because expectations have been met",
-        "japaneseMeaning": "満足している",
-        "synonyms": "content, pleased",
-        "antonyms": "dissatisfied, unhappy",
-        "example": "I am satisfied with the final design."
-      },
-      {
-        "word": "scared",
-        "meaning": "feeling frightened or worried about danger",
-        "japaneseMeaning": "怖がっている／おびえている",
-        "synonyms": "afraid, frightened",
-        "antonyms": "brave, calm",
-        "example": "The loud noise made the child scared."
-      },
-      {
-        "word": "shocked",
-        "meaning": "surprised and upset by an unexpected event",
-        "japaneseMeaning": "ショックを受けた／びっくりした",
-        "synonyms": "stunned, astonished",
-        "antonyms": "unmoved, unaffected",
-        "example": "We were shocked by the sudden news."
-      },
-      {
-        "word": "stressed",
-        "meaning": "experiencing mental or emotional strain",
-        "japaneseMeaning": "ストレスを感じている",
-        "synonyms": "tense, pressured",
-        "antonyms": "relaxed, calm",
-        "example": "He felt stressed before the deadline."
-      },
-      {
-        "word": "surprised",
-        "meaning": "feeling or showing shock because something was unexpected",
-        "japaneseMeaning": "驚いた",
-        "synonyms": "astonished, amazed",
-        "antonyms": "expectant, unsurprised",
-        "example": "She was surprised by the party her friends planned."
-      },
-      {
-        "word": "tired",
-        "meaning": "in need of sleep or rest; weary",
-        "japaneseMeaning": "疲れた／眠い",
-        "synonyms": "weary, exhausted",
-        "antonyms": "energetic, refreshed",
-        "example": "After the hike, everyone was tired."
-      },
-      {
-        "word": "unhappy",
-        "meaning": "not happy; feeling sorrow or dissatisfaction",
-        "japaneseMeaning": "不幸な／満たされない",
-        "synonyms": "sad, discontent",
-        "antonyms": "happy, content",
-        "example": "She was unhappy with the service."
-      },
-      {
-        "word": "upset",
-        "meaning": "emotionally disturbed or distressed",
-        "japaneseMeaning": "動揺した／腹を立てた",
-        "synonyms": "distressed, bothered",
-        "antonyms": "calm, pleased",
-        "example": "He was upset when he missed the train."
-      }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-55",
+  "title": "Lesson 55",
+  "words": [
+    {
+      "word": "average",
+      "meaning": "usual, or found by adding numbers and dividing",
+      "japaneseMeaning": "平均的な／普通の",
+      "synonyms": "typical, ordinary",
+      "antonyms": "exceptional, extraordinary",
+      "forms": "average, averages",
+      "example": "The average temperature in May is warm."
+    },
+    {
+      "word": "supplementary",
+      "meaning": "added to provide more information or support",
+      "japaneseMeaning": "補足の、追加の",
+      "synonyms": "additional, extra",
+      "antonyms": "main, basic",
+      "forms": "supplementary",
+      "example": "The teacher gave us supplementary reading for homework."
+    },
+    {
+      "word": "compassionate",
+      "meaning": "showing care for people who are suffering",
+      "japaneseMeaning": "思いやりのある、情け深い",
+      "synonyms": "caring, kind",
+      "antonyms": "cruel, cold",
+      "forms": "compassionate, compassionately",
+      "example": "The nurse was compassionate toward every patient."
+    },
+    {
+      "word": "professional",
+      "meaning": "relating to a job that requires special training or education",
+      "japaneseMeaning": "専門的な",
+      "synonyms": "expert, skilled",
+      "antonyms": "amateur, unskilled",
+      "forms": "professional, more professional, most professional",
+      "example": "She gave a very professional presentation."
+    },
+    {
+      "word": "miniature",
+      "meaning": "much smaller than the usual size",
+      "japaneseMeaning": "小型の、ミニチュアの",
+      "synonyms": "small, tiny",
+      "antonyms": "huge, full-size",
+      "forms": "miniature",
+      "example": "The museum displayed a miniature model of the castle."
+    },
+    {
+      "word": "portable",
+      "meaning": "easy to carry or move",
+      "japaneseMeaning": "持ち運びできる",
+      "synonyms": "movable, light",
+      "antonyms": "fixed, heavy",
+      "forms": "portable, portability",
+      "example": "A portable charger is useful when traveling."
+    },
+    {
+      "word": "loud",
+      "meaning": "producing much noise",
+      "japaneseMeaning": "うるさい／大きな音の",
+      "synonyms": "noisy, booming",
+      "antonyms": "quiet, silent",
+      "forms": "loud, more loud, most loud",
+      "example": "The music was too loud for the room."
+    },
+    {
+      "word": "disciplined",
+      "meaning": "controlled and self-regulated",
+      "japaneseMeaning": "規律正しい",
+      "synonyms": "self-controlled, organized",
+      "antonyms": "undisciplined, chaotic",
+      "forms": "disciplined, disciplinedly",
+      "example": "Disciplined study leads to success."
+    },
+    {
+      "word": "qualified",
+      "meaning": "having the skill or papers needed for something",
+      "japaneseMeaning": "資格のある",
+      "synonyms": "trained, able",
+      "antonyms": "unqualified, unable",
+      "forms": "qualified, more qualified, most qualified",
+      "example": "She is qualified to teach young children."
+    },
+    {
+      "word": "spare",
+      "meaning": "available because it is not being used",
+      "japaneseMeaning": "予備の、余分な",
+      "synonyms": "extra, available",
+      "antonyms": "needed, used",
+      "forms": "spare, more spare, most spare",
+      "example": "Please bring a spare pen to the exam."
+    }
+  ]
+}

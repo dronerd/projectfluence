@@ -1,19 +1,96 @@
- {
-    "lesson_id": "eiken-pre2-52",
-    "title": "Lesson 52",
-    "paragraph": "Achievement and talent adjectives, followed by basic feeling words to describe emotional states.",
-    "words": [
-      { "word": "successful", "meaning": "achieving desired aims or results", "japaneseMeaning": "成功した／うまくいっている", "synonyms": "accomplished, prosperous", "antonyms": "unsuccessful, failing", "example": "Their project was successful and well received." },
-      { "word": "talented", "meaning": "having a natural aptitude or skill", "japaneseMeaning": "才能のある", "synonyms": "gifted, skilled", "antonyms": "untalented, inept", "example": "She is a talented musician." },
-      { "word": "talkative", "meaning": "fond of talking a lot", "japaneseMeaning": "お喋りな", "synonyms": "loquacious, chatty", "antonyms": "quiet, reticent", "example": "My friend is very talkative on the phone." },
-      { "word": "tidy", "meaning": "neat and in good order", "japaneseMeaning": "きちんとした／整頓された", "synonyms": "neat, orderly", "antonyms": "messy, untidy", "example": "Keep your desk tidy for study." },
-      { "word": "unfriendly", "meaning": "not friendly; hostile", "japaneseMeaning": "不親切な／不愛想な", "synonyms": "cold, hostile", "antonyms": "friendly, cordial", "example": "He seemed unfriendly at the meeting." },
-      { "word": "weak", "meaning": "lacking physical strength or power", "japaneseMeaning": "弱い", "synonyms": "feeble, frail", "antonyms": "strong, robust", "example": "After the flu, she still feels weak." },
-      { "word": "afraid", "meaning": "feeling fear or anxiety; frightened", "japaneseMeaning": "怖がっている／恐れている", "synonyms": "scared, fearful", "antonyms": "brave, confident", "example": "He is afraid of the dark." },
-      { "word": "angry", "meaning": "feeling strong annoyance or displeasure", "japaneseMeaning": "怒っている", "synonyms": "furious, irritated", "antonyms": "calm, pleased", "example": "She was angry about the delay." },
-      { "word": "annoyed", "meaning": "slightly angry; irritated", "japaneseMeaning": "苛立っている／うんざりしている", "synonyms": "irritated, bothered", "antonyms": "pleased, delighted", "example": "He was annoyed by the loud noise." },
-      { "word": "anxious", "meaning": "experiencing worry or unease", "japaneseMeaning": "不安な／心配している", "synonyms": "worried, uneasy", "antonyms": "calm, relaxed", "example": "She felt anxious before the exam." },
-      { "word": "ashamed", "meaning": "feeling embarrassed or guilty about one's actions", "japaneseMeaning": "恥ずかしい／罪悪感のある", "synonyms": "embarrassed, guilty", "antonyms": "proud, unashamed", "example": "He was ashamed of his behavior." },
-      { "word": "bored", "meaning": "feeling weary because one is unoccupied or uninterested", "japaneseMeaning": "退屈している", "synonyms": "uninterested, dull", "antonyms": "engaged, interested", "example": "I get bored during long meetings." }
-    ]
-  }
+{
+  "lesson_id": "eiken-2-52",
+  "title": "Lesson 52",
+  "words": [
+    {
+      "word": "ashamed",
+      "meaning": "feeling embarrassed or guilty about one's actions",
+      "japaneseMeaning": "恥ずかしい／罪悪感のある",
+      "synonyms": "embarrassed, guilty",
+      "antonyms": "proud, unashamed",
+      "forms": "ashamed, more ashamed, most ashamed",
+      "example": "He was ashamed of his behavior."
+    },
+    {
+      "word": "exact",
+      "meaning": "completely accurate and precise",
+      "japaneseMeaning": "正確な、精密な",
+      "synonyms": "precise, accurate",
+      "antonyms": "approximate, imprecise",
+      "forms": "exact, more exact, most exact",
+      "example": "Please provide the exact measurements."
+    },
+    {
+      "word": "junior",
+      "meaning": "lower in age, rank, or position",
+      "japaneseMeaning": "年下の、下位の",
+      "synonyms": "younger, lower-level",
+      "antonyms": "senior, higher-level",
+      "forms": "junior, more junior, most junior",
+      "example": "A junior staff member helped us at the desk."
+    },
+    {
+      "word": "private",
+      "meaning": "only for one person or group",
+      "japaneseMeaning": "私的な",
+      "synonyms": "personal, confidential",
+      "antonyms": "public, open",
+      "forms": "private, more private, most private",
+      "example": "This is a private event for members only."
+    },
+    {
+      "word": "technical",
+      "meaning": "connected with machines, science, or a special skill",
+      "japaneseMeaning": "技術的な、専門的な",
+      "synonyms": "specialized, practical",
+      "antonyms": "general, simple",
+      "forms": "technical, more technical, most technical",
+      "example": "The website had a technical problem this morning."
+    },
+    {
+      "word": "significant",
+      "meaning": "large or important enough to notice",
+      "japaneseMeaning": "重要な、かなりの",
+      "synonyms": "important, major",
+      "antonyms": "minor, small",
+      "forms": "significant, significantly",
+      "example": "There was a significant change in the results."
+    },
+    {
+      "word": "lonely",
+      "meaning": "sad because one has no friends or company",
+      "japaneseMeaning": "孤独な／寂しい",
+      "synonyms": "isolated, alone",
+      "antonyms": "sociable, accompanied",
+      "forms": "lonely, more lonely, most lonely",
+      "example": "He felt lonely after moving to a new city."
+    },
+    {
+      "word": "generous",
+      "meaning": "happy to give or share with others",
+      "japaneseMeaning": "気前のよい",
+      "synonyms": "giving, kind",
+      "antonyms": "selfish, mean",
+      "forms": "generous, more generous, most generous",
+      "example": "My generous neighbor shared fresh vegetables."
+    },
+    {
+      "word": "balanced",
+      "meaning": "with the right amount of each part",
+      "japaneseMeaning": "バランスのとれた、公正な",
+      "synonyms": "stable, rational",
+      "antonyms": "biased, unstable",
+      "forms": "balanced, more balanced, most balanced",
+      "example": "She offered a balanced perspective on the issue."
+    },
+    {
+      "word": "solid",
+      "meaning": "hard, strong, and not easy to break",
+      "japaneseMeaning": "しっかりした、確かな",
+      "synonyms": "strong, reliable",
+      "antonyms": "weak, uncertain",
+      "forms": "solid, more solid, most solid",
+      "example": "The report gives solid evidence for the idea."
+    }
+  ]
+}

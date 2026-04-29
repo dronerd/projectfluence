@@ -1,19 +1,96 @@
 {
-  "lesson_id": "eiken-pre2-39",
-  "title": "Lesson 14",
-  "paragraph": "Walking, wanting, watching and other common verbs for daily routines and preferences.",
+  "lesson_id": "eiken-2-39",
+  "title": "Lesson 39",
   "words": [
-    { "word": "walk", "meaning": "to move at a regular pace by lifting and setting down each foot", "japaneseMeaning": "歩く", "synonyms": "stroll, stride", "antonyms": "run, sprint", "example": "I walk to school every day." },
-    { "word": "want", "meaning": "to desire something", "japaneseMeaning": "欲する／望む", "synonyms": "wish, desire", "antonyms": "dislike, reject", "example": "I want a new book." },
-    { "word": "watch", "meaning": "to look at something attentively", "japaneseMeaning": "見る／注視する", "synonyms": "observe, view", "antonyms": "ignore, overlook", "example": "Watch the film with subtitles." },
-    { "word": "win", "meaning": "to be successful in a contest or competition", "japaneseMeaning": "勝つ", "synonyms": "victory, prevail", "antonyms": "lose, fail", "example": "She won first prize." },
-    { "word": "wish", "meaning": "to hope for something that is not guaranteed", "japaneseMeaning": "願う", "synonyms": "desire, long for", "antonyms": "dread, reject", "example": "I wish you good luck." },
-    { "word": "work", "meaning": "to perform tasks for a job or purpose", "japaneseMeaning": "働く／作業する", "synonyms": "labor, operate", "antonyms": "rest, idle", "example": "He works at a hospital." },
-    { "word": "worry", "meaning": "to feel anxious about possible problems", "japaneseMeaning": "心配する", "synonyms": "fret, concern", "antonyms": "relax, reassure", "example": "Don't worry, everything will be fine." },
-    { "word": "write", "meaning": "to form letters, words, or symbols on a surface", "japaneseMeaning": "書く", "synonyms": "compose, record", "antonyms": "erase, delete", "example": "Write your name at the top." },
-    { "word": "bake", "meaning": "to cook by dry heat, usually in an oven", "japaneseMeaning": "焼く（オーブンで）", "synonyms": "cook, roast", "antonyms": "freeze, raw", "example": "She likes to bake bread on weekends." },
-    { "word": "behave", "meaning": "to act in a specified manner", "japaneseMeaning": "行動する／振る舞う", "synonyms": "act, conduct oneself", "antonyms": "misbehave, act up", "example": "Please behave politely." },
-    { "word": "brush", "meaning": "to clean or arrange with a brush", "japaneseMeaning": "磨く／ブラッシングする", "synonyms": "comb, scrub", "antonyms": "neglect, ignore", "example": "Brush your teeth twice daily." },
-    { "word": "clap", "meaning": "to strike the palms of the hands together to show approval", "japaneseMeaning": "拍手する", "synonyms": "applaud, applaud", "antonyms": "boo, jeer", "example": "Clap loudly at the end of the show." }
+    {
+      "word": "afford",
+      "meaning": "to have enough money to pay for",
+      "japaneseMeaning": "余裕がある／買う余裕がある",
+      "synonyms": "pay for, bear",
+      "antonyms": "lack, be unable",
+      "forms": "afford, affords, affording, afforded",
+      "example": "I can't afford a new car now."
+    },
+    {
+      "word": "control",
+      "meaning": "to make someone or something do what you want",
+      "japaneseMeaning": "制御する、管理する",
+      "synonyms": "manage, direct",
+      "antonyms": "release, lose",
+      "forms": "control, controls, controlling, controlled",
+      "example": "He lost control of the situation."
+    },
+    {
+      "word": "inspect",
+      "meaning": "to look at something carefully",
+      "japaneseMeaning": "点検する",
+      "synonyms": "check, examine",
+      "antonyms": "ignore, miss",
+      "forms": "inspect, inspects, inspecting, inspected",
+      "example": "Workers inspect the bridge every spring."
+    },
+    {
+      "word": "remain",
+      "meaning": "to stay in the same place or condition",
+      "japaneseMeaning": "残る、〜のままでいる",
+      "synonyms": "stay, continue",
+      "antonyms": "leave, change",
+      "forms": "remain, remains, remaining, remained",
+      "example": "Please remain seated until the bus stops."
+    },
+    {
+      "word": "prevail",
+      "meaning": "to win or succeed after difficulty",
+      "japaneseMeaning": "勝る、打ち勝つ",
+      "synonyms": "succeed, win",
+      "antonyms": "fail, lose",
+      "forms": "prevail, prevails, prevailing, prevailed",
+      "example": "The team prevailed after a difficult final match."
+    },
+    {
+      "word": "expand",
+      "meaning": "to increase in size",
+      "japaneseMeaning": "拡大する",
+      "synonyms": "enlarge, grow",
+      "antonyms": "contract, shrink",
+      "forms": "expand, expands, expanding, expanded",
+      "example": "The company plans to expand its operations."
+    },
+    {
+      "word": "seem",
+      "meaning": "to give the impression of being",
+      "japaneseMeaning": "〜のように見える",
+      "synonyms": "appear, look",
+      "antonyms": "be, prove",
+      "forms": "seem, seems, seeming, seemed",
+      "example": "It seems likely to rain."
+    },
+    {
+      "word": "recall",
+      "meaning": "to remember",
+      "japaneseMeaning": "思い出す",
+      "synonyms": "remember, recollect",
+      "antonyms": "forget, overlook",
+      "forms": "recall, recalls, recalling, recalled",
+      "example": "He recalled the details of the event."
+    },
+    {
+      "word": "emphasize",
+      "meaning": "to give special importance",
+      "japaneseMeaning": "強調する",
+      "synonyms": "highlight, stress",
+      "antonyms": "understate, downplay",
+      "forms": "emphasize, emphasizes, emphasizing, emphasized",
+      "example": "She emphasized the key points."
+    },
+    {
+      "word": "edit",
+      "meaning": "to change writing, video, or sound to make it better",
+      "japaneseMeaning": "編集する、修正する",
+      "synonyms": "revise, correct",
+      "antonyms": "ignore, publish",
+      "forms": "edit, edits, editing, edited",
+      "example": "Please edit your essay before you submit it."
+    }
   ]
 }

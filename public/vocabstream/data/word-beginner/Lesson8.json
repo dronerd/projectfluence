@@ -1,0 +1,97 @@
+{
+  "lesson_id": "eiken-pre2-8",
+  "title": "Lesson 8",
+  "paragraph": "Abstract and useful words help us describe events, feelings, and decisions. Words like advice, choice and effort are common in conversations about daily life, study and work. Understanding these terms improves communication and critical thinking.",
+  "words": [
+    {
+      "word": "cat",
+      "meaning": "a basic word for cat",
+      "japaneseMeaning": "猫",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "cat, cats",
+      "example": "I see a cat."
+    },
+    {
+      "word": "rabbit",
+      "meaning": "a basic word for rabbit",
+      "japaneseMeaning": "うさぎ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "rabbit, rabbits",
+      "example": "I see a rabbit."
+    },
+    {
+      "word": "mouse",
+      "meaning": "a basic word for mouse",
+      "japaneseMeaning": "ねずみ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "mouse, mouses",
+      "example": "I see a mouse."
+    },
+    {
+      "word": "cow",
+      "meaning": "a basic word for cow",
+      "japaneseMeaning": "牛",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "cow, cows",
+      "example": "I see a cow."
+    },
+    {
+      "word": "pig",
+      "meaning": "a basic word for pig",
+      "japaneseMeaning": "豚",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "pig, pigs",
+      "example": "I see a pig."
+    },
+    {
+      "word": "sheep",
+      "meaning": "a basic word for sheep",
+      "japaneseMeaning": "羊",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "sheep, sheeps",
+      "example": "I see a sheep."
+    },
+    {
+      "word": "goat",
+      "meaning": "a basic word for goat",
+      "japaneseMeaning": "ヤギ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "goat, goats",
+      "example": "I see a goat."
+    },
+    {
+      "word": "duck",
+      "meaning": "a basic word for duck",
+      "japaneseMeaning": "アヒル",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "duck, ducks",
+      "example": "I see a duck."
+    },
+    {
+      "word": "lion",
+      "meaning": "a basic word for lion",
+      "japaneseMeaning": "ライオン",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "lion, lions",
+      "example": "I see a lion."
+    },
+    {
+      "word": "tiger",
+      "meaning": "a basic word for tiger",
+      "japaneseMeaning": "トラ",
+      "synonyms": "thing, item",
+      "antonyms": "opposite, not",
+      "forms": "tiger, tigers",
+      "example": "I see a tiger."
+    }
+  ]
+}

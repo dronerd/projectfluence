@@ -1,0 +1,144 @@
+{
+  "lesson_id": "eiken-pre2-11",
+  "title": "Lesson 11",
+  "paragraph": "Shopping and money involve choosing products, comparing prices and managing payments. Knowing terms like receipt, discount and credit card helps shoppers make good decisions and understand costs when they buy in stores or online.",
+  "words": [
+    {
+      "word": "am",
+      "meaning": "used with I to say who or what I am",
+      "japaneseMeaning": "〜です",
+      "synonyms": [
+        "be"
+      ],
+      "antonyms": [
+        "am not"
+      ],
+      "forms": "am, was, been",
+      "example": "I am a student."
+    },
+    {
+      "word": "is",
+      "meaning": "used with one person or thing",
+      "japaneseMeaning": "〜です",
+      "synonyms": [
+        "be"
+      ],
+      "antonyms": [
+        "is not"
+      ],
+      "forms": "is, was, been",
+      "example": "She is my teacher."
+    },
+    {
+      "word": "are",
+      "meaning": "used with you, we, they, or many things",
+      "japaneseMeaning": "〜です",
+      "synonyms": [
+        "be"
+      ],
+      "antonyms": [
+        "are not"
+      ],
+      "forms": "are, were, been",
+      "example": "They are at school."
+    },
+    {
+      "word": "be",
+      "meaning": "to exist or stay in a state",
+      "japaneseMeaning": "〜である",
+      "synonyms": [
+        "exist",
+        "stay"
+      ],
+      "antonyms": [
+        "not be"
+      ],
+      "forms": "be, am, is, are, was, were, been",
+      "example": "Please be quiet in class."
+    },
+    {
+      "word": "have",
+      "meaning": "to own or hold something",
+      "japaneseMeaning": "持っている",
+      "synonyms": [
+        "own",
+        "hold"
+      ],
+      "antonyms": [
+        "lack"
+      ],
+      "forms": "have, has, having, had",
+      "example": "I have a pencil in my bag."
+    },
+    {
+      "word": "has",
+      "meaning": "used when one person or thing owns something",
+      "japaneseMeaning": "持っている",
+      "synonyms": [
+        "owns",
+        "holds"
+      ],
+      "antonyms": [
+        "lacks"
+      ],
+      "forms": "has, had",
+      "example": "She has a red notebook."
+    },
+    {
+      "word": "do",
+      "meaning": "to make an action or finish work",
+      "japaneseMeaning": "する",
+      "synonyms": [
+        "make",
+        "finish"
+      ],
+      "antonyms": [
+        "avoid"
+      ],
+      "forms": "do, does, doing, did, done",
+      "example": "I do my homework after dinner."
+    },
+    {
+      "word": "go",
+      "meaning": "to move to another place",
+      "japaneseMeaning": "行く",
+      "synonyms": [
+        "move",
+        "travel"
+      ],
+      "antonyms": [
+        "stay"
+      ],
+      "forms": "go, goes, going, went, gone",
+      "example": "We go to school by bus."
+    },
+    {
+      "word": "come",
+      "meaning": "to move toward this place",
+      "japaneseMeaning": "来る",
+      "synonyms": [
+        "arrive",
+        "visit"
+      ],
+      "antonyms": [
+        "leave"
+      ],
+      "forms": "come, comes, coming, came",
+      "example": "Please come to my house today."
+    },
+    {
+      "word": "eat",
+      "meaning": "to put food in your mouth",
+      "japaneseMeaning": "食べる",
+      "synonyms": [
+        "have",
+        "chew"
+      ],
+      "antonyms": [
+        "fast"
+      ],
+      "forms": "eat, eats, eating, ate, eaten",
+      "example": "I eat rice for lunch."
+    }
+  ]
+}

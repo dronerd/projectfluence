@@ -1,103 +1,96 @@
-  {
-    "lesson_id": "eiken-pre2-57",
-    "title": "Lesson 57",
-    "paragraph": "Descriptions of appearance, condition and taste — useful for talking about things and situations.",
-    "words": [
-      {
-        "word": "beautiful",
-        "meaning": "pleasing to the senses or mind; attractive",
-        "japaneseMeaning": "美しい",
-        "synonyms": "lovely, gorgeous",
-        "antonyms": "ugly, plain",
-        "example": "She wore a beautiful dress to the party."
-      },
-      {
-        "word": "blank",
-        "meaning": "empty or without any writing or marks",
-        "japaneseMeaning": "空白の",
-        "synonyms": "empty, vacant",
-        "antonyms": "filled, written",
-        "example": "The paper was blank; he hadn't started yet."
-      },
-      {
-        "word": "bright",
-        "meaning": "giving out or reflecting a lot of light; intelligent",
-        "japaneseMeaning": "明るい／利口な",
-        "synonyms": "shiny, intelligent",
-        "antonyms": "dull, dim",
-        "example": "The morning sun made the room bright."
-      },
-      {
-        "word": "broad",
-        "meaning": "wide from one side to the other",
-        "japaneseMeaning": "広い／幅の広い",
-        "synonyms": "wide, expansive",
-        "antonyms": "narrow, limited",
-        "example": "They walked along the broad avenue."
-      },
-      {
-        "word": "cheap",
-        "meaning": "low in price; inexpensive",
-        "japaneseMeaning": "安い",
-        "synonyms": "inexpensive, affordable",
-        "antonyms": "expensive, costly",
-        "example": "We found a cheap hotel near the station."
-      },
-      {
-        "word": "clean",
-        "meaning": "free from dirt or impurities",
-        "japaneseMeaning": "きれいな／清潔な",
-        "synonyms": "tidy, spotless",
-        "antonyms": "dirty, filthy",
-        "example": "Keep the kitchen clean after cooking."
-      },
-      {
-        "word": "clear",
-        "meaning": "easy to perceive, understand, or interpret; transparent",
-        "japaneseMeaning": "明確な／透き通った",
-        "synonyms": "obvious, transparent",
-        "antonyms": "unclear, vague",
-        "example": "The instructions were clear and easy to follow."
-      },
-      {
-        "word": "common",
-        "meaning": "occurring often; ordinary",
-        "japaneseMeaning": "一般的な／普通の",
-        "synonyms": "usual, ordinary",
-        "antonyms": "rare, unusual",
-        "example": "It's common to see bicycles in this town."
-      },
-      {
-        "word": "complete",
-        "meaning": "having all necessary parts or finished",
-        "japaneseMeaning": "完全な／完了した",
-        "synonyms": "finished, whole",
-        "antonyms": "incomplete, partial",
-        "example": "The set is now complete with all pieces."
-      },
-      {
-        "word": "convenient",
-        "meaning": "suiting one's needs or purpose easily and comfortably",
-        "japaneseMeaning": "便利な／都合の良い",
-        "synonyms": "handy, practical",
-        "antonyms": "inconvenient, difficult",
-        "example": "The store’s location is very convenient for commuters."
-      },
-      {
-        "word": "correct",
-        "meaning": "free from error; accurate",
-        "japaneseMeaning": "正しい／正確な",
-        "synonyms": "right, accurate",
-        "antonyms": "wrong, incorrect",
-        "example": "Make sure your answers are correct before turning the test in."
-      },
-      {
-        "word": "dangerous",
-        "meaning": "likely to cause harm or injury",
-        "japaneseMeaning": "危険な",
-        "synonyms": "hazardous, risky",
-        "antonyms": "safe, harmless",
-        "example": "Swimming alone in rough seas can be dangerous."
-      }
-    ]
-  }
+{
+  "lesson_id": "eiken-2-57",
+  "title": "Lesson 57",
+  "words": [
+    {
+      "word": "approach",
+      "meaning": "to come near in distance or time",
+      "japaneseMeaning": "近づく／アプローチする",
+      "synonyms": "near, come close",
+      "antonyms": "recede, withdraw",
+      "forms": "approach, approaches, approaching, approached",
+      "example": "Winter is approaching quickly."
+    },
+    {
+      "word": "design",
+      "meaning": "to plan how something will look or work",
+      "japaneseMeaning": "設計する、デザインする",
+      "synonyms": "plan, create",
+      "antonyms": "copy, destroy",
+      "forms": "design, designs, designing, designed",
+      "example": "Students designed posters for the festival."
+    },
+    {
+      "word": "manage",
+      "meaning": "to handle or control",
+      "japaneseMeaning": "管理する",
+      "synonyms": "oversee, direct",
+      "antonyms": "mismanage, neglect",
+      "forms": "manage, manages, managing, managed",
+      "example": "He managed the project efficiently."
+    },
+    {
+      "word": "rise",
+      "meaning": "to move upward or increase",
+      "japaneseMeaning": "上がる／昇る",
+      "synonyms": "ascend, increase",
+      "antonyms": "fall, decrease",
+      "forms": "rise, rises, rising, rose, risen",
+      "example": "Prices are expected to rise."
+    },
+    {
+      "word": "obstruct",
+      "meaning": "to block movement, progress, or a view",
+      "japaneseMeaning": "妨げる、ふさぐ",
+      "synonyms": "block, prevent",
+      "antonyms": "help, clear",
+      "forms": "obstruct, obstructs, obstructing, obstructed",
+      "example": "Parked cars can obstruct the entrance."
+    },
+    {
+      "word": "recruit",
+      "meaning": "to find people to join a company, group, or activity",
+      "japaneseMeaning": "募集する、採用する",
+      "synonyms": "hire, invite",
+      "antonyms": "dismiss, reject",
+      "forms": "recruit, recruits, recruiting, recruited",
+      "example": "The club wants to recruit new members this spring."
+    },
+    {
+      "word": "steal",
+      "meaning": "to take something without permission",
+      "japaneseMeaning": "盗む",
+      "synonyms": "rob, take",
+      "antonyms": "return, give",
+      "forms": "steal, steals, stealing, stole, stolen",
+      "example": "Someone tried to steal her bag."
+    },
+    {
+      "word": "distinguish",
+      "meaning": "to recognize differences",
+      "japaneseMeaning": "区別する",
+      "synonyms": "tell apart, recognize",
+      "antonyms": "confuse, mix up",
+      "forms": "distinguish, distinguishes, distinguishing, distinguished",
+      "example": "She could distinguish between the twins."
+    },
+    {
+      "word": "monitor",
+      "meaning": "to watch and check something",
+      "japaneseMeaning": "監視する",
+      "synonyms": "track, oversee",
+      "antonyms": "ignore, neglect",
+      "forms": "monitor, monitors, monitoring, monitored",
+      "example": "They monitored the progress daily."
+    },
+    {
+      "word": "label",
+      "meaning": "to attach a name or description to something",
+      "japaneseMeaning": "ラベルを付ける、分類する",
+      "synonyms": "name, mark",
+      "antonyms": "remove, confuse",
+      "forms": "label, labels, labeling, labeled",
+      "example": "Please label each file with the project name."
+    }
+  ]
+}
