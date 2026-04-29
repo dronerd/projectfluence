@@ -7,7 +7,7 @@
       "meaning": "weather conditions over time",
       "japaneseMeaning": "気候",
       "synonyms": "weather, environment",
-      "antonyms": "instability, unpredictability",
+      "antonyms": "daily weather, moment",
       "forms": "climate, climates",
       "example": "Climate change is a global issue."
     },
@@ -22,12 +22,12 @@
     },
     {
       "word": "impact",
-      "meaning": "strong effect or influence",
+      "meaning": "a strong effect on someone or something",
       "japaneseMeaning": "影響",
       "synonyms": "effect, influence",
-      "antonyms": "insignificance, irrelevance",
+      "antonyms": "no effect, weakness",
       "forms": "impact, impacts",
-      "example": "The policy had a major impact."
+      "example": "The new rule had a major impact on students."
     },
     {
       "word": "border",
@@ -39,13 +39,13 @@
       "example": "We crossed the border early in the morning."
     },
     {
-      "word": "metric",
-      "meaning": "a way to measure something",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "metric, metrics",
-      "example": "The metric helped us understand the situation more clearly."
+      "word": "indicator",
+      "meaning": "a sign or measurement that shows what something is like",
+      "japaneseMeaning": "指標、目安",
+      "synonyms": "sign, measure",
+      "antonyms": "guess, hidden fact",
+      "forms": "indicator, indicators",
+      "example": "Attendance is one indicator of student interest."
     },
     {
       "word": "tourist",
@@ -67,21 +67,21 @@
     },
     {
       "word": "responsibility",
-      "meaning": "duty or accountability",
+      "meaning": "a duty to take care of something or do something",
       "japaneseMeaning": "責任",
       "synonyms": "duty, obligation",
-      "antonyms": "negligence, irresponsibility",
+      "antonyms": "carelessness, freedom",
       "forms": "responsibility, responsibilities",
       "example": "He accepted responsibility for the error."
     },
     {
       "word": "signal",
       "meaning": "a sound, light, or action that sends a message",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "合図、信号",
+      "synonyms": "sign, message",
+      "antonyms": "silence, confusion",
       "forms": "signal, signals",
-      "example": "The signal helped us understand the situation more clearly."
+      "example": "Wait for the signal before crossing the road."
     },
     {
       "word": "research",
@@ -89,7 +89,7 @@
       "japaneseMeaning": "研究",
       "synonyms": "study, investigation",
       "antonyms": "guess, neglect",
-      "forms": "research, researches",
+      "forms": "research",
       "example": "Her research showed that sleep helps memory."
     }
   ]

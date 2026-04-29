@@ -5,11 +5,11 @@
     {
       "word": "current",
       "meaning": "happening now or used now",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "現在の、最新の",
+      "synonyms": "present, recent",
+      "antonyms": "past, old",
       "forms": "current, more current, most current",
-      "example": "The current choice made the whole plan easier."
+      "example": "The current schedule is on the website."
     },
     {
       "word": "grateful",
@@ -30,67 +30,67 @@
       "example": "He was nervous before his speech."
     },
     {
-      "word": "simple",
+      "word": "straightforward",
       "meaning": "easy to understand or do",
-      "japaneseMeaning": "簡単な",
-      "synonyms": "easy, straightforward",
-      "antonyms": "complex, complicated",
-      "forms": "simple, more simple, most simple",
-      "example": "The instructions are simple to follow."
+      "japaneseMeaning": "わかりやすい、率直な",
+      "synonyms": "simple, clear",
+      "antonyms": "complicated, confusing",
+      "forms": "straightforward, more straightforward, most straightforward",
+      "example": "The instructions are straightforward."
     },
     {
       "word": "willing",
       "meaning": "ready and happy to do something",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "進んで〜する、いとわない",
+      "synonyms": "ready, prepared",
+      "antonyms": "unwilling, reluctant",
       "forms": "willing, more willing, most willing",
-      "example": "The willing choice made the whole plan easier."
+      "example": "She is willing to help after school."
     },
     {
-      "word": "delicious",
-      "meaning": "tasting very good",
-      "japaneseMeaning": "おいしい／美味な",
-      "synonyms": "tasty, scrumptious",
-      "antonyms": "tasteless, awful",
-      "forms": "delicious, more delicious, most delicious",
-      "example": "The soup was delicious and warmed us up."
+      "word": "flavorful",
+      "meaning": "having a strong and pleasant taste",
+      "japaneseMeaning": "風味豊かな",
+      "synonyms": "tasty, rich",
+      "antonyms": "plain, tasteless",
+      "forms": "flavorful, more flavorful, most flavorful",
+      "example": "The curry was flavorful but not too spicy."
     },
     {
-      "word": "strong",
-      "meaning": "having great physical power or emotional resilience",
-      "japaneseMeaning": "強い",
-      "synonyms": "powerful, robust",
-      "antonyms": "weak, frail",
-      "forms": "strong, more strong, most strong",
-      "example": "She is strong enough to lift the box."
+      "word": "resilient",
+      "meaning": "able to recover after problems or difficulty",
+      "japaneseMeaning": "回復力のある、たくましい",
+      "synonyms": "strong, tough",
+      "antonyms": "weak, fragile",
+      "forms": "resilient, more resilient, most resilient",
+      "example": "The team stayed resilient after losing the first game."
     },
     {
       "word": "stubborn",
       "meaning": "unwilling to change",
       "japaneseMeaning": "頑固な",
-      "synonyms": "obstinate, inflexible",
-      "antonyms": "flexible, compliant",
-      "forms": "stubborn, stubbornly",
+      "synonyms": "inflexible, difficult",
+      "antonyms": "flexible, willing",
+      "forms": "stubborn, more stubborn, most stubborn, stubbornly",
       "example": "He was stubborn about his opinion."
     },
     {
       "word": "enjoyable",
       "meaning": "pleasant and fun",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "楽しい、楽しめる",
+      "synonyms": "pleasant, fun",
+      "antonyms": "boring, unpleasant",
       "forms": "enjoyable, more enjoyable, most enjoyable",
-      "example": "The enjoyable choice made the whole plan easier."
+      "example": "The school trip was enjoyable for everyone."
     },
     {
       "word": "mutual",
       "meaning": "felt or done by two or more people toward each other",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "相互の、共通の",
+      "synonyms": "shared, common",
+      "antonyms": "one-sided, separate",
       "forms": "mutual, more mutual, most mutual",
-      "example": "The mutual choice made the whole plan easier."
+      "example": "Their friendship is based on mutual respect."
     }
   ]
 }

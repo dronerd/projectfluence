@@ -21,76 +21,76 @@
       "example": "Climate change is a global issue."
     },
     {
-      "word": "necessary",
-      "meaning": "needed for a purpose",
-      "japaneseMeaning": "必要な",
-      "synonyms": "needed, required",
-      "antonyms": "unnecessary, extra",
-      "forms": "necessary, necessarily",
-      "example": "A passport is necessary for this trip."
+      "word": "required",
+      "meaning": "needed by a rule, law, or situation",
+      "japaneseMeaning": "必要な、義務付けられた",
+      "synonyms": "needed, necessary",
+      "antonyms": "optional, unnecessary",
+      "forms": "required, more required, most required",
+      "example": "A passport is required for this trip."
     },
     {
-      "word": "silent",
-      "meaning": "making no sound",
-      "japaneseMeaning": "音のない／静寂な",
-      "synonyms": "quiet, still",
-      "antonyms": "noisy, loud",
-      "forms": "silent, more silent, most silent",
-      "example": "The room was silent during the exam."
+      "word": "unspoken",
+      "meaning": "understood without being said directly",
+      "japaneseMeaning": "口に出されない、暗黙の",
+      "synonyms": "silent, implied",
+      "antonyms": "spoken, direct",
+      "forms": "unspoken, more unspoken, most unspoken",
+      "example": "There was an unspoken rule to arrive early."
     },
     {
-      "word": "wild",
-      "meaning": "living in nature, not with people",
-      "japaneseMeaning": "野生の／荒々しい",
-      "synonyms": "untamed, feral",
-      "antonyms": "domesticated, tame",
-      "forms": "wild, more wild, most wild",
-      "example": "We saw wild deer in the forest."
+      "word": "untamed",
+      "meaning": "not controlled by people",
+      "japaneseMeaning": "飼いならされていない、野生の",
+      "synonyms": "wild, natural",
+      "antonyms": "tame, controlled",
+      "forms": "untamed, more untamed, most untamed",
+      "example": "The island is known for its untamed forests."
     },
     {
       "word": "concerned",
       "meaning": "worried about something",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "心配している、関係している",
+      "synonyms": "worried, anxious",
+      "antonyms": "calm, unconcerned",
       "forms": "concerned, more concerned, most concerned",
-      "example": "The concerned choice made the whole plan easier."
+      "example": "Teachers were concerned about the missing student."
     },
     {
-      "word": "specific",
-      "meaning": "clear and exact",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "specific, more specific, most specific",
-      "example": "The specific choice made the whole plan easier."
+      "word": "particular",
+      "meaning": "specific or special",
+      "japaneseMeaning": "特定の、特別な",
+      "synonyms": "specific, certain",
+      "antonyms": "general, any",
+      "forms": "particular, more particular, most particular",
+      "example": "Is there a particular time you want to meet?"
     },
     {
       "word": "humble",
       "meaning": "modest and unassuming",
       "japaneseMeaning": "謙虚な",
-      "synonyms": "modest, unpretentious",
-      "antonyms": "arrogant, prideful",
-      "forms": "humble, humblely",
+      "synonyms": "modest, simple",
+      "antonyms": "proud, arrogant",
+      "forms": "humble, humbler, humblest, humbly",
       "example": "He remained humble despite success."
     },
     {
-      "word": "decent",
-      "meaning": "good enough or acceptable",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "decent, more decent, most decent",
-      "example": "The decent choice made the whole plan easier."
+      "word": "adequate",
+      "meaning": "good enough for a particular purpose",
+      "japaneseMeaning": "十分な、適切な",
+      "synonyms": "enough, acceptable",
+      "antonyms": "poor, insufficient",
+      "forms": "adequate, more adequate, most adequate",
+      "example": "The room has adequate space for twenty students."
     },
     {
-      "word": "urban",
-      "meaning": "connected with a city",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "urban, more urban, most urban",
-      "example": "The urban choice made the whole plan easier."
+      "word": "metropolitan",
+      "meaning": "connected with a large city",
+      "japaneseMeaning": "大都市の、首都圏の",
+      "synonyms": "urban, city",
+      "antonyms": "rural, country",
+      "forms": "metropolitan, more metropolitan, most metropolitan",
+      "example": "The metropolitan area has many train lines."
     }
   ]
 }

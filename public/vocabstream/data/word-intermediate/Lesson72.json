@@ -5,20 +5,20 @@
     {
       "word": "benefit",
       "meaning": "to help someone or be good for them",
-      "japaneseMeaning": "利益",
-      "synonyms": "advantage, gain",
-      "antonyms": "loss, disadvantage",
+      "japaneseMeaning": "利益をもたらす、役に立つ",
+      "synonyms": "help, support",
+      "antonyms": "harm, damage",
       "forms": "benefit, benefits, benefiting, benefited",
       "example": "The benefit of exercise is clear."
     },
     {
-      "word": "divide",
-      "meaning": "to separate into parts",
-      "japaneseMeaning": "分ける／分割する",
-      "synonyms": "split, separate",
-      "antonyms": "join, unite",
-      "forms": "divide, divides, dividing, divided",
-      "example": "Divide the cake into equal pieces."
+      "word": "allocate",
+      "meaning": "to give a share of time, money, or resources for a purpose",
+      "japaneseMeaning": "割り当てる、配分する",
+      "synonyms": "assign, distribute",
+      "antonyms": "withhold, collect",
+      "forms": "allocate, allocates, allocating, allocated",
+      "example": "The school allocated more money for library books."
     },
     {
       "word": "participate",
@@ -30,67 +30,67 @@
       "example": "Many students participate in the science fair."
     },
     {
-      "word": "sign",
-      "meaning": "to write one's name on a document or to give a signal",
-      "japaneseMeaning": "署名する／合図する",
-      "synonyms": "authenticate, signal",
-      "antonyms": "erase, cancel",
-      "forms": "sign, signs, signing, signed",
-      "example": "Sign at the bottom of the form."
+      "word": "authorize",
+      "meaning": "to officially allow someone to do something",
+      "japaneseMeaning": "許可する、権限を与える",
+      "synonyms": "approve, permit",
+      "antonyms": "forbid, reject",
+      "forms": "authorize, authorizes, authorizing, authorized",
+      "example": "Only a manager can authorize the payment."
     },
     {
-      "word": "choose",
-      "meaning": "to select from two or more options",
-      "japaneseMeaning": "選ぶ",
-      "synonyms": "select, pick",
-      "antonyms": "reject, refuse",
-      "forms": "choose, chooses, choosing, chose, chosen",
-      "example": "Choose the best answer."
+      "word": "appreciate",
+      "meaning": "to understand the value of something or feel thankful",
+      "japaneseMeaning": "感謝する、価値を認める",
+      "synonyms": "value, thank",
+      "antonyms": "ignore, dislike",
+      "forms": "appreciate, appreciates, appreciating, appreciated",
+      "example": "I appreciate your advice on the project."
     },
     {
       "word": "link",
       "meaning": "to join or connect two things",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "つなげる、関連づける",
+      "synonyms": "connect, join",
+      "antonyms": "separate, divide",
       "forms": "link, links, linking, linked",
-      "example": "We need to link the plan before Friday."
+      "example": "The article links sleep with better memory."
     },
     {
-      "word": "thank",
-      "meaning": "to tell someone you are happy for their help",
-      "japaneseMeaning": "感謝する",
-      "synonyms": "appreciate, acknowledge",
-      "antonyms": "blame, criticize",
-      "forms": "thank, thanks, thanking, thanked",
-      "example": "Thank you for your help."
+      "word": "commend",
+      "meaning": "to formally praise someone or something",
+      "japaneseMeaning": "称賛する、褒める",
+      "synonyms": "praise, approve",
+      "antonyms": "criticize, blame",
+      "forms": "commend, commends, commending, commended",
+      "example": "The principal commended the students for their volunteer work."
     },
     {
       "word": "overcome",
       "meaning": "to deal with a problem and win",
       "japaneseMeaning": "克服する",
-      "synonyms": "conquer, defeat",
-      "antonyms": "yield, fail",
-      "forms": "overcome, overcomes, overcoming, overcomed",
-      "example": "Students overcome the task carefully in class."
+      "synonyms": "defeat, get over",
+      "antonyms": "fail, give up",
+      "forms": "overcome, overcomes, overcoming, overcame, overcome",
+      "example": "She overcame her fear of speaking English."
     },
     {
       "word": "cooperate",
       "meaning": "to work together with others",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "協力する",
+      "synonyms": "work together, help",
+      "antonyms": "compete, refuse",
       "forms": "cooperate, cooperates, cooperating, cooperated",
-      "example": "We need to cooperate the plan before Friday."
+      "example": "Students must cooperate during group work."
     },
     {
       "word": "present",
       "meaning": "to show or give something to others",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "発表する、提示する",
+      "synonyms": "show, introduce",
+      "antonyms": "hide, remove",
       "forms": "present, presents, presenting, presented",
-      "example": "We need to present the plan before Friday."
+      "example": "Each group will present its idea to the class."
     }
   ]
 }

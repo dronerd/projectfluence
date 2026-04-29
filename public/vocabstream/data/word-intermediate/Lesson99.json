@@ -3,58 +3,58 @@
   "title": "Lesson 99",
   "words": [
     {
-      "word": "vote",
-      "meaning": "to choose someone or something in an election or group decision",
-      "japaneseMeaning": "投票する",
-      "synonyms": "choose, elect",
-      "antonyms": "reject, ignore",
-      "forms": "vote, votes, voting, voted",
-      "example": "Students will vote for the class leader tomorrow."
+      "word": "elect",
+      "meaning": "to choose someone for a position by voting",
+      "japaneseMeaning": "選出する、当選させる",
+      "synonyms": "choose, vote for",
+      "antonyms": "reject, remove",
+      "forms": "elect, elects, electing, elected",
+      "example": "Students will elect a class leader tomorrow."
     },
     {
-      "word": "follow",
-      "meaning": "to go after or come behind someone/something",
-      "japaneseMeaning": "従う／ついていく",
-      "synonyms": "pursue, adhere",
-      "antonyms": "lead, ignore",
-      "forms": "follow, follows, following, followed",
-      "example": "Follow the instructions carefully."
+      "word": "obey",
+      "meaning": "to do what a rule or person tells you to do",
+      "japaneseMeaning": "従う、守る",
+      "synonyms": "follow, respect",
+      "antonyms": "disobey, ignore",
+      "forms": "obey, obeys, obeying, obeyed",
+      "example": "Drivers must obey traffic rules."
     },
     {
-      "word": "reach",
-      "meaning": "to arrive at or attain something",
-      "japaneseMeaning": "到達する／手が届く",
-      "synonyms": "attain, get to",
-      "antonyms": "miss, fall short",
-      "forms": "reach, reaches, reaching, reached",
-      "example": "We reached the summit at sunset."
+      "word": "achieve",
+      "meaning": "to succeed in doing something after effort",
+      "japaneseMeaning": "達成する",
+      "synonyms": "succeed, reach",
+      "antonyms": "fail, miss",
+      "forms": "achieve, achieves, achieving, achieved",
+      "example": "She achieved her goal after months of practice."
     },
     {
-      "word": "understand",
-      "meaning": "to grasp the meaning of something",
-      "japaneseMeaning": "理解する",
-      "synonyms": "comprehend, grasp",
-      "antonyms": "misunderstand, confuse",
-      "forms": "understand, understands, understanding, understood, understood",
-      "example": "I understand the problem now."
+      "word": "master",
+      "meaning": "to learn a skill or subject very well",
+      "japaneseMeaning": "習得する、極める",
+      "synonyms": "learn, understand",
+      "antonyms": "forget, fail",
+      "forms": "master, masters, mastering, mastered",
+      "example": "It takes practice to master a new language."
     },
     {
-      "word": "download",
-      "meaning": "to get a file from the internet onto your device",
-      "japaneseMeaning": "ダウンロードする",
-      "synonyms": "save, get",
-      "antonyms": "upload, send",
-      "forms": "download, downloads, downloading, downloaded",
-      "example": "Please download the map before we leave."
+      "word": "retrieve",
+      "meaning": "to get information or an object back",
+      "japaneseMeaning": "取り戻す、検索して取り出す",
+      "synonyms": "get back, recover",
+      "antonyms": "lose, send",
+      "forms": "retrieve, retrieves, retrieving, retrieved",
+      "example": "The system can retrieve old emails quickly."
     },
     {
       "word": "praise",
       "meaning": "to say that someone or something is good",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "ほめる、称賛する",
+      "synonyms": "commend, admire",
+      "antonyms": "criticize, blame",
       "forms": "praise, praises, praising, praised",
-      "example": "We need to praise the plan before Friday."
+      "example": "The teacher praised her careful work."
     },
     {
       "word": "extend",
@@ -66,31 +66,31 @@
       "example": "They will extend the deadline by one week."
     },
     {
-      "word": "execute",
-      "meaning": "to do a plan or order",
-      "japaneseMeaning": "実行する",
-      "synonyms": "implement, perform",
-      "antonyms": "neglect, fail",
-      "forms": "execute, executes, executing, executed",
-      "example": "The team executed the strategy perfectly."
+      "word": "perform",
+      "meaning": "to do a task, job, or action",
+      "japaneseMeaning": "行う、演じる",
+      "synonyms": "do, carry out",
+      "antonyms": "fail, neglect",
+      "forms": "perform, performs, performing, performed",
+      "example": "The team performed the task carefully."
     },
     {
-      "word": "enhance",
-      "meaning": "to improve or increase",
-      "japaneseMeaning": "高める",
-      "synonyms": "improve, boost",
-      "antonyms": "weaken, reduce",
-      "forms": "enhance, enhances, enhancing, enhanced",
-      "example": "The new lighting enhances the room's atmosphere."
+      "word": "upgrade",
+      "meaning": "to improve something by making it newer or better",
+      "japaneseMeaning": "改良する、アップグレードする",
+      "synonyms": "improve, update",
+      "antonyms": "weaken, downgrade",
+      "forms": "upgrade, upgrades, upgrading, upgraded",
+      "example": "The school upgraded its computer room."
     },
     {
-      "word": "delegate",
-      "meaning": "to assign responsibility",
-      "japaneseMeaning": "委任する",
-      "synonyms": "assign, entrust",
-      "antonyms": "retain, withhold",
-      "forms": "delegate, delegates, delegating, delegated",
-      "example": "She delegated tasks to her team."
+      "word": "assign",
+      "meaning": "to give someone a task or responsibility",
+      "japaneseMeaning": "割り当てる、任命する",
+      "synonyms": "give, appoint",
+      "antonyms": "remove, take back",
+      "forms": "assign, assigns, assigning, assigned",
+      "example": "The teacher assigned each group a topic."
     }
   ]
 }

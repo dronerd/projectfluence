@@ -3,22 +3,22 @@
   "title": "Lesson 91",
   "words": [
     {
-      "word": "correct",
-      "meaning": "right and with no mistakes",
-      "japaneseMeaning": "正しい",
-      "synonyms": "right, accurate",
-      "antonyms": "wrong, incorrect",
-      "forms": "correct, more correct, most correct",
-      "example": "Make sure your answer is correct before submitting."
+      "word": "acceptable",
+      "meaning": "good enough to be allowed or approved",
+      "japaneseMeaning": "受け入れられる、許容できる",
+      "synonyms": "suitable, fine",
+      "antonyms": "unacceptable, wrong",
+      "forms": "acceptable, more acceptable, most acceptable",
+      "example": "This level of noise is not acceptable in the library."
     },
     {
-      "word": "funny",
-      "meaning": "causing laughter or amusement",
-      "japaneseMeaning": "面白い",
-      "synonyms": "humorous, amusing",
+      "word": "humorous",
+      "meaning": "funny or able to make people laugh",
+      "japaneseMeaning": "ユーモアのある、おかしい",
+      "synonyms": "funny, amusing",
       "antonyms": "serious, dull",
-      "forms": "funny, more funny, most funny",
-      "example": "He told a funny story at lunch."
+      "forms": "humorous, more humorous, most humorous",
+      "example": "His humorous speech relaxed the audience."
     },
     {
       "word": "natural",
@@ -30,40 +30,40 @@
       "example": "They prefer natural fabrics like cotton."
     },
     {
-      "word": "short",
-      "meaning": "not long",
-      "japaneseMeaning": "短い／短時間の",
-      "synonyms": "brief, concise",
-      "antonyms": "long, lengthy",
-      "forms": "short, more short, most short",
-      "example": "He gave a short summary of the meeting."
+      "word": "brief",
+      "meaning": "lasting only a short time or using few words",
+      "japaneseMeaning": "短時間の、簡潔な",
+      "synonyms": "short, quick",
+      "antonyms": "long, detailed",
+      "forms": "brief, briefer, briefest",
+      "example": "He gave a brief summary of the meeting."
     },
     {
-      "word": "wide",
-      "meaning": "having a great extent from side to side",
-      "japaneseMeaning": "広い／幅のある",
-      "synonyms": "broad, expansive",
-      "antonyms": "narrow, limited",
-      "forms": "wide, more wide, most wide",
-      "example": "They walked down a wide boulevard."
+      "word": "spacious",
+      "meaning": "having a lot of room or space",
+      "japaneseMeaning": "広々とした",
+      "synonyms": "large, roomy",
+      "antonyms": "small, crowded",
+      "forms": "spacious, more spacious, most spacious",
+      "example": "The apartment is bright and spacious."
     },
     {
       "word": "precise",
       "meaning": "exact and careful",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "正確な、精密な",
+      "synonyms": "exact, accurate",
+      "antonyms": "vague, careless",
       "forms": "precise, more precise, most precise",
-      "example": "The precise choice made the whole plan easier."
+      "example": "Please give precise directions to the station."
     },
     {
-      "word": "sorry",
-      "meaning": "feeling bad about something wrong or sad",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "sorry, more sorry, most sorry",
-      "example": "The sorry choice made the whole plan easier."
+      "word": "apologetic",
+      "meaning": "showing that you are sorry for something",
+      "japaneseMeaning": "申し訳なさそうな、謝罪の",
+      "synonyms": "sorry, regretful",
+      "antonyms": "proud, rude",
+      "forms": "apologetic, more apologetic, most apologetic",
+      "example": "He sounded apologetic after missing the meeting."
     },
     {
       "word": "sincere",
@@ -77,20 +77,20 @@
     {
       "word": "constant",
       "meaning": "happening all the time or not changing",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "絶え間ない、一定の",
+      "synonyms": "continuous, steady",
+      "antonyms": "temporary, changing",
       "forms": "constant, more constant, most constant",
-      "example": "The constant choice made the whole plan easier."
+      "example": "The constant noise made it hard to study."
     },
     {
       "word": "rural",
       "meaning": "connected with the countryside",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "田舎の、農村の",
+      "synonyms": "country, countryside",
+      "antonyms": "urban, city",
       "forms": "rural, more rural, most rural",
-      "example": "The rural choice made the whole plan easier."
+      "example": "The school is in a quiet rural area."
     }
   ]
 }

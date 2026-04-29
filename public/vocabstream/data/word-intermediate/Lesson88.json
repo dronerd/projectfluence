@@ -12,22 +12,22 @@
       "example": "She felt confident about the presentation."
     },
     {
-      "word": "full",
-      "meaning": "having no empty space",
-      "japaneseMeaning": "満杯の／いっぱいの",
-      "synonyms": "packed, complete",
-      "antonyms": "empty, vacant",
-      "forms": "full, more full, most full",
-      "example": "The bus was full, so we waited for the next one."
+      "word": "sufficient",
+      "meaning": "enough for a particular purpose",
+      "japaneseMeaning": "十分な",
+      "synonyms": "enough, adequate",
+      "antonyms": "insufficient, lacking",
+      "forms": "sufficient, more sufficient, most sufficient",
+      "example": "We have sufficient time to finish the project."
     },
     {
-      "word": "narrow",
-      "meaning": "of small width in relation to length",
-      "japaneseMeaning": "狭い／細い",
-      "synonyms": "tight, slim",
-      "antonyms": "wide, broad",
-      "forms": "narrow, more narrow, most narrow",
-      "example": "The street is too narrow for two cars."
+      "word": "limited",
+      "meaning": "not large in amount, number, or choice",
+      "japaneseMeaning": "限られた、限定された",
+      "synonyms": "restricted, small",
+      "antonyms": "wide, unlimited",
+      "forms": "limited, more limited, most limited",
+      "example": "We had limited time to answer the questions."
     },
     {
       "word": "serious",
@@ -41,11 +41,11 @@
     {
       "word": "western",
       "meaning": "in or from the west of a place",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "西の、西洋の",
+      "synonyms": "west, European",
+      "antonyms": "eastern",
       "forms": "western, more western, most western",
-      "example": "The western choice made the whole plan easier."
+      "example": "The town is in the western part of the island."
     },
     {
       "word": "thoughtful",
@@ -57,13 +57,13 @@
       "example": "Her thoughtful message made me feel better."
     },
     {
-      "word": "smart",
-      "meaning": "intelligent or well-dressed",
-      "japaneseMeaning": "賢い／きちんとした",
-      "synonyms": "clever, bright",
-      "antonyms": "dull, unkempt",
-      "forms": "smart, more smart, most smart",
-      "example": "She is smart and always prepared for class."
+      "word": "intelligent",
+      "meaning": "able to learn and understand things well",
+      "japaneseMeaning": "知的な、知能の高い",
+      "synonyms": "smart, bright",
+      "antonyms": "dull, foolish",
+      "forms": "intelligent, more intelligent, most intelligent",
+      "example": "The intelligent student asked a useful question."
     },
     {
       "word": "distinct",
@@ -71,7 +71,7 @@
       "japaneseMeaning": "明確な、はっきりした",
       "synonyms": "unique, separate",
       "antonyms": "similar, indistinct",
-      "forms": "distinct, distincts",
+      "forms": "distinct, more distinct, most distinct",
       "example": "Each culture has distinct traits."
     },
     {
@@ -86,11 +86,11 @@
     {
       "word": "remote",
       "meaning": "far away from towns or people",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "遠く離れた、遠隔の",
+      "synonyms": "distant, far",
+      "antonyms": "near, central",
       "forms": "remote, more remote, most remote",
-      "example": "The remote choice made the whole plan easier."
+      "example": "They visited a remote village in the mountains."
     }
   ]
 }

@@ -21,13 +21,13 @@
       "example": "Call this number in an emergency."
     },
     {
-      "word": "holiday",
-      "meaning": "a day with no school or work, or a trip for fun",
-      "japaneseMeaning": "休日、休暇",
-      "synonyms": "vacation, break",
-      "antonyms": "workday, school day",
-      "forms": "holiday, holidays",
-      "example": "We went camping during the holiday."
+      "word": "absence",
+      "meaning": "a time when someone is not in a place where they should be",
+      "japaneseMeaning": "欠席、不在",
+      "synonyms": "missing, time away",
+      "antonyms": "presence, attendance",
+      "forms": "absence, absences",
+      "example": "Please explain your absence from class."
     },
     {
       "word": "method",
@@ -44,7 +44,7 @@
       "japaneseMeaning": "助言、アドバイス",
       "synonyms": "suggestion, guidance",
       "antonyms": "warning, order",
-      "forms": "advice, advices",
+      "forms": "advice",
       "example": "My teacher gave me advice before the interview."
     },
     {
@@ -57,13 +57,13 @@
       "example": "Technology helps doctors find problems early."
     },
     {
-      "word": "choice",
-      "meaning": "something you can choose",
-      "japaneseMeaning": "選択、選択肢",
-      "synonyms": "option, selection",
-      "antonyms": "order, duty",
-      "forms": "choice, choices",
-      "example": "This restaurant has a good choice of lunches."
+      "word": "preference",
+      "meaning": "a thing someone likes more than another thing",
+      "japaneseMeaning": "好み、選好",
+      "synonyms": "choice, favorite",
+      "antonyms": "dislike, refusal",
+      "forms": "preference, preferences",
+      "example": "My food preference is for simple, fresh meals."
     },
     {
       "word": "platform",
@@ -84,13 +84,13 @@
       "example": "The car engine stopped on the hill."
     },
     {
-      "word": "president",
-      "meaning": "the leader of a country, company, or club",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "president, presidents",
-      "example": "The president helped us understand the situation more clearly."
+      "word": "chairperson",
+      "meaning": "the person who leads a meeting or group",
+      "japaneseMeaning": "議長、委員長",
+      "synonyms": "leader, head",
+      "antonyms": "member, follower",
+      "forms": "chairperson, chairpersons",
+      "example": "The chairperson opened the meeting at nine."
     }
   ]
 }

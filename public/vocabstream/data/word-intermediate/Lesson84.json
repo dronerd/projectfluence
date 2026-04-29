@@ -12,22 +12,22 @@
       "example": "They challenged the decision."
     },
     {
-      "word": "explain",
-      "meaning": "to make something clear or understandable",
-      "japaneseMeaning": "説明する",
-      "synonyms": "clarify, describe",
-      "antonyms": "obscure, confuse",
-      "forms": "explain, explains, explaining, explained",
-      "example": "Please explain your answer."
+      "word": "clarify",
+      "meaning": "to make something easier to understand",
+      "japaneseMeaning": "明確にする、わかりやすくする",
+      "synonyms": "explain, clear up",
+      "antonyms": "confuse, hide",
+      "forms": "clarify, clarifies, clarifying, clarified",
+      "example": "Please clarify the rules before the game starts."
     },
     {
-      "word": "practice",
-      "meaning": "to do something repeatedly to improve",
-      "japaneseMeaning": "練習する",
-      "synonyms": "train, rehearse",
-      "antonyms": "neglect",
-      "forms": "practice, practices, practicing, practiced",
-      "example": "Practice speaking English every day."
+      "word": "rehearse",
+      "meaning": "to practice for a performance or presentation",
+      "japaneseMeaning": "リハーサルをする、練習する",
+      "synonyms": "practice, prepare",
+      "antonyms": "improvise, neglect",
+      "forms": "rehearse, rehearses, rehearsing, rehearsed",
+      "example": "We rehearsed our presentation after school."
     },
     {
       "word": "support",
@@ -41,29 +41,29 @@
     {
       "word": "define",
       "meaning": "to explain the meaning of a word or idea",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "定義する、意味を説明する",
+      "synonyms": "explain, describe",
+      "antonyms": "confuse, mix up",
       "forms": "define, defines, defining, defined",
-      "example": "We need to define the plan before Friday."
+      "example": "The teacher asked us to define the new term."
     },
     {
-      "word": "own",
-      "meaning": "to have something as property",
-      "japaneseMeaning": "所有する",
-      "synonyms": "possess, hold",
-      "antonyms": "lack, relinquish",
-      "forms": "own, owns, owning, owned",
-      "example": "She owns a small business."
+      "word": "possess",
+      "meaning": "to have or own something",
+      "japaneseMeaning": "所有する、持っている",
+      "synonyms": "own, have",
+      "antonyms": "lack, lose",
+      "forms": "possess, possesses, possessing, possessed",
+      "example": "Applicants must possess basic computer skills."
     },
     {
-      "word": "turn",
-      "meaning": "to change direction or to rotate",
-      "japaneseMeaning": "回す／曲がる",
-      "synonyms": "rotate, twist",
-      "antonyms": "remain, stay",
-      "forms": "turn, turns, turning, turned",
-      "example": "Turn left at the corner."
+      "word": "steer",
+      "meaning": "to control the direction of a vehicle or plan",
+      "japaneseMeaning": "操縦する、導く",
+      "synonyms": "guide, direct",
+      "antonyms": "follow, drift",
+      "forms": "steer, steers, steering, steered",
+      "example": "She steered the boat away from the rocks."
     },
     {
       "word": "inspire",
@@ -78,19 +78,19 @@
       "word": "contrast",
       "meaning": "to compare differences",
       "japaneseMeaning": "対比する",
-      "synonyms": "differ, oppose",
-      "antonyms": "compare, resemble",
+      "synonyms": "compare, differ",
+      "antonyms": "match, resemble",
       "forms": "contrast, contrasts, contrasting, contrasted",
-      "example": "Light contrasts with dark."
+      "example": "The report contrasts city life with country life."
     },
     {
       "word": "release",
       "meaning": "to let someone or something go free, or make something public",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "解放する、公開する",
+      "synonyms": "free, publish",
+      "antonyms": "hold, keep",
       "forms": "release, releases, releasing, released",
-      "example": "We need to release the plan before Friday."
+      "example": "The band will release a new song next month."
     }
   ]
 }

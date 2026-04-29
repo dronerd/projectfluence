@@ -12,13 +12,13 @@
       "example": "Put each book in the correct category."
     },
     {
-      "word": "lane",
-      "meaning": "one part of a road for one line of cars",
-      "japaneseMeaning": "車線、レーン",
-      "synonyms": "roadway, path",
-      "antonyms": "sidewalk, shoulder",
-      "forms": "lane, lanes",
-      "example": "The bus moved into the left lane."
+      "word": "corridor",
+      "meaning": "a long passage inside a building",
+      "japaneseMeaning": "廊下、通路",
+      "synonyms": "hallway, passage",
+      "antonyms": "room, open space",
+      "forms": "corridor, corridors",
+      "example": "Students waited quietly in the corridor."
     },
     {
       "word": "habit",
@@ -39,22 +39,22 @@
       "example": "The meeting starts at nine in room 204."
     },
     {
-      "word": "receipt",
-      "meaning": "a paper that shows you paid for something",
-      "japaneseMeaning": "領収書、レシート",
-      "synonyms": "proof, bill",
-      "antonyms": "payment, product",
-      "forms": "receipt, receipts",
-      "example": "Keep the receipt in case you need a refund."
+      "word": "invoice",
+      "meaning": "a document that lists goods or services and the money owed",
+      "japaneseMeaning": "請求書、送り状",
+      "synonyms": "bill, statement",
+      "antonyms": "receipt, refund",
+      "forms": "invoice, invoices",
+      "example": "The company sent an invoice after the repair."
     },
     {
       "word": "talent",
       "meaning": "a natural skill or ability",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "才能、素質",
+      "synonyms": "ability, skill",
+      "antonyms": "weakness, inability",
       "forms": "talent, talents",
-      "example": "The talent helped us understand the situation more clearly."
+      "example": "She has a talent for explaining difficult ideas."
     },
     {
       "word": "case",
@@ -66,22 +66,22 @@
       "example": "In this case, we should ask the teacher."
     },
     {
-      "word": "opinion",
-      "meaning": "what someone thinks about something",
-      "japaneseMeaning": "意見",
-      "synonyms": "view, idea",
-      "antonyms": "fact, proof",
-      "forms": "opinion, opinions",
-      "example": "In my opinion, this plan is fair."
+      "word": "perspective",
+      "meaning": "a way of thinking about something",
+      "japaneseMeaning": "観点、見方",
+      "synonyms": "view, attitude",
+      "antonyms": "fact, certainty",
+      "forms": "perspective, perspectives",
+      "example": "Travel can change your perspective on daily life."
     },
     {
       "word": "doubt",
       "meaning": "a feeling that something may not be true",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "疑い、不確かさ",
+      "synonyms": "uncertainty, question",
+      "antonyms": "certainty, belief",
       "forms": "doubt, doubts",
-      "example": "The doubt helped us understand the situation more clearly."
+      "example": "There is some doubt about the exact date."
     },
     {
       "word": "timetable",

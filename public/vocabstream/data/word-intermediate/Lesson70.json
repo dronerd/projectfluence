@@ -3,31 +3,31 @@
   "title": "Lesson 70",
   "words": [
     {
-      "word": "calm",
-      "meaning": "quiet and not worried",
-      "japaneseMeaning": "落ち着き",
-      "synonyms": "tranquility, serenity",
-      "antonyms": "agitation, chaos",
-      "forms": "calm, calms",
-      "example": "The sea was calm."
+      "word": "composure",
+      "meaning": "calm control of your feelings",
+      "japaneseMeaning": "落ち着き、冷静さ",
+      "synonyms": "calm, control",
+      "antonyms": "panic, anxiety",
+      "forms": "composure",
+      "example": "She kept her composure during the interview."
     },
     {
-      "word": "final",
-      "meaning": "last",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "final, more final, most final",
-      "example": "The final choice made the whole plan easier."
+      "word": "ultimate",
+      "meaning": "final or most important",
+      "japaneseMeaning": "最終的な、究極の",
+      "synonyms": "final, main",
+      "antonyms": "first, minor",
+      "forms": "ultimate, ultimately",
+      "example": "The ultimate goal is to help students speak confidently."
     },
     {
-      "word": "male",
-      "meaning": "being a man or boy, or of that sex",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "male, more male, most male",
-      "example": "The male choice made the whole plan easier."
+      "word": "masculine",
+      "meaning": "traditionally connected with men or boys",
+      "japaneseMeaning": "男性の、男性的な",
+      "synonyms": "male, manly",
+      "antonyms": "feminine, female",
+      "forms": "masculine",
+      "example": "The jacket has a simple, masculine style."
     },
     {
       "word": "regular",
@@ -39,31 +39,31 @@
       "example": "He goes to the gym on a regular basis."
     },
     {
-      "word": "unknown",
-      "meaning": "not known by people",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "unknown, more unknown, most unknown",
-      "example": "The unknown choice made the whole plan easier."
+      "word": "unidentified",
+      "meaning": "not recognized or named",
+      "japaneseMeaning": "身元不明の、未確認の",
+      "synonyms": "unknown, unnamed",
+      "antonyms": "identified, known",
+      "forms": "unidentified",
+      "example": "An unidentified caller left a message."
     },
     {
-      "word": "alive",
-      "meaning": "living, not dead",
-      "japaneseMeaning": "生きている",
-      "synonyms": "living, living",
-      "antonyms": "dead",
-      "forms": "alive, more alive, most alive",
-      "example": "The plant looks alive after we watered it."
+      "word": "viable",
+      "meaning": "able to work successfully or continue living",
+      "japaneseMeaning": "実行可能な、生存可能な",
+      "synonyms": "workable, possible",
+      "antonyms": "impossible, weak",
+      "forms": "viable, viability",
+      "example": "The team discussed whether the plan was viable."
     },
     {
-      "word": "possible",
-      "meaning": "able to happen or be done",
-      "japaneseMeaning": "可能な／あり得る",
-      "synonyms": "feasible, achievable",
-      "antonyms": "impossible, unattainable",
-      "forms": "possible, more possible, most possible",
-      "example": "Is it possible to finish this by Friday?"
+      "word": "feasible",
+      "meaning": "possible and practical to do",
+      "japaneseMeaning": "実行可能な",
+      "synonyms": "possible, practical",
+      "antonyms": "impossible, unrealistic",
+      "forms": "feasible, feasibility",
+      "example": "Finishing the project by Friday is feasible."
     },
     {
       "word": "rational",
@@ -77,20 +77,20 @@
     {
       "word": "steady",
       "meaning": "not changing quickly and under control",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "安定した、着実な",
+      "synonyms": "stable, regular",
+      "antonyms": "unstable, sudden",
       "forms": "steady, more steady, most steady",
-      "example": "The steady choice made the whole plan easier."
+      "example": "The company has shown steady growth this year."
     },
     {
-      "word": "welcome",
-      "meaning": "making someone feel happy to be there",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "welcome, more welcome, most welcome",
-      "example": "The welcome choice made the whole plan easier."
+      "word": "hospitable",
+      "meaning": "friendly and welcoming to guests",
+      "japaneseMeaning": "もてなしのよい、親切な",
+      "synonyms": "welcoming, friendly",
+      "antonyms": "unfriendly, cold",
+      "forms": "hospitable, hospitably",
+      "example": "The host family was hospitable and kind."
     }
   ]
 }

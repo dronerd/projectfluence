@@ -3,22 +3,22 @@
   "title": "Lesson 90",
   "words": [
     {
-      "word": "check",
-      "meaning": "to examine something in order to determine its condition",
-      "japaneseMeaning": "確認する／調べる",
-      "synonyms": "inspect, verify",
-      "antonyms": "ignore, neglect",
-      "forms": "check, checks, checking, checked",
-      "example": "Check the oil level in the car."
+      "word": "screen",
+      "meaning": "to check someone or something for a problem",
+      "japaneseMeaning": "検査する、審査する",
+      "synonyms": "check, test",
+      "antonyms": "ignore, accept",
+      "forms": "screen, screens, screening, screened",
+      "example": "The clinic screens visitors for fever."
     },
     {
-      "word": "fill",
-      "meaning": "to make something full",
-      "japaneseMeaning": "満たす／詰める",
-      "synonyms": "pack, load",
-      "antonyms": "empty, drain",
-      "forms": "fill, fills, filling, filled",
-      "example": "Fill the bottle with water."
+      "word": "load",
+      "meaning": "to put things into a vehicle, machine, or container",
+      "japaneseMeaning": "積む、読み込む",
+      "synonyms": "pack, place",
+      "antonyms": "unload, empty",
+      "forms": "load, loads, loading, loaded",
+      "example": "We loaded the boxes into the truck."
     },
     {
       "word": "prepare",
@@ -30,13 +30,13 @@
       "example": "Prepare your presentation tonight."
     },
     {
-      "word": "teach",
-      "meaning": "to give instruction or impart knowledge",
-      "japaneseMeaning": "教える",
-      "synonyms": "instruct, educate",
-      "antonyms": "learn, ignore",
-      "forms": "teach, teaches, teaching, taught, taught",
-      "example": "She teaches math at the school."
+      "word": "instruct",
+      "meaning": "to teach someone how to do something",
+      "japaneseMeaning": "教える、指示する",
+      "synonyms": "teach, guide",
+      "antonyms": "learn, mislead",
+      "forms": "instruct, instructs, instructing, instructed",
+      "example": "The coach instructed us to warm up first."
     },
     {
       "word": "determine",
@@ -48,27 +48,22 @@
       "example": "They determined the next steps."
     },
     {
-      "word": "pay",
-      "meaning": "to give money for something",
-      "japaneseMeaning": "支払う",
-      "synonyms": [
-        "spend",
-        "buy"
-      ],
-      "antonyms": [
-        "receive"
-      ],
-      "forms": "pay, pays, paying, paid, paid",
-      "example": "I pay for the ticket at the station."
+      "word": "purchase",
+      "meaning": "to buy something",
+      "japaneseMeaning": "購入する",
+      "synonyms": "buy, obtain",
+      "antonyms": "sell, return",
+      "forms": "purchase, purchases, purchasing, purchased",
+      "example": "You can purchase tickets online."
     },
     {
       "word": "upload",
       "meaning": "to send a file from your computer to the internet",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "アップロードする",
+      "synonyms": "send, post",
+      "antonyms": "download, delete",
       "forms": "upload, uploads, uploading, uploaded",
-      "example": "We need to upload the plan before Friday."
+      "example": "Please upload the report by Friday."
     },
     {
       "word": "proceed",
@@ -80,22 +75,22 @@
       "example": "We will proceed with the plan."
     },
     {
-      "word": "fluctuate",
-      "meaning": "to vary irregularly",
-      "japaneseMeaning": "変動する",
-      "synonyms": "waver, oscillate",
-      "antonyms": "stabilize, remain",
-      "forms": "fluctuate, fluctuates, fluctuating, fluctuated",
-      "example": "Prices fluctuate daily."
+      "word": "shift",
+      "meaning": "to change position, direction, or focus",
+      "japaneseMeaning": "移す、変わる",
+      "synonyms": "change, move",
+      "antonyms": "stay, remain",
+      "forms": "shift, shifts, shifting, shifted",
+      "example": "The discussion shifted to the budget."
     },
     {
       "word": "sort",
       "meaning": "to put things into groups or in order",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "分類する、並べ替える",
+      "synonyms": "classify, arrange",
+      "antonyms": "mix, scatter",
       "forms": "sort, sorts, sorting, sorted",
-      "example": "We need to sort the plan before Friday."
+      "example": "Please sort the papers by date."
     }
   ]
 }

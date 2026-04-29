@@ -30,40 +30,40 @@
       "example": "Please highlight the main dates in your notes."
     },
     {
-      "word": "show",
-      "meaning": "to present something so others can see",
-      "japaneseMeaning": "見せる／示す",
-      "synonyms": "display, exhibit",
-      "antonyms": "hide, conceal",
-      "forms": "show, shows, showing, showed",
-      "example": "Please show me your ticket."
+      "word": "demonstrate",
+      "meaning": "to show clearly how something works or why something is true",
+      "japaneseMeaning": "示す、実演する",
+      "synonyms": "show, prove",
+      "antonyms": "hide, confuse",
+      "forms": "demonstrate, demonstrates, demonstrating, demonstrated",
+      "example": "The teacher demonstrated how to use the new software."
     },
     {
-      "word": "carry",
-      "meaning": "to support and move something from one place to another",
-      "japaneseMeaning": "運ぶ",
-      "synonyms": "transport, bear",
-      "antonyms": "drop, leave",
-      "forms": "carry, carries, carrying, carried",
-      "example": "We need to carry the plan before Friday."
+      "word": "transport",
+      "meaning": "to move people or goods from one place to another",
+      "japaneseMeaning": "輸送する、運ぶ",
+      "synonyms": "move, deliver",
+      "antonyms": "keep, store",
+      "forms": "transport, transports, transporting, transported",
+      "example": "The company transports fresh food every morning."
     },
     {
-      "word": "lend",
-      "meaning": "to give something temporarily expecting it back",
-      "japaneseMeaning": "貸す",
-      "synonyms": "loan, give temporarily",
-      "antonyms": "borrow, keep",
-      "forms": "lend, lends, lending, lent, lent",
-      "example": "Can you lend me $10?"
+      "word": "finance",
+      "meaning": "to provide money for a project or activity",
+      "japaneseMeaning": "資金を出す、融資する",
+      "synonyms": "fund, support",
+      "antonyms": "withdraw, charge",
+      "forms": "finance, finances, financing, financed",
+      "example": "The city will finance the new library project."
     },
     {
-      "word": "taste",
-      "meaning": "to sample a small amount to check flavor",
-      "japaneseMeaning": "味見する",
-      "synonyms": "sample, try",
-      "antonyms": "ignore, avoid",
-      "forms": "taste, tastes, tasting, tasted",
-      "example": "Taste the sauce and adjust seasoning."
+      "word": "savor",
+      "meaning": "to enjoy the taste or feeling of something slowly",
+      "japaneseMeaning": "味わう、楽しむ",
+      "synonyms": "enjoy, appreciate",
+      "antonyms": "rush, dislike",
+      "forms": "savor, savors, savoring, savored",
+      "example": "They savored the local food after the long trip."
     },
     {
       "word": "persist",
@@ -77,20 +77,20 @@
     {
       "word": "collaborate",
       "meaning": "to work with other people on the same task",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "協力する、共同で作業する",
+      "synonyms": "work together, cooperate",
+      "antonyms": "compete, separate",
       "forms": "collaborate, collaborates, collaborating, collaborated",
-      "example": "We need to collaborate the plan before Friday."
+      "example": "Students collaborated on a video project."
     },
     {
       "word": "permit",
       "meaning": "to allow someone to do something",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
-      "forms": "permit, permits, permiting, permited",
-      "example": "We need to permit the plan before Friday."
+      "japaneseMeaning": "許可する",
+      "synonyms": "allow, let",
+      "antonyms": "forbid, refuse",
+      "forms": "permit, permits, permitting, permitted",
+      "example": "The school does not permit phones during exams."
     }
   ]
 }

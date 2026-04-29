@@ -48,40 +48,40 @@
       "example": "Her efforts received recognition."
     },
     {
-      "word": "task",
-      "meaning": "a piece of work that must be done",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "task, tasks",
-      "example": "The task helped us understand the situation more clearly."
+      "word": "obligation",
+      "meaning": "something you must do because it is your duty",
+      "japaneseMeaning": "義務、責任",
+      "synonyms": "duty, responsibility",
+      "antonyms": "choice, freedom",
+      "forms": "obligation, obligations",
+      "example": "Parents have an obligation to keep their children safe."
     },
     {
       "word": "charge",
       "meaning": "the money you must pay for something",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "料金、請求額",
+      "synonyms": "cost, price",
+      "antonyms": "discount, refund",
       "forms": "charge, charges",
-      "example": "The charge helped us understand the situation more clearly."
+      "example": "There is an extra charge for delivery."
     },
     {
       "word": "pattern",
       "meaning": "a repeated design or a regular way something happens",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "模様、パターン、傾向",
+      "synonyms": "design, style",
+      "antonyms": "randomness, disorder",
       "forms": "pattern, patterns",
-      "example": "The pattern helped us understand the situation more clearly."
+      "example": "The shirt has a simple blue pattern."
     },
     {
-      "word": "edge",
-      "meaning": "the outside line or border of something",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "edge, edges",
-      "example": "The edge helped us understand the situation more clearly."
+      "word": "margin",
+      "meaning": "the empty space around the edge of a page",
+      "japaneseMeaning": "余白、余地",
+      "synonyms": "space, border",
+      "antonyms": "center, main text",
+      "forms": "margin, margins",
+      "example": "Write your notes in the margin of the page."
     },
     {
       "word": "ritual",

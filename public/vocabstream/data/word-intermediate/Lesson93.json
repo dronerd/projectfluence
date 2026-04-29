@@ -5,20 +5,20 @@
     {
       "word": "accuse",
       "meaning": "to say that someone did something wrong",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "非難する、告発する",
+      "synonyms": "blame, charge",
+      "antonyms": "defend, excuse",
       "forms": "accuse, accuses, accusing, accused",
-      "example": "We need to accuse the plan before Friday."
+      "example": "They accused him of taking the money."
     },
     {
-      "word": "fix",
-      "meaning": "to repair or make something work correctly",
-      "japaneseMeaning": "修理する／直す",
-      "synonyms": "repair, mend",
+      "word": "mend",
+      "meaning": "to repair something that is broken or torn",
+      "japaneseMeaning": "修理する、繕う",
+      "synonyms": "repair, fix",
       "antonyms": "break, damage",
-      "forms": "fix, fixes, fixing, fixed",
-      "example": "Can you fix the printer?"
+      "forms": "mend, mends, mending, mended",
+      "example": "Can you mend this torn jacket?"
     },
     {
       "word": "protect",
@@ -30,31 +30,31 @@
       "example": "Wear a helmet to protect your head."
     },
     {
-      "word": "travel",
-      "meaning": "to go from one place to another",
-      "japaneseMeaning": "旅行する／移動する",
-      "synonyms": "journey, voyage",
+      "word": "commute",
+      "meaning": "to travel regularly between home and work or school",
+      "japaneseMeaning": "通勤する、通学する",
+      "synonyms": "travel, go back and forth",
       "antonyms": "stay, remain",
-      "forms": "travel, travels, traveling, traveled",
-      "example": "We travel abroad once a year."
+      "forms": "commute, commutes, commuting, commuted",
+      "example": "She commutes by train every morning."
     },
     {
       "word": "disagree",
       "meaning": "to have a different opinion from someone",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "意見が合わない、反対する",
+      "synonyms": "differ, object",
+      "antonyms": "agree, accept",
       "forms": "disagree, disagrees, disagreeing, disagreed",
-      "example": "We need to disagree the plan before Friday."
+      "example": "I disagree with that decision."
     },
     {
-      "word": "pick",
-      "meaning": "to choose or to take hold of something",
-      "japaneseMeaning": "選ぶ／拾う",
-      "synonyms": "select, pluck",
-      "antonyms": "drop, abandon",
-      "forms": "pick, picks, picking, picked",
-      "example": "Pick a card from the deck."
+      "word": "nominate",
+      "meaning": "to formally suggest someone for a job, prize, or role",
+      "japaneseMeaning": "推薦する、指名する",
+      "synonyms": "recommend, name",
+      "antonyms": "reject, remove",
+      "forms": "nominate, nominates, nominating, nominated",
+      "example": "Our class nominated Mina as team leader."
     },
     {
       "word": "weigh",
@@ -75,22 +75,22 @@
       "example": "The machine operates automatically."
     },
     {
-      "word": "diminish",
-      "meaning": "to make or become smaller",
-      "japaneseMeaning": "減少する",
-      "synonyms": "decrease, reduce",
-      "antonyms": "increase, grow",
-      "forms": "diminish, diminishes, diminishing, diminished",
-      "example": "Her influence has diminished over time."
+      "word": "decline",
+      "meaning": "to become smaller, weaker, or less",
+      "japaneseMeaning": "減少する、低下する",
+      "synonyms": "decrease, fall",
+      "antonyms": "increase, rise",
+      "forms": "decline, declines, declining, declined",
+      "example": "Sales declined during the winter."
     },
     {
       "word": "suffer",
       "meaning": "to feel pain or have a bad experience",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "苦しむ、被害を受ける",
+      "synonyms": "hurt, endure",
+      "antonyms": "recover, enjoy",
       "forms": "suffer, suffers, suffering, suffered",
-      "example": "We need to suffer the plan before Friday."
+      "example": "Many people suffered during the long storm."
     }
   ]
 }

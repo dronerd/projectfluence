@@ -12,13 +12,13 @@
       "example": "The app can track how far you walk."
     },
     {
-      "word": "enter",
-      "meaning": "to come or go into a place",
-      "japaneseMeaning": "入る",
-      "synonyms": "go in, come in",
-      "antonyms": "exit, leave",
-      "forms": "enter, enters, entering, entered",
-      "example": "Please enter the room quietly."
+      "word": "enroll",
+      "meaning": "to officially join a course, school, or group",
+      "japaneseMeaning": "入学する、登録する",
+      "synonyms": "join, register",
+      "antonyms": "leave, quit",
+      "forms": "enroll, enrolls, enrolling, enrolled",
+      "example": "She plans to enroll in a computer course."
     },
     {
       "word": "postpone",
@@ -39,31 +39,31 @@
       "example": "Many families donate food before the holiday."
     },
     {
-      "word": "count",
-      "meaning": "to say numbers in order to find how many things there are",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
-      "forms": "count, counts, counting, counted",
-      "example": "We need to count the plan before Friday."
+      "word": "measure",
+      "meaning": "to find the size, amount, or level of something",
+      "japaneseMeaning": "測る、測定する",
+      "synonyms": "check, calculate",
+      "antonyms": "guess, ignore",
+      "forms": "measure, measures, measuring, measured",
+      "example": "We measured the room before buying a new desk."
     },
     {
-      "word": "move",
-      "meaning": "to change position or location",
-      "japaneseMeaning": "動く／移動する",
-      "synonyms": "shift, relocate",
+      "word": "relocate",
+      "meaning": "to move to a new place to live or work",
+      "japaneseMeaning": "移転する、引っ越す",
+      "synonyms": "move, transfer",
       "antonyms": "stay, remain",
-      "forms": "move, moves, moving, moved",
-      "example": "They moved to a new city."
+      "forms": "relocate, relocates, relocating, relocated",
+      "example": "The company will relocate to a larger office."
     },
     {
       "word": "translate",
       "meaning": "to change words from one language into another",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "翻訳する、訳す",
+      "synonyms": "interpret, explain",
+      "antonyms": "copy, misunderstand",
       "forms": "translate, translates, translating, translated",
-      "example": "We need to translate the plan before Friday."
+      "example": "Can you translate this email into Japanese?"
     },
     {
       "word": "persuade",
@@ -86,11 +86,11 @@
     {
       "word": "regard",
       "meaning": "to think of someone or something in a certain way",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "見なす、考える",
+      "synonyms": "consider, see",
+      "antonyms": "ignore, dismiss",
       "forms": "regard, regards, regarding, regarded",
-      "example": "We need to regard the plan before Friday."
+      "example": "Many students regard her as a kind teacher."
     }
   ]
 }

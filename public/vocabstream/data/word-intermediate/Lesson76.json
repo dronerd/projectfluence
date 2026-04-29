@@ -3,13 +3,13 @@
   "title": "Lesson 76",
   "words": [
     {
-      "word": "clean",
-      "meaning": "not dirty",
-      "japaneseMeaning": "きれいな／清潔な",
-      "synonyms": "tidy, spotless",
-      "antonyms": "dirty, filthy",
-      "forms": "clean, more clean, most clean",
-      "example": "Keep the kitchen clean after cooking."
+      "word": "sanitary",
+      "meaning": "clean and safe for health",
+      "japaneseMeaning": "衛生的な",
+      "synonyms": "clean, hygienic",
+      "antonyms": "dirty, unsafe",
+      "forms": "sanitary",
+      "example": "The restaurant must keep sanitary kitchen conditions."
     },
     {
       "word": "foreign",
@@ -21,22 +21,22 @@
       "example": "She enjoys reading foreign literature."
     },
     {
-      "word": "medium",
-      "meaning": "in the middle between small and large",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "medium, more medium, most medium",
-      "example": "The medium choice made the whole plan easier."
+      "word": "moderate",
+      "meaning": "not too large, strong, or extreme",
+      "japaneseMeaning": "適度な、中程度の",
+      "synonyms": "medium, reasonable",
+      "antonyms": "extreme, excessive",
+      "forms": "moderate, moderately",
+      "example": "Moderate exercise is good for most people."
     },
     {
       "word": "reliable",
       "meaning": "able to be trusted or depended on",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "信頼できる",
+      "synonyms": "trustworthy, dependable",
+      "antonyms": "unreliable, careless",
       "forms": "reliable, more reliable, most reliable",
-      "example": "The reliable choice made the whole plan easier."
+      "example": "This website is a reliable source of information."
     },
     {
       "word": "unusual",
@@ -48,13 +48,13 @@
       "example": "It's unusual to see such a large crowd on a weekday."
     },
     {
-      "word": "awake",
-      "meaning": "not sleeping",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "awake, more awake, most awake",
-      "example": "The awake choice made the whole plan easier."
+      "word": "conscious",
+      "meaning": "awake and able to understand what is happening",
+      "japaneseMeaning": "意識のある、意識している",
+      "synonyms": "aware, awake",
+      "antonyms": "unconscious, unaware",
+      "forms": "conscious, consciously",
+      "example": "The patient was conscious when the doctor arrived."
     },
     {
       "word": "scared",
@@ -77,11 +77,11 @@
     {
       "word": "appropriate",
       "meaning": "right or suitable for the situation",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "適切な、ふさわしい",
+      "synonyms": "suitable, proper",
+      "antonyms": "unsuitable, wrong",
       "forms": "appropriate, more appropriate, most appropriate",
-      "example": "The appropriate choice made the whole plan easier."
+      "example": "Please wear appropriate shoes for the hike."
     },
     {
       "word": "voluntary",

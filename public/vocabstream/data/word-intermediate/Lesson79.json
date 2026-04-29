@@ -3,31 +3,31 @@
   "title": "Lesson 79",
   "words": [
     {
-      "word": "clear",
-      "meaning": "easy to see or understand",
-      "japaneseMeaning": "明確な／透き通った",
-      "synonyms": "obvious, transparent",
-      "antonyms": "unclear, vague",
-      "forms": "clear, more clear, most clear",
-      "example": "The instructions were clear and easy to follow."
+      "word": "explicit",
+      "meaning": "clear and direct, with no hidden meaning",
+      "japaneseMeaning": "明確な、はっきりした",
+      "synonyms": "clear, direct",
+      "antonyms": "unclear, hidden",
+      "forms": "explicit, explicitly",
+      "example": "The teacher gave explicit instructions for the report."
     },
     {
       "word": "formal",
       "meaning": "serious and official in style",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "正式な、フォーマルな",
+      "synonyms": "official, serious",
+      "antonyms": "informal, casual",
       "forms": "formal, more formal, most formal",
-      "example": "The formal choice made the whole plan easier."
+      "example": "Please use formal language in the application letter."
     },
     {
       "word": "mild",
       "meaning": "not strong or severe",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "穏やかな、軽い",
+      "synonyms": "gentle, light",
+      "antonyms": "severe, strong",
       "forms": "mild, more mild, most mild",
-      "example": "The mild choice made the whole plan easier."
+      "example": "She had only mild symptoms and stayed home."
     },
     {
       "word": "rich",
@@ -39,37 +39,37 @@
       "example": "The region is rich in natural resources."
     },
     {
-      "word": "useful",
-      "meaning": "helping you do or get something",
-      "japaneseMeaning": "役に立つ",
-      "synonyms": "helpful, practical",
-      "antonyms": "useless, pointless",
-      "forms": "useful, more useful, most useful",
-      "example": "This app is very useful for learning vocabulary."
+      "word": "functional",
+      "meaning": "designed to be useful and work well",
+      "japaneseMeaning": "機能的な、実用的な",
+      "synonyms": "practical, useful",
+      "antonyms": "decorative, useless",
+      "forms": "functional, functionally",
+      "example": "The room is small but functional."
     },
     {
-      "word": "blind",
-      "meaning": "not able to see",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "blind, more blind, most blind",
-      "example": "The blind choice made the whole plan easier."
+      "word": "impaired",
+      "meaning": "weakened or damaged in ability",
+      "japaneseMeaning": "機能が低下した、障害のある",
+      "synonyms": "weakened, damaged",
+      "antonyms": "healthy, normal",
+      "forms": "impaired, impairment",
+      "example": "The app supports users with impaired vision."
     },
     {
       "word": "senior",
       "meaning": "higher in age, rank, or position",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "上級の、年上の",
+      "synonyms": "higher-level, older",
+      "antonyms": "junior, lower-level",
       "forms": "senior, more senior, most senior",
-      "example": "The senior choice made the whole plan easier."
+      "example": "A senior manager approved the new policy."
     },
     {
       "word": "insightful",
       "meaning": "having deep understanding",
       "japaneseMeaning": "洞察力のある",
-      "synonyms": "perceptive, discerning",
+      "synonyms": "wise, thoughtful",
       "antonyms": "shallow, superficial",
       "forms": "insightful, insightfully",
       "example": "Her comments were insightful."
@@ -77,20 +77,20 @@
     {
       "word": "bitter",
       "meaning": "having a strong bad taste, or feeling angry and hurt",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "苦い、つらい",
+      "synonyms": "sharp, resentful",
+      "antonyms": "sweet, forgiving",
       "forms": "bitter, more bitter, most bitter",
-      "example": "The bitter choice made the whole plan easier."
+      "example": "The team felt bitter after losing unfairly."
     },
     {
       "word": "primary",
       "meaning": "main or most important",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "主要な、第一の",
+      "synonyms": "main, chief",
+      "antonyms": "secondary, minor",
       "forms": "primary, more primary, most primary",
-      "example": "The primary choice made the whole plan easier."
+      "example": "The primary reason for the delay was bad weather."
     }
   ]
 }

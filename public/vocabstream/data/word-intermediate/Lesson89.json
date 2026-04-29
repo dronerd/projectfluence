@@ -5,11 +5,11 @@
     {
       "word": "charity",
       "meaning": "an organization that helps people in need",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "慈善団体、慈善活動",
+      "synonyms": "aid group, support",
+      "antonyms": "business, neglect",
       "forms": "charity, charities",
-      "example": "The charity helped us understand the situation more clearly."
+      "example": "The charity collected coats for children."
     },
     {
       "word": "employee",
@@ -30,13 +30,13 @@
       "example": "The image on the screen was too dark."
     },
     {
-      "word": "moment",
-      "meaning": "a very short time",
-      "japaneseMeaning": "瞬間、少しの間",
-      "synonyms": "second, instant",
-      "antonyms": "long time, hour",
-      "forms": "moment, moments",
-      "example": "Please wait a moment while I find the key."
+      "word": "phase",
+      "meaning": "a stage in a process or period of change",
+      "japaneseMeaning": "段階、局面",
+      "synonyms": "stage, period",
+      "antonyms": "whole, result",
+      "forms": "phase, phases",
+      "example": "The project entered its final phase in June."
     },
     {
       "word": "backup",
@@ -48,13 +48,13 @@
       "example": "Keep a backup of the file on another drive."
     },
     {
-      "word": "ticket",
-      "meaning": "a small paper or message that lets you enter or ride",
-      "japaneseMeaning": "切符、チケット",
-      "synonyms": "pass, entry card",
-      "antonyms": "bill, notice",
-      "forms": "ticket, tickets",
-      "example": "I bought a train ticket at the station."
+      "word": "admission",
+      "meaning": "permission to enter a place or event",
+      "japaneseMeaning": "入場、入学、入場料",
+      "synonyms": "entry, access",
+      "antonyms": "refusal, rejection",
+      "forms": "admission, admissions",
+      "example": "Admission to the museum is free on Sundays."
     },
     {
       "word": "coach",
@@ -75,13 +75,13 @@
       "example": "His excuse for being late sounded weak."
     },
     {
-      "word": "exam",
-      "meaning": "a test at school or work",
-      "japaneseMeaning": "試験",
-      "synonyms": "test, examination",
+      "word": "examination",
+      "meaning": "a formal test of knowledge or skill",
+      "japaneseMeaning": "試験、検査",
+      "synonyms": "test, assessment",
       "antonyms": "lesson, practice",
-      "forms": "exam, exams",
-      "example": "The final exam starts at nine."
+      "forms": "examination, examinations",
+      "example": "The entrance examination starts at nine."
     },
     {
       "word": "reply",
@@ -89,7 +89,7 @@
       "japaneseMeaning": "返信する／答える",
       "synonyms": "respond, answer",
       "antonyms": "ignore, silence",
-      "forms": "reply, replies",
+      "forms": "reply, replies, replying, replied",
       "example": "Please reply to the email before noon."
     }
   ]

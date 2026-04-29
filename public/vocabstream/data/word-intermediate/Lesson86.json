@@ -4,12 +4,12 @@
   "words": [
     {
       "word": "outcome",
-      "meaning": "final result",
+      "meaning": "the final result of an action or event",
       "japaneseMeaning": "結果",
-      "synonyms": "result, consequence",
+      "synonyms": "result, effect",
       "antonyms": "cause, beginning",
       "forms": "outcome, outcomes",
-      "example": "The outcome was positive."
+      "example": "We were pleased with the outcome of the meeting."
     },
     {
       "word": "feeling",
@@ -22,21 +22,21 @@
     },
     {
       "word": "identity",
-      "meaning": "sense of self or group",
+      "meaning": "who a person is, or the qualities that make a group different",
       "japaneseMeaning": "アイデンティティ",
-      "synonyms": "selfhood, personality",
-      "antonyms": "anonymity, obscurity",
+      "synonyms": "self, character",
+      "antonyms": "anonymity, sameness",
       "forms": "identity, identities",
-      "example": "Cultural identity shapes behavior."
+      "example": "Language is an important part of cultural identity."
     },
     {
-      "word": "model",
-      "meaning": "a small copy of something or a person who shows clothes",
-      "japaneseMeaning": "模型、モデル",
-      "synonyms": "copy, example",
-      "antonyms": "original, real thing",
-      "forms": "model, models",
-      "example": "He built a model of a famous ship."
+      "word": "prototype",
+      "meaning": "the first version of something that is made to test an idea",
+      "japaneseMeaning": "試作品、原型",
+      "synonyms": "sample, model",
+      "antonyms": "final product, copy",
+      "forms": "prototype, prototypes",
+      "example": "The engineers tested a prototype of the new device."
     },
     {
       "word": "zone",
@@ -48,13 +48,13 @@
       "example": "This zone is only for buses and taxis."
     },
     {
-      "word": "textbook",
-      "meaning": "a book used for studying a subject",
-      "japaneseMeaning": "教科書",
-      "synonyms": "coursebook, book",
-      "antonyms": "notebook, magazine",
-      "forms": "textbook, textbooks",
-      "example": "Please bring your textbook to class."
+      "word": "manual",
+      "meaning": "a book that explains how to use or repair something",
+      "japaneseMeaning": "取扱説明書、手引き",
+      "synonyms": "guide, handbook",
+      "antonyms": "novel, story",
+      "forms": "manual, manuals",
+      "example": "Read the manual before using the machine."
     },
     {
       "word": "client",
@@ -66,13 +66,13 @@
       "example": "The lawyer called her client after the meeting."
     },
     {
-      "word": "price",
-      "meaning": "the money you pay to buy something",
-      "japaneseMeaning": "価格、値段",
-      "synonyms": "cost, charge",
-      "antonyms": "free gift, refund",
-      "forms": "price, prices",
-      "example": "The price of this jacket is too high."
+      "word": "rate",
+      "meaning": "the amount of money paid or charged for a service",
+      "japaneseMeaning": "料金、割合、レート",
+      "synonyms": "charge, fee",
+      "antonyms": "discount, refund",
+      "forms": "rate, rates",
+      "example": "The hotel offers a lower rate in winter."
     },
     {
       "word": "setting",
@@ -84,13 +84,13 @@
       "example": "The quiet setting helped everyone focus."
     },
     {
-      "word": "prize",
-      "meaning": "something given to a winner",
-      "japaneseMeaning": "賞、賞品",
-      "synonyms": "award, reward",
-      "antonyms": "punishment, loss",
-      "forms": "prize, prizes",
-      "example": "The first prize was a new bicycle."
+      "word": "scholarship",
+      "meaning": "money given to a student to help pay for study",
+      "japaneseMeaning": "奨学金",
+      "synonyms": "grant, support",
+      "antonyms": "debt, fee",
+      "forms": "scholarship, scholarships",
+      "example": "She won a scholarship to study abroad."
     }
   ]
 }

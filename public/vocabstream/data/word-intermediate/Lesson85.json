@@ -3,22 +3,22 @@
   "title": "Lesson 85",
   "words": [
     {
-      "word": "common",
-      "meaning": "happening often or seen often",
-      "japaneseMeaning": "一般的な",
-      "synonyms": "ordinary, frequent",
-      "antonyms": "rare, unusual",
-      "forms": "common, more common, most common",
-      "example": "It's common to see cherry blossoms here in spring."
+      "word": "widespread",
+      "meaning": "existing or happening in many places",
+      "japaneseMeaning": "広く行き渡った、広範囲の",
+      "synonyms": "common, general",
+      "antonyms": "rare, limited",
+      "forms": "widespread, more widespread, most widespread",
+      "example": "Online payments are widespread in many cities."
     },
     {
-      "word": "friendly",
-      "meaning": "kind and pleasant to others",
-      "japaneseMeaning": "親しみやすい",
-      "synonyms": "amiable, kind",
-      "antonyms": "unfriendly, hostile",
-      "forms": "friendly, more friendly, most friendly",
-      "example": "Our neighbors are very friendly."
+      "word": "approachable",
+      "meaning": "friendly and easy to talk to",
+      "japaneseMeaning": "話しかけやすい、親しみやすい",
+      "synonyms": "friendly, open",
+      "antonyms": "cold, distant",
+      "forms": "approachable, more approachable, most approachable",
+      "example": "The new manager is approachable and listens carefully."
     },
     {
       "word": "modern",
@@ -30,40 +30,40 @@
       "example": "They live in a modern house with smart systems."
     },
     {
-      "word": "safe",
-      "meaning": "protected from danger or risk",
-      "japaneseMeaning": "安全な",
-      "synonyms": "secure, protected",
-      "antonyms": "dangerous, risky",
-      "forms": "safe, more safe, most safe",
-      "example": "Make sure the environment is safe for children."
+      "word": "protected",
+      "meaning": "kept safe from danger or harm",
+      "japaneseMeaning": "保護された、守られた",
+      "synonyms": "safe, guarded",
+      "antonyms": "exposed, unsafe",
+      "forms": "protected, more protected, most protected",
+      "example": "The old building is protected by local law."
     },
     {
-      "word": "weak",
-      "meaning": "lacking strength or power",
-      "japaneseMeaning": "弱い",
-      "synonyms": "feeble, frail",
-      "antonyms": "strong, powerful",
-      "forms": "weak, more weak, most weak",
-      "example": "He felt weak after the long illness."
+      "word": "fragile",
+      "meaning": "easily broken or damaged",
+      "japaneseMeaning": "壊れやすい、もろい",
+      "synonyms": "delicate, weak",
+      "antonyms": "strong, tough",
+      "forms": "fragile, more fragile, most fragile",
+      "example": "Please carry the fragile glasses carefully."
     },
     {
       "word": "civil",
       "meaning": "connected with ordinary people and their rights",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "市民の、民間の",
+      "synonyms": "public, social",
+      "antonyms": "military, private",
       "forms": "civil, more civil, most civil",
-      "example": "The civil choice made the whole plan easier."
+      "example": "The lesson focused on civil rights and duties."
     },
     {
-      "word": "slow",
-      "meaning": "moving or operating at low speed",
-      "japaneseMeaning": "遅い／ゆっくりした",
-      "synonyms": "unhurried, sluggish",
-      "antonyms": "fast, quick",
-      "forms": "slow, more slow, most slow",
-      "example": "The traffic was slow during rush hour."
+      "word": "gradual",
+      "meaning": "happening slowly over time",
+      "japaneseMeaning": "徐々の、段階的な",
+      "synonyms": "slow, step-by-step",
+      "antonyms": "sudden, quick",
+      "forms": "gradual, more gradual, most gradual",
+      "example": "There was a gradual change in the weather."
     },
     {
       "word": "suspicious",
@@ -77,20 +77,20 @@
     {
       "word": "chief",
       "meaning": "main or most important",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "主要な、最高位の",
+      "synonyms": "main, leading",
+      "antonyms": "minor, lower",
       "forms": "chief, more chief, most chief",
-      "example": "The chief choice made the whole plan easier."
+      "example": "Her chief concern is the safety of the team."
     },
     {
-      "word": "main",
-      "meaning": "most important or principal",
-      "japaneseMeaning": "主要な",
-      "synonyms": "primary, principal",
+      "word": "principal",
+      "meaning": "most important",
+      "japaneseMeaning": "主要な、最も重要な",
+      "synonyms": "main, chief",
       "antonyms": "minor, secondary",
-      "forms": "main, more main, most main",
-      "example": "The main reason is lack of time."
+      "forms": "principal, more principal, most principal",
+      "example": "The principal reason for the delay was heavy snow."
     }
   ]
 }

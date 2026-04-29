@@ -5,11 +5,11 @@
     {
       "word": "basis",
       "meaning": "the main idea or fact that something is built on",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "basis, basises",
-      "example": "The basis helped us understand the situation more clearly."
+      "japaneseMeaning": "基礎、根拠",
+      "synonyms": "foundation, reason",
+      "antonyms": "result, detail",
+      "forms": "basis, bases",
+      "example": "Trust is the basis of a strong relationship."
     },
     {
       "word": "destination",
@@ -30,13 +30,13 @@
       "example": "The city changed a lot in one decade."
     },
     {
-      "word": "magazine",
-      "meaning": "a thin book with stories, pictures, or news",
-      "japaneseMeaning": "雑誌",
-      "synonyms": "journal, publication",
-      "antonyms": "book, newspaper",
-      "forms": "magazine, magazines",
-      "example": "This travel magazine shows beautiful places in Japan."
+      "word": "journal",
+      "meaning": "a magazine or record that focuses on a special subject",
+      "japaneseMeaning": "専門誌、日誌",
+      "synonyms": "publication, record",
+      "antonyms": "advertisement, note",
+      "forms": "journal, journals",
+      "example": "The article appeared in a science journal."
     },
     {
       "word": "promotion",
@@ -66,13 +66,13 @@
       "example": "The article explains how students save money."
     },
     {
-      "word": "message",
-      "meaning": "words sent or given to someone",
-      "japaneseMeaning": "メッセージ",
-      "synonyms": "communication, note",
+      "word": "notification",
+      "meaning": "an official message that tells you about something",
+      "japaneseMeaning": "通知、お知らせ",
+      "synonyms": "notice, alert",
       "antonyms": "silence, secrecy",
-      "forms": "message, messages",
-      "example": "The campaign sent a clear message."
+      "forms": "notification, notifications",
+      "example": "The app sent a notification about the schedule change."
     },
     {
       "word": "degree",
@@ -84,13 +84,13 @@
       "example": "He earned a degree in education."
     },
     {
-      "word": "noise",
-      "meaning": "a sound, often loud or unwanted",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "noise, noises",
-      "example": "The noise helped us understand the situation more clearly."
+      "word": "disturbance",
+      "meaning": "something that interrupts peace, order, or normal activity",
+      "japaneseMeaning": "妨害、騒ぎ",
+      "synonyms": "interruption, trouble",
+      "antonyms": "peace, order",
+      "forms": "disturbance, disturbances",
+      "example": "The loud music caused a disturbance during the exam."
     }
   ]
 }

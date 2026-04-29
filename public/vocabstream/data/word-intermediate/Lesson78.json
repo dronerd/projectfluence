@@ -21,58 +21,58 @@
       "example": "Parents encourage their children."
     },
     {
-      "word": "plan",
-      "meaning": "to decide on and arrange in advance",
-      "japaneseMeaning": "計画する",
-      "synonyms": "arrange, schedule",
-      "antonyms": "improvise, neglect",
-      "forms": "plan, plans, planing, planed",
-      "example": "We plan to visit Kyoto next month."
+      "word": "arrange",
+      "meaning": "to plan or organize something before it happens",
+      "japaneseMeaning": "手配する、準備する",
+      "synonyms": "organize, schedule",
+      "antonyms": "cancel, disorder",
+      "forms": "arrange, arranges, arranging, arranged",
+      "example": "The staff arranged a meeting with the visitors."
     },
     {
-      "word": "stay",
-      "meaning": "to remain in the same place",
-      "japaneseMeaning": "滞在する／留まる",
-      "synonyms": "remain, linger",
-      "antonyms": "leave, go",
-      "forms": "stay, stays, staying, stayed",
-      "example": "Please stay until the end."
+      "word": "reside",
+      "meaning": "to live in a particular place",
+      "japaneseMeaning": "住む、居住する",
+      "synonyms": "live, dwell",
+      "antonyms": "leave, move away",
+      "forms": "reside, resides, residing, resided",
+      "example": "Many students reside near the university."
     },
     {
-      "word": "test",
-      "meaning": "to check how well something works",
-      "japaneseMeaning": "試す、テストする",
-      "synonyms": "check, try",
-      "antonyms": "trust, accept",
-      "forms": "test, tests, testing, tested",
-      "example": "We need to test the new camera before the trip."
+      "word": "verify",
+      "meaning": "to check that something is true or correct",
+      "japaneseMeaning": "確認する、検証する",
+      "synonyms": "confirm, check",
+      "antonyms": "guess, deny",
+      "forms": "verify, verifies, verifying, verified",
+      "example": "Please verify your email address before logging in."
     },
     {
-      "word": "mean",
-      "meaning": "to have a meaning",
-      "japaneseMeaning": "意味する／意図する",
-      "synonyms": "intend, signify",
-      "antonyms": "misinterpret, confuse",
-      "forms": "mean, means, meaning, meant, meant",
-      "example": "What do you mean by that?"
+      "word": "signify",
+      "meaning": "to mean or show something",
+      "japaneseMeaning": "意味する、示す",
+      "synonyms": "mean, indicate",
+      "antonyms": "hide, confuse",
+      "forms": "signify, signifies, signifying, signified",
+      "example": "A red mark may signify an error in the form."
     },
     {
-      "word": "touch",
-      "meaning": "to put your hand or fingers on something",
-      "japaneseMeaning": "触る",
-      "synonyms": "feel, handle",
-      "antonyms": "avoid, ignore",
-      "forms": "touch, touches, touching, touched",
-      "example": "Don't touch the wet paint."
+      "word": "interact",
+      "meaning": "to communicate or work with someone or something",
+      "japaneseMeaning": "交流する、相互に作用する",
+      "synonyms": "communicate, work together",
+      "antonyms": "avoid, separate",
+      "forms": "interact, interacts, interacting, interacted",
+      "example": "Students interact with native speakers online."
     },
     {
       "word": "resolve",
       "meaning": "to solve a problem or make a firm choice",
-      "japaneseMeaning": "決意",
-      "synonyms": "determination, commitment",
-      "antonyms": "hesitation, doubt",
+      "japaneseMeaning": "解決する、決心する",
+      "synonyms": "solve, settle",
+      "antonyms": "confuse, ignore",
       "forms": "resolve, resolves, resolving, resolved",
-      "example": "He showed resolve in difficult times."
+      "example": "The team resolved the problem before lunch."
     },
     {
       "word": "oppose",

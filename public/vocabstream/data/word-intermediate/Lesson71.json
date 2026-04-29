@@ -5,11 +5,11 @@
     {
       "word": "candidate",
       "meaning": "a person who tries to get a job, prize, or position",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "候補者、応募者",
+      "synonyms": "applicant, nominee",
+      "antonyms": "employer, judge",
       "forms": "candidate, candidates",
-      "example": "The candidate helped us understand the situation more clearly."
+      "example": "Each candidate gave a short speech."
     },
     {
       "word": "device",
@@ -31,12 +31,12 @@
     },
     {
       "word": "market",
-      "meaning": "a place where people buy and sell goods",
-      "japaneseMeaning": "市場",
-      "synonyms": "bazaar",
-      "antonyms": "home, factory",
+      "meaning": "the demand for goods or services in business",
+      "japaneseMeaning": "市場、需要",
+      "synonyms": "demand, trade",
+      "antonyms": "shortage, private use",
       "forms": "market, markets",
-      "example": "The market is crowded on weekends."
+      "example": "The market for electric cars is growing."
     },
     {
       "word": "purpose",
@@ -50,47 +50,47 @@
     {
       "word": "suggestion",
       "meaning": "an idea that someone gives to help or solve a problem",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "提案、助言",
+      "synonyms": "advice, proposal",
+      "antonyms": "order, refusal",
       "forms": "suggestion, suggestions",
-      "example": "The suggestion helped us understand the situation more clearly."
+      "example": "Her suggestion made the lesson easier to understand."
     },
     {
-      "word": "bank",
-      "meaning": "a place where people keep or borrow money",
-      "japaneseMeaning": "銀行",
-      "synonyms": "financial office, lender",
-      "antonyms": "home, shop",
-      "forms": "bank, banks",
-      "example": "The bank closes at three on Fridays."
+      "word": "lender",
+      "meaning": "a person or organization that lends money",
+      "japaneseMeaning": "貸し手、融資機関",
+      "synonyms": "bank, creditor",
+      "antonyms": "borrower, debtor",
+      "forms": "lender, lenders",
+      "example": "The lender explained the loan rules clearly."
     },
     {
-      "word": "newspaper",
-      "meaning": "large paper pages or a website with news",
-      "japaneseMeaning": "新聞",
-      "synonyms": "paper, news site",
-      "antonyms": "novel, letter",
-      "forms": "newspaper, newspapers",
-      "example": "My grandfather reads the newspaper every morning."
+      "word": "publication",
+      "meaning": "a book, magazine, report, or article made available to people",
+      "japaneseMeaning": "出版物、発行",
+      "synonyms": "journal, report",
+      "antonyms": "draft, private note",
+      "forms": "publication, publications",
+      "example": "The school publication includes student essays."
     },
     {
-      "word": "diary",
-      "meaning": "a book where you write about your daily life",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "diary, diaries",
-      "example": "The diary helped us understand the situation more clearly."
+      "word": "logbook",
+      "meaning": "a written record of events, work, or travel",
+      "japaneseMeaning": "記録簿、業務日誌",
+      "synonyms": "record, journal",
+      "antonyms": "memory, guess",
+      "forms": "logbook, logbooks",
+      "example": "The driver recorded each delivery in a logbook."
     },
     {
-      "word": "mechanic",
-      "meaning": "a person who repairs machines or cars",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "mechanic, mechanics",
-      "example": "The mechanic helped us understand the situation more clearly."
+      "word": "engineer",
+      "meaning": "a person who designs or builds machines, systems, or structures",
+      "japaneseMeaning": "技術者、エンジニア",
+      "synonyms": "designer, specialist",
+      "antonyms": "beginner, customer",
+      "forms": "engineer, engineers",
+      "example": "An engineer checked the bridge after the storm."
     }
   ]
 }

@@ -5,29 +5,29 @@
     {
       "word": "central",
       "meaning": "in the middle or most important",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "中心の、主要な",
+      "synonyms": "main, key",
+      "antonyms": "minor, outer",
       "forms": "central, more central, most central",
-      "example": "The central choice made the whole plan easier."
+      "example": "Trust is central to a good friendship."
     },
     {
-      "word": "fixed",
-      "meaning": "not moving or not changing",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "fixed, more fixed, most fixed",
-      "example": "The fixed choice made the whole plan easier."
+      "word": "permanent",
+      "meaning": "lasting for a long time or forever",
+      "japaneseMeaning": "永久的な、常設の",
+      "synonyms": "lasting, fixed",
+      "antonyms": "temporary, short-term",
+      "forms": "permanent, permanently",
+      "example": "The museum has a permanent exhibition on local history."
     },
     {
-      "word": "married",
-      "meaning": "having a husband or wife",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "married, more married, most married",
-      "example": "The married choice made the whole plan easier."
+      "word": "marital",
+      "meaning": "connected with marriage",
+      "japaneseMeaning": "結婚の、夫婦の",
+      "synonyms": "marriage-related, family",
+      "antonyms": "single, unrelated",
+      "forms": "marital",
+      "example": "The form asks about marital status."
     },
     {
       "word": "relaxed",
@@ -41,29 +41,29 @@
     {
       "word": "unlikely",
       "meaning": "probably not going to happen",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "起こりそうにない",
+      "synonyms": "doubtful, improbable",
+      "antonyms": "likely, probable",
       "forms": "unlikely, more unlikely, most unlikely",
-      "example": "The unlikely choice made the whole plan easier."
+      "example": "It is unlikely that the train will be late today."
     },
     {
-      "word": "angry",
-      "meaning": "feeling strong annoyance or displeasure",
-      "japaneseMeaning": "怒っている",
-      "synonyms": "furious, irritated",
+      "word": "irritated",
+      "meaning": "annoyed or slightly angry",
+      "japaneseMeaning": "いらいらした、腹を立てた",
+      "synonyms": "annoyed, upset",
       "antonyms": "calm, pleased",
-      "forms": "angry, more angry, most angry",
-      "example": "She was angry about the delay."
+      "forms": "irritated, irritation",
+      "example": "She felt irritated by the repeated noise."
     },
     {
-      "word": "proud",
-      "meaning": "happy because you or someone did well",
-      "japaneseMeaning": "誇りに思う／誇らしい",
-      "synonyms": "pleased, honored",
-      "antonyms": "ashamed, embarrassed",
-      "forms": "proud, more proud, most proud",
-      "example": "His parents were proud of his success."
+      "word": "accomplished",
+      "meaning": "skilled and successful at something",
+      "japaneseMeaning": "熟達した、成し遂げた",
+      "synonyms": "skilled, successful",
+      "antonyms": "unskilled, inexperienced",
+      "forms": "accomplished",
+      "example": "She is an accomplished pianist and teacher."
     },
     {
       "word": "lively",
@@ -77,11 +77,11 @@
     {
       "word": "apparent",
       "meaning": "easy to see or understand",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "明らかな、見かけの",
+      "synonyms": "clear, obvious",
+      "antonyms": "hidden, unclear",
       "forms": "apparent, more apparent, most apparent",
-      "example": "The apparent choice made the whole plan easier."
+      "example": "It became apparent that the plan needed more time."
     },
     {
       "word": "satisfied",

@@ -3,67 +3,67 @@
   "title": "Lesson 82",
   "words": [
     {
-      "word": "clever",
-      "meaning": "quick to understand, learn, or devise",
-      "japaneseMeaning": "賢い／利口な",
-      "synonyms": "smart, bright",
-      "antonyms": "dull, stupid",
-      "forms": "clever, more clever, most clever",
-      "example": "She is clever and solves problems quickly."
+      "word": "resourceful",
+      "meaning": "good at finding ways to solve problems",
+      "japaneseMeaning": "機転が利く、工夫に富んだ",
+      "synonyms": "creative, clever",
+      "antonyms": "helpless, careless",
+      "forms": "resourceful, more resourceful, most resourceful",
+      "example": "She was resourceful when the team lost its notes."
     },
     {
-      "word": "fresh",
-      "meaning": "new or made a short time ago",
-      "japaneseMeaning": "新鮮な",
-      "synonyms": "new, crisp",
-      "antonyms": "stale, old",
-      "forms": "fresh, more fresh, most fresh",
-      "example": "We bought fresh vegetables at the market."
+      "word": "original",
+      "meaning": "new and different, not copied from something else",
+      "japaneseMeaning": "独創的な、元の",
+      "synonyms": "new, creative",
+      "antonyms": "copied, ordinary",
+      "forms": "original, more original, most original",
+      "example": "Her original idea made the project more interesting."
     },
     {
       "word": "mobile",
       "meaning": "easy to move or carry",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "移動しやすい、携帯用の",
+      "synonyms": "portable, movable",
+      "antonyms": "fixed, still",
       "forms": "mobile, more mobile, most mobile",
-      "example": "The mobile choice made the whole plan easier."
+      "example": "The clinic uses a mobile unit to visit small towns."
     },
     {
       "word": "rough",
       "meaning": "not smooth or not gentle",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "粗い、荒い、大まかな",
+      "synonyms": "uneven, hard",
+      "antonyms": "smooth, gentle",
       "forms": "rough, more rough, most rough",
-      "example": "The rough choice made the whole plan easier."
+      "example": "The road was rough after the heavy rain."
     },
     {
-      "word": "usual",
-      "meaning": "normal and happening most of the time",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "usual, more usual, most usual",
-      "example": "The usual choice made the whole plan easier."
+      "word": "consistent",
+      "meaning": "staying the same in quality or behavior",
+      "japaneseMeaning": "一貫した、安定した",
+      "synonyms": "steady, reliable",
+      "antonyms": "changing, uneven",
+      "forms": "consistent, more consistent, most consistent",
+      "example": "Her work has been consistent all year."
     },
     {
-      "word": "broken",
-      "meaning": "damaged and not working",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "broken, more broken, most broken",
-      "example": "The broken choice made the whole plan easier."
+      "word": "defective",
+      "meaning": "not working correctly because something is wrong",
+      "japaneseMeaning": "欠陥のある、不良の",
+      "synonyms": "faulty, damaged",
+      "antonyms": "perfect, working",
+      "forms": "defective, more defective, most defective",
+      "example": "The store replaced the defective phone."
     },
     {
-      "word": "sick",
-      "meaning": "ill or not well",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
-      "forms": "sick, more sick, most sick",
-      "example": "The sick choice made the whole plan easier."
+      "word": "unwell",
+      "meaning": "not feeling healthy",
+      "japaneseMeaning": "具合が悪い",
+      "synonyms": "ill, sick",
+      "antonyms": "healthy, well",
+      "forms": "unwell, more unwell, most unwell",
+      "example": "He felt unwell and went home early."
     },
     {
       "word": "objective",
@@ -77,20 +77,20 @@
     {
       "word": "casual",
       "meaning": "relaxed and not formal",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "気軽な、普段着の",
+      "synonyms": "relaxed, informal",
+      "antonyms": "formal, serious",
       "forms": "casual, more casual, most casual",
-      "example": "The casual choice made the whole plan easier."
+      "example": "You can wear casual clothes to the picnic."
     },
     {
       "word": "secondary",
       "meaning": "less important than the main thing",
-      "japaneseMeaning": "形容詞",
-      "synonyms": "good, clear",
-      "antonyms": "opposite, different",
+      "japaneseMeaning": "二次的な、副次的な",
+      "synonyms": "minor, less important",
+      "antonyms": "main, primary",
       "forms": "secondary, more secondary, most secondary",
-      "example": "The secondary choice made the whole plan easier."
+      "example": "Cost is important, but safety is the secondary concern."
     }
   ]
 }

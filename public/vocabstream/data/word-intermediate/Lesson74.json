@@ -12,22 +12,22 @@
       "example": "She wants a career in medicine."
     },
     {
-      "word": "difference",
-      "meaning": "the way two things are not the same",
-      "japaneseMeaning": "違い",
-      "synonyms": "change, contrast",
+      "word": "distinction",
+      "meaning": "a clear difference between two things",
+      "japaneseMeaning": "区別、相違",
+      "synonyms": "difference, contrast",
       "antonyms": "similarity, sameness",
-      "forms": "difference, differences",
-      "example": "What is the difference between these two plans?"
+      "forms": "distinction, distinctions",
+      "example": "The teacher explained the distinction between fact and opinion."
     },
     {
       "word": "growth",
       "meaning": "an increase in size, number, or amount",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "growth, growths",
-      "example": "The growth helped us understand the situation more clearly."
+      "japaneseMeaning": "成長、増加",
+      "synonyms": "increase, development",
+      "antonyms": "decline, decrease",
+      "forms": "growth",
+      "example": "The chart shows steady growth in online sales."
     },
     {
       "word": "material",
@@ -41,11 +41,11 @@
     {
       "word": "reaction",
       "meaning": "what you do, say, or feel because of something",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "反応、反響",
+      "synonyms": "response, effect",
+      "antonyms": "cause, action",
       "forms": "reaction, reactions",
-      "example": "The reaction helped us understand the situation more clearly."
+      "example": "Her first reaction to the news was surprise."
     },
     {
       "word": "system",
@@ -77,20 +77,20 @@
     {
       "word": "diet",
       "meaning": "the food that a person usually eats",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
+      "japaneseMeaning": "食事、食生活",
+      "synonyms": "eating habits, food",
+      "antonyms": "fasting, hunger",
       "forms": "diet, diets",
-      "example": "The diet helped us understand the situation more clearly."
+      "example": "A balanced diet supports good health."
     },
     {
-      "word": "path",
-      "meaning": "a way or track that people walk on",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "path, paths",
-      "example": "The path helped us understand the situation more clearly."
+      "word": "trajectory",
+      "meaning": "the path or development that something follows",
+      "japaneseMeaning": "軌道、進路",
+      "synonyms": "path, course",
+      "antonyms": "stop, stillness",
+      "forms": "trajectory, trajectories",
+      "example": "The report describes the company's growth trajectory."
     }
   ]
 }

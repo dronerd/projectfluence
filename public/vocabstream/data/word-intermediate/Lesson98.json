@@ -12,13 +12,13 @@
       "example": "The shop sells a wide range of bags."
     },
     {
-      "word": "entrance",
-      "meaning": "a way into a place",
-      "japaneseMeaning": "入口",
-      "synonyms": "entry, doorway",
-      "antonyms": "exit",
-      "forms": "entrance, entrances",
-      "example": "The entrance is on the left side."
+      "word": "entry",
+      "meaning": "the act of entering a place, or the right to enter",
+      "japaneseMeaning": "入場、参加、記入項目",
+      "synonyms": "admission, access",
+      "antonyms": "exit, refusal",
+      "forms": "entry, entries",
+      "example": "Entry to the concert starts at six."
     },
     {
       "word": "progress",
@@ -26,7 +26,7 @@
       "japaneseMeaning": "進歩、進展",
       "synonyms": "improvement, growth",
       "antonyms": "decline, delay",
-      "forms": "progress, progresses",
+      "forms": "progress",
       "example": "She made progress after practicing every day."
     },
     {
@@ -50,11 +50,11 @@
     {
       "word": "transportation",
       "meaning": "ways of moving people or things from one place to another",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "transportation, transportations",
-      "example": "The transportation helped us understand the situation more clearly."
+      "japaneseMeaning": "交通機関、輸送",
+      "synonyms": "transport, travel",
+      "antonyms": "staying, walking",
+      "forms": "transportation",
+      "example": "Public transportation is convenient in this city."
     },
     {
       "word": "condition",
@@ -66,31 +66,31 @@
       "example": "The old bike is in good condition."
     },
     {
-      "word": "station",
-      "meaning": "a place where trains or buses stop",
-      "japaneseMeaning": "駅",
-      "synonyms": "stop, terminal",
-      "antonyms": "road, field",
-      "forms": "station, stations",
-      "example": "Meet me at the station after school."
+      "word": "departure",
+      "meaning": "the act of leaving a place, especially for a trip",
+      "japaneseMeaning": "出発",
+      "synonyms": "leaving, exit",
+      "antonyms": "arrival, return",
+      "forms": "departure, departures",
+      "example": "Our departure was delayed by heavy rain."
     },
     {
-      "word": "fault",
-      "meaning": "a mistake or a problem in something",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "fault, faults",
-      "example": "The fault helped us understand the situation more clearly."
+      "word": "defect",
+      "meaning": "a fault or problem that makes something less useful",
+      "japaneseMeaning": "欠陥、不具合",
+      "synonyms": "fault, problem",
+      "antonyms": "strength, advantage",
+      "forms": "defect, defects",
+      "example": "The company repaired the defect for free."
     },
     {
-      "word": "sale",
-      "meaning": "an act of selling something, or a time when prices are lower",
-      "japaneseMeaning": "名詞",
-      "synonyms": "item, idea",
-      "antonyms": "lack, absence",
-      "forms": "sale, sales",
-      "example": "The sale helped us understand the situation more clearly."
+      "word": "discount",
+      "meaning": "a reduction in the usual price",
+      "japaneseMeaning": "割引",
+      "synonyms": "reduction, lower price",
+      "antonyms": "increase, extra charge",
+      "forms": "discount, discounts",
+      "example": "Students can get a discount at the museum."
     }
   ]
 }

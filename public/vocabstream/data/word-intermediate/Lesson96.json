@@ -3,20 +3,20 @@
   "title": "Lesson 96",
   "words": [
     {
-      "word": "collect",
-      "meaning": "to bring things together as a group",
-      "japaneseMeaning": "集める",
-      "synonyms": "gather, assemble",
-      "antonyms": "scatter, disperse",
-      "forms": "collect, collects, collecting, collected",
-      "example": "She collects stamps as a hobby."
+      "word": "accumulate",
+      "meaning": "to gradually collect or increase over time",
+      "japaneseMeaning": "蓄積する、たまる",
+      "synonyms": "collect, build up",
+      "antonyms": "reduce, spend",
+      "forms": "accumulate, accumulates, accumulating, accumulated",
+      "example": "Dust accumulated on the old shelves."
     },
     {
       "word": "focus",
       "meaning": "to give your attention to one thing",
       "japaneseMeaning": "集中する、集中力",
-      "synonyms": "concentration, attention",
-      "antonyms": "distraction",
+      "synonyms": "concentrate, pay attention",
+      "antonyms": "ignore, distract",
       "forms": "focus, focuses, focusing, focused",
       "example": "Find a quiet place to focus."
     },
@@ -24,73 +24,73 @@
       "word": "provide",
       "meaning": "to supply or make available",
       "japaneseMeaning": "提供する",
-      "synonyms": "supply, furnish",
-      "antonyms": "withhold, deprive",
+      "synonyms": "supply, give",
+      "antonyms": "take, refuse",
       "forms": "provide, provides, providing, provided",
       "example": "They provided food for the refugees."
     },
     {
       "word": "trust",
       "meaning": "to believe someone is good and honest",
-      "japaneseMeaning": "信頼",
-      "synonyms": "confidence, faith",
+      "japaneseMeaning": "信頼する",
+      "synonyms": "believe, rely on",
       "antonyms": "distrust, suspicion",
       "forms": "trust, trusts, trusting, trusted",
-      "example": "Trust is essential in relationships."
+      "example": "I trust my friend to keep the secret."
     },
     {
       "word": "disappear",
       "meaning": "to become impossible to see or find",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "消える、見えなくなる",
+      "synonyms": "vanish, go away",
+      "antonyms": "appear, remain",
       "forms": "disappear, disappears, disappearing, disappeared",
-      "example": "We need to disappear the plan before Friday."
+      "example": "The sun disappeared behind the clouds."
     },
     {
-      "word": "point",
-      "meaning": "to point",
-      "japaneseMeaning": "指さす",
-      "synonyms": "do, act",
-      "antonyms": "whole, area",
-      "forms": "point, points, pointing, pointed",
-      "example": "I point every day."
+      "word": "gesture",
+      "meaning": "to move your hand or head to express something",
+      "japaneseMeaning": "身ぶりで示す、ジェスチャーをする",
+      "synonyms": "signal, point",
+      "antonyms": "speak, stay still",
+      "forms": "gesture, gestures, gesturing, gestured",
+      "example": "She gestured for us to sit down."
     },
     {
-      "word": "wish",
-      "meaning": "to hope for something that is not guaranteed",
-      "japaneseMeaning": "願う",
-      "synonyms": "desire, long for",
-      "antonyms": "dread, reject",
-      "forms": "wish, wishes, wishing, wished",
-      "example": "I wish you good luck."
+      "word": "aspire",
+      "meaning": "to hope and work toward achieving something",
+      "japaneseMeaning": "目指す、熱望する",
+      "synonyms": "aim, hope",
+      "antonyms": "give up, avoid",
+      "forms": "aspire, aspires, aspiring, aspired",
+      "example": "She aspires to become a doctor."
     },
     {
-      "word": "initiate",
-      "meaning": "to start something",
-      "japaneseMeaning": "開始する",
-      "synonyms": "launch, commence",
-      "antonyms": "stop, end",
-      "forms": "initiate, initiates, initiating, initiated",
-      "example": "They will initiate the project next week."
+      "word": "establish",
+      "meaning": "to start or create something that will last",
+      "japaneseMeaning": "設立する、確立する",
+      "synonyms": "start, create",
+      "antonyms": "end, destroy",
+      "forms": "establish, establishes, establishing, established",
+      "example": "They established a new club at school."
     },
     {
-      "word": "escalate",
-      "meaning": "to increase or intensify",
-      "japaneseMeaning": "エスカレートする",
-      "synonyms": "intensify, rise",
-      "antonyms": "decrease, lessen",
-      "forms": "escalate, escalates, escalating, escalated",
-      "example": "Tensions escalated between the two countries."
+      "word": "worsen",
+      "meaning": "to become worse",
+      "japaneseMeaning": "悪化する、悪化させる",
+      "synonyms": "get worse, decline",
+      "antonyms": "improve, recover",
+      "forms": "worsen, worsens, worsening, worsened",
+      "example": "The weather worsened in the afternoon."
     },
     {
       "word": "tend",
       "meaning": "to usually do or be something",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "〜する傾向がある",
+      "synonyms": "usually do, be likely",
+      "antonyms": "avoid, rarely do",
       "forms": "tend, tends, tending, tended",
-      "example": "We need to tend the plan before Friday."
+      "example": "Young children tend to ask many questions."
     }
   ]
 }

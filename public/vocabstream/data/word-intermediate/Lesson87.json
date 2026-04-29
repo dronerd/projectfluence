@@ -3,13 +3,13 @@
   "title": "Lesson 87",
   "words": [
     {
-      "word": "change",
-      "meaning": "to make or become different",
-      "japaneseMeaning": "変える／変わる",
-      "synonyms": "alter, modify",
-      "antonyms": "preserve, maintain",
-      "forms": "change, changes, changing, changed",
-      "example": "Change your clothes before dinner."
+      "word": "modify",
+      "meaning": "to change something slightly to improve it or make it suitable",
+      "japaneseMeaning": "修正する、変更する",
+      "synonyms": "adjust, change",
+      "antonyms": "preserve, keep",
+      "forms": "modify, modifies, modifying, modified",
+      "example": "We modified the plan after hearing the new information."
     },
     {
       "word": "explore",
@@ -18,7 +18,7 @@
       "synonyms": "discover, examine",
       "antonyms": "ignore, avoid",
       "forms": "explore, explores, exploring, explored",
-      "example": "We explore the old part of the city on foot."
+      "example": "We explored the old part of the city on foot."
     },
     {
       "word": "prefer",
@@ -26,7 +26,7 @@
       "japaneseMeaning": "〜の方を好む",
       "synonyms": "favor, choose",
       "antonyms": "dislike, reject",
-      "forms": "prefer, prefers, prefering, prefered",
+      "forms": "prefer, prefers, preferring, preferred",
       "example": "I prefer tea to coffee."
     },
     {
@@ -41,56 +41,56 @@
     {
       "word": "delay",
       "meaning": "to make something happen later",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "遅らせる、延期する",
+      "synonyms": "postpone, put off",
+      "antonyms": "hurry, advance",
       "forms": "delay, delays, delaying, delayed",
-      "example": "We need to delay the plan before Friday."
+      "example": "Heavy snow delayed the train."
     },
     {
-      "word": "pack",
-      "meaning": "to put items into a container for transport",
-      "japaneseMeaning": "詰める／荷造りする",
-      "synonyms": "load, bundle",
-      "antonyms": "unpack, scatter",
-      "forms": "pack, packs, packing, packed",
-      "example": "Pack your suitcase tonight."
+      "word": "assemble",
+      "meaning": "to put parts together to make something",
+      "japaneseMeaning": "組み立てる、集める",
+      "synonyms": "build, put together",
+      "antonyms": "take apart, separate",
+      "forms": "assemble, assembles, assembling, assembled",
+      "example": "We assembled the shelves in the classroom."
     },
     {
       "word": "update",
       "meaning": "to make information or a thing more recent",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "更新する、最新にする",
+      "synonyms": "renew, revise",
+      "antonyms": "ignore, keep",
       "forms": "update, updates, updating, updated",
-      "example": "We need to update the plan before Friday."
+      "example": "Please update your address on the form."
     },
     {
       "word": "motivate",
-      "meaning": "to provide reason or incentive",
+      "meaning": "to make someone want to do something",
       "japaneseMeaning": "やる気を起こさせる",
       "synonyms": "inspire, encourage",
-      "antonyms": "discourage, demotivate",
+      "antonyms": "discourage, bore",
       "forms": "motivate, motivates, motivating, motivated",
-      "example": "Rewards motivate employees."
+      "example": "Clear goals motivate employees."
     },
     {
       "word": "consist",
       "meaning": "to be made of parts",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "〜から成る",
+      "synonyms": "include, contain",
+      "antonyms": "exclude, lack",
       "forms": "consist, consists, consisting, consisted",
-      "example": "We need to consist the plan before Friday."
+      "example": "The meal consists of rice, fish, and soup."
     },
     {
       "word": "represent",
       "meaning": "to speak or act for another person or group",
-      "japaneseMeaning": "動詞",
-      "synonyms": "do, act",
-      "antonyms": "stop, avoid",
+      "japaneseMeaning": "代表する、表す",
+      "synonyms": "speak for, stand for",
+      "antonyms": "misrepresent, oppose",
       "forms": "represent, represents, representing, represented",
-      "example": "We need to represent the plan before Friday."
+      "example": "She will represent our class at the meeting."
     }
   ]
 }
