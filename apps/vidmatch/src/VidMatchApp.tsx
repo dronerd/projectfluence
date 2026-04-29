@@ -2,11 +2,33 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 
 type Props = {
   pathname: string;
 };
+
+type VidMatchVideo = {
+  video_id: string;
+  title: string;
+  channel_name: string;
+  youtube_url: string;
+  thumbnail_url: string | null;
+  duration: string | null;
+  level: string;
+  skills: string[];
+  topics: string[];
+  accent: string | null;
+  transcript_available: boolean;
+  description: string | null;
+  tags: string[];
+  quality_score: number;
+};
+
+const LEVELS = ["A1", "A2", "B1", "B2", "C1"];
+const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversation"];
+const TOPICS = ["travel", "school", "business", "daily life", "news"];
+const ACCENTS = ["American", "British", "Australian", "Canadian"];
 
 const featureCards = [
   {
@@ -24,6 +46,15 @@ const featureCards = [
 ];
 
 export default function VidMatchApp({ pathname }: Props) {
+  const [selectedLevel, setSelectedLevel] = useState("B1");
+  const [selectedSkills, setSelectedSkills] = useState<string[]>(["listening"]);
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+  const [selectedAccent, setSelectedAccent] = useState("");
+  const [captionOnly, setCaptionOnly] = useState(false);
+  const [recommendations, setRecommendations] = useState<VidMatchVideo[]>([]);
+  const [recommendationError, setRecommendationError] = useState("");
+  const [recommendationLoading, setRecommendationLoading] = useState(false);
+
   const scrollToTop = useCallback(() => {
     if (typeof window !== "undefined") {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -31,6 +62,42 @@ export default function VidMatchApp({ pathname }: Props) {
   }, []);
 
   const isNestedRoute = pathname !== "/";
+
+  const toggleValue = (value: string, values: string[], setValues: React.Dispatch<React.SetStateAction<string[]>>) => {
+    setValues(values.includes(value) ? values.filter((item) => item !== value) : [...values, value]);
+  };
+
+  const fetchRecommendations = async () => {
+    setRecommendationLoading(true);
+    setRecommendationError("");
+
+    const params = new URLSearchParams({
+      level: selectedLevel,
+      limit: "6",
+    });
+
+    selectedSkills.forEach((skill) => params.append("skills", skill));
+    selectedTopics.forEach((topic) => params.append("topics", topic));
+    if (selectedAccent) params.set("accent", selectedAccent);
+    if (captionOnly) params.set("transcript_available", "true");
+
+    try {
+      const response = await fetch(`/api/vidmatch/recommend?${params}`);
+      const data = await response.json();
+
+      if (!response.ok || data.error) {
+        throw new Error(data.error || "Recommendation request failed");
+      }
+
+      setRecommendations(data.videos ?? []);
+    } catch (error) {
+      console.error(error);
+      setRecommendationError("推薦を取得できませんでした。少し時間をおいて再試行してください。");
+      setRecommendations([]);
+    } finally {
+      setRecommendationLoading(false);
+    }
+  };
 
   return (
     <div className="vidmatch-shell">
@@ -243,6 +310,174 @@ export default function VidMatchApp({ pathname }: Props) {
           gap: 14px;
         }
 
+        .vidmatch-preferences {
+          display: grid;
+          gap: 20px;
+        }
+
+        .preference-group {
+          display: grid;
+          gap: 10px;
+        }
+
+        .preference-label {
+          color: #10203b;
+          font-size: 15px;
+          font-weight: 900;
+        }
+
+        .chip-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .choice-chip,
+        .recommend-button,
+        .youtube-link {
+          border: 1px solid #cbd5e1;
+          border-radius: 999px;
+          min-height: 42px;
+          padding: 0 16px;
+          font-weight: 800;
+          cursor: pointer;
+          transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+        }
+
+        .choice-chip {
+          background: #f8fafc;
+          color: #334155;
+        }
+
+        .choice-chip:hover,
+        .choice-chip:focus {
+          transform: translateY(-1px);
+          border-color: #0891b2;
+          outline: none;
+        }
+
+        .choice-chip.is-selected {
+          background: #0f766e;
+          border-color: #0f766e;
+          color: #ffffff;
+        }
+
+        .caption-toggle {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          width: fit-content;
+          color: #334155;
+          font-weight: 800;
+          cursor: pointer;
+        }
+
+        .caption-toggle input {
+          width: 18px;
+          height: 18px;
+          accent-color: #0f766e;
+        }
+
+        .recommend-actions {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+
+        .recommend-button {
+          background: #173a71;
+          border-color: #173a71;
+          color: #ffffff;
+        }
+
+        .recommend-button:disabled {
+          cursor: wait;
+          opacity: 0.72;
+        }
+
+        .recommend-error,
+        .empty-recommendations {
+          color: #b42318;
+          font-weight: 800;
+        }
+
+        .empty-recommendations {
+          color: #475569;
+        }
+
+        .recommendation-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 16px;
+          margin-top: 18px;
+        }
+
+        .recommendation-card {
+          min-width: 0;
+          overflow: hidden;
+          border: 1px solid #d1d5db;
+          border-radius: 14px;
+          background: #ffffff;
+          box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+        }
+
+        .recommendation-thumb {
+          display: block;
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          background: #d7e0ec;
+        }
+
+        .recommendation-body {
+          display: grid;
+          gap: 10px;
+          padding: 16px;
+        }
+
+        .recommendation-title {
+          margin: 0;
+          color: #10203b;
+          font-size: 18px;
+          line-height: 1.35;
+          font-weight: 900;
+        }
+
+        .recommendation-meta,
+        .recommendation-description {
+          margin: 0;
+          color: #475569;
+          line-height: 1.6;
+        }
+
+        .recommendation-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .recommendation-tag {
+          border-radius: 999px;
+          background: #e0f2fe;
+          color: #075985;
+          font-size: 12px;
+          font-weight: 800;
+          padding: 5px 9px;
+        }
+
+        .youtube-link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: fit-content;
+          min-height: 40px;
+          background: #dc2626;
+          border-color: #dc2626;
+          color: #ffffff;
+          text-decoration: none;
+        }
+
         .vidmatch-feature-card {
           min-width: 0;
           padding: 18px;
@@ -302,6 +537,10 @@ export default function VidMatchApp({ pathname }: Props) {
           }
 
           .vidmatch-card-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .recommendation-grid {
             grid-template-columns: 1fr;
           }
         }
@@ -408,6 +647,143 @@ export default function VidMatchApp({ pathname }: Props) {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="vidmatch-section" aria-labelledby="vidmatch-recommend-title">
+          <h2 id="vidmatch-recommend-title">動画を探す</h2>
+
+          <div className="vidmatch-preferences">
+            <div className="preference-group">
+              <span className="preference-label">レベル</span>
+              <div className="chip-row" role="group" aria-label="Choose English level">
+                {LEVELS.map((level) => (
+                  <button
+                    key={level}
+                    type="button"
+                    className={`choice-chip ${selectedLevel === level ? "is-selected" : ""}`}
+                    onClick={() => setSelectedLevel(level)}
+                  >
+                    {level}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="preference-group">
+              <span className="preference-label">伸ばしたいスキル</span>
+              <div className="chip-row" role="group" aria-label="Choose skills">
+                {SKILLS.map((skill) => (
+                  <button
+                    key={skill}
+                    type="button"
+                    className={`choice-chip ${selectedSkills.includes(skill) ? "is-selected" : ""}`}
+                    onClick={() => toggleValue(skill, selectedSkills, setSelectedSkills)}
+                  >
+                    {skill}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="preference-group">
+              <span className="preference-label">トピック</span>
+              <div className="chip-row" role="group" aria-label="Choose topics">
+                {TOPICS.map((topic) => (
+                  <button
+                    key={topic}
+                    type="button"
+                    className={`choice-chip ${selectedTopics.includes(topic) ? "is-selected" : ""}`}
+                    onClick={() => toggleValue(topic, selectedTopics, setSelectedTopics)}
+                  >
+                    {topic}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="preference-group">
+              <span className="preference-label">アクセント</span>
+              <div className="chip-row" role="group" aria-label="Choose accent">
+                <button
+                  type="button"
+                  className={`choice-chip ${selectedAccent === "" ? "is-selected" : ""}`}
+                  onClick={() => setSelectedAccent("")}
+                >
+                  any
+                </button>
+                {ACCENTS.map((accent) => (
+                  <button
+                    key={accent}
+                    type="button"
+                    className={`choice-chip ${selectedAccent === accent ? "is-selected" : ""}`}
+                    onClick={() => setSelectedAccent(accent)}
+                  >
+                    {accent}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <label className="caption-toggle">
+              <input
+                type="checkbox"
+                checked={captionOnly}
+                onChange={(event) => setCaptionOnly(event.target.checked)}
+              />
+              字幕・文字起こしあり
+            </label>
+
+            <div className="recommend-actions">
+              <button
+                type="button"
+                className="recommend-button"
+                onClick={fetchRecommendations}
+                disabled={recommendationLoading}
+              >
+                {recommendationLoading ? "検索中..." : "おすすめを見る"}
+              </button>
+              {recommendationError && <span className="recommend-error">{recommendationError}</span>}
+            </div>
+          </div>
+
+          {recommendations.length > 0 && (
+            <div className="recommendation-grid" aria-live="polite">
+              {recommendations.map((video) => (
+                <article key={video.video_id} className="recommendation-card">
+                  {video.thumbnail_url && (
+                    <img src={video.thumbnail_url} alt="" className="recommendation-thumb" loading="lazy" />
+                  )}
+                  <div className="recommendation-body">
+                    <h3 className="recommendation-title">{video.title}</h3>
+                    <p className="recommendation-meta">
+                      {video.channel_name} / {video.level} / score {Math.round(Number(video.quality_score))}
+                    </p>
+                    <div className="recommendation-tags">
+                      {[...video.skills, ...video.topics].slice(0, 6).map((tag) => (
+                        <span key={`${video.video_id}-${tag}`} className="recommendation-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    {video.description && (
+                      <p className="recommendation-description">
+                        {video.description.length > 150 ? `${video.description.slice(0, 150)}...` : video.description}
+                      </p>
+                    )}
+                    <a className="youtube-link" href={video.youtube_url} target="_blank" rel="noreferrer">
+                      YouTubeで見る
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+
+          {!recommendationLoading && recommendations.length === 0 && (
+            <p className="empty-recommendations" style={{ marginTop: 16 }}>
+              条件を選んで、おすすめ動画を表示できます。
+            </p>
+          )}
         </section>
       </main>
     </div>

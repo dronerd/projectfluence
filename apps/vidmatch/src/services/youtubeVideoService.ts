@@ -31,6 +31,7 @@ export type VidMatchVideo = {
   description: string | null;
   tags: string[];
   quality_score: number;
+  created_at?: string;
 };
 
 export type SearchYoutubeVideosInput = {
@@ -41,6 +42,15 @@ export type SearchYoutubeVideosInput = {
   accent?: string;
   maxResults?: number;
   minQualityScore?: number;
+};
+
+export type RecommendVideosInput = {
+  level?: VidMatchLevel;
+  skills?: VidMatchSkill[];
+  topics?: VidMatchTopic[];
+  accent?: string;
+  transcriptAvailable?: boolean;
+  limit?: number;
 };
 
 type YoutubeSearchResponse = {
@@ -170,6 +180,48 @@ export async function saveVideosToSupabase(videos: VidMatchVideo[]): Promise<Vid
   return response.json() as Promise<VidMatchVideo[]>;
 }
 
+export async function getRecommendedVideos(input: RecommendVideosInput): Promise<VidMatchVideo[]> {
+  const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
+  const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
+  const limit = Math.min(Math.max(input.limit ?? 6, 1), 12);
+
+  const params = new URLSearchParams({
+    select:
+      "video_id,title,channel_name,youtube_url,thumbnail_url,duration,level,skills,topics,accent,transcript_available,description,tags,quality_score,created_at",
+    order: "quality_score.desc,created_at.desc",
+    limit: "100",
+  });
+
+  if (input.level) {
+    params.set("level", `eq.${input.level}`);
+  }
+
+  if (typeof input.transcriptAvailable === "boolean") {
+    params.set("transcript_available", `eq.${input.transcriptAvailable}`);
+  }
+
+  const response = await fetch(`${supabaseUrl}/rest/v1/vidmatch_videos?${params}`, {
+    headers: {
+      apikey: serviceRoleKey,
+      Authorization: `Bearer ${serviceRoleKey}`,
+      "Content-Type": "application/json",
+    },
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    const error = (await response.json().catch(() => null)) as SupabaseError | null;
+    throw new Error(error?.message ?? `Supabase recommendation query failed with status ${response.status}`);
+  }
+
+  const videos = (await response.json()) as VidMatchVideo[];
+  return videos
+    .filter((video) => matchesArrayFilter(video.skills, input.skills))
+    .filter((video) => matchesArrayFilter(video.topics, input.topics))
+    .filter((video) => matchesAccent(video.accent, input.accent))
+    .slice(0, limit);
+}
+
 function normalizeYoutubeVideo(
   item: YoutubeVideoItem,
   metadata: Pick<VidMatchVideo, "level" | "skills" | "topics" | "accent">,
@@ -276,6 +328,16 @@ function inferAccent(text: string) {
   if (lowerText.includes("canadian")) return "Canadian";
   if (lowerText.includes("american") || lowerText.includes(" usa ") || lowerText.includes(" us ")) return "American";
   return null;
+}
+
+function matchesArrayFilter(values: string[], selectedValues?: string[]) {
+  if (!selectedValues?.length) return true;
+  return selectedValues.some((selectedValue) => values.includes(selectedValue));
+}
+
+function matchesAccent(videoAccent: string | null, selectedAccent?: string) {
+  if (!selectedAccent) return true;
+  return videoAccent?.toLowerCase() === selectedAccent.toLowerCase();
 }
 
 async function fetchJson<T>(url: string): Promise<T> {
