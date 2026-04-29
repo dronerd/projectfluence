@@ -23,6 +23,13 @@ interface ChatEntry {
   text: string;
 }
 
+const SPEAKWISE_API_URL =
+  process.env.NEXT_PUBLIC_SPEAKWISE_API_URL ||
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://127.0.0.1:8000";
+
+const VOCAB_COMPONENT = "単語練習";
+
 const CATEGORIES: Record<string, string> = {
   "computer-science": "Computer Science",
   "economics-business": "Economics & Business",
@@ -146,10 +153,9 @@ export default function AI_chat() {
     // only warm once per page mount
     let mounted = true;
     const warmUp = async () => {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL;
       setServerWarming(true);
       try {
-        await fetch(`${API_URL}/api/chat`, {
+        await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message: "__warmup__", mode: "warmup" }),
@@ -452,8 +458,6 @@ export default function AI_chat() {
     const inputText = userInput;
     setUserInput("");
 
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
-
     try {
       const testsToPass = selectedTests.length > 0
         ? selectedTests.map(t => t === "Other" ? customTest : t)
@@ -487,18 +491,21 @@ export default function AI_chat() {
               componentTiming: componentTiming,
               totalTimeElapsed: timeElapsed,
               timeElapsedSeconds: timeElapsed,
-              vocabCategory: selectedComponents.includes("Vocab Practice") ? vocabCategory : null,
-              vocabLessons: selectedComponents.includes("Vocab Practice") ? vocabLessonsToPass : null,
+              vocabCategory: selectedComponents.includes(VOCAB_COMPONENT) ? vocabCategory : null,
+              vocabLessons: selectedComponents.includes(VOCAB_COMPONENT) ? vocabLessonsToPass : null,
               mode: "lesson",
             };
 
-      const res = await fetch(`${API_URL}/api/chat`, {
+      const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
       const data = await res.json();
+      if (!res.ok || data.error) {
+        throw new Error(data.details || data.error || "Chat request failed");
+      }
       let replyText: string = data.reply || "No response";
       const llmResponse: ChatEntry = { sender: "llm", text: replyText };
       setChatLog((prev) => [...prev, llmResponse]);
@@ -514,7 +521,6 @@ export default function AI_chat() {
   // Fetch voice audio from backend and play it
   const fetchAndPlayVoice = async (text: string, idx?: number) => {
     if (!text) return;
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
     try {
       if (audioRef.current) {
@@ -525,7 +531,7 @@ export default function AI_chat() {
       }
       if (typeof idx === "number") setLoadingVoiceIndex(idx);
 
-      const res = await fetch(`${API_URL}/api/voice`, {
+      const res = await fetch(`${SPEAKWISE_API_URL}/api/voice`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text, voice: selectedVoice }),
@@ -559,8 +565,6 @@ export default function AI_chat() {
   const handleLessonStart = async (prompt: string) => {
     if (!prompt.trim()) return;
 
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
-
     try {
       const testsToPass = selectedTests.length > 0
         ? selectedTests.map(t => t === "Other" ? customTest : t)
@@ -586,18 +590,21 @@ export default function AI_chat() {
         componentTiming: componentTiming,
         totalTimeElapsed: timeElapsed,
         timeElapsedSeconds: timeElapsed,
-        vocabCategory: selectedComponents.includes("Vocab Practice") ? vocabCategory : null,
-        vocabLessons: selectedComponents.includes("Vocab Practice") ? vocabLessonsToPass : null,
+        vocabCategory: selectedComponents.includes(VOCAB_COMPONENT) ? vocabCategory : null,
+        vocabLessons: selectedComponents.includes(VOCAB_COMPONENT) ? vocabLessonsToPass : null,
         mode: "lesson",
       };
 
-      const res = await fetch(`${API_URL}/api/chat`, {
+      const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
       const data = await res.json();
+      if (!res.ok || data.error) {
+        throw new Error(data.details || data.error || "Lesson request failed");
+      }
       let replyText: string = data.reply || "No response";
       const llmResponse: ChatEntry = { sender: "llm", text: replyText };
       setChatLog((prev) => [...prev, llmResponse]);

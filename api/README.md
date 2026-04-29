@@ -1,3 +1,5 @@
 # API
 
-Placeholder backend directory for shared FastAPI logic and inference services.
+Backend services for Project Fluence apps.
+
+- `speakwise/` - FastAPI service used by the SpeakWise AI chat and voice endpoints.
