@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-87",
+  "title": "Lesson 87",
+  "paragraph": "This lesson practices useful verbs for phones and computers.",
+  "words": [
+    { "word": "click", "meaning": "to press a button on a mouse or screen", "japaneseMeaning": "クリックする", "synonyms": "press, tap", "antonyms": "release, ignore", "forms": "click, clicks, clicking, clicked, clicked", "example": "Click the blue button." },
+    { "word": "type", "meaning": "to write using a keyboard", "japaneseMeaning": "入力する／タイプする", "synonyms": "write, enter", "antonyms": "erase, delete", "forms": "type, types, typing, typed, typed", "example": "Type your name here." },
+    { "word": "print", "meaning": "to make words or pictures on paper with a printer", "japaneseMeaning": "印刷する", "synonyms": "copy, make on paper", "antonyms": "delete, erase", "forms": "print, prints, printing, printed, printed", "example": "Print the homework before class." },
+    { "word": "charge", "meaning": "to give power to a phone or battery", "japaneseMeaning": "充電する", "synonyms": "power, fill", "antonyms": "drain, use up", "forms": "charge, charges, charging, charged, charged", "example": "Charge your phone tonight." },
+    { "word": "connect", "meaning": "to join to the internet or another machine", "japaneseMeaning": "接続する／つなぐ", "synonyms": "join, link", "antonyms": "disconnect, separate", "forms": "connect, connects, connecting, connected, connected", "example": "Connect the computer to the internet." },
+    { "word": "delete", "meaning": "to remove something from a phone or computer", "japaneseMeaning": "削除する", "synonyms": "remove, erase", "antonyms": "save, keep", "forms": "delete, deletes, deleting, deleted, deleted", "example": "Delete the old photo." },
+    { "word": "search", "meaning": "to look for information", "japaneseMeaning": "検索する／探す", "synonyms": "look for, find", "antonyms": "ignore, hide", "forms": "search, searches, searching, searched, searched", "example": "Search for the word online." },
+    { "word": "scroll", "meaning": "to move a page up or down on a screen", "japaneseMeaning": "スクロールする", "synonyms": "move, slide", "antonyms": "stop, stay", "forms": "scroll, scrolls, scrolling, scrolled, scrolled", "example": "Scroll down to see the next photo." },
+    { "word": "scan", "meaning": "to copy paper into a computer", "japaneseMeaning": "スキャンする", "synonyms": "copy, read", "antonyms": "print, delete", "forms": "scan, scans, scanning, scanned, scanned", "example": "Scan this paper for me." },
+    { "word": "save", "meaning": "to keep information on a computer", "japaneseMeaning": "保存する", "synonyms": "keep, store", "antonyms": "delete, lose", "forms": "save, saves, saving, saved, saved", "example": "Save your work often." }
+  ]
+}

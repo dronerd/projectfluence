@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-68",
+  "title": "Lesson 68",
+  "paragraph": "This lesson practices useful adjectives for food.",
+  "words": [
+    { "word": "tasty", "meaning": "having a good taste", "japaneseMeaning": "おいしい", "synonyms": "delicious, good", "antonyms": "bad, tasteless", "forms": "tasty, tastier, tastiest", "example": "This soup is tasty." },
+    { "word": "delicious", "meaning": "very good to eat or drink", "japaneseMeaning": "とてもおいしい", "synonyms": "tasty, nice", "antonyms": "awful, tasteless", "forms": "delicious, more delicious, most delicious", "example": "The cake is delicious." },
+    { "word": "raw", "meaning": "not cooked", "japaneseMeaning": "生の", "synonyms": "uncooked, fresh", "antonyms": "cooked, boiled", "forms": "raw, rawer, rawest", "example": "Do not eat raw chicken." },
+    { "word": "cooked", "meaning": "made ready to eat with heat", "japaneseMeaning": "調理された", "synonyms": "heated, prepared", "antonyms": "raw, uncooked", "forms": "cooked, more cooked, most cooked", "example": "The cooked rice is warm." },
+    { "word": "frozen", "meaning": "made hard by cold", "japaneseMeaning": "冷凍の／凍った", "synonyms": "icy, cold", "antonyms": "melted, warm", "forms": "frozen, more frozen, most frozen", "example": "I bought frozen vegetables." },
+    { "word": "crispy", "meaning": "hard and making a small sound when bitten", "japaneseMeaning": "カリカリした", "synonyms": "crunchy, hard", "antonyms": "soft, soggy", "forms": "crispy, crispier, crispiest", "example": "The toast is crispy." },
+    { "word": "juicy", "meaning": "full of juice", "japaneseMeaning": "ジューシーな", "synonyms": "wet, full of juice", "antonyms": "dry, hard", "forms": "juicy, juicier, juiciest", "example": "This orange is juicy." },
+    { "word": "ripe", "meaning": "ready to eat", "japaneseMeaning": "熟した", "synonyms": "ready, mature", "antonyms": "unripe, raw", "forms": "ripe, riper, ripest", "example": "The banana is ripe." },
+    { "word": "stale", "meaning": "old and not fresh", "japaneseMeaning": "新鮮でない／古くなった", "synonyms": "old, dry", "antonyms": "fresh, new", "forms": "stale, staler, stalest", "example": "This bread is stale." },
+    { "word": "homemade", "meaning": "made at home", "japaneseMeaning": "手作りの", "synonyms": "home-made, handmade", "antonyms": "store-bought, ready-made", "forms": "homemade", "example": "We eat homemade soup." }
+  ]
+}

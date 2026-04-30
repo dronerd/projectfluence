@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-91",
+  "title": "Lesson 91",
+  "paragraph": "This lesson practices useful verbs for jobs and helping.",
+  "words": [
+    { "word": "hire", "meaning": "to give someone a job", "japaneseMeaning": "雇う", "synonyms": "employ, take on", "antonyms": "fire, dismiss", "forms": "hire, hires, hiring, hired, hired", "example": "The shop hires students in summer." },
+    { "word": "serve", "meaning": "to help customers or give food", "japaneseMeaning": "接客する／出す", "synonyms": "help, give", "antonyms": "ignore, take", "forms": "serve, serves, serving, served, served", "example": "They serve coffee at the cafe." },
+    { "word": "repair", "meaning": "to fix something broken", "japaneseMeaning": "修理する", "synonyms": "fix, mend", "antonyms": "break, damage", "forms": "repair, repairs, repairing, repaired, repaired", "example": "He repairs computers." },
+    { "word": "deliver", "meaning": "to take something to a person or place", "japaneseMeaning": "配達する／届ける", "synonyms": "bring, take", "antonyms": "keep, hold", "forms": "deliver, delivers, delivering, delivered, delivered", "example": "The worker delivers boxes." },
+    { "word": "carry", "meaning": "to hold and move something", "japaneseMeaning": "運ぶ", "synonyms": "bring, take", "antonyms": "drop, leave", "forms": "carry, carries, carrying, carried, carried", "example": "Carry the chairs to the room." },
+    { "word": "push", "meaning": "to move something away from you", "japaneseMeaning": "押す", "synonyms": "press, move", "antonyms": "pull, stop", "forms": "push, pushes, pushing, pushed, pushed", "example": "Push the cart slowly." },
+    { "word": "pull", "meaning": "to move something toward you", "japaneseMeaning": "引く", "synonyms": "drag, bring", "antonyms": "push, leave", "forms": "pull, pulls, pulling, pulled, pulled", "example": "Pull the door to open it." },
+    { "word": "check", "meaning": "to look at something to see if it is right", "japaneseMeaning": "確認する", "synonyms": "look at, examine", "antonyms": "ignore, miss", "forms": "check, checks, checking, checked, checked", "example": "Check the list before you leave." },
+    { "word": "organize", "meaning": "to put things in order", "japaneseMeaning": "整理する／準備する", "synonyms": "arrange, tidy", "antonyms": "mess up, scatter", "forms": "organize, organizes, organizing, organized, organized", "example": "Organize the papers on your desk." },
+    { "word": "finish", "meaning": "to complete something", "japaneseMeaning": "終える／完成させる", "synonyms": "complete, end", "antonyms": "start, begin", "forms": "finish, finishes, finishing, finished, finished", "example": "Finish your work before lunch." }
+  ]
+}

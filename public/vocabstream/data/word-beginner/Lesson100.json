@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-100",
+  "title": "Lesson 100",
+  "paragraph": "This lesson practices useful adjectives for safety and final review.",
+  "words": [
+    { "word": "safe", "meaning": "not dangerous", "japaneseMeaning": "安全な", "synonyms": "secure, okay", "antonyms": "dangerous, unsafe", "forms": "safe, safer, safest", "example": "This road is safe in the daytime." },
+    { "word": "unsafe", "meaning": "not safe", "japaneseMeaning": "安全でない", "synonyms": "dangerous, risky", "antonyms": "safe, secure", "forms": "unsafe, more unsafe, most unsafe", "example": "The old bridge is unsafe." },
+    { "word": "careful", "meaning": "doing things with care", "japaneseMeaning": "注意深い", "synonyms": "safe, watchful", "antonyms": "careless, quick", "forms": "careful, more careful, most careful", "example": "Be careful near the road." },
+    { "word": "careless", "meaning": "not giving enough care", "japaneseMeaning": "不注意な", "synonyms": "not careful, unsafe", "antonyms": "careful, safe", "forms": "careless, more careless, most careless", "example": "A careless driver is dangerous." },
+    { "word": "urgent", "meaning": "needing action quickly", "japaneseMeaning": "緊急の", "synonyms": "quick, important", "antonyms": "not urgent, slow", "forms": "urgent, more urgent, most urgent", "example": "This is an urgent message." },
+    { "word": "minor", "meaning": "small and not very serious", "japaneseMeaning": "小さな／軽い", "synonyms": "small, little", "antonyms": "serious, major", "forms": "minor, more minor, most minor", "example": "It is a minor injury." },
+    { "word": "major", "meaning": "large or important", "japaneseMeaning": "大きな／重要な", "synonyms": "big, important", "antonyms": "minor, small", "forms": "major, more major, most major", "example": "This is a major problem." },
+    { "word": "legal", "meaning": "allowed by law", "japaneseMeaning": "合法の", "synonyms": "allowed, lawful", "antonyms": "illegal, not allowed", "forms": "legal, more legal, most legal", "example": "It is legal to park here." },
+    { "word": "illegal", "meaning": "not allowed by law", "japaneseMeaning": "違法の", "synonyms": "not allowed, against the law", "antonyms": "legal, allowed", "forms": "illegal, more illegal, most illegal", "example": "It is illegal to steal." },
+    { "word": "responsible", "meaning": "able to be trusted to do the right thing", "japaneseMeaning": "責任感のある", "synonyms": "trusted, careful", "antonyms": "careless, irresponsible", "forms": "responsible, more responsible, most responsible", "example": "A responsible student follows the rules." }
+  ]
+}

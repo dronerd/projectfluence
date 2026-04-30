@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-98",
+  "title": "Lesson 98",
+  "paragraph": "This lesson practices useful nouns for safety and emergencies.",
+  "words": [
+    { "word": "emergency", "meaning": "a serious problem that needs help quickly", "japaneseMeaning": "緊急事態", "synonyms": "danger, urgent problem", "antonyms": "normal day", "forms": "emergency, emergencies", "example": "Call this number in an emergency." },
+    { "word": "alarm", "meaning": "a loud sound that warns people", "japaneseMeaning": "警報／アラーム", "synonyms": "warning, bell", "antonyms": "silence", "forms": "alarm, alarms", "example": "The fire alarm is loud." },
+    { "word": "firefighter", "meaning": "a person who stops fires", "japaneseMeaning": "消防士", "synonyms": "fire worker, rescuer", "antonyms": "none", "forms": "firefighter, firefighters", "example": "The firefighter helps people." },
+    { "word": "police officer", "meaning": "a person who helps keep people safe and follows the law", "japaneseMeaning": "警察官", "synonyms": "officer, police worker", "antonyms": "criminal", "forms": "police officer, police officers", "example": "Ask a police officer for help." },
+    { "word": "ambulance", "meaning": "a vehicle that takes sick or hurt people to a hospital", "japaneseMeaning": "救急車", "synonyms": "emergency car, medical vehicle", "antonyms": "none", "forms": "ambulance, ambulances", "example": "The ambulance arrives quickly." },
+    { "word": "helmet", "meaning": "a hard hat that protects your head", "japaneseMeaning": "ヘルメット", "synonyms": "hard hat, head guard", "antonyms": "cap", "forms": "helmet, helmets", "example": "Wear a helmet on your bike." },
+    { "word": "seatbelt", "meaning": "a belt that keeps you safe in a car", "japaneseMeaning": "シートベルト", "synonyms": "safety belt, car belt", "antonyms": "none", "forms": "seatbelt, seatbelts", "example": "Put on your seatbelt." },
+    { "word": "exit", "meaning": "a way out of a place", "japaneseMeaning": "出口", "synonyms": "way out, door", "antonyms": "entrance", "forms": "exit, exits", "example": "The exit is near the stairs." },
+    { "word": "warning", "meaning": "words or a sign that tell people about danger", "japaneseMeaning": "警告", "synonyms": "notice, alert", "antonyms": "permission", "forms": "warning, warnings", "example": "Read the warning before swimming." },
+    { "word": "danger", "meaning": "a chance that something bad may happen", "japaneseMeaning": "危険", "synonyms": "risk, unsafe thing", "antonyms": "safety", "forms": "danger, dangers", "example": "There is danger near the broken bridge." }
+  ]
+}

@@ -1,97 +1,97 @@
 {
   "lesson_id": "eiken-pre2-3",
   "title": "Lesson 3",
-  "paragraph": "Food and drink bring variety to our meals and social occasions. Ingredients like vegetables, meat, and seasonings are combined by chefs to create soups, desserts and main dishes. Healthy choices and balanced portions help you enjoy food while staying fit.",
+  "paragraph": "Drink and meal nouns for everyday eating.",
   "words": [
     {
       "word": "juice",
-      "meaning": "a basic word for juice",
+      "meaning": "a drink made from fruit",
       "japaneseMeaning": "ジュース",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "drink",
+      "antonyms": "",
       "forms": "juice, juices",
-      "example": "I see a juice."
+      "example": "Orange juice is in the glass."
     },
     {
       "word": "coffee",
-      "meaning": "a basic word for coffee",
+      "meaning": "a dark drink made from coffee beans",
       "japaneseMeaning": "コーヒー",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "drink",
+      "antonyms": "",
       "forms": "coffee, coffees",
-      "example": "I see a coffee."
+      "example": "My father drinks coffee every morning."
     },
     {
       "word": "tea",
-      "meaning": "a basic word for tea",
+      "meaning": "a drink made with hot water and leaves",
       "japaneseMeaning": "お茶",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "drink",
+      "antonyms": "",
       "forms": "tea, teas",
-      "example": "I see a tea."
+      "example": "This tea is hot."
     },
     {
       "word": "breakfast",
-      "meaning": "a basic word for breakfast",
+      "meaning": "the first meal of the day",
       "japaneseMeaning": "朝食",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "morning meal",
+      "antonyms": "",
       "forms": "breakfast, breakfasts",
-      "example": "I see a breakfast."
+      "example": "Breakfast starts at seven."
     },
     {
       "word": "lunch",
-      "meaning": "a basic word for lunch",
+      "meaning": "the meal eaten in the middle of the day",
       "japaneseMeaning": "昼食",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "lunch, lunchs",
-      "example": "I see a lunch."
+      "synonyms": "midday meal",
+      "antonyms": "",
+      "forms": "lunch, lunches",
+      "example": "I eat lunch at school."
     },
     {
       "word": "dinner",
-      "meaning": "a basic word for dinner",
+      "meaning": "the main meal in the evening",
       "japaneseMeaning": "夕食",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "evening meal",
+      "antonyms": "",
       "forms": "dinner, dinners",
-      "example": "I see a dinner."
+      "example": "Dinner is ready at six."
     },
     {
       "word": "plate",
-      "meaning": "a basic word for plate",
+      "meaning": "a flat dish for food",
       "japaneseMeaning": "皿",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "dish",
+      "antonyms": "",
       "forms": "plate, plates",
-      "example": "I see a plate."
+      "example": "The plate is on the table."
     },
     {
       "word": "spoon",
-      "meaning": "a basic word for spoon",
+      "meaning": "a tool used for eating soup or soft food",
       "japaneseMeaning": "スプーン",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "spoon, spoons",
-      "example": "I see a spoon."
+      "example": "Use a spoon for the soup."
     },
     {
       "word": "knife",
-      "meaning": "a basic word for knife",
+      "meaning": "a tool used for cutting food",
       "japaneseMeaning": "ナイフ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "knife, knifes",
-      "example": "I see a knife."
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "knife, knives",
+      "example": "The knife is next to the plate."
     },
     {
       "word": "bottle",
-      "meaning": "a basic word for bottle",
+      "meaning": "a tall thing that holds a drink",
       "japaneseMeaning": "瓶、ボトル",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "bottle, bottles",
-      "example": "I see a bottle."
+      "example": "This bottle has water in it."
     }
   ]
 }

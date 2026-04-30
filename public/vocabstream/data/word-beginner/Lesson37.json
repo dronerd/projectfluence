@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-37",
-  "title": "Lesson 12",
-  "paragraph": "Verbs for stopping, learning, advising, and speaking — useful in study and advice contexts.",
+  "title": "Lesson 37",
+  "paragraph": "This lesson practices useful adverbs for place and order.",
   "words": [
-    { "word": "stay", "meaning": "to remain in the same place", "japaneseMeaning": "滞在する／留まる", "synonyms": "remain, linger", "antonyms": "leave, go", "example": "Please stay until the end." },
-    { "word": "steal", "meaning": "to take something without permission", "japaneseMeaning": "盗む", "synonyms": "pilfer, rob", "antonyms": "return, give", "example": "Someone tried to steal her bag." },
-    { "word": "stop", "meaning": "to cease movement or action", "japaneseMeaning": "やめる／止める", "synonyms": "halt, cease", "antonyms": "go, continue", "example": "Stop talking during the exam." },
-    { "word": "study", "meaning": "to apply the mind to learning", "japaneseMeaning": "勉強する", "synonyms": "learn, review", "antonyms": "ignore, neglect", "example": "I will study for the test tonight." },
-    { "word": "succeed", "meaning": "to achieve the desired result", "japaneseMeaning": "成功する", "synonyms": "triumph, prosper", "antonyms": "fail, falter", "example": "She succeeded in the competition." },
-    { "word": "suggest", "meaning": "to offer an idea or plan for consideration", "japaneseMeaning": "提案する", "synonyms": "propose, recommend", "antonyms": "dissuade, oppose", "example": "I suggest taking a break." },
-    { "word": "support", "meaning": "to give help or encouragement", "japaneseMeaning": "支援する／支持する", "synonyms": "assist, back", "antonyms": "oppose, hinder", "example": "They support the new policy." },
-    { "word": "suppose", "meaning": "to assume something is true without proof", "japaneseMeaning": "仮定する／思う", "synonyms": "assume, presume", "antonyms": "know, verify", "example": "I suppose he's busy today." },
-    { "word": "swim", "meaning": "to move through water using the body", "japaneseMeaning": "泳ぐ", "synonyms": "bathe, paddle", "antonyms": "float (passive), sink", "example": "We swim in the lake every summer." },
-    { "word": "talk", "meaning": "to speak in order to communicate", "japaneseMeaning": "話す", "synonyms": "speak, converse", "antonyms": "listen, be silent", "example": "Let's talk after class." },
-    { "word": "teach", "meaning": "to give instruction or impart knowledge", "japaneseMeaning": "教える", "synonyms": "instruct, educate", "antonyms": "learn, ignore", "example": "She teaches math at the school." },
-    { "word": "tell", "meaning": "to communicate information to someone", "japaneseMeaning": "伝える／話す", "synonyms": "inform, say", "antonyms": "hide, conceal", "example": "Tell me the truth." }
+    { "word": "leftward", "meaning": "toward the left", "japaneseMeaning": "左へ", "synonyms": "to the left, left", "antonyms": "rightward, right", "forms": "leftward", "example": "Move leftward to make space." },
+    { "word": "rightward", "meaning": "toward the right", "japaneseMeaning": "右へ", "synonyms": "to the right, right", "antonyms": "leftward, left", "forms": "rightward", "example": "Slide the box rightward." },
+    { "word": "upward", "meaning": "toward a higher place", "japaneseMeaning": "上へ", "synonyms": "up, higher", "antonyms": "downward, down", "forms": "upward", "example": "The balloon moves upward." },
+    { "word": "downward", "meaning": "toward a lower place", "japaneseMeaning": "下へ", "synonyms": "down, lower", "antonyms": "upward, up", "forms": "downward", "example": "The ball rolls downward." },
+    { "word": "upstairs", "meaning": "on or to a higher floor", "japaneseMeaning": "上の階に／上の階で", "synonyms": "above, up", "antonyms": "downstairs, below", "forms": "upstairs", "example": "My room is upstairs." },
+    { "word": "downstairs", "meaning": "on or to a lower floor", "japaneseMeaning": "下の階に／下の階で", "synonyms": "below, down", "antonyms": "upstairs, above", "forms": "downstairs", "example": "Breakfast is downstairs." },
+    { "word": "first", "meaning": "before all others", "japaneseMeaning": "最初に", "synonyms": "before, at the start", "antonyms": "last, finally", "forms": "first", "example": "Wash your hands first." },
+    { "word": "next", "meaning": "after this one", "japaneseMeaning": "次に", "synonyms": "then, after", "antonyms": "before, last", "forms": "next", "example": "Next, open your book." },
+    { "word": "finally", "meaning": "at the end", "japaneseMeaning": "最後に／ついに", "synonyms": "last, at the end", "antonyms": "first, before", "forms": "finally", "example": "Finally, write your name." },
+    { "word": "again", "meaning": "one more time", "japaneseMeaning": "再び／もう一度", "synonyms": "once more, another time", "antonyms": "once, never", "forms": "again", "example": "Please say that again." }
   ]
 }

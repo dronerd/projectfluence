@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-86",
+  "title": "Lesson 86",
+  "paragraph": "This lesson practices useful nouns for phones and computers.",
+  "words": [
+    { "word": "charger", "meaning": "a thing used to give power to a phone or computer", "japaneseMeaning": "充電器", "synonyms": "power cable, plug", "antonyms": "none", "forms": "charger, chargers", "example": "My charger is in my bag." },
+    { "word": "battery", "meaning": "the part that gives power to a phone or machine", "japaneseMeaning": "電池／バッテリー", "synonyms": "power part, cell", "antonyms": "none", "forms": "battery, batteries", "example": "The battery is almost empty." },
+    { "word": "screen", "meaning": "the part of a phone or computer that shows pictures and words", "japaneseMeaning": "画面", "synonyms": "display, monitor", "antonyms": "keyboard", "forms": "screen, screens", "example": "The screen is too bright." },
+    { "word": "keyboard", "meaning": "a board with keys for typing", "japaneseMeaning": "キーボード", "synonyms": "typing board, keys", "antonyms": "screen", "forms": "keyboard, keyboards", "example": "This keyboard is small." },
+    { "word": "printer", "meaning": "a machine that puts words or pictures on paper", "japaneseMeaning": "プリンター", "synonyms": "printing machine, machine", "antonyms": "scanner", "forms": "printer, printers", "example": "The printer has no paper." },
+    { "word": "website", "meaning": "a place on the internet with pages and information", "japaneseMeaning": "ウェブサイト", "synonyms": "site, web page", "antonyms": "paper book", "forms": "website, websites", "example": "This website helps me study English." },
+    { "word": "password", "meaning": "secret letters or numbers used to open an account", "japaneseMeaning": "パスワード", "synonyms": "secret word, code", "antonyms": "public word", "forms": "password, passwords", "example": "Do not tell anyone your password." },
+    { "word": "file", "meaning": "information saved on a computer", "japaneseMeaning": "ファイル", "synonyms": "document, data", "antonyms": "folder", "forms": "file, files", "example": "Save the file before you close it." },
+    { "word": "folder", "meaning": "a place for keeping files on a computer", "japaneseMeaning": "フォルダー", "synonyms": "file holder, place", "antonyms": "file", "forms": "folder, folders", "example": "Put the photo in this folder." },
+    { "word": "icon", "meaning": "a small picture on a phone or computer", "japaneseMeaning": "アイコン", "synonyms": "small picture, symbol", "antonyms": "text", "forms": "icon, icons", "example": "Click the green icon." }
+  ]
+}

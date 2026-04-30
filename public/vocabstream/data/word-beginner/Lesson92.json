@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-92",
+  "title": "Lesson 92",
+  "paragraph": "This lesson practices useful adjectives for work and tasks.",
+  "words": [
+    { "word": "busy", "meaning": "having many things to do", "japaneseMeaning": "忙しい", "synonyms": "active, full", "antonyms": "free, quiet", "forms": "busy, busier, busiest", "example": "The office is busy on Monday." },
+    { "word": "free", "meaning": "not busy or costing no money", "japaneseMeaning": "暇な／無料の", "synonyms": "available, no-cost", "antonyms": "busy, expensive", "forms": "free, freer, freest", "example": "Are you free after work?" },
+    { "word": "early", "meaning": "before the usual time", "japaneseMeaning": "早い", "synonyms": "before time, soon", "antonyms": "late, slow", "forms": "early, earlier, earliest", "example": "The early train is not crowded." },
+    { "word": "late", "meaning": "after the usual time", "japaneseMeaning": "遅い／遅れた", "synonyms": "delayed, after time", "antonyms": "early, on time", "forms": "late, later, latest", "example": "I am late for the meeting." },
+    { "word": "ready", "meaning": "prepared to do something", "japaneseMeaning": "準備ができた", "synonyms": "prepared, set", "antonyms": "unready, late", "forms": "ready, readier, readiest", "example": "The room is ready for the meeting." },
+    { "word": "unready", "meaning": "not prepared", "japaneseMeaning": "準備ができていない", "synonyms": "not ready, unprepared", "antonyms": "ready, prepared", "forms": "unready, more unready, most unready", "example": "I am unready for the test." },
+    { "word": "tidy", "meaning": "clean and in order", "japaneseMeaning": "きちんとした／整頓された", "synonyms": "neat, clean", "antonyms": "messy, dirty", "forms": "tidy, tidier, tidiest", "example": "Keep your desk tidy." },
+    { "word": "messy", "meaning": "not clean or not in order", "japaneseMeaning": "散らかった", "synonyms": "untidy, dirty", "antonyms": "tidy, neat", "forms": "messy, messier, messiest", "example": "The office kitchen is messy." },
+    { "word": "helpful", "meaning": "giving help or useful information", "japaneseMeaning": "役に立つ／親切な", "synonyms": "useful, kind", "antonyms": "unhelpful, useless", "forms": "helpful, more helpful, most helpful", "example": "The staff are helpful." },
+    { "word": "unhelpful", "meaning": "not giving help", "japaneseMeaning": "役に立たない／不親切な", "synonyms": "not useful, unkind", "antonyms": "helpful, useful", "forms": "unhelpful, more unhelpful, most unhelpful", "example": "That answer is unhelpful." }
+  ]
+}

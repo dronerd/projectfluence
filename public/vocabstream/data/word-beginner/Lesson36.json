@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-36",
-  "title": "Lesson 11",
-  "paragraph": "Verbs for expressing actions with volume, appearance, and beginnings of activities.",
+  "title": "Lesson 36",
+  "paragraph": "This lesson practices useful adjectives for places and feelings.",
   "words": [
-    { "word": "share", "meaning": "to divide and give a portion to others", "japaneseMeaning": "分け合う／共有する", "synonyms": "divide, distribute", "antonyms": "hoard, keep", "example": "She shared her lunch with a friend." },
-    { "word": "shout", "meaning": "to speak very loudly, often from strong emotion", "japaneseMeaning": "叫ぶ", "synonyms": "yell, cry", "antonyms": "whisper, murmur", "example": "Don't shout in the library." },
-    { "word": "show", "meaning": "to present something so others can see", "japaneseMeaning": "見せる／示す", "synonyms": "display, exhibit", "antonyms": "hide, conceal", "example": "Please show me your ticket." },
-    { "word": "shut", "meaning": "to close something", "japaneseMeaning": "閉める／閉じる", "synonyms": "close, seal", "antonyms": "open, uncover", "example": "Shut the door behind you." },
-    { "word": "sign", "meaning": "to write one's name on a document or to give a signal", "japaneseMeaning": "署名する／合図する", "synonyms": "authenticate, signal", "antonyms": "erase, cancel", "example": "Sign at the bottom of the form." },
-    { "word": "sing", "meaning": "to produce musical sounds with the voice", "japaneseMeaning": "歌う", "synonyms": "chant, vocalize", "antonyms": "speak, whisper", "example": "She sings in the school choir." },
-    { "word": "sit", "meaning": "to rest with the body supported by the buttocks", "japaneseMeaning": "座る", "synonyms": "perch, seat", "antonyms": "stand, rise", "example": "Please sit down." },
-    { "word": "sleep", "meaning": "to rest with closed eyes and reduced consciousness", "japaneseMeaning": "眠る", "synonyms": "rest, slumber", "antonyms": "wake, stay awake", "example": "I usually sleep eight hours." },
-    { "word": "smile", "meaning": "to make a happy expression with the mouth", "japaneseMeaning": "微笑む", "synonyms": "grin, beam", "antonyms": "frown, scowl", "example": "She smiled at the joke." },
-    { "word": "spend", "meaning": "to use money or time for something", "japaneseMeaning": "使う／過ごす", "synonyms": "use, expend", "antonyms": "save, conserve", "example": "He spent much time studying." },
-    { "word": "stand", "meaning": "to be on one's feet in an upright position", "japaneseMeaning": "立つ", "synonyms": "rise, remain upright", "antonyms": "sit, lie", "example": "Stand in line, please." },
-    { "word": "start", "meaning": "to begin something", "japaneseMeaning": "始める／始まる", "synonyms": "begin, commence", "antonyms": "finish, end", "example": "They start class at nine." }
+    { "word": "comfortable", "meaning": "nice to sit in, wear, or use", "japaneseMeaning": "快適な", "synonyms": "nice, easy", "antonyms": "uncomfortable, hard", "forms": "comfortable, more comfortable, most comfortable", "example": "This chair is comfortable." },
+    { "word": "uncomfortable", "meaning": "not nice to sit in, wear, or use", "japaneseMeaning": "不快な", "synonyms": "hard, unpleasant", "antonyms": "comfortable, nice", "forms": "uncomfortable, more uncomfortable, most uncomfortable", "example": "These shoes are uncomfortable." },
+    { "word": "friendly", "meaning": "kind and nice to others", "japaneseMeaning": "友好的な", "synonyms": "kind, nice", "antonyms": "unfriendly, cold", "forms": "friendly, friendlier, friendliest", "example": "The new student is friendly." },
+    { "word": "lonely", "meaning": "sad because you are alone", "japaneseMeaning": "寂しい", "synonyms": "alone, sad", "antonyms": "happy, together", "forms": "lonely, lonelier, loneliest", "example": "I feel lonely when my friend is away." },
+    { "word": "excited", "meaning": "very happy about something", "japaneseMeaning": "わくわくした", "synonyms": "happy, eager", "antonyms": "bored, calm", "forms": "excited, more excited, most excited", "example": "We are excited about the school trip." },
+    { "word": "bored", "meaning": "not interested and not happy", "japaneseMeaning": "退屈した", "synonyms": "tired, uninterested", "antonyms": "excited, interested", "forms": "bored, more bored, most bored", "example": "He looks bored during the long speech." },
+    { "word": "worried", "meaning": "thinking that something bad may happen", "japaneseMeaning": "心配した", "synonyms": "afraid, nervous", "antonyms": "calm, relaxed", "forms": "worried, more worried, most worried", "example": "She is worried about the test." },
+    { "word": "relaxed", "meaning": "calm and not worried", "japaneseMeaning": "リラックスした", "synonyms": "calm, easy", "antonyms": "worried, nervous", "forms": "relaxed, more relaxed, most relaxed", "example": "I feel relaxed after a bath." },
+    { "word": "crowded", "meaning": "full of many people", "japaneseMeaning": "混雑した", "synonyms": "full, busy", "antonyms": "empty, quiet", "forms": "crowded, more crowded, most crowded", "example": "The train is crowded in the morning." },
+    { "word": "local", "meaning": "from or near this area", "japaneseMeaning": "地元の", "synonyms": "nearby, area", "antonyms": "foreign, far", "forms": "local, more local, most local", "example": "We buy vegetables at a local shop." }
   ]
 }

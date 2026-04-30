@@ -1,104 +1,17 @@
- {
-    "lesson_id": "eiken-pre2-49",
-    "title": "Lesson 49",
-    "paragraph": "This lesson (Lesson 49) continues describing people: intelligence, creativity and friendliness among common traits.",
-    "words": [
-      {
-        "word": "clever",
-        "meaning": "quick to understand, learn, or devise",
-        "japaneseMeaning": "賢い／利口な",
-        "synonyms": "smart, bright",
-        "antonyms": "dull, stupid",
-        "example": "She is clever and solves problems quickly."
-      },
-      {
-        "word": "confident",
-        "meaning": "feeling sure of oneself; self-assured",
-        "japaneseMeaning": "自信のある",
-        "synonyms": "self-assured, poised",
-        "antonyms": "insecure, unsure",
-        "example": "He felt confident before the interview."
-      },
-      {
-        "word": "creative",
-        "meaning": "using imagination to produce original ideas",
-        "japaneseMeaning": "創造的な",
-        "synonyms": "innovative, inventive",
-        "antonyms": "unimaginative, dull",
-        "example": "The team proposed a creative solution."
-      },
-      {
-        "word": "cruel",
-        "meaning": "willfully causing pain or suffering to others",
-        "japaneseMeaning": "残酷な",
-        "synonyms": "brutal, heartless",
-        "antonyms": "kind, compassionate",
-        "example": "It was cruel to tease the puppy."
-      },
-      {
-        "word": "curious",
-        "meaning": "eager to know or learn something",
-        "japaneseMeaning": "好奇心の強い",
-        "synonyms": "inquisitive, interested",
-        "antonyms": "indifferent, uninterested",
-        "example": "The child was curious about the insects."
-      },
-      {
-        "word": "energetic",
-        "meaning": "having or showing a lot of energy",
-        "japaneseMeaning": "精力的な",
-        "synonyms": "active, lively",
-        "antonyms": "lethargic, sluggish",
-        "example": "She is energetic and always on the move."
-      },
-      {
-        "word": "friendly",
-        "meaning": "kind and pleasant to others",
-        "japaneseMeaning": "親しみやすい",
-        "synonyms": "amiable, kind",
-        "antonyms": "unfriendly, hostile",
-        "example": "Our neighbors are very friendly."
-      },
-      {
-        "word": "funny",
-        "meaning": "causing laughter or amusement",
-        "japaneseMeaning": "面白い",
-        "synonyms": "humorous, amusing",
-        "antonyms": "serious, dull",
-        "example": "He told a funny story at lunch."
-      },
-      {
-        "word": "generous",
-        "meaning": "willing to give more of something than is necessary",
-        "japaneseMeaning": "寛大な",
-        "synonyms": "giving, liberal",
-        "antonyms": "stingy, selfish",
-        "example": "She was generous with her time and helped everyone."
-      },
-      {
-        "word": "gentle",
-        "meaning": "kind, mild, or soft in manner",
-        "japaneseMeaning": "優しい／穏やかな",
-        "synonyms": "kind, mild",
-        "antonyms": "rough, harsh",
-        "example": "The doctor has a gentle manner with patients."
-      },
-      {
-        "word": "hard-working",
-        "meaning": "putting a lot of effort into work",
-        "japaneseMeaning": "勤勉な／よく働く",
-        "synonyms": "diligent, industrious",
-        "antonyms": "lazy, idle",
-        "example": "She is hard-working and always completes tasks on time."
-      },
-      {
-        "word": "honest",
-        "meaning": "truthful; free from deceit",
-        "japaneseMeaning": "正直な",
-        "synonyms": "truthful, sincere",
-        "antonyms": "dishonest, deceitful",
-        "example": "He is honest and returns lost items."
-      }
-    ]
-  }
-
+{
+  "lesson_id": "eiken-pre2-49",
+  "title": "Lesson 49",
+  "paragraph": "This lesson practices useful adverbs for degree and certainty.",
+  "words": [
+    { "word": "only", "meaning": "no more than this", "japaneseMeaning": "ただ〜だけ", "synonyms": "just, merely", "antonyms": "also, many", "forms": "only", "example": "I only have one pencil." },
+    { "word": "also", "meaning": "too or as well", "japaneseMeaning": "〜もまた", "synonyms": "too, as well", "antonyms": "only, neither", "forms": "also", "example": "My sister also likes tennis." },
+    { "word": "even", "meaning": "used to show something is surprising", "japaneseMeaning": "〜でさえ", "synonyms": "also, still", "antonyms": "not even", "forms": "even", "example": "Even my little brother can use this app." },
+    { "word": "especially", "meaning": "more than others", "japaneseMeaning": "特に", "synonyms": "mainly, particularly", "antonyms": "generally, equally", "forms": "especially", "example": "I like fruit, especially oranges." },
+    { "word": "mostly", "meaning": "for the most part", "japaneseMeaning": "主に／たいてい", "synonyms": "mainly, usually", "antonyms": "hardly, rarely", "forms": "mostly", "example": "The class is mostly quiet today." },
+    { "word": "clearly", "meaning": "in a way that is easy to see or understand", "japaneseMeaning": "はっきりと", "synonyms": "plainly, well", "antonyms": "unclearly, badly", "forms": "clearly, more clearly, most clearly", "example": "Please write your name clearly." },
+    { "word": "exactly", "meaning": "in the right or correct way", "japaneseMeaning": "正確に／ちょうど", "synonyms": "just, correctly", "antonyms": "about, nearly", "forms": "exactly", "example": "The train leaves exactly at nine." },
+    { "word": "nearly", "meaning": "almost", "japaneseMeaning": "ほとんど／もう少しで", "synonyms": "almost, about", "antonyms": "exactly, far", "forms": "nearly", "example": "I nearly forgot my wallet." },
+    { "word": "simply", "meaning": "in an easy or plain way", "japaneseMeaning": "簡単に／ただ", "synonyms": "easily, plainly", "antonyms": "hardly, complexly", "forms": "simply, more simply, most simply", "example": "The teacher explains it simply." },
+    { "word": "truly", "meaning": "really or honestly", "japaneseMeaning": "本当に／心から", "synonyms": "really, honestly", "antonyms": "falsely, partly", "forms": "truly, more truly, most truly", "example": "I truly enjoyed the concert." }
+  ]
+}

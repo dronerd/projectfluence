@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-76",
+  "title": "Lesson 76",
+  "paragraph": "This lesson practices useful adjectives for travel.",
+  "words": [
+    { "word": "foreign", "meaning": "from another country", "japaneseMeaning": "外国の", "synonyms": "overseas, not local", "antonyms": "local, domestic", "forms": "foreign, more foreign, most foreign", "example": "I want to learn a foreign language." },
+    { "word": "domestic", "meaning": "inside your own country", "japaneseMeaning": "国内の", "synonyms": "local, home", "antonyms": "foreign, international", "forms": "domestic, more domestic, most domestic", "example": "This is a domestic flight." },
+    { "word": "international", "meaning": "between countries", "japaneseMeaning": "国際的な", "synonyms": "world, foreign", "antonyms": "domestic, local", "forms": "international, more international, most international", "example": "Narita is an international airport." },
+    { "word": "direct", "meaning": "going straight to a place", "japaneseMeaning": "直行の／直接の", "synonyms": "straight, simple", "antonyms": "indirect, roundabout", "forms": "direct, more direct, most direct", "example": "We take a direct bus to the hotel." },
+    { "word": "round", "meaning": "shaped like a circle", "japaneseMeaning": "丸い", "synonyms": "circular, ball-shaped", "antonyms": "square, straight", "forms": "round, rounder, roundest", "example": "The station clock is round." },
+    { "word": "lost", "meaning": "not knowing where you are", "japaneseMeaning": "道に迷った／失くした", "synonyms": "missing, confused", "antonyms": "found, safe", "forms": "lost, more lost, most lost", "example": "We are lost near the station." },
+    { "word": "available", "meaning": "ready to use or free to take", "japaneseMeaning": "利用できる／空いている", "synonyms": "free, ready", "antonyms": "unavailable, busy", "forms": "available, more available, most available", "example": "A taxi is available outside." },
+    { "word": "crowded", "meaning": "full of many people", "japaneseMeaning": "混雑した", "synonyms": "full, busy", "antonyms": "empty, quiet", "forms": "crowded, more crowded, most crowded", "example": "The bus is crowded today." },
+    { "word": "empty", "meaning": "with nothing or no people inside", "japaneseMeaning": "空の", "synonyms": "blank, clear", "antonyms": "full, crowded", "forms": "empty, emptier, emptiest", "example": "The train car is empty." },
+    { "word": "distant", "meaning": "far away", "japaneseMeaning": "遠い", "synonyms": "far, remote", "antonyms": "near, close", "forms": "distant, more distant, most distant", "example": "We can see distant mountains." }
+  ]
+}

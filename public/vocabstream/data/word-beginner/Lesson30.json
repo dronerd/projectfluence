@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-30",
-  "title": "Lesson 5",
-  "paragraph": "This lesson groups verbs about fixing, following, forgetting, and emotional responses — important for describing relationships and troubleshooting.",
+  "title": "Lesson 30",
+  "paragraph": "This lesson practices useful nouns for travel.",
   "words": [
-    { "word": "fix", "meaning": "to repair or make something work correctly", "japaneseMeaning": "修理する／直す", "synonyms": "repair, mend", "antonyms": "break, damage", "example": "Can you fix the printer?" },
-    { "word": "follow", "meaning": "to go after or come behind someone/something", "japaneseMeaning": "従う／ついていく", "synonyms": "pursue, adhere", "antonyms": "lead, ignore", "example": "Follow the instructions carefully." },
-    { "word": "forget", "meaning": "to fail to remember", "japaneseMeaning": "忘れる", "synonyms": "omit, overlook", "antonyms": "remember, recall", "example": "I forgot my password." },
-    { "word": "forgive", "meaning": "to stop feeling angry toward someone for an offense", "japaneseMeaning": "許す", "synonyms": "pardon, excuse", "antonyms": "blame, resent", "example": "She forgave him for the mistake." },
-    { "word": "guess", "meaning": "to form an opinion without sufficient information", "japaneseMeaning": "推測する", "synonyms": "estimate, suppose", "antonyms": "know, calculate", "example": "Can you guess the answer?" },
-    { "word": "happen", "meaning": "to take place; occur", "japaneseMeaning": "起こる", "synonyms": "occur, transpire", "antonyms": "stop, prevent", "example": "What happened here?" },
-    { "word": "hate", "meaning": "to feel intense dislike", "japaneseMeaning": "嫌う／憎む", "synonyms": "detest, loathe", "antonyms": "love, like", "example": "I hate being late." },
-    { "word": "hear", "meaning": "to perceive sound with the ear", "japaneseMeaning": "聞く／聞こえる", "synonyms": "listen, perceive", "antonyms": "ignore, miss", "example": "Did you hear that noise?" },
-    { "word": "help", "meaning": "to give assistance", "japaneseMeaning": "助ける", "synonyms": "assist, aid", "antonyms": "hinder, obstruct", "example": "Can you help me move this?" },
-    { "word": "hope", "meaning": "to want something to happen and think it possible", "japaneseMeaning": "望む／期待する", "synonyms": "wish, desire", "antonyms": "despair, doubt", "example": "I hope it doesn't rain tomorrow." },
-    { "word": "imagine", "meaning": "to form a mental picture of something not present", "japaneseMeaning": "想像する", "synonyms": "envision, picture", "antonyms": "forget, ignore", "example": "Imagine living by the sea." },
-    { "word": "include", "meaning": "to contain as part of something", "japaneseMeaning": "含める", "synonyms": "incorporate, involve", "antonyms": "exclude, omit", "example": "Please include all receipts." }
+    { "word": "station", "meaning": "a place where trains or buses stop", "japaneseMeaning": "駅／停留所", "synonyms": "stop, terminal", "antonyms": "none", "forms": "station, stations", "example": "Meet me at the station at six." },
+    { "word": "airport", "meaning": "a place where planes arrive and leave", "japaneseMeaning": "空港", "synonyms": "air terminal, plane stop", "antonyms": "none", "forms": "airport, airports", "example": "We go to the airport by bus." },
+    { "word": "hotel", "meaning": "a place where people stay when they travel", "japaneseMeaning": "ホテル", "synonyms": "inn, place to stay", "antonyms": "home", "forms": "hotel, hotels", "example": "Our hotel is near the beach." },
+    { "word": "suitcase", "meaning": "a large bag for travel", "japaneseMeaning": "スーツケース", "synonyms": "bag, luggage", "antonyms": "none", "forms": "suitcase, suitcases", "example": "My suitcase is heavy." },
+    { "word": "passport", "meaning": "a book that shows who you are when you travel to another country", "japaneseMeaning": "パスポート", "synonyms": "travel ID, ID book", "antonyms": "none", "forms": "passport, passports", "example": "Do not forget your passport." },
+    { "word": "address", "meaning": "the place where someone lives or works", "japaneseMeaning": "住所", "synonyms": "home place, location", "antonyms": "none", "forms": "address, addresses", "example": "Write your address on this form." },
+    { "word": "guide", "meaning": "a person or book that helps travelers", "japaneseMeaning": "ガイド／案内人", "synonyms": "helper, travel book", "antonyms": "none", "forms": "guide, guides", "example": "The guide shows us the old castle." },
+    { "word": "tour", "meaning": "a trip to see places", "japaneseMeaning": "見学／旅行", "synonyms": "trip, visit", "antonyms": "stay", "forms": "tour, tours", "example": "We take a tour of the city." },
+    { "word": "seat", "meaning": "a place to sit", "japaneseMeaning": "座席", "synonyms": "chair, place", "antonyms": "floor", "forms": "seat, seats", "example": "This is my seat on the train." },
+    { "word": "traffic", "meaning": "cars and buses moving on roads", "japaneseMeaning": "交通／交通量", "synonyms": "cars, road use", "antonyms": "empty road", "forms": "traffic", "example": "There is a lot of traffic today." }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-90",
+  "title": "Lesson 90",
+  "paragraph": "This lesson practices useful nouns for jobs and workplaces.",
+  "words": [
+    { "word": "office", "meaning": "a place where people work at desks", "japaneseMeaning": "オフィス／事務所", "synonyms": "workplace, work room", "antonyms": "home", "forms": "office, offices", "example": "My father works in an office." },
+    { "word": "factory", "meaning": "a place where people make things", "japaneseMeaning": "工場", "synonyms": "workshop, plant", "antonyms": "shop", "forms": "factory, factories", "example": "This factory makes cars." },
+    { "word": "meeting", "meaning": "a time when people talk about work or plans", "japaneseMeaning": "会議／集まり", "synonyms": "talk, gathering", "antonyms": "break", "forms": "meeting, meetings", "example": "The meeting starts at ten." },
+    { "word": "manager", "meaning": "a person who leads workers", "japaneseMeaning": "管理者／マネージャー", "synonyms": "leader, boss", "antonyms": "worker", "forms": "manager, managers", "example": "The manager helps the new worker." },
+    { "word": "worker", "meaning": "a person who does a job", "japaneseMeaning": "労働者／働く人", "synonyms": "employee, staff member", "antonyms": "manager", "forms": "worker, workers", "example": "Every worker wears a name card." },
+    { "word": "staff", "meaning": "the people who work at a place", "japaneseMeaning": "職員／スタッフ", "synonyms": "workers, team", "antonyms": "customers", "forms": "staff", "example": "The hotel staff are friendly." },
+    { "word": "uniform", "meaning": "special clothes for work or school", "japaneseMeaning": "制服／ユニフォーム", "synonyms": "work clothes, special clothes", "antonyms": "casual clothes", "forms": "uniform, uniforms", "example": "The staff wear a blue uniform." },
+    { "word": "tool", "meaning": "something used to do or make things", "japaneseMeaning": "道具", "synonyms": "instrument, helper", "antonyms": "none", "forms": "tool, tools", "example": "This tool is useful for fixing bikes." },
+    { "word": "machine", "meaning": "a thing with parts that does work", "japaneseMeaning": "機械", "synonyms": "device, equipment", "antonyms": "hand tool", "forms": "machine, machines", "example": "The machine makes a loud sound." },
+    { "word": "break", "meaning": "a short rest from work or school", "japaneseMeaning": "休憩", "synonyms": "rest, pause", "antonyms": "work time", "forms": "break, breaks", "example": "We have a break at three." }
+  ]
+}

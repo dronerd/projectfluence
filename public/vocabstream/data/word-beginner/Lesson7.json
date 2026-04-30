@@ -1,97 +1,17 @@
 {
   "lesson_id": "eiken-pre2-7",
   "title": "Lesson 7",
-  "paragraph": "Nature shapes our environment and provides habitats for plants and animals. Mountains, rivers and forests influence climate and human activity. Protecting nature from pollution and natural disasters helps preserve these places for future generations.",
+  "paragraph": "Month nouns for dates and simple plans.",
   "words": [
-    {
-      "word": "january",
-      "meaning": "a basic word for january",
-      "japaneseMeaning": "1月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "january, januarys",
-      "example": "I see a january."
-    },
-    {
-      "word": "february",
-      "meaning": "a basic word for february",
-      "japaneseMeaning": "2月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "february, februarys",
-      "example": "I see a february."
-    },
-    {
-      "word": "march",
-      "meaning": "a basic word for march",
-      "japaneseMeaning": "3月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "march, marchs",
-      "example": "I see a march."
-    },
-    {
-      "word": "april",
-      "meaning": "a basic word for april",
-      "japaneseMeaning": "4月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "april, aprils",
-      "example": "I see a april."
-    },
-    {
-      "word": "may",
-      "meaning": "a basic word for may",
-      "japaneseMeaning": "5月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "may, mays",
-      "example": "I see a may."
-    },
-    {
-      "word": "june",
-      "meaning": "a basic word for june",
-      "japaneseMeaning": "6月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "june, junes",
-      "example": "I see a june."
-    },
-    {
-      "word": "july",
-      "meaning": "a basic word for july",
-      "japaneseMeaning": "7月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "july, julys",
-      "example": "I see a july."
-    },
-    {
-      "word": "august",
-      "meaning": "a basic word for august",
-      "japaneseMeaning": "8月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "august, augusts",
-      "example": "I see a august."
-    },
-    {
-      "word": "september",
-      "meaning": "a basic word for september",
-      "japaneseMeaning": "9月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "september, septembers",
-      "example": "I see a september."
-    },
-    {
-      "word": "october",
-      "meaning": "a basic word for october",
-      "japaneseMeaning": "10月",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "october, octobers",
-      "example": "I see a october."
-    }
+    { "word": "January", "meaning": "the first month of the year", "japaneseMeaning": "1月", "synonyms": "", "antonyms": "", "forms": "January, Januaries", "example": "January is often cold." },
+    { "word": "February", "meaning": "the second month of the year", "japaneseMeaning": "2月", "synonyms": "", "antonyms": "", "forms": "February, Februaries", "example": "My birthday is in February." },
+    { "word": "March", "meaning": "the third month of the year", "japaneseMeaning": "3月", "synonyms": "", "antonyms": "", "forms": "March, Marches", "example": "School ends in March." },
+    { "word": "April", "meaning": "the fourth month of the year", "japaneseMeaning": "4月", "synonyms": "", "antonyms": "", "forms": "April, Aprils", "example": "New classes start in April." },
+    { "word": "May", "meaning": "the fifth month of the year", "japaneseMeaning": "5月", "synonyms": "", "antonyms": "", "forms": "May, Mays", "example": "May has many warm days." },
+    { "word": "June", "meaning": "the sixth month of the year", "japaneseMeaning": "6月", "synonyms": "", "antonyms": "", "forms": "June, Junes", "example": "It rains a lot in June." },
+    { "word": "July", "meaning": "the seventh month of the year", "japaneseMeaning": "7月", "synonyms": "", "antonyms": "", "forms": "July, Julies", "example": "Summer vacation starts in July." },
+    { "word": "August", "meaning": "the eighth month of the year", "japaneseMeaning": "8月", "synonyms": "", "antonyms": "", "forms": "August, Augusts", "example": "August is very hot." },
+    { "word": "September", "meaning": "the ninth month of the year", "japaneseMeaning": "9月", "synonyms": "", "antonyms": "", "forms": "September, Septembers", "example": "School begins again in September." },
+    { "word": "October", "meaning": "the tenth month of the year", "japaneseMeaning": "10月", "synonyms": "", "antonyms": "", "forms": "October, Octobers", "example": "Leaves change color in October." }
   ]
 }

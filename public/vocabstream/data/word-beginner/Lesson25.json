@@ -1,30 +1,17 @@
 {
-    "lesson_id": "eiken-pre2-25",
-    "title": "Lesson 25",
-    "paragraph": "Study and exam skills help learners manage time, understand material and show knowledge. Good habits like revision, note-taking and practising past papers improve confidence and results.",
-    "words": [
-      { "word": "review", "meaning": "to study material again to remember it", "japaneseMeaning": "復習する、見直す", "synonyms": "revise, go over", "antonyms": "ignore, forget", "example": "Review your notes before the test." },
-      { "word": "revise", "meaning": "to change or study again to improve", "japaneseMeaning": "見直す、復習する", "synonyms": "edit, review", "antonyms": "neglect", "example": "Revise the essay for clarity." },
-      { "word": "practice", "meaning": "to do something repeatedly to improve", "japaneseMeaning": "練習する", "synonyms": "train, rehearse", "antonyms": "neglect", "example": "Practice speaking English every day." },
-      { "word": "note-taking", "meaning": "writing down important information to remember later", "japaneseMeaning": "ノートを取ること", "synonyms": "recording, jotting", "antonyms": "", "example": "Good note-taking helps with revision." },
-      { "word": "flashcard", "meaning": "a small card used to memorise facts", "japaneseMeaning": "フラッシュカード、単語カード", "synonyms": "study card", "antonyms": "", "example": "Use flashcards to learn vocabulary." },
-      { "word": "summary", "meaning": "a short statement of the main points", "japaneseMeaning": "要約", "synonyms": "recap, overview", "antonyms": "detail, elaboration", "example": "Write a summary after each chapter." },
-      { "word": "outline", "meaning": "a general description showing main points", "japaneseMeaning": "概要、アウトライン", "synonyms": "plan, framework", "antonyms": "detailed text", "example": "Create an outline before writing your essay." },
-      { "word": "exam technique", "meaning": "methods used to perform well in tests", "japaneseMeaning": "試験対策の技術", "synonyms": "test strategy", "antonyms": "", "example": "Learn exam techniques for multiple-choice questions." },
-      { "word": "multiple-choice", "meaning": "a question type with several answer options", "japaneseMeaning": "複数選択式", "synonyms": "MCQ", "antonyms": "essay question", "example": "Read every option carefully in multiple-choice tests." },
-      { "word": "essay", "meaning": "a piece of writing on a topic, often required in exams", "japaneseMeaning": "エッセイ、小論文", "synonyms": "composition, paper", "antonyms": "short answer", "example": "Plan your essay before writing." },
-      { "word": "timetable", "meaning": "a plan showing study times and subjects", "japaneseMeaning": "時間割、スケジュール", "synonyms": "schedule, planner", "antonyms": "impromptu plan", "example": "Make a timetable for exam revision." },
-      { "word": "focus", "meaning": "paying full attention to a task", "japaneseMeaning": "集中する、集中力", "synonyms": "concentration, attention", "antonyms": "distraction", "example": "Find a quiet place to focus." },
-      { "word": "deadline", "meaning": "the time by which work must be finished", "japaneseMeaning": "締め切り", "synonyms": "due date, cutoff", "antonyms": "", "example": "Finish your project before the deadline." },
-      { "word": "research", "meaning": "careful study to find facts or information", "japaneseMeaning": "研究、調査", "synonyms": "investigation, study", "antonyms": "guesswork", "example": "Use reliable sources for research." },
-      { "word": "bibliography", "meaning": "a list of sources used in written work", "japaneseMeaning": "参考文献、書誌", "synonyms": "references, works cited", "antonyms": "", "example": "Include a bibliography at the end of your report." },
-      { "word": "citation", "meaning": "a reference to a source of information", "japaneseMeaning": "引用、出典", "synonyms": "reference", "antonyms": "", "example": "Cite your sources correctly to avoid plagiarism." },
-      { "word": "plagiarism", "meaning": "using someone else's work as your own", "japaneseMeaning": "盗用、剽窃", "synonyms": "copying, cheating", "antonyms": "originality", "example": "Avoid plagiarism by writing in your own words." },
-      { "word": "supervisor", "meaning": "a person who guides or oversees work", "japaneseMeaning": "指導教官、監督者", "synonyms": "mentor, overseer", "antonyms": "", "example": "Ask your supervisor for feedback on the draft." },
-      { "word": "feedback", "meaning": "comments intended to improve work", "japaneseMeaning": "フィードバック、意見", "synonyms": "critique, response", "antonyms": "", "example": "Use feedback to improve your essay." },
-      { "word": "proofread", "meaning": "to read and correct mistakes in a text", "japaneseMeaning": "校正する、推敲する", "synonyms": "edit, check", "antonyms": "publish without checking", "example": "Proofread your work before submission." },
-      { "word": "oral", "meaning": "spoken rather than written", "japaneseMeaning": "口頭の", "synonyms": "verbal, spoken", "antonyms": "written", "example": "Prepare for the oral part of the exam." },
-      { "word": "score", "meaning": "the mark or points received in a test", "japaneseMeaning": "得点、スコア", "synonyms": "grade, mark", "antonyms": "zero", "example": "Aim to improve your score on the next quiz." }
-    ]
-  }
-
+  "lesson_id": "eiken-pre2-25",
+  "title": "Lesson 25",
+  "paragraph": "Study verbs for classroom work.",
+  "words": [
+    { "word": "read", "meaning": "to look at words and understand them", "japaneseMeaning": "読む", "synonyms": "", "antonyms": "", "forms": "read, reads, reading, read, read", "example": "I read a book after dinner." },
+    { "word": "write", "meaning": "to make words with a pen or keyboard", "japaneseMeaning": "書く", "synonyms": "", "antonyms": "erase", "forms": "write, writes, writing, wrote, written", "example": "Please write your name." },
+    { "word": "ask", "meaning": "to say a question", "japaneseMeaning": "尋ねる、頼む", "synonyms": "question", "antonyms": "answer", "forms": "ask, asks, asking, asked, asked", "example": "Ask the teacher for help." },
+    { "word": "answer", "meaning": "to say or write a reply", "japaneseMeaning": "答える", "synonyms": "reply", "antonyms": "ask", "forms": "answer, answers, answering, answered, answered", "example": "Please answer the question." },
+    { "word": "spell", "meaning": "to say or write the letters of a word", "japaneseMeaning": "つづる、スペルする", "synonyms": "", "antonyms": "", "forms": "spell, spells, spelling, spelled, spelled", "example": "Can you spell your name?" },
+    { "word": "copy", "meaning": "to write the same thing again", "japaneseMeaning": "写す、コピーする", "synonyms": "", "antonyms": "", "forms": "copy, copies, copying, copied, copied", "example": "Copy the sentence in your notebook." },
+    { "word": "draw", "meaning": "to make a picture with a pen or pencil", "japaneseMeaning": "描く", "synonyms": "sketch", "antonyms": "erase", "forms": "draw, draws, drawing, drew, drawn", "example": "Draw a cat on the paper." },
+    { "word": "count", "meaning": "to say numbers in order", "japaneseMeaning": "数える", "synonyms": "", "antonyms": "", "forms": "count, counts, counting, counted, counted", "example": "Count the apples on the table." },
+    { "word": "color", "meaning": "to add color to a picture", "japaneseMeaning": "色を塗る", "synonyms": "", "antonyms": "", "forms": "color, colors, coloring, colored, colored", "example": "Color the flower yellow." },
+    { "word": "check", "meaning": "to look to see if something is right", "japaneseMeaning": "確認する", "synonyms": "look at", "antonyms": "ignore", "forms": "check, checks, checking, checked, checked", "example": "Check your answer before class." }
+  ]
+}

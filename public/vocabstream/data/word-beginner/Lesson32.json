@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-32",
-  "title": "Lesson 7",
-  "paragraph": "This lesson covers strong feelings, management verbs, and meeting-related actions — practical for social and administrative contexts.",
+  "title": "Lesson 32",
+  "paragraph": "This lesson practices useful adjectives for people and things.",
   "words": [
-    { "word": "love", "meaning": "to have a deep affection or strong liking for", "japaneseMeaning": "愛する／大好きである", "synonyms": "adore, cherish", "antonyms": "hate, dislike", "example": "I love spending time with family." },
-    { "word": "manage", "meaning": "to be in charge of or succeed in doing something", "japaneseMeaning": "管理する／なんとかやり遂げる", "synonyms": "handle, oversee", "antonyms": "mismanage, fail", "example": "She manages a small team." },
-    { "word": "mean", "meaning": "to intend to convey or express", "japaneseMeaning": "意味する／意図する", "synonyms": "intend, signify", "antonyms": "misinterpret, confuse", "example": "What do you mean by that?" },
-    { "word": "measure", "meaning": "to ascertain the size, amount, or degree of something", "japaneseMeaning": "測定する／測る", "synonyms": "gauge, assess", "antonyms": "guess, estimate", "example": "Measure the length carefully." },
-    { "word": "meet", "meaning": "to come into the presence of someone or be introduced", "japaneseMeaning": "会う／出会う", "synonyms": "encounter, greet", "antonyms": "avoid, part", "example": "I will meet him at the station." },
-    { "word": "miss", "meaning": "to fail to hit, reach, or attend", "japaneseMeaning": "逃す／会えない", "synonyms": "fail to catch, skip", "antonyms": "hit, attend", "example": "I missed the bus." },
-    { "word": "move", "meaning": "to change position or location", "japaneseMeaning": "動く／移動する", "synonyms": "shift, relocate", "antonyms": "stay, remain", "example": "They moved to a new city." },
-    { "word": "need", "meaning": "to require something because it is necessary", "japaneseMeaning": "必要とする", "synonyms": "require, demand", "antonyms": "want, reject", "example": "You need a passport to travel." },
-    { "word": "offer", "meaning": "to present or propose something for acceptance", "japaneseMeaning": "申し出る／提供する", "synonyms": "propose, present", "antonyms": "withdraw, refuse", "example": "They offered help immediately." },
-    { "word": "open", "meaning": "to move something so it is no longer closed", "japaneseMeaning": "開ける／開く", "synonyms": "unfasten, unlock", "antonyms": "close, shut", "example": "Open the window, please." },
-    { "word": "order", "meaning": "to request goods or services or to command", "japaneseMeaning": "注文する／命じる", "synonyms": "request, command", "antonyms": "cancel, refuse", "example": "I ordered dinner online." },
-    { "word": "own", "meaning": "to have something as property", "japaneseMeaning": "所有する", "synonyms": "possess, hold", "antonyms": "lack, relinquish", "example": "She owns a small business." }
+    { "word": "kind", "meaning": "nice and helpful to others", "japaneseMeaning": "親切な", "synonyms": "nice, helpful", "antonyms": "mean, unkind", "forms": "kind, kinder, kindest", "example": "My neighbor is kind to everyone." },
+    { "word": "busy", "meaning": "having many things to do", "japaneseMeaning": "忙しい", "synonyms": "active, full", "antonyms": "free, quiet", "forms": "busy, busier, busiest", "example": "My mother is busy on Monday morning." },
+    { "word": "free", "meaning": "not busy or costing no money", "japaneseMeaning": "暇な／無料の", "synonyms": "available, no-cost", "antonyms": "busy, expensive", "forms": "free, freer, freest", "example": "Are you free after school?" },
+    { "word": "strong", "meaning": "having a lot of power", "japaneseMeaning": "強い", "synonyms": "powerful, hard", "antonyms": "weak, soft", "forms": "strong, stronger, strongest", "example": "He is strong enough to carry the box." },
+    { "word": "weak", "meaning": "not strong", "japaneseMeaning": "弱い", "synonyms": "not strong, soft", "antonyms": "strong, powerful", "forms": "weak, weaker, weakest", "example": "I feel weak when I am sick." },
+    { "word": "clear", "meaning": "easy to see or understand", "japaneseMeaning": "はっきりした／明確な", "synonyms": "easy, plain", "antonyms": "unclear, difficult", "forms": "clear, clearer, clearest", "example": "Your answer is clear." },
+    { "word": "dark", "meaning": "with little or no light", "japaneseMeaning": "暗い", "synonyms": "dim, black", "antonyms": "bright, light", "forms": "dark, darker, darkest", "example": "The room is dark at night." },
+    { "word": "bright", "meaning": "full of light", "japaneseMeaning": "明るい", "synonyms": "light, shiny", "antonyms": "dark, dim", "forms": "bright, brighter, brightest", "example": "This lamp is bright." },
+    { "word": "heavy", "meaning": "hard to lift", "japaneseMeaning": "重い", "synonyms": "weighty, big", "antonyms": "light, easy", "forms": "heavy, heavier, heaviest", "example": "This box is heavy." },
+    { "word": "light", "meaning": "not heavy", "japaneseMeaning": "軽い", "synonyms": "not heavy, easy to carry", "antonyms": "heavy, weighty", "forms": "light, lighter, lightest", "example": "My new bag is light." }
   ]
 }

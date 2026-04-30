@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-84",
+  "title": "Lesson 84",
+  "paragraph": "This lesson practices useful adjectives for body and health.",
+  "words": [
+    { "word": "healthy", "meaning": "well and not sick", "japaneseMeaning": "健康な", "synonyms": "well, strong", "antonyms": "sick, ill", "forms": "healthy, healthier, healthiest", "example": "She eats healthy food." },
+    { "word": "sick", "meaning": "not well", "japaneseMeaning": "病気の／気分が悪い", "synonyms": "ill, unwell", "antonyms": "healthy, well", "forms": "sick, sicker, sickest", "example": "I am sick today." },
+    { "word": "sore", "meaning": "painful when touched or moved", "japaneseMeaning": "痛い／ひりひりする", "synonyms": "painful, aching", "antonyms": "fine, well", "forms": "sore, sorer, sorest", "example": "My throat is sore." },
+    { "word": "dizzy", "meaning": "feeling that you may fall", "japaneseMeaning": "めまいがする", "synonyms": "light-headed, unsteady", "antonyms": "steady, clear", "forms": "dizzy, dizzier, dizziest", "example": "I feel dizzy after the ride." },
+    { "word": "sleepy", "meaning": "wanting to sleep", "japaneseMeaning": "眠い", "synonyms": "tired, drowsy", "antonyms": "awake, active", "forms": "sleepy, sleepier, sleepiest", "example": "The baby is sleepy." },
+    { "word": "awake", "meaning": "not sleeping", "japaneseMeaning": "起きている", "synonyms": "up, not asleep", "antonyms": "asleep, sleepy", "forms": "awake, more awake, most awake", "example": "I am still awake at ten." },
+    { "word": "asleep", "meaning": "sleeping", "japaneseMeaning": "眠っている", "synonyms": "sleeping, resting", "antonyms": "awake, up", "forms": "asleep", "example": "My brother is asleep." },
+    { "word": "painful", "meaning": "hurting a lot", "japaneseMeaning": "痛い／苦痛な", "synonyms": "sore, hurting", "antonyms": "painless, comfortable", "forms": "painful, more painful, most painful", "example": "This tooth is painful." },
+    { "word": "painless", "meaning": "not hurting", "japaneseMeaning": "痛みのない", "synonyms": "not painful, easy", "antonyms": "painful, sore", "forms": "painless, more painless, most painless", "example": "The checkup is painless." },
+    { "word": "drowsy", "meaning": "sleepy and slow", "japaneseMeaning": "眠気を催す", "synonyms": "sleepy, tired", "antonyms": "awake, fresh", "forms": "drowsy, drowsier, drowsiest", "example": "This medicine makes me drowsy." }
+  ]
+}

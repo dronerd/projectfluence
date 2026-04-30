@@ -1,102 +1,97 @@
 {
   "lesson_id": "eiken-pre2-2",
   "title": "Lesson 2",
-  "paragraph": "Home life includes many everyday items that make living comfortable. From furniture and appliances to simple things like towels and cushions, organized spaces help you relax. Regular care of these items keeps a home clean and welcoming.",
+  "paragraph": "Food nouns for breakfast, lunch, and snacks.",
   "words": [
     {
       "word": "butter",
-      "meaning": "a basic word for butter",
+      "meaning": "a soft yellow food made from milk",
       "japaneseMeaning": "バター",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "butter, butters",
-      "example": "I see a butter."
+      "synonyms": "food",
+      "antonyms": "",
+      "forms": "butter",
+      "example": "I put butter on bread."
     },
     {
       "word": "cereal",
-      "meaning": "a basic word for cereal",
+      "meaning": "dry food often eaten with milk",
       "japaneseMeaning": "シリアル",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "food",
+      "antonyms": "",
       "forms": "cereal, cereals",
-      "example": "I see a cereal."
+      "example": "Cereal is easy to eat in the morning."
     },
     {
       "word": "soup",
-      "meaning": "a basic word for soup",
+      "meaning": "hot food with a lot of water",
       "japaneseMeaning": "スープ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "food",
+      "antonyms": "",
       "forms": "soup, soups",
-      "example": "I see a soup."
+      "example": "This soup has carrots in it."
     },
     {
       "word": "pizza",
-      "meaning": "a basic word for pizza",
+      "meaning": "round bread with cheese and other food on top",
       "japaneseMeaning": "ピザ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "food",
+      "antonyms": "",
       "forms": "pizza, pizzas",
-      "example": "I see a pizza."
+      "example": "We ate pizza for dinner."
     },
     {
       "word": "sandwich",
-      "meaning": "a basic word for sandwich",
+      "meaning": "food between two pieces of bread",
       "japaneseMeaning": "サンドイッチ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "sandwich, sandwichs",
-      "example": "I see a sandwich."
+      "synonyms": "food",
+      "antonyms": "",
+      "forms": "sandwich, sandwiches",
+      "example": "I made a sandwich for lunch."
     },
     {
       "word": "salad",
-      "meaning": "a basic word for salad",
+      "meaning": "cold food with vegetables",
       "japaneseMeaning": "サラダ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "food",
+      "antonyms": "",
       "forms": "salad, salads",
-      "example": "I see a salad."
+      "example": "The salad has tomato in it."
     },
     {
       "word": "cookie",
-      "meaning": "a basic word for cookie",
+      "meaning": "a small sweet food",
       "japaneseMeaning": "クッキー",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "snack",
+      "antonyms": "",
       "forms": "cookie, cookies",
-      "example": "I see a cookie."
+      "example": "He ate a cookie after school."
     },
     {
       "word": "chocolate",
-      "meaning": "a basic word for chocolate",
+      "meaning": "a sweet brown food",
       "japaneseMeaning": "チョコレート",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "sweet",
+      "antonyms": "",
       "forms": "chocolate, chocolates",
-      "example": "I see a chocolate."
+      "example": "This chocolate is very sweet."
     },
     {
       "word": "donut",
       "meaning": "a small sweet round food",
       "japaneseMeaning": "ドーナツ",
-      "synonyms": [
-        "sweet",
-        "snack"
-      ],
-      "antonyms": [
-        "vegetable"
-      ],
+      "synonyms": "snack",
+      "antonyms": "",
       "forms": "donut, donuts",
       "example": "I eat a donut after lunch."
     },
     {
       "word": "sugar",
-      "meaning": "a basic word for sugar",
+      "meaning": "a sweet white thing used in food",
       "japaneseMeaning": "砂糖",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "sugar, sugars",
-      "example": "I see a sugar."
+      "synonyms": "sweetener",
+      "antonyms": "",
+      "forms": "sugar",
+      "example": "She puts sugar in her coffee."
     }
   ]
 }

@@ -1,97 +1,17 @@
 {
   "lesson_id": "eiken-pre2-6",
   "title": "Lesson 6",
-  "paragraph": "Health is important for daily life; caring for the body prevents illness and speeds recovery. Regular exercise, a balanced diet, and timely medical advice help people stay well. Hospitals, nurses and doctors support patients when they need treatment.",
+  "paragraph": "Time nouns for parts of the day and days of the week.",
   "words": [
-    {
-      "word": "morning",
-      "meaning": "a basic word for morning",
-      "japaneseMeaning": "朝",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "morning, mornings",
-      "example": "I see a morning."
-    },
-    {
-      "word": "afternoon",
-      "meaning": "a basic word for afternoon",
-      "japaneseMeaning": "午後",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "afternoon, afternoons",
-      "example": "I see a afternoon."
-    },
-    {
-      "word": "evening",
-      "meaning": "a basic word for evening",
-      "japaneseMeaning": "夕方",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "evening, evenings",
-      "example": "I see a evening."
-    },
-    {
-      "word": "night",
-      "meaning": "a basic word for night",
-      "japaneseMeaning": "夜",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "night, nights",
-      "example": "I see a night."
-    },
-    {
-      "word": "monday",
-      "meaning": "a basic word for monday",
-      "japaneseMeaning": "月曜日",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "monday, mondays",
-      "example": "I see a monday."
-    },
-    {
-      "word": "tuesday",
-      "meaning": "a basic word for tuesday",
-      "japaneseMeaning": "火曜日",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "tuesday, tuesdays",
-      "example": "I see a tuesday."
-    },
-    {
-      "word": "wednesday",
-      "meaning": "a basic word for wednesday",
-      "japaneseMeaning": "水曜日",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "wednesday, wednesdays",
-      "example": "I see a wednesday."
-    },
-    {
-      "word": "thursday",
-      "meaning": "a basic word for thursday",
-      "japaneseMeaning": "木曜日",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "thursday, thursdays",
-      "example": "I see a thursday."
-    },
-    {
-      "word": "friday",
-      "meaning": "a basic word for friday",
-      "japaneseMeaning": "金曜日",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "friday, fridays",
-      "example": "I see a friday."
-    },
-    {
-      "word": "saturday",
-      "meaning": "a basic word for saturday",
-      "japaneseMeaning": "土曜日",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "saturday, saturdays",
-      "example": "I see a saturday."
-    }
+    { "word": "morning", "meaning": "the early part of the day", "japaneseMeaning": "朝", "synonyms": "early day", "antonyms": "night", "forms": "morning, mornings", "example": "I study in the morning." },
+    { "word": "afternoon", "meaning": "the time after lunch and before evening", "japaneseMeaning": "午後", "synonyms": "", "antonyms": "morning", "forms": "afternoon, afternoons", "example": "We play soccer in the afternoon." },
+    { "word": "evening", "meaning": "the time after the afternoon and before night", "japaneseMeaning": "夕方、晩", "synonyms": "", "antonyms": "morning", "forms": "evening, evenings", "example": "My family eats dinner in the evening." },
+    { "word": "night", "meaning": "the dark part of the day", "japaneseMeaning": "夜", "synonyms": "", "antonyms": "day", "forms": "night, nights", "example": "The stars are bright at night." },
+    { "word": "Monday", "meaning": "the day after Sunday", "japaneseMeaning": "月曜日", "synonyms": "", "antonyms": "", "forms": "Monday, Mondays", "example": "School starts on Monday." },
+    { "word": "Tuesday", "meaning": "the day after Monday", "japaneseMeaning": "火曜日", "synonyms": "", "antonyms": "", "forms": "Tuesday, Tuesdays", "example": "I have music class on Tuesday." },
+    { "word": "Wednesday", "meaning": "the day after Tuesday", "japaneseMeaning": "水曜日", "synonyms": "", "antonyms": "", "forms": "Wednesday, Wednesdays", "example": "The meeting is on Wednesday." },
+    { "word": "Thursday", "meaning": "the day after Wednesday", "japaneseMeaning": "木曜日", "synonyms": "", "antonyms": "", "forms": "Thursday, Thursdays", "example": "We have a test on Thursday." },
+    { "word": "Friday", "meaning": "the day after Thursday", "japaneseMeaning": "金曜日", "synonyms": "", "antonyms": "", "forms": "Friday, Fridays", "example": "Friday is my favorite school day." },
+    { "word": "Saturday", "meaning": "the day after Friday", "japaneseMeaning": "土曜日", "synonyms": "", "antonyms": "", "forms": "Saturday, Saturdays", "example": "I visit my friend on Saturday." }
   ]
 }

@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-40",
-  "title": "Lesson 15",
-  "paragraph": "Actions often done with the body—coughing, crossing, diving—and brief physical interactions.",
+  "title": "Lesson 40",
+  "paragraph": "This lesson practices useful adjectives for taste and condition.",
   "words": [
-    { "word": "cough", "meaning": "to expel air from the lungs with a sudden sound", "japaneseMeaning": "咳をする", "synonyms": "hack, clear throat", "antonyms": "silence, be quiet", "example": "He coughed during the meeting." },
-    { "word": "cross", "meaning": "to go from one side to the other", "japaneseMeaning": "渡る／横切る", "synonyms": "traverse, pass", "antonyms": "stay, remain", "example": "Cross the street carefully." },
-    { "word": "dive", "meaning": "to jump into water headfirst or plunge", "japaneseMeaning": "飛び込む／潜る", "synonyms": "plunge, submerge", "antonyms": "surface, rise", "example": "He can dive from the high board." },
-    { "word": "drag", "meaning": "to pull something with effort", "japaneseMeaning": "引きずる／引く", "synonyms": "haul, pull", "antonyms": "push, lift", "example": "Drag the box to the corner." },
-    { "word": "hug", "meaning": "to hold someone tightly for warmth or affection", "japaneseMeaning": "抱きしめる", "synonyms": "embrace, cuddle", "antonyms": "ignore, avoid", "example": "She hugged her friend goodbye." },
-    { "word": "knock", "meaning": "to strike a surface to attract attention", "japaneseMeaning": "ノックする／打つ", "synonyms": "tap, rap", "antonyms": "enter silently, sneak", "example": "Knock before entering the room." },
-    { "word": "pack", "meaning": "to put items into a container for transport", "japaneseMeaning": "詰める／荷造りする", "synonyms": "load, bundle", "antonyms": "unpack, scatter", "example": "Pack your suitcase tonight." },
-    { "word": "press", "meaning": "to apply force to something", "japaneseMeaning": "押す／圧迫する", "synonyms": "push, compress", "antonyms": "pull, release", "example": "Press the button to start." },
-    { "word": "pronounce", "meaning": "to make the sound of a word correctly", "japaneseMeaning": "発音する", "synonyms": "articulate, enunciate", "antonyms": "mumble, slur", "example": "Please pronounce this word slowly." },
-    { "word": "relax", "meaning": "to become less tense or anxious", "japaneseMeaning": "リラックスする", "synonyms": "rest, unwind", "antonyms": "stress, strain", "example": "Relax and take deep breaths." },
-    { "word": "scream", "meaning": "to give a loud, high cry from fear or excitement", "japaneseMeaning": "叫ぶ", "synonyms": "shriek, yell", "antonyms": "whisper, murmur", "example": "She screamed at the scary scene." },
-    { "word": "ski", "meaning": "to glide over snow on skis", "japaneseMeaning": "スキーをする", "synonyms": "slide, glide", "antonyms": "walk, climb", "example": "We ski every winter." }
+    { "word": "sweet", "meaning": "tasting like sugar", "japaneseMeaning": "甘い", "synonyms": "sugary, nice", "antonyms": "bitter, sour", "forms": "sweet, sweeter, sweetest", "example": "This cake is sweet." },
+    { "word": "savory", "meaning": "not sweet and good to eat", "japaneseMeaning": "塩味のある／甘くない", "synonyms": "salty, tasty", "antonyms": "sweet, sugary", "forms": "savory, more savory, most savory", "example": "This pie is savory." },
+    { "word": "tangy", "meaning": "having a strong fresh taste", "japaneseMeaning": "ピリッとした／酸味のある", "synonyms": "sharp, sour", "antonyms": "sweet, mild", "forms": "tangy, tangier, tangiest", "example": "The orange sauce is tangy." },
+    { "word": "bitter", "meaning": "having a strong bad taste like black coffee", "japaneseMeaning": "苦い", "synonyms": "sharp, strong", "antonyms": "sweet, mild", "forms": "bitter, bitterer, bitterest", "example": "The medicine tastes bitter." },
+    { "word": "spicy", "meaning": "having a hot taste from spices", "japaneseMeaning": "辛い／スパイスのきいた", "synonyms": "hot, peppery", "antonyms": "mild, plain", "forms": "spicy, spicier, spiciest", "example": "This curry is spicy." },
+    { "word": "mild", "meaning": "not strong in taste or feeling", "japaneseMeaning": "マイルドな／穏やかな", "synonyms": "soft, gentle", "antonyms": "strong, spicy", "forms": "mild, milder, mildest", "example": "I like mild cheese." },
+    { "word": "even", "meaning": "flat and smooth", "japaneseMeaning": "平らな／均一な", "synonyms": "flat, smooth", "antonyms": "rough, uneven", "forms": "even, more even, most even", "example": "The table has an even top." },
+    { "word": "rough", "meaning": "not smooth", "japaneseMeaning": "ざらざらした／粗い", "synonyms": "uneven, hard", "antonyms": "smooth, soft", "forms": "rough, rougher, roughest", "example": "This old wall is rough." },
+    { "word": "wet", "meaning": "covered with water or another liquid", "japaneseMeaning": "濡れた", "synonyms": "damp, rainy", "antonyms": "dry, clean", "forms": "wet, wetter, wettest", "example": "My socks are wet." },
+    { "word": "dry", "meaning": "not wet", "japaneseMeaning": "乾いた", "synonyms": "not wet, empty", "antonyms": "wet, damp", "forms": "dry, drier, driest", "example": "Use a dry towel." }
   ]
 }

@@ -1,97 +1,97 @@
 {
   "lesson_id": "eiken-pre2-1",
   "title": "Lesson 1",
-  "paragraph": "People form many types of relationships during their lives. Family members, friends, colleagues and partners each play different roles, and meeting strangers or guests can lead to new connections. Respect and trust help maintain healthy relationships across generations.",
+  "paragraph": "Fruit and vegetable nouns for simple shopping and meals.",
   "words": [
     {
       "word": "apple",
-      "meaning": "a basic word for apple",
+      "meaning": "a round red, green, or yellow fruit",
       "japaneseMeaning": "りんご",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "fruit",
+      "antonyms": "",
       "forms": "apple, apples",
-      "example": "I see a apple."
+      "example": "I eat an apple after lunch."
     },
     {
       "word": "banana",
-      "meaning": "a basic word for banana",
+      "meaning": "a long yellow fruit",
       "japaneseMeaning": "バナナ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "fruit",
+      "antonyms": "",
       "forms": "banana, bananas",
-      "example": "I see a banana."
+      "example": "The banana is sweet."
     },
     {
       "word": "grape",
-      "meaning": "a basic word for grape",
+      "meaning": "a small round fruit",
       "japaneseMeaning": "ぶどう",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "fruit",
+      "antonyms": "",
       "forms": "grape, grapes",
-      "example": "I see a grape."
+      "example": "She put a grape in her lunch box."
     },
     {
       "word": "lemon",
-      "meaning": "a basic word for lemon",
+      "meaning": "a sour yellow fruit",
       "japaneseMeaning": "レモン",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "fruit",
+      "antonyms": "",
       "forms": "lemon, lemons",
-      "example": "I see a lemon."
+      "example": "I put lemon in my tea."
     },
     {
       "word": "potato",
-      "meaning": "a basic word for potato",
+      "meaning": "a round vegetable that grows in the ground",
       "japaneseMeaning": "じゃがいも",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "potato, potatos",
-      "example": "I see a potato."
+      "synonyms": "vegetable",
+      "antonyms": "",
+      "forms": "potato, potatoes",
+      "example": "This potato is hot."
     },
     {
       "word": "tomato",
-      "meaning": "a basic word for tomato",
+      "meaning": "a soft red fruit used like a vegetable",
       "japaneseMeaning": "トマト",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "tomato, tomatos",
-      "example": "I see a tomato."
+      "synonyms": "fruit",
+      "antonyms": "",
+      "forms": "tomato, tomatoes",
+      "example": "The tomato is in the salad."
     },
     {
       "word": "onion",
-      "meaning": "a basic word for onion",
+      "meaning": "a round vegetable with a strong smell",
       "japaneseMeaning": "玉ねぎ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "vegetable",
+      "antonyms": "",
       "forms": "onion, onions",
-      "example": "I see a onion."
+      "example": "My mother cut an onion."
     },
     {
       "word": "carrot",
-      "meaning": "a basic word for carrot",
+      "meaning": "a long orange vegetable",
       "japaneseMeaning": "にんじん",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "vegetable",
+      "antonyms": "",
       "forms": "carrot, carrots",
-      "example": "I see a carrot."
+      "example": "The rabbit eats a carrot."
     },
     {
       "word": "bread",
-      "meaning": "a basic word for bread",
+      "meaning": "food made from flour and baked",
       "japaneseMeaning": "パン",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "bread, breads",
-      "example": "I see a bread."
+      "synonyms": "food",
+      "antonyms": "",
+      "forms": "bread",
+      "example": "I eat bread for breakfast."
     },
     {
       "word": "cheese",
-      "meaning": "a basic word for cheese",
+      "meaning": "a food made from milk",
       "japaneseMeaning": "チーズ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "food",
+      "antonyms": "",
       "forms": "cheese, cheeses",
-      "example": "I see a cheese."
+      "example": "Cheese is on the pizza."
     }
   ]
 }

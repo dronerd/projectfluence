@@ -1,97 +1,97 @@
 {
   "lesson_id": "eiken-pre2-4",
   "title": "Lesson 4",
-  "paragraph": "Travel involves planning routes, tickets and luggage. Whether you take a flight, train, coach or subway, checking schedules and following customs rules helps the journey go smoothly. Keeping your boarding pass, baggage tags and reservation details handy reduces stress at the airport or station.",
+  "paragraph": "Clothing nouns for simple descriptions.",
   "words": [
     {
       "word": "shirt",
-      "meaning": "a basic word for shirt",
+      "meaning": "clothing for the top of the body",
       "japaneseMeaning": "シャツ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "top",
+      "antonyms": "",
       "forms": "shirt, shirts",
-      "example": "I see a shirt."
+      "example": "My shirt is white."
     },
     {
       "word": "pants",
-      "meaning": "a basic word for pants",
+      "meaning": "clothing for the legs",
       "japaneseMeaning": "ズボン",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "trousers",
+      "antonyms": "",
       "forms": "pants",
-      "example": "I see a pants."
+      "example": "These pants are black."
     },
     {
       "word": "skirt",
-      "meaning": "a basic word for skirt",
+      "meaning": "clothing that hangs from the waist",
       "japaneseMeaning": "スカート",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "skirt, skirts",
-      "example": "I see a skirt."
+      "example": "Her skirt is long."
     },
     {
       "word": "shoes",
-      "meaning": "a basic word for shoes",
+      "meaning": "things worn on the feet",
       "japaneseMeaning": "靴",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "shoes",
-      "example": "I see a shoes."
+      "synonyms": "footwear",
+      "antonyms": "",
+      "forms": "shoe, shoes",
+      "example": "My shoes are by the door."
     },
     {
       "word": "socks",
-      "meaning": "a basic word for socks",
+      "meaning": "soft clothing worn on the feet",
       "japaneseMeaning": "靴下",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "socks",
-      "example": "I see a socks."
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "sock, socks",
+      "example": "These socks are clean."
     },
     {
       "word": "hat",
-      "meaning": "a basic word for hat",
+      "meaning": "clothing worn on the head",
       "japaneseMeaning": "帽子",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "cap",
+      "antonyms": "",
       "forms": "hat, hats",
-      "example": "I see a hat."
+      "example": "The hat is on the shelf."
     },
     {
       "word": "jacket",
-      "meaning": "a basic word for jacket",
+      "meaning": "short clothing worn over a shirt",
       "japaneseMeaning": "ジャケット",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "coat",
+      "antonyms": "",
       "forms": "jacket, jackets",
-      "example": "I see a jacket."
+      "example": "I wear a jacket in spring."
     },
     {
-      "word": "gloves",
-      "meaning": "a basic word for gloves",
-      "japaneseMeaning": "手袋",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "gloves",
-      "example": "I see a gloves."
+      "word": "jeans",
+      "meaning": "strong blue pants",
+      "japaneseMeaning": "ジーンズ",
+      "synonyms": "pants",
+      "antonyms": "",
+      "forms": "jeans",
+      "example": "These jeans are too long."
     },
     {
       "word": "scarf",
-      "meaning": "a basic word for scarf",
-      "japaneseMeaning": "スカーフ",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "scarf, scarfs",
-      "example": "I see a scarf."
+      "meaning": "cloth worn around the neck",
+      "japaneseMeaning": "スカーフ、マフラー",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "scarf, scarves",
+      "example": "She wears a scarf in winter."
     },
     {
       "word": "sweater",
-      "meaning": "a basic word for sweater",
+      "meaning": "warm clothing for the top of the body",
       "japaneseMeaning": "セーター",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "sweater, sweaters",
-      "example": "I see a sweater."
+      "example": "This sweater is warm."
     }
   ]
 }

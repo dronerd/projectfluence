@@ -1,97 +1,97 @@
 {
   "lesson_id": "eiken-pre2-5",
   "title": "Lesson 5",
-  "paragraph": "Education and work shape skills and future opportunities. Students attend classes, submit assignments, and take exams, while professors and employers evaluate progress. Hard work, qualifications, and research can open doors to scholarships and university degrees.",
+  "paragraph": "School nouns for class and study.",
   "words": [
     {
       "word": "school",
-      "meaning": "a basic word for school",
+      "meaning": "a place where students learn",
       "japaneseMeaning": "学校",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "school, schools",
-      "example": "I see a school."
+      "example": "Our school is near the station."
     },
     {
       "word": "teacher",
-      "meaning": "a basic word for teacher",
-      "japaneseMeaning": "先生",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "meaning": "a person who helps students learn",
+      "japaneseMeaning": "先生、教師",
+      "synonyms": "",
+      "antonyms": "student",
       "forms": "teacher, teachers",
-      "example": "I see a teacher."
+      "example": "The teacher writes on the board."
     },
     {
       "word": "classroom",
-      "meaning": "a basic word for classroom",
+      "meaning": "a room where students learn",
       "japaneseMeaning": "教室",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "class",
+      "antonyms": "",
       "forms": "classroom, classrooms",
-      "example": "I see a classroom."
+      "example": "The classroom has many desks."
     },
     {
       "word": "pencil",
-      "meaning": "a basic word for pencil",
+      "meaning": "a thing used for writing or drawing",
       "japaneseMeaning": "鉛筆",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "pencil, pencils",
-      "example": "I see a pencil."
+      "example": "I write with a pencil."
     },
     {
       "word": "pen",
-      "meaning": "a basic word for pen",
+      "meaning": "a thing used for writing with ink",
       "japaneseMeaning": "ペン",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "pen, pens",
-      "example": "I see a pen."
+      "example": "This pen is blue."
     },
     {
       "word": "book",
-      "meaning": "a basic word for book",
+      "meaning": "many pages joined together for reading",
       "japaneseMeaning": "本",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "book, books",
-      "example": "I see a book."
+      "example": "The book is on my desk."
     },
     {
       "word": "notebook",
-      "meaning": "a basic word for notebook",
+      "meaning": "a book of empty paper for writing",
       "japaneseMeaning": "ノート",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "notebook, notebooks",
-      "example": "I see a notebook."
+      "example": "My notebook is in my bag."
     },
     {
       "word": "ruler",
-      "meaning": "a basic word for ruler",
+      "meaning": "a tool used to draw straight lines",
       "japaneseMeaning": "定規",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "ruler, rulers",
-      "example": "I see a ruler."
+      "example": "Use a ruler for this line."
     },
     {
       "word": "eraser",
-      "meaning": "a basic word for eraser",
+      "meaning": "a thing used to remove pencil marks",
       "japaneseMeaning": "消しゴム",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "synonyms": "",
+      "antonyms": "",
       "forms": "eraser, erasers",
-      "example": "I see a eraser."
+      "example": "I need an eraser for this mistake."
     },
     {
       "word": "backpack",
-      "meaning": "a basic word for backpack",
-      "japaneseMeaning": "リュック",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
+      "meaning": "a bag carried on the back",
+      "japaneseMeaning": "リュック、バックパック",
+      "synonyms": "school bag",
+      "antonyms": "",
       "forms": "backpack, backpacks",
-      "example": "I see a backpack."
+      "example": "My backpack is heavy today."
     }
   ]
 }

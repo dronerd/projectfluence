@@ -44,7 +44,6 @@ def get_openai_client() -> OpenAI:
         raise RuntimeError("OPENAI_API_KEY is not configured")
     return OpenAI(api_key=api_key)
 
-
 COMPONENT_ALIASES = {
     "単語練習": "vocab",
     "vocab practice": "vocab",

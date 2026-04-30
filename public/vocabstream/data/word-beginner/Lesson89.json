@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-89",
+  "title": "Lesson 89",
+  "paragraph": "This lesson practices useful adverbs for using phones and computers.",
+  "words": [
+    { "word": "remotely", "meaning": "from another place by phone or computer", "japaneseMeaning": "遠隔で", "synonyms": "from home, online", "antonyms": "in person, directly", "forms": "remotely, more remotely, most remotely", "example": "She works remotely on Mondays." },
+    { "word": "electronically", "meaning": "by phone, computer, or the internet", "japaneseMeaning": "電子的に", "synonyms": "digitally, online", "antonyms": "by hand, on paper", "forms": "electronically, more electronically, most electronically", "example": "Send the ticket electronically." },
+    { "word": "digitally", "meaning": "by using a computer or phone", "japaneseMeaning": "デジタルで", "synonyms": "electronically, online", "antonyms": "by hand, on paper", "forms": "digitally, more digitally, most digitally", "example": "We send the form digitally." },
+    { "word": "automatically", "meaning": "by itself", "japaneseMeaning": "自動的に", "synonyms": "by itself, directly", "antonyms": "manually, by hand", "forms": "automatically, more automatically, most automatically", "example": "The app opens automatically." },
+    { "word": "manually", "meaning": "by hand", "japaneseMeaning": "手動で", "synonyms": "by hand, yourself", "antonyms": "automatically, by itself", "forms": "manually, more manually, most manually", "example": "Enter your password manually." },
+    { "word": "privately", "meaning": "not for everyone to see", "japaneseMeaning": "個人的に／非公開で", "synonyms": "secretly, personally", "antonyms": "publicly, openly", "forms": "privately, more privately, most privately", "example": "Send the message privately." },
+    { "word": "publicly", "meaning": "where everyone can see or know", "japaneseMeaning": "公に／公開で", "synonyms": "openly, for everyone", "antonyms": "privately, secretly", "forms": "publicly, more publicly, most publicly", "example": "Do not share your password publicly." },
+    { "word": "correctly", "meaning": "in the right way", "japaneseMeaning": "正しく", "synonyms": "rightly, properly", "antonyms": "wrongly, badly", "forms": "correctly, more correctly, most correctly", "example": "Type the address correctly." },
+    { "word": "wrongly", "meaning": "in the wrong way", "japaneseMeaning": "間違って", "synonyms": "incorrectly, badly", "antonyms": "correctly, properly", "forms": "wrongly, more wrongly, most wrongly", "example": "I entered the password wrongly." },
+    { "word": "securely", "meaning": "in a safe way", "japaneseMeaning": "安全に", "synonyms": "safely, strongly", "antonyms": "unsafely, openly", "forms": "securely, more securely, most securely", "example": "Save your files securely." }
+  ]
+}

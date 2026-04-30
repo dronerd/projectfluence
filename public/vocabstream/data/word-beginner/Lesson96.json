@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-96",
+  "title": "Lesson 96",
+  "paragraph": "This lesson practices useful adjectives for communication.",
+  "words": [
+    { "word": "clear", "meaning": "easy to hear or understand", "japaneseMeaning": "はっきりした／明確な", "synonyms": "easy, plain", "antonyms": "unclear, confusing", "forms": "clear, clearer, clearest", "example": "Your message is clear." },
+    { "word": "unclear", "meaning": "not easy to understand", "japaneseMeaning": "不明確な", "synonyms": "confusing, not clear", "antonyms": "clear, plain", "forms": "unclear, more unclear, most unclear", "example": "The address is unclear." },
+    { "word": "formal", "meaning": "polite and serious", "japaneseMeaning": "正式な／フォーマルな", "synonyms": "official, polite", "antonyms": "casual, relaxed", "forms": "formal, more formal, most formal", "example": "This is a formal letter." },
+    { "word": "casual", "meaning": "relaxed and not formal", "japaneseMeaning": "カジュアルな／気軽な", "synonyms": "relaxed, friendly", "antonyms": "formal, official", "forms": "casual, more casual, most casual", "example": "This is a casual message to a friend." },
+    { "word": "personal", "meaning": "about one person or private life", "japaneseMeaning": "個人的な", "synonyms": "private, individual", "antonyms": "public, general", "forms": "personal, more personal, most personal", "example": "Do not share personal information." },
+    { "word": "general", "meaning": "about most people or things, not one special thing", "japaneseMeaning": "一般的な", "synonyms": "common, broad", "antonyms": "personal, special", "forms": "general, more general, most general", "example": "This is a general question." },
+    { "word": "secret", "meaning": "not known by other people", "japaneseMeaning": "秘密の", "synonyms": "private, hidden", "antonyms": "public, open", "forms": "secret, more secret, most secret", "example": "Keep your password secret." },
+    { "word": "open", "meaning": "not hidden or closed", "japaneseMeaning": "開かれた／公開の", "synonyms": "public, clear", "antonyms": "secret, closed", "forms": "open, more open, most open", "example": "The meeting is open to students." },
+    { "word": "friendly", "meaning": "kind and nice", "japaneseMeaning": "親しみやすい", "synonyms": "kind, nice", "antonyms": "unfriendly, cold", "forms": "friendly, friendlier, friendliest", "example": "Her email sounds friendly." },
+    { "word": "unfriendly", "meaning": "not kind or nice", "japaneseMeaning": "不親切な／無愛想な", "synonyms": "cold, rude", "antonyms": "friendly, kind", "forms": "unfriendly, more unfriendly, most unfriendly", "example": "The short message sounds unfriendly." }
+  ]
+}

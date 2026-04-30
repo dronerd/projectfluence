@@ -1,146 +1,17 @@
 {
   "lesson_id": "eiken-pre2-12",
   "title": "Lesson 12",
-  "paragraph": "Society and politics shape how people live together. Governments, elections and laws affect citizens and communities, while public debate, protests and campaigns influence leaders, councils and policy decisions at local and national levels.",
+  "paragraph": "Common action verbs for home, school, and hobbies.",
   "words": [
-    {
-      "word": "sleep",
-      "meaning": "to rest with your eyes closed at night",
-      "japaneseMeaning": "眠る",
-      "synonyms": [
-        "rest",
-        "nap"
-      ],
-      "antonyms": [
-        "wake"
-      ],
-      "forms": "sleep, sleeps, sleeping, slept",
-      "example": "I sleep eight hours at night."
-    },
-    {
-      "word": "see",
-      "meaning": "to use your eyes",
-      "japaneseMeaning": "見る",
-      "synonyms": [
-        "look",
-        "notice"
-      ],
-      "antonyms": [
-        "miss"
-      ],
-      "forms": "see, sees, seeing, saw, seen",
-      "example": "I see the moon from my window."
-    },
-    {
-      "word": "like",
-      "meaning": "to enjoy someone or something",
-      "japaneseMeaning": "好きである",
-      "synonyms": [
-        "enjoy",
-        "prefer"
-      ],
-      "antonyms": [
-        "dislike"
-      ],
-      "forms": "like, likes, liking, liked",
-      "example": "I like music after school."
-    },
-    {
-      "word": "love",
-      "meaning": "to like someone or something very much",
-      "japaneseMeaning": "大好きである",
-      "synonyms": [
-        "adore",
-        "enjoy"
-      ],
-      "antonyms": [
-        "hate"
-      ],
-      "forms": "love, loves, loving, loved",
-      "example": "I love my family."
-    },
-    {
-      "word": "need",
-      "meaning": "to want something because it is important",
-      "japaneseMeaning": "必要とする",
-      "synonyms": [
-        "require",
-        "want"
-      ],
-      "antonyms": [
-        "have"
-      ],
-      "forms": "need, needs, needing, needed",
-      "example": "I need water after running."
-    },
-    {
-      "word": "can",
-      "meaning": "to be able to do something",
-      "japaneseMeaning": "〜できる",
-      "synonyms": [
-        "be able to"
-      ],
-      "antonyms": [
-        "cannot"
-      ],
-      "forms": "can, could",
-      "example": "I can swim in the pool."
-    },
-    {
-      "word": "must",
-      "meaning": "to have to do something",
-      "japaneseMeaning": "〜しなければならない",
-      "synonyms": [
-        "have to",
-        "need to"
-      ],
-      "antonyms": [
-        "need not"
-      ],
-      "forms": "must",
-      "example": "You must stop at the red light."
-    },
-    {
-      "word": "swim",
-      "meaning": "to move through water",
-      "japaneseMeaning": "泳ぐ",
-      "synonyms": [
-        "bathe",
-        "float"
-      ],
-      "antonyms": [
-        "sink"
-      ],
-      "forms": "swim, swims, swimming, swam, swum",
-      "example": "We swim in the sea in summer."
-    },
-    {
-      "word": "sing",
-      "meaning": "to make music with your voice",
-      "japaneseMeaning": "歌う",
-      "synonyms": [
-        "chant",
-        "perform"
-      ],
-      "antonyms": [
-        "speak"
-      ],
-      "forms": "sing, sings, singing, sang, sung",
-      "example": "They sing a song in class."
-    },
-    {
-      "word": "pay",
-      "meaning": "to give money for something",
-      "japaneseMeaning": "支払う",
-      "synonyms": [
-        "spend",
-        "buy"
-      ],
-      "antonyms": [
-        "receive"
-      ],
-      "forms": "pay, pays, paying, paid",
-      "example": "I pay for the ticket at the station."
-    }
+    { "word": "sleep", "meaning": "to rest with your eyes closed", "japaneseMeaning": "眠る", "synonyms": "rest, nap", "antonyms": "wake", "forms": "sleep, sleeps, sleeping, slept, slept", "example": "I sleep eight hours at night." },
+    { "word": "see", "meaning": "to use your eyes", "japaneseMeaning": "見る", "synonyms": "look, notice", "antonyms": "miss", "forms": "see, sees, seeing, saw, seen", "example": "I see the moon from my window." },
+    { "word": "like", "meaning": "to enjoy someone or something", "japaneseMeaning": "好きである", "synonyms": "enjoy, prefer", "antonyms": "dislike", "forms": "like, likes, liking, liked, liked", "example": "I like music after school." },
+    { "word": "love", "meaning": "to like someone or something very much", "japaneseMeaning": "大好きである", "synonyms": "like, enjoy", "antonyms": "hate", "forms": "love, loves, loving, loved, loved", "example": "I love my family." },
+    { "word": "need", "meaning": "to want something because it is important", "japaneseMeaning": "必要とする", "synonyms": "require, want", "antonyms": "not need", "forms": "need, needs, needing, needed, needed", "example": "I need water after running." },
+    { "word": "can", "meaning": "to be able to do something", "japaneseMeaning": "〜できる", "synonyms": "be able to", "antonyms": "cannot", "forms": "can, could", "example": "I can swim in the pool." },
+    { "word": "must", "meaning": "to have to do something", "japaneseMeaning": "〜しなければならない", "synonyms": "have to, need to", "antonyms": "need not", "forms": "must", "example": "You must stop at the red light." },
+    { "word": "swim", "meaning": "to move through water", "japaneseMeaning": "泳ぐ", "synonyms": "move in water", "antonyms": "sink", "forms": "swim, swims, swimming, swam, swum", "example": "We swim in the sea in summer." },
+    { "word": "sing", "meaning": "to make music with your voice", "japaneseMeaning": "歌う", "synonyms": "make music", "antonyms": "speak", "forms": "sing, sings, singing, sang, sung", "example": "They sing a song in class." },
+    { "word": "pay", "meaning": "to give money for something", "japaneseMeaning": "支払う", "synonyms": "spend, buy", "antonyms": "receive", "forms": "pay, pays, paying, paid, paid", "example": "I pay for the ticket at the station." }
   ]
 }

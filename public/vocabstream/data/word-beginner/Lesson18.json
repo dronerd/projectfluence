@@ -1,142 +1,17 @@
 {
   "lesson_id": "eiken-pre2-18",
   "title": "Lesson 18",
-  "paragraph": "Time and numbers help organise daily life and plans. Calendars, clocks and schedules mark seasons, years and moments. Understanding words about time makes it easier to set appointments, keep timetables and manage routines.",
+  "paragraph": "Determiners for pointing to things and talking about amounts.",
   "words": [
-    {
-      "word": "this",
-      "meaning": "used for one thing near you",
-      "japaneseMeaning": "この",
-      "synonyms": [
-        "the near one"
-      ],
-      "antonyms": [
-        "that"
-      ],
-      "forms": "this",
-      "example": "This book is new."
-    },
-    {
-      "word": "that",
-      "meaning": "used for one thing not near you",
-      "japaneseMeaning": "あの",
-      "synonyms": [
-        "the far one"
-      ],
-      "antonyms": [
-        "this"
-      ],
-      "forms": "that",
-      "example": "That bag is mine."
-    },
-    {
-      "word": "these",
-      "meaning": "used for two or more things near you",
-      "japaneseMeaning": "これらの",
-      "synonyms": [
-        "the near ones"
-      ],
-      "antonyms": [
-        "those"
-      ],
-      "forms": "these",
-      "example": "These apples are red."
-    },
-    {
-      "word": "those",
-      "meaning": "used for two or more things not near you",
-      "japaneseMeaning": "あれらの",
-      "synonyms": [
-        "the far ones"
-      ],
-      "antonyms": [
-        "these"
-      ],
-      "forms": "those",
-      "example": "Those shoes are clean."
-    },
-    {
-      "word": "many",
-      "meaning": "a large number of things or people",
-      "japaneseMeaning": "多くの",
-      "synonyms": [
-        "a lot of",
-        "lots of"
-      ],
-      "antonyms": [
-        "few"
-      ],
-      "forms": "many",
-      "example": "Many students like music."
-    },
-    {
-      "word": "much",
-      "meaning": "a large amount of something",
-      "japaneseMeaning": "多くの",
-      "synonyms": [
-        "a lot of",
-        "plenty of"
-      ],
-      "antonyms": [
-        "little"
-      ],
-      "forms": "much",
-      "example": "I do not have much time."
-    },
-    {
-      "word": "some",
-      "meaning": "a small number or amount",
-      "japaneseMeaning": "いくつかの",
-      "synonyms": [
-        "a few",
-        "a little"
-      ],
-      "antonyms": [
-        "none"
-      ],
-      "forms": "some",
-      "example": "Some children are outside."
-    },
-    {
-      "word": "any",
-      "meaning": "one or more, often in questions or negatives",
-      "japaneseMeaning": "いくつかの",
-      "synonyms": [
-        "some"
-      ],
-      "antonyms": [
-        "none"
-      ],
-      "forms": "any",
-      "example": "Do you have any water?"
-    },
-    {
-      "word": "all",
-      "meaning": "the whole number or amount",
-      "japaneseMeaning": "すべての",
-      "synonyms": [
-        "every",
-        "whole"
-      ],
-      "antonyms": [
-        "none"
-      ],
-      "forms": "all",
-      "example": "All students need a pencil."
-    },
-    {
-      "word": "every",
-      "meaning": "each one in a group",
-      "japaneseMeaning": "すべての",
-      "synonyms": [
-        "each",
-        "all"
-      ],
-      "antonyms": [
-        "no"
-      ],
-      "forms": "every",
-      "example": "Every desk has a book."
-    }
+    { "word": "this", "meaning": "used for one thing near you", "japaneseMeaning": "これ、この", "synonyms": "the near one", "antonyms": "that", "forms": "this", "example": "This book is new." },
+    { "word": "that", "meaning": "used for one thing not near you", "japaneseMeaning": "あれ、あの", "synonyms": "the far one", "antonyms": "this", "forms": "that", "example": "That bag is mine." },
+    { "word": "these", "meaning": "used for two or more things near you", "japaneseMeaning": "これら、この", "synonyms": "the near ones", "antonyms": "those", "forms": "these", "example": "These apples are red." },
+    { "word": "those", "meaning": "used for two or more things not near you", "japaneseMeaning": "あれら、あの", "synonyms": "the far ones", "antonyms": "these", "forms": "those", "example": "Those shoes are clean." },
+    { "word": "many", "meaning": "a large number of things or people", "japaneseMeaning": "多くの", "synonyms": "a lot of", "antonyms": "few", "forms": "many", "example": "Many students like music." },
+    { "word": "much", "meaning": "a large amount of something", "japaneseMeaning": "多くの", "synonyms": "a lot of", "antonyms": "little", "forms": "much", "example": "I do not have much time." },
+    { "word": "some", "meaning": "a small number or amount", "japaneseMeaning": "いくつかの、少しの", "synonyms": "a few, a little", "antonyms": "none", "forms": "some", "example": "Some children are outside." },
+    { "word": "any", "meaning": "one or more, often in questions or negatives", "japaneseMeaning": "いくつかの、どれでも", "synonyms": "some", "antonyms": "none", "forms": "any", "example": "Do you have any water?" },
+    { "word": "all", "meaning": "the whole number or amount", "japaneseMeaning": "すべての", "synonyms": "every, whole", "antonyms": "none", "forms": "all", "example": "All students need a pencil." },
+    { "word": "every", "meaning": "each one in a group", "japaneseMeaning": "すべての、毎〜", "synonyms": "each", "antonyms": "no", "forms": "every", "example": "Every desk has a book." }
   ]
 }

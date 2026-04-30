@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-44",
-  "title": "Lesson 19",
-  "paragraph": "Verbs for helping, avoiding, balancing, belonging, calculation and simple checks—useful in many daily situations.",
+  "title": "Lesson 44",
+  "paragraph": "This lesson practices useful adjectives for simple opinions.",
   "words": [
-    { "word": "assist", "meaning": "to give support or help", "japaneseMeaning": "手伝う／援助する", "synonyms": "help, aid", "antonyms": "hinder, obstruct", "example": "Can you assist me with this form?" },
-    { "word": "attack", "meaning": "to begin aggressive action against", "japaneseMeaning": "攻撃する", "synonyms": "assault, strike", "antonyms": "defend, protect", "example": "The army attacked at dawn." },
-    { "word": "avoid", "meaning": "to keep away from or prevent", "japaneseMeaning": "避ける", "synonyms": "evade, shun", "antonyms": "face, confront", "example": "Avoid eating too much sugar." },
-    { "word": "balance", "meaning": "to keep or put something in a steady position", "japaneseMeaning": "バランスを取る／均衡を保つ", "synonyms": "poise, stabilize", "antonyms": "unbalance, topple", "example": "Balance the tray carefully." },
-    { "word": "belong", "meaning": "to be the property of or be a member of", "japaneseMeaning": "属する／所属する", "synonyms": "fit in, pertain", "antonyms": "exclude, separate", "example": "This book belongs to the library." },
-    { "word": "blame", "meaning": "to assign responsibility for a fault or wrong", "japaneseMeaning": "非難する／責める", "synonyms": "accuse, fault", "antonyms": "praise, absolve", "example": "Don't blame others for your mistake." },
-    { "word": "breathe", "meaning": "to take air into and expel from the lungs", "japaneseMeaning": "呼吸する", "synonyms": "inhale, exhale", "antonyms": "hold breath, suffocate", "example": "Breathe slowly to calm down." },
-    { "word": "calculate", "meaning": "to determine by mathematical methods", "japaneseMeaning": "計算する／算出する", "synonyms": "compute, reckon", "antonyms": "guess, estimate", "example": "Calculate the total cost, please." },
-    { "word": "celebrate", "meaning": "to observe a special occasion with festivities", "japaneseMeaning": "祝う／お祝いする", "synonyms": "commemorate, rejoice", "antonyms": "mourn, lament", "example": "They celebrate their anniversary each year." },
-    { "word": "change", "meaning": "to make or become different", "japaneseMeaning": "変える／変わる", "synonyms": "alter, modify", "antonyms": "preserve, maintain", "example": "Change your clothes before dinner." },
-    { "word": "check", "meaning": "to examine something in order to determine its condition", "japaneseMeaning": "確認する／調べる", "synonyms": "inspect, verify", "antonyms": "ignore, neglect", "example": "Check the oil level in the car." },
-    { "word": "clap", "meaning": "to strike the palms together (reviewed again for reinforcement)", "japaneseMeaning": "拍手する", "synonyms": "applaud, acclaim", "antonyms": "boo, hiss", "example": "The audience clap after the performance." }
+    { "word": "important", "meaning": "needed or having a big meaning", "japaneseMeaning": "重要な", "synonyms": "needed, main", "antonyms": "unimportant, small", "forms": "important, more important, most important", "example": "Sleep is important for students." },
+    { "word": "interesting", "meaning": "making you want to know more", "japaneseMeaning": "面白い／興味深い", "synonyms": "fun, exciting", "antonyms": "boring, dull", "forms": "interesting, more interesting, most interesting", "example": "This story is interesting." },
+    { "word": "boring", "meaning": "not interesting", "japaneseMeaning": "退屈な", "synonyms": "dull, not fun", "antonyms": "interesting, fun", "forms": "boring, more boring, most boring", "example": "The movie is boring." },
+    { "word": "useful", "meaning": "helping you do something", "japaneseMeaning": "役に立つ", "synonyms": "helpful, good", "antonyms": "useless, unhelpful", "forms": "useful, more useful, most useful", "example": "A map is useful when you travel." },
+    { "word": "useless", "meaning": "not helping you do anything", "japaneseMeaning": "役に立たない", "synonyms": "not helpful, bad", "antonyms": "useful, helpful", "forms": "useless, more useless, most useless", "example": "This broken pen is useless." },
+    { "word": "possible", "meaning": "able to happen or be done", "japaneseMeaning": "可能な", "synonyms": "can happen, doable", "antonyms": "impossible, unable", "forms": "possible, more possible, most possible", "example": "It is possible to finish today." },
+    { "word": "impossible", "meaning": "not able to happen or be done", "japaneseMeaning": "不可能な", "synonyms": "not possible, unable", "antonyms": "possible, doable", "forms": "impossible, more impossible, most impossible", "example": "It is impossible to fly without a plane." },
+    { "word": "usual", "meaning": "normal or happening often", "japaneseMeaning": "いつもの／普通の", "synonyms": "normal, common", "antonyms": "unusual, special", "forms": "usual, more usual, most usual", "example": "I take my usual bus to school." },
+    { "word": "unusual", "meaning": "not normal or not common", "japaneseMeaning": "珍しい／普通でない", "synonyms": "strange, special", "antonyms": "usual, common", "forms": "unusual, more unusual, most unusual", "example": "This warm winter is unusual." },
+    { "word": "simple", "meaning": "easy to understand or do", "japaneseMeaning": "簡単な／単純な", "synonyms": "easy, plain", "antonyms": "difficult, complex", "forms": "simple, simpler, simplest", "example": "The teacher gives a simple answer." }
   ]
 }

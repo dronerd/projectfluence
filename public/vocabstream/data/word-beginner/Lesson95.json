@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-95",
+  "title": "Lesson 95",
+  "paragraph": "This lesson practices useful verbs for communication.",
+  "words": [
+    { "word": "mail", "meaning": "to send something by post", "japaneseMeaning": "郵送する", "synonyms": "send, post", "antonyms": "receive, keep", "forms": "mail, mails, mailing, mailed, mailed", "example": "Mail the letter today." },
+    { "word": "post", "meaning": "to put a letter in the mail or put something online", "japaneseMeaning": "投函する／投稿する", "synonyms": "send, share", "antonyms": "delete, keep", "forms": "post, posts, posting, posted, posted", "example": "Post the card before noon." },
+    { "word": "contact", "meaning": "to call or write to someone", "japaneseMeaning": "連絡する", "synonyms": "call, message", "antonyms": "ignore, avoid", "forms": "contact, contacts, contacting, contacted, contacted", "example": "Contact me after school." },
+    { "word": "message", "meaning": "to send words by phone or computer", "japaneseMeaning": "メッセージを送る", "synonyms": "text, write", "antonyms": "ignore, delete", "forms": "message, messages, messaging, messaged, messaged", "example": "Message your friend before you leave." },
+    { "word": "ring", "meaning": "to make a bell sound or call by phone", "japaneseMeaning": "鳴る／電話をかける", "synonyms": "call, sound", "antonyms": "be silent, stop", "forms": "ring, rings, ringing, rang, rung", "example": "The phone rings in the kitchen." },
+    { "word": "dial", "meaning": "to press numbers to make a phone call", "japaneseMeaning": "電話番号を押す", "synonyms": "call, press numbers", "antonyms": "hang up, stop", "forms": "dial, dials, dialing, dialed, dialed", "example": "Dial this number for help." },
+    { "word": "hang up", "meaning": "to end a phone call", "japaneseMeaning": "電話を切る", "synonyms": "end a call, stop", "antonyms": "call, answer", "forms": "hang up, hangs up, hanging up, hung up, hung up", "example": "Do not hang up yet." },
+    { "word": "greet", "meaning": "to say hello to someone", "japaneseMeaning": "挨拶する", "synonyms": "welcome, say hello", "antonyms": "ignore, leave", "forms": "greet, greets, greeting, greeted, greeted", "example": "Greet your teacher in the morning." },
+    { "word": "thank", "meaning": "to say you are grateful", "japaneseMeaning": "感謝する／礼を言う", "synonyms": "show thanks, praise", "antonyms": "blame, complain", "forms": "thank, thanks, thanking, thanked, thanked", "example": "Thank your friend for the gift." },
+    { "word": "apologize", "meaning": "to say sorry", "japaneseMeaning": "謝る", "synonyms": "say sorry, excuse yourself", "antonyms": "blame, accuse", "forms": "apologize, apologizes, apologizing, apologized, apologized", "example": "Apologize when you are late." }
+  ]
+}

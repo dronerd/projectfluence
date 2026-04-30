@@ -1,97 +1,17 @@
 {
   "lesson_id": "eiken-pre2-16",
   "title": "Lesson 16",
-  "paragraph": "Entertainment and leisure bring joy and creative expression. From music and theatre to museums and hobbies, people enjoy performances, exhibitions and quiet reading. Spending free time on arts and hobbies helps relax and inspires new ideas.",
+  "paragraph": "Number words from eleven to twenty.",
   "words": [
-    {
-      "word": "eleven",
-      "meaning": "the number eleven",
-      "japaneseMeaning": "eleven",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "eleven",
-      "example": "I have eleven pencils."
-    },
-    {
-      "word": "twelve",
-      "meaning": "the number twelve",
-      "japaneseMeaning": "twelve",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "twelve",
-      "example": "I have twelve pencils."
-    },
-    {
-      "word": "thirteen",
-      "meaning": "the number thirteen",
-      "japaneseMeaning": "thirteen",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "thirteen",
-      "example": "I have thirteen pencils."
-    },
-    {
-      "word": "fourteen",
-      "meaning": "the number fourteen",
-      "japaneseMeaning": "fourteen",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "fourteen",
-      "example": "I have fourteen pencils."
-    },
-    {
-      "word": "fifteen",
-      "meaning": "the number fifteen",
-      "japaneseMeaning": "fifteen",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "fifteen",
-      "example": "I have fifteen pencils."
-    },
-    {
-      "word": "sixteen",
-      "meaning": "the number sixteen",
-      "japaneseMeaning": "sixteen",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "sixteen",
-      "example": "I have sixteen pencils."
-    },
-    {
-      "word": "seventeen",
-      "meaning": "the number seventeen",
-      "japaneseMeaning": "seventeen",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "seventeen",
-      "example": "I have seventeen pencils."
-    },
-    {
-      "word": "eighteen",
-      "meaning": "the number eighteen",
-      "japaneseMeaning": "eighteen",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "eighteen",
-      "example": "I have eighteen pencils."
-    },
-    {
-      "word": "nineteen",
-      "meaning": "the number nineteen",
-      "japaneseMeaning": "nineteen",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "nineteen",
-      "example": "I have nineteen pencils."
-    },
-    {
-      "word": "twenty",
-      "meaning": "the number twenty",
-      "japaneseMeaning": "twenty",
-      "synonyms": "word, form",
-      "antonyms": "opposite, not",
-      "forms": "twenty",
-      "example": "I have twenty pencils."
-    }
+    { "word": "eleven", "meaning": "the number 11", "japaneseMeaning": "11、十一", "synonyms": "", "antonyms": "", "forms": "eleven", "example": "There are eleven students." },
+    { "word": "twelve", "meaning": "the number 12", "japaneseMeaning": "12、十二", "synonyms": "", "antonyms": "", "forms": "twelve", "example": "The clock says twelve." },
+    { "word": "thirteen", "meaning": "the number 13", "japaneseMeaning": "13、十三", "synonyms": "", "antonyms": "", "forms": "thirteen", "example": "She is thirteen years old." },
+    { "word": "fourteen", "meaning": "the number 14", "japaneseMeaning": "14、十四", "synonyms": "", "antonyms": "", "forms": "fourteen", "example": "Fourteen people came to the party." },
+    { "word": "fifteen", "meaning": "the number 15", "japaneseMeaning": "15、十五", "synonyms": "", "antonyms": "", "forms": "fifteen", "example": "The bus leaves at fifteen minutes past eight." },
+    { "word": "sixteen", "meaning": "the number 16", "japaneseMeaning": "16、十六", "synonyms": "", "antonyms": "", "forms": "sixteen", "example": "I need sixteen cards." },
+    { "word": "seventeen", "meaning": "the number 17", "japaneseMeaning": "17、十七", "synonyms": "", "antonyms": "", "forms": "seventeen", "example": "Seventeen books are on the shelf." },
+    { "word": "eighteen", "meaning": "the number 18", "japaneseMeaning": "18、十八", "synonyms": "", "antonyms": "", "forms": "eighteen", "example": "My brother is eighteen." },
+    { "word": "nineteen", "meaning": "the number 19", "japaneseMeaning": "19、十九", "synonyms": "", "antonyms": "", "forms": "nineteen", "example": "Nineteen students joined the club." },
+    { "word": "twenty", "meaning": "the number 20", "japaneseMeaning": "20、二十", "synonyms": "", "antonyms": "", "forms": "twenty", "example": "The class has twenty desks." }
   ]
 }

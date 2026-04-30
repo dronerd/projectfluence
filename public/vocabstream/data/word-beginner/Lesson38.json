@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-38",
-  "title": "Lesson 13",
-  "paragraph": "Verbs useful for thought, movement, training, visits, and waiting—common in everyday planning and communication.",
+  "title": "Lesson 38",
+  "paragraph": "This lesson practices useful nouns for health and the body.",
   "words": [
-    { "word": "thank", "meaning": "to express gratitude", "japaneseMeaning": "感謝する", "synonyms": "appreciate, acknowledge", "antonyms": "blame, criticize", "example": "Thank you for your help." },
-    { "word": "think", "meaning": "to use the mind to form ideas or judgments", "japaneseMeaning": "考える", "synonyms": "consider, ponder", "antonyms": "ignore, forget", "example": "I think it's a good idea." },
-    { "word": "throw", "meaning": "to propel something with force through the air", "japaneseMeaning": "投げる", "synonyms": "toss, hurl", "antonyms": "catch, hold", "example": "Throw the ball to me." },
-    { "word": "touch", "meaning": "to make physical contact with something", "japaneseMeaning": "触る", "synonyms": "feel, handle", "antonyms": "avoid, ignore", "example": "Don't touch the wet paint." },
-    { "word": "train", "meaning": "to teach a skill or practice to improve", "japaneseMeaning": "訓練する／鍛える", "synonyms": "coach, educate", "antonyms": "neglect, spoil", "example": "They train every morning." },
-    { "word": "travel", "meaning": "to go from one place to another", "japaneseMeaning": "旅行する／移動する", "synonyms": "journey, voyage", "antonyms": "stay, remain", "example": "We travel abroad once a year." },
-    { "word": "try", "meaning": "to attempt to do something", "japaneseMeaning": "試す／努力する", "synonyms": "attempt, endeavor", "antonyms": "give up, quit", "example": "Try your best on the exam." },
-    { "word": "turn", "meaning": "to change direction or to rotate", "japaneseMeaning": "回す／曲がる", "synonyms": "rotate, twist", "antonyms": "remain, stay", "example": "Turn left at the corner." },
-    { "word": "understand", "meaning": "to grasp the meaning of something", "japaneseMeaning": "理解する", "synonyms": "comprehend, grasp", "antonyms": "misunderstand, confuse", "example": "I understand the problem now." },
-    { "word": "use", "meaning": "to employ something for a purpose", "japaneseMeaning": "使う", "synonyms": "utilize, employ", "antonyms": "abstain, avoid", "example": "Use this tool carefully." },
-    { "word": "visit", "meaning": "to go to see a place or person", "japaneseMeaning": "訪問する／訪れる", "synonyms": "call on, drop by", "antonyms": "leave, avoid", "example": "We will visit the museum tomorrow." },
-    { "word": "wait", "meaning": "to stay in expectation of something", "japaneseMeaning": "待つ", "synonyms": "remain, await", "antonyms": "rush, hurry", "example": "Please wait here a moment." }
+    { "word": "headache", "meaning": "a pain in your head", "japaneseMeaning": "頭痛", "synonyms": "head pain, pain", "antonyms": "comfort", "forms": "headache, headaches", "example": "I have a headache today." },
+    { "word": "stomachache", "meaning": "a pain in your stomach", "japaneseMeaning": "腹痛", "synonyms": "stomach pain, pain", "antonyms": "comfort", "forms": "stomachache, stomachaches", "example": "She has a stomachache after lunch." },
+    { "word": "fever", "meaning": "a body temperature that is too high", "japaneseMeaning": "熱", "synonyms": "high temperature, illness", "antonyms": "normal temperature", "forms": "fever, fevers", "example": "He stays home because he has a fever." },
+    { "word": "injury", "meaning": "a hurt place on your body", "japaneseMeaning": "けが", "synonyms": "hurt, wound", "antonyms": "health, safety", "forms": "injury, injuries", "example": "He has a small injury on his knee." },
+    { "word": "toothache", "meaning": "a pain in your tooth", "japaneseMeaning": "歯痛", "synonyms": "tooth pain, pain", "antonyms": "comfort", "forms": "toothache, toothaches", "example": "I go to the dentist for my toothache." },
+    { "word": "plaster", "meaning": "a small cover for a cut on your skin", "japaneseMeaning": "ばんそうこう", "synonyms": "bandage, cover", "antonyms": "none", "forms": "plaster, plasters", "example": "Put a plaster on the cut." },
+    { "word": "dentist", "meaning": "a person who checks and fixes teeth", "japaneseMeaning": "歯医者", "synonyms": "tooth doctor, doctor", "antonyms": "patient", "forms": "dentist, dentists", "example": "The dentist checks my tooth." },
+    { "word": "pharmacist", "meaning": "a person who prepares and sells medicine", "japaneseMeaning": "薬剤師", "synonyms": "medicine worker, helper", "antonyms": "patient", "forms": "pharmacist, pharmacists", "example": "The pharmacist gives me medicine." },
+    { "word": "patient", "meaning": "a sick person who gets care", "japaneseMeaning": "患者", "synonyms": "sick person, visitor", "antonyms": "doctor, nurse", "forms": "patient, patients", "example": "The patient waits in the clinic." },
+    { "word": "clinic", "meaning": "a small place where people see a doctor", "japaneseMeaning": "診療所／クリニック", "synonyms": "doctor's office, health center", "antonyms": "home", "forms": "clinic, clinics", "example": "There is a clinic near the station." }
   ]
 }

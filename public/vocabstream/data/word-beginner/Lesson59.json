@@ -1,104 +1,17 @@
-  {
-    "lesson_id": "eiken-pre2-59",
-    "title": "Lesson 59",
-    "paragraph": "More descriptive adjectives — nationality, freshness, helpfulness and size among them.",
-    "words": [
-      {
-        "word": "foreign",
-        "meaning": "from or relating to a country that is not one's own",
-        "japaneseMeaning": "外国の／海外の",
-        "synonyms": "overseas, international",
-        "antonyms": "domestic, local",
-        "example": "She enjoys reading foreign literature."
-      },
-      {
-        "word": "fresh",
-        "meaning": "recently made or obtained; new and not stale",
-        "japaneseMeaning": "新鮮な",
-        "synonyms": "new, crisp",
-        "antonyms": "stale, old",
-        "example": "We bought fresh bread from the bakery."
-      },
-      {
-        "word": "friendly",
-        "meaning": "kind and pleasant to others",
-        "japaneseMeaning": "友好的な／親しみやすい",
-        "synonyms": "amiable, cordial",
-        "antonyms": "hostile, unfriendly",
-        "example": "The staff at the hotel were very friendly."
-      },
-      {
-        "word": "full",
-        "meaning": "containing as much as possible; not empty",
-        "japaneseMeaning": "満杯の／いっぱいの",
-        "synonyms": "packed, complete",
-        "antonyms": "empty, vacant",
-        "example": "The bus was full, so we waited for the next one."
-      },
-      {
-        "word": "global",
-        "meaning": "relating to the whole world; worldwide",
-        "japaneseMeaning": "世界的な／グローバルな",
-        "synonyms": "worldwide, international",
-        "antonyms": "local, regional",
-        "example": "The company has a global presence in many countries."
-      },
-      {
-        "word": "heavy",
-        "meaning": "weighing a lot; difficult to lift or move",
-        "japaneseMeaning": "重い",
-        "synonyms": "weighty, burdensome",
-        "antonyms": "light, lightweight",
-        "example": "The package is too heavy to carry alone."
-      },
-      {
-        "word": "helpful",
-        "meaning": "providing assistance or useful information",
-        "japaneseMeaning": "役に立つ／助けになる",
-        "synonyms": "useful, beneficial",
-        "antonyms": "unhelpful, useless",
-        "example": "Her advice was very helpful for my project."
-      },
-      {
-        "word": "hot",
-        "meaning": "having a high temperature; very warm",
-        "japaneseMeaning": "熱い／暑い",
-        "synonyms": "warm, scorching",
-        "antonyms": "cold, cool",
-        "example": "Be careful — the soup is hot."
-      },
-      {
-        "word": "huge",
-        "meaning": "extremely large in size or amount",
-        "japaneseMeaning": "巨大な",
-        "synonyms": "enormous, massive",
-        "antonyms": "tiny, small",
-        "example": "They moved into a huge new office."
-      },
-      {
-        "word": "important",
-        "meaning": "of great significance or value; essential",
-        "japaneseMeaning": "重要な",
-        "synonyms": "significant, crucial",
-        "antonyms": "trivial, unimportant",
-        "example": "It's important to read the instructions carefully."
-      },
-      {
-        "word": "impossible",
-        "meaning": "not able to occur, exist, or be done",
-        "japaneseMeaning": "不可能な",
-        "synonyms": "unachievable, impractical",
-        "antonyms": "possible, feasible",
-        "example": "It seemed impossible to finish on time."
-      },
-      {
-        "word": "interesting",
-        "meaning": "arousing curiosity or holding attention",
-        "japaneseMeaning": "興味深い／面白い",
-        "synonyms": "engaging, fascinating",
-        "antonyms": "dull, boring",
-        "example": "The lecture was interesting and informative."
-      }
-    ]
-  }
-
+{
+  "lesson_id": "eiken-pre2-59",
+  "title": "Lesson 59",
+  "paragraph": "This lesson practices useful verbs for going around town.",
+  "words": [
+    { "word": "turn", "meaning": "to change direction", "japaneseMeaning": "曲がる／向きを変える", "synonyms": "change direction, move", "antonyms": "go straight, stop", "forms": "turn, turns, turning, turned, turned", "example": "Turn left at the corner." },
+    { "word": "pass", "meaning": "to go by someone or something", "japaneseMeaning": "通り過ぎる", "synonyms": "go by, move past", "antonyms": "stop, stay", "forms": "pass, passes, passing, passed, passed", "example": "Pass the bank and turn right." },
+    { "word": "park", "meaning": "to leave a car in a place", "japaneseMeaning": "駐車する", "synonyms": "stop, leave", "antonyms": "drive, move", "forms": "park, parks, parking, parked, parked", "example": "Park the car near the shop." },
+    { "word": "wait", "meaning": "to stay until something happens", "japaneseMeaning": "待つ", "synonyms": "stay, pause", "antonyms": "go, leave", "forms": "wait, waits, waiting, waited, waited", "example": "Wait at the bus stop." },
+    { "word": "hurry", "meaning": "to move or do something quickly", "japaneseMeaning": "急ぐ", "synonyms": "rush, go fast", "antonyms": "slow down, wait", "forms": "hurry, hurries, hurrying, hurried, hurried", "example": "Hurry, or we will miss the train." },
+    { "word": "visit", "meaning": "to go to see a person or place", "japaneseMeaning": "訪れる／訪問する", "synonyms": "go to, see", "antonyms": "leave, avoid", "forms": "visit, visits, visiting, visited, visited", "example": "We visit the museum on Sunday." },
+    { "word": "lead", "meaning": "to show someone where to go", "japaneseMeaning": "導く／案内する", "synonyms": "guide, show", "antonyms": "follow, lose", "forms": "lead, leads, leading, led, led", "example": "My friend leads us to the station." },
+    { "word": "approach", "meaning": "to come near a place or person", "japaneseMeaning": "近づく", "synonyms": "come near, move toward", "antonyms": "leave, move away", "forms": "approach, approaches, approaching, approached, approached", "example": "Approach the ticket gate slowly." },
+    { "word": "depart", "meaning": "to leave a place", "japaneseMeaning": "出発する", "synonyms": "leave, go out", "antonyms": "arrive, come in", "forms": "depart, departs, departing, departed, departed", "example": "Depart the building after the show." },
+    { "word": "follow", "meaning": "to go after someone or something", "japaneseMeaning": "ついて行く", "synonyms": "go after, come after", "antonyms": "lead, leave", "forms": "follow, follows, following, followed, followed", "example": "Follow the yellow line to the platform." }
+  ]
+}

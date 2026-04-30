@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-99",
+  "title": "Lesson 99",
+  "paragraph": "This lesson practices useful verbs for safety and emergencies.",
+  "words": [
+    { "word": "warn", "meaning": "to tell someone about danger", "japaneseMeaning": "警告する", "synonyms": "tell, alert", "antonyms": "hide, ignore", "forms": "warn, warns, warning, warned, warned", "example": "Warn your friend about the wet floor." },
+    { "word": "rescue", "meaning": "to save someone from danger", "japaneseMeaning": "救助する", "synonyms": "save, help", "antonyms": "leave, hurt", "forms": "rescue, rescues, rescuing, rescued, rescued", "example": "Firefighters rescue people from the building." },
+    { "word": "escape", "meaning": "to get away from danger", "japaneseMeaning": "逃げる", "synonyms": "get away, run away", "antonyms": "stay, remain", "forms": "escape, escapes, escaping, escaped, escaped", "example": "Escape through the back door." },
+    { "word": "protect", "meaning": "to keep someone or something safe", "japaneseMeaning": "守る／保護する", "synonyms": "guard, save", "antonyms": "hurt, attack", "forms": "protect, protects, protecting, protected, protected", "example": "A helmet protects your head." },
+    { "word": "guard", "meaning": "to watch and keep safe", "japaneseMeaning": "守る／警備する", "synonyms": "protect, watch", "antonyms": "leave, ignore", "forms": "guard, guards, guarding, guarded, guarded", "example": "The dog guards the house." },
+    { "word": "obey", "meaning": "to do what a rule or person says", "japaneseMeaning": "従う", "synonyms": "follow, listen to", "antonyms": "disobey, ignore", "forms": "obey, obeys, obeying, obeyed, obeyed", "example": "Obey the traffic rules." },
+    { "word": "disobey", "meaning": "to not do what a rule or person says", "japaneseMeaning": "従わない", "synonyms": "break rules, ignore", "antonyms": "obey, follow", "forms": "disobey, disobeys, disobeying, disobeyed, disobeyed", "example": "Do not disobey the safety rules." },
+    { "word": "signal", "meaning": "to show a message with a sign, light, or hand", "japaneseMeaning": "合図する", "synonyms": "show, sign", "antonyms": "hide, stop", "forms": "signal, signals, signaling, signaled, signaled", "example": "Signal before you turn right." },
+    { "word": "report", "meaning": "to tell someone about a problem or event", "japaneseMeaning": "報告する", "synonyms": "tell, inform", "antonyms": "hide, ignore", "forms": "report, reports, reporting, reported, reported", "example": "Report the lost bag to the station staff." },
+    { "word": "evacuate", "meaning": "to leave a dangerous place", "japaneseMeaning": "避難する", "synonyms": "leave, escape", "antonyms": "stay, enter", "forms": "evacuate, evacuates, evacuating, evacuated, evacuated", "example": "Evacuate the building when the alarm rings." }
+  ]
+}

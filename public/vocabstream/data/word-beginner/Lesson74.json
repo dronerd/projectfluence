@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-74",
+  "title": "Lesson 74",
+  "paragraph": "This lesson practices useful nouns for travel and town places.",
+  "words": [
+    { "word": "port", "meaning": "a place where ships stop", "japaneseMeaning": "港", "synonyms": "harbor, ship stop", "antonyms": "inland place", "forms": "port, ports", "example": "The ship leaves the port." },
+    { "word": "harbor", "meaning": "a safe place for boats near land", "japaneseMeaning": "港", "synonyms": "port, boat place", "antonyms": "open sea", "forms": "harbor, harbors", "example": "Small boats are in the harbor." },
+    { "word": "church", "meaning": "a building where Christians pray", "japaneseMeaning": "教会", "synonyms": "prayer building, chapel", "antonyms": "none", "forms": "church, churches", "example": "The church is old and white." },
+    { "word": "temple", "meaning": "a building where people pray", "japaneseMeaning": "寺／神殿", "synonyms": "prayer place, shrine", "antonyms": "none", "forms": "temple, temples", "example": "We visited a temple in Nara." },
+    { "word": "village", "meaning": "a very small town", "japaneseMeaning": "村", "synonyms": "small town, community", "antonyms": "city", "forms": "village, villages", "example": "My grandparents live in a village." },
+    { "word": "subway", "meaning": "a train that runs under a city", "japaneseMeaning": "地下鉄", "synonyms": "underground train, metro", "antonyms": "bus", "forms": "subway, subways", "example": "We take the subway to work." },
+    { "word": "platform", "meaning": "the place where people wait for a train", "japaneseMeaning": "ホーム", "synonyms": "train area, waiting place", "antonyms": "train", "forms": "platform, platforms", "example": "Wait on platform three." },
+    { "word": "ferry", "meaning": "a boat that carries people or cars", "japaneseMeaning": "フェリー", "synonyms": "boat, ship", "antonyms": "train", "forms": "ferry, ferries", "example": "The ferry crosses the river." },
+    { "word": "luggage", "meaning": "bags used for travel", "japaneseMeaning": "荷物", "synonyms": "bags, baggage", "antonyms": "none", "forms": "luggage", "example": "My luggage is under the seat." },
+    { "word": "schedule", "meaning": "a list of times for plans or travel", "japaneseMeaning": "予定表／時刻表", "synonyms": "timetable, plan", "antonyms": "no plan", "forms": "schedule, schedules", "example": "Check the train schedule." }
+  ]
+}

@@ -1,137 +1,17 @@
 {
   "lesson_id": "eiken-pre2-19",
   "title": "Lesson 19",
-  "paragraph": "Nature, animals and weather describe the world around us. Knowing words for animals, plants, climate and natural events helps us talk about the environment, seasons and conservation efforts to protect wildlife and habitats.",
+  "paragraph": "Pronouns for people, animals, and things.",
   "words": [
-    {
-      "word": "my",
-      "meaning": "belonging to me",
-      "japaneseMeaning": "私の",
-      "synonyms": [
-        "mine"
-      ],
-      "antonyms": [
-        "your"
-      ],
-      "forms": "my, mine",
-      "example": "My bag is blue."
-    },
-    {
-      "word": "your",
-      "meaning": "belonging to you",
-      "japaneseMeaning": "あなたの",
-      "synonyms": [
-        "yours"
-      ],
-      "antonyms": [
-        "my"
-      ],
-      "forms": "your, yours",
-      "example": "Your pencil is here."
-    },
-    {
-      "word": "his",
-      "meaning": "belonging to him",
-      "japaneseMeaning": "彼の",
-      "synonyms": [
-        "his own"
-      ],
-      "antonyms": [
-        "hers"
-      ],
-      "forms": "his",
-      "example": "His brother is tall."
-    },
-    {
-      "word": "her",
-      "meaning": "belonging to her",
-      "japaneseMeaning": "彼女の",
-      "synonyms": [
-        "hers"
-      ],
-      "antonyms": [
-        "his"
-      ],
-      "forms": "her, hers",
-      "example": "Her book is on the desk."
-    },
-    {
-      "word": "our",
-      "meaning": "belonging to us",
-      "japaneseMeaning": "私たちの",
-      "synonyms": [
-        "ours"
-      ],
-      "antonyms": [
-        "their"
-      ],
-      "forms": "our, ours",
-      "example": "Our classroom is clean."
-    },
-    {
-      "word": "their",
-      "meaning": "belonging to them",
-      "japaneseMeaning": "彼らの",
-      "synonyms": [
-        "theirs"
-      ],
-      "antonyms": [
-        "our"
-      ],
-      "forms": "their, theirs",
-      "example": "Their house is near school."
-    },
-    {
-      "word": "its",
-      "meaning": "belonging to an animal or thing",
-      "japaneseMeaning": "それの",
-      "synonyms": [
-        "its own"
-      ],
-      "antonyms": [
-        "not its"
-      ],
-      "forms": "its",
-      "example": "The cat is in its bed."
-    },
-    {
-      "word": "me",
-      "meaning": "the person speaking, as an object",
-      "japaneseMeaning": "私を",
-      "synonyms": [
-        "myself"
-      ],
-      "antonyms": [
-        "you"
-      ],
-      "forms": "me",
-      "example": "Please help me."
-    },
-    {
-      "word": "you",
-      "meaning": "the person or people I speak to",
-      "japaneseMeaning": "あなたを",
-      "synonyms": [
-        "yourself"
-      ],
-      "antonyms": [
-        "me"
-      ],
-      "forms": "you, your, yours",
-      "example": "I can see you."
-    },
-    {
-      "word": "them",
-      "meaning": "those people or things, as an object",
-      "japaneseMeaning": "彼らを",
-      "synonyms": [
-        "those people"
-      ],
-      "antonyms": [
-        "us"
-      ],
-      "forms": "them, their, theirs",
-      "example": "I gave them cookies."
-    }
+    { "word": "I", "meaning": "the person speaking", "japaneseMeaning": "私は、私が", "synonyms": "me", "antonyms": "you", "forms": "I, me, my, mine", "example": "I like English." },
+    { "word": "you", "meaning": "the person or people I speak to", "japaneseMeaning": "あなたは、あなたを", "synonyms": "", "antonyms": "me", "forms": "you, your, yours", "example": "You are my friend." },
+    { "word": "he", "meaning": "a boy or man already named", "japaneseMeaning": "彼は、彼が", "synonyms": "him", "antonyms": "she", "forms": "he, him, his", "example": "He is my brother." },
+    { "word": "she", "meaning": "a girl or woman already named", "japaneseMeaning": "彼女は、彼女が", "synonyms": "her", "antonyms": "he", "forms": "she, her, hers", "example": "She is my sister." },
+    { "word": "it", "meaning": "an animal or thing already named", "japaneseMeaning": "それは、それを", "synonyms": "", "antonyms": "", "forms": "it, its", "example": "It is my book." },
+    { "word": "we", "meaning": "the speaker and other people", "japaneseMeaning": "私たちは", "synonyms": "us", "antonyms": "they", "forms": "we, us, our, ours", "example": "We play soccer after school." },
+    { "word": "they", "meaning": "two or more people or things", "japaneseMeaning": "彼らは、それらは", "synonyms": "them", "antonyms": "we", "forms": "they, them, their, theirs", "example": "They are in the classroom." },
+    { "word": "me", "meaning": "the person speaking, as an object", "japaneseMeaning": "私を、私に", "synonyms": "I", "antonyms": "you", "forms": "me, my, mine", "example": "Please help me." },
+    { "word": "him", "meaning": "a boy or man, as an object", "japaneseMeaning": "彼を、彼に", "synonyms": "he", "antonyms": "her", "forms": "him, his", "example": "I gave him a pencil." },
+    { "word": "her", "meaning": "a girl or woman, as an object", "japaneseMeaning": "彼女を、彼女に", "synonyms": "she", "antonyms": "him", "forms": "her, hers", "example": "I called her yesterday." }
   ]
 }

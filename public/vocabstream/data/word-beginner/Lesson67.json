@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-67",
+  "title": "Lesson 67",
+  "paragraph": "This lesson practices useful verbs for eating and cooking.",
+  "words": [
+    { "word": "peel", "meaning": "to take the skin off fruit or vegetables", "japaneseMeaning": "皮をむく", "synonyms": "skin, remove skin", "antonyms": "cover, wrap", "forms": "peel, peels, peeling, peeled, peeled", "example": "Peel the banana before you eat it." },
+    { "word": "chop", "meaning": "to cut food into pieces", "japaneseMeaning": "刻む", "synonyms": "cut, slice", "antonyms": "join, mix", "forms": "chop, chops, chopping, chopped, chopped", "example": "Chop the carrots for the soup." },
+    { "word": "spread", "meaning": "to put a soft food over bread or another food", "japaneseMeaning": "塗る／広げる", "synonyms": "put on, cover", "antonyms": "remove, gather", "forms": "spread, spreads, spreading, spread, spread", "example": "Spread butter on the toast." },
+    { "word": "dish", "meaning": "to put food onto plates", "japaneseMeaning": "盛り付ける", "synonyms": "serve, put out", "antonyms": "take away, clear", "forms": "dish, dishes, dishing, dished, dished", "example": "Dish the rice onto the plates." },
+    { "word": "split", "meaning": "to divide food or something else into parts", "japaneseMeaning": "分ける", "synonyms": "share, divide", "antonyms": "keep, join", "forms": "split, splits, splitting, split, split", "example": "Split the cookies with your brother." },
+    { "word": "swallow", "meaning": "to make food or drink go down your throat", "japaneseMeaning": "飲み込む", "synonyms": "gulp, take in", "antonyms": "spit out, cough", "forms": "swallow, swallows, swallowing, swallowed, swallowed", "example": "Swallow the medicine with water." },
+    { "word": "chew", "meaning": "to break food with your teeth", "japaneseMeaning": "噛む", "synonyms": "bite, eat", "antonyms": "swallow, spit", "forms": "chew, chews, chewing, chewed, chewed", "example": "Chew your food slowly." },
+    { "word": "sip", "meaning": "to drink a little at a time", "japaneseMeaning": "少しずつ飲む", "synonyms": "drink slowly, taste", "antonyms": "gulp, pour", "forms": "sip, sips, sipping, sipped, sipped", "example": "Sip the hot tea carefully." },
+    { "word": "heat", "meaning": "to make something hot", "japaneseMeaning": "温める／熱する", "synonyms": "warm, cook", "antonyms": "cool, freeze", "forms": "heat, heats, heating, heated, heated", "example": "Heat the soup before dinner." },
+    { "word": "chill", "meaning": "to make something cold", "japaneseMeaning": "冷やす", "synonyms": "cool, make cold", "antonyms": "heat, warm", "forms": "chill, chills, chilling, chilled, chilled", "example": "Chill the juice before you drink it." }
+  ]
+}

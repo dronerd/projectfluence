@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-35",
-  "title": "Lesson 10",
-  "paragraph": "Basic communicative and reporting verbs used in conversations, news, and messages.",
+  "title": "Lesson 35",
+  "paragraph": "This lesson practices simple verbs for talking and body actions.",
   "words": [
-    { "word": "repeat", "meaning": "to say or do something again", "japaneseMeaning": "繰り返す", "synonyms": "restate, reiterate", "antonyms": "stop, cease", "example": "Please repeat the question." },
-    { "word": "reply", "meaning": "to answer in words or writing", "japaneseMeaning": "返信する／答える", "synonyms": "respond, answer", "antonyms": "ignore, silence", "example": "He replied to the email quickly." },
-    { "word": "report", "meaning": "to give information about something observed or investigated", "japaneseMeaning": "報告する", "synonyms": "inform, announce", "antonyms": "conceal, hide", "example": "She reported the incident to the manager." },
-    { "word": "return", "meaning": "to come or go back to a place", "japaneseMeaning": "戻る／返す", "synonyms": "go back, come back", "antonyms": "leave, depart", "example": "He returned the book to the library." },
-    { "word": "ride", "meaning": "to sit on and travel by a vehicle or animal", "japaneseMeaning": "乗る", "synonyms": "travel, mount", "antonyms": "walk, dismount", "example": "We rode the train to the city." },
-    { "word": "ring", "meaning": "to make a bell-like sound or to call by phone", "japaneseMeaning": "鳴る／電話をかける", "synonyms": "call, chime", "antonyms": "silence, mute", "example": "The phone rang during dinner." },
-    { "word": "rise", "meaning": "to move upward or increase", "japaneseMeaning": "上がる／昇る", "synonyms": "ascend, increase", "antonyms": "fall, decrease", "example": "Prices are expected to rise." },
-    { "word": "save", "meaning": "to keep something for future use or to rescue", "japaneseMeaning": "保存する／救う", "synonyms": "store, rescue", "antonyms": "waste, lose", "example": "Save your work often." },
-    { "word": "search", "meaning": "to look carefully for something", "japaneseMeaning": "捜す／検索する", "synonyms": "seek, look for", "antonyms": "ignore, overlook", "example": "Search the site for the document." },
-    { "word": "seem", "meaning": "to give the impression of being", "japaneseMeaning": "〜のように見える", "synonyms": "appear, look", "antonyms": "be, prove", "example": "It seems likely to rain." },
-    { "word": "sell", "meaning": "to give something in exchange for money", "japaneseMeaning": "売る", "synonyms": "vend, trade", "antonyms": "buy, purchase", "example": "They sell fresh bread every morning." },
-    { "word": "send", "meaning": "to cause something to go to a destination", "japaneseMeaning": "送る", "synonyms": "dispatch, transmit", "antonyms": "receive, keep", "example": "Please send the report by Friday." }
+    { "word": "share", "meaning": "to use or have something with others", "japaneseMeaning": "共有する／分け合う", "synonyms": "give, use together", "antonyms": "keep, take", "forms": "share, shares, sharing, shared, shared", "example": "Please share the crayons with your sister." },
+    { "word": "shout", "meaning": "to speak very loudly", "japaneseMeaning": "叫ぶ／大声で言う", "synonyms": "yell, call", "antonyms": "whisper, speak softly", "forms": "shout, shouts, shouting, shouted, shouted", "example": "Do not shout in the library." },
+    { "word": "show", "meaning": "to let someone see something", "japaneseMeaning": "見せる", "synonyms": "display, present", "antonyms": "hide, cover", "forms": "show, shows, showing, showed, shown", "example": "Show me your homework, please." },
+    { "word": "shut", "meaning": "to close something", "japaneseMeaning": "閉める", "synonyms": "close, lock", "antonyms": "open, start", "forms": "shut, shuts, shutting, shut, shut", "example": "Shut the window before you sleep." },
+    { "word": "sign", "meaning": "to write your name on something", "japaneseMeaning": "署名する", "synonyms": "write, mark", "antonyms": "erase, remove", "forms": "sign, signs, signing, signed, signed", "example": "Please sign your name here." },
+    { "word": "sing", "meaning": "to make music with your voice", "japaneseMeaning": "歌う", "synonyms": "chant, hum", "antonyms": "speak, be quiet", "forms": "sing, sings, singing, sang, sung", "example": "We sing a song in music class." },
+    { "word": "sit", "meaning": "to rest with your body on a chair or floor", "japaneseMeaning": "座る", "synonyms": "sit down, rest", "antonyms": "stand, rise", "forms": "sit, sits, sitting, sat, sat", "example": "Please sit next to me." },
+    { "word": "sleep", "meaning": "to rest with your eyes closed at night", "japaneseMeaning": "眠る", "synonyms": "rest, nap", "antonyms": "wake, get up", "forms": "sleep, sleeps, sleeping, slept, slept", "example": "I sleep for eight hours every night." },
+    { "word": "smile", "meaning": "to make a happy face", "japaneseMeaning": "ほほえむ", "synonyms": "grin, look happy", "antonyms": "frown, cry", "forms": "smile, smiles, smiling, smiled, smiled", "example": "She smiles when she sees her friend." },
+    { "word": "spend", "meaning": "to use money or time", "japaneseMeaning": "使う／過ごす", "synonyms": "use, pay", "antonyms": "save, keep", "forms": "spend, spends, spending, spent, spent", "example": "I spend one hour on homework." }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-77",
+  "title": "Lesson 77",
+  "paragraph": "This lesson practices useful adverbs for travel and directions.",
+  "words": [
+    { "word": "directly", "meaning": "straight to a place", "japaneseMeaning": "直接に／まっすぐに", "synonyms": "straight, right away", "antonyms": "indirectly, around", "forms": "directly, more directly, most directly", "example": "Go directly to the ticket gate." },
+    { "word": "indirectly", "meaning": "not in a straight or direct way", "japaneseMeaning": "間接的に", "synonyms": "not directly, around", "antonyms": "directly, straight", "forms": "indirectly, more indirectly, most indirectly", "example": "This train goes indirectly to the airport." },
+    { "word": "north", "meaning": "toward the north", "japaneseMeaning": "北へ／北に", "synonyms": "northward, up", "antonyms": "south", "forms": "north", "example": "Drive north for ten minutes." },
+    { "word": "south", "meaning": "toward the south", "japaneseMeaning": "南へ／南に", "synonyms": "southward, down", "antonyms": "north", "forms": "south", "example": "The bus goes south after the bridge." },
+    { "word": "east", "meaning": "toward the east", "japaneseMeaning": "東へ／東に", "synonyms": "eastward, right on a map", "antonyms": "west", "forms": "east", "example": "Walk east from the station." },
+    { "word": "west", "meaning": "toward the west", "japaneseMeaning": "西へ／西に", "synonyms": "westward, left on a map", "antonyms": "east", "forms": "west", "example": "The river runs west." },
+    { "word": "uphill", "meaning": "up a hill", "japaneseMeaning": "坂を上って", "synonyms": "up, higher", "antonyms": "downhill, down", "forms": "uphill", "example": "Walk uphill to the temple." },
+    { "word": "downhill", "meaning": "down a hill", "japaneseMeaning": "坂を下って", "synonyms": "down, lower", "antonyms": "uphill, up", "forms": "downhill", "example": "Ride your bike downhill slowly." },
+    { "word": "nearby", "meaning": "close to this place", "japaneseMeaning": "近くに", "synonyms": "near, close", "antonyms": "far away, distant", "forms": "nearby", "example": "There is a cafe nearby." },
+    { "word": "overnight", "meaning": "for one night", "japaneseMeaning": "一晩中／一泊で", "synonyms": "for one night, all night", "antonyms": "daily, briefly", "forms": "overnight", "example": "We stayed overnight at the hotel." }
+  ]
+}

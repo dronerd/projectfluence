@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-94",
+  "title": "Lesson 94",
+  "paragraph": "This lesson practices useful nouns for communication and mail.",
+  "words": [
+    { "word": "letter", "meaning": "a written message sent to someone", "japaneseMeaning": "手紙", "synonyms": "message, note", "antonyms": "call", "forms": "letter, letters", "example": "I write a letter to my grandmother." },
+    { "word": "envelope", "meaning": "a paper cover for a letter", "japaneseMeaning": "封筒", "synonyms": "paper cover, cover", "antonyms": "letter", "forms": "envelope, envelopes", "example": "Put the letter in the envelope." },
+    { "word": "stamp", "meaning": "a small paper put on a letter before mailing it", "japaneseMeaning": "切手", "synonyms": "mail sticker, post mark", "antonyms": "none", "forms": "stamp, stamps", "example": "This letter needs a stamp." },
+    { "word": "mailbox", "meaning": "a box for letters and mail", "japaneseMeaning": "郵便受け／ポスト", "synonyms": "post box, letter box", "antonyms": "none", "forms": "mailbox, mailboxes", "example": "The mailbox is near the door." },
+    { "word": "postcard", "meaning": "a card sent by mail, often with a picture", "japaneseMeaning": "はがき", "synonyms": "card, mail card", "antonyms": "letter", "forms": "postcard, postcards", "example": "She sends a postcard from Kyoto." },
+    { "word": "address", "meaning": "the place where someone lives or works", "japaneseMeaning": "住所", "synonyms": "location, place", "antonyms": "none", "forms": "address, addresses", "example": "Write your address clearly." },
+    { "word": "package", "meaning": "a box or bag sent to someone", "japaneseMeaning": "小包／荷物", "synonyms": "parcel, box", "antonyms": "letter", "forms": "package, packages", "example": "A package arrived this morning." },
+    { "word": "call", "meaning": "a talk by phone", "japaneseMeaning": "電話／通話", "synonyms": "phone call, talk", "antonyms": "message", "forms": "call, calls", "example": "I got a call from my friend." },
+    { "word": "voicemail", "meaning": "a spoken message saved on a phone", "japaneseMeaning": "留守番電話のメッセージ", "synonyms": "voice message, phone message", "antonyms": "live call", "forms": "voicemail, voicemails", "example": "Leave a voicemail after the sound." },
+    { "word": "phone number", "meaning": "numbers used to call someone", "japaneseMeaning": "電話番号", "synonyms": "number, contact number", "antonyms": "none", "forms": "phone number, phone numbers", "example": "Write your phone number on the form." }
+  ]
+}

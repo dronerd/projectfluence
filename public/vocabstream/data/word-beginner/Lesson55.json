@@ -1,105 +1,17 @@
-
-  {
-    "lesson_id": "eiken-pre2-55",
-    "title": "Lesson 55",
-    "paragraph": "Feelings and emotional reactions — useful words to describe moods and responses.",
-    "words": [
-      {
-        "word": "pleased",
-        "meaning": "feeling happy or satisfied about something",
-        "japaneseMeaning": "満足している／嬉しい",
-        "synonyms": "satisfied, happy",
-        "antonyms": "disappointed, upset",
-        "example": "She was pleased with her exam results."
-      },
-      {
-        "word": "proud",
-        "meaning": "feeling deep pleasure or satisfaction from achievements",
-        "japaneseMeaning": "誇りに思う／誇らしい",
-        "synonyms": "pleased, honored",
-        "antonyms": "ashamed, embarrassed",
-        "example": "His parents were proud of his success."
-      },
-      {
-        "word": "relaxed",
-        "meaning": "free from tension and anxiety; calm",
-        "japaneseMeaning": "リラックスした／落ち着いた",
-        "synonyms": "calm, at ease",
-        "antonyms": "tense, nervous",
-        "example": "She felt relaxed after the massage."
-      },
-      {
-        "word": "sad",
-        "meaning": "feeling sorrow or unhappiness",
-        "japaneseMeaning": "悲しい／寂しい",
-        "synonyms": "unhappy, sorrowful",
-        "antonyms": "happy, cheerful",
-        "example": "He was sad to say goodbye to his friends."
-      },
-      {
-        "word": "satisfied",
-        "meaning": "contented because expectations have been met",
-        "japaneseMeaning": "満足している",
-        "synonyms": "content, pleased",
-        "antonyms": "dissatisfied, unhappy",
-        "example": "I am satisfied with the final design."
-      },
-      {
-        "word": "scared",
-        "meaning": "feeling frightened or worried about danger",
-        "japaneseMeaning": "怖がっている／おびえている",
-        "synonyms": "afraid, frightened",
-        "antonyms": "brave, calm",
-        "example": "The loud noise made the child scared."
-      },
-      {
-        "word": "shocked",
-        "meaning": "surprised and upset by an unexpected event",
-        "japaneseMeaning": "ショックを受けた／びっくりした",
-        "synonyms": "stunned, astonished",
-        "antonyms": "unmoved, unaffected",
-        "example": "We were shocked by the sudden news."
-      },
-      {
-        "word": "stressed",
-        "meaning": "experiencing mental or emotional strain",
-        "japaneseMeaning": "ストレスを感じている",
-        "synonyms": "tense, pressured",
-        "antonyms": "relaxed, calm",
-        "example": "He felt stressed before the deadline."
-      },
-      {
-        "word": "surprised",
-        "meaning": "feeling or showing shock because something was unexpected",
-        "japaneseMeaning": "驚いた",
-        "synonyms": "astonished, amazed",
-        "antonyms": "expectant, unsurprised",
-        "example": "She was surprised by the party her friends planned."
-      },
-      {
-        "word": "tired",
-        "meaning": "in need of sleep or rest; weary",
-        "japaneseMeaning": "疲れた／眠い",
-        "synonyms": "weary, exhausted",
-        "antonyms": "energetic, refreshed",
-        "example": "After the hike, everyone was tired."
-      },
-      {
-        "word": "unhappy",
-        "meaning": "not happy; feeling sorrow or dissatisfaction",
-        "japaneseMeaning": "不幸な／満たされない",
-        "synonyms": "sad, discontent",
-        "antonyms": "happy, content",
-        "example": "She was unhappy with the service."
-      },
-      {
-        "word": "upset",
-        "meaning": "emotionally disturbed or distressed",
-        "japaneseMeaning": "動揺した／腹を立てた",
-        "synonyms": "distressed, bothered",
-        "antonyms": "calm, pleased",
-        "example": "He was upset when he missed the train."
-      }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-pre2-55",
+  "title": "Lesson 55",
+  "paragraph": "This lesson practices useful verbs for hobbies and free time.",
+  "words": [
+    { "word": "dance", "meaning": "to move your body to music", "japaneseMeaning": "踊る", "synonyms": "move, step", "antonyms": "stand still, stop", "forms": "dance, dances, dancing, danced, danced", "example": "They dance at the school festival." },
+    { "word": "sketch", "meaning": "to draw a quick picture", "japaneseMeaning": "スケッチする", "synonyms": "draw, make a picture", "antonyms": "erase, color over", "forms": "sketch, sketches, sketching, sketched, sketched", "example": "I sketch a cat in my notebook." },
+    { "word": "paint", "meaning": "to make a picture or color something with paint", "japaneseMeaning": "絵の具で描く／塗る", "synonyms": "color, brush", "antonyms": "erase, clean", "forms": "paint, paints, painting, painted, painted", "example": "We paint flowers in art class." },
+    { "word": "record", "meaning": "to save sound or video", "japaneseMeaning": "録音する／録画する", "synonyms": "save, film", "antonyms": "erase, delete", "forms": "record, records, recording, recorded, recorded", "example": "I record my voice on my phone." },
+    { "word": "download", "meaning": "to get a file from the internet", "japaneseMeaning": "ダウンロードする", "synonyms": "get, save", "antonyms": "upload, delete", "forms": "download, downloads, downloading, downloaded, downloaded", "example": "Download the song before the trip." },
+    { "word": "upload", "meaning": "to send a file to the internet", "japaneseMeaning": "アップロードする", "synonyms": "send, post", "antonyms": "download, remove", "forms": "upload, uploads, uploading, uploaded, uploaded", "example": "Upload your photo to the class page." },
+    { "word": "chat", "meaning": "to talk in a friendly way", "japaneseMeaning": "おしゃべりする", "synonyms": "talk, speak", "antonyms": "be silent, ignore", "forms": "chat, chats, chatting, chatted, chatted", "example": "I chat with my friend online." },
+    { "word": "jog", "meaning": "to run slowly for exercise", "japaneseMeaning": "ジョギングする", "synonyms": "run slowly, exercise", "antonyms": "stop, rest", "forms": "jog, jogs, jogging, jogged, jogged", "example": "My father jogs in the park." },
+    { "word": "camp", "meaning": "to sleep outside in a tent", "japaneseMeaning": "キャンプする", "synonyms": "stay outside, sleep outdoors", "antonyms": "stay home, leave", "forms": "camp, camps, camping, camped, camped", "example": "We camp near the lake in summer." },
+    { "word": "skate", "meaning": "to move on skates", "japaneseMeaning": "スケートをする", "synonyms": "slide, move on ice", "antonyms": "walk, stop", "forms": "skate, skates, skating, skated, skated", "example": "She skates on the ice rink." }
+  ]
+}

@@ -1,20 +1,17 @@
-
-  {
-    "lesson_id": "eiken-pre2-60",
-    "title": "Lesson 60",
-    "paragraph": "Adjectives for size, time and basic properties — useful for everyday descriptions.",
-    "words": [
-      { "word": "large", "meaning": "of considerable or relatively great size", "japaneseMeaning": "大きい／広い", "synonyms": "big, sizable", "antonyms": "small, tiny", "example": "They moved into a large apartment." },
-      { "word": "late", "meaning": "after the expected or usual time", "japaneseMeaning": "遅れた／遅い", "synonyms": "tardy, delayed", "antonyms": "early, punctual", "example": "Sorry I'm late — the train was delayed." },
-      { "word": "light", "meaning": "having little weight; not heavy; also bright", "japaneseMeaning": "軽い／明るい", "synonyms": "not heavy, bright", "antonyms": "heavy, dark", "example": "This suitcase is light enough to carry." },
-      { "word": "little", "meaning": "small in size, amount, or degree", "japaneseMeaning": "小さい／少しの", "synonyms": "small, tiny", "antonyms": "large, big", "example": "Could I have a little sugar in my tea?" },
-      { "word": "local", "meaning": "relating to a particular area or neighborhood", "japaneseMeaning": "地元の／現地の", "synonyms": "regional, nearby", "antonyms": "global, international", "example": "We buy fresh produce from the local market." },
-      { "word": "long", "meaning": "measuring a great distance from end to end", "japaneseMeaning": "長い", "synonyms": "lengthy, extended", "antonyms": "short, brief", "example": "They took a long walk along the river." },
-      { "word": "low", "meaning": "less high than normal; not tall or lofty", "japaneseMeaning": "低い／低めの", "synonyms": "short, shallow", "antonyms": "high, tall", "example": "The ceiling is a bit low in this room." },
-      { "word": "main", "meaning": "most important; principal", "japaneseMeaning": "主要な／主な", "synonyms": "primary, chief", "antonyms": "minor, secondary", "example": "The main goal is to finish on time." },
-      { "word": "modern", "meaning": "relating to the present or recent times; up-to-date", "japaneseMeaning": "現代的な／モダンな", "synonyms": "contemporary, current", "antonyms": "ancient, old-fashioned", "example": "They live in a modern house with smart systems." },
-      { "word": "narrow", "meaning": "of small width in relation to length", "japaneseMeaning": "狭い／細い", "synonyms": "tight, slim", "antonyms": "wide, broad", "example": "The street is too narrow for two cars." },
-      { "word": "natural", "meaning": "existing in or caused by nature; not artificial", "japaneseMeaning": "自然の／天然の", "synonyms": "organic, innate", "antonyms": "artificial, synthetic", "example": "They prefer natural light in the studio." },
-      { "word": "necessary", "meaning": "required to be done, achieved, or present; essential", "japaneseMeaning": "必要な／不可欠な", "synonyms": "essential, required", "antonyms": "optional, unnecessary", "example": "A passport is necessary for international travel." }
-    ]
-  }
+{
+  "lesson_id": "eiken-pre2-60",
+  "title": "Lesson 60",
+  "paragraph": "This lesson practices useful adjectives for places.",
+  "words": [
+    { "word": "wide", "meaning": "large from side to side", "japaneseMeaning": "広い／幅の広い", "synonyms": "broad, large", "antonyms": "narrow, thin", "forms": "wide, wider, widest", "example": "This road is wide." },
+    { "word": "narrow", "meaning": "not wide", "japaneseMeaning": "狭い／細い", "synonyms": "thin, tight", "antonyms": "wide, broad", "forms": "narrow, narrower, narrowest", "example": "The street is narrow." },
+    { "word": "close", "meaning": "not far away", "japaneseMeaning": "近い", "synonyms": "near, nearby", "antonyms": "far, distant", "forms": "close, closer, closest", "example": "The library is close to my school." },
+    { "word": "remote", "meaning": "far away from towns or people", "japaneseMeaning": "遠く離れた", "synonyms": "far, distant", "antonyms": "close, nearby", "forms": "remote, more remote, most remote", "example": "We can see remote mountains." },
+    { "word": "public", "meaning": "for everyone to use", "japaneseMeaning": "公共の", "synonyms": "open, shared", "antonyms": "private, personal", "forms": "public, more public, most public", "example": "This is a public park." },
+    { "word": "private", "meaning": "for one person or group only", "japaneseMeaning": "私的な／個人の", "synonyms": "personal, closed", "antonyms": "public, open", "forms": "private, more private, most private", "example": "This is a private room." },
+    { "word": "central", "meaning": "in the middle or main area", "japaneseMeaning": "中心の", "synonyms": "middle, main", "antonyms": "outer, side", "forms": "central, more central, most central", "example": "Our hotel is in the central area." },
+    { "word": "vacant", "meaning": "not used or not filled", "japaneseMeaning": "空いている", "synonyms": "empty, free", "antonyms": "full, occupied", "forms": "vacant, more vacant, most vacant", "example": "The seat is vacant now." },
+    { "word": "peaceful", "meaning": "quiet and calm", "japaneseMeaning": "平和な／穏やかな", "synonyms": "calm, quiet", "antonyms": "noisy, busy", "forms": "peaceful, more peaceful, most peaceful", "example": "The garden is peaceful in the morning." },
+    { "word": "modern", "meaning": "new in style", "japaneseMeaning": "現代的な", "synonyms": "new, current", "antonyms": "old, traditional", "forms": "modern, more modern, most modern", "example": "The station has a modern design." }
+  ]
+}

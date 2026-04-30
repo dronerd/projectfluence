@@ -1,103 +1,17 @@
-  {
-    "lesson_id": "eiken-pre2-57",
-    "title": "Lesson 57",
-    "paragraph": "Descriptions of appearance, condition and taste — useful for talking about things and situations.",
-    "words": [
-      {
-        "word": "beautiful",
-        "meaning": "pleasing to the senses or mind; attractive",
-        "japaneseMeaning": "美しい",
-        "synonyms": "lovely, gorgeous",
-        "antonyms": "ugly, plain",
-        "example": "She wore a beautiful dress to the party."
-      },
-      {
-        "word": "blank",
-        "meaning": "empty or without any writing or marks",
-        "japaneseMeaning": "空白の",
-        "synonyms": "empty, vacant",
-        "antonyms": "filled, written",
-        "example": "The paper was blank; he hadn't started yet."
-      },
-      {
-        "word": "bright",
-        "meaning": "giving out or reflecting a lot of light; intelligent",
-        "japaneseMeaning": "明るい／利口な",
-        "synonyms": "shiny, intelligent",
-        "antonyms": "dull, dim",
-        "example": "The morning sun made the room bright."
-      },
-      {
-        "word": "broad",
-        "meaning": "wide from one side to the other",
-        "japaneseMeaning": "広い／幅の広い",
-        "synonyms": "wide, expansive",
-        "antonyms": "narrow, limited",
-        "example": "They walked along the broad avenue."
-      },
-      {
-        "word": "cheap",
-        "meaning": "low in price; inexpensive",
-        "japaneseMeaning": "安い",
-        "synonyms": "inexpensive, affordable",
-        "antonyms": "expensive, costly",
-        "example": "We found a cheap hotel near the station."
-      },
-      {
-        "word": "clean",
-        "meaning": "free from dirt or impurities",
-        "japaneseMeaning": "きれいな／清潔な",
-        "synonyms": "tidy, spotless",
-        "antonyms": "dirty, filthy",
-        "example": "Keep the kitchen clean after cooking."
-      },
-      {
-        "word": "clear",
-        "meaning": "easy to perceive, understand, or interpret; transparent",
-        "japaneseMeaning": "明確な／透き通った",
-        "synonyms": "obvious, transparent",
-        "antonyms": "unclear, vague",
-        "example": "The instructions were clear and easy to follow."
-      },
-      {
-        "word": "common",
-        "meaning": "occurring often; ordinary",
-        "japaneseMeaning": "一般的な／普通の",
-        "synonyms": "usual, ordinary",
-        "antonyms": "rare, unusual",
-        "example": "It's common to see bicycles in this town."
-      },
-      {
-        "word": "complete",
-        "meaning": "having all necessary parts or finished",
-        "japaneseMeaning": "完全な／完了した",
-        "synonyms": "finished, whole",
-        "antonyms": "incomplete, partial",
-        "example": "The set is now complete with all pieces."
-      },
-      {
-        "word": "convenient",
-        "meaning": "suiting one's needs or purpose easily and comfortably",
-        "japaneseMeaning": "便利な／都合の良い",
-        "synonyms": "handy, practical",
-        "antonyms": "inconvenient, difficult",
-        "example": "The store’s location is very convenient for commuters."
-      },
-      {
-        "word": "correct",
-        "meaning": "free from error; accurate",
-        "japaneseMeaning": "正しい／正確な",
-        "synonyms": "right, accurate",
-        "antonyms": "wrong, incorrect",
-        "example": "Make sure your answers are correct before turning the test in."
-      },
-      {
-        "word": "dangerous",
-        "meaning": "likely to cause harm or injury",
-        "japaneseMeaning": "危険な",
-        "synonyms": "hazardous, risky",
-        "antonyms": "safe, harmless",
-        "example": "Swimming alone in rough seas can be dangerous."
-      }
-    ]
-  }
+{
+  "lesson_id": "eiken-pre2-57",
+  "title": "Lesson 57",
+  "paragraph": "This lesson practices useful adverbs for direction and movement.",
+  "words": [
+    { "word": "away", "meaning": "to or at another place", "japaneseMeaning": "離れて／向こうへ", "synonyms": "off, far", "antonyms": "back, near", "forms": "away", "example": "The bus moved away from the stop." },
+    { "word": "back", "meaning": "to a place again", "japaneseMeaning": "戻って", "synonyms": "again, returning", "antonyms": "away, forward", "forms": "back", "example": "Come back before dinner." },
+    { "word": "forward", "meaning": "toward the front", "japaneseMeaning": "前へ", "synonyms": "ahead, frontward", "antonyms": "back, backward", "forms": "forward", "example": "Move forward one step." },
+    { "word": "backward", "meaning": "toward the back", "japaneseMeaning": "後ろへ", "synonyms": "back, behind", "antonyms": "forward, ahead", "forms": "backward", "example": "Step backward from the line." },
+    { "word": "nearby", "meaning": "not far away", "japaneseMeaning": "近くに", "synonyms": "near, close", "antonyms": "far away, distant", "forms": "nearby", "example": "My school is nearby." },
+    { "word": "far", "meaning": "a long way away", "japaneseMeaning": "遠くに", "synonyms": "distant, away", "antonyms": "near, nearby", "forms": "far, farther, farthest", "example": "The station is far from my house." },
+    { "word": "around", "meaning": "in many places or in a circle", "japaneseMeaning": "周りに／あちこちに", "synonyms": "near, about", "antonyms": "straight, away", "forms": "around", "example": "Look around the room." },
+    { "word": "straight", "meaning": "without turning", "japaneseMeaning": "まっすぐに", "synonyms": "directly, ahead", "antonyms": "around, sideways", "forms": "straight", "example": "Go straight to the corner." },
+    { "word": "sideways", "meaning": "to or from the side", "japaneseMeaning": "横に", "synonyms": "to the side, across", "antonyms": "straight, forward", "forms": "sideways", "example": "The chair moves sideways." },
+    { "word": "apart", "meaning": "away from each other", "japaneseMeaning": "離れて", "synonyms": "separately, away", "antonyms": "together, close", "forms": "apart", "example": "Keep the two boxes apart." }
+  ]
+}

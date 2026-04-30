@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-75",
+  "title": "Lesson 75",
+  "paragraph": "This lesson practices useful verbs for travel and directions.",
+  "words": [
+    { "word": "set off", "meaning": "to start a trip", "japaneseMeaning": "出発する", "synonyms": "leave, start", "antonyms": "arrive, stop", "forms": "set off, sets off, setting off, set off, set off", "example": "We set off at nine." },
+    { "word": "land", "meaning": "to come down to the ground after flying", "japaneseMeaning": "着陸する", "synonyms": "come down, arrive", "antonyms": "take off, leave", "forms": "land, lands, landing, landed, landed", "example": "The plane lands at the airport." },
+    { "word": "board", "meaning": "to get on a train, bus, plane, or ship", "japaneseMeaning": "乗り込む", "synonyms": "get on, enter", "antonyms": "leave, get off", "forms": "board, boards, boarding, boarded, boarded", "example": "Board the bus at this stop." },
+    { "word": "change", "meaning": "to move from one train or bus to another", "japaneseMeaning": "乗り換える／変える", "synonyms": "switch, move", "antonyms": "stay, keep", "forms": "change, changes, changing, changed, changed", "example": "Change trains at Shibuya." },
+    { "word": "confirm", "meaning": "to make sure a plan is fixed", "japaneseMeaning": "確認する／確定する", "synonyms": "check, make sure", "antonyms": "cancel, change", "forms": "confirm, confirms, confirming, confirmed, confirmed", "example": "Confirm the hotel before you go." },
+    { "word": "reserve", "meaning": "to keep something for later use", "japaneseMeaning": "予約する／取っておく", "synonyms": "book, keep", "antonyms": "cancel, give away", "forms": "reserve, reserves, reserving, reserved, reserved", "example": "Reserve two seats for us." },
+    { "word": "postpone", "meaning": "to move a plan to a later time", "japaneseMeaning": "延期する", "synonyms": "delay, put off", "antonyms": "continue, do now", "forms": "postpone, postpones, postponing, postponed, postponed", "example": "Postpone the trip if it snows." },
+    { "word": "delay", "meaning": "to make something late", "japaneseMeaning": "遅らせる", "synonyms": "make late, slow", "antonyms": "hurry, speed up", "forms": "delay, delays, delaying, delayed, delayed", "example": "Heavy rain delays the train." },
+    { "word": "load", "meaning": "to put things into a bag, car, or machine", "japaneseMeaning": "積む／入れる", "synonyms": "put in, pack", "antonyms": "unload, empty", "forms": "load, loads, loading, loaded, loaded", "example": "Load your bags into the car." },
+    { "word": "unpack", "meaning": "to take things out of a bag", "japaneseMeaning": "荷物をほどく", "synonyms": "take out, empty", "antonyms": "pack, load", "forms": "unpack, unpacks, unpacking, unpacked, unpacked", "example": "Unpack your bag after the trip." }
+  ]
+}

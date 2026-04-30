@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-80",
+  "title": "Lesson 80",
+  "paragraph": "This lesson practices useful adjectives for clothes and style.",
+  "words": [
+    { "word": "loose", "meaning": "not tight", "japaneseMeaning": "ゆるい", "synonyms": "not tight, free", "antonyms": "tight, close", "forms": "loose, looser, loosest", "example": "These pants are loose." },
+    { "word": "tight", "meaning": "too close to the body", "japaneseMeaning": "きつい", "synonyms": "close, narrow", "antonyms": "loose, wide", "forms": "tight, tighter, tightest", "example": "This shirt is too tight." },
+    { "word": "striped", "meaning": "having lines of color", "japaneseMeaning": "しま模様の", "synonyms": "lined, with stripes", "antonyms": "plain, solid", "forms": "striped, more striped, most striped", "example": "He wears a striped shirt." },
+    { "word": "checked", "meaning": "having a pattern of squares", "japaneseMeaning": "チェック柄の", "synonyms": "square-patterned, patterned", "antonyms": "plain, solid", "forms": "checked, more checked, most checked", "example": "She has a checked skirt." },
+    { "word": "solid", "meaning": "having one color with no pattern", "japaneseMeaning": "無地の", "synonyms": "plain, one-color", "antonyms": "striped, checked", "forms": "solid, more solid, most solid", "example": "I want a solid blue tie." },
+    { "word": "casual", "meaning": "simple and relaxed, not formal", "japaneseMeaning": "カジュアルな", "synonyms": "relaxed, everyday", "antonyms": "formal, dressy", "forms": "casual, more casual, most casual", "example": "We wear casual clothes on Friday." },
+    { "word": "formal", "meaning": "suitable for serious or special events", "japaneseMeaning": "フォーマルな／正式な", "synonyms": "dressy, official", "antonyms": "casual, relaxed", "forms": "formal, more formal, most formal", "example": "A suit is formal clothing." },
+    { "word": "fashionable", "meaning": "popular and stylish now", "japaneseMeaning": "流行の／おしゃれな", "synonyms": "stylish, popular", "antonyms": "unfashionable, old", "forms": "fashionable, more fashionable, most fashionable", "example": "Those shoes are fashionable." },
+    { "word": "comfortable", "meaning": "nice to wear or use", "japaneseMeaning": "快適な", "synonyms": "easy, nice", "antonyms": "uncomfortable, tight", "forms": "comfortable, more comfortable, most comfortable", "example": "This sweater is comfortable." },
+    { "word": "waterproof", "meaning": "not letting water through", "japaneseMeaning": "防水の", "synonyms": "water-safe, rainproof", "antonyms": "wet, leaky", "forms": "waterproof, more waterproof, most waterproof", "example": "I need waterproof boots." }
+  ]
+}

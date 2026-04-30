@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-72",
+  "title": "Lesson 72",
+  "paragraph": "This lesson practices useful adjectives for animals and people.",
+  "words": [
+    { "word": "cute", "meaning": "nice and lovely to look at", "japaneseMeaning": "かわいい", "synonyms": "pretty, sweet", "antonyms": "ugly, scary", "forms": "cute, cuter, cutest", "example": "The puppy is cute." },
+    { "word": "feral", "meaning": "living outside after being away from people", "japaneseMeaning": "野生化した", "synonyms": "wild, untamed", "antonyms": "tame, trained", "forms": "feral, more feral, most feral", "example": "A feral cat lives near the park." },
+    { "word": "tame", "meaning": "not afraid of people", "japaneseMeaning": "飼いならされた", "synonyms": "friendly, trained", "antonyms": "wild, scary", "forms": "tame, tamer, tamest", "example": "This horse is tame." },
+    { "word": "tiny", "meaning": "very small", "japaneseMeaning": "とても小さい", "synonyms": "very small, little", "antonyms": "huge, big", "forms": "tiny, tinier, tiniest", "example": "A tiny insect is on the leaf." },
+    { "word": "huge", "meaning": "very big", "japaneseMeaning": "巨大な", "synonyms": "very big, large", "antonyms": "tiny, small", "forms": "huge, huger, hugest", "example": "An elephant is huge." },
+    { "word": "furry", "meaning": "covered with soft hair", "japaneseMeaning": "毛皮で覆われた／ふわふわした", "synonyms": "hairy, soft", "antonyms": "smooth, bare", "forms": "furry, furrier, furriest", "example": "The rabbit is furry." },
+    { "word": "sleek", "meaning": "smooth and shiny", "japaneseMeaning": "なめらかでつやのある", "synonyms": "smooth, shiny", "antonyms": "rough, furry", "forms": "sleek, sleeker, sleekest", "example": "The seal has sleek skin." },
+    { "word": "harmful", "meaning": "able to hurt someone or something", "japaneseMeaning": "有害な", "synonyms": "dangerous, bad", "antonyms": "harmless, safe", "forms": "harmful, more harmful, most harmful", "example": "A harmful insect can hurt plants." },
+    { "word": "harmless", "meaning": "not able to hurt someone", "japaneseMeaning": "無害な", "synonyms": "safe, gentle", "antonyms": "dangerous, harmful", "forms": "harmless, more harmless, most harmless", "example": "This small insect is harmless." },
+    { "word": "playful", "meaning": "liking to play", "japaneseMeaning": "遊び好きな", "synonyms": "fun, active", "antonyms": "serious, quiet", "forms": "playful, more playful, most playful", "example": "The kitten is playful." }
+  ]
+}

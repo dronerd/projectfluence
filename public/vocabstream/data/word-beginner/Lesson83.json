@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-83",
+  "title": "Lesson 83",
+  "paragraph": "This lesson practices useful verbs for body and health.",
+  "words": [
+    { "word": "sneeze", "meaning": "to push air out through your nose and mouth suddenly", "japaneseMeaning": "くしゃみをする", "synonyms": "make a sneeze, blow air", "antonyms": "breathe, hold", "forms": "sneeze, sneezes, sneezing, sneezed, sneezed", "example": "I sneeze when I have a cold." },
+    { "word": "ache", "meaning": "to hurt for a long time", "japaneseMeaning": "痛む", "synonyms": "hurt, be sore", "antonyms": "heal, feel well", "forms": "ache, aches, aching, ached, ached", "example": "My legs ache after running." },
+    { "word": "heal", "meaning": "to become well again", "japaneseMeaning": "治る／治す", "synonyms": "get better, recover", "antonyms": "hurt, worsen", "forms": "heal, heals, healing, healed, healed", "example": "The cut will heal soon." },
+    { "word": "bleed", "meaning": "to lose blood from the body", "japaneseMeaning": "出血する", "synonyms": "lose blood, drip blood", "antonyms": "heal, stop bleeding", "forms": "bleed, bleeds, bleeding, bled, bled", "example": "His finger bleeds after the cut." },
+    { "word": "rest", "meaning": "to stop working or moving to feel better", "japaneseMeaning": "休む", "synonyms": "relax, sleep", "antonyms": "work, move", "forms": "rest, rests, resting, rested, rested", "example": "Rest at home when you are sick." },
+    { "word": "recover", "meaning": "to become healthy again", "japaneseMeaning": "回復する", "synonyms": "get better, heal", "antonyms": "get worse, weaken", "forms": "recover, recovers, recovering, recovered, recovered", "example": "He recovers after a week in bed." },
+    { "word": "stretch", "meaning": "to make your body or arms long and straight", "japaneseMeaning": "伸ばす／ストレッチする", "synonyms": "extend, reach", "antonyms": "bend, shrink", "forms": "stretch, stretches, stretching, stretched, stretched", "example": "Stretch your arms before exercise." },
+    { "word": "bend", "meaning": "to make something not straight", "japaneseMeaning": "曲げる／曲がる", "synonyms": "curve, fold", "antonyms": "straighten, stretch", "forms": "bend, bends, bending, bent, bent", "example": "Bend your knees slowly." },
+    { "word": "lift", "meaning": "to move something up", "japaneseMeaning": "持ち上げる", "synonyms": "raise, pick up", "antonyms": "drop, lower", "forms": "lift, lifts, lifting, lifted, lifted", "example": "Lift the box with both hands." },
+    { "word": "breathe", "meaning": "to take air in and out", "japaneseMeaning": "呼吸する", "synonyms": "inhale, exhale", "antonyms": "hold breath, stop", "forms": "breathe, breathes, breathing, breathed, breathed", "example": "Breathe slowly when you feel nervous." }
+  ]
+}

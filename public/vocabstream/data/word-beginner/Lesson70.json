@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-70",
+  "title": "Lesson 70",
+  "paragraph": "This lesson practices useful nouns for animals and pets.",
+  "words": [
+    { "word": "deer", "meaning": "a wild animal with long legs", "japaneseMeaning": "鹿", "synonyms": "wild animal, forest animal", "antonyms": "none", "forms": "deer, deer", "example": "A deer stands near the trees." },
+    { "word": "hamster", "meaning": "a small pet animal like a mouse", "japaneseMeaning": "ハムスター", "synonyms": "small pet, animal", "antonyms": "none", "forms": "hamster, hamsters", "example": "My hamster sleeps in a small house." },
+    { "word": "turtle", "meaning": "an animal with a hard shell", "japaneseMeaning": "カメ", "synonyms": "shell animal, pet", "antonyms": "none", "forms": "turtle, turtles", "example": "The turtle walks slowly." },
+    { "word": "frog", "meaning": "a small animal that jumps and lives near water", "japaneseMeaning": "カエル", "synonyms": "jumping animal, pond animal", "antonyms": "none", "forms": "frog, frogs", "example": "A frog jumps into the pond." },
+    { "word": "snake", "meaning": "a long animal with no legs", "japaneseMeaning": "ヘビ", "synonyms": "long animal, reptile", "antonyms": "none", "forms": "snake, snakes", "example": "The snake moves through the grass." },
+    { "word": "monkey", "meaning": "an animal that climbs trees", "japaneseMeaning": "猿", "synonyms": "tree animal, animal", "antonyms": "none", "forms": "monkey, monkeys", "example": "The monkey eats a banana." },
+    { "word": "panda", "meaning": "a black and white bear from China", "japaneseMeaning": "パンダ", "synonyms": "bear, animal", "antonyms": "none", "forms": "panda, pandas", "example": "The panda eats bamboo." },
+    { "word": "fox", "meaning": "a wild animal like a small dog", "japaneseMeaning": "キツネ", "synonyms": "wild animal, animal", "antonyms": "none", "forms": "fox, foxes", "example": "A fox runs across the field." },
+    { "word": "dolphin", "meaning": "a smart sea animal", "japaneseMeaning": "イルカ", "synonyms": "sea animal, animal", "antonyms": "none", "forms": "dolphin, dolphins", "example": "A dolphin swims near the boat." },
+    { "word": "insect", "meaning": "a small animal with six legs", "japaneseMeaning": "昆虫", "synonyms": "bug, small animal", "antonyms": "none", "forms": "insect, insects", "example": "This insect has black wings." }
+  ]
+}

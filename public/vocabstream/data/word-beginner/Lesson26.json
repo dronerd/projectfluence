@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-26",
-  "title": "Lesson 1",
-  "paragraph": "This lesson introduces common everyday action verbs. Practicing these will help you describe daily activities, decisions, and simple interactions with ease.",
+  "title": "Lesson 26",
+  "paragraph": "This lesson practices useful nouns for daily life.",
   "words": [
-    { "word": "accept", "meaning": "to agree to receive or take something offered", "japaneseMeaning": "受け入れる", "synonyms": "receive, take", "antonyms": "refuse, decline", "example": "She accepted the job offer." },
-    { "word": "achieve", "meaning": "to successfully reach a goal through effort", "japaneseMeaning": "達成する", "synonyms": "accomplish, attain", "antonyms": "fail, lose", "example": "He achieved his sales target." },
-    { "word": "advise", "meaning": "to offer guidance or recommendations", "japaneseMeaning": "助言する", "synonyms": "recommend, counsel", "antonyms": "mislead, confuse", "example": "I advised her to check the facts first." },
-    { "word": "agree", "meaning": "to have the same opinion or accept a proposal", "japaneseMeaning": "同意する", "synonyms": "concur, consent", "antonyms": "disagree, oppose", "example": "They agreed on the meeting time." },
-    { "word": "allow", "meaning": "to permit someone to do something", "japaneseMeaning": "許可する", "synonyms": "permit, let", "antonyms": "forbid, prohibit", "example": "The teacher allowed extra time." },
-    { "word": "announce", "meaning": "to make information known publicly", "japaneseMeaning": "発表する", "synonyms": "declare, proclaim", "antonyms": "conceal, hide", "example": "The company announced a new product." },
-    { "word": "appear", "meaning": "to become visible or to seem a certain way", "japaneseMeaning": "現れる／〜のように見える", "synonyms": "emerge, seem", "antonyms": "disappear, vanish", "example": "He appeared tired after the trip." },
-    { "word": "apply", "meaning": "to put to practical use or to request something formally", "japaneseMeaning": "適用する／申し込む", "synonyms": "use, request", "antonyms": "ignore, avoid", "example": "She applied for the scholarship." },
-    { "word": "argue", "meaning": "to give reasons for or against something; to disagree", "japaneseMeaning": "議論する／口論する", "synonyms": "debate, dispute", "antonyms": "agree, concede", "example": "They argued about the best route." },
-    { "word": "arrive", "meaning": "to reach a place", "japaneseMeaning": "到着する", "synonyms": "reach, come", "antonyms": "depart, leave", "example": "We arrived at noon." },
-    { "word": "avoid", "meaning": "to keep away from someone or something", "japaneseMeaning": "避ける", "synonyms": "evade, prevent", "antonyms": "confront, face", "example": "Try to avoid heavy traffic." },
-    { "word": "borrow", "meaning": "to take and use something belonging to someone with intention to return", "japaneseMeaning": "借りる", "synonyms": "loan (receive), take temporarily", "antonyms": "lend, give", "example": "Can I borrow your pen?" }
+    { "word": "wallet", "meaning": "a small case for money and cards", "japaneseMeaning": "財布", "synonyms": "purse, case", "antonyms": "none", "forms": "wallet, wallets", "example": "I keep my bus card in my wallet." },
+    { "word": "ticket", "meaning": "a small paper or card that lets you enter or ride", "japaneseMeaning": "チケット／切符", "synonyms": "pass, card", "antonyms": "none", "forms": "ticket, tickets", "example": "Please show your ticket at the gate." },
+    { "word": "key", "meaning": "a small metal thing used to open a lock", "japaneseMeaning": "鍵", "synonyms": "lock opener, key card", "antonyms": "lock", "forms": "key, keys", "example": "I cannot find my house key." },
+    { "word": "bottle", "meaning": "a container for drinks or liquid", "japaneseMeaning": "瓶／ボトル", "synonyms": "container, flask", "antonyms": "none", "forms": "bottle, bottles", "example": "She carries a water bottle to school." },
+    { "word": "towel", "meaning": "a cloth used to dry your body or hands", "japaneseMeaning": "タオル", "synonyms": "cloth, hand towel", "antonyms": "none", "forms": "towel, towels", "example": "Use this towel after you wash your hands." },
+    { "word": "soap", "meaning": "something used with water to clean your hands or body", "japaneseMeaning": "石けん", "synonyms": "cleaner, wash", "antonyms": "dirt", "forms": "soap, soaps", "example": "Wash your hands with soap." },
+    { "word": "medicine", "meaning": "something you take when you are sick", "japaneseMeaning": "薬", "synonyms": "drug, pill", "antonyms": "poison", "forms": "medicine, medicines", "example": "Take this medicine after breakfast." },
+    { "word": "map", "meaning": "a picture that shows places and roads", "japaneseMeaning": "地図", "synonyms": "plan, guide", "antonyms": "none", "forms": "map, maps", "example": "We use a map to find the hotel." },
+    { "word": "calendar", "meaning": "a chart that shows days, weeks, and months", "japaneseMeaning": "カレンダー", "synonyms": "date chart, schedule", "antonyms": "none", "forms": "calendar, calendars", "example": "Mark the test day on your calendar." },
+    { "word": "umbrella", "meaning": "something you hold over your head when it rains", "japaneseMeaning": "傘", "synonyms": "rain cover, parasol", "antonyms": "none", "forms": "umbrella, umbrellas", "example": "Bring an umbrella because it may rain." }
   ]
 }

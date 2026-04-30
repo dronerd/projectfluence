@@ -1,20 +1,17 @@
-  {
-    "lesson_id": "eiken-pre2-53",
-    "title": "Lesson 53",
-    "paragraph": "Feelings and emotional states — words to describe moods and reactions.",
-    "words": [
-      { "word": "calm", "meaning": "not showing or feeling nervousness, anger, or other strong emotions", "japaneseMeaning": "落ち着いた／冷静な", "synonyms": "peaceful, composed", "antonyms": "agitated, nervous", "example": "Try to stay calm during the test." },
-      { "word": "cheerful", "meaning": "noticeably happy and optimistic", "japaneseMeaning": "陽気な／快活な", "synonyms": "happy, upbeat", "antonyms": "sad, gloomy", "example": "She was cheerful despite the rain." },
-      { "word": "comfortable", "meaning": "feeling physically relaxed and at ease", "japaneseMeaning": "快適な／心地よい", "synonyms": "cozy, relaxed", "antonyms": "uncomfortable, uneasy", "example": "This chair is very comfortable to sit in." },
-      { "word": "confident", "meaning": "feeling sure of oneself; self-assured", "japaneseMeaning": "自信のある", "synonyms": "self-assured, poised", "antonyms": "insecure, doubtful", "example": "She felt confident about her performance." },
-      { "word": "confused", "meaning": "unable to think clearly or understand", "japaneseMeaning": "混乱した／わからない", "synonyms": "perplexed, bewildered", "antonyms": "clear, certain", "example": "I was confused by the instructions." },
-      { "word": "depressed", "meaning": "in a very low mood; sad and without hope", "japaneseMeaning": "落ち込んでいる／憂鬱な", "synonyms": "downcast, despondent", "antonyms": "cheerful, upbeat", "example": "He felt depressed after losing his job." },
-      { "word": "disappointed", "meaning": "sad because something was not as good as expected", "japaneseMeaning": "失望した", "synonyms": "let down, dissatisfied", "antonyms": "pleased, satisfied", "example": "She was disappointed by the exam results." },
-      { "word": "embarrassed", "meaning": "feeling awkward or self-conscious", "japaneseMeaning": "恥ずかしい／当惑した", "synonyms": "ashamed, humiliated", "antonyms": "proud, confident", "example": "He felt embarrassed when he forgot her name." },
-      { "word": "excited", "meaning": "very enthusiastic and eager", "japaneseMeaning": "わくわくした／興奮した", "synonyms": "thrilled, eager", "antonyms": "calm, indifferent", "example": "The children were excited about the trip." },
-      { "word": "frightened", "meaning": "feeling afraid or anxious because of danger", "japaneseMeaning": "怖がっている／おびえている", "synonyms": "scared, terrified", "antonyms": "brave, confident", "example": "She was frightened by the thunder." },
-      { "word": "frustrated", "meaning": "feeling annoyed because of inability to change or achieve something", "japaneseMeaning": "欲求不満の／いらいらした", "synonyms": "irritated, exasperated", "antonyms": "satisfied, content", "example": "He was frustrated by the slow progress." },
-      { "word": "glad", "meaning": "feeling pleasure or happiness", "japaneseMeaning": "うれしい／満足した", "synonyms": "happy, pleased", "antonyms": "sad, unhappy", "example": "I’m glad you could come." }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-pre2-53",
+  "title": "Lesson 53",
+  "paragraph": "This lesson practices useful adverbs for time.",
+  "words": [
+    { "word": "currently", "meaning": "at this time", "japaneseMeaning": "現在", "synonyms": "now, at present", "antonyms": "formerly, later", "forms": "currently", "example": "I am currently studying English." },
+    { "word": "then", "meaning": "at that time or after that", "japaneseMeaning": "その時／それから", "synonyms": "next, after that", "antonyms": "now, before", "forms": "then", "example": "Finish lunch, then wash your plate." },
+    { "word": "before", "meaning": "earlier than something", "japaneseMeaning": "以前に／前に", "synonyms": "earlier, first", "antonyms": "after, later", "forms": "before", "example": "I brush my teeth before bed." },
+    { "word": "after", "meaning": "later than something", "japaneseMeaning": "後で／後に", "synonyms": "later, next", "antonyms": "before, earlier", "forms": "after", "example": "We play soccer after school." },
+    { "word": "presently", "meaning": "at this time or soon", "japaneseMeaning": "現在／まもなく", "synonyms": "now, soon", "antonyms": "formerly, later", "forms": "presently", "example": "She is presently at school." },
+    { "word": "yesterday", "meaning": "on the day before today", "japaneseMeaning": "昨日", "synonyms": "the day before, last day", "antonyms": "today, tomorrow", "forms": "yesterday", "example": "Yesterday I visited my grandmother." },
+    { "word": "tomorrow", "meaning": "on the day after today", "japaneseMeaning": "明日", "synonyms": "the next day, soon", "antonyms": "yesterday, today", "forms": "tomorrow", "example": "Tomorrow we will go shopping." },
+    { "word": "tonight", "meaning": "during this night", "japaneseMeaning": "今夜", "synonyms": "this night, evening", "antonyms": "this morning", "forms": "tonight", "example": "I will call you tonight." },
+    { "word": "recently", "meaning": "not long ago", "japaneseMeaning": "最近", "synonyms": "lately, not long ago", "antonyms": "long ago, before", "forms": "recently", "example": "I recently started a new book." },
+    { "word": "later", "meaning": "after this time", "japaneseMeaning": "後で", "synonyms": "after, soon", "antonyms": "now, before", "forms": "later", "example": "I will clean my room later." }
+  ]
+}

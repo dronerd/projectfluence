@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-39",
-  "title": "Lesson 14",
-  "paragraph": "Walking, wanting, watching and other common verbs for daily routines and preferences.",
+  "title": "Lesson 39",
+  "paragraph": "This lesson practices useful verbs for home and school.",
   "words": [
-    { "word": "walk", "meaning": "to move at a regular pace by lifting and setting down each foot", "japaneseMeaning": "歩く", "synonyms": "stroll, stride", "antonyms": "run, sprint", "example": "I walk to school every day." },
-    { "word": "want", "meaning": "to desire something", "japaneseMeaning": "欲する／望む", "synonyms": "wish, desire", "antonyms": "dislike, reject", "example": "I want a new book." },
-    { "word": "watch", "meaning": "to look at something attentively", "japaneseMeaning": "見る／注視する", "synonyms": "observe, view", "antonyms": "ignore, overlook", "example": "Watch the film with subtitles." },
-    { "word": "win", "meaning": "to be successful in a contest or competition", "japaneseMeaning": "勝つ", "synonyms": "victory, prevail", "antonyms": "lose, fail", "example": "She won first prize." },
-    { "word": "wish", "meaning": "to hope for something that is not guaranteed", "japaneseMeaning": "願う", "synonyms": "desire, long for", "antonyms": "dread, reject", "example": "I wish you good luck." },
-    { "word": "work", "meaning": "to perform tasks for a job or purpose", "japaneseMeaning": "働く／作業する", "synonyms": "labor, operate", "antonyms": "rest, idle", "example": "He works at a hospital." },
-    { "word": "worry", "meaning": "to feel anxious about possible problems", "japaneseMeaning": "心配する", "synonyms": "fret, concern", "antonyms": "relax, reassure", "example": "Don't worry, everything will be fine." },
-    { "word": "write", "meaning": "to form letters, words, or symbols on a surface", "japaneseMeaning": "書く", "synonyms": "compose, record", "antonyms": "erase, delete", "example": "Write your name at the top." },
-    { "word": "bake", "meaning": "to cook by dry heat, usually in an oven", "japaneseMeaning": "焼く（オーブンで）", "synonyms": "cook, roast", "antonyms": "freeze, raw", "example": "She likes to bake bread on weekends." },
-    { "word": "behave", "meaning": "to act in a specified manner", "japaneseMeaning": "行動する／振る舞う", "synonyms": "act, conduct oneself", "antonyms": "misbehave, act up", "example": "Please behave politely." },
-    { "word": "brush", "meaning": "to clean or arrange with a brush", "japaneseMeaning": "磨く／ブラッシングする", "synonyms": "comb, scrub", "antonyms": "neglect, ignore", "example": "Brush your teeth twice daily." },
-    { "word": "clap", "meaning": "to strike the palms of the hands together to show approval", "japaneseMeaning": "拍手する", "synonyms": "applaud, applaud", "antonyms": "boo, jeer", "example": "Clap loudly at the end of the show." }
+    { "word": "bake", "meaning": "to cook food in an oven", "japaneseMeaning": "焼く", "synonyms": "cook, heat", "antonyms": "freeze, cool", "forms": "bake, bakes, baking, baked, baked", "example": "We bake cookies on Sunday." },
+    { "word": "brush", "meaning": "to clean or make neat with a brush", "japaneseMeaning": "磨く／ブラシをかける", "synonyms": "clean, comb", "antonyms": "dirty, mess up", "forms": "brush, brushes, brushing, brushed, brushed", "example": "Brush your teeth after breakfast." },
+    { "word": "applaud", "meaning": "to clap for someone", "japaneseMeaning": "拍手する", "synonyms": "clap, cheer", "antonyms": "boo, be quiet", "forms": "applaud, applauds, applauding, applauded, applauded", "example": "The students applaud after the song." },
+    { "word": "sniff", "meaning": "to pull air in through your nose", "japaneseMeaning": "鼻をすする／においをかぐ", "synonyms": "smell, breathe in", "antonyms": "blow, exhale", "forms": "sniff, sniffs, sniffing, sniffed, sniffed", "example": "Do not sniff loudly in class." },
+    { "word": "cross", "meaning": "to go from one side to the other", "japaneseMeaning": "渡る", "synonyms": "go across, pass", "antonyms": "stay, stop", "forms": "cross, crosses, crossing, crossed, crossed", "example": "Cross the street at the light." },
+    { "word": "knock", "meaning": "to hit a door to ask to enter", "japaneseMeaning": "ノックする", "synonyms": "tap, hit", "antonyms": "enter quietly", "forms": "knock, knocks, knocking, knocked, knocked", "example": "Please knock before you come in." },
+    { "word": "pack", "meaning": "to put things into a bag or box", "japaneseMeaning": "荷造りする／詰める", "synonyms": "put in, load", "antonyms": "unpack, empty", "forms": "pack, packs, packing, packed, packed", "example": "Pack your clothes for the trip." },
+    { "word": "press", "meaning": "to push with your finger or hand", "japaneseMeaning": "押す", "synonyms": "push, touch", "antonyms": "release, pull", "forms": "press, presses, pressing, pressed, pressed", "example": "Press this button to open the door." },
+    { "word": "relax", "meaning": "to rest and become calm", "japaneseMeaning": "リラックスする", "synonyms": "rest, calm down", "antonyms": "worry, work", "forms": "relax, relaxes, relaxing, relaxed, relaxed", "example": "I relax after dinner." },
+    { "word": "ski", "meaning": "to move on snow with long thin boards", "japaneseMeaning": "スキーをする", "synonyms": "snow-sport, slide", "antonyms": "walk, stop", "forms": "ski, skis, skiing, skied, skied", "example": "We ski in the mountains in winter." }
   ]
 }

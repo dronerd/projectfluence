@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-71",
+  "title": "Lesson 71",
+  "paragraph": "This lesson practices useful verbs for animals and outdoor actions.",
+  "words": [
+    { "word": "bark", "meaning": "to make the sound a dog makes", "japaneseMeaning": "吠える", "synonyms": "cry, make noise", "antonyms": "be quiet, stop", "forms": "bark, barks, barking, barked, barked", "example": "The dog barks at the gate." },
+    { "word": "hop", "meaning": "to jump with short quick moves", "japaneseMeaning": "ぴょんぴょん跳ぶ", "synonyms": "jump, bounce", "antonyms": "stand, stop", "forms": "hop, hops, hopping, hopped, hopped", "example": "The rabbit hops across the grass." },
+    { "word": "crawl", "meaning": "to move on hands and knees or close to the ground", "japaneseMeaning": "はう", "synonyms": "creep, move slowly", "antonyms": "walk, stand", "forms": "crawl, crawls, crawling, crawled, crawled", "example": "The baby crawls on the floor." },
+    { "word": "dig", "meaning": "to make a hole in the ground", "japaneseMeaning": "掘る", "synonyms": "make a hole, scoop", "antonyms": "fill, cover", "forms": "dig, digs, digging, dug, dug", "example": "The dog digs in the yard." },
+    { "word": "feed", "meaning": "to give food to a person or animal", "japaneseMeaning": "餌をやる／食べ物を与える", "synonyms": "give food, serve", "antonyms": "starve, take food", "forms": "feed, feeds, feeding, fed, fed", "example": "I feed the fish every morning." },
+    { "word": "pet", "meaning": "to touch an animal gently", "japaneseMeaning": "なでる", "synonyms": "stroke, touch", "antonyms": "hit, scare", "forms": "pet, pets, petting, petted, petted", "example": "She pets the cat softly." },
+    { "word": "chase", "meaning": "to run after someone or something", "japaneseMeaning": "追いかける", "synonyms": "run after, follow", "antonyms": "escape, leave", "forms": "chase, chases, chasing, chased, chased", "example": "The dog chases the ball." },
+    { "word": "hide", "meaning": "to go where others cannot see you", "japaneseMeaning": "隠れる／隠す", "synonyms": "cover, stay out of sight", "antonyms": "show, find", "forms": "hide, hides, hiding, hid, hidden", "example": "The cat hides under the sofa." },
+    { "word": "bite", "meaning": "to cut with teeth", "japaneseMeaning": "噛む", "synonyms": "chew, cut", "antonyms": "lick, release", "forms": "bite, bites, biting, bit, bitten", "example": "Do not let the dog bite your hand." },
+    { "word": "sting", "meaning": "to hurt with a sharp part of the body", "japaneseMeaning": "刺す", "synonyms": "prick, hurt", "antonyms": "heal, help", "forms": "sting, stings, stinging, stung, stung", "example": "A bee can sting your arm." }
+  ]
+}

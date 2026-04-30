@@ -1,97 +1,17 @@
 {
   "lesson_id": "eiken-pre2-9",
   "title": "Lesson 9",
-  "paragraph": "Communication and media connect people and share information. Announcements, articles, broadcasts and online posts reach audiences quickly. Good pronunciation, clear messages and careful presentation help reporters and interviewers explain ideas and translate details for readers and listeners.",
+  "paragraph": "Place and transport nouns for simple travel.",
   "words": [
-    {
-      "word": "zoo",
-      "meaning": "a basic word for zoo",
-      "japaneseMeaning": "動物園",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "zoo, zoos",
-      "example": "I see a zoo."
-    },
-    {
-      "word": "mountain",
-      "meaning": "a basic word for mountain",
-      "japaneseMeaning": "山",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "mountain, mountains",
-      "example": "I see a mountain."
-    },
-    {
-      "word": "city",
-      "meaning": "a basic word for city",
-      "japaneseMeaning": "都市",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "city, citys",
-      "example": "I see a city."
-    },
-    {
-      "word": "store",
-      "meaning": "a basic word for store",
-      "japaneseMeaning": "店",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "store, stores",
-      "example": "I see a store."
-    },
-    {
-      "word": "market",
-      "meaning": "a basic word for market",
-      "japaneseMeaning": "市場",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "market, markets",
-      "example": "I see a market."
-    },
-    {
-      "word": "station",
-      "meaning": "a basic word for station",
-      "japaneseMeaning": "駅",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "station, stations",
-      "example": "I see a station."
-    },
-    {
-      "word": "taxi",
-      "meaning": "a basic word for taxi",
-      "japaneseMeaning": "タクシー",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "taxi, taxis",
-      "example": "I see a taxi."
-    },
-    {
-      "word": "bike",
-      "meaning": "a basic word for bike",
-      "japaneseMeaning": "自転車",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "bike, bikes",
-      "example": "I see a bike."
-    },
-    {
-      "word": "car",
-      "meaning": "a basic word for car",
-      "japaneseMeaning": "車",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "car, cars",
-      "example": "I see a car."
-    },
-    {
-      "word": "home",
-      "meaning": "a basic word for home",
-      "japaneseMeaning": "家",
-      "synonyms": "thing, item",
-      "antonyms": "opposite, not",
-      "forms": "home, homes",
-      "example": "I see a home."
-    }
+    { "word": "zoo", "meaning": "a place where people can see animals", "japaneseMeaning": "動物園", "synonyms": "", "antonyms": "", "forms": "zoo, zoos", "example": "We saw a lion at the zoo." },
+    { "word": "mountain", "meaning": "a very high hill", "japaneseMeaning": "山", "synonyms": "", "antonyms": "", "forms": "mountain, mountains", "example": "The mountain is covered with snow." },
+    { "word": "city", "meaning": "a large town with many people", "japaneseMeaning": "都市", "synonyms": "large town", "antonyms": "village", "forms": "city, cities", "example": "Tokyo is a big city." },
+    { "word": "store", "meaning": "a place where people buy things", "japaneseMeaning": "店", "synonyms": "shop", "antonyms": "", "forms": "store, stores", "example": "The store sells shoes." },
+    { "word": "mall", "meaning": "a large building with many shops", "japaneseMeaning": "ショッピングモール", "synonyms": "shopping center", "antonyms": "", "forms": "mall, malls", "example": "We bought shoes at the mall." },
+    { "word": "station", "meaning": "a place where trains or buses stop", "japaneseMeaning": "駅", "synonyms": "", "antonyms": "", "forms": "station, stations", "example": "The station is near my school." },
+    { "word": "taxi", "meaning": "a car you pay to ride in", "japaneseMeaning": "タクシー", "synonyms": "cab", "antonyms": "", "forms": "taxi, taxis", "example": "We took a taxi to the hotel." },
+    { "word": "bike", "meaning": "a bicycle", "japaneseMeaning": "自転車", "synonyms": "bicycle", "antonyms": "", "forms": "bike, bikes", "example": "My bike is red." },
+    { "word": "car", "meaning": "a road vehicle for a few people", "japaneseMeaning": "車", "synonyms": "auto", "antonyms": "", "forms": "car, cars", "example": "My father drives a car." },
+    { "word": "home", "meaning": "the place where you live", "japaneseMeaning": "家、家庭", "synonyms": "house", "antonyms": "", "forms": "home, homes", "example": "I go home after school." }
   ]
 }

@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-43",
-  "title": "Lesson 18",
-  "paragraph": "Verbs for injuries, crime, admiration, and polite interactions.",
+  "title": "Lesson 43",
+  "paragraph": "This lesson practices useful verbs for cooking and movement.",
   "words": [
-    { "word": "hit", "meaning": "to strike someone or something", "japaneseMeaning": "打つ／殴る", "synonyms": "strike, slap", "antonyms": "miss, avoid", "example": "Don't hit your brother." },
-    { "word": "injure", "meaning": "to cause physical harm or damage", "japaneseMeaning": "けがをさせる／損傷する", "synonyms": "harm, wound", "antonyms": "heal, help", "example": "He injured his arm playing soccer." },
-    { "word": "rob", "meaning": "to take property illegally from a person or place", "japaneseMeaning": "奪う／強盗する", "synonyms": "steal, burglarize", "antonyms": "give, return", "example": "The bank was robbed last night." },
-    { "word": "shoot", "meaning": "to fire a weapon or send out a projectile", "japaneseMeaning": "撃つ／発射する", "synonyms": "fire, discharge", "antonyms": "miss, refrain", "example": "He learned to shoot at the range." },
-    { "word": "admire", "meaning": "to regard with respect or warm approval", "japaneseMeaning": "称賛する／感嘆する", "synonyms": "appreciate, esteem", "antonyms": "despise, criticize", "example": "I admire her dedication." },
-    { "word": "admit", "meaning": "to confess or acknowledge something", "japaneseMeaning": "認める／告白する", "synonyms": "confess, acknowledge", "antonyms": "deny, reject", "example": "He admitted his mistake." },
-    { "word": "afford", "meaning": "to have enough money to pay for", "japaneseMeaning": "余裕がある／買う余裕がある", "synonyms": "pay for, bear", "antonyms": "lack, be unable", "example": "I can't afford a new car now." },
-    { "word": "annoy", "meaning": "to make someone slightly angry or irritated", "japaneseMeaning": "イライラさせる／悩ます", "synonyms": "irritate, bother", "antonyms": "please, delight", "example": "Loud music annoys me." },
-    { "word": "apologize", "meaning": "to express regret for something done wrong", "japaneseMeaning": "謝る", "synonyms": "say sorry, repent", "antonyms": "blame, accuse", "example": "He apologized for being late." },
-    { "word": "approach", "meaning": "to come near in distance or time", "japaneseMeaning": "近づく／アプローチする", "synonyms": "near, come close", "antonyms": "recede, withdraw", "example": "Winter is approaching quickly." },
-    { "word": "approve", "meaning": "to officially agree or accept", "japaneseMeaning": "承認する／賛成する", "synonyms": "authorize, endorse", "antonyms": "reject, deny", "example": "The committee approved the plan." },
-    { "word": "arrange", "meaning": "to put things in a neat or required order", "japaneseMeaning": "手配する／整える", "synonyms": "organize, plan", "antonyms": "disorder, neglect", "example": "Arrange the chairs for the meeting." }
+    { "word": "boil", "meaning": "to cook in very hot water", "japaneseMeaning": "ゆでる／沸かす", "synonyms": "cook, heat", "antonyms": "cool, freeze", "forms": "boil, boils, boiling, boiled, boiled", "example": "Boil the eggs for ten minutes." },
+    { "word": "fry", "meaning": "to cook in hot oil", "japaneseMeaning": "揚げる／炒める", "synonyms": "cook, heat", "antonyms": "cool, freeze", "forms": "fry, fries, frying, fried, fried", "example": "My father fries fish for dinner." },
+    { "word": "pour", "meaning": "to make liquid flow from a container", "japaneseMeaning": "注ぐ", "synonyms": "put in, flow", "antonyms": "hold, keep", "forms": "pour, pours, pouring, poured, poured", "example": "Pour some water into the glass." },
+    { "word": "slice", "meaning": "to cut into thin pieces", "japaneseMeaning": "薄く切る", "synonyms": "cut, chop", "antonyms": "join, mix", "forms": "slice, slices, slicing, sliced, sliced", "example": "Slice the apple before you eat it." },
+    { "word": "stir", "meaning": "to move food or drink with a spoon", "japaneseMeaning": "かき混ぜる", "synonyms": "mix, move", "antonyms": "leave, separate", "forms": "stir, stirs, stirring, stirred, stirred", "example": "Stir the soup slowly." },
+    { "word": "taste", "meaning": "to try food or drink with your mouth", "japaneseMeaning": "味見する", "synonyms": "try, sample", "antonyms": "refuse, avoid", "forms": "taste, tastes, tasting, tasted, tasted", "example": "Taste the sauce before dinner." },
+    { "word": "burn", "meaning": "to damage with fire or heat", "japaneseMeaning": "燃やす／焦がす", "synonyms": "scorch, heat", "antonyms": "cool, save", "forms": "burn, burns, burning, burned, burned", "example": "Do not burn the toast." },
+    { "word": "freeze", "meaning": "to become hard because of cold", "japaneseMeaning": "凍る／凍らせる", "synonyms": "ice, get cold", "antonyms": "melt, heat", "forms": "freeze, freezes, freezing, froze, frozen", "example": "Water freezes in winter." },
+    { "word": "melt", "meaning": "to become liquid because of heat", "japaneseMeaning": "溶ける／溶かす", "synonyms": "soften, become liquid", "antonyms": "freeze, harden", "forms": "melt, melts, melting, melted, melted", "example": "The ice cream melts in the sun." },
+    { "word": "shake", "meaning": "to move quickly up and down or side to side", "japaneseMeaning": "振る／揺れる", "synonyms": "move, wave", "antonyms": "hold still, stop", "forms": "shake, shakes, shaking, shook, shaken", "example": "Shake the bottle before you drink it." }
   ]
 }

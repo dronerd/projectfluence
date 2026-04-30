@@ -1,104 +1,17 @@
 {
-    "lesson_id": "eiken-pre2-46",
-    "title": "Lesson 46",
-    "paragraph": "This lesson (Lesson 46) covers adjectives describing quality, size and social scope.",
-    "words": [
-      {
-        "word": "excellent",
-        "meaning": "extremely good; outstanding",
-        "japaneseMeaning": "素晴らしい",
-        "synonyms": "outstanding, superb",
-        "antonyms": "poor, mediocre",
-        "example": "Her presentation was excellent."
-      },
-      {
-        "word": "familiar",
-        "meaning": "well known from long or close association",
-        "japaneseMeaning": "馴染みのある",
-        "synonyms": "known, recognizable",
-        "antonyms": "strange, unfamiliar",
-        "example": "That melody sounded familiar to me."
-      },
-      {
-        "word": "fresh",
-        "meaning": "recently made or obtained; new",
-        "japaneseMeaning": "新鮮な",
-        "synonyms": "new, crisp",
-        "antonyms": "stale, old",
-        "example": "We bought fresh vegetables at the market."
-      },
-      {
-        "word": "global",
-        "meaning": "relating to the whole world",
-        "japaneseMeaning": "世界的な／国際的な",
-        "synonyms": "worldwide, international",
-        "antonyms": "local, regional",
-        "example": "Climate change is a global issue."
-      },
-      {
-        "word": "heavy",
-        "meaning": "weighing a lot",
-        "japaneseMeaning": "重い",
-        "synonyms": "weighty, burdensome",
-        "antonyms": "light, lightweight",
-        "example": "This box is too heavy for me to lift."
-      },
-      {
-        "word": "huge",
-        "meaning": "extremely large in size or amount",
-        "japaneseMeaning": "巨大な",
-        "synonyms": "enormous, vast",
-        "antonyms": "tiny, small",
-        "example": "They live in a huge house."
-      },
-      {
-        "word": "legal",
-        "meaning": "allowed or required by law",
-        "japaneseMeaning": "合法的な",
-        "synonyms": "lawful, legitimate",
-        "antonyms": "illegal, unlawful",
-        "example": "You should check the legal requirements first."
-      },
-      {
-        "word": "local",
-        "meaning": "relating to a particular area or neighborhood",
-        "japaneseMeaning": "地元の",
-        "synonyms": "regional, nearby",
-        "antonyms": "global, national",
-        "example": "We support local businesses."
-      },
-      {
-        "word": "loud",
-        "meaning": "producing much noise",
-        "japaneseMeaning": "うるさい／大きな音の",
-        "synonyms": "noisy, booming",
-        "antonyms": "quiet, silent",
-        "example": "The music was too loud for the room."
-      },
-      {
-        "word": "main",
-        "meaning": "most important or principal",
-        "japaneseMeaning": "主要な",
-        "synonyms": "primary, principal",
-        "antonyms": "minor, secondary",
-        "example": "The main reason is lack of time."
-      },
-      {
-        "word": "natural",
-        "meaning": "existing in nature; not made or altered by people",
-        "japaneseMeaning": "自然の／天然の",
-        "synonyms": "organic, innate",
-        "antonyms": "artificial, man-made",
-        "example": "They prefer natural fabrics like cotton."
-      },
-      {
-        "word": "noisy",
-        "meaning": "making a lot of noise",
-        "japaneseMeaning": "騒がしい",
-        "synonyms": "loud, clamorous",
-        "antonyms": "quiet, peaceful",
-        "example": "The street outside is very noisy at night."
-      }
-    ]
-  }
- 
+  "lesson_id": "eiken-pre2-46",
+  "title": "Lesson 46",
+  "paragraph": "This lesson practices useful nouns for rooms and home life.",
+  "words": [
+    { "word": "kitchen", "meaning": "a room where people cook food", "japaneseMeaning": "台所", "synonyms": "cooking room, food room", "antonyms": "none", "forms": "kitchen, kitchens", "example": "My mother is in the kitchen." },
+    { "word": "bathroom", "meaning": "a room with a toilet or bath", "japaneseMeaning": "浴室／トイレ", "synonyms": "washroom, restroom", "antonyms": "none", "forms": "bathroom, bathrooms", "example": "The bathroom is next to my room." },
+    { "word": "bedroom", "meaning": "a room where people sleep", "japaneseMeaning": "寝室", "synonyms": "sleeping room, room", "antonyms": "none", "forms": "bedroom, bedrooms", "example": "My bedroom has a small desk." },
+    { "word": "living room", "meaning": "a room where family or guests sit", "japaneseMeaning": "居間／リビング", "synonyms": "family room, sitting room", "antonyms": "none", "forms": "living room, living rooms", "example": "We watch TV in the living room." },
+    { "word": "stairs", "meaning": "steps that go up or down in a building", "japaneseMeaning": "階段", "synonyms": "steps, staircase", "antonyms": "elevator", "forms": "stairs", "example": "Use the stairs to go to the second floor." },
+    { "word": "roof", "meaning": "the top part of a house or building", "japaneseMeaning": "屋根", "synonyms": "top, cover", "antonyms": "floor", "forms": "roof, roofs", "example": "Rain falls on the roof." },
+    { "word": "floor", "meaning": "the part of a room that you walk on", "japaneseMeaning": "床／階", "synonyms": "ground, level", "antonyms": "ceiling, roof", "forms": "floor, floors", "example": "Please clean the kitchen floor." },
+    { "word": "ceiling", "meaning": "the top inside part of a room", "japaneseMeaning": "天井", "synonyms": "top, inside roof", "antonyms": "floor", "forms": "ceiling, ceilings", "example": "The ceiling is white." },
+    { "word": "wall", "meaning": "the side part of a room or building", "japaneseMeaning": "壁", "synonyms": "side, barrier", "antonyms": "opening", "forms": "wall, walls", "example": "There is a picture on the wall." },
+    { "word": "yard", "meaning": "land next to a house", "japaneseMeaning": "庭", "synonyms": "garden, outside area", "antonyms": "room", "forms": "yard, yards", "example": "The children play in the yard." }
+  ]
+}

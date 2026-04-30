@@ -1,19 +1,17 @@
 {
   "lesson_id": "eiken-pre2-27",
-  "title": "Lesson 2",
-  "paragraph": "This lesson focuses on verbs that describe handling objects, movement, and basic interactions — useful for daily conversations and practical tasks.",
+  "title": "Lesson 27",
+  "paragraph": "This lesson practices simple verbs for moving and doing things.",
   "words": [
-    { "word": "break", "meaning": "to separate into pieces or stop working", "japaneseMeaning": "壊す／壊れる", "synonyms": "fracture, damage", "antonyms": "fix, mend", "example": "He accidentally broke the glass." },
-    { "word": "bring", "meaning": "to carry something to a place", "japaneseMeaning": "持って来る", "synonyms": "carry, deliver", "antonyms": "take away, remove", "example": "Please bring your textbook tomorrow." },
-    { "word": "build", "meaning": "to construct by putting parts together", "japaneseMeaning": "建てる／作る", "synonyms": "construct, create", "antonyms": "destroy, demolish", "example": "They plan to build a new bridge." },
-    { "word": "cancel", "meaning": "to decide that an arranged event will not happen", "japaneseMeaning": "キャンセルする", "synonyms": "call off, revoke", "antonyms": "confirm, proceed", "example": "The flight was canceled due to weather." },
-    { "word": "carry", "meaning": "to support and move something from one place to another", "japaneseMeaning": "運ぶ", "synonyms": "transport, bear", "antonyms": "drop, leave", "example": "She carried the box upstairs." },
-    { "word": "catch", "meaning": "to capture or take hold of something", "japaneseMeaning": "捕まえる", "synonyms": "grab, seize", "antonyms": "miss, release", "example": "He caught the ball easily." },
-    { "word": "choose", "meaning": "to select from two or more options", "japaneseMeaning": "選ぶ", "synonyms": "select, pick", "antonyms": "reject, refuse", "example": "Choose the best answer." },
-    { "word": "collect", "meaning": "to bring things together as a group", "japaneseMeaning": "集める", "synonyms": "gather, assemble", "antonyms": "scatter, disperse", "example": "She collects stamps as a hobby." },
-    { "word": "compare", "meaning": "to examine similarities and differences", "japaneseMeaning": "比較する", "synonyms": "contrast, evaluate", "antonyms": "ignore, separate", "example": "Compare the two products before buying." },
-    { "word": "complain", "meaning": "to express dissatisfaction or annoyance", "japaneseMeaning": "不平を言う", "synonyms": "grumble, protest", "antonyms": "praise, compliment", "example": "He complained about the noise." },
-    { "word": "complete", "meaning": "to finish something", "japaneseMeaning": "完了する", "synonyms": "finish, accomplish", "antonyms": "start, neglect", "example": "She completed the assignment on time." },
-    { "word": "concentrate", "meaning": "to direct attention or effort toward something", "japaneseMeaning": "集中する", "synonyms": "focus, attend", "antonyms": "distract, neglect", "example": "Concentrate on the task at hand." }
+    { "word": "break", "meaning": "to make something stop working or become pieces", "japaneseMeaning": "壊す／壊れる", "synonyms": "damage, crack", "antonyms": "fix, repair", "forms": "break, breaks, breaking, broke, broken", "example": "Do not break the glass cup." },
+    { "word": "bring", "meaning": "to take something or someone to a place", "japaneseMeaning": "持ってくる／連れてくる", "synonyms": "take, carry", "antonyms": "leave, remove", "forms": "bring, brings, bringing, brought, brought", "example": "Please bring your notebook to class." },
+    { "word": "build", "meaning": "to make something by putting parts together", "japaneseMeaning": "建てる／作る", "synonyms": "make, create", "antonyms": "destroy, break", "forms": "build, builds, building, built, built", "example": "They build a small house near the river." },
+    { "word": "cancel", "meaning": "to stop a plan from happening", "japaneseMeaning": "取り消す／中止する", "synonyms": "stop, call off", "antonyms": "plan, continue", "forms": "cancel, cancels, canceling, canceled, canceled", "example": "We cancel the picnic because it is raining." },
+    { "word": "carry", "meaning": "to hold and move something", "japaneseMeaning": "運ぶ／持つ", "synonyms": "hold, take", "antonyms": "drop, leave", "forms": "carry, carries, carrying, carried, carried", "example": "Can you carry this bag for me?" },
+    { "word": "catch", "meaning": "to stop and hold something moving", "japaneseMeaning": "捕まえる／受け止める", "synonyms": "grab, get", "antonyms": "miss, drop", "forms": "catch, catches, catching, caught, caught", "example": "He can catch the ball with one hand." },
+    { "word": "choose", "meaning": "to pick one thing from two or more", "japaneseMeaning": "選ぶ", "synonyms": "pick, select", "antonyms": "refuse, reject", "forms": "choose, chooses, choosing, chose, chosen", "example": "Choose one color for your bag." },
+    { "word": "collect", "meaning": "to bring things together", "japaneseMeaning": "集める", "synonyms": "gather, get", "antonyms": "spread, give out", "forms": "collect, collects, collecting, collected, collected", "example": "The teacher collects our homework." },
+    { "word": "compare", "meaning": "to look at two things and see how they are different or the same", "japaneseMeaning": "比べる", "synonyms": "check, match", "antonyms": "separate, ignore", "forms": "compare, compares, comparing, compared, compared", "example": "Compare the two pictures and find five changes." },
+    { "word": "complain", "meaning": "to say that something is wrong or bad", "japaneseMeaning": "文句を言う", "synonyms": "protest, object", "antonyms": "praise, accept", "forms": "complain, complains, complaining, complained, complained", "example": "Please do not complain about the food before you try it." }
   ]
 }

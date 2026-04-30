@@ -1,0 +1,17 @@
+{
+  "lesson_id": "eiken-pre2-88",
+  "title": "Lesson 88",
+  "paragraph": "This lesson practices useful adjectives for technology and devices.",
+  "words": [
+    { "word": "online", "meaning": "using the internet", "japaneseMeaning": "オンラインの", "synonyms": "on the internet, connected", "antonyms": "offline, disconnected", "forms": "online", "example": "We have an online class today." },
+    { "word": "offline", "meaning": "not using the internet", "japaneseMeaning": "オフラインの", "synonyms": "not connected, disconnected", "antonyms": "online, connected", "forms": "offline", "example": "This game works offline." },
+    { "word": "digital", "meaning": "using computer technology", "japaneseMeaning": "デジタルの", "synonyms": "computer, electronic", "antonyms": "paper, analog", "forms": "digital, more digital, most digital", "example": "I use a digital dictionary." },
+    { "word": "electronic", "meaning": "using electricity", "japaneseMeaning": "電子の", "synonyms": "electric, digital", "antonyms": "manual, paper", "forms": "electronic, more electronic, most electronic", "example": "This is an electronic ticket." },
+    { "word": "wireless", "meaning": "working without a cable", "japaneseMeaning": "ワイヤレスの", "synonyms": "cordless, cable-free", "antonyms": "wired, connected", "forms": "wireless", "example": "I use wireless headphones." },
+    { "word": "portable", "meaning": "easy to carry", "japaneseMeaning": "持ち運びできる", "synonyms": "easy to carry, light", "antonyms": "fixed, heavy", "forms": "portable, more portable, most portable", "example": "This portable speaker is small." },
+    { "word": "broken", "meaning": "not working", "japaneseMeaning": "壊れた", "synonyms": "damaged, not working", "antonyms": "fixed, working", "forms": "broken, more broken, most broken", "example": "My phone screen is broken." },
+    { "word": "updated", "meaning": "made new or current", "japaneseMeaning": "更新された", "synonyms": "new, current", "antonyms": "old, outdated", "forms": "updated, more updated, most updated", "example": "The app is updated now." },
+    { "word": "automatic", "meaning": "working by itself", "japaneseMeaning": "自動の", "synonyms": "self-working, machine-run", "antonyms": "manual, hand-run", "forms": "automatic, more automatic, most automatic", "example": "The door is automatic." },
+    { "word": "manual", "meaning": "done by hand, not by itself", "japaneseMeaning": "手動の", "synonyms": "by hand, hand-run", "antonyms": "automatic, self-working", "forms": "manual, more manual, most manual", "example": "This camera has manual settings." }
+  ]
+}

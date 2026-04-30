@@ -1,104 +1,17 @@
- {
-    "lesson_id": "eiken-pre2-48",
-    "title": "Lesson 48",
-    "paragraph": "This lesson (Lesson 48) includes adjectives for simplicity, tradition and character traits used to describe people.",
-    "words": [
-      {
-        "word": "simple",
-        "meaning": "easy to understand or do; not complicated",
-        "japaneseMeaning": "簡単な",
-        "synonyms": "easy, straightforward",
-        "antonyms": "complex, complicated",
-        "example": "The instructions are simple to follow."
-      },
-      {
-        "word": "traditional",
-        "meaning": "based on customs or long-established practices",
-        "japaneseMeaning": "伝統的な",
-        "synonyms": "conventional, classic",
-        "antonyms": "modern, innovative",
-        "example": "They wore traditional clothes for the festival."
-      },
-      {
-        "word": "useful",
-        "meaning": "able to be used effectively for a purpose",
-        "japaneseMeaning": "役に立つ",
-        "synonyms": "helpful, practical",
-        "antonyms": "useless, pointless",
-        "example": "This app is very useful for learning vocabulary."
-      },
-      {
-        "word": "weak",
-        "meaning": "lacking strength or power",
-        "japaneseMeaning": "弱い",
-        "synonyms": "feeble, frail",
-        "antonyms": "strong, powerful",
-        "example": "He felt weak after the long illness."
-      },
-      {
-        "word": "active",
-        "meaning": "engaging in physical or mental activity",
-        "japaneseMeaning": "活動的な／活発な",
-        "synonyms": "energetic, dynamic",
-        "antonyms": "inactive, passive",
-        "example": "She is very active in community events."
-      },
-      {
-        "word": "ambitious",
-        "meaning": "having a strong desire to achieve success",
-        "japaneseMeaning": "野心的な",
-        "synonyms": "driven, aspiring",
-        "antonyms": "unambitious, complacent",
-        "example": "He is ambitious and aims to be a manager."
-      },
-      {
-        "word": "arrogant",
-        "meaning": "having an exaggerated sense of one's importance",
-        "japaneseMeaning": "傲慢な",
-        "synonyms": "haughty, conceited",
-        "antonyms": "humble, modest",
-        "example": "He came across as arrogant during the meeting."
-      },
-      {
-        "word": "attractive",
-        "meaning": "pleasing or appealing to the senses",
-        "japaneseMeaning": "魅力的な",
-        "synonyms": "appealing, charming",
-        "antonyms": "unattractive, plain",
-        "example": "The design is very attractive to customers."
-      },
-      {
-        "word": "average",
-        "meaning": "typical or ordinary; the middle value",
-        "japaneseMeaning": "平均的な／普通の",
-        "synonyms": "typical, ordinary",
-        "antonyms": "exceptional, extraordinary",
-        "example": "Her test score was about average."
-      },
-      {
-        "word": "brave",
-        "meaning": "ready to face danger or pain without showing fear",
-        "japaneseMeaning": "勇敢な",
-        "synonyms": "courageous, bold",
-        "antonyms": "cowardly, timid",
-        "example": "The firefighter was brave during the rescue."
-      },
-      {
-        "word": "careless",
-        "meaning": "not giving enough attention; negligent",
-        "japaneseMeaning": "不注意な",
-        "synonyms": "negligent, sloppy",
-        "antonyms": "careful, cautious",
-        "example": "His careless mistake caused the delay."
-      },
-      {
-        "word": "charming",
-        "meaning": "pleasant or delightful in manner",
-        "japaneseMeaning": "魅力的な",
-        "synonyms": "delightful, pleasant",
-        "antonyms": "offensive, rude",
-        "example": "She has a charming smile."
-      }
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-pre2-48",
+  "title": "Lesson 48",
+  "paragraph": "This lesson practices useful adjectives for people.",
+  "words": [
+    { "word": "polite", "meaning": "showing good manners", "japaneseMeaning": "礼儀正しい", "synonyms": "nice, respectful", "antonyms": "rude, impolite", "forms": "polite, politer, politest", "example": "Be polite to the shop clerk." },
+    { "word": "rude", "meaning": "not polite", "japaneseMeaning": "失礼な", "synonyms": "impolite, unkind", "antonyms": "polite, nice", "forms": "rude, ruder, rudest", "example": "It is rude to speak with food in your mouth." },
+    { "word": "honest", "meaning": "telling the truth", "japaneseMeaning": "正直な", "synonyms": "truthful, fair", "antonyms": "dishonest, false", "forms": "honest, more honest, most honest", "example": "An honest student tells the truth." },
+    { "word": "brave", "meaning": "not afraid to do something hard or dangerous", "japaneseMeaning": "勇敢な", "synonyms": "strong, bold", "antonyms": "afraid, scared", "forms": "brave, braver, bravest", "example": "The brave girl asks a question first." },
+    { "word": "shy", "meaning": "nervous with other people", "japaneseMeaning": "内気な／恥ずかしがりの", "synonyms": "quiet, nervous", "antonyms": "outgoing, bold", "forms": "shy, shyer, shyest", "example": "My little brother is shy with new people." },
+    { "word": "clever", "meaning": "quick to learn or understand", "japaneseMeaning": "賢い", "synonyms": "smart, bright", "antonyms": "foolish, slow", "forms": "clever, cleverer, cleverest", "example": "She is clever and solves the puzzle." },
+    { "word": "thoughtful", "meaning": "kind and thinking about other people", "japaneseMeaning": "思いやりのある", "synonyms": "kind, caring", "antonyms": "thoughtless, selfish", "forms": "thoughtful, more thoughtful, most thoughtful", "example": "She is thoughtful and helps her friends." },
+    { "word": "thoughtless", "meaning": "not thinking about other people", "japaneseMeaning": "思いやりのない", "synonyms": "unkind, careless", "antonyms": "thoughtful, kind", "forms": "thoughtless, more thoughtless, most thoughtless", "example": "A thoughtless comment can hurt someone." },
+    { "word": "patient", "meaning": "able to wait calmly", "japaneseMeaning": "我慢強い", "synonyms": "calm, steady", "antonyms": "impatient, angry", "forms": "patient, more patient, most patient", "example": "Our teacher is patient with new students." },
+    { "word": "impatient", "meaning": "not able to wait calmly", "japaneseMeaning": "我慢できない／短気な", "synonyms": "restless, hurried", "antonyms": "patient, calm", "forms": "impatient, more impatient, most impatient", "example": "He gets impatient in a long line." }
+  ]
+}

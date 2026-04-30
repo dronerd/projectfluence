@@ -1,103 +1,17 @@
-  {
-    "lesson_id": "eiken-pre2-58",
-    "title": "Lesson 58",
-    "paragraph": "Adjectives for quality, size, and sensory description — ideal for describing objects and experiences.",
-    "words": [
-      {
-        "word": "dark",
-        "meaning": "with little or no light; not light in color",
-        "japaneseMeaning": "暗い／濃い色の",
-        "synonyms": "dim, shadowy",
-        "antonyms": "bright, light",
-        "example": "The room was dark after the lights went out."
-      },
-      {
-        "word": "deep",
-        "meaning": "extending far down from the top or surface; intense",
-        "japaneseMeaning": "深い",
-        "synonyms": "profound, bottomless",
-        "antonyms": "shallow, superficial",
-        "example": "The water becomes deep near the cliffs."
-      },
-      {
-        "word": "delicious",
-        "meaning": "very pleasant to taste; tasty",
-        "japaneseMeaning": "おいしい／美味な",
-        "synonyms": "tasty, scrumptious",
-        "antonyms": "tasteless, awful",
-        "example": "The soup was delicious and warmed us up."
-      },
-      {
-        "word": "difficult",
-        "meaning": "needing effort or skill to do or understand",
-        "japaneseMeaning": "難しい",
-        "synonyms": "hard, challenging",
-        "antonyms": "easy, simple",
-        "example": "This math problem is difficult to solve."
-      },
-      {
-        "word": "dirty",
-        "meaning": "not clean; covered with unclean matter",
-        "japaneseMeaning": "汚れた／不潔な",
-        "synonyms": "filthy, soiled",
-        "antonyms": "clean, spotless",
-        "example": "Your shoes are dirty from the rain."
-      },
-      {
-        "word": "easy",
-        "meaning": "not difficult; requiring little effort",
-        "japaneseMeaning": "簡単な／容易な",
-        "synonyms": "simple, effortless",
-        "antonyms": "difficult, hard",
-        "example": "The exercise was easy for most students."
-      },
-      {
-        "word": "empty",
-        "meaning": "containing nothing; vacant",
-        "japaneseMeaning": "空の／中身がない",
-        "synonyms": "vacant, hollow",
-        "antonyms": "full, occupied",
-        "example": "The bottle is empty — can you refill it?"
-      },
-      {
-        "word": "enormous",
-        "meaning": "very large in size or quantity",
-        "japaneseMeaning": "巨大な／莫大な",
-        "synonyms": "huge, massive",
-        "antonyms": "tiny, small",
-        "example": "The stadium was enormous and held thousands of fans."
-      },
-      {
-        "word": "expensive",
-        "meaning": "costing a lot of money",
-        "japaneseMeaning": "高価な／値段の高い",
-        "synonyms": "costly, pricey",
-        "antonyms": "cheap, inexpensive",
-        "example": "That watch is too expensive for my budget."
-      },
-      {
-        "word": "fair",
-        "meaning": "treating people equally and without favoritism; reasonable",
-        "japaneseMeaning": "公平な／公正な",
-        "synonyms": "just, impartial",
-        "antonyms": "unfair, biased",
-        "example": "The judge made a fair decision."
-      },
-      {
-        "word": "fast",
-        "meaning": "moving or capable of moving at high speed",
-        "japaneseMeaning": "速い",
-        "synonyms": "quick, speedy",
-        "antonyms": "slow, sluggish",
-        "example": "This car is very fast on the highway."
-      },
-      {
-        "word": "fat",
-        "meaning": "having a large amount of excess flesh; or rich in fat content (food)",
-        "japaneseMeaning": "太った／脂肪の多い",
-        "synonyms": "overweight (person), greasy (food)",
-        "antonyms": "thin, lean",
-        "example": "The recipe uses fat meat for flavor."
-      }
-    ]
-  }
+{
+  "lesson_id": "eiken-pre2-58",
+  "title": "Lesson 58",
+  "paragraph": "This lesson practices useful nouns for town and public places.",
+  "words": [
+    { "word": "corner", "meaning": "the place where two roads or walls meet", "japaneseMeaning": "角", "synonyms": "turn, edge", "antonyms": "center", "forms": "corner, corners", "example": "The bakery is on the corner." },
+    { "word": "crosswalk", "meaning": "a marked place where people cross a road", "japaneseMeaning": "横断歩道", "synonyms": "crossing, road line", "antonyms": "road", "forms": "crosswalk, crosswalks", "example": "Use the crosswalk to cross the street." },
+    { "word": "sidewalk", "meaning": "a path beside a road for people to walk on", "japaneseMeaning": "歩道", "synonyms": "footpath, path", "antonyms": "road", "forms": "sidewalk, sidewalks", "example": "Walk on the sidewalk, not the road." },
+    { "word": "overpass", "meaning": "a road or path over another road", "japaneseMeaning": "陸橋／高架橋", "synonyms": "bridge, crossing", "antonyms": "tunnel", "forms": "overpass, overpasses", "example": "Walk across the overpass." },
+    { "word": "tunnel", "meaning": "a road or path under the ground", "japaneseMeaning": "トンネル", "synonyms": "underground road, passage", "antonyms": "bridge", "forms": "tunnel, tunnels", "example": "The train goes through a tunnel." },
+    { "word": "square", "meaning": "an open place in a town", "japaneseMeaning": "広場", "synonyms": "plaza, open place", "antonyms": "room", "forms": "square, squares", "example": "People meet in the town square." },
+    { "word": "fountain", "meaning": "a place where water goes up into the air", "japaneseMeaning": "噴水", "synonyms": "water place, spring", "antonyms": "dry place", "forms": "fountain, fountains", "example": "There is a fountain in the park." },
+    { "word": "bench", "meaning": "a long seat for two or more people", "japaneseMeaning": "ベンチ", "synonyms": "seat, long chair", "antonyms": "floor", "forms": "bench, benches", "example": "We sit on a bench near the tree." },
+    { "word": "notice", "meaning": "a written message with information", "japaneseMeaning": "掲示／お知らせ", "synonyms": "sign, message", "antonyms": "blank board", "forms": "notice, notices", "example": "Read the notice before you enter." },
+    { "word": "gateway", "meaning": "a gate or place where you go in", "japaneseMeaning": "出入口／門", "synonyms": "gate, way in", "antonyms": "exit", "forms": "gateway, gateways", "example": "The gateway is on the left." }
+  ]
+}
