@@ -69,9 +69,7 @@ export default function SpeakWiseApp({ pathname }: Props) {
         html,
         body,
         #__next {
-          background:
-            radial-gradient(circle at top, rgba(81, 126, 198, 0.22), transparent 34%),
-            linear-gradient(180deg, #091426 0%, #0b1630 42%, #111f3d 100%);
+          background: #e5e7eb;
           color: var(--sw-text);
         }
 
@@ -83,9 +81,7 @@ export default function SpeakWiseApp({ pathname }: Props) {
 
         .speakwise-shell {
           min-height: 100vh;
-          background:
-            radial-gradient(circle at top right, rgba(144, 167, 205, 0.12), transparent 28%),
-            linear-gradient(180deg, #091426 0%, #0b1630 42%, #111f3d 100%);
+          background: #e5e7eb;
           color: var(--sw-text);
         }
 
