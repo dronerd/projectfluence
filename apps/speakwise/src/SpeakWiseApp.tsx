@@ -29,16 +29,7 @@ function SpeakWiseHeader() {
           </a>
         </div>
 
-        <div className="speakwise-header-right">
-          <a
-            href="/speakwise"
-            className="speakwise-pill speakwise-app-pill"
-            aria-label="SpeakWise home page"
-          >
-            <img src="/images/speakwise.png" alt="SpeakWise logo" />
-            <span>Home</span>
-          </a>
-        </div>
+        <div className="speakwise-header-right" aria-hidden="true" />
       </div>
     </header>
   );

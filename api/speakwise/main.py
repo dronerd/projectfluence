@@ -45,6 +45,7 @@ def get_openai_client() -> OpenAI:
     return OpenAI(api_key=api_key)
 
 COMPONENT_ALIASES = {
+    "単語": "vocab",
     "単語練習": "vocab",
     "vocab practice": "vocab",
     "vocabulary practice": "vocab",
@@ -53,6 +54,7 @@ COMPONENT_ALIASES = {
     "会話練習": "conversation",
     "speaking practice": "conversation",
     "conversation practice": "conversation",
+    "文法": "grammar",
     "文法練習": "grammar",
     "grammar": "grammar",
 }
@@ -237,3 +239,89 @@ async def voice(req: dict[str, Any]):
         return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
         return JSONResponse({"error": "OpenAI voice request failed", "details": str(exc)}, status_code=500)
+
+
+def build_feedback_prompt(question: str, user_answer: str, level: str, tests: str, skills: str, practice_mode: str) -> str:
+    return f"""You are an expert English language teacher providing detailed, constructive feedback.
+
+Student Information:
+- CEFR Level: {level}
+- Test Focus: {tests}
+- Skills Focus: {skills}
+- Practice Mode: {practice_mode}
+
+Practice Question:
+{question}
+
+Student's Response:
+{user_answer}
+
+Analyze the student's response carefully and provide structured feedback in JSON format only.
+
+Respond ONLY with valid JSON (no markdown, no explanation outside the JSON) with this exact structure:
+{{
+  "overall": "A 1-2 sentence overall assessment of the response",
+  "grammar": ["Grammar point 1", "Grammar point 2"],
+  "vocabulary": ["Vocabulary suggestion 1", "Vocabulary suggestion 2"],
+  "pronunciation": ["Pronunciation tip 1"],
+  "fluency": ["Fluency observation 1", "Fluency observation 2"],
+  "suggestions": ["Actionable suggestion 1", "Actionable suggestion 2"]
+}}
+
+Rules:
+- Keep each item concise (under 15 words)
+- Be encouraging and constructive
+- Focus on what the student did well first
+- Include areas for improvement
+- All arrays should contain 1-3 items
+- Return empty arrays for non-applicable categories
+- Adjust focus based on practice_mode (speaking emphasizes pronunciation/fluency, writing emphasizes grammar)
+"""
+
+
+@app.post("/api/feedback")
+async def feedback(req: dict[str, Any]) -> JSONResponse:
+    question = str(req.get("question") or "").strip()
+    user_answer = str(req.get("userAnswer") or "").strip()
+    level = str(req.get("level") or "A1")
+    tests = str(req.get("tests") or "General")
+    skills = str(req.get("skills") or "General")
+    practice_mode = str(req.get("practiceMode") or "speaking")
+
+    if not question or not user_answer:
+        return JSONResponse({"error": "question and userAnswer are required"}, status_code=400)
+
+    try:
+        prompt = build_feedback_prompt(question, user_answer, level, tests, skills, practice_mode)
+        feedback_text = chat_completion(
+            system_prompt="You are a JSON provider. Return only valid JSON.",
+            message=prompt,
+            max_tokens=500
+        )
+
+        # Parse the JSON response
+        import json
+        try:
+            feedback_json = json.loads(feedback_text)
+        except json.JSONDecodeError:
+            # If JSON parsing fails, try to extract JSON from the response
+            import re
+            json_match = re.search(r'\{.*\}', feedback_text, re.DOTALL)
+            if json_match:
+                feedback_json = json.loads(json_match.group())
+            else:
+                # Fallback if no valid JSON found
+                feedback_json = {
+                    "overall": "Thank you for your response. Keep practicing!",
+                    "grammar": [],
+                    "vocabulary": [],
+                    "pronunciation": [],
+                    "fluency": [],
+                    "suggestions": ["Continue practicing with more examples."]
+                }
+
+        return JSONResponse({"feedback": feedback_json})
+    except RuntimeError as exc:
+        return JSONResponse({"error": str(exc)}, status_code=500)
+    except Exception as exc:
+        return JSONResponse({"error": "Feedback generation failed", "details": str(exc)}, status_code=500)
