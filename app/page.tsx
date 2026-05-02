@@ -248,7 +248,7 @@ export default function ExtraPage() {
               </div>
 
               <p className="mt-6 text-base md:text-lg break-words whitespace-normal max-w-full">
-                <strong>Project Fluence</strong>は、開発者の英語学習ノウハウを活用したAIアプリが連携して学習体験を最適化する、<strong>英語学習のエコシステム</strong>です。
+                <strong>Project Fluence</strong>は、開発者の英語学習ノウハウを活用したAIアプリが連携して学習体験を最適化する、<strong>英語学習のプラットフォーム</strong>です。
               </p>
               <br/>
               <p className="text-base md:text-lg mb-1 break-words whitespace-normal max-w-full">
