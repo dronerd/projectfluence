@@ -1,18 +1,96 @@
- {
-    "lesson_id": "eiken-2-20",
-    "title": "Lesson 20",
-    "paragraph": "Politics and government organize societies through policy, administration, and governance. Representation, diplomacy, and regulation maintain order and guide civic life.",
-    "words": [
-      {"word": "reform", "meaning": "to improve or change", "japaneseMeaning": "改革", "synonyms": "improve, amend", "antonyms": "deteriorate, worsen", "example": "The government promised reform."},
-      {"word": "policy", "meaning": "a plan of action", "japaneseMeaning": "政策", "synonyms": "guideline, strategy", "antonyms": "chaos, disorder", "example": "The company adopted a new policy."},
-      {"word": "ideology", "meaning": "system of beliefs", "japaneseMeaning": "イデオロギー", "synonyms": "belief, doctrine", "antonyms": "indifference, skepticism", "example": "The ideology influenced the election."},
-      {"word": "administration", "meaning": "management of affairs", "japaneseMeaning": "行政、管理", "synonyms": "management, governance", "antonyms": "mismanagement, neglect", "example": "The administration implemented new laws."},
-      {"word": "governance", "meaning": "act of governing", "japaneseMeaning": "統治、ガバナンス", "synonyms": "management, control", "antonyms": "misrule, anarchy", "example": "Good governance ensures stability."},
-      {"word": "regulation", "meaning": "rule or directive", "japaneseMeaning": "規制", "synonyms": "rule, guideline", "antonyms": "freedom, chaos", "example": "Regulations control emissions."},
-      {"word": "democracy", "meaning": "government by the people", "japaneseMeaning": "民主主義", "synonyms": "self-rule, representation", "antonyms": "dictatorship, autocracy", "example": "Democracy empowers citizens."},
-      {"word": "legislature", "meaning": "body that makes laws", "japaneseMeaning": "立法府", "synonyms": "parliament, congress", "antonyms": "executive, judiciary", "example": "The legislature passed the bill."},
-      {"word": "representation", "meaning": "act of speaking or acting for someone", "japaneseMeaning": "代表", "synonyms": "advocacy, delegation", "antonyms": "neglect, omission", "example": "They demanded better representation."},
-      {"word": "diplomacy", "meaning": "managing international relations", "japaneseMeaning": "外交", "synonyms": "negotiation, tact", "antonyms": "conflict, hostility", "example": "Diplomacy prevented a crisis."}
-    ]
-  }
-
+{
+  "lesson_id": "eiken-2-20",
+  "title": "Lesson 20",
+  "words": [
+    {
+      "word": "direction",
+      "meaning": "the way something moves, develops, or points",
+      "japaneseMeaning": "方向",
+      "synonyms": "course, path",
+      "antonyms": "confusion, aimlessness",
+      "forms": "direction, directions",
+      "example": "The company changed direction after the survey."
+    },
+    {
+      "word": "generation",
+      "meaning": "all people born around the same time",
+      "japaneseMeaning": "世代",
+      "synonyms": "age group, cohort",
+      "antonyms": "individual, ancestor",
+      "forms": "generation, generations",
+      "example": "This generation uses phones for almost everything."
+    },
+    {
+      "word": "instance",
+      "meaning": "one example or case of something",
+      "japaneseMeaning": "例、場合",
+      "synonyms": "example, case",
+      "antonyms": "rule, pattern",
+      "forms": "instance, instances",
+      "example": "One instance of cheating can damage trust."
+    },
+    {
+      "word": "insurance",
+      "meaning": "an agreement that pays money after loss or damage",
+      "japaneseMeaning": "保険",
+      "synonyms": "coverage, protection",
+      "antonyms": "risk, exposure",
+      "forms": "insurance",
+      "example": "Travel insurance can help after a canceled flight."
+    },
+    {
+      "word": "labor",
+      "meaning": "work, especially hard physical work",
+      "japaneseMeaning": "労働",
+      "synonyms": "work, effort",
+      "antonyms": "rest, leisure",
+      "forms": "labor",
+      "example": "Farm labor becomes harder during summer."
+    },
+    {
+      "word": "layer",
+      "meaning": "one level or sheet of something",
+      "japaneseMeaning": "層",
+      "synonyms": "level, sheet",
+      "antonyms": "whole, core",
+      "forms": "layer, layers",
+      "example": "A warm layer of clothing is useful in winter."
+    },
+    {
+      "word": "means",
+      "meaning": "a method, tool, or way to do something",
+      "japaneseMeaning": "手段",
+      "synonyms": "method, way",
+      "antonyms": "obstacle, end",
+      "forms": "means",
+      "example": "Email is the easiest means of contact."
+    },
+    {
+      "word": "medium",
+      "meaning": "a method for sharing information or art",
+      "japaneseMeaning": "媒体",
+      "synonyms": "channel, format",
+      "antonyms": "message, content",
+      "forms": "medium, media",
+      "example": "Video is a powerful medium for science lessons."
+    },
+    {
+      "word": "mood",
+      "meaning": "the feeling or atmosphere of a person or place",
+      "japaneseMeaning": "気分、雰囲気",
+      "synonyms": "feeling, atmosphere",
+      "antonyms": "logic, fact",
+      "forms": "mood, moods",
+      "example": "The music changed the mood of the room."
+    },
+    {
+      "word": "presence",
+      "meaning": "the fact of being in a place or situation",
+      "japaneseMeaning": "存在、出席",
+      "synonyms": "existence, attendance",
+      "antonyms": "absence, disappearance",
+      "forms": "presence",
+      "example": "Her calm presence helped the children relax."
+    }
+  ]
+}

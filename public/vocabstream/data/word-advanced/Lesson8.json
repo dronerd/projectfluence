@@ -1,17 +1,96 @@
-  {
-    "lesson_id": "eiken-2-8",
-    "title": "Lesson 8",
-    "paragraph": "Planning and organization are essential to achieve goals efficiently. By structuring, prioritizing, and implementing tasks, individuals can coordinate activities successfully.",
-    "words": [
-      {"word": "strategize", "meaning": "to plan a strategy", "japaneseMeaning": "戦略を立てる", "synonyms": "plan, design", "antonyms": "improvise, neglect", "example": "They strategized to win the competition."},
-      {"word": "coordinate", "meaning": "to organize activities effectively", "japaneseMeaning": "調整する", "synonyms": "organize, align", "antonyms": "disorder, confuse", "example": "She coordinated the event efficiently."},
-      {"word": "structure", "meaning": "to arrange systematically", "japaneseMeaning": "構造化する", "synonyms": "organize, arrange", "antonyms": "disorganize, scatter", "example": "He structured his essay logically."},
-      {"word": "outline", "meaning": "to give a summary", "japaneseMeaning": "概略を示す", "synonyms": "summarize, draft", "antonyms": "expand, detail", "example": "She outlined the key points."},
-      {"word": "allocate", "meaning": "to distribute resources", "japaneseMeaning": "割り当てる", "synonyms": "assign, distribute", "antonyms": "withhold, hoard", "example": "Funds were allocated for the project."},
-      {"word": "prioritize", "meaning": "to rank by importance", "japaneseMeaning": "優先順位をつける", "synonyms": "emphasize, rank", "antonyms": "neglect, ignore", "example": "He prioritized urgent tasks first."},
-      {"word": "implement", "meaning": "to put into effect", "japaneseMeaning": "実行する", "synonyms": "execute, apply", "antonyms": "ignore, abandon", "example": "They implemented the new policy quickly."},
-      {"word": "designate", "meaning": "to officially assign", "japaneseMeaning": "指定する", "synonyms": "appoint, assign", "antonyms": "ignore, dismiss", "example": "She was designated team leader."},
-      {"word": "orchestrate", "meaning": "to organize carefully", "japaneseMeaning": "取りまとめる", "synonyms": "coordinate, arrange", "antonyms": "neglect, mismanage", "example": "He orchestrated the project flawlessly."},
-      {"word": "monitor", "meaning": "to observe and check", "japaneseMeaning": "監視する", "synonyms": "track, oversee", "antonyms": "ignore, neglect", "example": "They monitored the progress daily."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-8",
+  "title": "Lesson 8",
+  "words": [
+    {
+      "word": "liberty",
+      "meaning": "freedom to live or act without unfair control",
+      "japaneseMeaning": "自由",
+      "synonyms": "freedom, independence",
+      "antonyms": "control, oppression",
+      "forms": "liberty, liberties",
+      "example": "The constitution protects personal liberty."
+    },
+    {
+      "word": "independence",
+      "meaning": "freedom from control by others",
+      "japaneseMeaning": "独立",
+      "synonyms": "freedom, autonomy",
+      "antonyms": "dependence, control",
+      "forms": "independence",
+      "example": "Financial independence is a goal for many adults."
+    },
+    {
+      "word": "freedom",
+      "meaning": "the power to act or speak without unfair control",
+      "japaneseMeaning": "自由",
+      "synonyms": "liberty, independence",
+      "antonyms": "control, oppression",
+      "forms": "freedom, freedoms",
+      "example": "Freedom of speech allows people to criticize leaders."
+    },
+    {
+      "word": "rights",
+      "meaning": "legal or moral freedoms that people should have",
+      "japaneseMeaning": "権利",
+      "synonyms": "freedoms, claims",
+      "antonyms": "restrictions, duties",
+      "forms": "right, rights",
+      "example": "Workers should understand their rights before signing a contract."
+    },
+    {
+      "word": "citizenship",
+      "meaning": "the status or duty of being a member of a country or community",
+      "japaneseMeaning": "市民権、市民としての責任",
+      "synonyms": "membership, civic duty",
+      "antonyms": "exclusion, foreign status",
+      "forms": "citizenship",
+      "example": "Citizenship includes voting and helping the local community."
+    },
+    {
+      "word": "election",
+      "meaning": "a vote to choose a leader or decide an issue",
+      "japaneseMeaning": "選挙",
+      "synonyms": "vote, poll",
+      "antonyms": "appointment, cancellation",
+      "forms": "election, elections",
+      "example": "The election gave young voters a stronger voice."
+    },
+    {
+      "word": "ministry",
+      "meaning": "a government department led by a minister",
+      "japaneseMeaning": "省",
+      "synonyms": "department, agency",
+      "antonyms": "private group, company",
+      "forms": "ministry, ministries",
+      "example": "The health ministry announced new safety rules."
+    },
+    {
+      "word": "welfare",
+      "meaning": "health, happiness, and safety",
+      "japaneseMeaning": "福祉",
+      "synonyms": "well-being, care",
+      "antonyms": "harm, neglect",
+      "forms": "welfare",
+      "example": "The policy focuses on child welfare."
+    },
+    {
+      "word": "advocacy",
+      "meaning": "public support for an idea or group",
+      "japaneseMeaning": "擁護、提唱",
+      "synonyms": "support, promotion",
+      "antonyms": "opposition, silence",
+      "forms": "advocacy",
+      "example": "Her advocacy helped improve wheelchair access."
+    },
+    {
+      "word": "cohesion",
+      "meaning": "the state of holding together as a group",
+      "japaneseMeaning": "結束",
+      "synonyms": "unity, connection",
+      "antonyms": "division, conflict",
+      "forms": "cohesion",
+      "example": "Team cohesion improved after the outdoor training."
+    }
+  ]
+}

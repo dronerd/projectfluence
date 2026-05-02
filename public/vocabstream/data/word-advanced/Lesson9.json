@@ -1,17 +1,96 @@
-  {
-    "lesson_id": "eiken-2-9",
-    "title": "Lesson 9",
-    "paragraph": "Change and adaptation are necessary for growth. Individuals adjust, evolve, and transform to face new circumstances and challenges successfully.",
-    "words": [
-      {"word": "adjust", "meaning": "to adapt to new conditions", "japaneseMeaning": "調整する", "synonyms": "adapt, modify", "antonyms": "resist, ignore", "example": "She adjusted to her new schedule quickly."},
-      {"word": "evolve", "meaning": "to develop gradually", "japaneseMeaning": "進化する", "synonyms": "develop, progress", "antonyms": "stagnate, regress", "example": "The company evolved over decades."},
-      {"word": "modify", "meaning": "to change slightly", "japaneseMeaning": "修正する", "synonyms": "alter, adjust", "antonyms": "retain, preserve", "example": "He modified his approach based on feedback."},
-      {"word": "recalibrate", "meaning": "to adjust carefully", "japaneseMeaning": "再調整する", "synonyms": "adjust, fine-tune", "antonyms": "neglect, misalign", "example": "The instrument was recalibrated for accuracy."},
-      {"word": "transition", "meaning": "a change from one state to another", "japaneseMeaning": "移行", "synonyms": "shift, change", "antonyms": "stagnation, halt", "example": "The company is transitioning to new software."},
-      {"word": "redefine", "meaning": "to define again", "japaneseMeaning": "再定義する", "synonyms": "revise, reformulate", "antonyms": "retain, preserve", "example": "The policy was redefined for clarity."},
-      {"word": "transform", "meaning": "to change completely", "japaneseMeaning": "変革する", "synonyms": "convert, revolutionize", "antonyms": "maintain, preserve", "example": "The city transformed after redevelopment."},
-      {"word": "amend", "meaning": "to make changes for improvement", "japaneseMeaning": "修正する", "synonyms": "revise, correct", "antonyms": "worsen, ignore", "example": "The law was amended last year."},
-      {"word": "revise", "meaning": "to make changes to improve", "japaneseMeaning": "改訂する", "synonyms": "edit, modify", "antonyms": "retain, ignore", "example": "She revised her essay before submission."},
-      {"word": "reorient", "meaning": "to adjust focus or direction", "japaneseMeaning": "方向を変える", "synonyms": "realign, adjust", "antonyms": "neglect, misalign", "example": "The company reoriented its strategy."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-9",
+  "title": "Lesson 9",
+  "words": [
+    {
+      "word": "neutral",
+      "meaning": "not supporting either side",
+      "japaneseMeaning": "中立の",
+      "synonyms": "unbiased, impartial",
+      "antonyms": "biased, involved",
+      "forms": "neutral, neutrally, neutrality",
+      "example": "A judge must stay neutral during a trial."
+    },
+    {
+      "word": "subjective",
+      "meaning": "based on personal feelings or opinions",
+      "japaneseMeaning": "主観的な",
+      "synonyms": "personal, opinion-based",
+      "antonyms": "objective, factual",
+      "forms": "subjective, subjectively, subjectivity",
+      "example": "Taste in music is subjective, so people disagree."
+    },
+    {
+      "word": "reasonable",
+      "meaning": "fair, sensible, and not too much",
+      "japaneseMeaning": "合理的な、妥当な",
+      "synonyms": "sensible, fair",
+      "antonyms": "unreasonable, extreme",
+      "forms": "reasonable, reasonably, reasonableness",
+      "example": "The teacher gave a reasonable deadline for the report."
+    },
+    {
+      "word": "skeptical",
+      "meaning": "not easily convinced that something is true",
+      "japaneseMeaning": "懐疑的な",
+      "synonyms": "doubtful, questioning",
+      "antonyms": "certain, trusting",
+      "forms": "skeptical, skeptically, skepticism",
+      "example": "Many voters are skeptical of promises made too quickly."
+    },
+    {
+      "word": "pessimistic",
+      "meaning": "expecting bad results",
+      "japaneseMeaning": "悲観的な",
+      "synonyms": "negative, doubtful",
+      "antonyms": "optimistic, hopeful",
+      "forms": "pessimistic, pessimistically, pessimism",
+      "example": "He is pessimistic about the team’s chance to win."
+    },
+    {
+      "word": "defensive",
+      "meaning": "quick to protect yourself from criticism",
+      "japaneseMeaning": "防御的な",
+      "synonyms": "protective, guarded",
+      "antonyms": "open, relaxed",
+      "forms": "defensive, defensively, defensiveness",
+      "example": "She became defensive when someone questioned her plan."
+    },
+    {
+      "word": "distinctive",
+      "meaning": "easy to recognize because it is different",
+      "japaneseMeaning": "独特の",
+      "synonyms": "unique, recognizable",
+      "antonyms": "ordinary, common",
+      "forms": "distinctive, distinctively",
+      "example": "The singer has a distinctive voice."
+    },
+    {
+      "word": "severe",
+      "meaning": "very serious or harsh",
+      "japaneseMeaning": "深刻な、厳しい",
+      "synonyms": "serious, harsh",
+      "antonyms": "mild, slight",
+      "forms": "severe, severely, severity",
+      "example": "The storm caused severe damage to the bridge."
+    },
+    {
+      "word": "vital",
+      "meaning": "extremely important or necessary",
+      "japaneseMeaning": "極めて重要な",
+      "synonyms": "essential, crucial",
+      "antonyms": "minor, optional",
+      "forms": "vital, vitally",
+      "example": "Clean water is vital for public health."
+    },
+    {
+      "word": "mature",
+      "meaning": "showing good judgment like an adult",
+      "japaneseMeaning": "成熟した",
+      "synonyms": "grown-up, sensible",
+      "antonyms": "immature, childish",
+      "forms": "mature, maturely, maturity",
+      "example": "Her mature response calmed the argument."
+    }
+  ]
+}

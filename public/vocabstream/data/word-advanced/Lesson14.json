@@ -1,18 +1,96 @@
- {
-    "lesson_id": "eiken-2-14",
-    "title": "Lesson 14",
-    "paragraph": "Law and justice maintain social order. Legislation, enforcement, and advocacy ensure fairness while regulating behaviors and prosecuting violations.",
-    "words": [
-      {"word": "legislation", "meaning": "laws enacted by authority", "japaneseMeaning": "立法", "synonyms": "law, statute", "antonyms": "anarchy, lawlessness", "example": "The legislation was passed last year."},
-      {"word": "litigation", "meaning": "legal proceedings in court", "japaneseMeaning": "訴訟", "synonyms": "lawsuit, case", "antonyms": "settlement, agreement", "example": "The company faced litigation over patents."},
-      {"word": "enforcement", "meaning": "ensuring compliance with laws", "japaneseMeaning": "執行", "synonyms": "implementation, execution", "antonyms": "neglect, disregard", "example": "The enforcement of regulations is strict."},
-      {"word": "sanction", "meaning": "a penalty or approval", "japaneseMeaning": "制裁、認可", "synonyms": "penalty, approval", "antonyms": "permission, tolerance", "example": "The government imposed sanctions on illegal activity."},
-      {"word": "advocate", "meaning": "to support or argue for", "japaneseMeaning": "主張する、弁護する", "synonyms": "support, champion", "antonyms": "oppose, discourage", "example": "She advocates for human rights."},
-      {"word": "justify", "meaning": "to show reason or excuse", "japaneseMeaning": "正当化する", "synonyms": "defend, explain", "antonyms": "condemn, blame", "example": "He justified his decision logically."},
-      {"word": "prosecute", "meaning": "to bring legal action against", "japaneseMeaning": "起訴する", "synonyms": "charge, litigate", "antonyms": "defend, acquit", "example": "The authorities prosecuted the offender."},
-      {"word": "regulate", "meaning": "to control by rules", "japaneseMeaning": "規制する", "synonyms": "control, oversee", "antonyms": "neglect, ignore", "example": "The agency regulates food safety."},
-      {"word": "prohibit", "meaning": "to forbid", "japaneseMeaning": "禁止する", "synonyms": "ban, forbid", "antonyms": "allow, permit", "example": "Smoking is prohibited here."},
-      {"word": "authorize", "meaning": "to give official permission", "japaneseMeaning": "認可する", "synonyms": "permit, sanction", "antonyms": "forbid, restrict", "example": "The manager authorized the purchase."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-14",
+  "title": "Lesson 14",
+  "words": [
+    {
+      "word": "tariff",
+      "meaning": "a tax on goods from another country",
+      "japaneseMeaning": "関税",
+      "synonyms": "duty, import tax",
+      "antonyms": "subsidy, discount",
+      "forms": "tariff, tariffs",
+      "example": "The tariff made imported cheese more expensive."
+    },
+    {
+      "word": "shortage",
+      "meaning": "a situation where there is not enough",
+      "japaneseMeaning": "不足",
+      "synonyms": "lack, deficit",
+      "antonyms": "surplus, excess",
+      "forms": "shortage, shortages",
+      "example": "A water shortage forced the school to close early."
+    },
+    {
+      "word": "surplus",
+      "meaning": "an amount that is more than needed",
+      "japaneseMeaning": "余剰",
+      "synonyms": "excess, extra",
+      "antonyms": "shortage, lack",
+      "forms": "surplus, surpluses",
+      "example": "The farm sold its surplus vegetables to restaurants."
+    },
+    {
+      "word": "objection",
+      "meaning": "a reason for disagreeing with something",
+      "japaneseMeaning": "反対意見",
+      "synonyms": "protest, complaint",
+      "antonyms": "approval, support",
+      "forms": "objection, objections",
+      "example": "Her main objection was the high cost."
+    },
+    {
+      "word": "consensus",
+      "meaning": "general agreement among a group",
+      "japaneseMeaning": "合意",
+      "synonyms": "agreement, accord",
+      "antonyms": "disagreement, conflict",
+      "forms": "consensus",
+      "example": "The committee reached consensus after a long meeting."
+    },
+    {
+      "word": "drawback",
+      "meaning": "a problem or disadvantage",
+      "japaneseMeaning": "欠点",
+      "synonyms": "disadvantage, weakness",
+      "antonyms": "benefit, strength",
+      "forms": "drawback, drawbacks",
+      "example": "The main drawback of the apartment is the noise."
+    },
+    {
+      "word": "incentive",
+      "meaning": "something that encourages action",
+      "japaneseMeaning": "動機、誘因",
+      "synonyms": "motivation, reward",
+      "antonyms": "barrier, penalty",
+      "forms": "incentive, incentives",
+      "example": "Free training is an incentive to join the program."
+    },
+    {
+      "word": "milestone",
+      "meaning": "an important stage in progress",
+      "japaneseMeaning": "節目",
+      "synonyms": "stage, achievement",
+      "antonyms": "setback, delay",
+      "forms": "milestone, milestones",
+      "example": "Passing the exam was a milestone in her career."
+    },
+    {
+      "word": "stakeholder",
+      "meaning": "a person or group affected by a decision",
+      "japaneseMeaning": "利害関係者",
+      "synonyms": "participant, interested party",
+      "antonyms": "outsider, stranger",
+      "forms": "stakeholder, stakeholders",
+      "example": "Every stakeholder should hear the plan before Friday."
+    },
+    {
+      "word": "burden",
+      "meaning": "a heavy duty, cost, or worry",
+      "japaneseMeaning": "負担",
+      "synonyms": "load, responsibility",
+      "antonyms": "relief, help",
+      "forms": "burden, burdens",
+      "example": "Childcare costs are a burden for many families."
+    }
+  ]
+}

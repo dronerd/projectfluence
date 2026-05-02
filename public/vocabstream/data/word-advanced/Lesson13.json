@@ -1,18 +1,96 @@
-  {
-    "lesson_id": "eiken-2-13",
-    "title": "Lesson 13",
-    "paragraph": "Responsibility and duty involve commitment, reliability, and integrity. Individuals show diligence, conscience, and stewardship in fulfilling their obligations.",
-    "words": [
-      {"word": "obligation", "meaning": "something one must do", "japaneseMeaning": "義務", "synonyms": "duty, responsibility", "antonyms": "freedom, option", "example": "He fulfilled his obligations faithfully."},
-      {"word": "accountability", "meaning": "being responsible for actions", "japaneseMeaning": "説明責任", "synonyms": "responsibility, answerability", "antonyms": "irresponsibility, negligence", "example": "Managers are held accountable for results."},
-      {"word": "reliability", "meaning": "the quality of being dependable", "japaneseMeaning": "信頼性", "synonyms": "dependability, trustworthiness", "antonyms": "unreliability, doubt", "example": "Her reliability is well known."},
-      {"word": "conscience", "meaning": "inner sense of right and wrong", "japaneseMeaning": "良心", "synonyms": "morality, ethics", "antonyms": "immorality, indifference", "example": "He acted according to his conscience."},
-      {"word": "diligence", "meaning": "careful and persistent effort", "japaneseMeaning": "勤勉", "synonyms": "assiduity, industriousness", "antonyms": "laziness, negligence", "example": "Her diligence paid off."},
-      {"word": "integrity", "meaning": "honesty and moral uprightness", "japaneseMeaning": "誠実さ", "synonyms": "honesty, probity", "antonyms": "dishonesty, corruption", "example": "He is known for his integrity."},
-      {"word": "authority", "meaning": "power to influence or command", "japaneseMeaning": "権威、権限", "synonyms": "power, control", "antonyms": "subordination, weakness", "example": "The principal has authority over the school."},
-      {"word": "initiative", "meaning": "the ability to take action independently", "japaneseMeaning": "主導権、自発性", "synonyms": "enterprise, drive", "antonyms": "passivity, hesitation", "example": "She showed great initiative in the project."},
-      {"word": "stewardship", "meaning": "responsible management", "japaneseMeaning": "管理、保護", "synonyms": "management, care", "antonyms": "mismanagement, neglect", "example": "He practiced good stewardship of resources."},
-      {"word": "discipline", "meaning": "training to follow rules or standards", "japaneseMeaning": "規律", "synonyms": "self-control, order", "antonyms": "chaos, disorder", "example": "Discipline is key to success."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-13",
+  "title": "Lesson 13",
+  "words": [
+    {
+      "word": "devise",
+      "meaning": "to think of a new plan or method",
+      "japaneseMeaning": "考案する",
+      "synonyms": "create, plan",
+      "antonyms": "copy, abandon",
+      "forms": "devise, devises, devising, devised",
+      "example": "Engineers devise a safer design for the bridge."
+    },
+    {
+      "word": "originate",
+      "meaning": "to begin or come from a particular place",
+      "japaneseMeaning": "始まる、起こる",
+      "synonyms": "begin, arise",
+      "antonyms": "end, follow",
+      "forms": "originate, originates, originating, originated",
+      "example": "The custom may originate in an old harvest festival."
+    },
+    {
+      "word": "envision",
+      "meaning": "to imagine a future situation",
+      "japaneseMeaning": "思い描く",
+      "synonyms": "imagine, picture",
+      "antonyms": "doubt, ignore",
+      "forms": "envision, envisions, envisioning, envisioned",
+      "example": "The planner can envision a city with fewer cars."
+    },
+    {
+      "word": "craft",
+      "meaning": "to make something carefully and skillfully",
+      "japaneseMeaning": "丁寧に作る",
+      "synonyms": "make, shape",
+      "antonyms": "damage, rush",
+      "forms": "craft, crafts, crafting, crafted",
+      "example": "She will craft a polite message to the customer."
+    },
+    {
+      "word": "construct",
+      "meaning": "to build or form something",
+      "japaneseMeaning": "建設する、構成する",
+      "synonyms": "build, create",
+      "antonyms": "destroy, remove",
+      "forms": "construct, constructs, constructing, constructed",
+      "example": "Students construct a model to explain the system."
+    },
+    {
+      "word": "incorporate",
+      "meaning": "to include something as part of a whole",
+      "japaneseMeaning": "取り入れる",
+      "synonyms": "include, add",
+      "antonyms": "exclude, remove",
+      "forms": "incorporate, incorporates, incorporating, incorporated",
+      "example": "The teacher will incorporate news articles into the lesson."
+    },
+    {
+      "word": "simplify",
+      "meaning": "to make something easier to understand or do",
+      "japaneseMeaning": "簡単にする",
+      "synonyms": "clarify, reduce",
+      "antonyms": "complicate, confuse",
+      "forms": "simplify, simplifies, simplifying, simplified",
+      "example": "A diagram can simplify a difficult science idea."
+    },
+    {
+      "word": "draft",
+      "meaning": "to write a first version of something",
+      "japaneseMeaning": "下書きを作る",
+      "synonyms": "write, prepare",
+      "antonyms": "finish, publish",
+      "forms": "draft, drafts, drafting, drafted",
+      "example": "She will draft a proposal before the meeting."
+    },
+    {
+      "word": "tailor",
+      "meaning": "to change something for a particular person or purpose",
+      "japaneseMeaning": "合わせて調整する",
+      "synonyms": "adapt, adjust",
+      "antonyms": "standardize, ignore",
+      "forms": "tailor, tailors, tailoring, tailored",
+      "example": "The teacher can tailor the lesson to each class."
+    },
+    {
+      "word": "formulate",
+      "meaning": "to create or express a plan or idea carefully",
+      "japaneseMeaning": "考案する、明確に述べる",
+      "synonyms": "develop, express",
+      "antonyms": "abandon, confuse",
+      "forms": "formulate, formulates, formulating, formulated",
+      "example": "The group will formulate a clear policy by Monday."
+    }
+  ]
+}

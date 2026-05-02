@@ -1,18 +1,96 @@
- {
-    "lesson_id": "eiken-2-38",
-    "title": "Lesson 38",
-    "paragraph": "Experience and memory involve recalling, perceiving, and observing. Recognizing patterns, reflecting, retaining knowledge, and reliving moments strengthen understanding.",
-    "words": [
-      {"word": "recall", "meaning": "to remember", "japaneseMeaning": "思い出す", "synonyms": "remember, recollect", "antonyms": "forget, overlook", "example": "He recalled the details of the event."},
-      {"word": "reminisce", "meaning": "to think about past experiences", "japaneseMeaning": "思い出にふける", "synonyms": "remember, reflect", "antonyms": "ignore, forget", "example": "They reminisced about childhood days."},
-      {"word": "perceive", "meaning": "to become aware of through senses", "japaneseMeaning": "知覚する", "synonyms": "observe, discern", "antonyms": "ignore, overlook", "example": "She perceived a change in his tone."},
-      {"word": "recognize", "meaning": "to identify or acknowledge", "japaneseMeaning": "認識する", "synonyms": "identify, notice", "antonyms": "ignore, overlook", "example": "He recognized his old friend in the crowd."},
-      {"word": "reflect", "meaning": "to think deeply", "japaneseMeaning": "反省する、熟考する", "synonyms": "contemplate, ponder", "antonyms": "ignore, neglect", "example": "She reflected on her mistakes."},
-      {"word": "retain", "meaning": "to keep in memory", "japaneseMeaning": "保持する", "synonyms": "remember, preserve", "antonyms": "forget, lose", "example": "He retained the information from class."},
-      {"word": "associate", "meaning": "to connect ideas or things", "japaneseMeaning": "結びつける", "synonyms": "link, connect", "antonyms": "disconnect, separate", "example": "People often associate smell with memories."},
-      {"word": "observe", "meaning": "to notice carefully", "japaneseMeaning": "観察する", "synonyms": "watch, monitor", "antonyms": "ignore, neglect", "example": "She observed the behavior of the birds."},
-      {"word": "relive", "meaning": "to experience again", "japaneseMeaning": "再体験する", "synonyms": "reexperience, recall", "antonyms": "forget, ignore", "example": "He relived his childhood memories."},
-      {"word": "interpret", "meaning": "to explain meaning", "japaneseMeaning": "解釈する", "synonyms": "explain, understand", "antonyms": "misunderstand, confuse", "example": "They interpreted the results carefully."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-38",
+  "title": "Lesson 38",
+  "words": [
+    {
+      "word": "shortcoming",
+      "meaning": "a weakness or fault",
+      "japaneseMeaning": "欠点",
+      "synonyms": "weakness, fault",
+      "antonyms": "strength, advantage",
+      "forms": "shortcoming, shortcomings",
+      "example": "The report mentions one shortcoming of the plan."
+    },
+    {
+      "word": "observer",
+      "meaning": "a person who watches an event carefully",
+      "japaneseMeaning": "観察者",
+      "synonyms": "watcher, viewer",
+      "antonyms": "participant, actor",
+      "forms": "observer, observers",
+      "example": "An observer recorded how students used the library."
+    },
+    {
+      "word": "citizen",
+      "meaning": "a legal member of a country or city",
+      "japaneseMeaning": "市民、国民",
+      "synonyms": "resident, national",
+      "antonyms": "foreigner, visitor",
+      "forms": "citizen, citizens",
+      "example": "Every citizen has a role in local democracy."
+    },
+    {
+      "word": "taxpayer",
+      "meaning": "a person who pays taxes",
+      "japaneseMeaning": "納税者",
+      "synonyms": "tax payer, citizen",
+      "antonyms": "visitor, dependent",
+      "forms": "taxpayer, taxpayers",
+      "example": "Taxpayer money should be used carefully."
+    },
+    {
+      "word": "voter",
+      "meaning": "a person who votes",
+      "japaneseMeaning": "有権者",
+      "synonyms": "elector, citizen",
+      "antonyms": "nonvoter, observer",
+      "forms": "voter, voters",
+      "example": "Each voter received information about the candidates."
+    },
+    {
+      "word": "minister",
+      "meaning": "a senior government official",
+      "japaneseMeaning": "大臣",
+      "synonyms": "official, leader",
+      "antonyms": "citizen, voter",
+      "forms": "minister, ministers",
+      "example": "The education minister visited the school."
+    },
+    {
+      "word": "governor",
+      "meaning": "the elected leader of a state or region",
+      "japaneseMeaning": "知事",
+      "synonyms": "leader, official",
+      "antonyms": "resident, citizen",
+      "forms": "governor, governors",
+      "example": "The governor announced emergency support after the storm."
+    },
+    {
+      "word": "mayor",
+      "meaning": "the elected leader of a city or town",
+      "japaneseMeaning": "市長",
+      "synonyms": "city leader, official",
+      "antonyms": "resident, citizen",
+      "forms": "mayor, mayors",
+      "example": "The mayor promised safer roads near schools."
+    },
+    {
+      "word": "senator",
+      "meaning": "a member of a senate",
+      "japaneseMeaning": "上院議員",
+      "synonyms": "lawmaker, representative",
+      "antonyms": "voter, citizen",
+      "forms": "senator, senators",
+      "example": "The senator asked for stronger consumer protection."
+    },
+    {
+      "word": "legislature",
+      "meaning": "the group of people who make laws",
+      "japaneseMeaning": "立法府",
+      "synonyms": "parliament, assembly",
+      "antonyms": "court, executive",
+      "forms": "legislature, legislatures",
+      "example": "The legislature debated the housing bill."
+    }
+  ]
+}

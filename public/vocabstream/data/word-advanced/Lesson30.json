@@ -1,17 +1,96 @@
- {
-    "lesson_id": "eiken-2-30",
-    "title": "Lesson 30",
-    "paragraph": "Technology and society are interconnected through connectivity, accessibility, and innovation. Automation, communication, and security shape modern life.",
-    "words": [
-      {"word": "connectivity", "meaning": "state of being connected", "japaneseMeaning": "接続性", "synonyms": "linkage, networking", "antonyms": "disconnection, isolation", "example": "High connectivity enables remote work."},
-      {"word": "accessibility", "meaning": "ease of access", "japaneseMeaning": "アクセスの容易さ", "synonyms": "availability, approachability", "antonyms": "inaccessibility, difficulty", "example": "Accessibility is important for public services."},
-      {"word": "integration", "meaning": "combining parts into a whole", "japaneseMeaning": "統合", "synonyms": "combination, unification", "antonyms": "separation, fragmentation", "example": "Integration of technology improved efficiency."},
-      {"word": "security", "meaning": "protection from harm", "japaneseMeaning": "安全、セキュリティ", "synonyms": "safety, protection", "antonyms": "danger, vulnerability", "example": "Cybersecurity ensures data protection."},
-      {"word": "innovation", "meaning": "new ideas or methods", "japaneseMeaning": "革新", "synonyms": "invention, creativity", "antonyms": "stagnation, repetition", "example": "Innovation drives social progress."},
-      {"word": "disruption", "meaning": "disturbance or interruption", "japaneseMeaning": "混乱、破壊", "synonyms": "interruption, disturbance", "antonyms": "continuity, stability", "example": "Technology caused major market disruption."},
-      {"word": "surveillance", "meaning": "monitoring for control or protection", "japaneseMeaning": "監視", "synonyms": "monitoring, observation", "antonyms": "neglect, ignorance", "example": "Surveillance cameras increased safety."},
-      {"word": "communication", "meaning": "exchange of information", "japaneseMeaning": "通信、意思疎通", "synonyms": "interaction, messaging", "antonyms": "silence, secrecy", "example": "Communication improves teamwork."},
-      {"word": "interface", "meaning": "point of interaction between systems", "japaneseMeaning": "インターフェース", "synonyms": "connection, interaction", "antonyms": "disconnection, separation", "example": "The user interface is intuitive."},
-      {"word": "automation", "meaning": "self-operating technology", "japaneseMeaning": "自動化", "synonyms": "mechanization, robotics", "antonyms": "manual, human operation", "example": "Automation reduces repetitive tasks."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-30",
+  "title": "Lesson 30",
+  "words": [
+    {
+      "word": "risky",
+      "meaning": "involving the chance of loss or danger",
+      "japaneseMeaning": "危険な",
+      "synonyms": "dangerous, uncertain",
+      "antonyms": "safe, secure",
+      "forms": "risky, riskier, riskiest",
+      "example": "It is risky to share passwords with friends."
+    },
+    {
+      "word": "crowded",
+      "meaning": "full of too many people or things",
+      "japaneseMeaning": "混雑した",
+      "synonyms": "packed, busy",
+      "antonyms": "empty, quiet",
+      "forms": "crowded",
+      "example": "The crowded train made the trip uncomfortable."
+    },
+    {
+      "word": "nearby",
+      "meaning": "not far away",
+      "japaneseMeaning": "近くの",
+      "synonyms": "close, local",
+      "antonyms": "distant, far",
+      "forms": "nearby",
+      "example": "A nearby clinic offers free health checks."
+    },
+    {
+      "word": "worldwide",
+      "meaning": "existing or happening around the world",
+      "japaneseMeaning": "世界中の",
+      "synonyms": "global, international",
+      "antonyms": "local, regional",
+      "forms": "worldwide",
+      "example": "The product became a worldwide success."
+    },
+    {
+      "word": "nationwide",
+      "meaning": "existing or happening across a whole country",
+      "japaneseMeaning": "全国的な",
+      "synonyms": "national, countrywide",
+      "antonyms": "local, regional",
+      "forms": "nationwide",
+      "example": "The company started a nationwide recycling campaign."
+    },
+    {
+      "word": "emotional",
+      "meaning": "related to strong feelings",
+      "japaneseMeaning": "感情的な",
+      "synonyms": "feeling, sensitive",
+      "antonyms": "calm, unemotional",
+      "forms": "emotional, emotionally, emotion",
+      "example": "The speech was emotional because it described real loss."
+    },
+    {
+      "word": "optional",
+      "meaning": "available by choice, not required",
+      "japaneseMeaning": "任意の",
+      "synonyms": "voluntary, elective",
+      "antonyms": "required, mandatory",
+      "forms": "optional, optionally",
+      "example": "The final project is optional for advanced students."
+    },
+    {
+      "word": "compulsory",
+      "meaning": "required by a rule or law",
+      "japaneseMeaning": "義務的な",
+      "synonyms": "required, mandatory",
+      "antonyms": "optional, voluntary",
+      "forms": "compulsory",
+      "example": "Compulsory education lasts for several years."
+    },
+    {
+      "word": "analog",
+      "meaning": "using physical signals rather than digital data",
+      "japaneseMeaning": "アナログの",
+      "synonyms": "non-digital, traditional",
+      "antonyms": "digital, electronic",
+      "forms": "analog",
+      "example": "An analog clock can still be useful in classrooms."
+    },
+    {
+      "word": "military",
+      "meaning": "related to soldiers or armed forces",
+      "japaneseMeaning": "軍の",
+      "synonyms": "armed, defense",
+      "antonyms": "civilian, peaceful",
+      "forms": "military, militarily",
+      "example": "Military service is required in some countries."
+    }
+  ]
+}

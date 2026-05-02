@@ -1,19 +1,96 @@
-
-  {
-    "lesson_id": "eiken-2-16",
-    "title": "Lesson 16",
-    "paragraph": "Conflict and resolution require negotiation, compromise, and reconciliation. Individuals confront disputes and work to pacify and mitigate tensions effectively.",
-    "words": [
-      {"word": "dispute", "meaning": "a disagreement or argument", "japaneseMeaning": "争い", "synonyms": "conflict, debate", "antonyms": "agreement, harmony", "example": "They resolved the dispute peacefully."},
-      {"word": "confront", "meaning": "to face boldly", "japaneseMeaning": "直面する", "synonyms": "face, challenge", "antonyms": "avoid, evade", "example": "He confronted the problem directly."},
-      {"word": "reconcile", "meaning": "to restore friendly relations", "japaneseMeaning": "和解する", "synonyms": "settle, harmonize", "antonyms": "alienate, oppose", "example": "They reconciled after the disagreement."},
-      {"word": "negotiate", "meaning": "to discuss to reach agreement", "japaneseMeaning": "交渉する", "synonyms": "bargain, mediate", "antonyms": "ignore, refuse", "example": "They negotiated a fair contract."},
-      {"word": "compromise", "meaning": "to reach a mutual agreement", "japaneseMeaning": "妥協する", "synonyms": "settle, adjust", "antonyms": "contest, resist", "example": "They compromised to resolve the issue."},
-      {"word": "intervene", "meaning": "to come between to influence", "japaneseMeaning": "介入する", "synonyms": "mediate, step in", "antonyms": "ignore, avoid", "example": "The teacher intervened in the fight."},
-      {"word": "mitigate", "meaning": "to make less severe", "japaneseMeaning": "和らげる", "synonyms": "alleviate, reduce", "antonyms": "worsen, intensify", "example": "Measures were taken to mitigate risks."},
-      {"word": "oppose", "meaning": "to resist or act against", "japaneseMeaning": "反対する", "synonyms": "resist, confront", "antonyms": "support, agree", "example": "They opposed the new law."},
-      {"word": "resolve", "meaning": "to find a solution", "japaneseMeaning": "解決する", "synonyms": "settle, solve", "antonyms": "prolong, ignore", "example": "They resolved the conflict successfully."},
-      {"word": "pacify", "meaning": "to calm or bring peace", "japaneseMeaning": "なだめる", "synonyms": "calm, soothe", "antonyms": "agitate, provoke", "example": "The mediator pacified the tense situation."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-16",
+  "title": "Lesson 16",
+  "words": [
+    {
+      "word": "govern",
+      "meaning": "to control or lead a country, group, or system",
+      "japaneseMeaning": "統治する、管理する",
+      "synonyms": "rule, manage",
+      "antonyms": "obey, follow",
+      "forms": "govern, governs, governing, governed",
+      "example": "Local laws govern how buildings are used."
+    },
+    {
+      "word": "supervise",
+      "meaning": "to watch and guide people while they work",
+      "japaneseMeaning": "監督する",
+      "synonyms": "oversee, manage",
+      "antonyms": "ignore, neglect",
+      "forms": "supervise, supervises, supervising, supervised",
+      "example": "A teacher must supervise students during the experiment."
+    },
+    {
+      "word": "oversee",
+      "meaning": "to watch and manage work or people",
+      "japaneseMeaning": "監督する",
+      "synonyms": "supervise, manage",
+      "antonyms": "ignore, neglect",
+      "forms": "oversee, oversees, overseeing, oversaw, overseen",
+      "example": "A senior nurse will oversee the training program."
+    },
+    {
+      "word": "regulate",
+      "meaning": "to control something with rules",
+      "japaneseMeaning": "規制する",
+      "synonyms": "control, govern",
+      "antonyms": "free, ignore",
+      "forms": "regulate, regulates, regulating, regulated",
+      "example": "The agency will regulate ads aimed at children."
+    },
+    {
+      "word": "mandate",
+      "meaning": "to officially require something",
+      "japaneseMeaning": "義務付ける",
+      "synonyms": "require, order",
+      "antonyms": "allow, forbid",
+      "forms": "mandate, mandates, mandating, mandated",
+      "example": "The law may mandate safer labels on medicine."
+    },
+    {
+      "word": "restrict",
+      "meaning": "to limit what someone can do",
+      "japaneseMeaning": "制限する",
+      "synonyms": "limit, control",
+      "antonyms": "allow, expand",
+      "forms": "restrict, restricts, restricting, restricted",
+      "example": "The library will restrict noise during exam week."
+    },
+    {
+      "word": "ban",
+      "meaning": "to officially forbid something",
+      "japaneseMeaning": "禁止する",
+      "synonyms": "forbid, prohibit",
+      "antonyms": "permit, allow",
+      "forms": "ban, bans, banning, banned",
+      "example": "The school will ban phones during the final test."
+    },
+    {
+      "word": "forbid",
+      "meaning": "to order someone not to do something",
+      "japaneseMeaning": "禁じる",
+      "synonyms": "ban, prohibit",
+      "antonyms": "allow, permit",
+      "forms": "forbid, forbids, forbidding, forbade, forbidden",
+      "example": "The rules forbid copying another student’s work."
+    },
+    {
+      "word": "administer",
+      "meaning": "to manage or run an organization or system",
+      "japaneseMeaning": "運営する、管理する",
+      "synonyms": "manage, run",
+      "antonyms": "neglect, abandon",
+      "forms": "administer, administers, administering, administered",
+      "example": "The city will administer the new housing program."
+    },
+    {
+      "word": "enforce",
+      "meaning": "to make people obey a rule or law",
+      "japaneseMeaning": "施行する、守らせる",
+      "synonyms": "apply, carry out",
+      "antonyms": "ignore, cancel",
+      "forms": "enforce, enforces, enforcing, enforced",
+      "example": "The city will enforce parking rules near the station."
+    }
+  ]
+}

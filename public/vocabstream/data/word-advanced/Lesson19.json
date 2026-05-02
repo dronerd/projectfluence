@@ -1,18 +1,96 @@
-  {
-    "lesson_id": "eiken-2-19",
-    "title": "Lesson 19",
-    "paragraph": "Society and community thrive through cohesion, solidarity, and inclusion. Participation, collaboration, and civility strengthen belonging and welfare among individuals.",
-    "words": [
-      {"word": "cohesion", "meaning": "unity or togetherness", "japaneseMeaning": "結束", "synonyms": "unity, solidarity", "antonyms": "fragmentation, division", "example": "Team cohesion improved performance."},
-      {"word": "solidarity", "meaning": "support and agreement", "japaneseMeaning": "連帯", "synonyms": "unity, support", "antonyms": "opposition, isolation", "example": "Workers showed solidarity in the strike."},
-      {"word": "inclusion", "meaning": "the act of including", "japaneseMeaning": "包摂", "synonyms": "integration, acceptance", "antonyms": "exclusion, segregation", "example": "Inclusion benefits everyone in society."},
-      {"word": "participation", "meaning": "taking part in an activity", "japaneseMeaning": "参加", "synonyms": "involvement, engagement", "antonyms": "absence, neglect", "example": "Active participation was encouraged."},
-      {"word": "collaboration", "meaning": "working together", "japaneseMeaning": "協力", "synonyms": "cooperation, teamwork", "antonyms": "conflict, opposition", "example": "Collaboration led to a successful project."},
-      {"word": "diversity", "meaning": "variety or differences", "japaneseMeaning": "多様性", "synonyms": "variety, multiplicity", "antonyms": "uniformity, sameness", "example": "Diversity enriches communities."},
-      {"word": "belonging", "meaning": "feeling part of a group", "japaneseMeaning": "帰属感", "synonyms": "acceptance, inclusion", "antonyms": "alienation, isolation", "example": "The club promoted belonging for all members."},
-      {"word": "civility", "meaning": "polite and respectful behavior", "japaneseMeaning": "礼儀正しさ", "synonyms": "politeness, courtesy", "antonyms": "rudeness, hostility", "example": "Civility in debate improves dialogue."},
-      {"word": "welfare", "meaning": "well-being and support", "japaneseMeaning": "福祉", "synonyms": "well-being, aid", "antonyms": "neglect, harm", "example": "The government promoted social welfare."},
-      {"word": "unity", "meaning": "state of being united", "japaneseMeaning": "統一、一体感", "synonyms": "solidarity, cohesion", "antonyms": "division, conflict", "example": "Unity strengthened the community."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-19",
+  "title": "Lesson 19",
+  "words": [
+    {
+      "word": "accelerate",
+      "meaning": "to make something happen faster",
+      "japaneseMeaning": "加速する",
+      "synonyms": "speed up, quicken",
+      "antonyms": "slow, delay",
+      "forms": "accelerate, accelerates, accelerating, accelerated",
+      "example": "Better internet can accelerate online learning."
+    },
+    {
+      "word": "broaden",
+      "meaning": "to make something wider or more general",
+      "japaneseMeaning": "広げる",
+      "synonyms": "expand, widen",
+      "antonyms": "narrow, limit",
+      "forms": "broaden, broadens, broadening, broadened",
+      "example": "Reading newspapers can broaden your view of society."
+    },
+    {
+      "word": "cease",
+      "meaning": "to stop happening or stop doing something",
+      "japaneseMeaning": "やめる、終わる",
+      "synonyms": "stop, end",
+      "antonyms": "continue, begin",
+      "forms": "cease, ceases, ceasing, ceased",
+      "example": "The factory will cease production next month."
+    },
+    {
+      "word": "convert",
+      "meaning": "to change something into a different form",
+      "japaneseMeaning": "変える、転換する",
+      "synonyms": "change, transform",
+      "antonyms": "keep, preserve",
+      "forms": "convert, converts, converting, converted",
+      "example": "The city will convert an old station into a library."
+    },
+    {
+      "word": "amend",
+      "meaning": "to make a small official change",
+      "japaneseMeaning": "修正する",
+      "synonyms": "revise, change",
+      "antonyms": "keep, worsen",
+      "forms": "amend, amends, amending, amended",
+      "example": "Lawmakers plan to amend the traffic rule."
+    },
+    {
+      "word": "merge",
+      "meaning": "to join two or more things together",
+      "japaneseMeaning": "合併する",
+      "synonyms": "combine, unite",
+      "antonyms": "separate, split",
+      "forms": "merge, merges, merging, merged",
+      "example": "Two local hospitals will merge next spring."
+    },
+    {
+      "word": "undertake",
+      "meaning": "to agree to do a task or responsibility",
+      "japaneseMeaning": "引き受ける",
+      "synonyms": "accept, begin",
+      "antonyms": "avoid, refuse",
+      "forms": "undertake, undertakes, undertaking, undertook, undertaken",
+      "example": "The lab will undertake a study of water quality."
+    },
+    {
+      "word": "undergo",
+      "meaning": "to experience a change or process",
+      "japaneseMeaning": "経験する、受ける",
+      "synonyms": "experience, face",
+      "antonyms": "avoid, escape",
+      "forms": "undergo, undergoes, undergoing, underwent, undergone",
+      "example": "The airport will undergo repairs this summer."
+    },
+    {
+      "word": "impose",
+      "meaning": "to force a rule, tax, or duty on people",
+      "japaneseMeaning": "課す",
+      "synonyms": "force, apply",
+      "antonyms": "remove, lift",
+      "forms": "impose, imposes, imposing, imposed",
+      "example": "The government may impose a fine for illegal parking."
+    },
+    {
+      "word": "exceed",
+      "meaning": "to be greater than a number or limit",
+      "japaneseMeaning": "超える",
+      "synonyms": "surpass, go beyond",
+      "antonyms": "fall below, miss",
+      "forms": "exceed, exceeds, exceeding, exceeded",
+      "example": "The cost should not exceed the approved budget."
+    }
+  ]
+}

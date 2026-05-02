@@ -1,18 +1,96 @@
- {
-    "lesson_id": "eiken-2-6",
-    "title": "Lesson 6",
-    "paragraph": "Knowledge and intelligence enable insight and understanding. Awareness, reasoning, and erudition allow individuals to make informed decisions and solve complex problems.",
-    "words": [
-      {"word": "insight", "meaning": "deep understanding of a situation", "japaneseMeaning": "洞察力", "synonyms": "awareness, perception", "antonyms": "ignorance, misunderstanding", "example": "Her insight helped solve the problem."},
-      {"word": "intellect", "meaning": "the ability to think and understand", "japaneseMeaning": "知性", "synonyms": "intelligence, mind", "antonyms": "stupidity, ignorance", "example": "His intellect impressed everyone."},
-      {"word": "acumen", "meaning": "keen insight or judgment", "japaneseMeaning": "洞察力", "synonyms": "shrewdness, insight", "antonyms": "naivety, ignorance", "example": "She showed business acumen in negotiations."},
-      {"word": "perception", "meaning": "the ability to see or understand", "japaneseMeaning": "認識、知覚", "synonyms": "awareness, understanding", "antonyms": "ignorance, misunderstanding", "example": "His perception of the situation was accurate."},
-      {"word": "cognition", "meaning": "the mental process of acquiring knowledge", "japaneseMeaning": "認知", "synonyms": "understanding, thought", "antonyms": "ignorance, oblivion", "example": "Cognition is essential for learning."},
-      {"word": "reasoning", "meaning": "the action of thinking logically", "japaneseMeaning": "推論", "synonyms": "logic, deduction", "antonyms": "illogic, confusion", "example": "His reasoning was clear and precise."},
-      {"word": "discernment", "meaning": "the ability to judge well", "japaneseMeaning": "洞察力", "synonyms": "judgment, perception", "antonyms": "ignorance, folly", "example": "Discernment is vital in decision making."},
-      {"word": "awareness", "meaning": "knowledge of a situation or fact", "japaneseMeaning": "意識、認識", "synonyms": "consciousness, recognition", "antonyms": "ignorance, unawareness", "example": "Awareness of cultural differences is important."},
-      {"word": "erudition", "meaning": "extensive knowledge gained from reading", "japaneseMeaning": "博学", "synonyms": "learning, scholarship", "antonyms": "ignorance, illiteracy", "example": "His erudition impressed the professors."},
-      {"word": "comprehension", "meaning": "the ability to understand", "japaneseMeaning": "理解力", "synonyms": "understanding, grasp", "antonyms": "misunderstanding, ignorance", "example": "Her comprehension of the text was excellent."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-6",
+  "title": "Lesson 6",
+  "words": [
+    {
+      "word": "credible",
+      "meaning": "able to be believed or trusted",
+      "japaneseMeaning": "信頼できる",
+      "synonyms": "believable, reliable",
+      "antonyms": "unlikely, false",
+      "forms": "credible, credibly, credibility",
+      "example": "The article needs credible sources."
+    },
+    {
+      "word": "coherent",
+      "meaning": "clear and well organized",
+      "japaneseMeaning": "首尾一貫した",
+      "synonyms": "logical, clear",
+      "antonyms": "confusing, unclear",
+      "forms": "coherent, coherently, coherence",
+      "example": "Her essay was coherent from start to finish."
+    },
+    {
+      "word": "measurable",
+      "meaning": "able to be measured clearly",
+      "japaneseMeaning": "測定可能な",
+      "synonyms": "countable, clear",
+      "antonyms": "vague, immeasurable",
+      "forms": "measurable, measurably, measurement",
+      "example": "Set a measurable goal, such as reading ten pages daily."
+    },
+    {
+      "word": "strategic",
+      "meaning": "planned to achieve an important goal",
+      "japaneseMeaning": "戦略的な",
+      "synonyms": "planned, tactical",
+      "antonyms": "random, careless",
+      "forms": "strategic, strategically, strategy",
+      "example": "The shop made a strategic choice to open near the station."
+    },
+    {
+      "word": "constructive",
+      "meaning": "helpful and focused on improvement",
+      "japaneseMeaning": "建設的な",
+      "synonyms": "helpful, useful",
+      "antonyms": "harmful, negative",
+      "forms": "constructive, constructively",
+      "example": "Constructive feedback explains how to improve."
+    },
+    {
+      "word": "effective",
+      "meaning": "successful in producing the wanted result",
+      "japaneseMeaning": "効果的な",
+      "synonyms": "successful, useful",
+      "antonyms": "ineffective, useless",
+      "forms": "effective, effectively, effectiveness",
+      "example": "Handwashing is an effective way to stop illness."
+    },
+    {
+      "word": "favorable",
+      "meaning": "good or helpful for something",
+      "japaneseMeaning": "好意的な、有利な",
+      "synonyms": "positive, helpful",
+      "antonyms": "unfavorable, poor",
+      "forms": "favorable, favorably",
+      "example": "The team received a favorable review from the judges."
+    },
+    {
+      "word": "productive",
+      "meaning": "able to produce good results",
+      "japaneseMeaning": "生産的な",
+      "synonyms": "useful, efficient",
+      "antonyms": "unproductive, wasteful",
+      "forms": "productive, productively, productivity",
+      "example": "A short meeting can be productive with a clear agenda."
+    },
+    {
+      "word": "accessible",
+      "meaning": "easy to reach, use, or understand",
+      "japaneseMeaning": "利用しやすい",
+      "synonyms": "available, reachable",
+      "antonyms": "inaccessible, difficult",
+      "forms": "accessible, accessibly, accessibility",
+      "example": "The website is accessible to people using screen readers."
+    },
+    {
+      "word": "competitive",
+      "meaning": "trying hard to be better than others",
+      "japaneseMeaning": "競争力のある、競争的な",
+      "synonyms": "ambitious, strong",
+      "antonyms": "uncompetitive, weak",
+      "forms": "competitive, competitively, competition",
+      "example": "The job market is competitive for new graduates."
+    }
+  ]
+}

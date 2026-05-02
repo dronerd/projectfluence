@@ -1,18 +1,96 @@
- {
-    "lesson_id": "eiken-2-24",
-    "title": "Lesson 24",
-    "paragraph": "Environment and sustainability require conservation, preservation, and responsible management. Biodiversity, renewable resources, and climate awareness promote ecological balance.",
-    "words": [
-      {"word": "conservation", "meaning": "protection of natural resources", "japaneseMeaning": "保存、保護", "synonyms": "protection, preservation", "antonyms": "destruction, depletion", "example": "Forest conservation prevents deforestation."},
-      {"word": "ecosystem", "meaning": "community of organisms and environment", "japaneseMeaning": "生態系", "synonyms": "environment, habitat", "antonyms": "chaos, disruption", "example": "The ecosystem supports diverse species."},
-      {"word": "emission", "meaning": "release of substances into air", "japaneseMeaning": "排出", "synonyms": "release, discharge", "antonyms": "absorption, retention", "example": "Car emissions contribute to pollution."},
-      {"word": "renewable", "meaning": "naturally replenished resource", "japaneseMeaning": "再生可能な", "synonyms": "sustainable, inexhaustible", "antonyms": "nonrenewable, finite", "example": "Solar energy is renewable."},
-      {"word": "biodiversity", "meaning": "variety of life in ecosystem", "japaneseMeaning": "生物多様性", "synonyms": "variety, richness", "antonyms": "uniformity, monoculture", "example": "Biodiversity is essential for ecosystems."},
-      {"word": "pollution", "meaning": "contamination of environment", "japaneseMeaning": "汚染", "synonyms": "contamination, impurity", "antonyms": "cleanliness, purity", "example": "Air pollution affects health."},
-      {"word": "sustainability", "meaning": "ability to maintain ecological balance", "japaneseMeaning": "持続可能性", "synonyms": "durability, resilience", "antonyms": "unsustainability, depletion", "example": "Sustainability guides environmental policies."},
-      {"word": "climate", "meaning": "weather conditions over time", "japaneseMeaning": "気候", "synonyms": "weather, environment", "antonyms": "instability, unpredictability", "example": "Climate change is a global issue."},
-      {"word": "preservation", "meaning": "keeping something safe from harm", "japaneseMeaning": "保存、保護", "synonyms": "protection, safeguarding", "antonyms": "destruction, neglect", "example": "Preservation of historical sites is important."},
-      {"word": "restoration", "meaning": "returning something to original state", "japaneseMeaning": "修復、再生", "synonyms": "recovery, renewal", "antonyms": "damage, deterioration", "example": "Wetland restoration improved biodiversity."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-24",
+  "title": "Lesson 24",
+  "words": [
+    {
+      "word": "minimal",
+      "meaning": "very small in amount or degree",
+      "japaneseMeaning": "最小限の",
+      "synonyms": "small, slight",
+      "antonyms": "large, major",
+      "forms": "minimal, minimally",
+      "example": "The change had a minimal effect on daily life."
+    },
+    {
+      "word": "maximum",
+      "meaning": "as large or high as possible",
+      "japaneseMeaning": "最大の",
+      "synonyms": "highest, greatest",
+      "antonyms": "minimum, lowest",
+      "forms": "maximum",
+      "example": "The room has a maximum capacity of thirty people."
+    },
+    {
+      "word": "approximate",
+      "meaning": "not exact but close enough",
+      "japaneseMeaning": "おおよその",
+      "synonyms": "rough, estimated",
+      "antonyms": "exact, precise",
+      "forms": "approximate, approximately",
+      "example": "The approximate cost is written at the bottom."
+    },
+    {
+      "word": "direct",
+      "meaning": "going straight to a person, place, or point",
+      "japaneseMeaning": "直接の",
+      "synonyms": "straight, immediate",
+      "antonyms": "indirect, unclear",
+      "forms": "direct, directly",
+      "example": "A direct train connects the airport and city center."
+    },
+    {
+      "word": "indirect",
+      "meaning": "not straight or not clearly stated",
+      "japaneseMeaning": "間接的な",
+      "synonyms": "roundabout, implied",
+      "antonyms": "direct, clear",
+      "forms": "indirect, indirectly",
+      "example": "The policy had an indirect effect on small shops."
+    },
+    {
+      "word": "predictable",
+      "meaning": "easy to guess before it happens",
+      "japaneseMeaning": "予測可能な",
+      "synonyms": "expected, regular",
+      "antonyms": "unexpected, surprising",
+      "forms": "predictable, predictably",
+      "example": "The ending was predictable, but the film was enjoyable."
+    },
+    {
+      "word": "unpredictable",
+      "meaning": "hard to know or guess in advance",
+      "japaneseMeaning": "予測できない",
+      "synonyms": "uncertain, changeable",
+      "antonyms": "predictable, certain",
+      "forms": "unpredictable, unpredictably",
+      "example": "Mountain weather can be unpredictable in spring."
+    },
+    {
+      "word": "inefficient",
+      "meaning": "wasting time, energy, or money",
+      "japaneseMeaning": "非効率な",
+      "synonyms": "wasteful, slow",
+      "antonyms": "efficient, productive",
+      "forms": "inefficient, inefficiently, inefficiency",
+      "example": "The old system is inefficient and often delays orders."
+    },
+    {
+      "word": "unstable",
+      "meaning": "likely to change suddenly or fail",
+      "japaneseMeaning": "不安定な",
+      "synonyms": "unsteady, insecure",
+      "antonyms": "stable, steady",
+      "forms": "unstable, instability",
+      "example": "The unstable internet connection interrupted the class."
+    },
+    {
+      "word": "inconsistent",
+      "meaning": "not staying the same in quality or behavior",
+      "japaneseMeaning": "一貫性のない",
+      "synonyms": "uneven, irregular",
+      "antonyms": "consistent, steady",
+      "forms": "inconsistent, inconsistently, inconsistency",
+      "example": "His attendance is inconsistent during the rainy season."
+    }
+  ]
+}

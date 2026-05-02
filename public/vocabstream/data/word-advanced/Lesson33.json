@@ -1,17 +1,96 @@
-  {
-    "lesson_id": "eiken-2-33",
-    "title": "Lesson 33",
-    "paragraph": "Personality and character traits such as assertiveness, conscientiousness, and sincerity shape interactions. Confidence, diligence, and adaptability enhance personal growth.",
-    "words": [
-      {"word": "assertive", "meaning": "confidently expressing opinions", "japaneseMeaning": "自己主張の強い", "synonyms": "confident, decisive", "antonyms": "submissive, passive", "example": "Being assertive helps in negotiations."},
-      {"word": "conscientious", "meaning": "careful and diligent", "japaneseMeaning": "良心的な、勤勉な", "synonyms": "diligent, meticulous", "antonyms": "negligent, careless", "example": "She is conscientious about her work."},
-      {"word": "sincere", "meaning": "genuine and honest", "japaneseMeaning": "誠実な", "synonyms": "genuine, honest", "antonyms": "insincere, deceitful", "example": "His apology was sincere."},
-      {"word": "confident", "meaning": "self-assured", "japaneseMeaning": "自信のある", "synonyms": "assured, self-reliant", "antonyms": "insecure, doubtful", "example": "She felt confident about the presentation."},
-      {"word": "diligent", "meaning": "hardworking and persistent", "japaneseMeaning": "勤勉な", "synonyms": "industrious, meticulous", "antonyms": "lazy, negligent", "example": "He is diligent in completing tasks."},
-      {"word": "tolerant", "meaning": "accepting of differences", "japaneseMeaning": "寛容な", "synonyms": "open-minded, accepting", "antonyms": "intolerant, biased", "example": "A tolerant society respects diversity."},
-      {"word": "humble", "meaning": "modest and unassuming", "japaneseMeaning": "謙虚な", "synonyms": "modest, unpretentious", "antonyms": "arrogant, prideful", "example": "He remained humble despite success."},
-      {"word": "loyal", "meaning": "faithful and devoted", "japaneseMeaning": "忠実な", "synonyms": "faithful, devoted", "antonyms": "disloyal, unfaithful", "example": "A loyal friend stands by you."},
-      {"word": "adaptable", "meaning": "able to adjust to change", "japaneseMeaning": "適応力のある", "synonyms": "flexible, versatile", "antonyms": "rigid, inflexible", "example": "Being adaptable is crucial in work."},
-      {"word": "disciplined", "meaning": "controlled and self-regulated", "japaneseMeaning": "規律正しい", "synonyms": "self-controlled, organized", "antonyms": "undisciplined, chaotic", "example": "Disciplined study leads to success."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-33",
+  "title": "Lesson 33",
+  "words": [
+    {
+      "word": "conscientious",
+      "meaning": "careful and responsible about work",
+      "japaneseMeaning": "誠実な、几帳面な",
+      "synonyms": "careful, responsible",
+      "antonyms": "careless, lazy",
+      "forms": "conscientious, conscientiously",
+      "example": "A conscientious nurse checks every detail."
+    },
+    {
+      "word": "adaptable",
+      "meaning": "able to change for new situations",
+      "japaneseMeaning": "適応力のある",
+      "synonyms": "flexible, adjustable",
+      "antonyms": "inflexible, rigid",
+      "forms": "adaptable, adaptability",
+      "example": "Adaptable workers learn new tools quickly."
+    },
+    {
+      "word": "arrogant",
+      "meaning": "acting as if you are better than others",
+      "japaneseMeaning": "傲慢な",
+      "synonyms": "proud, superior",
+      "antonyms": "humble, modest",
+      "forms": "arrogant, arrogantly, arrogance",
+      "example": "An arrogant leader may ignore useful advice."
+    },
+    {
+      "word": "reflective",
+      "meaning": "thinking carefully about experiences or ideas",
+      "japaneseMeaning": "内省的な",
+      "synonyms": "thoughtful, careful",
+      "antonyms": "careless, shallow",
+      "forms": "reflective, reflectively",
+      "example": "Reflective students learn from their mistakes."
+    },
+    {
+      "word": "intuitive",
+      "meaning": "understood by feeling rather than detailed reasoning",
+      "japaneseMeaning": "直感的な",
+      "synonyms": "instinctive, natural",
+      "antonyms": "analytical, learned",
+      "forms": "intuitive, intuitively, intuition",
+      "example": "The new app has an intuitive design."
+    },
+    {
+      "word": "expressive",
+      "meaning": "showing thoughts or feelings clearly",
+      "japaneseMeaning": "表現豊かな",
+      "synonyms": "emotional, vivid",
+      "antonyms": "blank, reserved",
+      "forms": "expressive, expressively",
+      "example": "Her expressive voice made the story exciting."
+    },
+    {
+      "word": "empathetic",
+      "meaning": "able to understand another person’s feelings",
+      "japaneseMeaning": "共感的な",
+      "synonyms": "understanding, caring",
+      "antonyms": "cold, uncaring",
+      "forms": "empathetic, empathetically, empathy",
+      "example": "An empathetic doctor listens carefully to patients."
+    },
+    {
+      "word": "insufficient",
+      "meaning": "not enough for a purpose",
+      "japaneseMeaning": "不十分な",
+      "synonyms": "not enough, inadequate",
+      "antonyms": "sufficient, enough",
+      "forms": "insufficient, insufficiently",
+      "example": "Insufficient sleep can reduce concentration."
+    },
+    {
+      "word": "inadequate",
+      "meaning": "not good enough or not enough",
+      "japaneseMeaning": "不十分な",
+      "synonyms": "poor, insufficient",
+      "antonyms": "adequate, enough",
+      "forms": "inadequate, inadequately",
+      "example": "The old heating system is inadequate for winter."
+    },
+    {
+      "word": "marine",
+      "meaning": "related to the sea",
+      "japaneseMeaning": "海の",
+      "synonyms": "sea, ocean",
+      "antonyms": "land, inland",
+      "forms": "marine",
+      "example": "Marine animals are affected by plastic waste."
+    }
+  ]
+}

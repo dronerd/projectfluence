@@ -1,17 +1,96 @@
-  {
-    "lesson_id": "eiken-2-4",
-    "title": "Lesson 4",
-    "paragraph": "Learning requires understanding and insight. Comprehending, interpreting, and synthesizing information allows individuals to make better decisions and gain knowledge effectively.",
-    "words": [
-      {"word": "comprehend", "meaning": "to understand fully", "japaneseMeaning": "理解する", "synonyms": "grasp, understand", "antonyms": "misunderstand, confuse", "example": "She comprehended the complex theory easily."},
-      {"word": "discern", "meaning": "to perceive or recognize clearly", "japaneseMeaning": "見分ける", "synonyms": "detect, distinguish", "antonyms": "overlook, ignore", "example": "He could discern subtle differences in the design."},
-      {"word": "deduce", "meaning": "to draw a conclusion from evidence", "japaneseMeaning": "推論する", "synonyms": "infer, conclude", "antonyms": "guess, assume", "example": "From the clues, she deduced the answer."},
-      {"word": "interpret", "meaning": "to explain the meaning of", "japaneseMeaning": "解釈する", "synonyms": "explain, clarify", "antonyms": "misinterpret, confuse", "example": "He interpreted the poem in his own way."},
-      {"word": "evaluate", "meaning": "to judge the value or quality", "japaneseMeaning": "評価する", "synonyms": "assess, appraise", "antonyms": "ignore, overlook", "example": "The teacher evaluated the students’ essays."},
-      {"word": "infer", "meaning": "to deduce information from evidence", "japaneseMeaning": "推測する", "synonyms": "deduce, conclude", "antonyms": "misinterpret, neglect", "example": "We inferred her mood from her expression."},
-      {"word": "illuminate", "meaning": "to clarify or explain", "japaneseMeaning": "明らかにする", "synonyms": "clarify, enlighten", "antonyms": "obscure, confuse", "example": "The professor illuminated the concept for students."},
-      {"word": "grasp", "meaning": "to understand something fully", "japaneseMeaning": "理解する", "synonyms": "comprehend, seize", "antonyms": "misunderstand, lose", "example": "He grasped the main idea quickly."},
-      {"word": "synthesize", "meaning": "to combine ideas into a coherent whole", "japaneseMeaning": "統合する", "synonyms": "integrate, combine", "antonyms": "separate, divide", "example": "She synthesized information from various sources."},
-      {"word": "elucidate", "meaning": "to make clear", "japaneseMeaning": "明らかにする", "synonyms": "clarify, explain", "antonyms": "confuse, obscure", "example": "The lecturer elucidated the difficult concept."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-4",
+  "title": "Lesson 4",
+  "words": [
+    {
+      "word": "articulate",
+      "meaning": "to express an idea clearly in words",
+      "japaneseMeaning": "明確に述べる",
+      "synonyms": "express, explain",
+      "antonyms": "mumble, hide",
+      "forms": "articulate, articulates, articulating, articulated",
+      "example": "The student can articulate her opinion with clear examples."
+    },
+    {
+      "word": "declare",
+      "meaning": "to say something clearly and publicly",
+      "japaneseMeaning": "宣言する",
+      "synonyms": "announce, state",
+      "antonyms": "deny, hide",
+      "forms": "declare, declares, declaring, declared",
+      "example": "The mayor will declare a new plan for safer streets."
+    },
+    {
+      "word": "denote",
+      "meaning": "to be a sign or meaning of something",
+      "japaneseMeaning": "示す",
+      "synonyms": "mean, indicate",
+      "antonyms": "mislead, confuse",
+      "forms": "denote, denotes, denoting, denoted",
+      "example": "A red line on the map can denote a closed road."
+    },
+    {
+      "word": "advocate",
+      "meaning": "to publicly support an idea or action",
+      "japaneseMeaning": "支持する、提唱する",
+      "synonyms": "support, promote",
+      "antonyms": "oppose, reject",
+      "forms": "advocate, advocates, advocating, advocated",
+      "example": "Many doctors advocate daily exercise for better health."
+    },
+    {
+      "word": "cite",
+      "meaning": "to mention something as proof or an example",
+      "japaneseMeaning": "引用する",
+      "synonyms": "quote, mention",
+      "antonyms": "ignore, omit",
+      "forms": "cite, cites, citing, cited",
+      "example": "In your essay, cite a reliable source for each fact."
+    },
+    {
+      "word": "quote",
+      "meaning": "to repeat someone else’s exact words",
+      "japaneseMeaning": "引用する",
+      "synonyms": "repeat, cite",
+      "antonyms": "paraphrase, ignore",
+      "forms": "quote, quotes, quoting, quoted",
+      "example": "The article will quote the scientist directly."
+    },
+    {
+      "word": "allege",
+      "meaning": "to say that something is true without proving it",
+      "japaneseMeaning": "主張する",
+      "synonyms": "claim, assert",
+      "antonyms": "prove, withdraw",
+      "forms": "allege, alleges, alleging, alleged",
+      "example": "Police allege that the company hid important records."
+    },
+    {
+      "word": "reveal",
+      "meaning": "to make something known that was hidden",
+      "japaneseMeaning": "明らかにする",
+      "synonyms": "show, disclose",
+      "antonyms": "hide, cover",
+      "forms": "reveal, reveals, revealing, revealed",
+      "example": "The survey will reveal what students really need."
+    },
+    {
+      "word": "expose",
+      "meaning": "to show a hidden problem or truth",
+      "japaneseMeaning": "暴露する",
+      "synonyms": "uncover, reveal",
+      "antonyms": "hide, protect",
+      "forms": "expose, exposes, exposing, exposed",
+      "example": "The report may expose unfair hiring practices."
+    },
+    {
+      "word": "comment",
+      "meaning": "to give an opinion or explanation",
+      "japaneseMeaning": "コメントする",
+      "synonyms": "remark, respond",
+      "antonyms": "stay silent, ignore",
+      "forms": "comment, comments, commenting, commented",
+      "example": "The teacher will comment on each draft next week."
+    }
+  ]
+}

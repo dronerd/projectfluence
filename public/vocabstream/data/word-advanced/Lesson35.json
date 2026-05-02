@@ -1,18 +1,96 @@
- {
-    "lesson_id": "eiken-2-35",
-    "title": "Lesson 35",
-    "paragraph": "Behavior and attitude reflect character through arrogance, consideration, and resilience. Flexibility, humility, and independence influence actions.",
-    "words": [
-      {"word": "arrogant", "meaning": "having an exaggerated sense of self-importance", "japaneseMeaning": "傲慢な", "synonyms": "haughty, prideful", "antonyms": "humble, modest", "example": "His arrogant tone annoyed others."},
-      {"word": "considerate", "meaning": "thoughtful of others", "japaneseMeaning": "思いやりのある", "synonyms": "thoughtful, kind", "antonyms": "inconsiderate, selfish", "example": "Being considerate improves relationships."},
-      {"word": "resilient", "meaning": "able to recover quickly", "japaneseMeaning": "回復力のある", "synonyms": "strong, adaptable", "antonyms": "fragile, weak", "example": "Resilient people overcome setbacks."},
-      {"word": "flexible", "meaning": "able to adjust easily", "japaneseMeaning": "柔軟な", "synonyms": "adaptable, versatile", "antonyms": "rigid, inflexible", "example": "A flexible approach helps solve problems."},
-      {"word": "stubborn", "meaning": "unwilling to change", "japaneseMeaning": "頑固な", "synonyms": "obstinate, inflexible", "antonyms": "flexible, compliant", "example": "He was stubborn about his opinion."},
-      {"word": "humble", "meaning": "modest and respectful", "japaneseMeaning": "謙虚な", "synonyms": "modest, unpretentious", "antonyms": "arrogant, prideful", "example": "She remained humble despite fame."},
-      {"word": "assertive", "meaning": "confidently expressing oneself", "japaneseMeaning": "自己主張の強い", "synonyms": "confident, decisive", "antonyms": "passive, submissive", "example": "Being assertive helps negotiations."},
-      {"word": "reflective", "meaning": "thoughtful or contemplative", "japaneseMeaning": "熟考する、反省する", "synonyms": "thoughtful, contemplative", "antonyms": "thoughtless, impulsive", "example": "He was reflective about past actions."},
-      {"word": "cautious", "meaning": "careful to avoid danger", "japaneseMeaning": "慎重な", "synonyms": "careful, wary", "antonyms": "reckless, careless", "example": "Being cautious prevented accidents."},
-      {"word": "independent", "meaning": "self-reliant", "japaneseMeaning": "独立した", "synonyms": "self-sufficient, autonomous", "antonyms": "dependent, reliant", "example": "She is an independent thinker."}
-    ]
-  }
-
+{
+  "lesson_id": "eiken-2-35",
+  "title": "Lesson 35",
+  "words": [
+    {
+      "word": "optimism",
+      "meaning": "the belief that good things will happen",
+      "japaneseMeaning": "楽観主義",
+      "synonyms": "hopefulness, confidence",
+      "antonyms": "pessimism, doubt",
+      "forms": "optimism",
+      "example": "Her optimism helped the team continue."
+    },
+    {
+      "word": "passion",
+      "meaning": "strong interest or love for something",
+      "japaneseMeaning": "情熱",
+      "synonyms": "enthusiasm, love",
+      "antonyms": "indifference, boredom",
+      "forms": "passion, passions",
+      "example": "His passion for science began in childhood."
+    },
+    {
+      "word": "dependency",
+      "meaning": "a situation of needing someone or something",
+      "japaneseMeaning": "依存",
+      "synonyms": "reliance, dependence",
+      "antonyms": "independence, freedom",
+      "forms": "dependency, dependencies",
+      "example": "Too much dependency on one supplier is risky."
+    },
+    {
+      "word": "loyalty",
+      "meaning": "strong support for a person or group",
+      "japaneseMeaning": "忠誠心",
+      "synonyms": "faithfulness, support",
+      "antonyms": "betrayal, disloyalty",
+      "forms": "loyalty, loyalties",
+      "example": "Customer loyalty grew after the company improved service."
+    },
+    {
+      "word": "sincerity",
+      "meaning": "the quality of being honest and real",
+      "japaneseMeaning": "誠実さ",
+      "synonyms": "honesty, truthfulness",
+      "antonyms": "fakeness, dishonesty",
+      "forms": "sincerity",
+      "example": "Her sincerity made the apology believable."
+    },
+    {
+      "word": "atmosphere",
+      "meaning": "the feeling of a place or situation",
+      "japaneseMeaning": "雰囲気",
+      "synonyms": "mood, feeling",
+      "antonyms": "emptiness, silence",
+      "forms": "atmosphere",
+      "example": "The cafe has a calm atmosphere for studying."
+    },
+    {
+      "word": "disadvantage",
+      "meaning": "a problem that makes success harder",
+      "japaneseMeaning": "不利な点",
+      "synonyms": "drawback, weakness",
+      "antonyms": "advantage, benefit",
+      "forms": "disadvantage, disadvantages",
+      "example": "One disadvantage of online classes is poor connection."
+    },
+    {
+      "word": "distribution",
+      "meaning": "the act of sharing or sending things out",
+      "japaneseMeaning": "分配、流通",
+      "synonyms": "delivery, sharing",
+      "antonyms": "collection, storage",
+      "forms": "distribution",
+      "example": "Food distribution began after the earthquake."
+    },
+    {
+      "word": "vehicle",
+      "meaning": "a machine used for transport",
+      "japaneseMeaning": "乗り物",
+      "synonyms": "transport, car",
+      "antonyms": "building, station",
+      "forms": "vehicle, vehicles",
+      "example": "Electric vehicle sales increased this year."
+    },
+    {
+      "word": "witness",
+      "meaning": "a person who sees an event happen",
+      "japaneseMeaning": "目撃者",
+      "synonyms": "observer, viewer",
+      "antonyms": "suspect, stranger",
+      "forms": "witness, witnesses",
+      "example": "A witness described the accident to police."
+    }
+  ]
+}

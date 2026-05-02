@@ -1,17 +1,96 @@
- {
-    "lesson_id": "eiken-2-28",
-    "title": "Lesson 28",
-    "paragraph": "Media and communication transmit information through journalism, broadcast, and publication. Coverage, commentary, and influence shape public perception.",
-    "words": [
-      {"word": "journalism", "meaning": "reporting of news", "japaneseMeaning": "ジャーナリズム", "synonyms": "reporting, news", "antonyms": "propaganda, concealment", "example": "Journalism informs the public."},
-      {"word": "broadcast", "meaning": "transmit to wide audience", "japaneseMeaning": "放送", "synonyms": "transmit, air", "antonyms": "withhold, conceal", "example": "The show was broadcast live."},
-      {"word": "publication", "meaning": "printed or online material", "japaneseMeaning": "出版物", "synonyms": "release, print", "antonyms": "suppression, concealment", "example": "The publication received critical acclaim."},
-      {"word": "coverage", "meaning": "reporting of events", "japaneseMeaning": "報道範囲", "synonyms": "reporting, attention", "antonyms": "neglect, omission", "example": "Media coverage was extensive."},
-      {"word": "propaganda", "meaning": "biased information to influence", "japaneseMeaning": "宣伝", "synonyms": "promotion, persuasion", "antonyms": "truth, objectivity", "example": "The campaign used propaganda tactics."},
-      {"word": "narrative", "meaning": "story or account", "japaneseMeaning": "物語、説明", "synonyms": "story, account", "antonyms": "chaos, disorganization", "example": "The narrative shaped public opinion."},
-      {"word": "commentary", "meaning": "discussion or explanation", "japaneseMeaning": "解説、論評", "synonyms": "analysis, critique", "antonyms": "silence, ignorance", "example": "The expert provided commentary."},
-      {"word": "exposure", "meaning": "public attention or visibility", "japaneseMeaning": "露出、暴露", "synonyms": "revelation, visibility", "antonyms": "concealment, hiding", "example": "The scandal received wide exposure."},
-      {"word": "perspective", "meaning": "point of view", "japaneseMeaning": "視点", "synonyms": "viewpoint, outlook", "antonyms": "ignorance, bias", "example": "His perspective offered new insight."},
-      {"word": "influence", "meaning": "capacity to affect", "japaneseMeaning": "影響", "synonyms": "impact, effect", "antonyms": "ineffectiveness, impotence", "example": "Media influence shapes opinions."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-28",
+  "title": "Lesson 28",
+  "words": [
+    {
+      "word": "deserve",
+      "meaning": "to have earned something because of actions or qualities",
+      "japaneseMeaning": "値する",
+      "synonyms": "earn, merit",
+      "antonyms": "forfeit, lose",
+      "forms": "deserve, deserves, deserving, deserved",
+      "example": "The volunteers deserve thanks for their hard work."
+    },
+    {
+      "word": "differ",
+      "meaning": "to be unlike or not the same",
+      "japaneseMeaning": "異なる",
+      "synonyms": "vary, contrast",
+      "antonyms": "match, agree",
+      "forms": "differ, differs, differing, differed",
+      "example": "School rules differ from country to country."
+    },
+    {
+      "word": "disappoint",
+      "meaning": "to make someone feel unhappy because hopes were not met",
+      "japaneseMeaning": "失望させる",
+      "synonyms": "let down, upset",
+      "antonyms": "satisfy, please",
+      "forms": "disappoint, disappoints, disappointing, disappointed",
+      "example": "Late delivery can disappoint loyal customers."
+    },
+    {
+      "word": "dismiss",
+      "meaning": "to decide that something is not important or true",
+      "japaneseMeaning": "退ける、解雇する",
+      "synonyms": "reject, ignore",
+      "antonyms": "accept, consider",
+      "forms": "dismiss, dismisses, dismissing, dismissed",
+      "example": "Do not dismiss a complaint before checking it."
+    },
+    {
+      "word": "employ",
+      "meaning": "to give someone a job or use a method",
+      "japaneseMeaning": "雇う、用いる",
+      "synonyms": "hire, use",
+      "antonyms": "fire, reject",
+      "forms": "employ, employs, employing, employed",
+      "example": "The factory will employ fifty new workers."
+    },
+    {
+      "word": "hesitate",
+      "meaning": "to pause because you are unsure",
+      "japaneseMeaning": "ためらう",
+      "synonyms": "pause, delay",
+      "antonyms": "act, decide",
+      "forms": "hesitate, hesitates, hesitating, hesitated",
+      "example": "People hesitate to ask questions in a large meeting."
+    },
+    {
+      "word": "introduce",
+      "meaning": "to bring in a new person, idea, or system",
+      "japaneseMeaning": "導入する、紹介する",
+      "synonyms": "present, bring in",
+      "antonyms": "remove, withdraw",
+      "forms": "introduce, introduces, introducing, introduced",
+      "example": "The school will introduce a new reading program."
+    },
+    {
+      "word": "spread",
+      "meaning": "to move or make something move over a wider area",
+      "japaneseMeaning": "広がる、広める",
+      "synonyms": "extend, circulate",
+      "antonyms": "contain, limit",
+      "forms": "spread, spreads, spreading",
+      "example": "Misinformation can spread quickly on social media."
+    },
+    {
+      "word": "surround",
+      "meaning": "to be all around someone or something",
+      "japaneseMeaning": "囲む",
+      "synonyms": "encircle, enclose",
+      "antonyms": "free, expose",
+      "forms": "surround, surrounds, surrounding, surrounded",
+      "example": "Tall buildings surround the small park."
+    },
+    {
+      "word": "vote",
+      "meaning": "to choose in an election or meeting",
+      "japaneseMeaning": "投票する",
+      "synonyms": "elect, choose",
+      "antonyms": "abstain, ignore",
+      "forms": "vote, votes, voting, voted",
+      "example": "Citizens vote to choose local leaders."
+    }
+  ]
+}

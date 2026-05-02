@@ -1,19 +1,96 @@
-
-  {
-    "lesson_id": "eiken-2-31",
-    "title": "Lesson 31",
-    "paragraph": "Emotions and feelings encompass ecstasy, anxiety, affection, and gratitude. Compassion, frustration, empathy, and confidence shape human experience.",
-    "words": [
-      {"word": "ecstasy", "meaning": "intense joy or delight", "japaneseMeaning": "恍惚、至福", "synonyms": "bliss, rapture", "antonyms": "misery, despair", "example": "She was in ecstasy after hearing the news."},
-      {"word": "anxiety", "meaning": "feeling of worry or unease", "japaneseMeaning": "不安、心配", "synonyms": "worry, apprehension", "antonyms": "calm, serenity", "example": "He felt anxiety before the exam."},
-      {"word": "affection", "meaning": "fondness or love", "japaneseMeaning": "愛情", "synonyms": "love, fondness", "antonyms": "hatred, indifference", "example": "She showed affection for her pet."},
-      {"word": "gratitude", "meaning": "thankfulness", "japaneseMeaning": "感謝", "synonyms": "thankfulness, appreciation", "antonyms": "ingratitude, resentment", "example": "He expressed gratitude to his teacher."},
-      {"word": "despair", "meaning": "complete loss of hope", "japaneseMeaning": "絶望", "synonyms": "hopelessness, misery", "antonyms": "hope, optimism", "example": "She fell into despair after the failure."},
-      {"word": "pride", "meaning": "self-respect or satisfaction", "japaneseMeaning": "誇り", "synonyms": "self-esteem, dignity", "antonyms": "shame, humility", "example": "He took pride in his work."},
-      {"word": "compassion", "meaning": "sympathy for others' suffering", "japaneseMeaning": "思いやり", "synonyms": "empathy, kindness", "antonyms": "indifference, cruelty", "example": "Compassion drives acts of charity."},
-      {"word": "frustration", "meaning": "feeling of being upset due to obstacles", "japaneseMeaning": "欲求不満", "synonyms": "irritation, annoyance", "antonyms": "contentment, satisfaction", "example": "He felt frustration when the plan failed."},
-      {"word": "empathy", "meaning": "ability to understand others' feelings", "japaneseMeaning": "共感", "synonyms": "understanding, compassion", "antonyms": "indifference, apathy", "example": "Empathy strengthens relationships."},
-      {"word": "confidence", "meaning": "belief in oneself", "japaneseMeaning": "自信", "synonyms": "self-assurance, trust", "antonyms": "doubt, insecurity", "example": "She spoke with confidence."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-31",
+  "title": "Lesson 31",
+  "words": [
+    {
+      "word": "abandon",
+      "meaning": "to leave something or stop doing it",
+      "japaneseMeaning": "放棄する",
+      "synonyms": "leave, give up",
+      "antonyms": "keep, continue",
+      "forms": "abandon, abandons, abandoning, abandoned",
+      "example": "The team will not abandon the project after one failure."
+    },
+    {
+      "word": "abolish",
+      "meaning": "to officially end a law, system, or practice",
+      "japaneseMeaning": "廃止する",
+      "synonyms": "end, cancel",
+      "antonyms": "establish, create",
+      "forms": "abolish, abolishes, abolishing, abolished",
+      "example": "The city may abolish the outdated parking rule."
+    },
+    {
+      "word": "assure",
+      "meaning": "to tell someone something confidently to remove doubt",
+      "japaneseMeaning": "保証する、安心させる",
+      "synonyms": "promise, reassure",
+      "antonyms": "worry, doubt",
+      "forms": "assure, assures, assuring, assured",
+      "example": "The guide will assure visitors that the route is safe."
+    },
+    {
+      "word": "characterize",
+      "meaning": "to describe the main quality of someone or something",
+      "japaneseMeaning": "特徴づける",
+      "synonyms": "describe, define",
+      "antonyms": "misrepresent, confuse",
+      "forms": "characterize, characterizes, characterizing, characterized",
+      "example": "High energy costs characterize the current economy."
+    },
+    {
+      "word": "chase",
+      "meaning": "to run after someone or something",
+      "japaneseMeaning": "追いかける",
+      "synonyms": "pursue, follow",
+      "antonyms": "avoid, ignore",
+      "forms": "chase, chases, chasing, chased",
+      "example": "Reporters chase the story after the mayor resigns."
+    },
+    {
+      "word": "compete",
+      "meaning": "to try to win against others",
+      "japaneseMeaning": "競争する",
+      "synonyms": "contest, rival",
+      "antonyms": "cooperate, withdraw",
+      "forms": "compete, competes, competing, competed",
+      "example": "Small shops compete with online stores by improving service."
+    },
+    {
+      "word": "confuse",
+      "meaning": "to make someone unable to understand clearly",
+      "japaneseMeaning": "混乱させる",
+      "synonyms": "puzzle, mix up",
+      "antonyms": "clarify, explain",
+      "forms": "confuse, confuses, confusing, confused",
+      "example": "Too many instructions can confuse new users."
+    },
+    {
+      "word": "dominate",
+      "meaning": "to control or be much more important than others",
+      "japaneseMeaning": "支配する",
+      "synonyms": "control, lead",
+      "antonyms": "follow, yield",
+      "forms": "dominate, dominates, dominating, dominated",
+      "example": "One company can dominate a small market."
+    },
+    {
+      "word": "pursue",
+      "meaning": "to try to achieve or follow something",
+      "japaneseMeaning": "追求する",
+      "synonyms": "seek, follow",
+      "antonyms": "avoid, abandon",
+      "forms": "pursue, pursues, pursuing, pursued",
+      "example": "She will pursue a career in public health."
+    },
+    {
+      "word": "exclude",
+      "meaning": "to leave someone or something out",
+      "japaneseMeaning": "除外する",
+      "synonyms": "leave out, reject",
+      "antonyms": "include, admit",
+      "forms": "exclude, excludes, excluding, excluded",
+      "example": "The survey should not exclude part-time workers."
+    }
+  ]
+}

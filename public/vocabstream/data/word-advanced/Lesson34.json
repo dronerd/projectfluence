@@ -1,18 +1,96 @@
-  {
-    "lesson_id": "eiken-2-34",
-    "title": "Lesson 34",
-    "paragraph": "Relationships and trust are built through affection, empathy, and rapport. Loyalty, cooperation, and understanding strengthen bonds and community.",
-    "words": [
-      {"word": "affection", "meaning": "fondness or love", "japaneseMeaning": "愛情", "synonyms": "fondness, warmth", "antonyms": "hatred, indifference", "example": "Affection fosters strong relationships."},
-      {"word": "empathy", "meaning": "understanding others' feelings", "japaneseMeaning": "共感", "synonyms": "compassion, understanding", "antonyms": "indifference, apathy", "example": "Empathy is key in friendships."},
-      {"word": "rapport", "meaning": "harmonious relationship", "japaneseMeaning": "信頼関係", "synonyms": "connection, understanding", "antonyms": "discord, hostility", "example": "They developed a good rapport."},
-      {"word": "loyalty", "meaning": "faithfulness", "japaneseMeaning": "忠誠心", "synonyms": "faithfulness, allegiance", "antonyms": "betrayal, disloyalty", "example": "Loyalty strengthens bonds."},
-      {"word": "reconciliation", "meaning": "restoring friendly relations", "japaneseMeaning": "和解", "synonyms": "settlement, resolution", "antonyms": "conflict, dispute", "example": "The reconciliation ended the feud."},
-      {"word": "harmony", "meaning": "peaceful agreement", "japaneseMeaning": "調和", "synonyms": "peace, concord", "antonyms": "discord, conflict", "example": "Harmony improves teamwork."},
-      {"word": "cooperation", "meaning": "working together", "japaneseMeaning": "協力", "synonyms": "collaboration, teamwork", "antonyms": "opposition, obstruction", "example": "Cooperation leads to success."},
-      {"word": "understanding", "meaning": "comprehension and empathy", "japaneseMeaning": "理解", "synonyms": "insight, perception", "antonyms": "misunderstanding, ignorance", "example": "Understanding others fosters trust."},
-      {"word": "sincerity", "meaning": "genuine honesty", "japaneseMeaning": "誠実さ", "synonyms": "honesty, genuineness", "antonyms": "dishonesty, deceit", "example": "Sincerity builds relationships."},
-      {"word": "dependency", "meaning": "reliance on others", "japaneseMeaning": "依存", "synonyms": "reliance, reliance", "antonyms": "independence, self-sufficiency", "example": "Reducing dependency encourages growth."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-34",
+  "title": "Lesson 34",
+  "words": [
+    {
+      "word": "exploit",
+      "meaning": "to use something well or use someone unfairly",
+      "japaneseMeaning": "活用する、搾取する",
+      "synonyms": "use, take advantage",
+      "antonyms": "waste, protect",
+      "forms": "exploit, exploits, exploiting, exploited",
+      "example": "Some companies exploit legal gaps to avoid taxes."
+    },
+    {
+      "word": "guarantee",
+      "meaning": "to promise that something will happen or work",
+      "japaneseMeaning": "保証する",
+      "synonyms": "promise, assure",
+      "antonyms": "risk, doubt",
+      "forms": "guarantee, guarantees, guaranteeing, guaranteed",
+      "example": "The shop will guarantee repairs for one year."
+    },
+    {
+      "word": "insist",
+      "meaning": "to say firmly that something is true or necessary",
+      "japaneseMeaning": "強く主張する",
+      "synonyms": "demand, maintain",
+      "antonyms": "yield, agree",
+      "forms": "insist, insists, insisting, insisted",
+      "example": "Parents insist that the crossing needs a traffic light."
+    },
+    {
+      "word": "occupy",
+      "meaning": "to fill or use a place, time, or position",
+      "japaneseMeaning": "占める",
+      "synonyms": "fill, take up",
+      "antonyms": "leave, empty",
+      "forms": "occupy, occupies, occupying, occupied",
+      "example": "The meeting will occupy the main hall all morning."
+    },
+    {
+      "word": "owe",
+      "meaning": "to need to pay or give something to someone",
+      "japaneseMeaning": "借りがある",
+      "synonyms": "debt, be required",
+      "antonyms": "own, receive",
+      "forms": "owe, owes, owing, owed",
+      "example": "The company still owes workers two weeks of pay."
+    },
+    {
+      "word": "rescue",
+      "meaning": "to save someone from danger",
+      "japaneseMeaning": "救助する",
+      "synonyms": "save, help",
+      "antonyms": "abandon, endanger",
+      "forms": "rescue, rescues, rescuing, rescued",
+      "example": "Firefighters rescue people from flooded homes."
+    },
+    {
+      "word": "retire",
+      "meaning": "to stop working because of age or choice",
+      "japaneseMeaning": "退職する",
+      "synonyms": "leave work, step down",
+      "antonyms": "work, continue",
+      "forms": "retire, retires, retiring, retired",
+      "example": "Many people retire later than before."
+    },
+    {
+      "word": "satisfy",
+      "meaning": "to meet a need, rule, or wish",
+      "japaneseMeaning": "満たす",
+      "synonyms": "meet, fulfill",
+      "antonyms": "disappoint, fail",
+      "forms": "satisfy, satisfies, satisfying, satisfied",
+      "example": "The plan must satisfy safety requirements."
+    },
+    {
+      "word": "substitute",
+      "meaning": "to use one thing instead of another",
+      "japaneseMeaning": "代用する",
+      "synonyms": "replace, exchange",
+      "antonyms": "keep, retain",
+      "forms": "substitute, substitutes, substituting, substituted",
+      "example": "You can substitute yogurt for cream in this recipe."
+    },
+    {
+      "word": "threaten",
+      "meaning": "to warn that you may hurt someone or cause harm",
+      "japaneseMeaning": "脅す、脅かす",
+      "synonyms": "warn, endanger",
+      "antonyms": "protect, reassure",
+      "forms": "threaten, threatens, threatening, threatened",
+      "example": "Rising costs threaten small local businesses."
+    }
+  ]
+}

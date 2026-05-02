@@ -1,18 +1,96 @@
- {
-    "lesson_id": "eiken-2-3",
-    "title": "Lesson 3",
-    "paragraph": "Mia decided to climb a tall, dangerous mountain by herself. On the first day, she had to endure the cold wind and hunger. Still, she didn’t give up — she chose to persist even when her legs were shaking. When a strong storm came, she had to confront her fear and tackle the problem of finding shelter quickly. Her small tent could withstand the heavy snow, but only because she built it carefully. The next morning, she felt weak but tried to sustain her energy by eating a little food and resting. She wanted to maintain her hope and keep moving, step by step. Even when she slipped on the ice, she decided to persevere and continue climbing. Finally, when she reached the top, she began to recover her strength and smiled proudly. In the end, her courage helped her prevail over the mountain.",
-
-     "words": [
-      {"word": "endure", "meaning": "to suffer patiently", "japaneseMeaning": "耐える", "synonyms": "tolerate, withstand", "antonyms": "avoid, surrender", "example": "She endured the long wait without complaint."},
-      {"word": "persist", "meaning": "to continue firmly in spite of difficulty", "japaneseMeaning": "持続する", "synonyms": "persevere, continue", "antonyms": "give up, cease", "example": "He persisted until he solved the problem."},
-      {"word": "withstand", "meaning": "to resist or endure successfully", "japaneseMeaning": "耐える", "synonyms": "resist, endure", "antonyms": "yield, succumb", "example": "The building can withstand strong winds."},
-      {"word": "confront", "meaning": "to face a challenge or problem directly", "japaneseMeaning": "直面する", "synonyms": "face, tackle", "antonyms": "avoid, evade", "example": "She confronted the issue with courage."},
-      {"word": "tackle", "meaning": "to deal with a problem effectively", "japaneseMeaning": "取り組む", "synonyms": "address, confront", "antonyms": "ignore, avoid", "example": "He tackled the project efficiently."},
-      {"word": "persevere", "meaning": "to continue despite difficulties", "japaneseMeaning": "粘り強く続ける", "synonyms": "persist, endure", "antonyms": "quit, give up", "example": "They persevered despite setbacks."},
-      {"word": "recover", "meaning": "to return to a normal state", "japaneseMeaning": "回復する", "synonyms": "regain, bounce back", "antonyms": "worsen, deteriorate", "example": "She recovered quickly from illness."},
-      {"word": "prevail", "meaning": "to prove more powerful than opposing forces", "japaneseMeaning": "勝つ、打ち勝つ", "synonyms": "triumph, succeed", "antonyms": "lose, fail", "example": "Justice will prevail in the end."},
-      {"word": "maintain", "meaning": "to keep in good condition or continue", "japaneseMeaning": "維持する", "synonyms": "preserve, sustain", "antonyms": "neglect, abandon", "example": "He maintained his position with dignity."},
-      {"word": "sustain", "meaning": "to support or keep going over time", "japaneseMeaning": "持続させる", "synonyms": "uphold, continue", "antonyms": "weaken, stop", "example": "The diet helped sustain her energy levels."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-3",
+  "title": "Lesson 3",
+  "words": [
+    {
+      "word": "vulnerable",
+      "meaning": "easily hurt or affected by something bad",
+      "japaneseMeaning": "弱い、傷つきやすい",
+      "synonyms": "at risk, exposed",
+      "antonyms": "protected, strong",
+      "forms": "vulnerable, vulnerability",
+      "example": "Older people are vulnerable during extreme heat."
+    },
+    {
+      "word": "sustainable",
+      "meaning": "able to continue without causing serious harm",
+      "japaneseMeaning": "持続可能な",
+      "synonyms": "lasting, eco-friendly",
+      "antonyms": "wasteful, harmful",
+      "forms": "sustainable, sustainably, sustainability",
+      "example": "The town needs a sustainable plan for tourism."
+    },
+    {
+      "word": "transparent",
+      "meaning": "open and easy to check or understand",
+      "japaneseMeaning": "透明な、明快な",
+      "synonyms": "open, clear",
+      "antonyms": "secret, hidden",
+      "forms": "transparent, transparently, transparency",
+      "example": "A transparent process helps people trust the result."
+    },
+    {
+      "word": "equitable",
+      "meaning": "fair to all people involved",
+      "japaneseMeaning": "公平な",
+      "synonyms": "fair, just",
+      "antonyms": "unfair, biased",
+      "forms": "equitable, equitably, equity",
+      "example": "The school wants an equitable system for scholarships."
+    },
+    {
+      "word": "inclusive",
+      "meaning": "welcoming many kinds of people",
+      "japaneseMeaning": "包摂的な",
+      "synonyms": "welcoming, open",
+      "antonyms": "exclusive, narrow",
+      "forms": "inclusive, inclusively, inclusion",
+      "example": "An inclusive club makes new members feel safe."
+    },
+    {
+      "word": "persistent",
+      "meaning": "continuing for a long time or not giving up",
+      "japaneseMeaning": "持続する、粘り強い",
+      "synonyms": "lasting, determined",
+      "antonyms": "temporary, weak",
+      "forms": "persistent, persistently, persistence",
+      "example": "Persistent noise from the road disturbed the class."
+    },
+    {
+      "word": "controversial",
+      "meaning": "causing strong disagreement",
+      "japaneseMeaning": "物議を醸す",
+      "synonyms": "debated, disputed",
+      "antonyms": "accepted, uncontroversial",
+      "forms": "controversial, controversially, controversy",
+      "example": "The controversial rule divided parents and teachers."
+    },
+    {
+      "word": "legitimate",
+      "meaning": "allowed by law or accepted as fair",
+      "japaneseMeaning": "正当な、合法の",
+      "synonyms": "valid, lawful",
+      "antonyms": "illegal, false",
+      "forms": "legitimate, legitimately, legitimacy",
+      "example": "Students had a legitimate reason to ask for a delay."
+    },
+    {
+      "word": "ethical",
+      "meaning": "morally right and fair",
+      "japaneseMeaning": "倫理的な",
+      "synonyms": "moral, fair",
+      "antonyms": "unethical, wrong",
+      "forms": "ethical, ethically, ethics",
+      "example": "The company chose an ethical supplier for uniforms."
+    },
+    {
+      "word": "compatible",
+      "meaning": "able to work well together",
+      "japaneseMeaning": "互換性のある、相性の良い",
+      "synonyms": "matching, suitable",
+      "antonyms": "incompatible, conflicting",
+      "forms": "compatible, compatibility",
+      "example": "This charger is compatible with my laptop."
+    }
+  ]
+}

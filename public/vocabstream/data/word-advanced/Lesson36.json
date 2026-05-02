@@ -1,18 +1,96 @@
-
-  {
-    "lesson_id": "eiken-2-36",
-    "title": "Lesson 36",
-    "paragraph": "Emotion and perception involve intuition, sensitivity, and rational thought. Being analytical, expressive, empathetic, and observant helps understand the world.",
-    "words": [
-      {"word": "intuitive", "meaning": "understood instinctively", "japaneseMeaning": "直感的な", "synonyms": "instinctive, perceptive", "antonyms": "analytical, calculated", "example": "She made an intuitive decision."},
-      {"word": "perceptive", "meaning": "having insight or understanding", "japaneseMeaning": "洞察力のある", "synonyms": "observant, insightful", "antonyms": "unobservant, unaware", "example": "He is very perceptive about people's feelings."},
-      {"word": "sensitive", "meaning": "aware of and affected by others' feelings", "japaneseMeaning": "敏感な", "synonyms": "touchy, empathetic", "antonyms": "insensitive, indifferent", "example": "She is sensitive to criticism."},
-      {"word": "rational", "meaning": "based on reason or logic", "japaneseMeaning": "合理的な", "synonyms": "logical, reasonable", "antonyms": "irrational, illogical", "example": "He made a rational choice."},
-      {"word": "reflective", "meaning": "thoughtful and contemplative", "japaneseMeaning": "熟考する", "synonyms": "contemplative, introspective", "antonyms": "impulsive, thoughtless", "example": "She is reflective about her decisions."},
-      {"word": "analytical", "meaning": "using reasoning and logic", "japaneseMeaning": "分析的な", "synonyms": "logical, methodical", "antonyms": "intuitive, impulsive", "example": "His analytical skills helped solve the problem."},
-      {"word": "expressive", "meaning": "effectively conveying emotion or meaning", "japaneseMeaning": "表現力のある", "synonyms": "demonstrative, communicative", "antonyms": "inexpressive, reserved", "example": "She is very expressive in her art."},
-      {"word": "empathetic", "meaning": "understanding and sharing feelings", "japaneseMeaning": "共感的な", "synonyms": "compassionate, understanding", "antonyms": "unfeeling, indifferent", "example": "An empathetic listener comforts friends."},
-      {"word": "observant", "meaning": "quick to notice things", "japaneseMeaning": "観察力のある", "synonyms": "attentive, perceptive", "antonyms": "unaware, inattentive", "example": "Being observant helps detect changes."},
-      {"word": "insightful", "meaning": "having deep understanding", "japaneseMeaning": "洞察力のある", "synonyms": "perceptive, discerning", "antonyms": "shallow, superficial", "example": "Her comments were insightful."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-36",
+  "title": "Lesson 36",
+  "words": [
+    {
+      "word": "temporary",
+      "meaning": "lasting for only a limited time",
+      "japaneseMeaning": "一時的な",
+      "synonyms": "short-term, brief",
+      "antonyms": "permanent, lasting",
+      "forms": "temporary, temporarily",
+      "example": "The library opened a temporary study room."
+    },
+    {
+      "word": "narrow",
+      "meaning": "not wide or limited in range",
+      "japaneseMeaning": "狭い",
+      "synonyms": "thin, limited",
+      "antonyms": "wide, broad",
+      "forms": "narrow, narrowly, narrowness",
+      "example": "The road is too narrow for large trucks."
+    },
+    {
+      "word": "inner",
+      "meaning": "inside or closer to the center",
+      "japaneseMeaning": "内側の",
+      "synonyms": "inside, internal",
+      "antonyms": "outer, outside",
+      "forms": "inner",
+      "example": "The inner pocket is useful for a passport."
+    },
+    {
+      "word": "outer",
+      "meaning": "outside or farther from the center",
+      "japaneseMeaning": "外側の",
+      "synonyms": "outside, external",
+      "antonyms": "inner, inside",
+      "forms": "outer",
+      "example": "The outer wall protects the garden from wind."
+    },
+    {
+      "word": "upper",
+      "meaning": "higher in position or level",
+      "japaneseMeaning": "上部の、上級の",
+      "synonyms": "higher, top",
+      "antonyms": "lower, bottom",
+      "forms": "upper",
+      "example": "The upper floor has quieter study spaces."
+    },
+    {
+      "word": "hourly",
+      "meaning": "happening every hour or paid by the hour",
+      "japaneseMeaning": "毎時の、時給の",
+      "synonyms": "each hour, per hour",
+      "antonyms": "daily, monthly",
+      "forms": "hourly",
+      "example": "Hourly workers received a small pay increase."
+    },
+    {
+      "word": "identical",
+      "meaning": "exactly the same",
+      "japaneseMeaning": "同一の",
+      "synonyms": "same, matching",
+      "antonyms": "different, separate",
+      "forms": "identical, identically",
+      "example": "The two forms look identical, but one has a new date."
+    },
+    {
+      "word": "simple",
+      "meaning": "easy to understand or do",
+      "japaneseMeaning": "簡単な",
+      "synonyms": "easy, plain",
+      "antonyms": "complex, difficult",
+      "forms": "simple, simply, simplicity",
+      "example": "A simple chart can explain a complex trend."
+    },
+    {
+      "word": "unconscious",
+      "meaning": "not awake or not aware",
+      "japaneseMeaning": "意識のない、無意識の",
+      "synonyms": "unaware, senseless",
+      "antonyms": "conscious, awake",
+      "forms": "unconscious, unconsciously",
+      "example": "The injured player was unconscious for one minute."
+    },
+    {
+      "word": "passive",
+      "meaning": "not active or not taking action",
+      "japaneseMeaning": "受け身の",
+      "synonyms": "inactive, quiet",
+      "antonyms": "active, involved",
+      "forms": "passive, passively",
+      "example": "A passive listener may miss chances to ask questions."
+    }
+  ]
+}

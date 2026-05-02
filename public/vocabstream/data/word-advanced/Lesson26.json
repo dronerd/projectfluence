@@ -1,18 +1,96 @@
-
-  {
-    "lesson_id": "eiken-2-26",
-    "title": "Lesson 26",
-    "paragraph": "Education and development involve curriculum, literacy, and assessment. Scholarship, mentorship, and training enhance knowledge and personal growth.",
-    "words": [
-      {"word": "curriculum", "meaning": "set of courses or lessons", "japaneseMeaning": "カリキュラム", "synonyms": "syllabus, program", "antonyms": "improvisation, randomness", "example": "The school updated its curriculum."},
-      {"word": "literacy", "meaning": "ability to read and write", "japaneseMeaning": "識字能力", "synonyms": "education, knowledge", "antonyms": "illiteracy, ignorance", "example": "Literacy is essential for learning."},
-      {"word": "pedagogy", "meaning": "method of teaching", "japaneseMeaning": "教育法", "synonyms": "instruction, teaching", "antonyms": "neglect, ignorance", "example": "Modern pedagogy emphasizes critical thinking."},
-      {"word": "assessment", "meaning": "evaluation of knowledge or skills", "japaneseMeaning": "評価", "synonyms": "evaluation, test", "antonyms": "guesswork, ignorance", "example": "Assessment helps measure student progress."},
-      {"word": "qualification", "meaning": "credential or skill", "japaneseMeaning": "資格", "synonyms": "certification, competence", "antonyms": "incompetence, disqualification", "example": "He earned a professional qualification."},
-      {"word": "scholarship", "meaning": "academic study or financial aid", "japaneseMeaning": "奨学金、学問", "synonyms": "grant, study", "antonyms": "ignorance, negligence", "example": "She received a scholarship for excellence."},
-      {"word": "institution", "meaning": "organization for education or society", "japaneseMeaning": "機関、施設", "synonyms": "organization, establishment", "antonyms": "disorganization, chaos", "example": "The university is a respected institution."},
-      {"word": "mentorship", "meaning": "guidance from an experienced person", "japaneseMeaning": "指導、メンタリング", "synonyms": "guidance, coaching", "antonyms": "neglect, abandonment", "example": "He benefited from mentorship in his career."},
-      {"word": "training", "meaning": "practical instruction or practice", "japaneseMeaning": "訓練", "synonyms": "practice, preparation", "antonyms": "neglect, idleness", "example": "Training improved employee performance."},
-      {"word": "improvement", "meaning": "process of getting better", "japaneseMeaning": "改善、向上", "synonyms": "enhancement, progress", "antonyms": "decline, deterioration", "example": "The course led to improvement in skills."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-26",
+  "title": "Lesson 26",
+  "words": [
+    {
+      "word": "pension",
+      "meaning": "money paid regularly after someone retires",
+      "japaneseMeaning": "年金",
+      "synonyms": "retirement pay, allowance",
+      "antonyms": "salary, debt",
+      "forms": "pension, pensions",
+      "example": "Her pension helps cover rent and food."
+    },
+    {
+      "word": "subsidy",
+      "meaning": "money given by a government to support something",
+      "japaneseMeaning": "補助金",
+      "synonyms": "grant, support",
+      "antonyms": "tax, charge",
+      "forms": "subsidy, subsidies",
+      "example": "The subsidy made solar panels cheaper."
+    },
+    {
+      "word": "asset",
+      "meaning": "something valuable owned by a person or organization",
+      "japaneseMeaning": "資産",
+      "synonyms": "property, resource",
+      "antonyms": "debt, liability",
+      "forms": "asset, assets",
+      "example": "The building is the company’s most valuable asset."
+    },
+    {
+      "word": "economy",
+      "meaning": "the system of money, jobs, and trade in a place",
+      "japaneseMeaning": "経済",
+      "synonyms": "market, financial system",
+      "antonyms": "disorder, collapse",
+      "forms": "economy, economies",
+      "example": "A strong economy creates more job opportunities."
+    },
+    {
+      "word": "diagnosis",
+      "meaning": "a doctor’s decision about an illness",
+      "japaneseMeaning": "診断",
+      "synonyms": "medical finding, identification",
+      "antonyms": "guess, confusion",
+      "forms": "diagnosis, diagnoses",
+      "example": "An early diagnosis can make treatment easier."
+    },
+    {
+      "word": "treatment",
+      "meaning": "medical care for an illness or injury",
+      "japaneseMeaning": "治療",
+      "synonyms": "care, therapy",
+      "antonyms": "neglect, harm",
+      "forms": "treatment, treatments",
+      "example": "The treatment reduced her pain after two weeks."
+    },
+    {
+      "word": "therapy",
+      "meaning": "treatment for a physical or mental problem",
+      "japaneseMeaning": "療法",
+      "synonyms": "treatment, counseling",
+      "antonyms": "neglect, harm",
+      "forms": "therapy, therapies",
+      "example": "Physical therapy helped him walk again."
+    },
+    {
+      "word": "recovery",
+      "meaning": "the process of becoming healthy again",
+      "japaneseMeaning": "回復",
+      "synonyms": "healing, improvement",
+      "antonyms": "decline, illness",
+      "forms": "recovery, recoveries",
+      "example": "Her recovery was faster than doctors expected."
+    },
+    {
+      "word": "nutrition",
+      "meaning": "the food and substances needed for health",
+      "japaneseMeaning": "栄養",
+      "synonyms": "diet, nourishment",
+      "antonyms": "malnutrition, hunger",
+      "forms": "nutrition",
+      "example": "Good nutrition supports learning and growth."
+    },
+    {
+      "word": "disorder",
+      "meaning": "an illness or condition that affects normal function",
+      "japaneseMeaning": "障害、疾患",
+      "synonyms": "condition, illness",
+      "antonyms": "health, order",
+      "forms": "disorder, disorders",
+      "example": "Sleep disorder can affect memory and mood."
+    }
+  ]
+}

@@ -1,18 +1,96 @@
- {
-    "lesson_id": "eiken-2-40",
-    "title": "Lesson 40",
-    "paragraph": "Opinion and belief involve forming convictions and ideologies. Perceptions, assumptions, rationales, and skepticism guide perspectives and notions.",
-    "words": [
-      {"word": "conviction", "meaning": "strong belief or opinion", "japaneseMeaning": "確信", "synonyms": "belief, faith", "antonyms": "doubt, uncertainty", "example": "He spoke with conviction."},
-      {"word": "ideology", "meaning": "system of beliefs or ideas", "japaneseMeaning": "イデオロギー", "synonyms": "belief system, philosophy", "antonyms": "indifference, apathy", "example": "Her ideology shaped her actions."},
-      {"word": "perception", "meaning": "awareness or understanding", "japaneseMeaning": "認識", "synonyms": "view, insight", "antonyms": "misconception, ignorance", "example": "Public perception affects policy."},
-      {"word": "assumption", "meaning": "belief without proof", "japaneseMeaning": "仮定", "synonyms": "presumption, hypothesis", "antonyms": "fact, certainty", "example": "They made an assumption about the outcome."},
-      {"word": "rationale", "meaning": "reasoning behind a belief", "japaneseMeaning": "理由、根拠", "synonyms": "reasoning, justification", "antonyms": "irrationality, nonsense", "example": "He explained the rationale for his choice."},
-      {"word": "skepticism", "meaning": "doubt or questioning attitude", "japaneseMeaning": "懐疑", "synonyms": "doubt, distrust", "antonyms": "credulity, belief", "example": "She approached the claim with skepticism."},
-      {"word": "belief", "meaning": "acceptance that something is true", "japaneseMeaning": "信念", "synonyms": "faith, conviction", "antonyms": "disbelief, doubt", "example": "His belief in justice is strong."},
-      {"word": "principle", "meaning": "fundamental truth or law", "japaneseMeaning": "原則", "synonyms": "rule, standard", "antonyms": "unprincipled, immorality", "example": "He acted according to his principles."},
-      {"word": "perspective", "meaning": "point of view", "japaneseMeaning": "視点、観点", "synonyms": "viewpoint, outlook", "antonyms": "bias, prejudice", "example": "Different perspectives offer insight."},
-      {"word": "notion", "meaning": "concept or idea", "japaneseMeaning": "考え、概念", "synonyms": "idea, concept", "antonyms": "fact, reality", "example": "She had a notion about how it would turn out."}
-    ]
-  }
-
+{
+  "lesson_id": "eiken-2-40",
+  "title": "Lesson 40",
+  "words": [
+    {
+      "word": "resume",
+      "meaning": "to start again after stopping",
+      "japaneseMeaning": "再開する",
+      "synonyms": "restart, continue",
+      "antonyms": "stop, pause",
+      "forms": "resume, resumes, resuming, resumed",
+      "example": "Classes resume after the holiday."
+    },
+    {
+      "word": "qualify",
+      "meaning": "to meet the conditions for something",
+      "japaneseMeaning": "資格を得る",
+      "synonyms": "be eligible, meet requirements",
+      "antonyms": "fail, disqualify",
+      "forms": "qualify, qualifies, qualifying, qualified",
+      "example": "Students qualify for the contest by passing the first test."
+    },
+    {
+      "word": "resign",
+      "meaning": "to officially leave a job or position",
+      "japaneseMeaning": "辞任する",
+      "synonyms": "quit, step down",
+      "antonyms": "continue, remain",
+      "forms": "resign, resigns, resigning, resigned",
+      "example": "The director will resign at the end of March."
+    },
+    {
+      "word": "specialize",
+      "meaning": "to focus on one subject or type of work",
+      "japaneseMeaning": "専門にする",
+      "synonyms": "focus, concentrate",
+      "antonyms": "generalize, broaden",
+      "forms": "specialize, specializes, specializing, specialized",
+      "example": "The clinic will specialize in sports injuries."
+    },
+    {
+      "word": "sponsor",
+      "meaning": "to support an event or person with money",
+      "japaneseMeaning": "後援する",
+      "synonyms": "fund, support",
+      "antonyms": "oppose, withdraw",
+      "forms": "sponsor, sponsors, sponsoring, sponsored",
+      "example": "A local bank will sponsor the science fair."
+    },
+    {
+      "word": "utilize",
+      "meaning": "to use something effectively",
+      "japaneseMeaning": "活用する",
+      "synonyms": "use, apply",
+      "antonyms": "waste, ignore",
+      "forms": "utilize, utilizes, utilizing, utilized",
+      "example": "The team will utilize survey data to improve service."
+    },
+    {
+      "word": "validate",
+      "meaning": "to prove or confirm that something is correct",
+      "japaneseMeaning": "検証する、有効にする",
+      "synonyms": "confirm, prove",
+      "antonyms": "disprove, reject",
+      "forms": "validate, validates, validating, validated",
+      "example": "The study will validate the new teaching method."
+    },
+    {
+      "word": "minimize",
+      "meaning": "to reduce something as much as possible",
+      "japaneseMeaning": "最小限にする",
+      "synonyms": "reduce, limit",
+      "antonyms": "maximize, increase",
+      "forms": "minimize, minimizes, minimizing, minimized",
+      "example": "Good planning can minimize delays."
+    },
+    {
+      "word": "maximize",
+      "meaning": "to increase something as much as possible",
+      "japaneseMeaning": "最大化する",
+      "synonyms": "increase, optimize",
+      "antonyms": "minimize, reduce",
+      "forms": "maximize, maximizes, maximizing, maximized",
+      "example": "The company wants to maximize space in small offices."
+    },
+    {
+      "word": "overlook",
+      "meaning": "to fail to notice something",
+      "japaneseMeaning": "見落とす",
+      "synonyms": "miss, ignore",
+      "antonyms": "notice, catch",
+      "forms": "overlook, overlooks, overlooking, overlooked",
+      "example": "Do not overlook small errors in your application."
+    }
+  ]
+}

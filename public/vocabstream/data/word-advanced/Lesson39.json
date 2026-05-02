@@ -1,18 +1,96 @@
- {
-    "lesson_id": "eiken-2-39",
-    "title": "Lesson 39",
-    "paragraph": "Sensation and awareness require perceiving, detecting, and identifying stimuli. Distinguishing, comprehending, sensing, acknowledging, and discerning deepen understanding.",
-    "words": [
-      {"word": "perceive", "meaning": "to become aware of", "japaneseMeaning": "知覚する", "synonyms": "observe, notice", "antonyms": "ignore, overlook", "example": "She perceived a subtle change in the atmosphere."},
-      {"word": "detect", "meaning": "to discover or identify", "japaneseMeaning": "検出する", "synonyms": "discover, notice", "antonyms": "miss, overlook", "example": "He detected a mistake in the report."},
-      {"word": "identify", "meaning": "to recognize or establish", "japaneseMeaning": "特定する", "synonyms": "recognize, determine", "antonyms": "confuse, misidentify", "example": "They identified the suspect quickly."},
-      {"word": "distinguish", "meaning": "to recognize differences", "japaneseMeaning": "区別する", "synonyms": "differentiate, discern", "antonyms": "confuse, mix up", "example": "She could distinguish between the twins."},
-      {"word": "comprehend", "meaning": "to understand", "japaneseMeaning": "理解する", "synonyms": "understand, grasp", "antonyms": "misunderstand, ignore", "example": "He comprehended the instructions."},
-      {"word": "realize", "meaning": "to become aware of", "japaneseMeaning": "気づく", "synonyms": "understand, perceive", "antonyms": "ignore, overlook", "example": "She realized her mistake immediately."},
-      {"word": "sense", "meaning": "to perceive by senses", "japaneseMeaning": "感知する", "synonyms": "perceive, detect", "antonyms": "ignore, miss", "example": "He could sense danger nearby."},
-      {"word": "acknowledge", "meaning": "to recognize as true", "japaneseMeaning": "認める", "synonyms": "admit, recognize", "antonyms": "deny, ignore", "example": "She acknowledged his contribution."},
-      {"word": "intuit", "meaning": "to understand instinctively", "japaneseMeaning": "直感的に理解する", "synonyms": "perceive, sense", "antonyms": "analyze, reason", "example": "He intuited her feelings immediately."},
-      {"word": "discern", "meaning": "to perceive clearly", "japaneseMeaning": "見分ける", "synonyms": "detect, recognize", "antonyms": "overlook, ignore", "example": "She discerned a hidden pattern."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-39",
+  "title": "Lesson 39",
+  "words": [
+    {
+      "word": "invisible",
+      "meaning": "impossible or very difficult to see",
+      "japaneseMeaning": "見えない",
+      "synonyms": "unseen, hidden",
+      "antonyms": "visible, clear",
+      "forms": "invisible, invisibly",
+      "example": "Air pollution is often invisible but still harmful."
+    },
+    {
+      "word": "inaccessible",
+      "meaning": "difficult or impossible to reach or use",
+      "japaneseMeaning": "アクセスできない",
+      "synonyms": "unreachable, unavailable",
+      "antonyms": "accessible, available",
+      "forms": "inaccessible",
+      "example": "The old station is inaccessible to wheelchair users."
+    },
+    {
+      "word": "inflexible",
+      "meaning": "not willing or able to change",
+      "japaneseMeaning": "柔軟性のない",
+      "synonyms": "rigid, strict",
+      "antonyms": "flexible, adaptable",
+      "forms": "inflexible, inflexibly, inflexibility",
+      "example": "An inflexible schedule is hard for working parents."
+    },
+    {
+      "word": "unreliable",
+      "meaning": "not able to be trusted or depended on",
+      "japaneseMeaning": "信頼できない",
+      "synonyms": "undependable, uncertain",
+      "antonyms": "reliable, dependable",
+      "forms": "unreliable, unreliably",
+      "example": "Unreliable buses make students late for class."
+    },
+    {
+      "word": "unreasonable",
+      "meaning": "not fair or sensible",
+      "japaneseMeaning": "不合理な",
+      "synonyms": "unfair, excessive",
+      "antonyms": "reasonable, fair",
+      "forms": "unreasonable, unreasonably",
+      "example": "The landlord made an unreasonable demand."
+    },
+    {
+      "word": "immature",
+      "meaning": "not fully developed or not behaving like an adult",
+      "japaneseMeaning": "未熟な",
+      "synonyms": "childish, undeveloped",
+      "antonyms": "mature, responsible",
+      "forms": "immature, immaturely, immaturity",
+      "example": "His immature comment hurt the team’s trust."
+    },
+    {
+      "word": "collective",
+      "meaning": "shared by or involving a whole group",
+      "japaneseMeaning": "集団の、共同の",
+      "synonyms": "shared, group",
+      "antonyms": "individual, separate",
+      "forms": "collective, collectively",
+      "example": "Collective action can solve community problems."
+    },
+    {
+      "word": "civilian",
+      "meaning": "not connected with the military",
+      "japaneseMeaning": "民間の",
+      "synonyms": "nonmilitary, public",
+      "antonyms": "military, armed",
+      "forms": "civilian",
+      "example": "Civilian workers helped after the earthquake."
+    },
+    {
+      "word": "meaningful",
+      "meaning": "having real value or importance",
+      "japaneseMeaning": "意味のある",
+      "synonyms": "important, valuable",
+      "antonyms": "meaningless, empty",
+      "forms": "meaningful, meaningfully",
+      "example": "A meaningful apology includes a clear promise to change."
+    },
+    {
+      "word": "seasonal",
+      "meaning": "related to a particular season",
+      "japaneseMeaning": "季節の",
+      "synonyms": "season-related, temporary",
+      "antonyms": "year-round, permanent",
+      "forms": "seasonal, seasonally",
+      "example": "Seasonal workers help farms during harvest."
+    }
+  ]
+}

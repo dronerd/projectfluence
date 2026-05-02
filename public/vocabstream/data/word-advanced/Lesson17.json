@@ -1,17 +1,96 @@
- {
-    "lesson_id": "eiken-2-17",
-    "title": "Lesson 17",
-    "paragraph": "Power and control influence outcomes and behaviors. Leaders dominate, manipulate, and regulate while asserting authority over situations effectively.",
-    "words": [
-      {"word": "dominate", "meaning": "to have control over", "japaneseMeaning": "支配する", "synonyms": "control, rule", "antonyms": "submit, yield", "example": "He dominated the discussion."},
-      {"word": "suppress", "meaning": "to restrain or hold back", "japaneseMeaning": "抑える", "synonyms": "restrain, stifle", "antonyms": "encourage, allow", "example": "The government suppressed the uprising."},
-      {"word": "command", "meaning": "to have authority over", "japaneseMeaning": "指揮する", "synonyms": "lead, direct", "antonyms": "obey, follow", "example": "She commanded the troops efficiently."},
-      {"word": "regulate", "meaning": "to control by rules", "japaneseMeaning": "規制する", "synonyms": "control, supervise", "antonyms": "neglect, ignore", "example": "Authorities regulate traffic flow."},
-      {"word": "manipulate", "meaning": "to control cleverly or unfairly", "japaneseMeaning": "操作する", "synonyms": "influence, control", "antonyms": "assist, support", "example": "He manipulated the situation for his gain."},
-      {"word": "dictate", "meaning": "to give orders", "japaneseMeaning": "指示する", "synonyms": "command, prescribe", "antonyms": "follow, submit", "example": "She dictated the terms of the agreement."},
-      {"word": "assert", "meaning": "to state confidently", "japaneseMeaning": "主張する", "synonyms": "affirm, declare", "antonyms": "deny, retreat", "example": "He asserted his opinion firmly."},
-      {"word": "constrain", "meaning": "to limit or restrict", "japaneseMeaning": "制約する", "synonyms": "restrict, limit", "antonyms": "allow, free", "example": "Budget constraints limited the project."},
-      {"word": "govern", "meaning": "to conduct policy or affairs", "japaneseMeaning": "統治する", "synonyms": "rule, manage", "antonyms": "misrule, neglect", "example": "The council governs the district."},
-      {"word": "influence", "meaning": "the power to affect", "japaneseMeaning": "影響する", "synonyms": "affect, sway", "antonyms": "ignore, resist", "example": "She influenced the final decision."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-17",
+  "title": "Lesson 17",
+  "words": [
+    {
+      "word": "capacity",
+      "meaning": "the ability or space to hold or do something",
+      "japaneseMeaning": "能力、容量",
+      "synonyms": "ability, volume",
+      "antonyms": "inability, limit",
+      "forms": "capacity, capacities",
+      "example": "The hall has a capacity of five hundred people."
+    },
+    {
+      "word": "circumstance",
+      "meaning": "a fact or condition that affects a situation",
+      "japaneseMeaning": "状況、事情",
+      "synonyms": "situation, condition",
+      "antonyms": "certainty, plan",
+      "forms": "circumstance, circumstances",
+      "example": "Under this circumstance, delay is understandable."
+    },
+    {
+      "word": "constraint",
+      "meaning": "a limit that controls what is possible",
+      "japaneseMeaning": "制約",
+      "synonyms": "limit, restriction",
+      "antonyms": "freedom, option",
+      "forms": "constraint, constraints",
+      "example": "Time is the biggest constraint on this project."
+    },
+    {
+      "word": "consumer",
+      "meaning": "a person who buys or uses goods or services",
+      "japaneseMeaning": "消費者",
+      "synonyms": "buyer, customer",
+      "antonyms": "producer, seller",
+      "forms": "consumer, consumers",
+      "example": "The average consumer wants clear price information."
+    },
+    {
+      "word": "dispute",
+      "meaning": "a serious disagreement",
+      "japaneseMeaning": "論争、紛争",
+      "synonyms": "argument, conflict",
+      "antonyms": "agreement, harmony",
+      "forms": "dispute, disputes",
+      "example": "The land dispute lasted for several years."
+    },
+    {
+      "word": "emphasis",
+      "meaning": "special importance given to something",
+      "japaneseMeaning": "強調",
+      "synonyms": "focus, stress",
+      "antonyms": "neglect, disregard",
+      "forms": "emphasis, emphases",
+      "example": "The course puts emphasis on speaking practice."
+    },
+    {
+      "word": "exception",
+      "meaning": "someone or something not included in a rule",
+      "japaneseMeaning": "例外",
+      "synonyms": "exclusion, special case",
+      "antonyms": "rule, standard",
+      "forms": "exception, exceptions",
+      "example": "Everyone must attend, with one exception for illness."
+    },
+    {
+      "word": "funding",
+      "meaning": "money provided for a purpose",
+      "japaneseMeaning": "資金",
+      "synonyms": "financing, support",
+      "antonyms": "debt, shortage",
+      "forms": "funding",
+      "example": "The research stopped because funding disappeared."
+    },
+    {
+      "word": "minority",
+      "meaning": "the smaller number or part of a group",
+      "japaneseMeaning": "少数派",
+      "synonyms": "smaller group, few",
+      "antonyms": "majority, most",
+      "forms": "minority, minorities",
+      "example": "A minority of voters opposed the project."
+    },
+    {
+      "word": "portion",
+      "meaning": "a part or share of something",
+      "japaneseMeaning": "一部、分け前",
+      "synonyms": "part, share",
+      "antonyms": "whole, total",
+      "forms": "portion, portions",
+      "example": "A large portion of the budget goes to salaries."
+    }
+  ]
+}

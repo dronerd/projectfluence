@@ -1,17 +1,96 @@
-  {
-    "lesson_id": "eiken-2-18",
-    "title": "Lesson 18",
-    "paragraph": "Freedom and rights ensure autonomy and equality. Societies respect liberty, democracy, and independence while safeguarding justice and consent.",
-    "words": [
-      {"word": "liberty", "meaning": "freedom to act", "japaneseMeaning": "自由", "synonyms": "freedom, independence", "antonyms": "oppression, restriction", "example": "Citizens enjoy personal liberty."},
-      {"word": "autonomy", "meaning": "self-governing independence", "japaneseMeaning": "自治、自立", "synonyms": "independence, self-rule", "antonyms": "dependence, control", "example": "The region gained autonomy."},
-      {"word": "democracy", "meaning": "government by the people", "japaneseMeaning": "民主主義", "synonyms": "self-rule, representation", "antonyms": "dictatorship, autocracy", "example": "Democracy ensures citizens’ voices are heard."},
-      {"word": "equality", "meaning": "state of being equal", "japaneseMeaning": "平等", "synonyms": "fairness, equity", "antonyms": "inequality, discrimination", "example": "Equality is a core principle of law."},
-      {"word": "emancipation", "meaning": "freedom from restrictions", "japaneseMeaning": "解放", "synonyms": "liberation, release", "antonyms": "enslavement, captivity", "example": "The emancipation of workers was celebrated."},
-      {"word": "privilege", "meaning": "special rights or advantages", "japaneseMeaning": "特権", "synonyms": "advantage, benefit", "antonyms": "disadvantage, restriction", "example": "Education is a privilege everyone deserves."},
-      {"word": "sovereignty", "meaning": "supreme power or authority", "japaneseMeaning": "主権", "synonyms": "authority, control", "antonyms": "subjugation, dependence", "example": "The nation maintained its sovereignty."},
-      {"word": "justice", "meaning": "fair treatment according to law", "japaneseMeaning": "正義", "synonyms": "fairness, lawfulness", "antonyms": "injustice, bias", "example": "The court delivered justice impartially."},
-      {"word": "independence", "meaning": "freedom from control", "japaneseMeaning": "独立", "synonyms": "autonomy, self-rule", "antonyms": "dependence, subjugation", "example": "The country celebrated independence day."},
-      {"word": "consent", "meaning": "permission or agreement", "japaneseMeaning": "同意、承諾", "synonyms": "agreement, approval", "antonyms": "refusal, objection", "example": "They acted with consent."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-18",
+  "title": "Lesson 18",
+  "words": [
+    {
+      "word": "abstract",
+      "meaning": "based on ideas rather than physical things",
+      "japaneseMeaning": "抽象的な",
+      "synonyms": "theoretical, conceptual",
+      "antonyms": "concrete, physical",
+      "forms": "abstract, abstractly",
+      "example": "Justice can feel abstract until people see unfair treatment."
+    },
+    {
+      "word": "concrete",
+      "meaning": "real, specific, and easy to understand",
+      "japaneseMeaning": "具体的な",
+      "synonyms": "specific, real",
+      "antonyms": "abstract, vague",
+      "forms": "concrete, concretely",
+      "example": "The proposal needs concrete steps and dates."
+    },
+    {
+      "word": "federal",
+      "meaning": "related to a national government system",
+      "japaneseMeaning": "連邦の",
+      "synonyms": "national, central",
+      "antonyms": "local, regional",
+      "forms": "federal, federally",
+      "example": "Federal law applies across the whole country."
+    },
+    {
+      "word": "corporate",
+      "meaning": "related to a large company",
+      "japaneseMeaning": "企業の",
+      "synonyms": "business, company",
+      "antonyms": "personal, public",
+      "forms": "corporate",
+      "example": "Corporate training often focuses on communication."
+    },
+    {
+      "word": "administrative",
+      "meaning": "related to organizing and managing work",
+      "japaneseMeaning": "管理の、事務の",
+      "synonyms": "managerial, office",
+      "antonyms": "creative, informal",
+      "forms": "administrative, administratively",
+      "example": "Administrative tasks take up part of every workday."
+    },
+    {
+      "word": "virtual",
+      "meaning": "existing or happening online rather than in person",
+      "japaneseMeaning": "仮想の、オンラインの",
+      "synonyms": "online, digital",
+      "antonyms": "physical, in-person",
+      "forms": "virtual, virtually",
+      "example": "The company held a virtual meeting with overseas staff."
+    },
+    {
+      "word": "ethnic",
+      "meaning": "related to a group with shared culture or background",
+      "japaneseMeaning": "民族の",
+      "synonyms": "cultural, ancestral",
+      "antonyms": "individual, unrelated",
+      "forms": "ethnic, ethnically",
+      "example": "The festival celebrates ethnic traditions from many communities."
+    },
+    {
+      "word": "religious",
+      "meaning": "related to religion or belief in a god",
+      "japaneseMeaning": "宗教の",
+      "synonyms": "spiritual, faith-based",
+      "antonyms": "secular, nonreligious",
+      "forms": "religious, religiously, religion",
+      "example": "The museum protects many religious objects."
+    },
+    {
+      "word": "illegal",
+      "meaning": "not allowed by law",
+      "japaneseMeaning": "違法の",
+      "synonyms": "unlawful, banned",
+      "antonyms": "legal, allowed",
+      "forms": "illegal, illegally",
+      "example": "It is illegal to sell private data without permission."
+    },
+    {
+      "word": "overseas",
+      "meaning": "in or to another country across the sea",
+      "japaneseMeaning": "海外の、海外へ",
+      "synonyms": "foreign, abroad",
+      "antonyms": "domestic, local",
+      "forms": "overseas",
+      "example": "The company opened an overseas office in Singapore."
+    }
+  ]
+}

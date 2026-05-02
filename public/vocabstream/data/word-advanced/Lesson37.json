@@ -1,18 +1,96 @@
-  {
-    "lesson_id": "eiken-2-37",
-    "title": "Lesson 37",
-    "paragraph": "Reaction and response involve adapting, engaging, and recovering. Interpreting situations, managing challenges, adjusting, and countering are essential skills.",
-    "words": [
-      {"word": "respond", "meaning": "to react to something", "japaneseMeaning": "反応する", "synonyms": "reply, react", "antonyms": "ignore, neglect", "example": "She responded quickly to the call."},
-      {"word": "adapt", "meaning": "to adjust to new conditions", "japaneseMeaning": "適応する", "synonyms": "adjust, modify", "antonyms": "resist, refuse", "example": "He adapted to the new environment."},
-      {"word": "engage", "meaning": "to participate or become involved", "japaneseMeaning": "関与する", "synonyms": "participate, involve", "antonyms": "withdraw, avoid", "example": "The teacher engaged the students in discussion."},
-      {"word": "retaliate", "meaning": "to take revenge", "japaneseMeaning": "報復する", "synonyms": "avenge, repay", "antonyms": "forgive, pardon", "example": "He retaliated against the insult."},
-      {"word": "resist", "meaning": "to oppose or withstand", "japaneseMeaning": "抵抗する", "synonyms": "withstand, oppose", "antonyms": "yield, succumb", "example": "She resisted peer pressure."},
-      {"word": "recover", "meaning": "to return to a normal state", "japaneseMeaning": "回復する", "synonyms": "regain, recuperate", "antonyms": "decline, worsen", "example": "He recovered from illness quickly."},
-      {"word": "interpret", "meaning": "to explain the meaning of", "japaneseMeaning": "解釈する", "synonyms": "explain, understand", "antonyms": "misunderstand, confuse", "example": "She interpreted the poem's meaning."},
-      {"word": "manage", "meaning": "to handle or control", "japaneseMeaning": "管理する", "synonyms": "oversee, direct", "antonyms": "mismanage, neglect", "example": "He managed the project efficiently."},
-      {"word": "adjust", "meaning": "to change slightly to improve", "japaneseMeaning": "調整する", "synonyms": "modify, adapt", "antonyms": "ignore, neglect", "example": "Adjust the settings for better results."},
-      {"word": "counter", "meaning": "to respond with opposing action", "japaneseMeaning": "反撃する", "synonyms": "oppose, retaliate", "antonyms": "submit, yield", "example": "He countered the argument with evidence."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-37",
+  "title": "Lesson 37",
+  "words": [
+    {
+      "word": "tolerate",
+      "meaning": "to accept something unpleasant without stopping it",
+      "japaneseMeaning": "我慢する、容認する",
+      "synonyms": "accept, endure",
+      "antonyms": "reject, oppose",
+      "forms": "tolerate, tolerates, tolerating, tolerated",
+      "example": "The school will not tolerate bullying."
+    },
+    {
+      "word": "underestimate",
+      "meaning": "to think something is smaller or less important than it is",
+      "japaneseMeaning": "過小評価する",
+      "synonyms": "undervalue, misjudge",
+      "antonyms": "overestimate, value",
+      "forms": "underestimate, underestimates, underestimating, underestimated",
+      "example": "Do not underestimate the time needed for research."
+    },
+    {
+      "word": "urge",
+      "meaning": "to strongly advise or ask someone to do something",
+      "japaneseMeaning": "強く促す",
+      "synonyms": "encourage, press",
+      "antonyms": "discourage, prevent",
+      "forms": "urge, urges, urging, urged",
+      "example": "Doctors urge people to sleep enough before exams."
+    },
+    {
+      "word": "violate",
+      "meaning": "to break a law, rule, or agreement",
+      "japaneseMeaning": "違反する",
+      "synonyms": "break, breach",
+      "antonyms": "obey, respect",
+      "forms": "violate, violates, violating, violated",
+      "example": "The company may violate privacy rules by selling data."
+    },
+    {
+      "word": "intervene",
+      "meaning": "to become involved to help solve a problem",
+      "japaneseMeaning": "介入する",
+      "synonyms": "step in, mediate",
+      "antonyms": "ignore, avoid",
+      "forms": "intervene, intervenes, intervening, intervened",
+      "example": "Teachers should intervene when bullying begins."
+    },
+    {
+      "word": "accommodate",
+      "meaning": "to provide space or adjust to someone’s needs",
+      "japaneseMeaning": "収容する、対応する",
+      "synonyms": "fit, adapt",
+      "antonyms": "exclude, reject",
+      "forms": "accommodate, accommodates, accommodating, accommodated",
+      "example": "The hotel can accommodate large groups."
+    },
+    {
+      "word": "attribute",
+      "meaning": "to say something is caused by something else",
+      "japaneseMeaning": "〜のせいにする、帰する",
+      "synonyms": "connect, credit",
+      "antonyms": "separate, deny",
+      "forms": "attribute, attributes, attributing, attributed",
+      "example": "Experts attribute the delay to bad weather."
+    },
+    {
+      "word": "compensate",
+      "meaning": "to pay or make up for loss or damage",
+      "japaneseMeaning": "補償する",
+      "synonyms": "repay, offset",
+      "antonyms": "charge, ignore",
+      "forms": "compensate, compensates, compensating, compensated",
+      "example": "The airline will compensate passengers for the delay."
+    },
+    {
+      "word": "confine",
+      "meaning": "to keep someone or something within limits",
+      "japaneseMeaning": "制限する、閉じ込める",
+      "synonyms": "limit, restrict",
+      "antonyms": "free, release",
+      "forms": "confine, confines, confining, confined",
+      "example": "Please confine your answer to one paragraph."
+    },
+    {
+      "word": "devote",
+      "meaning": "to give time or effort to something",
+      "japaneseMeaning": "捧げる",
+      "synonyms": "dedicate, give",
+      "antonyms": "neglect, waste",
+      "forms": "devote, devotes, devoting, devoted",
+      "example": "She will devote the weekend to exam preparation."
+    }
+  ]
+}

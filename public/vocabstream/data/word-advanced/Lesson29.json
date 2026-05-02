@@ -1,18 +1,96 @@
-  {
-    "lesson_id": "eiken-2-29",
-    "title": "Lesson 29",
-    "paragraph": "Travel and exploration involve journeying, discovering, and encountering new places. Adventure, observation, and itinerary planning enrich experiences.",
-    "words": [
-      {"word": "voyage", "meaning": "long journey by sea or space", "japaneseMeaning": "航海、旅行", "synonyms": "journey, expedition", "antonyms": "stay, immobility", "example": "The voyage lasted several months."},
-      {"word": "expedition", "meaning": "journey for a purpose", "japaneseMeaning": "探検、遠征", "synonyms": "journey, mission", "antonyms": "inaction, idleness", "example": "They went on an expedition to the mountains."},
-      {"word": "discovery", "meaning": "finding something new", "japaneseMeaning": "発見", "synonyms": "finding, revelation", "antonyms": "loss, ignorance", "example": "The discovery changed history."},
-      {"word": "journey", "meaning": "travel from one place to another", "japaneseMeaning": "旅", "synonyms": "trip, travel", "antonyms": "stay, immobility", "example": "The journey was exhausting but rewarding."},
-      {"word": "encounter", "meaning": "meeting or experience", "japaneseMeaning": "出会い、遭遇", "synonyms": "meeting, experience", "antonyms": "avoidance, escape", "example": "They had an encounter with wildlife."},
-      {"word": "itinerary", "meaning": "plan for a trip", "japaneseMeaning": "旅行日程", "synonyms": "schedule, plan", "antonyms": "spontaneity, improvisation", "example": "The itinerary included several cities."},
-      {"word": "adventure", "meaning": "exciting or risky experience", "japaneseMeaning": "冒険", "synonyms": "exploration, escapade", "antonyms": "routine, safety", "example": "The trip was full of adventure."},
-      {"word": "observation", "meaning": "careful watching or study", "japaneseMeaning": "観察", "synonyms": "watching, monitoring", "antonyms": "neglect, ignorance", "example": "Observation revealed unique wildlife behavior."},
-      {"word": "destination", "meaning": "place where one is going", "japaneseMeaning": "目的地", "synonyms": "end, goal", "antonyms": "origin, departure", "example": "The destination was a tropical island."},
-      {"word": "exploration", "meaning": "act of traveling to discover", "japaneseMeaning": "探検", "synonyms": "investigation, journey", "antonyms": "avoidance, ignorance", "example": "Exploration of the cave was thrilling."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-29",
+  "title": "Lesson 29",
+  "words": [
+    {
+      "word": "prevention",
+      "meaning": "the act of stopping something bad before it happens",
+      "japaneseMeaning": "予防",
+      "synonyms": "avoidance, protection",
+      "antonyms": "cause, permission",
+      "forms": "prevention",
+      "example": "Fire prevention begins with careful checks."
+    },
+    {
+      "word": "rehabilitation",
+      "meaning": "training or care that helps someone recover",
+      "japaneseMeaning": "リハビリテーション",
+      "synonyms": "recovery, therapy",
+      "antonyms": "decline, neglect",
+      "forms": "rehabilitation",
+      "example": "Rehabilitation helped the athlete return to running."
+    },
+    {
+      "word": "curriculum",
+      "meaning": "the subjects and lessons taught in a course",
+      "japaneseMeaning": "カリキュラム",
+      "synonyms": "course plan, program",
+      "antonyms": "randomness, break",
+      "forms": "curriculum, curricula",
+      "example": "The curriculum includes debate and essay writing."
+    },
+    {
+      "word": "mentorship",
+      "meaning": "guidance from a more experienced person",
+      "japaneseMeaning": "指導関係",
+      "synonyms": "guidance, coaching",
+      "antonyms": "neglect, isolation",
+      "forms": "mentorship",
+      "example": "Mentorship helped new teachers gain confidence."
+    },
+    {
+      "word": "training",
+      "meaning": "practice and instruction for a skill or job",
+      "japaneseMeaning": "訓練、研修",
+      "synonyms": "practice, instruction",
+      "antonyms": "neglect, inexperience",
+      "forms": "training",
+      "example": "Safety training is required before using the machine."
+    },
+    {
+      "word": "literacy",
+      "meaning": "the ability to read, write, or understand a field",
+      "japaneseMeaning": "読み書き能力、リテラシー",
+      "synonyms": "reading ability, knowledge",
+      "antonyms": "illiteracy, ignorance",
+      "forms": "literacy",
+      "example": "Digital literacy is important for modern jobs."
+    },
+    {
+      "word": "voyage",
+      "meaning": "a long journey, especially by sea or space",
+      "japaneseMeaning": "航海、長旅",
+      "synonyms": "journey, trip",
+      "antonyms": "stay, return",
+      "forms": "voyage, voyages",
+      "example": "The voyage across the ocean took three weeks."
+    },
+    {
+      "word": "expedition",
+      "meaning": "an organized journey for a special purpose",
+      "japaneseMeaning": "探検、遠征",
+      "synonyms": "journey, mission",
+      "antonyms": "retreat, stay",
+      "forms": "expedition, expeditions",
+      "example": "The expedition studied plants in the rainforest."
+    },
+    {
+      "word": "itinerary",
+      "meaning": "a plan of places and times for a trip",
+      "japaneseMeaning": "旅程",
+      "synonyms": "schedule, route",
+      "antonyms": "delay, confusion",
+      "forms": "itinerary, itineraries",
+      "example": "The itinerary includes two museums and a factory tour."
+    },
+    {
+      "word": "encounter",
+      "meaning": "an unexpected meeting or experience",
+      "japaneseMeaning": "出会い、遭遇",
+      "synonyms": "meeting, experience",
+      "antonyms": "avoidance, absence",
+      "forms": "encounter, encounters",
+      "example": "The encounter with local farmers changed his research."
+    }
+  ]
+}

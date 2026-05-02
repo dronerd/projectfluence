@@ -1,17 +1,96 @@
-  {
-    "lesson_id": "eiken-2-10",
-    "title": "Lesson 10",
-    "paragraph": "Stability and balance help maintain progress and well-being. By preserving, regulating, and reinforcing systems, individuals can ensure sustainability and security in life and work.",
-    "words": [
-      {"word": "preserve", "meaning": "to maintain in good condition", "japaneseMeaning": "保存する、維持する", "synonyms": "maintain, protect", "antonyms": "damage, neglect", "example": "They preserved the historic building."},
-      {"word": "regulate", "meaning": "to control or maintain", "japaneseMeaning": "規制する", "synonyms": "control, manage", "antonyms": "neglect, ignore", "example": "The government regulates safety standards."},
-      {"word": "sustain", "meaning": "to support over time", "japaneseMeaning": "維持する", "synonyms": "maintain, uphold", "antonyms": "neglect, weaken", "example": "She sustained her efforts throughout the project."},
-      {"word": "maintain", "meaning": "to keep in good condition", "japaneseMeaning": "維持する", "synonyms": "preserve, continue", "antonyms": "neglect, abandon", "example": "He maintained the garden beautifully."},
-      {"word": "ensure", "meaning": "to make certain", "japaneseMeaning": "確実にする", "synonyms": "guarantee, secure", "antonyms": "endanger, risk", "example": "Measures were taken to ensure safety."},
-      {"word": "secure", "meaning": "to make safe", "japaneseMeaning": "確保する、安全にする", "synonyms": "protect, safeguard", "antonyms": "endanger, threaten", "example": "They secured the premises."},
-      {"word": "reinforce", "meaning": "to strengthen", "japaneseMeaning": "強化する", "synonyms": "strengthen, support", "antonyms": "weaken, diminish", "example": "The bridge was reinforced for safety."},
-      {"word": "stabilize", "meaning": "to make stable", "japaneseMeaning": "安定させる", "synonyms": "steady, secure", "antonyms": "destabilize, shake", "example": "The economy stabilized after reforms."},
-      {"word": "uphold", "meaning": "to maintain or support", "japaneseMeaning": "維持する、支持する", "synonyms": "support, maintain", "antonyms": "neglect, oppose", "example": "They upheld the decision."},
-      {"word": "retain", "meaning": "to keep or continue to have", "japaneseMeaning": "保持する", "synonyms": "keep, preserve", "antonyms": "lose, give up", "example": "She retained her position after the merger."}
-    ]
-  }
+{
+  "lesson_id": "eiken-2-10",
+  "title": "Lesson 10",
+  "words": [
+    {
+      "word": "deliberate",
+      "meaning": "to think or discuss carefully before deciding",
+      "japaneseMeaning": "熟考する",
+      "synonyms": "consider, discuss",
+      "antonyms": "rush, ignore",
+      "forms": "deliberate, deliberates, deliberating, deliberated",
+      "example": "The jury will deliberate before it gives an answer."
+    },
+    {
+      "word": "decide",
+      "meaning": "to choose after thinking",
+      "japaneseMeaning": "決める",
+      "synonyms": "choose, determine",
+      "antonyms": "hesitate, delay",
+      "forms": "decide, decides, deciding, decided",
+      "example": "We must decide which plan is realistic by Friday."
+    },
+    {
+      "word": "classify",
+      "meaning": "to put things into groups by type",
+      "japaneseMeaning": "分類する",
+      "synonyms": "sort, group",
+      "antonyms": "mix, confuse",
+      "forms": "classify, classifies, classifying, classified",
+      "example": "Scientists classify animals by shared features."
+    },
+    {
+      "word": "categorize",
+      "meaning": "to place things into named groups",
+      "japaneseMeaning": "分類する",
+      "synonyms": "sort, classify",
+      "antonyms": "mix, scatter",
+      "forms": "categorize, categorizes, categorizing, categorized",
+      "example": "The app can categorize expenses as food or travel."
+    },
+    {
+      "word": "compile",
+      "meaning": "to collect information into one place",
+      "japaneseMeaning": "まとめる",
+      "synonyms": "collect, gather",
+      "antonyms": "separate, lose",
+      "forms": "compile, compiles, compiling, compiled",
+      "example": "The editor will compile all comments into one file."
+    },
+    {
+      "word": "derive",
+      "meaning": "to get something from a source",
+      "japaneseMeaning": "得る、由来する",
+      "synonyms": "obtain, draw",
+      "antonyms": "lose, invent",
+      "forms": "derive, derives, deriving, derived",
+      "example": "Many English words derive from Latin or French."
+    },
+    {
+      "word": "compare",
+      "meaning": "to look at things to see similarities or differences",
+      "japaneseMeaning": "比較する",
+      "synonyms": "contrast, examine",
+      "antonyms": "ignore, separate",
+      "forms": "compare, compares, comparing, compared",
+      "example": "Compare the two charts before you choose a plan."
+    },
+    {
+      "word": "trace",
+      "meaning": "to find the origin, path, or development of something",
+      "japaneseMeaning": "たどる、追跡する",
+      "synonyms": "track, follow",
+      "antonyms": "lose, ignore",
+      "forms": "trace, traces, tracing, traced",
+      "example": "Researchers trace the problem back to a software error."
+    },
+    {
+      "word": "assume",
+      "meaning": "to think something is true without proof",
+      "japaneseMeaning": "仮定する",
+      "synonyms": "suppose, believe",
+      "antonyms": "doubt, prove",
+      "forms": "assume, assumes, assuming, assumed",
+      "example": "Do not assume the report is correct without checking the data."
+    },
+    {
+      "word": "scrutinize",
+      "meaning": "to examine something very carefully",
+      "japaneseMeaning": "詳しく調べる",
+      "synonyms": "inspect, examine",
+      "antonyms": "glance, ignore",
+      "forms": "scrutinize, scrutinizes, scrutinizing, scrutinized",
+      "example": "The committee will scrutinize the budget before voting."
+    }
+  ]
+}

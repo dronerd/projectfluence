@@ -1,19 +1,96 @@
-
-  {
-    "lesson_id": "eiken-2-11",
-    "title": "Lesson 11",
-    "paragraph": "Leadership and influence guide groups and organizations. Leaders inspire, motivate, and empower others while supervising and delegating effectively.",
-    "words": [
-      {"word": "govern", "meaning": "to conduct the policy or affairs of", "japaneseMeaning": "統治する", "synonyms": "rule, manage", "antonyms": "misrule, neglect", "example": "The council governs the city."},
-      {"word": "direct", "meaning": "to manage or control", "japaneseMeaning": "指揮する", "synonyms": "lead, guide", "antonyms": "mislead, ignore", "example": "She directed the team successfully."},
-      {"word": "inspire", "meaning": "to motivate positively", "japaneseMeaning": "鼓舞する", "synonyms": "encourage, stimulate", "antonyms": "discourage, demotivate", "example": "The speech inspired the audience."},
-      {"word": "motivate", "meaning": "to provide incentive to act", "japaneseMeaning": "やる気を起こさせる", "synonyms": "encourage, stimulate", "antonyms": "demotivate, discourage", "example": "He motivated his staff effectively."},
-      {"word": "empower", "meaning": "to give authority or confidence", "japaneseMeaning": "権限を与える", "synonyms": "authorize, enable", "antonyms": "weaken, restrict", "example": "The program empowers local leaders."},
-      {"word": "delegate", "meaning": "to assign responsibility", "japaneseMeaning": "委任する", "synonyms": "assign, entrust", "antonyms": "retain, withhold", "example": "She delegated tasks to her team."},
-      {"word": "supervise", "meaning": "to oversee work or people", "japaneseMeaning": "監督する", "synonyms": "oversee, manage", "antonyms": "ignore, neglect", "example": "He supervised the project carefully."},
-      {"word": "assert", "meaning": "to state confidently", "japaneseMeaning": "主張する", "synonyms": "declare, affirm", "antonyms": "deny, question", "example": "She asserted her opinion clearly."},
-      {"word": "dominate", "meaning": "to have control over", "japaneseMeaning": "支配する", "synonyms": "control, command", "antonyms": "submit, follow", "example": "He dominated the debate."},
-      {"word": "administer", "meaning": "to manage or execute", "japaneseMeaning": "管理する", "synonyms": "manage, oversee", "antonyms": "mismanage, neglect", "example": "She administers the school program efficiently."}
-    ]
-  }
- 
+{
+  "lesson_id": "eiken-2-11",
+  "title": "Lesson 11",
+  "words": [
+    {
+      "word": "treaty",
+      "meaning": "a formal agreement between countries",
+      "japaneseMeaning": "条約",
+      "synonyms": "agreement, pact",
+      "antonyms": "conflict, disagreement",
+      "forms": "treaty, treaties",
+      "example": "The treaty reduced fishing limits in the region."
+    },
+    {
+      "word": "transparency",
+      "meaning": "openness that lets people see the truth",
+      "japaneseMeaning": "透明性",
+      "synonyms": "openness, clarity",
+      "antonyms": "secrecy, hiding",
+      "forms": "transparency",
+      "example": "Citizens asked for transparency in the budget process."
+    },
+    {
+      "word": "controversy",
+      "meaning": "strong public disagreement about an issue",
+      "japaneseMeaning": "論争",
+      "synonyms": "debate, dispute",
+      "antonyms": "agreement, peace",
+      "forms": "controversy, controversies",
+      "example": "The new stadium caused controversy in the city."
+    },
+    {
+      "word": "legitimacy",
+      "meaning": "the quality of being accepted as lawful or fair",
+      "japaneseMeaning": "正当性",
+      "synonyms": "validity, fairness",
+      "antonyms": "illegality, doubt",
+      "forms": "legitimacy",
+      "example": "Clear voting rules give legitimacy to the result."
+    },
+    {
+      "word": "feasibility",
+      "meaning": "the chance that a plan can work",
+      "japaneseMeaning": "実現可能性",
+      "synonyms": "practicality, possibility",
+      "antonyms": "impossibility, doubt",
+      "forms": "feasibility",
+      "example": "Engineers studied the feasibility of the tunnel."
+    },
+    {
+      "word": "accuracy",
+      "meaning": "the quality of being correct and exact",
+      "japaneseMeaning": "正確さ",
+      "synonyms": "correctness, precision",
+      "antonyms": "error, inaccuracy",
+      "forms": "accuracy",
+      "example": "The accuracy of the map matters during disasters."
+    },
+    {
+      "word": "debt",
+      "meaning": "money that must be paid back",
+      "japaneseMeaning": "借金、債務",
+      "synonyms": "loan, obligation",
+      "antonyms": "credit, asset",
+      "forms": "debt, debts",
+      "example": "The family reduced its debt by cutting extra costs."
+    },
+    {
+      "word": "export",
+      "meaning": "a product sold to another country",
+      "japaneseMeaning": "輸出品",
+      "synonyms": "overseas sale, shipment",
+      "antonyms": "import, purchase",
+      "forms": "export, exports",
+      "example": "Rice became an important export for the region."
+    },
+    {
+      "word": "wage",
+      "meaning": "money paid for work, usually by hour or day",
+      "japaneseMeaning": "賃金",
+      "synonyms": "pay, earnings",
+      "antonyms": "fee, debt",
+      "forms": "wage, wages",
+      "example": "The new wage is higher for night workers."
+    },
+    {
+      "word": "tax",
+      "meaning": "money people pay to the government",
+      "japaneseMeaning": "税金",
+      "synonyms": "duty, levy",
+      "antonyms": "refund, exemption",
+      "forms": "tax, taxes",
+      "example": "A higher tax on fuel may reduce traffic."
+    }
+  ]
+}
