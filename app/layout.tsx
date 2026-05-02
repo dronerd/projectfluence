@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "AIアプリが連携して学習体験を最適化する、英語学習のエコシステム",
 
   icons: {
-    icon: "/icon.png",        // ← app/icon.png (192x192)
+    icon: "/favicon.ico",
     apple: "/icon.png",       // iOS Safari 対応（任意だが推奨）
   },
 
