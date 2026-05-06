@@ -214,7 +214,7 @@ export default function AI_chat() {
 
   // Timer effect for lessons
   useEffect(() => {
-    if (mode !== "lesson" || !lessonStartTime || step !== "chatting") return;
+    if (!lessonStartTime || step !== "chatting") return;
 
     const interval = setInterval(() => {
       const elapsed = Math.floor((Date.now() - lessonStartTime) / 1000);
@@ -250,7 +250,7 @@ export default function AI_chat() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [lessonStartTime, currentComponent, mode, step, selectedDuration, selectedComponents]);
+  }, [lessonStartTime, currentComponent, step, selectedDuration, selectedComponents]);
 
   // When in chatting step, hide global Header/BottomNav by adding a body class
   useEffect(() => {
@@ -1064,6 +1064,9 @@ export default function AI_chat() {
     setOpeningQuestion("");
     setDisplayedText({}); // Reset displayed text to start fresh animations
     setChatLog([]);
+    setLessonStartTime(Date.now());
+    setTimeElapsed(0);
+    setCurrentComponent(0);
     setStep("chatting");
     setAwaitingQuestionChoice(false);
     setAwaitingMoodChoice(false);
@@ -2441,7 +2444,7 @@ export default function AI_chat() {
                   <span className="level-label">レベル</span>
                   <span className="level-value">{level}</span>
                 </span>
-                {mode === "lesson" && (
+                {lessonStartTime && (
                   <>
                     <span className="time-pill">
                       経過: {formatTime(timeElapsed)}
