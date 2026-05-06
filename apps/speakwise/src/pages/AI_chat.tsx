@@ -475,10 +475,17 @@ export default function AI_chat() {
   );
 
   const handleHomeStart = () => {
+    if (!validateSharedSetup()) return;
+
     if (practiceMode === "speaking") {
       setMode("casual");
       setSelectedSkills(["スピーキング"]);
       handleSpeakingStart();
+      return;
+    }
+
+    if (selectedComponents.length === 0) {
+      alert("練習内容を少なくとも1つ選択してください");
       return;
     }
 
@@ -1122,7 +1129,7 @@ export default function AI_chat() {
   };
 
   // Choice screen
-  if (mode === "choice") {
+  if (mode === "choice" || step === "initial") {
     const isWriting = practiceMode === "writing";
     const vocabCategories = Object.entries(CATEGORIES).filter(([key]) =>
       key.includes("word") || key.includes("idioms") || key.includes("business")
@@ -1168,6 +1175,7 @@ export default function AI_chat() {
             display:flex;
             align-items:flex-start;
             justify-content:center;
+            width:100%;
             padding: 36px 20px 60px;
             background: transparent;
           }
@@ -1184,6 +1192,7 @@ export default function AI_chat() {
           .choice-stack {
             width: 100%;
             max-width: var(--container-max);
+            margin: 0 auto;
           }
           .choice-stack .card {
             max-width: none;
@@ -1281,7 +1290,7 @@ export default function AI_chat() {
           .setup-section{background:#ffffff;border:1px solid rgba(209,213,219,.82);border-radius:16px;padding:18px;box-shadow:0 10px 24px rgba(15,23,42,0.08)}
           .setup-section.full{grid-column:1 / -1}
           .setup-section h2{font-size:18px;font-weight:800;margin:0 0 10px;color:#10213c}
-          .levels,.option-grid,.dur-grid,.mode-grid{display:grid;gap:10px}
+          .levels,.option-grid,.dur-grid,.mode-grid{display:grid;gap:8px}
           .levels{grid-template-columns:repeat(3,1fr)}
           .option-grid,.mode-grid{grid-template-columns:repeat(2,1fr)}
           .dur-grid{grid-template-columns:repeat(3,1fr)}
@@ -1290,10 +1299,10 @@ export default function AI_chat() {
             .option-grid.wide{grid-template-columns:repeat(3,1fr)}
             .dur-grid{grid-template-columns:repeat(6,1fr)}
           }
-          .mode-btn,.level-btn,.option-btn,.dur-btn,.cat-btn{padding:12px;border-radius:18px;border:1px solid #d1d5db;background:#ffffff;cursor:pointer;transition:transform .14s cubic-bezier(.2,.9,.2,1), box-shadow .14s ease, border-color .14s ease, background .14s ease;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 4px 12px rgba(15,23,42,0.08)}
+          .mode-btn,.level-btn,.option-btn,.dur-btn,.cat-btn{min-height:42px;padding:9px 10px;border-radius:14px;border:1px solid #d1d5db;background:#ffffff;cursor:pointer;transition:transform .14s cubic-bezier(.2,.9,.2,1), box-shadow .14s ease, border-color .14s ease, background .14s ease;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 4px 12px rgba(15,23,42,0.08);font-size:14px;line-height:1.25}
           .option-btn:disabled{opacity:.46;cursor:not-allowed;transform:none;box-shadow:0 4px 12px rgba(15,23,42,0.08)}
-          .mode-btn{min-height:64px;font-size:18px;font-weight:800}
-          .level-btn{flex-direction:column;min-height:68px}
+          .mode-btn{min-height:52px;font-size:16px;font-weight:800}
+          .level-btn{flex-direction:column;min-height:56px}
           .mode-btn.active,.level-btn.active,.option-btn.active,.dur-btn.active,.cat-btn.active{background:linear-gradient(90deg,#4f46e5,#06b6d4);color:white;box-shadow:0 12px 30px rgba(79,70,229,0.18);border-color:transparent;transform:scale(1.02)}
           .mode-btn:hover,.level-btn:hover,.option-btn:hover,.dur-btn:hover,.cat-btn:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(15,23,42,0.12);border-color:#b8c4d6}
           .mode-btn.active:hover,.level-btn.active:hover,.option-btn.active:hover,.dur-btn.active:hover,.cat-btn.active:hover{box-shadow:0 18px 36px rgba(79,70,229,0.22);border-color:transparent}
@@ -1307,9 +1316,29 @@ export default function AI_chat() {
           .home-actions{display:flex;justify-content:center;margin-top:22px}
           .home-start-btn{min-height:48px;padding:0 22px;background:linear-gradient(90deg,#4f46e5,#06b6d4);color:white;border:none;border-radius:12px;box-shadow:0 12px 30px rgba(79,70,229,0.18);font-size:16px;font-weight:800;cursor:pointer}
           @media (max-width: 720px) {
+            .app-container{
+              padding:24px 0 48px;
+            }
+            .choice-stack{
+              width:min(100%, var(--container-max));
+              margin-inline:auto;
+            }
             .about-section { padding: 18px; }
             .about-heading { flex-direction: column; gap: 10px; }
             .about-copy { font-size: 14px; text-align: left; }
+            .home-setup-card{padding:18px}
+            .home-setup-header{margin-bottom:18px}
+            .setup-grid{gap:12px}
+            .setup-section{padding:14px;border-radius:14px}
+            .setup-section h2{font-size:16px;margin-bottom:8px}
+            .levels,.option-grid,.dur-grid,.mode-grid{gap:7px}
+            .mode-btn,.level-btn,.option-btn,.dur-btn,.cat-btn{min-height:36px;padding:7px 8px;border-radius:12px;font-size:13px}
+            .mode-btn{min-height:44px;font-size:14px}
+            .level-btn{min-height:48px}
+            .level-btn div:first-child{font-size:15px !important;margin-bottom:2px !important}
+            .level-btn div:last-child{font-size:10px !important}
+            .input-text{padding:8px;font-size:13px}
+            .home-start-btn{min-height:42px;padding:0 16px;font-size:14px}
           }
 
         `}</style>
@@ -1447,7 +1476,7 @@ export default function AI_chat() {
 
                 {
                   <>
-                    <section className="setup-section">
+                    <section className="setup-section full">
                       <h2>レッスンの時間</h2>
                       <div className="dur-grid">
                         {[5, 10, 15, 20, 25, 30].map((min) => (
@@ -1520,7 +1549,7 @@ export default function AI_chat() {
           .setup-section{background:#ffffff;border:1px solid rgba(209,213,219,.82);border-radius:16px;padding:18px;box-shadow:0 10px 24px rgba(15,23,42,0.08)}
           .setup-section.full{grid-column:1 / -1}
           .setup-section h2{font-size:18px;font-weight:800;margin:0 0 10px;color:#10213c}
-          .levels,.option-grid,.dur-grid{display:grid;gap:10px}
+          .levels,.option-grid,.dur-grid{display:grid;gap:8px}
           .levels{grid-template-columns:repeat(3,1fr)}
           .option-grid{grid-template-columns:repeat(2,1fr)}
           .dur-grid{grid-template-columns:repeat(3,1fr)}
@@ -1529,9 +1558,9 @@ export default function AI_chat() {
             .option-grid.wide{grid-template-columns:repeat(3,1fr)}
             .dur-grid{grid-template-columns:repeat(6,1fr)}
           }
-          .level-btn,.option-btn,.dur-btn,.cat-btn{padding:12px;border-radius:18px;border:1px solid #d1d5db;background:#ffffff;cursor:pointer;transition:transform .14s cubic-bezier(.2,.9,.2,1), box-shadow .14s ease, border-color .14s ease, background .14s ease;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 4px 12px rgba(15,23,42,0.08)}
+          .level-btn,.option-btn,.dur-btn,.cat-btn{min-height:42px;padding:9px 10px;border-radius:14px;border:1px solid #d1d5db;background:#ffffff;cursor:pointer;transition:transform .14s cubic-bezier(.2,.9,.2,1), box-shadow .14s ease, border-color .14s ease, background .14s ease;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 4px 12px rgba(15,23,42,0.08);font-size:14px;line-height:1.25}
           .option-btn:disabled{opacity:.46;cursor:not-allowed;transform:none;box-shadow:0 4px 12px rgba(15,23,42,0.08)}
-          .level-btn{flex-direction:column;min-height:68px}
+          .level-btn{flex-direction:column;min-height:56px}
           .level-btn.active,.option-btn.active,.dur-btn.active,.cat-btn.active{background:linear-gradient(180deg,#1f4f91,#4a78bd);color:white;box-shadow:0 12px 30px rgba(31,79,145,0.16);transform:scale(1.02)}
           .level-btn:hover,.option-btn:hover,.dur-btn:hover,.cat-btn:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(15,23,42,0.12);border-color:#b8c4d6}
           .level-btn.active:hover,.option-btn.active:hover,.dur-btn.active:hover,.cat-btn.active:hover{box-shadow:0 18px 36px rgba(31,79,145,0.18);border-color:#4a78bd}
@@ -1546,6 +1575,22 @@ export default function AI_chat() {
           .btn-accent{padding:10px 18px;background:white;border:1px solid #d1d5db;color:#374151;border-radius:12px;box-shadow:0 4px 12px rgba(15,23,42,0.08);font-weight:700;cursor:pointer}
           .btn-primary{min-height:48px;padding:0 22px;background:linear-gradient(90deg,#4f46e5,#06b6d4);color:white;border:none;border-radius:12px;box-shadow:0 12px 30px rgba(79,70,229,0.18);font-size:16px;font-weight:800;cursor:pointer}
           .lead{color:#60738f}
+          @media(max-width:720px){
+            .app-container{padding:24px 12px 48px}
+            .card{padding:18px}
+            .setup-header{margin-bottom:18px}
+            .setup-grid{gap:12px}
+            .setup-section{padding:14px;border-radius:14px}
+            .setup-section h2{font-size:16px;margin-bottom:8px}
+            .levels,.option-grid,.dur-grid{gap:7px}
+            .level-btn,.option-btn,.dur-btn,.cat-btn{min-height:36px;padding:7px 8px;border-radius:12px;font-size:13px}
+            .level-btn{min-height:48px}
+            .level-btn div:first-child{font-size:15px !important;margin-bottom:2px !important}
+            .level-btn div:last-child{font-size:10px !important}
+            .input-text{padding:8px;font-size:13px}
+            .btn-primary{min-height:42px;padding:0 16px;font-size:14px}
+            .btn-accent{padding:8px 14px;font-size:13px}
+          }
         `}</style>
 
         <main className={containerClass}>
