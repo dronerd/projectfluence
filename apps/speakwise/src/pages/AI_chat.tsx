@@ -1447,23 +1447,21 @@ export default function AI_chat() {
 
                 {
                   <>
-                    {isWriting && (
-                      <section className="setup-section">
-                        <h2>練習時間</h2>
-                        <div className="dur-grid">
-                          {[5, 10, 15, 20, 25, 30].map((min) => (
-                            <button
-                              key={min}
-                              type="button"
-                              onClick={() => setSelectedDuration(min.toString())}
-                              className={`dur-btn ${selectedDuration === min.toString() ? "active" : ""}`}
-                            >
-                              <span style={{ fontWeight: 800 }}>{min}分</span>
-                            </button>
-                          ))}
-                        </div>
-                      </section>
-                    )}
+                    <section className="setup-section">
+                      <h2>レッスンの時間</h2>
+                      <div className="dur-grid">
+                        {[5, 10, 15, 20, 25, 30].map((min) => (
+                          <button
+                            key={min}
+                            type="button"
+                            onClick={() => setSelectedDuration(min.toString())}
+                            className={`dur-btn ${selectedDuration === min.toString() ? "active" : ""}`}
+                          >
+                            <span style={{ fontWeight: 800 }}>{min}分</span>
+                          </button>
+                        ))}
+                      </div>
+                    </section>
 
                     <section className="setup-section full">
                       <h2>{practiceMode === "speaking" ? "スピーキング" : "ライティング"}で重点的に学びたい内容</h2>
@@ -2311,27 +2309,29 @@ export default function AI_chat() {
     return (
       <>
         <style>{`
-          .chat-header{position:sticky;top:0;background:white;border:1px solid #e5e7eb;border-radius:0 0 14px 14px;padding:12px 20px;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
-          .chat-header-content{display:flex;align-items:center;justify-content:space-between;gap:16px;width:min(100%,1200px);margin:0 auto}
+          .chat-header{position:sticky;top:0;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);background:linear-gradient(90deg,#4f46e5 0%,#06b6d4 100%);backdrop-filter:blur(18px);border-bottom:1px solid rgba(158,180,210,0.16);padding:6px 0;z-index:100;box-shadow:0 18px 40px rgba(0,0,0,0.22);box-sizing:border-box}
+          .chat-header-content{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;max-width:1280px;min-height:52px;margin:0 auto;padding:0 18px;box-sizing:border-box}
           .chat-header-left{display:flex;align-items:center;gap:12px;min-width:0}
-          .chat-home-btn{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:4px 12px 4px 6px;border:1px solid #dbe5f2;border-radius:999px;background:#f8fbff;color:#123058;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 4px 12px rgba(15,23,42,0.08);transition:transform 0.2s ease,box-shadow 0.2s ease}
-          .chat-home-btn:hover,.chat-home-btn:focus{transform:translateY(-1px);box-shadow:0 8px 18px rgba(15,23,42,0.12);outline:none}
-          .chat-header-logo{width:36px;height:36px;border-radius:9px;object-fit:cover;display:block}
-          .chat-header-title{margin:0;font-size:18px;font-weight:800;color:#1f4f91;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-          .chat-header-right{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;color:#374151}
-          .level-pill{display:inline-flex;align-items:baseline;gap:8px;min-height:38px;padding:6px 12px;border-radius:999px;background:#eef4ff;border:1px solid #c7d8f2;color:#173a71;box-shadow:0 4px 12px rgba(31,79,145,0.08)}
-          .level-label{font-size:12px;font-weight:800}
-          .level-value{font-size:20px;line-height:1;font-weight:900;color:#0f2f66}
-          .time-pill{display:inline-flex;align-items:center;min-height:34px;padding:6px 10px;border-radius:999px;background:#f8fafc;border:1px solid #e2e8f0;font-size:13px;font-weight:700;color:#475569}
+          .chat-pill{display:inline-flex;align-items:center;gap:10px;min-height:38px;padding:0 10px;border:1px solid rgba(158,180,210,0.16);border-radius:999px;font-size:14px;font-weight:800;text-decoration:none;cursor:pointer;box-shadow:0 12px 28px rgba(3,8,20,0.18);transition:transform 160ms ease,box-shadow 160ms ease,border-color 160ms ease}
+          .chat-pill:hover,.chat-pill:focus{transform:translateY(-2px);box-shadow:0 16px 32px rgba(3,8,20,0.24);border-color:rgba(158,180,210,0.28);outline:none}
+          .chat-project-pill{background:linear-gradient(135deg,rgba(255,255,255,0.96),rgba(235,242,251,0.92));color:#0b1730}
+          .chat-app-pill{background:rgba(17,31,61,0.72);color:#edf4ff}
+          .chat-pill-img{width:34px;height:34px;border-radius:10px;object-fit:cover;display:block;box-shadow:0 8px 18px rgba(3,8,20,0.18)}
+          .chat-header-right{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:nowrap;min-width:0;color:#edf4ff}
+          .level-pill{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:0 10px;border-radius:999px;background:rgba(17,31,61,0.72);border:1px solid rgba(158,180,210,0.16);color:#edf4ff;box-shadow:0 12px 28px rgba(3,8,20,0.18);white-space:nowrap}
+          .level-label{font-size:12px;line-height:1;font-weight:800;color:#dbeafe}
+          .level-value{font-size:18px;line-height:1;font-weight:900;color:#ffffff}
+          .time-pill{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 10px;border-radius:999px;background:rgba(17,31,61,0.72);border:1px solid rgba(158,180,210,0.16);font-size:13px;line-height:1;font-weight:800;color:#edf4ff;box-shadow:0 12px 28px rgba(3,8,20,0.18);white-space:nowrap}
           .speakwise-shell .chat-main{width:100%;max-width:1200px;min-height:100vh;margin:0 auto;padding:12px 20px 32px}
-          .chat-shell{display:flex;flex-direction:column;gap:12px;width:100%}
-          .current-session{position:sticky;top:76px;z-index:50;background:linear-gradient(90deg,#edf4ff,#dfe9f8);padding:12px 18px;border-radius:14px;border:1px solid #cfe0f6;box-shadow:0 8px 24px rgba(31,79,145,0.10)}
+          .chat-shell{display:flex;flex-direction:column;gap:12px;width:100%;padding-top:14px}
+          .current-session{position:sticky;top:68px;z-index:50;background:linear-gradient(90deg,#edf4ff,#dfe9f8);padding:12px 18px;border-radius:14px;border:1px solid #cfe0f6;box-shadow:0 8px 24px rgba(31,79,145,0.10)}
           .current-session-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:center}
           .current-session p{margin:0;font-size:13px;color:#374151}
           .current-session span{margin-left:6px;color:#526174}
           .current-session-center{text-align:center}
           .current-session-right{text-align:right}
-          .chat-window{background:#f6f9fd;border-radius:14px;padding:16px;min-height:calc(100vh - 152px);overflow:auto;border:1px solid #d9e4f2}
+          .chat-window{background:#f6f9fd;border-radius:14px;padding:16px;min-height:calc(100vh - 166px);overflow:auto;border:1px solid #d9e4f2}
+          .chat-message-spacer{height:72px;flex:0 0 auto}
           .chat-empty{min-height:160px}
           .msg-user{background:#d6e4f7;color:#10213c;padding:12px 14px;border-radius:14px;margin-left:min(20%,220px);text-align:right;line-height:1.55}
           .msg-llm{background:#e9eef5;color:#13233f;padding:12px 14px;border-radius:14px;margin-right:min(20%,220px);text-align:left;line-height:1.55}
@@ -2351,32 +2351,33 @@ export default function AI_chat() {
           .answer-input:focus{outline:2px solid rgba(79,70,229,0.22);border-color:#7da2d7}
           .answer-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-top:10px}
           @media(max-width:768px){
-            .chat-header{padding:10px 12px}
-            .chat-header-content{align-items:flex-start;gap:8px}
+            .chat-header-content{gap:8px;min-height:52px;padding:0 14px}
             .chat-header-left{gap:8px;flex:1}
-            .chat-home-btn{min-height:40px;padding-right:10px;font-size:13px}
-            .chat-header-logo{width:32px;height:32px}
-            .chat-header-title{font-size:16px;white-space:normal}
-            .chat-header-right{gap:6px;max-width:42%;justify-content:flex-end}
-            .level-pill{min-height:34px;padding:5px 9px;gap:6px}
-            .level-value{font-size:18px}
-            .time-pill{font-size:12px;min-height:30px;padding:5px 8px}
+            .chat-pill{min-height:38px;padding:0 8px;font-size:13px}
+            .chat-project-pill span,.chat-app-pill span{display:none}
+            .chat-pill-img{width:32px;height:32px;border-radius:9px}
+            .chat-header-right{gap:6px;max-width:calc(100% - 58px);overflow-x:auto;justify-content:flex-end}
+            .level-pill{min-height:34px;padding:0 8px;gap:6px}
+            .level-label{display:none}
+            .level-value{font-size:17px}
+            .time-pill{font-size:12px;min-height:34px;padding:0 8px}
             .speakwise-shell .chat-main{padding:10px 10px 24px}
-            .current-session{top:78px;padding:10px 12px}
+            .current-session{top:68px;padding:10px 12px}
             .current-session-grid{grid-template-columns:1fr;gap:6px}
             .current-session-center,.current-session-right{text-align:left}
-            .chat-window{min-height:calc(100vh - 164px);padding:10px;border-radius:12px}
+            .chat-shell{padding-top:12px}
+            .chat-window{min-height:calc(100vh - 176px);padding:10px;border-radius:12px}
+            .chat-message-spacer{height:68px}
             .msg-user,.msg-llm,.msg-timer,.msg-question{margin-left:0;margin-right:0}
             .msg-question-text{font-size:19px}
             .msg-question{padding:16px}
             .answer-card{width:100%}
           }
           @media(max-width:420px){
-            .chat-header-content{flex-direction:column}
-            .chat-header-right{max-width:none;width:100%;justify-content:space-between}
+            .chat-header-right{max-width:calc(100% - 54px)}
             .speakwise-shell .chat-main{padding-top:10px}
-            .current-session{top:120px}
-            .chat-window{min-height:calc(100vh - 200px)}
+            .current-session{top:68px}
+            .chat-window{min-height:calc(100vh - 176px)}
           }
         `}</style>
 
@@ -2385,9 +2386,29 @@ export default function AI_chat() {
           <div className="chat-header">
             <div className="chat-header-content">
               <div className="chat-header-left">
+                <a href="/" className="chat-pill chat-project-pill" aria-label="Project Fluence landing page">
+                  <img className="chat-pill-img" src="/images/logo.png" alt="Project Fluence" />
+                  <span>Project Fluence</span>
+                </a>
+              </div>
+              <div className="chat-header-right">
+                <span className="level-pill" aria-label={`英語レベル ${level}`}>
+                  <span className="level-label">レベル</span>
+                  <span className="level-value">{level}</span>
+                </span>
+                {mode === "lesson" && (
+                  <>
+                    <span className="time-pill">
+                      経過: {formatTime(timeElapsed)}
+                    </span>
+                    <span className="time-pill">
+                      合計: {formatTime(totalLessonTime)}
+                    </span>
+                  </>
+                )}
                 <button
                   type="button"
-                  className="chat-home-btn"
+                  className="chat-pill chat-app-pill"
                   onClick={() => {
                     setMode("choice");
                     setStep("initial");
@@ -2404,31 +2425,11 @@ export default function AI_chat() {
                     setPendingStartupMode(null);
                   }}
                   title="クリックして最初に戻る"
+                  aria-label="SpeakWiseAI home"
                 >
-                  <img className="chat-header-logo" src="/images/speakwise.png" alt="" />
+                  <img className="chat-pill-img" src="/images/speakwise.png" alt="" />
                   <span>Home</span>
                 </button>
-                <div>
-                  <h1 className="chat-header-title">
-                    {mode === "casual" ? "AIとの会話" : "AIによるレッスン"}
-                  </h1>
-                </div>
-              </div>
-              <div className="chat-header-right">
-                <span className="level-pill" aria-label={`英語レベル ${level}`}>
-                  <span className="level-label">レベル</span>
-                  <span className="level-value">{level}</span>
-                </span>
-                {mode === "lesson" && lessonStartTime && (
-                  <>
-                    <span className="time-pill">
-                      経過: {formatTime(timeElapsed)}
-                    </span>
-                    <span className="time-pill">
-                      合計: {selectedDuration}分
-                    </span>
-                  </>
-                )}
               </div>
             </div>
           </div>
@@ -2441,6 +2442,7 @@ export default function AI_chat() {
                 <div className="chat-empty" aria-hidden="true" />
               ) : (
                 <>
+                  <div className="chat-message-spacer" aria-hidden="true" />
                   {chatLog.map((entry, index) => (
                     <div key={index} style={{ marginBottom: 10 }}>
                       {entry.sender === "user" ? (
