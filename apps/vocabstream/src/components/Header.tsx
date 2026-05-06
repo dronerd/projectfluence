@@ -52,7 +52,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           z-index: 1000;
           background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%);
           backdrop-filter: blur(18px);
-          padding: 8px 0;
+          padding: 6px 0;
           border-bottom: 1px solid rgba(158, 180, 210, 0.16);
           width: 100%;
           box-sizing: border-box;
@@ -70,7 +70,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           grid-template-columns: auto 1fr auto;
           align-items: center;
           gap: 14px;
-          min-height: 56px;
+          min-height: 52px;
           box-sizing: border-box;
         }
 
@@ -102,8 +102,8 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           display: inline-flex;
           align-items: center;
           gap: 10px;
-          min-height: 46px;
-          padding: 0 14px;
+          min-height: 38px;
+          padding: 0 10px;
           border-radius: 999px;
           text-decoration: none;
           font-weight: 700;
@@ -142,7 +142,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
         }
 
         .vocab-overline {
-          font-size: 11px;
+          font-size: 10px;
           letter-spacing: 0.18em;
           text-transform: uppercase;
           color: white;
@@ -152,7 +152,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           margin: 0;
           font-weight: 800;
           color: #f7fbff;
-          font-size: clamp(20px, 3vw, 30px);
+          font-size: clamp(18px, 2.6vw, 26px);
           line-height: 1.05;
           white-space: nowrap;
           overflow: hidden;
@@ -168,18 +168,18 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
         }
 
         .brand-icon {
-          width: 42px;
-          height: 42px;
-          border-radius: 12px;
+          width: 34px;
+          height: 34px;
+          border-radius: 10px;
           object-fit: cover;
           display: block;
           box-shadow: 0 8px 18px rgba(3, 8, 20, 0.18);
         }
 
         .vocab-pill img {
-          width: 38px;
-          height: 38px;
-          border-radius: 11px;
+          width: 32px;
+          height: 32px;
+          border-radius: 9px;
           object-fit: cover;
           flex-shrink: 0;
         }
@@ -191,17 +191,17 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
 
         @media (max-width: 820px) {
           .app-header-inner {
-            grid-template-columns: auto 1fr;
-            padding: 4px 14px;
+            grid-template-columns: auto 1fr auto;
+            padding: 0 14px;
+            min-height: 52px;
           }
 
           .header-center {
-            position: static;
-            transform: none;
-            width: 100%;
-            order: 3;
-            text-align: left;
-            padding-left: 6px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: min(46%, 360px);
+            text-align: center;
+            padding-left: 0;
           }
 
           .header-right {
@@ -209,6 +209,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           }
 
           .project-pill span,
+          .vocab-pill span,
           .header-icon-btn span {
             display: none;
           }
@@ -217,7 +218,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
         @media (max-width: 560px) {
           .app-header-inner {
             gap: 10px;
-            min-height: 72px;
+            min-height: 52px;
           }
 
           .header-left,
@@ -226,7 +227,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           }
 
           .vocab-pill {
-            padding: 0 10px;
+            padding: 0 8px;
           }
 
           .header-subtitle {

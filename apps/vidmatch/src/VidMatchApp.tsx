@@ -117,7 +117,7 @@ export default function VidMatchApp({ pathname }: Props) {
           z-index: 1000;
           background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%);
           backdrop-filter: blur(18px);
-          padding: 8px 0;
+          padding: 6px 0;
           border-bottom: 1px solid rgba(158, 180, 210, 0.16);
           width: 100%;
           box-sizing: border-box;
@@ -135,7 +135,7 @@ export default function VidMatchApp({ pathname }: Props) {
           grid-template-columns: auto 1fr auto;
           align-items: center;
           gap: 14px;
-          min-height: 56px;
+          min-height: 52px;
           box-sizing: border-box;
         }
 
@@ -167,8 +167,8 @@ export default function VidMatchApp({ pathname }: Props) {
           display: inline-flex;
           align-items: center;
           gap: 10px;
-          min-height: 46px;
-          padding: 0 14px;
+          min-height: 38px;
+          padding: 0 10px;
           border-radius: 999px;
           text-decoration: none;
           font-weight: 700;
@@ -207,7 +207,7 @@ export default function VidMatchApp({ pathname }: Props) {
         }
 
         .vocab-overline {
-          font-size: 11px;
+          font-size: 10px;
           letter-spacing: 0.18em;
           text-transform: uppercase;
           color: white;
@@ -217,7 +217,7 @@ export default function VidMatchApp({ pathname }: Props) {
           margin: 0;
           font-weight: 800;
           color: #f7fbff;
-          font-size: clamp(20px, 3vw, 30px);
+          font-size: clamp(18px, 2.6vw, 26px);
           line-height: 1.05;
           white-space: nowrap;
           overflow: hidden;
@@ -225,18 +225,18 @@ export default function VidMatchApp({ pathname }: Props) {
         }
 
         .brand-icon {
-          width: 42px;
-          height: 42px;
-          border-radius: 12px;
+          width: 34px;
+          height: 34px;
+          border-radius: 10px;
           object-fit: cover;
           display: block;
           box-shadow: 0 8px 18px rgba(3, 8, 20, 0.18);
         }
 
         .vocab-pill img {
-          width: 38px;
-          height: 38px;
-          border-radius: 11px;
+          width: 32px;
+          height: 32px;
+          border-radius: 9px;
           object-fit: cover;
           flex-shrink: 0;
         }
@@ -335,31 +335,42 @@ export default function VidMatchApp({ pathname }: Props) {
         .choice-chip,
         .recommend-button,
         .youtube-link {
-          border: 1px solid #cbd5e1;
-          border-radius: 999px;
+          border: 1px solid #d1d5db;
+          border-radius: 18px;
           min-height: 42px;
           padding: 0 16px;
           font-weight: 800;
           cursor: pointer;
-          transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+          box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+          transition: transform 140ms cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 140ms ease,
+            border-color 140ms ease, background 140ms ease, color 140ms ease;
         }
 
         .choice-chip {
-          background: #f8fafc;
+          background: #ffffff;
           color: #334155;
         }
 
         .choice-chip:hover,
         .choice-chip:focus {
-          transform: translateY(-1px);
-          border-color: #0891b2;
+          transform: translateY(-6px);
+          border-color: #b8c4d6;
+          box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
           outline: none;
         }
 
         .choice-chip.is-selected {
-          background: #0f766e;
-          border-color: #0f766e;
+          background: linear-gradient(90deg, #4f46e5, #06b6d4);
+          border-color: transparent;
+          box-shadow: 0 12px 30px rgba(79, 70, 229, 0.18);
           color: #ffffff;
+          transform: scale(1.02);
+        }
+
+        .choice-chip.is-selected:hover,
+        .choice-chip.is-selected:focus {
+          border-color: transparent;
+          box-shadow: 0 18px 36px rgba(79, 70, 229, 0.22);
         }
 
         .caption-toggle {
@@ -375,7 +386,7 @@ export default function VidMatchApp({ pathname }: Props) {
         .caption-toggle input {
           width: 18px;
           height: 18px;
-          accent-color: #0f766e;
+          accent-color: #4f46e5;
         }
 
         .recommend-actions {
@@ -386,14 +397,27 @@ export default function VidMatchApp({ pathname }: Props) {
         }
 
         .recommend-button {
-          background: #173a71;
-          border-color: #173a71;
+          background: linear-gradient(90deg, #4f46e5, #06b6d4);
+          border-color: transparent;
+          box-shadow: 0 12px 30px rgba(79, 70, 229, 0.18);
           color: #ffffff;
+        }
+
+        .recommend-button:hover,
+        .recommend-button:focus,
+        .youtube-link:hover,
+        .youtube-link:focus {
+          transform: translateY(-6px);
+          border-color: transparent;
+          box-shadow: 0 18px 36px rgba(79, 70, 229, 0.22);
+          outline: none;
         }
 
         .recommend-button:disabled {
           cursor: wait;
           opacity: 0.72;
+          transform: none;
+          box-shadow: 0 12px 30px rgba(79, 70, 229, 0.18);
         }
 
         .recommend-error,
@@ -472,8 +496,9 @@ export default function VidMatchApp({ pathname }: Props) {
           justify-content: center;
           width: fit-content;
           min-height: 40px;
-          background: #dc2626;
-          border-color: #dc2626;
+          background: linear-gradient(90deg, #4f46e5, #06b6d4);
+          border-color: transparent;
+          box-shadow: 0 12px 30px rgba(79, 70, 229, 0.18);
           color: #ffffff;
           text-decoration: none;
         }
@@ -510,17 +535,17 @@ export default function VidMatchApp({ pathname }: Props) {
 
         @media (max-width: 820px) {
           .app-header-inner {
-            grid-template-columns: auto 1fr;
-            padding: 4px 14px;
+            grid-template-columns: auto 1fr auto;
+            padding: 0 14px;
+            min-height: 52px;
           }
 
           .header-center {
-            position: static;
-            transform: none;
-            width: 100%;
-            order: 3;
-            text-align: left;
-            padding-left: 6px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: min(46%, 360px);
+            text-align: center;
+            padding-left: 0;
           }
 
           .header-right {
@@ -528,6 +553,7 @@ export default function VidMatchApp({ pathname }: Props) {
           }
 
           .project-pill span,
+          .vocab-pill span,
           .header-icon-btn span {
             display: none;
           }
@@ -548,7 +574,7 @@ export default function VidMatchApp({ pathname }: Props) {
         @media (max-width: 560px) {
           .app-header-inner {
             gap: 10px;
-            min-height: 72px;
+            min-height: 52px;
           }
 
           .header-left,
@@ -557,7 +583,7 @@ export default function VidMatchApp({ pathname }: Props) {
           }
 
           .vocab-pill {
-            padding: 0 10px;
+            padding: 0 8px;
           }
 
           .vidmatch-main {
@@ -596,12 +622,7 @@ export default function VidMatchApp({ pathname }: Props) {
             </Link>
           </div>
 
-          <div className="header-right">
-            <Link href="/vidmatch" className="header-pill vocab-pill" onClick={scrollToTop} aria-label="VidMatch home">
-              <img src="/images/videofinder.png" alt="VidMatch logo" />
-              <span>Home</span>
-            </Link>
-          </div>
+          <div className="header-right" aria-hidden="true" />
         </div>
       </header>
 
