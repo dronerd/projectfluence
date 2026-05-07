@@ -1000,7 +1000,6 @@ export default function AI_chat() {
       }
 
       const feedback = data.feedback || {};
-      const improvedVersion = normalizeImprovedVersion(feedback.improvedVersion || feedback.improved_version);
       const positiveComment = String(
         feedback.positiveComment ||
         feedback.positive_comment ||
@@ -1026,15 +1025,6 @@ export default function AI_chat() {
           suggestions: feedback.suggestions || [],
         },
       };
-      const improvedEntry: ChatEntry = {
-        sender: "llm",
-        text: "改善版",
-        kind: "improvedAnswer",
-        feedback: {
-          improvedVersion,
-        },
-      };
-
       setChatLog((prev) => [...prev, positiveEntry]);
       await waitForTyping(positiveComment);
 
@@ -1044,12 +1034,44 @@ export default function AI_chat() {
       setChatLog((prev) => [...prev, feedbackEntry]);
       await waitBetweenMessages();
 
-      if (improvedVersion.segments && improvedVersion.segments.length > 0) {
-        const improvedIntro = getRandomItem(IMPROVED_VERSION_INTRO_MESSAGES);
-        setChatLog((prev) => [...prev, { sender: "llm", text: improvedIntro, kind: "improvedIntro" }]);
-        await waitForTyping(improvedIntro);
-        setChatLog((prev) => [...prev, improvedEntry]);
+      try {
+        const improvedRes = await fetch(`${SPEAKWISE_API_URL}/api/improved-version`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            question,
+            userAnswer,
+            level,
+            practiceMode,
+          }),
+        });
+        const improvedData = await improvedRes.json();
+        if (!improvedRes.ok || improvedData.error) {
+          throw new Error(improvedData.details || improvedData.error || "Improved version request failed");
+        }
+
+        const improvedVersion = normalizeImprovedVersion(
+          improvedData.improvedVersion || improvedData.improved_version
+        );
+        const improvedEntry: ChatEntry = {
+          sender: "llm",
+          text: "改善版",
+          kind: "improvedAnswer",
+          feedback: {
+            improvedVersion,
+          },
+        };
+
+        if (improvedVersion.segments && improvedVersion.segments.length > 0) {
+          const improvedIntro = getRandomItem(IMPROVED_VERSION_INTRO_MESSAGES);
+          setChatLog((prev) => [...prev, { sender: "llm", text: improvedIntro, kind: "improvedIntro" }]);
+          await waitForTyping(improvedIntro);
+          setChatLog((prev) => [...prev, improvedEntry]);
+        }
+      } catch (improvedError) {
+        console.error("Improved version error:", improvedError);
       }
+
       setFeedbackLoading(false);
     } catch (error) {
       console.error("Feedback error:", error);
