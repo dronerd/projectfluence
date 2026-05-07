@@ -31,7 +31,17 @@ type ConversationStep =
 interface ChatEntry {
   sender: "user" | "llm";
   text: string;
-  kind?: "question" | "greeting" | "moodResponse" | "lessonIntro" | "confirmation" | "answerReady" | "feedback";
+  kind?:
+    | "question"
+    | "greeting"
+    | "moodResponse"
+    | "lessonIntro"
+    | "confirmation"
+    | "answerReady"
+    | "feedbackIntro"
+    | "feedback"
+    | "improvedIntro"
+    | "improvedAnswer";
   feedback?: {
     grammar?: string[];
     vocabulary?: string[];
@@ -142,6 +152,20 @@ const MESSAGE_TIMING_BY_LEVEL: Record<CEFRLevel, { typingMs: number; pauseMs: nu
   C1: { typingMs: 40, pauseMs: 440 },
   C2: { typingMs: TYPING_SPEED_MS, pauseMs: STARTUP_MESSAGE_PAUSE_MS },
 };
+
+const FEEDBACK_INTRO_MESSAGES = [
+  "I’ll first give you feedback on your answer.",
+  "First, let’s look at feedback for your answer.",
+  "I’ll start with some feedback on what you wrote.",
+  "Let’s begin with feedback on your response.",
+];
+
+const IMPROVED_VERSION_INTRO_MESSAGES = [
+  "Now, here is a possible improved version of your answer.",
+  "Next, here’s one polished version you can compare with your answer.",
+  "Now let’s look at a clearer improved version.",
+  "Here is one natural way to improve your response.",
+];
 
 const IMPROVEMENT_LABELS: Record<ImprovementType, string> = {
   unchanged: "元の表現",
@@ -733,6 +757,12 @@ export default function AI_chat() {
       : inputText;
     setUserInput("");
 
+    if (openingQuestion && textToSend.trim()) {
+      setLastUserAnswer(textToSend);
+      getFeedback(openingQuestion, textToSend);
+      return;
+    }
+
     try {
       const testsToPass = selectedTests.length > 0
         ? selectedTests.map(t => t === "Other" ? customTest : t)
@@ -785,14 +815,6 @@ export default function AI_chat() {
       const llmResponse: ChatEntry = { sender: "llm", text: replyText };
       setChatLog((prev) => [...prev, llmResponse]);
 
-      // Store the answer for feedback and get feedback
-      if (openingQuestion && textToSend.trim()) {
-        setLastUserAnswer(textToSend);
-        // Get feedback after the reply has had time to finish typing.
-        waitForTyping(replyText).then(() => {
-          getFeedback(openingQuestion, textToSend);
-        });
-      }
     } catch (error) {
       console.error(error);
       setChatLog((prev) => [
@@ -903,14 +925,18 @@ export default function AI_chat() {
 
   // Get structured feedback from API
   const getFeedback = async (question: string, userAnswer: string) => {
+    const feedbackIntro = getRandomItem(FEEDBACK_INTRO_MESSAGES);
+
     try {
       setFeedbackLoading(true);
+      setChatLog((prev) => [...prev, { sender: "llm", text: feedbackIntro, kind: "feedbackIntro" }]);
+
       const skillsFocus = selectedComponents.length > 0 ? selectedComponents.join(", ") : "General";
       const testsToEvaluate = selectedTests.length > 0 
         ? selectedTests.filter(t => t !== "特になし").join(", ") 
         : "None";
 
-      const res = await fetch(`${SPEAKWISE_API_URL}/api/feedback`, {
+      const feedbackRequest = fetch(`${SPEAKWISE_API_URL}/api/feedback`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -922,6 +948,8 @@ export default function AI_chat() {
           practiceMode,
         }),
       });
+
+      const [res] = await Promise.all([feedbackRequest, waitForTyping(feedbackIntro)]);
 
       const data = await res.json();
       if (!res.ok || data.error) {
@@ -941,6 +969,13 @@ export default function AI_chat() {
           fluency: feedback.fluency || [],
           overall: feedback.overall || "",
           suggestions: feedback.suggestions || [],
+        },
+      };
+      const improvedEntry: ChatEntry = {
+        sender: "llm",
+        text: "改善版",
+        kind: "improvedAnswer",
+        feedback: {
           improvedVersion: {
             title: improvedVersion.title || "Improved version",
             summary: improvedVersion.summary || "",
@@ -951,6 +986,15 @@ export default function AI_chat() {
       };
 
       setChatLog((prev) => [...prev, feedbackEntry]);
+      await waitBetweenMessages();
+
+      const improvedIntro = getRandomItem(IMPROVED_VERSION_INTRO_MESSAGES);
+      setChatLog((prev) => [...prev, { sender: "llm", text: improvedIntro, kind: "improvedIntro" }]);
+      await waitForTyping(improvedIntro);
+
+      if (improvedEntry.feedback?.improvedVersion?.segments?.length) {
+        setChatLog((prev) => [...prev, improvedEntry]);
+      }
       setFeedbackLoading(false);
     } catch (error) {
       console.error("Feedback error:", error);
@@ -2451,9 +2495,10 @@ export default function AI_chat() {
           .msg-timer{background:#eef4ff;color:#13233f;padding:10px 12px;border-left:4px solid #4a78bd;border-radius:10px;margin-right:min(20%,220px);font-weight:700}
           .feedback-card{margin-right:min(12%,140px);background:#f0f9ff;border:2px solid #3b82f6;border-radius:14px;padding:16px}
           .feedback-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+          .improved-answer-card{margin-right:min(12%,140px);background:#f8fafc;border:2px solid #22c55e;border-radius:14px;padding:16px;box-shadow:0 12px 28px rgba(34,197,94,0.10)}
           .improved-version{margin:0 0 12px;padding:12px;background:#ffffff;border-radius:10px;border:1px solid #bfdbfe}
           .improved-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
-          .improved-title{font-size:14px;font-weight:800;color:#1e40af}
+          .improved-title{font-size:15px;font-weight:800;color:#166534}
           .improved-legend{display:flex;gap:6px;flex-wrap:wrap}
           .legend-chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;color:#334155}
           .legend-dot{width:10px;height:10px;border-radius:999px;display:inline-block;border:1px solid rgba(15,23,42,0.12)}
@@ -2461,6 +2506,7 @@ export default function AI_chat() {
           .legend-dot.improvement{background:#bbf7d0}
           .legend-dot.clarity{background:#bae6fd}
           .improved-text{font-size:15px;line-height:1.85;color:#10213c;background:#f8fafc;border-radius:8px;padding:12px;white-space:pre-wrap}
+          .improved-answer-card .improved-text{font-size:18px;line-height:1.9;background:#ffffff;border:1px solid #dcfce7}
           .improved-segment{border-radius:5px;padding:2px 3px;margin:0 1px}
           .improved-segment.unchanged{padding:0;margin:0;background:transparent}
           .improved-segment.grammar{background:#fde68a;color:#713f12}
@@ -2499,8 +2545,9 @@ export default function AI_chat() {
             .chat-shell{padding-top:12px}
             .chat-window{min-height:calc(100vh - 176px);padding:10px;border-radius:12px}
             .chat-message-spacer{height:68px}
-            .msg-user,.msg-llm,.msg-timer,.msg-question,.feedback-card{margin-left:0;margin-right:0}
+            .msg-user,.msg-llm,.msg-timer,.msg-question,.feedback-card,.improved-answer-card{margin-left:0;margin-right:0}
             .feedback-grid{grid-template-columns:1fr}
+            .improved-answer-card .improved-text{font-size:16px}
             .msg-question-text{font-size:19px}
             .msg-question{padding:16px}
             .answer-card{width:100%}
@@ -2586,6 +2633,10 @@ export default function AI_chat() {
                           <div className="msg-question-label">練習問題</div>
                           <div className="msg-question-text">{displayedText[index] ?? ""}</div>
                         </div>
+                      ) : entry.kind === "feedbackIntro" || entry.kind === "improvedIntro" ? (
+                        <div className="msg-llm">
+                          <div style={{ whiteSpace: "pre-wrap" }}>{displayedText[index] ?? ""}</div>
+                        </div>
                       ) : entry.kind === "feedback" ? (
                         <div className="feedback-card">
                           <div style={{ fontWeight: 800, color: "#1e40af", marginBottom: 12, fontSize: 16 }}>📊 フィードバック</div>
@@ -2594,45 +2645,6 @@ export default function AI_chat() {
                             <div style={{ marginBottom: 12, padding: 12, background: "#dbeafe", borderRadius: 10, borderLeft: "4px solid #3b82f6" }}>
                               <div style={{ fontWeight: 700, color: "#1e40af", fontSize: 14, marginBottom: 4 }}>総合評価</div>
                               <div style={{ color: "#1e3a8a", lineHeight: 1.6 }}>{entry.feedback.overall}</div>
-                            </div>
-                          )}
-
-                          {entry.feedback?.improvedVersion?.segments && entry.feedback.improvedVersion.segments.length > 0 && (
-                            <div className="improved-version">
-                              <div className="improved-header">
-                                <div className="improved-title">改善版</div>
-                                <div className="improved-legend" aria-label="改善箇所の凡例">
-                                  <span className="legend-chip"><span className="legend-dot grammar" />文法修正</span>
-                                  <span className="legend-chip"><span className="legend-dot improvement" />表現改善</span>
-                                  <span className="legend-chip"><span className="legend-dot clarity" />明確さ</span>
-                                </div>
-                              </div>
-                              <div className="improved-text">
-                                {entry.feedback.improvedVersion.segments.map((segment, i) => (
-                                  <span
-                                    key={`${segment.text}-${i}`}
-                                    className={getImprovementClass(segment.type)}
-                                    title={segment.note || IMPROVEMENT_LABELS[segment.type || "unchanged"]}
-                                  >
-                                    {segment.text}
-                                  </span>
-                                ))}
-                              </div>
-                              {entry.feedback.improvedVersion.summary && (
-                                <div className="improved-summary">{entry.feedback.improvedVersion.summary}</div>
-                              )}
-                              {entry.feedback.improvedVersion.changes && entry.feedback.improvedVersion.changes.length > 0 && (
-                                <div className="change-list">
-                                  {entry.feedback.improvedVersion.changes.slice(0, 3).map((change, i) => (
-                                    <div key={i} className="change-row">
-                                      <strong>{IMPROVEMENT_LABELS[change.type || "improvement"]}: </strong>
-                                      {change.original && <span>{change.original} → </span>}
-                                      {change.revised && <span>{change.revised}</span>}
-                                      {change.reason && <span>（{change.reason}）</span>}
-                                    </div>
-                                  ))}
-                                </div>
-                              )}
                             </div>
                           )}
 
@@ -2692,6 +2704,45 @@ export default function AI_chat() {
                               </ul>
                             </div>
                           )}
+                        </div>
+                      ) : entry.kind === "improvedAnswer" ? (
+                        <div className="improved-answer-card">
+                          <div className="improved-version">
+                            <div className="improved-header">
+                              <div className="improved-title">改善版</div>
+                              <div className="improved-legend" aria-label="改善箇所の凡例">
+                                <span className="legend-chip"><span className="legend-dot grammar" />文法修正</span>
+                                <span className="legend-chip"><span className="legend-dot improvement" />表現改善</span>
+                                <span className="legend-chip"><span className="legend-dot clarity" />明確さ</span>
+                              </div>
+                            </div>
+                            <div className="improved-text">
+                              {entry.feedback?.improvedVersion?.segments?.map((segment, i) => (
+                                <span
+                                  key={`${segment.text}-${i}`}
+                                  className={getImprovementClass(segment.type)}
+                                  title={segment.note || IMPROVEMENT_LABELS[segment.type || "unchanged"]}
+                                >
+                                  {segment.text}
+                                </span>
+                              ))}
+                            </div>
+                            {entry.feedback?.improvedVersion?.summary && (
+                              <div className="improved-summary">{entry.feedback.improvedVersion.summary}</div>
+                            )}
+                            {entry.feedback?.improvedVersion?.changes && entry.feedback.improvedVersion.changes.length > 0 && (
+                              <div className="change-list">
+                                {entry.feedback.improvedVersion.changes.slice(0, 3).map((change, i) => (
+                                  <div key={i} className="change-row">
+                                    <strong>{IMPROVEMENT_LABELS[change.type || "improvement"]}: </strong>
+                                    {change.original && <span>{change.original} → </span>}
+                                    {change.revised && <span>{change.revised}</span>}
+                                    {change.reason && <span>（{change.reason}）</span>}
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         </div>
                       ) : (
                         <div className="msg-llm">

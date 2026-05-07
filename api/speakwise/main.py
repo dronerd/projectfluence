@@ -313,6 +313,8 @@ Rules:
 - Return empty arrays for non-applicable categories
 - Adjust focus based on practice_mode (speaking emphasizes pronunciation/fluency, writing emphasizes grammar)
 - The improvedVersion.segments must combine to form one complete polished answer.
+- Do not include the rewritten/improved answer in overall, grammar, vocabulary, pronunciation, fluency, or suggestions.
+- Put all rewritten answer text only inside improvedVersion.segments.
 - Use "unchanged" only for text that is essentially unchanged from the student's response.
 - Use "grammar" for corrected grammar, word form, article, tense, or punctuation.
 - Use "improvement" for stronger vocabulary, more natural phrasing, or richer expression.
