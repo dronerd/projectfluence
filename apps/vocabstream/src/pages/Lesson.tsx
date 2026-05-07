@@ -881,8 +881,8 @@ const Lesson: React.FC = () => {
 
           <div style={{ marginBottom: isSmallScreen ? 8 : 12, textAlign: isSmallScreen ? "left" : "center" }}>
             <p style={{ color: "#334155", fontSize: paragraphFontSize, lineHeight: 1.75, margin: 0 }}>
-              このレッスンは「単語スライド → 単語・意味マッチング → 例文穴埋め」の流れで進みます。<br />
-              英単語はなるべく日本語に訳さず、<strong>英語の定義や例文から意味を理解すること</strong>を意識しましょう。<br />
+              このレッスンは「単語スライド → 単語・意味マッチング → 例文穴埋め」の流れで進みます。
+              英単語はなるべく日本語に訳さず、<strong>英語の定義や例文から意味を理解すること</strong>を意識しましょう。
               各単語スライドではぜひ音読してみましょう！
             </p>
           </div>
@@ -940,6 +940,7 @@ const Lesson: React.FC = () => {
             }}
           >
             <strong>意味:</strong> {lesson.words[slideStep].meaning}<br />
+            <strong>日本語:</strong> {lesson.words[slideStep].japaneseMeaning || "なし"}<br />
             <strong>類義語:</strong> {lesson.words[slideStep].synonyms || "なし"}<br />
             <strong>対義語:</strong> {lesson.words[slideStep].antonyms || "なし"}<br />
             <strong>例文:</strong> {lesson.words[slideStep].example || "なし"}

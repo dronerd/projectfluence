@@ -218,7 +218,7 @@ export default function SpeakWiseApp({ pathname }: Props) {
         .speakwise-shell .app-container {
           min-height: calc(100vh - 192px);
           width: 100%;
-          max-width: 920px;
+          max-width: 1180px;
           margin: 0 auto;
           padding: 24px 0 48px;
         }

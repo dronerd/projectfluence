@@ -111,6 +111,15 @@ const SPEAKING_COMPONENTS = [GENERAL_COMPONENT, "単語", "文法", "一貫性",
 const TYPING_SPEED_MS = 30;
 const STARTUP_MESSAGE_PAUSE_MS = 360;
 
+const MESSAGE_TIMING_BY_LEVEL: Record<CEFRLevel, { typingMs: number; pauseMs: number }> = {
+  A1: { typingMs: 95, pauseMs: 1100 },
+  A2: { typingMs: 80, pauseMs: 900 },
+  B1: { typingMs: 65, pauseMs: 720 },
+  B2: { typingMs: 50, pauseMs: 560 },
+  C1: { typingMs: 40, pauseMs: 440 },
+  C2: { typingMs: TYPING_SPEED_MS, pauseMs: STARTUP_MESSAGE_PAUSE_MS },
+};
+
 export default function AI_chat() {
   const navigate = useNavigate();
 
@@ -242,7 +251,7 @@ export default function AI_chat() {
                 const p = await getComponentPrompt(nextComponent.name);
                 handleLessonStart(p);
               })();
-            }, 100);
+            }, getMessageTiming().pauseMs);
           }
         }
         cumulativeTime += componentTime;
@@ -250,7 +259,7 @@ export default function AI_chat() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [lessonStartTime, currentComponent, step, selectedDuration, selectedComponents]);
+  }, [lessonStartTime, currentComponent, step, selectedDuration, selectedComponents, level]);
 
   // When in chatting step, hide global Header/BottomNav by adding a body class
   useEffect(() => {
@@ -284,6 +293,8 @@ export default function AI_chat() {
     const fullText = lastEntry.text;
     
     if (currentCharIndex >= fullText.length) return;
+
+    const { typingMs } = getMessageTiming();
     
     const timer = setInterval(() => {
       currentCharIndex++;
@@ -295,10 +306,10 @@ export default function AI_chat() {
       if (currentCharIndex >= fullText.length) {
         clearInterval(timer);
       }
-    }, TYPING_SPEED_MS);
+    }, typingMs);
     
     return () => clearInterval(timer);
-  }, [chatLog, displayedText]);
+  }, [chatLog, displayedText, level]);
 
   // Watch for when a question is fully displayed, then add confirmation message
   useEffect(() => {
@@ -328,11 +339,11 @@ export default function AI_chat() {
           { sender: "llm", text: getRandomItem(PRACTICE_CONFIRMATION_PROMPTS), kind: "confirmation" },
         ]);
         setLastQuestionIndexForConfirmation(lastQuestionIndex);
-      }, 500);
+      }, getMessageTiming().pauseMs);
       
       return () => clearTimeout(timer);
     }
-  }, [displayedText, chatLog, lastQuestionIndexForConfirmation]);
+  }, [displayedText, chatLog, lastQuestionIndexForConfirmation, level]);
 
   useEffect(() => {
     if (chatLog.length === 0 || awaitingQuestionChoice) return;
@@ -403,6 +414,8 @@ export default function AI_chat() {
     return LEVELS.includes(level as CEFRLevel) ? (level as CEFRLevel) : "A1";
   };
 
+  const getMessageTiming = () => MESSAGE_TIMING_BY_LEVEL[getSelectedLevel()];
+
   const getPrimaryPresetTopic = () => {
     return selectedTopics.find((topic) => OPENING_QUESTIONS[topic]) || TOPICS[0];
   };
@@ -448,7 +461,12 @@ export default function AI_chat() {
 
   const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-  const waitForTyping = (text: string) => wait(text.length * TYPING_SPEED_MS + STARTUP_MESSAGE_PAUSE_MS);
+  const waitForTyping = (text: string) => {
+    const { typingMs, pauseMs } = getMessageTiming();
+    return wait(text.length * typingMs + pauseMs);
+  };
+
+  const waitBetweenMessages = () => wait(getMessageTiming().pauseMs);
 
   const appendAssistantMessage = (text: string, kind?: ChatEntry["kind"]) => {
     setChatLog((prev) => [...prev, { sender: "llm", text, kind }]);
@@ -733,10 +751,10 @@ export default function AI_chat() {
       // Store the answer for feedback and get feedback
       if (openingQuestion && textToSend.trim()) {
         setLastUserAnswer(textToSend);
-        // Get feedback asynchronously
-        setTimeout(() => {
+        // Get feedback after the reply has had time to finish typing.
+        waitForTyping(replyText).then(() => {
           getFeedback(openingQuestion, textToSend);
-        }, 500);
+        });
       }
     } catch (error) {
       console.error(error);
@@ -987,7 +1005,7 @@ export default function AI_chat() {
     const selectedMood = MOOD_OPTIONS.find((option) => option.id === mood)?.label || mood;
     const response = getRandomItem(MOOD_RESPONSES[mood]);
     setChatLog((prev) => [...prev, { sender: "user", text: selectedMood }]);
-    await wait(STARTUP_MESSAGE_PAUSE_MS);
+    await waitBetweenMessages();
     appendAssistantMessage(response, "moodResponse");
     await waitForTyping(response);
     await continueStartupAfterMood(pendingStartupMode);
@@ -1073,7 +1091,7 @@ export default function AI_chat() {
     setPendingStartupMode("speaking");
     setLastQuestionIndexForConfirmation(null);
 
-    await wait(STARTUP_MESSAGE_PAUSE_MS);
+    await waitBetweenMessages();
     appendAssistantMessage("Hello!", "greeting");
     await waitForTyping("Hello!");
     const greeting = getRandomItem(LESSON_GREETING_PROMPTS);
@@ -1122,7 +1140,7 @@ export default function AI_chat() {
     setPendingStartupMode("writing");
     setLastQuestionIndexForConfirmation(null);
 
-    await wait(STARTUP_MESSAGE_PAUSE_MS);
+    await waitBetweenMessages();
     appendAssistantMessage("Hello!", "greeting");
     await waitForTyping("Hello!");
     const greeting = getRandomItem(LESSON_GREETING_PROMPTS);
@@ -1151,7 +1169,7 @@ export default function AI_chat() {
             --accent-b: #4a78bd;
             --accent-c: #6f87a9;
             --radius: 16px;
-            --container-max: 900px;
+            --container-max: 1180px;
           }
           *{box-sizing:border-box}
           .disclaimer{
@@ -1887,7 +1905,7 @@ export default function AI_chat() {
     // Send the casual start prompt to AI
     setTimeout(() => {
       handleCasualPromptStart(casualPrompt);
-    }, 50);
+    }, getMessageTiming().pauseMs);
   };
 
   // Casual confirm (unchanged)
@@ -2326,7 +2344,7 @@ export default function AI_chat() {
                         const prompt = await getComponentPrompt(firstComp);
                         handleLessonStart(prompt);
                       })();
-                    }, 50);
+                    }, getMessageTiming().pauseMs);
                   }
                 }
               }} className="modern-orange-btn"  style={{ padding: "14px 22px", borderRadius: 14 }}>レッスンを開始する</button>
@@ -2370,7 +2388,7 @@ export default function AI_chat() {
           .level-label{font-size:12px;line-height:1;font-weight:800;color:#dbeafe}
           .level-value{font-size:18px;line-height:1;font-weight:900;color:#ffffff}
           .time-pill{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 10px;border-radius:999px;background:rgba(17,31,61,0.72);border:1px solid rgba(158,180,210,0.16);font-size:13px;line-height:1;font-weight:800;color:#edf4ff;box-shadow:0 12px 28px rgba(3,8,20,0.18);white-space:nowrap}
-          .speakwise-shell .chat-main{width:100%;max-width:1200px;min-height:100vh;margin:0 auto;padding:12px 20px 32px}
+          .speakwise-shell .chat-main{width:100%;max-width:1180px;min-height:100vh;margin:0 auto;padding:12px 20px 32px}
           .chat-shell{display:flex;flex-direction:column;gap:12px;width:100%;padding-top:14px}
           .current-session{position:sticky;top:68px;z-index:50;background:linear-gradient(90deg,#edf4ff,#dfe9f8);padding:12px 18px;border-radius:14px;border:1px solid #cfe0f6;box-shadow:0 8px 24px rgba(31,79,145,0.10)}
           .current-session-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:center}
