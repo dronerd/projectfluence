@@ -38,6 +38,7 @@ interface ChatEntry {
     | "lessonIntro"
     | "confirmation"
     | "answerReady"
+    | "positiveComment"
     | "feedbackIntro"
     | "feedback"
     | "improvedIntro"
@@ -48,6 +49,7 @@ interface ChatEntry {
     pronunciation?: string[];
     fluency?: string[];
     overall?: string;
+    positiveComment?: string;
     suggestions?: string[];
     improvedVersion?: ImprovedVersion;
   };
@@ -73,6 +75,8 @@ interface ImprovedVersion {
   summary?: string;
   segments?: ImprovedSegment[];
   changes?: ImprovedChange[];
+  text?: string;
+  revised?: string;
 }
 
 const SPEAKWISE_API_URL =
@@ -179,6 +183,48 @@ const getImprovementClass = (type?: ImprovementType) => {
   if (type === "improvement") return "improved-segment improvement";
   if (type === "clarity") return "improved-segment clarity";
   return "improved-segment unchanged";
+};
+
+const normalizeImprovedVersion = (rawImprovedVersion: unknown, fallbackText: string): ImprovedVersion => {
+  if (typeof rawImprovedVersion === "string" && rawImprovedVersion.trim()) {
+    return {
+      title: "Improved version",
+      summary: "",
+      segments: [{ text: rawImprovedVersion.trim(), type: "improvement", note: "Improved version" }],
+      changes: [],
+    };
+  }
+
+  const improvedVersion =
+    rawImprovedVersion && typeof rawImprovedVersion === "object"
+      ? (rawImprovedVersion as ImprovedVersion)
+      : {};
+  const rawSegments = Array.isArray(improvedVersion.segments) ? improvedVersion.segments : [];
+  const segments = rawSegments
+    .filter((segment): segment is ImprovedSegment => Boolean(segment && typeof segment.text === "string" && segment.text))
+    .map((segment) => ({
+      text: segment.text,
+      type: segment.type || "improvement",
+      note: segment.note || "",
+    }));
+
+  if (segments.length === 0) {
+    const fallbackImprovedText =
+      (typeof improvedVersion.text === "string" && improvedVersion.text.trim()) ||
+      (typeof improvedVersion.revised === "string" && improvedVersion.revised.trim()) ||
+      fallbackText.trim();
+
+    if (fallbackImprovedText) {
+      segments.push({ text: fallbackImprovedText, type: "improvement", note: "Improved version" });
+    }
+  }
+
+  return {
+    title: improvedVersion.title || "Improved version",
+    summary: improvedVersion.summary || "",
+    segments,
+    changes: Array.isArray(improvedVersion.changes) ? improvedVersion.changes : [],
+  };
 };
 
 export default function AI_chat() {
@@ -925,11 +971,8 @@ export default function AI_chat() {
 
   // Get structured feedback from API
   const getFeedback = async (question: string, userAnswer: string) => {
-    const feedbackIntro = getRandomItem(FEEDBACK_INTRO_MESSAGES);
-
     try {
       setFeedbackLoading(true);
-      setChatLog((prev) => [...prev, { sender: "llm", text: feedbackIntro, kind: "feedbackIntro" }]);
 
       const skillsFocus = selectedComponents.length > 0 ? selectedComponents.join(", ") : "General";
       const testsToEvaluate = selectedTests.length > 0 
@@ -949,7 +992,7 @@ export default function AI_chat() {
         }),
       });
 
-      const [res] = await Promise.all([feedbackRequest, waitForTyping(feedbackIntro)]);
+      const res = await feedbackRequest;
 
       const data = await res.json();
       if (!res.ok || data.error) {
@@ -957,7 +1000,18 @@ export default function AI_chat() {
       }
 
       const feedback = data.feedback || {};
-      const improvedVersion = feedback.improvedVersion || {};
+      const improvedVersion = normalizeImprovedVersion(feedback.improvedVersion || feedback.improved_version, userAnswer);
+      const positiveComment = String(
+        feedback.positiveComment ||
+        feedback.positive_comment ||
+        "Great effort. Your answer gives us a clear starting point to build on."
+      );
+      const positiveEntry: ChatEntry = {
+        sender: "llm",
+        text: positiveComment,
+        kind: "positiveComment",
+      };
+      const feedbackIntro = getRandomItem(FEEDBACK_INTRO_MESSAGES);
       const feedbackEntry: ChatEntry = {
         sender: "llm",
         text: "フィードバック",
@@ -968,6 +1022,7 @@ export default function AI_chat() {
           pronunciation: feedback.pronunciation || [],
           fluency: feedback.fluency || [],
           overall: feedback.overall || "",
+          positiveComment,
           suggestions: feedback.suggestions || [],
         },
       };
@@ -976,14 +1031,15 @@ export default function AI_chat() {
         text: "改善版",
         kind: "improvedAnswer",
         feedback: {
-          improvedVersion: {
-            title: improvedVersion.title || "Improved version",
-            summary: improvedVersion.summary || "",
-            segments: Array.isArray(improvedVersion.segments) ? improvedVersion.segments : [],
-            changes: Array.isArray(improvedVersion.changes) ? improvedVersion.changes : [],
-          },
+          improvedVersion,
         },
       };
+
+      setChatLog((prev) => [...prev, positiveEntry]);
+      await waitForTyping(positiveComment);
+
+      setChatLog((prev) => [...prev, { sender: "llm", text: feedbackIntro, kind: "feedbackIntro" }]);
+      await waitForTyping(feedbackIntro);
 
       setChatLog((prev) => [...prev, feedbackEntry]);
       await waitBetweenMessages();
@@ -992,9 +1048,7 @@ export default function AI_chat() {
       setChatLog((prev) => [...prev, { sender: "llm", text: improvedIntro, kind: "improvedIntro" }]);
       await waitForTyping(improvedIntro);
 
-      if (improvedEntry.feedback?.improvedVersion?.segments?.length) {
-        setChatLog((prev) => [...prev, improvedEntry]);
-      }
+      setChatLog((prev) => [...prev, improvedEntry]);
       setFeedbackLoading(false);
     } catch (error) {
       console.error("Feedback error:", error);
@@ -2633,7 +2687,7 @@ export default function AI_chat() {
                           <div className="msg-question-label">練習問題</div>
                           <div className="msg-question-text">{displayedText[index] ?? ""}</div>
                         </div>
-                      ) : entry.kind === "feedbackIntro" || entry.kind === "improvedIntro" ? (
+                      ) : entry.kind === "positiveComment" || entry.kind === "feedbackIntro" || entry.kind === "improvedIntro" ? (
                         <div className="msg-llm">
                           <div style={{ whiteSpace: "pre-wrap" }}>{displayedText[index] ?? ""}</div>
                         </div>

@@ -262,6 +262,7 @@ Analyze the student's response carefully and provide structured feedback in JSON
 
 Respond ONLY with valid JSON (no markdown, no explanation outside the JSON) with this exact structure:
 {{
+  "positiveComment": "A warm, specific positive comment about the student's answer and topic",
   "overall": "A 1-2 sentence overall assessment of the response",
   "grammar": ["Grammar point 1", "Grammar point 2"],
   "vocabulary": ["Vocabulary suggestion 1", "Vocabulary suggestion 2"],
@@ -305,6 +306,8 @@ Respond ONLY with valid JSON (no markdown, no explanation outside the JSON) with
 }}
 
 Rules:
+- positiveComment should be 1 sentence, sound personal and warm, and mention something specific from the student's answer or topic.
+- positiveComment should not mention grammar mistakes or corrections.
 - Keep each item concise (under 15 words)
 - Be encouraging and constructive
 - Focus on what the student did well first
@@ -325,6 +328,7 @@ Rules:
 
 def default_feedback(user_answer: str) -> dict[str, Any]:
     return {
+        "positiveComment": "Great effort. Your answer gives us a clear starting point to build on.",
         "overall": "Thank you for your response. Keep practicing!",
         "grammar": [],
         "vocabulary": [],
@@ -341,7 +345,13 @@ def default_feedback(user_answer: str) -> dict[str, Any]:
 
 
 def normalize_improved_version(feedback_json: dict[str, Any], user_answer: str) -> dict[str, Any]:
-    improved = feedback_json.get("improvedVersion")
+    feedback_json["positiveComment"] = str(
+        feedback_json.get("positiveComment")
+        or feedback_json.get("positive_comment")
+        or default_feedback(user_answer)["positiveComment"]
+    )
+
+    improved = feedback_json.get("improvedVersion") or feedback_json.get("improved_version")
     if not isinstance(improved, dict):
         feedback_json["improvedVersion"] = default_feedback(user_answer)["improvedVersion"]
         return feedback_json
@@ -392,7 +402,7 @@ async def feedback(req: dict[str, Any]) -> JSONResponse:
         feedback_text = chat_completion(
             system_prompt="You are a JSON provider. Return only valid JSON.",
             message=prompt,
-            max_tokens=1000
+            max_tokens=1400
         )
 
         try:
@@ -401,7 +411,10 @@ async def feedback(req: dict[str, Any]) -> JSONResponse:
             # If JSON parsing fails, try to extract JSON from the response
             json_match = re.search(r'\{.*\}', feedback_text, re.DOTALL)
             if json_match:
-                feedback_json = json.loads(json_match.group())
+                try:
+                    feedback_json = json.loads(json_match.group())
+                except json.JSONDecodeError:
+                    feedback_json = default_feedback(user_answer)
             else:
                 # Fallback if no valid JSON found
                 feedback_json = default_feedback(user_answer)
