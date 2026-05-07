@@ -39,7 +39,30 @@ interface ChatEntry {
     fluency?: string[];
     overall?: string;
     suggestions?: string[];
+    improvedVersion?: ImprovedVersion;
   };
+}
+
+type ImprovementType = "unchanged" | "grammar" | "improvement" | "clarity";
+
+interface ImprovedSegment {
+  text: string;
+  type?: ImprovementType;
+  note?: string;
+}
+
+interface ImprovedChange {
+  original?: string;
+  revised?: string;
+  type?: ImprovementType;
+  reason?: string;
+}
+
+interface ImprovedVersion {
+  title?: string;
+  summary?: string;
+  segments?: ImprovedSegment[];
+  changes?: ImprovedChange[];
 }
 
 const SPEAKWISE_API_URL =
@@ -118,6 +141,20 @@ const MESSAGE_TIMING_BY_LEVEL: Record<CEFRLevel, { typingMs: number; pauseMs: nu
   B2: { typingMs: 50, pauseMs: 560 },
   C1: { typingMs: 40, pauseMs: 440 },
   C2: { typingMs: TYPING_SPEED_MS, pauseMs: STARTUP_MESSAGE_PAUSE_MS },
+};
+
+const IMPROVEMENT_LABELS: Record<ImprovementType, string> = {
+  unchanged: "元の表現",
+  grammar: "文法修正",
+  improvement: "表現改善",
+  clarity: "明確さ",
+};
+
+const getImprovementClass = (type?: ImprovementType) => {
+  if (type === "grammar") return "improved-segment grammar";
+  if (type === "improvement") return "improved-segment improvement";
+  if (type === "clarity") return "improved-segment clarity";
+  return "improved-segment unchanged";
 };
 
 export default function AI_chat() {
@@ -892,6 +929,7 @@ export default function AI_chat() {
       }
 
       const feedback = data.feedback || {};
+      const improvedVersion = feedback.improvedVersion || {};
       const feedbackEntry: ChatEntry = {
         sender: "llm",
         text: "フィードバック",
@@ -903,6 +941,12 @@ export default function AI_chat() {
           fluency: feedback.fluency || [],
           overall: feedback.overall || "",
           suggestions: feedback.suggestions || [],
+          improvedVersion: {
+            title: improvedVersion.title || "Improved version",
+            summary: improvedVersion.summary || "",
+            segments: Array.isArray(improvedVersion.segments) ? improvedVersion.segments : [],
+            changes: Array.isArray(improvedVersion.changes) ? improvedVersion.changes : [],
+          },
         },
       };
 
@@ -2405,6 +2449,27 @@ export default function AI_chat() {
           .msg-question-label{font-size:13px;font-weight:800;color:#1f4f91;margin-bottom:8px}
           .msg-question-text{white-space:pre-wrap;font-size:22px;line-height:1.45;font-weight:800;color:#10213c}
           .msg-timer{background:#eef4ff;color:#13233f;padding:10px 12px;border-left:4px solid #4a78bd;border-radius:10px;margin-right:min(20%,220px);font-weight:700}
+          .feedback-card{margin-right:min(12%,140px);background:#f0f9ff;border:2px solid #3b82f6;border-radius:14px;padding:16px}
+          .feedback-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+          .improved-version{margin:0 0 12px;padding:12px;background:#ffffff;border-radius:10px;border:1px solid #bfdbfe}
+          .improved-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+          .improved-title{font-size:14px;font-weight:800;color:#1e40af}
+          .improved-legend{display:flex;gap:6px;flex-wrap:wrap}
+          .legend-chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;color:#334155}
+          .legend-dot{width:10px;height:10px;border-radius:999px;display:inline-block;border:1px solid rgba(15,23,42,0.12)}
+          .legend-dot.grammar{background:#fde68a}
+          .legend-dot.improvement{background:#bbf7d0}
+          .legend-dot.clarity{background:#bae6fd}
+          .improved-text{font-size:15px;line-height:1.85;color:#10213c;background:#f8fafc;border-radius:8px;padding:12px;white-space:pre-wrap}
+          .improved-segment{border-radius:5px;padding:2px 3px;margin:0 1px}
+          .improved-segment.unchanged{padding:0;margin:0;background:transparent}
+          .improved-segment.grammar{background:#fde68a;color:#713f12}
+          .improved-segment.improvement{background:#bbf7d0;color:#14532d}
+          .improved-segment.clarity{background:#bae6fd;color:#075985}
+          .improved-summary{margin-top:8px;font-size:12px;line-height:1.5;color:#475569}
+          .change-list{margin-top:10px;display:grid;gap:8px}
+          .change-row{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px;font-size:12px;color:#334155}
+          .change-row strong{color:#1e40af}
           .voice-controls{margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
           .chat-actions{display:flex;gap:8px;justify-content:center;margin-top:10px}
           .mood-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:16px 0 4px}
@@ -2434,7 +2499,8 @@ export default function AI_chat() {
             .chat-shell{padding-top:12px}
             .chat-window{min-height:calc(100vh - 176px);padding:10px;border-radius:12px}
             .chat-message-spacer{height:68px}
-            .msg-user,.msg-llm,.msg-timer,.msg-question{margin-left:0;margin-right:0}
+            .msg-user,.msg-llm,.msg-timer,.msg-question,.feedback-card{margin-left:0;margin-right:0}
+            .feedback-grid{grid-template-columns:1fr}
             .msg-question-text{font-size:19px}
             .msg-question{padding:16px}
             .answer-card{width:100%}
@@ -2521,7 +2587,7 @@ export default function AI_chat() {
                           <div className="msg-question-text">{displayedText[index] ?? ""}</div>
                         </div>
                       ) : entry.kind === "feedback" ? (
-                        <div style={{ marginRight: "min(12%,140px)", background: "#f0f9ff", border: "2px solid #3b82f6", borderRadius: 14, padding: 16 }}>
+                        <div className="feedback-card">
                           <div style={{ fontWeight: 800, color: "#1e40af", marginBottom: 12, fontSize: 16 }}>📊 フィードバック</div>
                           
                           {entry.feedback?.overall && (
@@ -2531,7 +2597,46 @@ export default function AI_chat() {
                             </div>
                           )}
 
-                          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 12 }}>
+                          {entry.feedback?.improvedVersion?.segments && entry.feedback.improvedVersion.segments.length > 0 && (
+                            <div className="improved-version">
+                              <div className="improved-header">
+                                <div className="improved-title">改善版</div>
+                                <div className="improved-legend" aria-label="改善箇所の凡例">
+                                  <span className="legend-chip"><span className="legend-dot grammar" />文法修正</span>
+                                  <span className="legend-chip"><span className="legend-dot improvement" />表現改善</span>
+                                  <span className="legend-chip"><span className="legend-dot clarity" />明確さ</span>
+                                </div>
+                              </div>
+                              <div className="improved-text">
+                                {entry.feedback.improvedVersion.segments.map((segment, i) => (
+                                  <span
+                                    key={`${segment.text}-${i}`}
+                                    className={getImprovementClass(segment.type)}
+                                    title={segment.note || IMPROVEMENT_LABELS[segment.type || "unchanged"]}
+                                  >
+                                    {segment.text}
+                                  </span>
+                                ))}
+                              </div>
+                              {entry.feedback.improvedVersion.summary && (
+                                <div className="improved-summary">{entry.feedback.improvedVersion.summary}</div>
+                              )}
+                              {entry.feedback.improvedVersion.changes && entry.feedback.improvedVersion.changes.length > 0 && (
+                                <div className="change-list">
+                                  {entry.feedback.improvedVersion.changes.slice(0, 3).map((change, i) => (
+                                    <div key={i} className="change-row">
+                                      <strong>{IMPROVEMENT_LABELS[change.type || "improvement"]}: </strong>
+                                      {change.original && <span>{change.original} → </span>}
+                                      {change.revised && <span>{change.revised}</span>}
+                                      {change.reason && <span>（{change.reason}）</span>}
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
+
+                          <div className="feedback-grid">
                             {entry.feedback?.grammar && entry.feedback.grammar.length > 0 && (
                               <div style={{ padding: 10, background: "#fef3c7", borderRadius: 10, borderLeft: "4px solid #f59e0b" }}>
                                 <div style={{ fontWeight: 700, color: "#92400e", fontSize: 13, marginBottom: 4 }}>文法</div>

@@ -1,6 +1,8 @@
 from functools import lru_cache
 from io import BytesIO
 import os
+import json
+import re
 from typing import Any
 
 from dotenv import load_dotenv
@@ -265,7 +267,41 @@ Respond ONLY with valid JSON (no markdown, no explanation outside the JSON) with
   "vocabulary": ["Vocabulary suggestion 1", "Vocabulary suggestion 2"],
   "pronunciation": ["Pronunciation tip 1"],
   "fluency": ["Fluency observation 1", "Fluency observation 2"],
-  "suggestions": ["Actionable suggestion 1", "Actionable suggestion 2"]
+  "suggestions": ["Actionable suggestion 1", "Actionable suggestion 2"],
+  "improvedVersion": {{
+    "title": "Improved version",
+    "summary": "One short sentence explaining the biggest improvement",
+    "segments": [
+      {{
+        "text": "Unchanged text copied from the improved response.",
+        "type": "unchanged",
+        "note": ""
+      }},
+      {{
+        "text": "Corrected grammar phrase.",
+        "type": "grammar",
+        "note": "Briefly explain the grammar fix."
+      }},
+      {{
+        "text": "Stronger vocabulary or expression.",
+        "type": "improvement",
+        "note": "Briefly explain why this is better."
+      }},
+      {{
+        "text": "Clearer connecting words or organization.",
+        "type": "clarity",
+        "note": "Briefly explain the clarity improvement."
+      }}
+    ],
+    "changes": [
+      {{
+        "original": "Original phrase",
+        "revised": "Revised phrase",
+        "type": "grammar",
+        "reason": "Short reason"
+      }}
+    ]
+  }}
 }}
 
 Rules:
@@ -276,7 +312,65 @@ Rules:
 - All arrays should contain 1-3 items
 - Return empty arrays for non-applicable categories
 - Adjust focus based on practice_mode (speaking emphasizes pronunciation/fluency, writing emphasizes grammar)
+- The improvedVersion.segments must combine to form one complete polished answer.
+- Use "unchanged" only for text that is essentially unchanged from the student's response.
+- Use "grammar" for corrected grammar, word form, article, tense, or punctuation.
+- Use "improvement" for stronger vocabulary, more natural phrasing, or richer expression.
+- Use "clarity" for better flow, organization, transitions, or sentence structure.
+- Keep segment text short enough that highlighting is easy to read.
 """
+
+
+def default_feedback(user_answer: str) -> dict[str, Any]:
+    return {
+        "overall": "Thank you for your response. Keep practicing!",
+        "grammar": [],
+        "vocabulary": [],
+        "pronunciation": [],
+        "fluency": [],
+        "suggestions": ["Continue practicing with more examples."],
+        "improvedVersion": {
+            "title": "Improved version",
+            "summary": "Here is a cleaned-up version to compare with your response.",
+            "segments": [{"text": user_answer, "type": "unchanged", "note": ""}] if user_answer else [],
+            "changes": [],
+        },
+    }
+
+
+def normalize_improved_version(feedback_json: dict[str, Any], user_answer: str) -> dict[str, Any]:
+    improved = feedback_json.get("improvedVersion")
+    if not isinstance(improved, dict):
+        feedback_json["improvedVersion"] = default_feedback(user_answer)["improvedVersion"]
+        return feedback_json
+
+    segments = improved.get("segments")
+    if not isinstance(segments, list) or not segments:
+        revised_text = str(improved.get("text") or improved.get("revised") or user_answer).strip()
+        improved["segments"] = [{"text": revised_text, "type": "unchanged", "note": ""}] if revised_text else []
+    else:
+        allowed_types = {"unchanged", "grammar", "improvement", "clarity"}
+        normalized_segments = []
+        for segment in segments:
+            if not isinstance(segment, dict):
+                continue
+            text = str(segment.get("text") or "")
+            if not text:
+                continue
+            segment_type = str(segment.get("type") or "unchanged")
+            normalized_segments.append({
+                "text": text,
+                "type": segment_type if segment_type in allowed_types else "improvement",
+                "note": str(segment.get("note") or ""),
+            })
+        improved["segments"] = normalized_segments or default_feedback(user_answer)["improvedVersion"]["segments"]
+
+    if not isinstance(improved.get("changes"), list):
+        improved["changes"] = []
+    improved["title"] = str(improved.get("title") or "Improved version")
+    improved["summary"] = str(improved.get("summary") or "")
+    feedback_json["improvedVersion"] = improved
+    return feedback_json
 
 
 @app.post("/api/feedback")
@@ -296,30 +390,24 @@ async def feedback(req: dict[str, Any]) -> JSONResponse:
         feedback_text = chat_completion(
             system_prompt="You are a JSON provider. Return only valid JSON.",
             message=prompt,
-            max_tokens=500
+            max_tokens=1000
         )
 
-        # Parse the JSON response
-        import json
         try:
             feedback_json = json.loads(feedback_text)
         except json.JSONDecodeError:
             # If JSON parsing fails, try to extract JSON from the response
-            import re
             json_match = re.search(r'\{.*\}', feedback_text, re.DOTALL)
             if json_match:
                 feedback_json = json.loads(json_match.group())
             else:
                 # Fallback if no valid JSON found
-                feedback_json = {
-                    "overall": "Thank you for your response. Keep practicing!",
-                    "grammar": [],
-                    "vocabulary": [],
-                    "pronunciation": [],
-                    "fluency": [],
-                    "suggestions": ["Continue practicing with more examples."]
-                }
+                feedback_json = default_feedback(user_answer)
 
+        if not isinstance(feedback_json, dict):
+            feedback_json = default_feedback(user_answer)
+
+        feedback_json = normalize_improved_version(feedback_json, user_answer)
         return JSONResponse({"feedback": feedback_json})
     except RuntimeError as exc:
         return JSONResponse({"error": str(exc)}, status_code=500)
