@@ -337,11 +337,37 @@ def default_feedback(user_answer: str) -> dict[str, Any]:
         "suggestions": ["Continue practicing with more examples."],
         "improvedVersion": {
             "title": "Improved version",
-            "summary": "Here is a cleaned-up version to compare with your response.",
-            "segments": [{"text": user_answer, "type": "unchanged", "note": ""}] if user_answer else [],
+            "summary": "",
+            "segments": [],
             "changes": [],
         },
     }
+
+
+def parse_json_object(text: str) -> dict[str, Any] | None:
+    try:
+        parsed = json.loads(text)
+        return parsed if isinstance(parsed, dict) else None
+    except json.JSONDecodeError:
+        json_match = re.search(r'\{.*\}', text, re.DOTALL)
+        if not json_match:
+            return None
+        try:
+            parsed = json.loads(json_match.group())
+            return parsed if isinstance(parsed, dict) else None
+        except json.JSONDecodeError:
+            return None
+
+
+def normalized_text(text: str) -> str:
+    return re.sub(r"\s+", " ", text.strip().lower())
+
+
+def segment_text(improved: dict[str, Any]) -> str:
+    segments = improved.get("segments")
+    if not isinstance(segments, list):
+        return ""
+    return "".join(str(segment.get("text") or "") for segment in segments if isinstance(segment, dict)).strip()
 
 
 def normalize_improved_version(feedback_json: dict[str, Any], user_answer: str) -> dict[str, Any]:
@@ -358,8 +384,8 @@ def normalize_improved_version(feedback_json: dict[str, Any], user_answer: str) 
 
     segments = improved.get("segments")
     if not isinstance(segments, list) or not segments:
-        revised_text = str(improved.get("text") or improved.get("revised") or user_answer).strip()
-        improved["segments"] = [{"text": revised_text, "type": "unchanged", "note": ""}] if revised_text else []
+        revised_text = str(improved.get("text") or improved.get("revised") or "").strip()
+        improved["segments"] = [{"text": revised_text, "type": "improvement", "note": "Improved version"}] if revised_text else []
     else:
         allowed_types = {"unchanged", "grammar", "improvement", "clarity"}
         normalized_segments = []
@@ -375,13 +401,103 @@ def normalize_improved_version(feedback_json: dict[str, Any], user_answer: str) 
                 "type": segment_type if segment_type in allowed_types else "improvement",
                 "note": str(segment.get("note") or ""),
             })
-        improved["segments"] = normalized_segments or default_feedback(user_answer)["improvedVersion"]["segments"]
+        improved["segments"] = normalized_segments
 
     if not isinstance(improved.get("changes"), list):
         improved["changes"] = []
     improved["title"] = str(improved.get("title") or "Improved version")
     improved["summary"] = str(improved.get("summary") or "")
     feedback_json["improvedVersion"] = improved
+    return feedback_json
+
+
+def build_improved_version_prompt(question: str, user_answer: str, level: str, practice_mode: str) -> str:
+    return f"""Rewrite the student's English answer into a clearly improved version.
+
+Practice Question:
+{question}
+
+Student's Response:
+{user_answer}
+
+Student CEFR Level: {level}
+Practice Mode: {practice_mode}
+
+Return ONLY valid JSON with this exact structure:
+{{
+  "improvedVersion": {{
+    "title": "Improved version",
+    "summary": "One short sentence explaining the biggest improvement",
+    "segments": [
+      {{
+        "text": "A phrase in the improved answer.",
+        "type": "grammar",
+        "note": "Short reason"
+      }}
+    ],
+    "changes": [
+      {{
+        "original": "Original phrase",
+        "revised": "Revised phrase",
+        "type": "grammar",
+        "reason": "Short reason"
+      }}
+    ]
+  }}
+}}
+
+Rules:
+- improvedVersion.segments must combine to form one complete polished answer.
+- Do not simply copy the student's original response.
+- Preserve the student's intended meaning.
+- Use "grammar" for grammar, tense, article, word form, spelling, or punctuation fixes.
+- Use "improvement" for stronger vocabulary or more natural phrasing.
+- Use "clarity" for better organization, flow, or sentence structure.
+- Use "unchanged" only for text that truly did not need changes.
+- Keep the answer appropriate for CEFR level {level}.
+"""
+
+
+def generate_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
+    try:
+        improved_text = chat_completion(
+            system_prompt="You are a JSON provider. Return only valid JSON.",
+            message=build_improved_version_prompt(question, user_answer, level, practice_mode),
+            max_tokens=700,
+        )
+    except Exception:
+        return None
+
+    parsed = parse_json_object(improved_text)
+    if not parsed:
+        return None
+    improved = parsed.get("improvedVersion") or parsed.get("improved_version")
+    return improved if isinstance(improved, dict) else None
+
+
+def ensure_distinct_improved_version(
+    feedback_json: dict[str, Any],
+    question: str,
+    user_answer: str,
+    level: str,
+    practice_mode: str,
+) -> dict[str, Any]:
+    improved = feedback_json.get("improvedVersion")
+    improved_text = segment_text(improved) if isinstance(improved, dict) else ""
+    needs_rewrite = not improved_text or normalized_text(improved_text) == normalized_text(user_answer)
+
+    if needs_rewrite:
+        generated = generate_improved_version(question, user_answer, level, practice_mode)
+        if generated:
+            feedback_json["improvedVersion"] = generated
+            feedback_json = normalize_improved_version(feedback_json, user_answer)
+
+    improved = feedback_json.get("improvedVersion")
+    if isinstance(improved, dict) and normalized_text(segment_text(improved)) == normalized_text(user_answer):
+        improved["segments"] = []
+        improved["summary"] = ""
+        improved["changes"] = []
+
     return feedback_json
 
 
@@ -405,24 +521,16 @@ async def feedback(req: dict[str, Any]) -> JSONResponse:
             max_tokens=1400
         )
 
-        try:
-            feedback_json = json.loads(feedback_text)
-        except json.JSONDecodeError:
-            # If JSON parsing fails, try to extract JSON from the response
-            json_match = re.search(r'\{.*\}', feedback_text, re.DOTALL)
-            if json_match:
-                try:
-                    feedback_json = json.loads(json_match.group())
-                except json.JSONDecodeError:
-                    feedback_json = default_feedback(user_answer)
-            else:
-                # Fallback if no valid JSON found
-                feedback_json = default_feedback(user_answer)
-
-        if not isinstance(feedback_json, dict):
-            feedback_json = default_feedback(user_answer)
+        feedback_json = parse_json_object(feedback_text) or default_feedback(user_answer)
 
         feedback_json = normalize_improved_version(feedback_json, user_answer)
+        feedback_json = ensure_distinct_improved_version(
+            feedback_json=feedback_json,
+            question=question,
+            user_answer=user_answer,
+            level=level,
+            practice_mode=practice_mode,
+        )
         return JSONResponse({"feedback": feedback_json})
     except RuntimeError as exc:
         return JSONResponse({"error": str(exc)}, status_code=500)

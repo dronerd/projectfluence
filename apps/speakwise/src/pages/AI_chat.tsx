@@ -185,7 +185,7 @@ const getImprovementClass = (type?: ImprovementType) => {
   return "improved-segment unchanged";
 };
 
-const normalizeImprovedVersion = (rawImprovedVersion: unknown, fallbackText: string): ImprovedVersion => {
+const normalizeImprovedVersion = (rawImprovedVersion: unknown): ImprovedVersion => {
   if (typeof rawImprovedVersion === "string" && rawImprovedVersion.trim()) {
     return {
       title: "Improved version",
@@ -212,7 +212,7 @@ const normalizeImprovedVersion = (rawImprovedVersion: unknown, fallbackText: str
     const fallbackImprovedText =
       (typeof improvedVersion.text === "string" && improvedVersion.text.trim()) ||
       (typeof improvedVersion.revised === "string" && improvedVersion.revised.trim()) ||
-      fallbackText.trim();
+      "";
 
     if (fallbackImprovedText) {
       segments.push({ text: fallbackImprovedText, type: "improvement", note: "Improved version" });
@@ -1000,7 +1000,7 @@ export default function AI_chat() {
       }
 
       const feedback = data.feedback || {};
-      const improvedVersion = normalizeImprovedVersion(feedback.improvedVersion || feedback.improved_version, userAnswer);
+      const improvedVersion = normalizeImprovedVersion(feedback.improvedVersion || feedback.improved_version);
       const positiveComment = String(
         feedback.positiveComment ||
         feedback.positive_comment ||
@@ -1044,11 +1044,12 @@ export default function AI_chat() {
       setChatLog((prev) => [...prev, feedbackEntry]);
       await waitBetweenMessages();
 
-      const improvedIntro = getRandomItem(IMPROVED_VERSION_INTRO_MESSAGES);
-      setChatLog((prev) => [...prev, { sender: "llm", text: improvedIntro, kind: "improvedIntro" }]);
-      await waitForTyping(improvedIntro);
-
-      setChatLog((prev) => [...prev, improvedEntry]);
+      if (improvedVersion.segments && improvedVersion.segments.length > 0) {
+        const improvedIntro = getRandomItem(IMPROVED_VERSION_INTRO_MESSAGES);
+        setChatLog((prev) => [...prev, { sender: "llm", text: improvedIntro, kind: "improvedIntro" }]);
+        await waitForTyping(improvedIntro);
+        setChatLog((prev) => [...prev, improvedEntry]);
+      }
       setFeedbackLoading(false);
     } catch (error) {
       console.error("Feedback error:", error);
