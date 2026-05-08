@@ -7,13 +7,17 @@ import LearnGenres from "./pages/LearnGenres";
 import LessonList from "./pages/LessonList";
 import Lesson from "./pages/Lesson";
 import StillUnderDevelopment from "./pages/Still_under_development";
-import ReviewLessonDecide from "./pages/ReviewLessonDecide";
-import ReviewLesson from "./pages/ReviewLesson";
 import { RouterCompatProvider } from "./lib/router-compat";
 import { matchPath } from "./lib/routes";
 
 type Props = {
   pathname: string;
+};
+
+type RouteEntry = {
+  pattern: string;
+  render: (params: Record<string, string>) => React.ReactNode;
+  params: (params: Record<string, string>) => Record<string, string>;
 };
 
 function SpeakWiseRedirect() {
@@ -26,7 +30,7 @@ function SpeakWiseRedirect() {
   return null;
 }
 
-const routeTable = [
+const routeTable: RouteEntry[] = [
   { pattern: "/", render: () => <LearnGenres />, params: () => ({}) },
   { pattern: "/landing_page", render: () => <LearnGenres />, params: () => ({}) },
   { pattern: "/home", render: () => <LearnGenres />, params: () => ({}) },
@@ -40,15 +44,6 @@ const routeTable = [
     pattern: "/lesson/:lessonId",
     render: () => <Lesson />,
     params: (params: Record<string, string>) => params,
-  },
-  {
-    pattern: "/review/:id",
-    render: (params: Record<string, string>) =>
-      params.id.includes("-lesson-") ? <ReviewLesson /> : <ReviewLessonDecide />,
-    params: (params: Record<string, string>) =>
-      params.id.includes("-lesson-")
-        ? { lessonId: params.id }
-        : { genreId: params.id },
   },
   { pattern: "/others", render: () => <LearnGenres />, params: () => ({}) },
   {

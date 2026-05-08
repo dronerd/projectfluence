@@ -46,6 +46,7 @@ def get_openai_client() -> OpenAI:
         raise RuntimeError("OPENAI_API_KEY is not configured")
     return OpenAI(api_key=api_key)
 
+# this part should be updated
 COMPONENT_ALIASES = {
     "単語": "vocab",
     "単語練習": "vocab",
@@ -67,7 +68,10 @@ def component_kind(name: str | None) -> str:
         return "general"
     return COMPONENT_ALIASES.get(name.strip().lower(), COMPONENT_ALIASES.get(name, "general"))
 
-
+# this currently only have the level and topics input, 
+# however, to call the OpenAI API in the lesson mode, we will need to add more information
+# such as the remaining time, the question the user answered, the user's answer etc. 
+# this function is currntly used in api/chat endpoint, but the casual speech mode is already deleted, so need to work on this.
 def build_casual_system_prompt(level: str, topics: list[str]) -> str:
     topics_text = ", ".join(topics) if topics else "general topics"
     return f"""You are SpeakWise, a friendly English conversation partner.
@@ -82,7 +86,9 @@ Conversation style:
 - Gently correct important mistakes without interrupting the flow.
 - Encourage longer answers when the learner seems ready."""
 
-
+# this build_lesson_system_prompt is used in the api/chat endpoint when the mode is lesson, it will provide more detailed guidance to the OpenAI model based on the current lesson component, remaining time, and other factors. This allows the model to generate more focused and effective responses for the learner during a structured lesson.
+# this is from the old conversation lesson method, 
+# therefore this function should be updated. 
 def build_lesson_system_prompt(
     level: str,
     topics: list[str],
@@ -145,7 +151,8 @@ Teaching principles:
 - Give feedback that is specific, encouraging, and easy to act on.
 - Ask one next question or task at the end unless you are wrapping up."""
 
-
+# maybe this function can be simplified. 
+# improve this function.
 def get_current_timing(req: dict[str, Any]) -> dict[str, Any] | None:
     component_timing = req.get("componentTiming") or []
     current_index = int(req.get("currentComponent") or 0)
@@ -154,7 +161,8 @@ def get_current_timing(req: dict[str, Any]) -> dict[str, Any] | None:
         return timing if isinstance(timing, dict) else None
     return None
 
-
+# this function is used to call the OpenAI API for generating chat completions. It takes a system prompt, a user message, and a max token limit, and returns the generated response from the model. This function is used in both casual and lesson modes to get the model's reply based on the constructed system prompt and user input.
+# this function is correct
 def chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
     completion = get_openai_client().chat.completions.create(
         model=os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini"),
@@ -168,13 +176,16 @@ def chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
     return completion.choices[0].message.content or ""
 
 
+# this one still have the casual and lesson mode, need to modify this endpoint too
 @app.get("/")
 def root() -> dict[str, Any]:
     return {"status": "ok", "service": "speakwise-api", "modes": ["casual", "lesson"]}
 
 
+# health check endpoint for Render/Vercel/etc
 @app.api_route("/health", methods=["GET", "HEAD"])
 def health() -> Response:
+    # returns only status 200
     return Response(status_code=200)
 
 
@@ -464,3 +475,5 @@ async def improved_version(req: dict[str, Any]) -> JSONResponse:
         return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
         return JSONResponse({"error": "Improved version generation failed", "details": str(exc)}, status_code=500)
+
+# try creating my own endpoint for returning improved version text with comments on the places to be improved. 
