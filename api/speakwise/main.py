@@ -45,6 +45,7 @@ def get_openai_client() -> OpenAI:
     if not api_key:
         raise RuntimeError("OPENAI_API_KEY is not configured")
     return OpenAI(api_key=api_key)
+# Example review comment: Nice use of lru_cache here. This avoids recreating the OpenAI client on every request, which is cleaner and more efficient.
 
 # this part should be updated
 COMPONENT_ALIASES = {
@@ -156,6 +157,7 @@ Teaching principles:
 def get_current_timing(req: dict[str, Any]) -> dict[str, Any] | None:
     component_timing = req.get("componentTiming") or []
     current_index = int(req.get("currentComponent") or 0)
+    # Review comment example: Could we safely parse currentComponent? Right now invalid frontend input can throw an exception.
     if 0 <= current_index < len(component_timing):
         timing = component_timing[current_index]
         return timing if isinstance(timing, dict) else None
@@ -180,7 +182,7 @@ def chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
 @app.get("/")
 def root() -> dict[str, Any]:
     return {"status": "ok", "service": "speakwise-api", "modes": ["casual", "lesson"]}
-
+# Review comment example: Since the comments say casual speech mode has already been deleted, should we remove casual from the public API response and from /api/chat? Keeping old modes may confuse the frontend and future maintainers.
 
 # health check endpoint for Render/Vercel/etc
 @app.api_route("/health", methods=["GET", "HEAD"])
@@ -192,6 +194,8 @@ def health() -> Response:
 # this is them main endpoint for chat, improve this for the new lesson methods. returns JSONResponse.
 @app.post("/api/chat")
 async def chat(req: dict[str, Any]) -> JSONResponse:
+    # Reveiw comment example: This works, but using dict[str, Any] makes validation manual and error-prone. A Pydantic request model would make the API safer and easier to understand.
+    # use from pydantic import BaseModel, Field
     # this gets mode from request, if the frontend sends in JSON {"mode": "lesson"}, then it will be in lesson mode.
     mode = req.get("mode", "casual")
     if mode == "warmup":
@@ -238,7 +242,7 @@ async def chat(req: dict[str, Any]) -> JSONResponse:
         return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
         return JSONResponse({"error": "OpenAI chat request failed", "details": str(exc)}, status_code=500)
-
+        # Reveiw comment example: Returning str(exc) to the client can expose internal information. It is better to log the real error on the server and return a generic message to the frontend.
 
 @app.post("/api/voice")
 async def voice(req: dict[str, Any]):
@@ -322,6 +326,7 @@ def parse_json_object(text: str) -> dict[str, Any] | None:
         return parsed if isinstance(parsed, dict) else None
     except json.JSONDecodeError:
         json_match = re.search(r'\{.*\}', text, re.DOTALL)
+        # Review comment example: This fallback is practical, but regex-based JSON extraction can break if the model outputs extra braces. Using OpenAI structured outputs or JSON mode would be more reliable.
         if not json_match:
             return None
         try:
