@@ -189,8 +189,10 @@ def health() -> Response:
     return Response(status_code=200)
 
 
+# this is them main endpoint for chat, improve this for the new lesson methods. returns JSONResponse.
 @app.post("/api/chat")
 async def chat(req: dict[str, Any]) -> JSONResponse:
+    # this gets mode from request, if the frontend sends in JSON {"mode": "lesson"}, then it will be in lesson mode.
     mode = req.get("mode", "casual")
     if mode == "warmup":
         return JSONResponse({"status": "ok", "mode": "warmup"})
@@ -198,15 +200,19 @@ async def chat(req: dict[str, Any]) -> JSONResponse:
     message = str(req.get("message") or "").strip()
     if not message:
         return JSONResponse({"error": "message is required"}, status_code=400)
-
+    # for try, everything inside of the block might fail, so the code uses try to avoid crashing the server
     try:
-        level = str(req.get("level") or "A1")
+        # modify here otherwise the level is defaulted to B1
+        level = str(req.get("level") or "B1")
         topics = req.get("topics") if isinstance(req.get("topics"), list) else ["General"]
 
+        # update the logic here of the max_tokens, in order to correctly prevent extreme usage.
         if mode == "lesson":
+            # update this time calculation logic, as it is currelty based on the old component based timing. 
             current_timing = get_current_timing(req)
             remaining_seconds = int((current_timing or {}).get("durationSeconds", 300))
             max_tokens = min(max(int((remaining_seconds / 60) * 120), 180), 700)
+            # use the build_lesson_system_prompt function to generate the system prompt
             system_prompt = build_lesson_system_prompt(
                 level=level,
                 topics=topics,
@@ -217,12 +223,14 @@ async def chat(req: dict[str, Any]) -> JSONResponse:
                 vocab_category=req.get("vocabCategory"),
                 vocab_lessons=req.get("vocabLessons") if isinstance(req.get("vocabLessons"), list) else [],
             )
+            # use the chat_completion function to get the reply from the OpenAI model
             reply = chat_completion(system_prompt, message, max_tokens=max_tokens)
+            # return the reply and the mode in the JSONResponse
             return JSONResponse({"reply": reply, "mode": "lesson"})
-
+        # the remaining option is casual, so if the mode is not casual, then return error. This parts also needs improvement. 
         if mode != "casual":
             return JSONResponse({"error": "Unknown mode. Use 'casual' or 'lesson'."}, status_code=400)
-
+        # handling of the casual mode 
         system_prompt = build_casual_system_prompt(level, topics)
         reply = chat_completion(system_prompt, message, max_tokens=500)
         return JSONResponse({"reply": reply, "mode": "casual"})
@@ -253,7 +261,7 @@ async def voice(req: dict[str, Any]):
     except Exception as exc:
         return JSONResponse({"error": "OpenAI voice request failed", "details": str(exc)}, status_code=500)
 
-
+# function for building feedback prompt, to be used in the /api/feedback endpoint. 
 def build_feedback_prompt(question: str, user_answer: str, level: str, tests: str, skills: str, practice_mode: str) -> str:
     return f"""You are an expert English language teacher providing detailed, constructive feedback.
 
@@ -322,7 +330,7 @@ def parse_json_object(text: str) -> dict[str, Any] | None:
         except json.JSONDecodeError:
             return None
 
-
+# makes sure the feedback JSON has all the required fields and the correct types, and fills in defaults if necessary. This is important because the OpenAI model might not always return perfectly structured JSON, so this function helps ensure that the API response is consistent and won't break the frontend.
 def normalize_feedback(feedback_json: dict[str, Any], user_answer: str) -> dict[str, Any]:
     feedback_json["positiveComment"] = str(
         feedback_json.get("positiveComment")
@@ -449,6 +457,7 @@ async def feedback(req: dict[str, Any]) -> JSONResponse:
         )
 
         feedback_json = normalize_feedback(parse_json_object(feedback_text) or default_feedback(user_answer), user_answer)
+        # improve this to return this feedback in more structured way, so the frontend can use this information to display the feedback for each category
         return JSONResponse({"feedback": feedback_json})
     except RuntimeError as exc:
         return JSONResponse({"error": str(exc)}, status_code=500)
@@ -467,6 +476,7 @@ async def improved_version(req: dict[str, Any]) -> JSONResponse:
         return JSONResponse({"error": "question and userAnswer are required"}, status_code=400)
 
     try:
+        # use the generate_improved_version function to get the improved version from the OpenAI model. 
         improved = generate_improved_version(question, user_answer, level, practice_mode)
         if not improved or not improved.get("segments"):
             return JSONResponse({"error": "Improved version generation failed"}, status_code=500)
@@ -477,3 +487,12 @@ async def improved_version(req: dict[str, Any]) -> JSONResponse:
         return JSONResponse({"error": "Improved version generation failed", "details": str(exc)}, status_code=500)
 
 # try creating my own endpoint for returning improved version text with comments on the places to be improved. 
+# try to to have the vocabstream backend also here in the api folder.
+# @api.get("/api/vocab") for getting vocab words
+# @api.post("/api/vocab") for addign vocab word
+# @api.get("/user-progress") for getting user progress, such as the vocab words they have learned, the grammar points they have practiced, etc.
+# @api.patch("/user-progress") for updating user progress
+
+# for making ML models and using them in FastAPI backend, 
+# better to use Pytorch than Tensorflow and Keras, for flexibility, ease of debugging, ease of loading inside fastapi, exportable to onnx.
+# JAX is too research oriented and advanced. 
