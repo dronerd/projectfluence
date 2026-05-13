@@ -5,8 +5,10 @@ FastAPI service for the SpeakWise chat and voice features.
 ## Endpoints
 
 - `GET /health` - health check for local development and uptime monitors.
-- `POST /api/chat` - English tutoring chat for `casual`, `lesson`, and `warmup` modes.
+- `POST /api/chat` - English tutoring chat for `speaking`, `lesson`, and `warmup` modes.
 - `POST /api/voice` - text-to-speech audio for an assistant message.
+- `POST /api/feedback` - structured feedback for a submitted practice answer.
+- `POST /api/improved-version` - highlighted improved version of a submitted answer.
 
 ## Local Setup
 

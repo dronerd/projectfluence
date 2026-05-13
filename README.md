@@ -1,4 +1,4 @@
-# Project Fluence (Frontend)
+# Project Fluence 
 
 AI-powered English learning platform founded by **Yuto Kuroki**, designed to help learners achieve their goals through English proficiency combined with specialized skills.
 

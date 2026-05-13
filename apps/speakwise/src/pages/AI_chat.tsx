@@ -14,7 +14,7 @@ import {
 } from "../lib/lessonGreetings";
 
 // --- Types and category/lesson metadata ---
-type ConversationMode = "choice" | "casual" | "lesson";
+type ConversationMode = "choice" | "speaking" | "lesson";
 type ConversationStep =
   | "initial"
   | "setup"
@@ -548,7 +548,7 @@ export default function AI_chat() {
             `Return only the question. Do not include a greeting, numbering, explanation, or quotation marks.`,
           level,
           topics: [topic],
-          mode: "casual",
+          mode: "speaking",
         }),
       });
 
@@ -603,7 +603,7 @@ export default function AI_chat() {
     if (!validateSharedSetup()) return;
 
     if (practiceMode === "speaking") {
-      setMode("casual");
+      setMode("speaking");
       setSelectedSkills(["スピーキング"]);
       handleSpeakingStart();
       return;
@@ -821,12 +821,12 @@ export default function AI_chat() {
       const componentTiming = generateComponentTiming();
 
       const payload =
-        mode === "casual"
+        mode === "speaking"
           ? {
               message: messageWithQuestionContext,
               level,
               topics: topicsToPass,
-              mode: "casual",
+              mode: "speaking",
             }
           : {
               message: messageWithQuestionContext,
@@ -1094,7 +1094,7 @@ export default function AI_chat() {
     return true;
   };
 
-  const handleCasualPromptStart = async (prompt: string) => {
+  const handleSpeakingPromptStart = async (prompt: string) => {
     try {
       const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
         method: "POST",
@@ -1103,7 +1103,7 @@ export default function AI_chat() {
           message: prompt,
           level,
           topics: topicsToPass,
-          mode: "casual",
+          mode: "speaking",
         }),
       });
 
@@ -2046,7 +2046,7 @@ export default function AI_chat() {
                   alert("少なくとも1つのトピックを選択してください");
                   return;
                 }
-                if (mode === "casual") {
+                if (mode === "speaking") {
                   setStep("confirm");
                 } else {
                   setStep("test");
@@ -2059,22 +2059,19 @@ export default function AI_chat() {
     );
   }
 
-  // Casual helper unchanged (kept here for context)
-  const handleCasualStart = async () => {
-    const casualPrompt = `You are a friendly English conversation partner. Start the conversation with a warm greeting and ask the user a simple, open-ended question to get them talking. For example, you could ask "How are you today?" or "What have you been up to?" based on their interests (${selectedTopics.join(", ")}). Keep the tone natural, friendly, and encouraging. The user is at level ${level}.`;
+  const handleLegacySpeakingStart = async () => {
+    const speakingPrompt = `You are a friendly English speaking-practice partner. Start the conversation with a warm greeting and ask the user a simple, open-ended question to get them talking. For example, you could ask "How are you today?" or "What have you been up to?" based on their interests (${selectedTopics.join(", ")}). Keep the tone natural, friendly, and encouraging. The user is at level ${level}.`;
 
     setChatLog([]);
     setOpeningQuestion("");
     setStep("chatting");
 
-    // Send the casual start prompt to AI
     setTimeout(() => {
-      handleCasualPromptStart(casualPrompt);
+      handleSpeakingPromptStart(speakingPrompt);
     }, getMessageTiming().pauseMs);
   };
 
-  // Casual confirm (unchanged)
-  if (mode === "casual" && step === "confirm") {
+  if (mode === "speaking" && step === "confirm") {
     return (
       <>
         <style>{`
@@ -2130,7 +2127,7 @@ export default function AI_chat() {
 
             <div className="controls">
               <button onClick={() => setStep("topic")} className="btn-accent">← 編集</button>
-              <button onClick={handleCasualStart} className="modern-orange-btn">会話を開始する</button>
+              <button onClick={handleLegacySpeakingStart} className="modern-orange-btn">会話を開始する</button>
             </div>
           </div>
         </main>

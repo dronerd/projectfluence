@@ -45,126 +45,76 @@ def get_openai_client() -> OpenAI:
     if not api_key:
         raise RuntimeError("OPENAI_API_KEY is not configured")
     return OpenAI(api_key=api_key)
-# Example review comment: Nice use of lru_cache here. This avoids recreating the OpenAI client on every request, which is cleaner and more efficient.
-
-# this part should be updated
-COMPONENT_ALIASES = {
-    "単語": "vocab",
-    "単語練習": "vocab",
-    "vocab practice": "vocab",
-    "vocabulary practice": "vocab",
-    "文章読解": "reading",
-    "reading comprehension": "reading",
-    "会話練習": "conversation",
-    "speaking practice": "conversation",
-    "conversation practice": "conversation",
-    "文法": "grammar",
-    "文法練習": "grammar",
-    "grammar": "grammar",
-}
 
 
-def component_kind(name: str | None) -> str:
-    if not name:
-        return "general"
-    return COMPONENT_ALIASES.get(name.strip().lower(), COMPONENT_ALIASES.get(name, "general"))
+def as_string_list(value: Any) -> list[str]:
+    if not isinstance(value, list):
+        return []
+    return [str(item).strip() for item in value if str(item).strip()]
 
-# this currently only have the level and topics input, 
-# however, to call the OpenAI API in the lesson mode, we will need to add more information
-# such as the remaining time, the question the user answered, the user's answer etc. 
-# this function is currntly used in api/chat endpoint, but the casual speech mode is already deleted, so need to work on this.
-def build_casual_system_prompt(level: str, topics: list[str]) -> str:
-    topics_text = ", ".join(topics) if topics else "general topics"
-    return f"""You are SpeakWise, a friendly English conversation partner.
 
-Help the learner practice English at CEFR level {level}.
-Use topics connected to: {topics_text}.
+def bounded_int(value: Any, default: int, minimum: int, maximum: int) -> int:
+    try:
+        parsed = int(value)
+    except (TypeError, ValueError):
+        parsed = default
+    return min(max(parsed, minimum), maximum)
 
-Conversation style:
-- Keep the conversation natural, warm, and encouraging.
-- Ask one clear follow-up question at a time.
-- Use vocabulary and sentence complexity suitable for {level}.
-- Gently correct important mistakes without interrupting the flow.
-- Encourage longer answers when the learner seems ready."""
 
-# this build_lesson_system_prompt is used in the api/chat endpoint when the mode is lesson, it will provide more detailed guidance to the OpenAI model based on the current lesson component, remaining time, and other factors. This allows the model to generate more focused and effective responses for the learner during a structured lesson.
-# this is from the old conversation lesson method, 
-# therefore this function should be updated. 
-def build_lesson_system_prompt(
-    level: str,
-    topics: list[str],
-    tests: list[str],
-    skills: list[str],
-    current_component: str,
-    component_timing: dict[str, Any] | None,
-    vocab_category: str | None,
-    vocab_lessons: list[str],
-) -> str:
-    topics_text = ", ".join(topics) if topics else "general topics"
+def build_chat_system_prompt(req: dict[str, Any]) -> str:
+    level = str(req.get("level") or "A1").strip() or "A1"
+    mode = str(req.get("mode") or "speaking")
+    topics = as_string_list(req.get("topics"))
+    tests = as_string_list(req.get("tests"))
+    skills = as_string_list(req.get("skills"))
+    components = as_string_list(req.get("components"))
+    current_component = str(req.get("currentComponentName") or "").strip()
+    vocab_lessons = as_string_list(req.get("vocabLessons"))
+    duration_minutes = bounded_int(req.get("durationMinutes") or req.get("duration"), 15, 1, 180)
+    elapsed_seconds = bounded_int(req.get("timeElapsedSeconds") or req.get("totalTimeElapsed"), 0, 0, duration_minutes * 60)
+    remaining_minutes = max(1, round(((duration_minutes * 60) - elapsed_seconds) / 60))
+
+    topic_text = ", ".join(topics) if topics else "general topics"
     tests_text = ", ".join(tests) if tests else "General English"
-    skills_text = ", ".join(skills) if skills else "all skills"
-    remaining_seconds = int((component_timing or {}).get("durationSeconds", 300))
-    remaining_minutes = max(1, round(remaining_seconds / 60))
-    kind = component_kind(current_component)
+    skills_text = ", ".join(skills) if skills else "general English"
+    components_text = ", ".join(components) if components else "general practice"
+    vocab_text = ", ".join(vocab_lessons) if vocab_lessons else "not specified"
 
-    if kind == "vocab":
-        lesson_text = ", ".join(vocab_lessons) if vocab_lessons else "the selected lessons"
-        component_guidance = f"""Focus on vocabulary practice.
-- Use vocabulary from category: {vocab_category or "the learner's selected category"}.
-- Prefer lessons: {lesson_text}.
-- Introduce a small number of useful words in context.
-- Ask the learner to use one word in their own sentence."""
-    elif kind == "reading":
-        component_guidance = """Focus on reading comprehension.
-- Provide a short level-appropriate passage.
-- Ask one comprehension question.
-- Explain difficult vocabulary briefly."""
-    elif kind == "conversation":
-        component_guidance = """Focus on speaking and conversation practice.
-- Ask open-ended questions.
-- Give concise feedback after the learner responds.
-- Keep the exchange realistic and useful."""
-    elif kind == "grammar":
-        component_guidance = """Focus on grammar practice.
-- Teach one grammar point or give one targeted exercise.
-- Ask the learner to produce an example.
-- Explain corrections clearly and kindly."""
+    if mode == "lesson":
+        practice_context = f"""
+Practice context:
+- Practice format: guided writing lesson
+- Duration: {duration_minutes} minutes
+- Approximate remaining time: {remaining_minutes} minutes
+- Selected components: {components_text}
+- Current component: {current_component or "general practice"}
+- Vocabulary category: {req.get("vocabCategory") or "not selected"}
+- Vocabulary lessons: {vocab_text}
+"""
     else:
-        component_guidance = f"Focus on {current_component or 'general English practice'} in a structured, level-appropriate way."
+        practice_context = """
+Practice context:
+- Practice format: speaking practice or practice-question generation
+"""
 
-    return f"""You are SpeakWise, a professional English tutor.
+    return f"""You are SpeakWise, a warm and precise English tutor.
 
 Student profile:
 - CEFR level: {level}
+- Topics of interest: {topic_text}
 - Target tests: {tests_text}
 - Target skills: {skills_text}
-- Topics of interest: {topics_text}
+{practice_context}
+Follow the user's latest instruction closely. The frontend sends the exact lesson or practice task in the user message, so do not replace it with a separate backend lesson flow.
 
-Current lesson component: {current_component or "General"}
-Approximate time for this section: {remaining_minutes} minutes.
+Teaching style:
+- Match vocabulary and sentence complexity to the student's CEFR level.
+- Keep responses concise enough for an interactive chat.
+- Be friendly, encouraging, and specific.
+- Ask one clear next question or task when the message calls for continued practice.
+- If the user asks for only a question, JSON, or another strict format, return only that format."""
 
-Component guidance:
-{component_guidance}
 
-Teaching principles:
-- Match the learner's CEFR level.
-- Keep replies focused enough for the remaining time.
-- Give feedback that is specific, encouraging, and easy to act on.
-- Ask one next question or task at the end unless you are wrapping up."""
-
-# maybe this function can be simplified. 
-# improve this function.
-def get_current_timing(req: dict[str, Any]) -> dict[str, Any] | None:
-    component_timing = req.get("componentTiming") or []
-    current_index = int(req.get("currentComponent") or 0)
-    # Review comment example: Could we safely parse currentComponent? Right now invalid frontend input can throw an exception.
-    if 0 <= current_index < len(component_timing):
-        timing = component_timing[current_index]
-        return timing if isinstance(timing, dict) else None
-    return None
-
-# this function is used to call the OpenAI API for generating chat completions. It takes a system prompt, a user message, and a max token limit, and returns the generated response from the model. This function is used in both casual and lesson modes to get the model's reply based on the constructed system prompt and user input.
-# this function is correct
 def chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
     completion = get_openai_client().chat.completions.create(
         model=os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini"),
@@ -178,71 +128,32 @@ def chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
     return completion.choices[0].message.content or ""
 
 
-# this one still have the casual and lesson mode, need to modify this endpoint too
-@app.get("/")
-def root() -> dict[str, Any]:
-    return {"status": "ok", "service": "speakwise-api", "modes": ["casual", "lesson"]}
-# Review comment example: Since the comments say casual speech mode has already been deleted, should we remove casual from the public API response and from /api/chat? Keeping old modes may confuse the frontend and future maintainers.
-
-# health check endpoint for Render/Vercel/etc
 @app.api_route("/health", methods=["GET", "HEAD"])
 def health() -> Response:
-    # returns only status 200
     return Response(status_code=200)
 
 
-# this is them main endpoint for chat, improve this for the new lesson methods. returns JSONResponse.
 @app.post("/api/chat")
 async def chat(req: dict[str, Any]) -> JSONResponse:
-    # Reveiw comment example: This works, but using dict[str, Any] makes validation manual and error-prone. A Pydantic request model would make the API safer and easier to understand.
-    # use from pydantic import BaseModel, Field
-    # this gets mode from request, if the frontend sends in JSON {"mode": "lesson"}, then it will be in lesson mode.
-    mode = req.get("mode", "casual")
+    mode = str(req.get("mode") or "speaking")
     if mode == "warmup":
         return JSONResponse({"status": "ok", "mode": "warmup"})
+
+    if mode not in {"speaking", "lesson"}:
+        return JSONResponse({"error": "Unknown mode. Use 'speaking', 'lesson', or 'warmup'."}, status_code=400)
 
     message = str(req.get("message") or "").strip()
     if not message:
         return JSONResponse({"error": "message is required"}, status_code=400)
-    # for try, everything inside of the block might fail, so the code uses try to avoid crashing the server
-    try:
-        # modify here otherwise the level is defaulted to B1
-        level = str(req.get("level") or "B1")
-        topics = req.get("topics") if isinstance(req.get("topics"), list) else ["General"]
 
-        # update the logic here of the max_tokens, in order to correctly prevent extreme usage.
-        if mode == "lesson":
-            # update this time calculation logic, as it is currelty based on the old component based timing. 
-            current_timing = get_current_timing(req)
-            remaining_seconds = int((current_timing or {}).get("durationSeconds", 300))
-            max_tokens = min(max(int((remaining_seconds / 60) * 120), 180), 700)
-            # use the build_lesson_system_prompt function to generate the system prompt
-            system_prompt = build_lesson_system_prompt(
-                level=level,
-                topics=topics,
-                tests=req.get("tests") if isinstance(req.get("tests"), list) else [],
-                skills=req.get("skills") if isinstance(req.get("skills"), list) else [],
-                current_component=str(req.get("currentComponentName") or "General"),
-                component_timing=current_timing,
-                vocab_category=req.get("vocabCategory"),
-                vocab_lessons=req.get("vocabLessons") if isinstance(req.get("vocabLessons"), list) else [],
-            )
-            # use the chat_completion function to get the reply from the OpenAI model
-            reply = chat_completion(system_prompt, message, max_tokens=max_tokens)
-            # return the reply and the mode in the JSONResponse
-            return JSONResponse({"reply": reply, "mode": "lesson"})
-        # the remaining option is casual, so if the mode is not casual, then return error. This parts also needs improvement. 
-        if mode != "casual":
-            return JSONResponse({"error": "Unknown mode. Use 'casual' or 'lesson'."}, status_code=400)
-        # handling of the casual mode 
-        system_prompt = build_casual_system_prompt(level, topics)
-        reply = chat_completion(system_prompt, message, max_tokens=500)
-        return JSONResponse({"reply": reply, "mode": "casual"})
+    try:
+        max_tokens = 700 if mode == "lesson" else 500
+        reply = chat_completion(build_chat_system_prompt(req), message, max_tokens=max_tokens)
+        return JSONResponse({"reply": reply, "mode": mode})
     except RuntimeError as exc:
         return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
         return JSONResponse({"error": "OpenAI chat request failed", "details": str(exc)}, status_code=500)
-        # Reveiw comment example: Returning str(exc) to the client can expose internal information. It is better to log the real error on the server and return a generic message to the frontend.
 
 @app.post("/api/voice")
 async def voice(req: dict[str, Any]):
@@ -326,7 +237,6 @@ def parse_json_object(text: str) -> dict[str, Any] | None:
         return parsed if isinstance(parsed, dict) else None
     except json.JSONDecodeError:
         json_match = re.search(r'\{.*\}', text, re.DOTALL)
-        # Review comment example: This fallback is practical, but regex-based JSON extraction can break if the model outputs extra braces. Using OpenAI structured outputs or JSON mode would be more reliable.
         if not json_match:
             return None
         try:
@@ -335,7 +245,6 @@ def parse_json_object(text: str) -> dict[str, Any] | None:
         except json.JSONDecodeError:
             return None
 
-# makes sure the feedback JSON has all the required fields and the correct types, and fills in defaults if necessary. This is important because the OpenAI model might not always return perfectly structured JSON, so this function helps ensure that the API response is consistent and won't break the frontend.
 def normalize_feedback(feedback_json: dict[str, Any], user_answer: str) -> dict[str, Any]:
     feedback_json["positiveComment"] = str(
         feedback_json.get("positiveComment")
@@ -462,7 +371,6 @@ async def feedback(req: dict[str, Any]) -> JSONResponse:
         )
 
         feedback_json = normalize_feedback(parse_json_object(feedback_text) or default_feedback(user_answer), user_answer)
-        # improve this to return this feedback in more structured way, so the frontend can use this information to display the feedback for each category
         return JSONResponse({"feedback": feedback_json})
     except RuntimeError as exc:
         return JSONResponse({"error": str(exc)}, status_code=500)
@@ -490,14 +398,3 @@ async def improved_version(req: dict[str, Any]) -> JSONResponse:
         return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
         return JSONResponse({"error": "Improved version generation failed", "details": str(exc)}, status_code=500)
-
-# try creating my own endpoint for returning improved version text with comments on the places to be improved. 
-# try to to have the vocabstream backend also here in the api folder.
-# @api.get("/api/vocab") for getting vocab words
-# @api.post("/api/vocab") for addign vocab word
-# @api.get("/user-progress") for getting user progress, such as the vocab words they have learned, the grammar points they have practiced, etc.
-# @api.patch("/user-progress") for updating user progress
-
-# for making ML models and using them in FastAPI backend, 
-# better to use Pytorch than Tensorflow and Keras, for flexibility, ease of debugging, ease of loading inside fastapi, exportable to onnx.
-# JAX is too research oriented and advanced. 
