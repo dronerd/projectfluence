@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { apiSubmitVocabStreamProgress, type VocabStreamQuestionAttempt } from "../api";
+import { useAuth } from "../AuthContext";
 import { speakEnglish } from "./speech"; 
 
 interface LessonWord {
@@ -40,6 +42,7 @@ const Lesson: React.FC = () => {
   const [step, setStep] = useState<number>(0);
   const [lesson, setLesson] = useState<LessonData | null>(null);
   const nav = useNavigate();
+  const { user } = useAuth();
 
   // quiz state (example-sentence quiz)
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
@@ -83,6 +86,8 @@ const Lesson: React.FC = () => {
   const [animatedPercent, setAnimatedPercent] = useState<number>(0);
   const [animatedReplayPercent, setAnimatedReplayPercent] = useState<number>(0);
   const [finalPraiseMessage, setFinalPraiseMessage] = useState<string>("");
+  const [questionAttempts, setQuestionAttempts] = useState<VocabStreamQuestionAttempt[]>([]);
+  const [progressSubmitError, setProgressSubmitError] = useState<string>("");
 
   // finish lock/overlay to avoid duplicate praise
   const [finishLock, setFinishLock] = useState<boolean>(false);
@@ -91,6 +96,8 @@ const Lesson: React.FC = () => {
   const audioCtxRef = useRef<AudioContext | null>(null);
   const preReplayMeaningQuestionsRef = useRef<MeaningQuestion[] | null>(null);
   const preReplayQuizQuestionsRef = useRef<QuizQuestion[] | null>(null);
+  const attemptOrderRef = useRef(0);
+  const submittedProgressKeysRef = useRef<Set<string>>(new Set());
 
   // audio unlock
   async function unlockAudio(): Promise<void> {
@@ -149,6 +156,10 @@ const Lesson: React.FC = () => {
     }
 
     setLesson(null);
+    setQuestionAttempts([]);
+    setProgressSubmitError("");
+    attemptOrderRef.current = 0;
+    submittedProgressKeysRef.current = new Set();
     loadLocalLesson(lessonId).then((data) => {
       if (cancelled) return;
       if (!data) {
@@ -346,6 +357,78 @@ const Lesson: React.FC = () => {
     replayResult.quizTotal,
   ]);
 
+  useEffect(() => {
+    if (!lesson || !lessonId) return;
+
+    const totalWords = lesson.words ? lesson.words.length : 0;
+    if (step !== totalWords + 3) return;
+
+    const parsedLesson = parseLessonId(lessonId);
+    if (!parsedLesson) return;
+
+    const matchingAttempted = meaningAttempted || meaningQuestions.length > 0;
+    const quizAttemptedFlag = quizAttempted;
+    const meaningTotal = matchingAttempted ? totalWords : 0;
+    const quizTotal = quizAttemptedFlag ? quizQuestions.length || 1 : 0;
+    const stableKey = [
+      lessonId,
+      questionAttempts.length,
+      meaningScore,
+      finalScore ?? quizScore,
+      replayResult.completed ? "replay" : "initial",
+      replayResult.meaningCorrect,
+      replayResult.quizCorrect,
+    ].join(":");
+
+    if (submittedProgressKeysRef.current.has(stableKey)) return;
+    submittedProgressKeysRef.current.add(stableKey);
+
+    const replayCorrect = replayResult.meaningCorrect + replayResult.quizCorrect;
+    const replayTotal = replayResult.meaningTotal + replayResult.quizTotal;
+
+    apiSubmitVocabStreamProgress({
+      anonymousUserId: getOrCreateAnonymousUserId(),
+      userUsername: user?.username,
+      lessonId,
+      genre: parsedLesson.genre,
+      lessonNumber: parsedLesson.lessonNumber,
+      lessonTitle: lesson.title ?? null,
+      wordCount: totalWords,
+      meaningScore: matchingAttempted ? meaningScore : 0,
+      meaningTotal,
+      quizScore: quizAttemptedFlag ? finalScore ?? quizScore : 0,
+      quizTotal,
+      replayCompleted: replayResult.completed,
+      replayCorrect,
+      replayTotal,
+      questionAttempts,
+    }).then(() => {
+      setProgressSubmitError("");
+    }).catch((error) => {
+      const message = error instanceof Error ? error.message : "Failed to save progress";
+      console.warn("VocabStream progress tracking failed", error);
+      setProgressSubmitError(message);
+    });
+  }, [
+    step,
+    lesson,
+    lessonId,
+    meaningAttempted,
+    meaningQuestions.length,
+    meaningScore,
+    quizAttempted,
+    quizQuestions.length,
+    finalScore,
+    quizScore,
+    replayResult.completed,
+    replayResult.meaningCorrect,
+    replayResult.meaningTotal,
+    replayResult.quizCorrect,
+    replayResult.quizTotal,
+    questionAttempts,
+    user?.username,
+  ]);
+
   if (!lesson) return <div>Loading lesson...</div>;
   const L = lesson!;
   const totalWords = L.words.length;
@@ -526,6 +609,20 @@ const Lesson: React.FC = () => {
     }
   }
 
+  function recordQuestionAttempt(
+    attempt: Omit<VocabStreamQuestionAttempt, "attemptOrder" | "answeredAt">,
+  ) {
+    attemptOrderRef.current += 1;
+    setQuestionAttempts((prev) => [
+      ...prev,
+      {
+        ...attempt,
+        attemptOrder: attemptOrderRef.current,
+        answeredAt: new Date().toISOString(),
+      },
+    ]);
+  }
+
   // --- quiz choice handler (example-sentence quiz) ---
   async function handleChoose(choiceIndex: number) {
     if (!quizQuestions[quizIndex] || selectedChoice !== null) return;
@@ -534,6 +631,16 @@ const Lesson: React.FC = () => {
 
     const q = quizQuestions[quizIndex];
     const isCorrect = choiceIndex === q.answer_index;
+    recordQuestionAttempt({
+      questionType: "quiz",
+      word: q.word,
+      prompt: q.blank_sentence || q.sentence,
+      correctAnswer: q.choices[q.answer_index] ?? q.word,
+      selectedAnswer: q.choices[choiceIndex] ?? "",
+      isCorrect,
+      isReplay: isReplayMode && replayType === "quiz",
+      choices: q.choices,
+    });
     setSelectedChoice(choiceIndex);
     if (!isReplayMode) setQuizAttempted(true);
     if (isCorrect) {
@@ -561,6 +668,16 @@ const Lesson: React.FC = () => {
     await unlockAudio();
     const q = meaningQuestions[meaningIndex];
     const isCorrect = choiceIndex === q.answer_index;
+    recordQuestionAttempt({
+      questionType: "meaning",
+      word: q.choices[q.answer_index] ?? "",
+      prompt: q.prompt,
+      correctAnswer: q.choices[q.answer_index] ?? "",
+      selectedAnswer: q.choices[choiceIndex] ?? "",
+      isCorrect,
+      isReplay: isReplayMode && replayType === "meaning",
+      choices: q.choices,
+    });
     setMeaningSelectedChoice(choiceIndex);
     if (!isReplayMode) setMeaningAttempted(true);
     if (isCorrect) {
@@ -628,6 +745,10 @@ const Lesson: React.FC = () => {
           setMeaningAttempted(false);
           setWrongQuizItems([]);
           setWrongMeaningItems([]);
+          setQuestionAttempts([]);
+          setProgressSubmitError("");
+          attemptOrderRef.current = 0;
+          submittedProgressKeysRef.current = new Set();
           preReplayMeaningQuestionsRef.current = null;
           preReplayQuizQuestionsRef.current = null;
           setIsReplayMode(false);
@@ -1483,6 +1604,11 @@ const Lesson: React.FC = () => {
                 <p style={{ fontSize: isSmallScreen ? 15 : 18, marginTop: 8, color: "#334155", lineHeight: 1.6 }}>
                   {praise}
                 </p>
+                {progressSubmitError && (
+                  <p style={{ fontSize: 13, color: "#b45309", marginTop: 8 }}>
+                    学習記録の保存に失敗しました。レッスンの結果表示には影響ありません。
+                  </p>
+                )}
               </div>
 
               <div style={{ display: "flex", gap: 12, justifyContent: "center", marginTop: 12, flexWrap: "wrap" }}>
@@ -1523,6 +1649,32 @@ const Lesson: React.FC = () => {
     </div>
   );
 };
+
+function parseLessonId(lessonId: string): { genre: string; lessonNumber: number | null } | null {
+  if (!lessonId.includes("-lesson-")) return null;
+  const [genre, rawLessonNumber] = lessonId.split("-lesson-");
+  if (!genre) return null;
+  const lessonNumber = parseInt(rawLessonNumber, 10);
+  return {
+    genre,
+    lessonNumber: Number.isFinite(lessonNumber) ? lessonNumber : null,
+  };
+}
+
+function getOrCreateAnonymousUserId(): string | undefined {
+  if (typeof window === "undefined") return undefined;
+  const storageKey = "vocabstream_anonymous_user_id";
+  const existing = window.localStorage.getItem(storageKey);
+  if (existing) return existing;
+
+  const generated =
+    typeof crypto !== "undefined" && "randomUUID" in crypto
+      ? crypto.randomUUID()
+      : `anon-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
+  window.localStorage.setItem(storageKey, generated);
+  return generated;
+}
 
 /* generateQuizFromLesson (unchanged except location) */
 function generateQuizFromLesson(lesson: LessonData): QuizQuestion[] {

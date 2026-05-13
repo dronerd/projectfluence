@@ -2,6 +2,37 @@
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/api";
 
+export type VocabStreamQuestionAttempt = {
+  questionType: "meaning" | "quiz";
+  word: string;
+  prompt?: string;
+  correctAnswer: string;
+  selectedAnswer: string;
+  isCorrect: boolean;
+  isReplay?: boolean;
+  attemptOrder: number;
+  choices?: string[];
+  answeredAt?: string;
+};
+
+export type VocabStreamProgressPayload = {
+  anonymousUserId?: string;
+  userUsername?: string;
+  lessonId: string;
+  genre: string;
+  lessonNumber?: number | null;
+  lessonTitle?: string | null;
+  wordCount: number;
+  meaningScore: number;
+  meaningTotal: number;
+  quizScore: number;
+  quizTotal: number;
+  replayCompleted?: boolean;
+  replayCorrect?: number;
+  replayTotal?: number;
+  questionAttempts: VocabStreamQuestionAttempt[];
+};
+
 async function tryFetchJson(path: string): Promise<any | null> {
   try {
     const r = await fetch(path);
@@ -47,6 +78,21 @@ export async function apiLogin(username: string, password: string) {
 export async function apiMe(token: string) {
   const res = await fetch(`${API_BASE}/me?token=${encodeURIComponent(token)}`);
   if (!res.ok) throw new Error("unauthorized");
+  return res.json();
+}
+
+export async function apiSubmitVocabStreamProgress(payload: VocabStreamProgressPayload) {
+  const res = await fetch("/api/vocabstream/progress", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => null);
+    throw new Error(error?.error || "Failed to save VocabStream progress");
+  }
+
   return res.json();
 }
 
