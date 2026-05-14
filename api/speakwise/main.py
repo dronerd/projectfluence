@@ -2,6 +2,8 @@ from functools import lru_cache
 from io import BytesIO
 import os
 import json
+import logging
+from pathlib import Path
 import re
 import secrets
 from typing import Any
@@ -12,9 +14,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, Response, StreamingResponse
 from openai import OpenAI
 
+load_dotenv(Path(__file__).with_name(".env"))
 load_dotenv()
 
 app = FastAPI(title="SpeakWise API", version="1.0.0")
+logger = logging.getLogger("speakwise")
 
 LEVEL_POSITIVE_FALLBACK_PROMPTS = {
     "A1": [
@@ -60,7 +64,11 @@ def _cors_origins() -> list[str]:
         "https://vocabstream.vercel.app",
         "https://vocabstream-for-testing.vercel.app",
         "http://localhost:3000",
+        "http://localhost:3001",
+        "http://localhost:3002",
         "http://127.0.0.1:3000",
+        "http://127.0.0.1:3001",
+        "http://127.0.0.1:3002",
     ]
 
 
@@ -177,7 +185,11 @@ def json_chat_completion(system_prompt: str, message: str, max_tokens: int) -> s
             response_format={"type": "json_object"},
         )
         return completion.choices[0].message.content or ""
-    except TypeError:
+    except Exception as exc:
+        # Some deployed model/SDK combinations reject response_format even
+        # though the plain chat call works. Feedback uses the plain path, so
+        # retry that path while keeping strict JSON instructions in messages.
+        logger.warning("JSON response_format request failed; retrying without response_format: %s", exc)
         return chat_completion(system_prompt, message, max_tokens)
 
 
@@ -330,7 +342,7 @@ def normalize_improved_version(improved: dict[str, Any] | str) -> dict[str, Any]
         for segment in segments:
             if not isinstance(segment, dict):
                 continue
-            text = str(segment.get("text") or "")
+            text = str(segment.get("text") or segment.get("content") or segment.get("revised") or "")
             if not text:
                 continue
             segment_type = str(segment.get("type") or "improvement")
@@ -345,7 +357,9 @@ def normalize_improved_version(improved: dict[str, Any] | str) -> dict[str, Any]
             improved.get("text")
             or improved.get("revised")
             or improved.get("revisedText")
+            or improved.get("revised_text")
             or improved.get("improvedText")
+            or improved.get("improved_text")
             or improved.get("answer")
             or ""
         ).strip()
@@ -361,6 +375,31 @@ def normalize_improved_version(improved: dict[str, Any] | str) -> dict[str, Any]
     }
 
 
+IMPROVED_VERSION_JSON_FORMAT = """Required JSON format:
+{
+  "improvedVersion": {
+    "title": "Improved version",
+    "summary": "One short sentence explaining the biggest improvement.",
+    "revisedText": "The complete improved answer as one readable text.",
+    "segments": [
+      {
+        "text": "A phrase or sentence from the improved answer.",
+        "type": "grammar | improvement | clarity | unchanged",
+        "note": "Short reason"
+      }
+    ],
+    "changes": [
+      {
+        "original": "Original phrase",
+        "revised": "Revised phrase",
+        "type": "grammar | improvement | clarity",
+        "reason": "Short reason"
+      }
+    ]
+  }
+}"""
+
+
 def build_improved_version_prompt(question: str, user_answer: str, level: str, practice_mode: str) -> str:
     return f"""Rewrite the student's English answer into one clearly improved version.
 
@@ -373,29 +412,8 @@ Student's Response:
 Student CEFR Level: {level}
 Practice Mode: {practice_mode}
 
-Return ONLY valid JSON with this exact structure:
-{{
-  "improvedVersion": {{
-    "title": "Improved version",
-    "summary": "One short sentence explaining the biggest improvement",
-    "revisedText": "The complete improved answer as one readable text.",
-    "segments": [
-      {{
-        "text": "A phrase or sentence from the improved answer.",
-        "type": "improvement",
-        "note": "Short reason"
-      }}
-    ],
-    "changes": [
-      {{
-        "original": "Original phrase",
-        "revised": "Revised phrase",
-        "type": "grammar",
-        "reason": "Short reason"
-      }}
-    ]
-  }}
-}}
+Return ONLY valid JSON using this exact schema:
+{IMPROVED_VERSION_JSON_FORMAT}
 
 Rules:
 - This request is separate from feedback. Do not provide feedback lists.
@@ -414,7 +432,11 @@ Rules:
 
 def generate_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
     improved_text = json_chat_completion(
-        system_prompt="You are a careful English rewriting assistant. Return only valid JSON.",
+        system_prompt=(
+            "You are a careful English rewriting assistant. Return only valid JSON. "
+            "Do not include markdown or text outside the JSON object.\n\n"
+            f"{IMPROVED_VERSION_JSON_FORMAT}"
+        ),
         message=build_improved_version_prompt(question, user_answer, level, practice_mode),
         max_tokens=900,
     )
@@ -428,8 +450,11 @@ def generate_improved_version(question: str, user_answer: str, level: str, pract
         parsed.get("improvedVersion")
         or parsed.get("improved_version")
         or parsed.get("revisedText")
+        or parsed.get("revised_text")
         or parsed.get("improvedText")
+        or parsed.get("improved_text")
         or parsed.get("text")
+        or parsed.get("answer")
     )
     return normalize_improved_version(improved) if isinstance(improved, (dict, str)) else None
 

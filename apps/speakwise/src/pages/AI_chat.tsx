@@ -70,6 +70,13 @@ interface ChatEntry {
   };
 }
 
+interface PendingFeedbackSection {
+  transitionText: string;
+  section: FeedbackSection;
+  label: string;
+  items: string[];
+}
+
 type ImprovementType = "unchanged" | "grammar" | "improvement" | "clarity";
 
 interface ImprovedSegment {
@@ -345,8 +352,14 @@ export default function AI_chat() {
   const [pendingStartupMode, setPendingStartupMode] = useState<PracticeMode | null>(null);
   const [lastQuestionIndexForConfirmation, setLastQuestionIndexForConfirmation] = useState<number | null>(null);
   const [feedbackLoading, setFeedbackLoading] = useState(false);
+  const [feedbackStepLoading, setFeedbackStepLoading] = useState(false);
+  const [pendingFeedbackSections, setPendingFeedbackSections] = useState<PendingFeedbackSection[]>([]);
   const [improvedVersionLoading, setImprovedVersionLoading] = useState(false);
   const [pendingImprovedVersion, setPendingImprovedVersion] = useState<{
+    question: string;
+    userAnswer: string;
+  } | null>(null);
+  const [pendingFeedbackImprovedVersion, setPendingFeedbackImprovedVersion] = useState<{
     question: string;
     userAnswer: string;
   } | null>(null);
@@ -1016,6 +1029,9 @@ export default function AI_chat() {
     if (openingQuestion && textToSend.trim()) {
       setLastUserAnswer(textToSend);
       setPendingImprovedVersion(null);
+      setPendingFeedbackImprovedVersion(null);
+      setPendingFeedbackSections([]);
+      setFeedbackStepLoading(false);
       getFeedback(openingQuestion, textToSend);
       return;
     }
@@ -1237,34 +1253,28 @@ export default function AI_chat() {
       setChatLog((prev) => [...prev, { sender: "llm", text: feedbackIntro, kind: "feedbackIntro" }]);
       await waitForTyping(feedbackIntro);
 
-      for (const feedbackSection of feedbackSections) {
-        const transitionText = sectionIntros[feedbackSection.section];
-        setChatLog((prev) => [...prev, { sender: "llm", text: transitionText, kind: "feedbackSectionIntro" }]);
-        await waitForTyping(transitionText);
-
+      const queuedFeedbackSections = feedbackSections.map((feedbackSection) => {
         const items = Array.isArray(feedbackSection.content)
           ? feedbackSection.content.filter(Boolean)
           : [feedbackSection.content].filter((item): item is string => Boolean(item));
-        setChatLog((prev) => [
-          ...prev,
-          {
-            sender: "llm",
-            text: feedbackSection.label,
-            kind: "feedbackSection",
-            feedbackSection: {
-              section: feedbackSection.section,
-              label: feedbackSection.label,
-              items,
-            },
-          },
-        ]);
-        await waitBetweenMessages();
-      }
 
-      const improvedReadyPrompt = getLevelPrompt(LEVEL_IMPROVED_VERSION_READY_PROMPTS);
-      setChatLog((prev) => [...prev, { sender: "llm", text: improvedReadyPrompt, kind: "improvedIntro" }]);
-      await waitForTyping(improvedReadyPrompt);
-      setPendingImprovedVersion({ question, userAnswer });
+        return {
+          transitionText: sectionIntros[feedbackSection.section],
+          section: feedbackSection.section,
+          label: feedbackSection.label,
+          items,
+        };
+      });
+
+      setPendingFeedbackSections(queuedFeedbackSections);
+      setPendingFeedbackImprovedVersion({ question, userAnswer });
+      if (queuedFeedbackSections.length === 0) {
+        const improvedReadyPrompt = getLevelPrompt(LEVEL_IMPROVED_VERSION_READY_PROMPTS);
+        setChatLog((prev) => [...prev, { sender: "llm", text: improvedReadyPrompt, kind: "improvedIntro" }]);
+        await waitForTyping(improvedReadyPrompt);
+        setPendingImprovedVersion({ question, userAnswer });
+        setPendingFeedbackImprovedVersion(null);
+      }
       setFeedbackLoading(false);
     } catch (error) {
       console.error("Feedback error:", error);
@@ -1324,6 +1334,47 @@ export default function AI_chat() {
       setPendingImprovedVersion({ question, userAnswer });
     } finally {
       setImprovedVersionLoading(false);
+    }
+  };
+
+  const handleNextFeedback = async () => {
+    if (feedbackStepLoading || pendingFeedbackSections.length === 0) return;
+
+    const [nextSection, ...remainingSections] = pendingFeedbackSections;
+    setFeedbackStepLoading(true);
+    setPendingFeedbackSections(remainingSections);
+
+    try {
+      setChatLog((prev) => [
+        ...prev,
+        { sender: "llm", text: nextSection.transitionText, kind: "feedbackSectionIntro" },
+      ]);
+      await waitForTyping(nextSection.transitionText);
+
+      setChatLog((prev) => [
+        ...prev,
+        {
+          sender: "llm",
+          text: nextSection.label,
+          kind: "feedbackSection",
+          feedbackSection: {
+            section: nextSection.section,
+            label: nextSection.label,
+            items: nextSection.items,
+          },
+        },
+      ]);
+      await waitBetweenMessages();
+
+      if (remainingSections.length === 0 && pendingFeedbackImprovedVersion) {
+        const improvedReadyPrompt = getLevelPrompt(LEVEL_IMPROVED_VERSION_READY_PROMPTS);
+        setChatLog((prev) => [...prev, { sender: "llm", text: improvedReadyPrompt, kind: "improvedIntro" }]);
+        await waitForTyping(improvedReadyPrompt);
+        setPendingImprovedVersion(pendingFeedbackImprovedVersion);
+        setPendingFeedbackImprovedVersion(null);
+      }
+    } finally {
+      setFeedbackStepLoading(false);
     }
   };
 
@@ -1526,6 +1577,9 @@ export default function AI_chat() {
     setDisplayedText({}); // Reset displayed text to start fresh animations
     setChatLog([]);
     setPendingImprovedVersion(null);
+    setPendingFeedbackImprovedVersion(null);
+    setPendingFeedbackSections([]);
+    setFeedbackStepLoading(false);
     setImprovedVersionLoading(false);
     setLessonStartTime(Date.now());
     setTimeElapsed(0);
@@ -1577,6 +1631,9 @@ export default function AI_chat() {
     setDisplayedText({}); // Reset displayed text to start fresh animations
     setChatLog([]);
     setPendingImprovedVersion(null);
+    setPendingFeedbackImprovedVersion(null);
+    setPendingFeedbackSections([]);
+    setFeedbackStepLoading(false);
     setImprovedVersionLoading(false);
     setLessonStartTime(Date.now());
     setTimeElapsed(0);
@@ -2780,6 +2837,9 @@ export default function AI_chat() {
                   } else {
                     setChatLog([]);
                     setPendingImprovedVersion(null);
+                    setPendingFeedbackImprovedVersion(null);
+                    setPendingFeedbackSections([]);
+                    setFeedbackStepLoading(false);
                     setImprovedVersionLoading(false);
                     setLessonStartTime(Date.now());
                     setTimeElapsed(0);
@@ -2900,15 +2960,13 @@ export default function AI_chat() {
           .mood-btn,.lesson-gradient-btn{min-height:42px;padding:0 16px;border:none;border-radius:999px;background:linear-gradient(90deg,#4f46e5,#06b6d4);color:#ffffff;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(79,70,229,0.18);transition:transform 0.16s ease,box-shadow 0.16s ease,opacity 0.16s ease}
           .mood-btn:hover,.mood-btn:focus,.lesson-gradient-btn:hover,.lesson-gradient-btn:focus{transform:translateY(-1px);box-shadow:0 14px 32px rgba(79,70,229,0.24);outline:none}
           .mood-btn:active,.lesson-gradient-btn:active{transform:translateY(0);opacity:0.92}
+          .lesson-gradient-btn:disabled{opacity:0.62;cursor:not-allowed;transform:none}
           .answer-panel{display:flex;justify-content:flex-end;margin:14px 0 4px}
           .answer-card{width:min(78%,620px);background:#ffffff;border:1px solid #cbd8ea;border-radius:16px 16px 4px 16px;padding:12px;box-shadow:0 10px 26px rgba(15,23,42,0.10)}
           .answer-input{width:100%;min-height:132px;resize:vertical;border:1px solid #d9e4f2;border-radius:12px;padding:12px 14px;color:#10213c;font-size:16px;line-height:1.5;box-sizing:border-box}
           .answer-input:focus{outline:2px solid rgba(79,70,229,0.22);border-color:#7da2d7}
           .answer-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-top:10px}
-          .improved-version-action{display:flex;justify-content:flex-end;margin:16px 0 6px}
-          .improved-version-btn{min-height:44px;padding:0 18px;border:none;border-radius:999px;background:linear-gradient(90deg,#16a34a,#0e7490);color:#ffffff;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(14,116,144,0.18);transition:transform 0.16s ease,box-shadow 0.16s ease,opacity 0.16s ease}
-          .improved-version-btn:hover,.improved-version-btn:focus{transform:translateY(-1px);box-shadow:0 14px 32px rgba(14,116,144,0.24);outline:none}
-          .improved-version-btn:disabled{opacity:0.62;cursor:not-allowed;transform:none}
+          .feedback-next-action,.improved-version-action{display:flex;justify-content:flex-end;margin:16px 0 6px}
           @media(max-width:768px){
             .chat-header-content{gap:8px;min-height:52px;padding:0 14px}
             .chat-header-left{gap:8px;flex:1}
@@ -2933,7 +2991,7 @@ export default function AI_chat() {
             .msg-question-text{font-size:19px}
             .msg-question{padding:16px}
             .answer-card{width:100%}
-            .improved-version-action{justify-content:center}
+            .feedback-next-action,.improved-version-action{justify-content:center}
           }
           @media(max-width:420px){
             .chat-header-right{max-width:calc(100% - 54px)}
@@ -2976,6 +3034,9 @@ export default function AI_chat() {
                     setStep("initial");
                     setChatLog([]);
                     setPendingImprovedVersion(null);
+                    setPendingFeedbackImprovedVersion(null);
+                    setPendingFeedbackSections([]);
+                    setFeedbackStepLoading(false);
                     setImprovedVersionLoading(false);
                     setOpeningQuestion("");
                     setLessonStartTime(null);
@@ -3146,11 +3207,24 @@ export default function AI_chat() {
                     </div>
                   )}
 
+                  {pendingFeedbackSections.length > 0 && (
+                    <div className="feedback-next-action">
+                      <button
+                        type="button"
+                        className="lesson-gradient-btn"
+                        onClick={handleNextFeedback}
+                        disabled={feedbackStepLoading}
+                      >
+                        {feedbackStepLoading ? "Loading feedback..." : "Next feedback"}
+                      </button>
+                    </div>
+                  )}
+
                   {pendingImprovedVersion && (
                     <div className="improved-version-action">
                       <button
                         type="button"
-                        className="improved-version-btn"
+                        className="lesson-gradient-btn"
                         onClick={handleSeeImprovedVersion}
                         disabled={improvedVersionLoading}
                       >

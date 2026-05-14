@@ -31,10 +31,23 @@ Run the API:
 uvicorn main:app --reload
 ```
 
+From the repository root, you can also run:
+
+```bash
+npm run dev:speakwise-api
+```
+
 The frontend defaults to `http://127.0.0.1:8000`. To override it, set this in the Next.js environment:
 
 ```bash
 NEXT_PUBLIC_SPEAKWISE_API_URL=https://your-speakwise-backend.example.com
+```
+
+For local end-to-end SpeakWise testing, run the backend and frontend in two terminals from the repository root:
+
+```bash
+npm run dev:speakwise-api
+npm run dev:speakwise
 ```
 
 ## Deployment

@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:speakwise": "NEXT_PUBLIC_SPEAKWISE_API_URL=http://127.0.0.1:8000 next dev",
+    "dev:speakwise-api": "api/speakwise/.venv/bin/uvicorn main:app --app-dir api/speakwise --host 127.0.0.1 --port 8000",
+    "dev:speakwise-api:reload": "api/speakwise/.venv/bin/uvicorn main:app --reload --reload-dir api/speakwise --app-dir api/speakwise --host 127.0.0.1 --port 8000",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
