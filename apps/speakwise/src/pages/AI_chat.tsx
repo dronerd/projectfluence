@@ -163,6 +163,9 @@ const TOPICS = [
 type PracticeMode = "speaking" | "writing";
 type CEFRLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 
+const DEFAULT_LEVEL = "B2";
+const DEFAULT_TOPIC = TOPICS[0];
+
 const TESTS = ["特になし", "英検", "TOEFL", "TOEIC", "IELTS", "ケンブリッジ英検", "GTEC", "TEAP", "SAT", "ACT"];
 const SKILLS = ["リーディング", "リスニング", "ライティング", "スピーキング"];
 const WRITING_COMPONENTS = [GENERAL_COMPONENT, VOCAB_COMPONENT, "文法", "一貫性"];
@@ -307,9 +310,9 @@ export default function AI_chat() {
   const [step, setStep] = useState<ConversationStep>("initial");
 
   // Common settings
-  const [level, setLevel] = useState("");
-  const [levelConfirmed, setLevelConfirmed] = useState(false);
-  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+  const [level, setLevel] = useState(DEFAULT_LEVEL);
+  const [levelConfirmed, setLevelConfirmed] = useState(true);
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([DEFAULT_TOPIC]);
   const [customTopic, setCustomTopic] = useState("");
 
   // Lesson settings
@@ -2407,7 +2410,7 @@ export default function AI_chat() {
             </div>
 
             <div className="actions-row">
-              <button onClick={() => { setLevel(""); setLevelConfirmed(false); setStep("level"); }} className="btn-accent">← 戻る</button>
+              <button onClick={() => { setLevel(DEFAULT_LEVEL); setLevelConfirmed(true); setStep("level"); }} className="btn-accent">← 戻る</button>
               <button onClick={() => {
                 if (selectedTopics.length === 0 && !customTopic) {
                   alert("少なくとも1つのトピックを選択してください");
@@ -2940,13 +2943,13 @@ export default function AI_chat() {
           .msg-question-text{white-space:pre-wrap;font-size:22px;line-height:1.45;font-weight:800;color:#10213c}
           .msg-timer{background:#eef4ff;color:#13233f;padding:10px 12px;border-left:4px solid #4a78bd;border-radius:10px;margin-right:min(20%,220px);font-weight:700}
           .feedback-card{margin-right:min(12%,140px);background:#ffffff;border:1px solid #d9e4f2;border-radius:14px;padding:16px;box-shadow:0 14px 32px rgba(31,79,145,0.10)}
-          .feedback-card-title{font-weight:800;color:#10213c;margin-bottom:14px;font-size:16px}
+          .feedback-card-title{font-weight:800;color:#10213c;margin-bottom:14px;font-size:18px}
           .feedback-section-message{margin-right:min(12%,140px)}
           .feedback-section{margin:0 0 10px}
           .feedback-section:last-child{margin-bottom:0}
           .feedback-section-box{padding:12px 14px;border-radius:12px;border:1px solid transparent;border-left-width:5px}
-          .feedback-section-title{font-weight:800;font-size:14px;margin-bottom:6px}
-          .feedback-section-list{margin:0;padding-left:18px;font-size:13px;line-height:1.6}
+          .feedback-section-title{font-weight:800;font-size:16px;margin-bottom:8px}
+          .feedback-section-list{margin:0;padding-left:20px;font-size:15px;line-height:1.7}
           .feedback-section-list li{margin-bottom:4px}
           .feedback-section-list li:last-child{margin-bottom:0}
           .feedback-section-general .feedback-section-box{background:#eef6ff;border-color:#bfdbfe;border-left-color:#3b82f6;color:#1e3a8a}
@@ -2990,11 +2993,11 @@ export default function AI_chat() {
           .mood-btn:active,.lesson-gradient-btn:active{transform:translateY(0);opacity:0.92}
           .lesson-gradient-btn:disabled{opacity:0.62;cursor:not-allowed;transform:none}
           .answer-panel{display:flex;justify-content:flex-end;margin:14px 0 4px}
-          .answer-card{width:min(78%,620px);background:#ffffff;border:1px solid #cbd8ea;border-radius:16px 16px 4px 16px;padding:12px;box-shadow:0 10px 26px rgba(15,23,42,0.10)}
+          .answer-card{width:min(92%,860px);background:#ffffff;border:1px solid #cbd8ea;border-radius:16px 16px 4px 16px;padding:12px;box-shadow:0 10px 26px rgba(15,23,42,0.10)}
           .answer-input{width:100%;min-height:132px;resize:vertical;border:1px solid #d9e4f2;border-radius:12px;padding:12px 14px;color:#10213c;font-size:16px;line-height:1.5;box-sizing:border-box}
           .answer-input:focus{outline:2px solid rgba(79,70,229,0.22);border-color:#7da2d7}
           .answer-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-top:10px}
-          .feedback-next-action,.improved-version-action{display:flex;justify-content:flex-end;margin:16px 0 6px}
+          .feedback-next-action,.improved-version-action{display:flex;justify-content:center;margin:16px 0 6px}
           @media(max-width:768px){
             .chat-header-content{gap:8px;min-height:52px;padding:0 14px}
             .chat-header-left{gap:8px;flex:1}
@@ -3015,11 +3018,12 @@ export default function AI_chat() {
             .chat-message-spacer{height:68px}
             .msg-user,.msg-llm,.msg-timer,.msg-question,.feedback-card,.feedback-section-message,.improved-answer-card{margin-left:0;margin-right:0}
             .feedback-section-box{padding:11px 12px}
+            .feedback-section-title{font-size:15px}
+            .feedback-section-list{font-size:14px}
             .improved-answer-card .improved-text{font-size:16px}
             .msg-question-text{font-size:19px}
             .msg-question{padding:16px}
             .answer-card{width:100%}
-            .feedback-next-action,.improved-version-action{justify-content:center}
           }
           @media(max-width:420px){
             .chat-header-right{max-width:calc(100% - 54px)}
