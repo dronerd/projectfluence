@@ -3,6 +3,7 @@ from io import BytesIO
 import os
 import json
 import re
+import secrets
 from typing import Any
 
 from dotenv import load_dotenv
@@ -14,6 +15,39 @@ from openai import OpenAI
 load_dotenv()
 
 app = FastAPI(title="SpeakWise API", version="1.0.0")
+
+LEVEL_POSITIVE_FALLBACK_PROMPTS = {
+    "A1": [
+        "Great effort. Your answer gives us a good place to start.",
+        "Nice try. You shared your idea clearly enough to practice from here.",
+        "Good work. I can see what you want to say.",
+    ],
+    "A2": [
+        "Good effort. Your answer gives us a clear starting point.",
+        "Nice work. You expressed your idea, and now we can make it stronger.",
+        "Well done. Your response has a useful idea to build on.",
+    ],
+    "B1": [
+        "Good effort. Your answer gives us a clear base to improve.",
+        "Nice response. You communicated your main idea, and we can refine it now.",
+        "Well done. There is a clear thought here that we can develop further.",
+    ],
+    "B2": [
+        "Good work. Your answer has a clear direction, and we can sharpen it further.",
+        "Nice effort. You have a solid starting point for more natural expression.",
+        "Well done. Your response gives us useful content to polish.",
+    ],
+    "C1": [
+        "Strong effort. Your answer gives us meaningful material to refine.",
+        "Good response. You have a clear line of thought, and we can make it more precise.",
+        "Nice work. Your idea is developed enough for targeted feedback.",
+    ],
+    "C2": [
+        "Strong effort. Your response gives us rich material to polish with precision.",
+        "Good work. Your answer has substance, and we can refine its nuance.",
+        "Nice response. There is a clear argument here that we can make more elegant.",
+    ],
+}
 
 
 def _cors_origins() -> list[str]:
@@ -70,6 +104,7 @@ def build_chat_system_prompt(req: dict[str, Any]) -> str:
     components = as_string_list(req.get("components"))
     current_component = str(req.get("currentComponentName") or "").strip()
     vocab_lessons = as_string_list(req.get("vocabLessons"))
+    random_seed = str(req.get("randomSeed") or "").strip()
     duration_minutes = bounded_int(req.get("durationMinutes") or req.get("duration"), 15, 1, 180)
     elapsed_seconds = bounded_int(req.get("timeElapsedSeconds") or req.get("totalTimeElapsed"), 0, 0, duration_minutes * 60)
     remaining_minutes = max(1, round(((duration_minutes * 60) - elapsed_seconds) / 60))
@@ -89,7 +124,8 @@ Practice context:
 - Selected components: {components_text}
 - Current component: {current_component or "general practice"}
 - Vocabulary category: {req.get("vocabCategory") or "not selected"}
-- Vocabulary lessons: {vocab_text}
+- Vocabulary lessons, already randomized by the frontend: {vocab_text}
+- Random seed for varying vocabulary, phrasing, and questions: {random_seed or "not provided"}
 """
     else:
         practice_context = """
@@ -219,9 +255,17 @@ Rules:
 """
 
 
-def default_feedback(user_answer: str) -> dict[str, Any]:
+def normalize_level(level: str) -> str:
+    return level if level in LEVEL_POSITIVE_FALLBACK_PROMPTS else "A1"
+
+
+def random_level_prompt(prompts: dict[str, list[str]], level: str) -> str:
+    return secrets.choice(prompts[normalize_level(level)])
+
+
+def default_feedback(user_answer: str, level: str = "A1") -> dict[str, Any]:
     return {
-        "positiveComment": "Great effort. Your answer gives us a clear starting point to build on.",
+        "positiveComment": random_level_prompt(LEVEL_POSITIVE_FALLBACK_PROMPTS, level),
         "overall": "Thank you for your response. Keep practicing!",
         "grammar": [],
         "vocabulary": [],
@@ -245,11 +289,11 @@ def parse_json_object(text: str) -> dict[str, Any] | None:
         except json.JSONDecodeError:
             return None
 
-def normalize_feedback(feedback_json: dict[str, Any], user_answer: str) -> dict[str, Any]:
+def normalize_feedback(feedback_json: dict[str, Any], user_answer: str, level: str) -> dict[str, Any]:
     feedback_json["positiveComment"] = str(
         feedback_json.get("positiveComment")
         or feedback_json.get("positive_comment")
-        or default_feedback(user_answer)["positiveComment"]
+        or default_feedback(user_answer, level)["positiveComment"]
     )
     for key in ("grammar", "vocabulary", "pronunciation", "fluency", "suggestions"):
         if not isinstance(feedback_json.get(key), list):
@@ -370,7 +414,11 @@ async def feedback(req: dict[str, Any]) -> JSONResponse:
             max_tokens=1400
         )
 
-        feedback_json = normalize_feedback(parse_json_object(feedback_text) or default_feedback(user_answer), user_answer)
+        feedback_json = normalize_feedback(
+            parse_json_object(feedback_text) or default_feedback(user_answer, level),
+            user_answer,
+            level,
+        )
         return JSONResponse({"feedback": feedback_json})
     except RuntimeError as exc:
         return JSONResponse({"error": str(exc)}, status_code=500)

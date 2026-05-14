@@ -4,14 +4,14 @@ import {
   type RecommendVideosInput,
   type VidMatchLevel,
   type VidMatchSkill,
-  type VidMatchTopic,
 } from "@/apps/vidmatch/src/services/youtubeVideoService";
 
 export const runtime = "nodejs";
 
-const LEVELS = ["A1", "A2", "B1", "B2", "C1"] as const;
+const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversation"] as const;
-const TOPICS = ["travel", "school", "business", "daily life", "news"] as const;
+const MAX_TOPIC_COUNT = 10;
+const MAX_TOPIC_LENGTH = 80;
 
 export async function GET(request: NextRequest) {
   const input = parseRecommendationInput(request.nextUrl.searchParams);
@@ -29,31 +29,45 @@ export async function GET(request: NextRequest) {
 function parseRecommendationInput(searchParams: URLSearchParams): RecommendVideosInput | NextResponse {
   const level = searchParams.get("level");
   const skills = searchParams.getAll("skills");
-  const topics = searchParams.getAll("topics");
+  const topics = parseTopics(searchParams.getAll("topics"));
   const accent = searchParams.get("accent")?.trim() || undefined;
   const transcriptAvailable = searchParams.get("transcript_available");
   const limit = Number(searchParams.get("limit") ?? 6);
 
   if (level && !isOneOf(level, LEVELS)) {
-    return NextResponse.json({ error: "level must be one of A1, A2, B1, B2, C1." }, { status: 400 });
+    return NextResponse.json({ error: "level must be one of A1, A2, B1, B2, C1, C2." }, { status: 400 });
   }
 
   if (!isValidArray(skills, SKILLS)) {
     return NextResponse.json({ error: "skills contains an unsupported value." }, { status: 400 });
   }
 
-  if (!isValidArray(topics, TOPICS)) {
-    return NextResponse.json({ error: "topics contains an unsupported value." }, { status: 400 });
+  if (topics instanceof NextResponse) {
+    return topics;
   }
 
   return {
     level: level ? (level as VidMatchLevel) : undefined,
     skills: skills as VidMatchSkill[],
-    topics: topics as VidMatchTopic[],
+    topics,
     accent,
     transcriptAvailable: transcriptAvailable === "true" ? true : undefined,
     limit: Number.isFinite(limit) ? limit : 6,
   };
+}
+
+function parseTopics(values: string[]): string[] | NextResponse {
+  const topics = values.map((value) => value.trim()).filter(Boolean);
+
+  if (topics.length > MAX_TOPIC_COUNT) {
+    return NextResponse.json({ error: `topics must include ${MAX_TOPIC_COUNT} or fewer values.` }, { status: 400 });
+  }
+
+  if (topics.some((topic) => topic.length > MAX_TOPIC_LENGTH)) {
+    return NextResponse.json({ error: `each topic must be ${MAX_TOPIC_LENGTH} characters or fewer.` }, { status: 400 });
+  }
+
+  return Array.from(new Set(topics));
 }
 
 function isValidArray<T extends string>(values: unknown[], allowedValues: readonly T[]): values is T[] {

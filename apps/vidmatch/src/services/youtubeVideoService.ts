@@ -1,6 +1,6 @@
 import "server-only";
 
-export type VidMatchLevel = "A1" | "A2" | "B1" | "B2" | "C1";
+export type VidMatchLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 
 export type VidMatchSkill =
   | "listening"
@@ -9,12 +9,7 @@ export type VidMatchSkill =
   | "grammar"
   | "conversation";
 
-export type VidMatchTopic =
-  | "travel"
-  | "school"
-  | "business"
-  | "daily life"
-  | "news";
+export type VidMatchTopic = string;
 
 export type VidMatchVideo = {
   video_id: string;
@@ -98,7 +93,7 @@ type SupabaseError = {
 const YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";
 const YOUTUBE_VIDEOS_URL = "https://www.googleapis.com/youtube/v3/videos";
 const DEFAULT_SKILLS: VidMatchSkill[] = ["listening", "vocabulary"];
-const DEFAULT_TOPICS: VidMatchTopic[] = ["daily life"];
+const DEFAULT_TOPICS: VidMatchTopic[] = ["Education & Learning"];
 
 export async function searchAndSaveYoutubeVideos(input: SearchYoutubeVideosInput) {
   const videos = await searchYoutubeVideos(input);
@@ -289,6 +284,7 @@ function inferLevel(query: string): VidMatchLevel {
   if (lowerQuery.includes("elementary") || lowerQuery.includes("a2")) return "A2";
   if (lowerQuery.includes("intermediate") || lowerQuery.includes("b1")) return "B1";
   if (lowerQuery.includes("upper intermediate") || lowerQuery.includes("b2")) return "B2";
+  if (lowerQuery.includes("proficiency") || lowerQuery.includes("c2")) return "C2";
   if (lowerQuery.includes("advanced") || lowerQuery.includes("c1")) return "C1";
   return "B1";
 }
@@ -310,12 +306,23 @@ function inferTopics(query: string): VidMatchTopic[] {
   const lowerQuery = query.toLowerCase();
   const topics = new Set<VidMatchTopic>();
 
-  if (lowerQuery.includes("travel")) topics.add("travel");
-  if (lowerQuery.includes("school") || lowerQuery.includes("student")) topics.add("school");
-  if (lowerQuery.includes("business") || lowerQuery.includes("work")) topics.add("business");
-  if (lowerQuery.includes("news")) topics.add("news");
-  if (lowerQuery.includes("daily") || lowerQuery.includes("life") || lowerQuery.includes("routine")) {
-    topics.add("daily life");
+  if (lowerQuery.includes("computer") || lowerQuery.includes("technology") || lowerQuery.includes("ai")) {
+    topics.add("Computer Science & Technology");
+  }
+  if (lowerQuery.includes("medicine") || lowerQuery.includes("health")) topics.add("Medicine & Health");
+  if (lowerQuery.includes("business") || lowerQuery.includes("economics") || lowerQuery.includes("work")) {
+    topics.add("Business & Economics");
+  }
+  if (lowerQuery.includes("environment") || lowerQuery.includes("sustainability") || lowerQuery.includes("climate")) {
+    topics.add("Environmental Science & Sustainability");
+  }
+  if (lowerQuery.includes("law") || lowerQuery.includes("politics") || lowerQuery.includes("news")) {
+    topics.add("Law & Politics");
+  }
+  if (lowerQuery.includes("engineering")) topics.add("Engineering");
+  if (lowerQuery.includes("art") || lowerQuery.includes("culture")) topics.add("Art & Culture");
+  if (lowerQuery.includes("school") || lowerQuery.includes("student") || lowerQuery.includes("education")) {
+    topics.add("Education & Learning");
   }
 
   return topics.size ? Array.from(topics) : DEFAULT_TOPICS;

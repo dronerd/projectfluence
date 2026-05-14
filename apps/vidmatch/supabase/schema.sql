@@ -6,7 +6,7 @@ create table if not exists public.vidmatch_videos (
   youtube_url text not null,
   thumbnail_url text,
   duration text,
-  level text not null check (level in ('A1', 'A2', 'B1', 'B2', 'C1')),
+  level text not null check (level in ('A1', 'A2', 'B1', 'B2', 'C1', 'C2')),
   skills text[] not null default '{}',
   topics text[] not null default '{}',
   accent text,
@@ -17,6 +17,13 @@ create table if not exists public.vidmatch_videos (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.vidmatch_videos
+drop constraint if exists vidmatch_videos_level_check;
+
+alter table public.vidmatch_videos
+add constraint vidmatch_videos_level_check
+check (level in ('A1', 'A2', 'B1', 'B2', 'C1', 'C2'));
 
 create index if not exists vidmatch_videos_level_idx on public.vidmatch_videos (level);
 create index if not exists vidmatch_videos_quality_score_idx on public.vidmatch_videos (quality_score desc);

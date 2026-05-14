@@ -25,9 +25,17 @@ type VidMatchVideo = {
   quality_score: number;
 };
 
-const LEVELS = ["A1", "A2", "B1", "B2", "C1"];
+const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversation"];
-const TOPICS = ["travel", "school", "business", "daily life", "news"];
+const TOPICS = [
+  "Computer Science & Technology",
+  "Medicine & Health",
+  "Business & Economics",
+  "Environmental Science & Sustainability",
+  "Law & Politics",
+  "Engineering",
+  "Art & Culture",
+];
 const ACCENTS = ["American", "British", "Australian", "Canadian"];
 
 const featureCards = [
@@ -49,6 +57,7 @@ export default function VidMatchApp({ pathname }: Props) {
   const [selectedLevel, setSelectedLevel] = useState("B1");
   const [selectedSkills, setSelectedSkills] = useState<string[]>(["listening"]);
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+  const [customTopics, setCustomTopics] = useState("");
   const [selectedAccent, setSelectedAccent] = useState("");
   const [captionOnly, setCaptionOnly] = useState(false);
   const [recommendations, setRecommendations] = useState<VidMatchVideo[]>([]);
@@ -67,6 +76,15 @@ export default function VidMatchApp({ pathname }: Props) {
     setValues(values.includes(value) ? values.filter((item) => item !== value) : [...values, value]);
   };
 
+  const getTopicsForRequest = () => {
+    const typedTopics = customTopics
+      .split(",")
+      .map((topic) => topic.trim())
+      .filter(Boolean);
+
+    return Array.from(new Set([...selectedTopics, ...typedTopics]));
+  };
+
   const fetchRecommendations = async () => {
     setRecommendationLoading(true);
     setRecommendationError("");
@@ -77,7 +95,7 @@ export default function VidMatchApp({ pathname }: Props) {
     });
 
     selectedSkills.forEach((skill) => params.append("skills", skill));
-    selectedTopics.forEach((topic) => params.append("topics", topic));
+    getTopicsForRequest().forEach((topic) => params.append("topics", topic));
     if (selectedAccent) params.set("accent", selectedAccent);
     if (captionOnly) params.set("transcript_available", "true");
 
@@ -387,6 +405,26 @@ export default function VidMatchApp({ pathname }: Props) {
           width: 18px;
           height: 18px;
           accent-color: #4f46e5;
+        }
+
+        .custom-topic-input {
+          width: 100%;
+          min-height: 44px;
+          border: 1px solid #d1d5db;
+          border-radius: 14px;
+          padding: 0 14px;
+          color: #10203b;
+          background: #ffffff;
+          box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+          font: inherit;
+          font-weight: 700;
+          box-sizing: border-box;
+        }
+
+        .custom-topic-input:focus {
+          border-color: #4f46e5;
+          box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.16);
+          outline: none;
         }
 
         .recommend-actions {
@@ -720,6 +758,14 @@ export default function VidMatchApp({ pathname }: Props) {
                   </button>
                 ))}
               </div>
+              <input
+                type="text"
+                className="custom-topic-input"
+                value={customTopics}
+                onChange={(event) => setCustomTopics(event.target.value)}
+                placeholder="自分のトピックを入力（複数の場合はカンマで区切る）"
+                aria-label="Enter custom topics"
+              />
             </div>
 
             <div className="preference-group">

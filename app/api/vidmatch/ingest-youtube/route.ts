@@ -6,9 +6,10 @@ import {
 
 export const runtime = "nodejs";
 
-const LEVELS = ["A1", "A2", "B1", "B2", "C1"] as const;
+const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversation"] as const;
-const TOPICS = ["travel", "school", "business", "daily life", "news"] as const;
+const MAX_TOPIC_COUNT = 10;
+const MAX_TOPIC_LENGTH = 80;
 
 type RequestBody = Partial<SearchYoutubeVideosInput>;
 
@@ -45,26 +46,52 @@ function parseBody(body: RequestBody | null): SearchYoutubeVideosInput | NextRes
   }
 
   if (body.level && !isOneOf(body.level, LEVELS)) {
-    return NextResponse.json({ error: "level must be one of A1, A2, B1, B2, C1." }, { status: 400 });
+    return NextResponse.json({ error: "level must be one of A1, A2, B1, B2, C1, C2." }, { status: 400 });
   }
 
   if (body.skills && !isValidArray(body.skills, SKILLS)) {
     return NextResponse.json({ error: "skills contains an unsupported value." }, { status: 400 });
   }
 
-  if (body.topics && !isValidArray(body.topics, TOPICS)) {
-    return NextResponse.json({ error: "topics contains an unsupported value." }, { status: 400 });
+  const topics = parseTopics(body.topics);
+  if (topics instanceof NextResponse) {
+    return topics;
   }
 
   return {
     query: body.query.trim(),
     level: body.level,
     skills: body.skills,
-    topics: body.topics,
+    topics,
     accent: body.accent?.trim() || undefined,
     maxResults: body.maxResults,
     minQualityScore: body.minQualityScore,
   };
+}
+
+function parseTopics(values: unknown): string[] | undefined | NextResponse {
+  if (typeof values === "undefined") return undefined;
+  if (!Array.isArray(values)) {
+    return NextResponse.json({ error: "topics must be an array of strings." }, { status: 400 });
+  }
+
+  const topics = values
+    .map((value) => (typeof value === "string" ? value.trim() : ""))
+    .filter(Boolean);
+
+  if (topics.length !== values.length) {
+    return NextResponse.json({ error: "topics must be an array of non-empty strings." }, { status: 400 });
+  }
+
+  if (topics.length > MAX_TOPIC_COUNT) {
+    return NextResponse.json({ error: `topics must include ${MAX_TOPIC_COUNT} or fewer values.` }, { status: 400 });
+  }
+
+  if (topics.some((topic) => topic.length > MAX_TOPIC_LENGTH)) {
+    return NextResponse.json({ error: `each topic must be ${MAX_TOPIC_LENGTH} characters or fewer.` }, { status: 400 });
+  }
+
+  return Array.from(new Set(topics));
 }
 
 function isValidArray<T extends string>(values: unknown, allowedValues: readonly T[]): values is T[] {

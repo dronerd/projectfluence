@@ -5,11 +5,16 @@ import { useNavigate } from "../lib/router-compat";
 import { OPENING_QUESTIONS, LEVELS } from "../lib/openingQuestions";
 import {
   ANSWER_READY_PROMPTS,
+  LEVEL_FEEDBACK_INTRO_PROMPTS,
+  LEVEL_FEEDBACK_SECTION_PROMPTS,
+  LEVEL_POSITIVE_FALLBACK_PROMPTS,
+  LEVEL_PRACTICE_CONFIRMATION_PROMPTS,
+  LEVEL_PRACTICE_START_PROMPTS,
   LESSON_GREETING_PROMPTS,
   LESSON_INTRO_TEMPLATES,
   MOOD_OPTIONS,
   MOOD_RESPONSES,
-  PRACTICE_CONFIRMATION_PROMPTS,
+  type FeedbackSection,
   type MoodChoice,
 } from "../lib/lessonGreetings";
 
@@ -51,6 +56,7 @@ interface ChatEntry {
     overall?: string;
     positiveComment?: string;
     suggestions?: string[];
+    sectionIntros?: Partial<Record<FeedbackSection, string>>;
     improvedVersion?: ImprovedVersion;
   };
 }
@@ -157,13 +163,6 @@ const MESSAGE_TIMING_BY_LEVEL: Record<CEFRLevel, { typingMs: number; pauseMs: nu
   C2: { typingMs: TYPING_SPEED_MS, pauseMs: STARTUP_MESSAGE_PAUSE_MS },
 };
 
-const FEEDBACK_INTRO_MESSAGES = [
-  "I’ll first give you feedback on your answer.",
-  "First, let’s look at feedback for your answer.",
-  "I’ll start with some feedback on what you wrote.",
-  "Let’s begin with feedback on your response.",
-];
-
 const IMPROVED_VERSION_INTRO_MESSAGES = [
   "Now, here is a possible improved version of your answer.",
   "Next, here’s one polished version you can compare with your answer.",
@@ -176,6 +175,52 @@ const IMPROVEMENT_LABELS: Record<ImprovementType, string> = {
   grammar: "文法修正",
   improvement: "表現改善",
   clarity: "明確さ",
+};
+
+const createRandomNonce = () => {
+  const timePart = Date.now().toString(36);
+  const perfPart =
+    typeof performance !== "undefined"
+      ? Math.floor(performance.now() * 1000).toString(36)
+      : "0";
+  const cryptoValues =
+    typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function"
+      ? crypto.getRandomValues(new Uint32Array(2))
+      : null;
+  const cryptoPart = cryptoValues
+    ? Array.from(cryptoValues, (value) => value.toString(36)).join("-")
+    : Math.floor((Math.random() + Date.now()) * 1000000000).toString(36);
+
+  return `${timePart}-${perfPart}-${cryptoPart}`;
+};
+
+const getRandomIndex = (length: number) => {
+  if (length <= 0) return 0;
+
+  if (typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function") {
+    const values = crypto.getRandomValues(new Uint32Array(1));
+    return values[0] % length;
+  }
+
+  const timeEntropy =
+    Date.now() +
+    (typeof performance !== "undefined" ? Math.floor(performance.now() * 1000) : 0);
+  return Math.abs(Math.floor((Math.random() * Number.MAX_SAFE_INTEGER) ^ timeEntropy)) % length;
+};
+
+const getRandomItemFrom = <T,>(items: T[], recentlyUsed: Set<T> = new Set()) => {
+  const availableItems = items.filter((item) => !recentlyUsed.has(item));
+  const pool = availableItems.length > 0 ? availableItems : items;
+  return pool[getRandomIndex(pool.length)];
+};
+
+const shuffleItems = <T,>(items: T[]) => {
+  const shuffled = [...items];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = getRandomIndex(i + 1);
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
 };
 
 const getImprovementClass = (type?: ImprovementType) => {
@@ -299,6 +344,7 @@ export default function AI_chat() {
   const [lastQuestionIndexForConfirmation, setLastQuestionIndexForConfirmation] = useState<number | null>(null);
   const [feedbackLoading, setFeedbackLoading] = useState(false);
   const [lastUserAnswer, setLastUserAnswer] = useState("");
+  const recentOpeningQuestionsRef = useRef<Set<string>>(new Set());
   // Removed: eikenActive, eikenStage, conversationHistory, eikenDisplayText, eikenTTS, eikenMuted, eikenUserInput
 
   // ページマウント時にRenderのバックエンドサーバーをウォームアップ
@@ -443,7 +489,7 @@ export default function AI_chat() {
       const timer = setTimeout(() => {
         setChatLog((prev) => [
           ...prev,
-          { sender: "llm", text: getRandomItem(PRACTICE_CONFIRMATION_PROMPTS), kind: "confirmation" },
+          { sender: "llm", text: getLevelPrompt(LEVEL_PRACTICE_CONFIRMATION_PROMPTS), kind: "confirmation" },
         ]);
         setLastQuestionIndexForConfirmation(lastQuestionIndex);
       }, getMessageTiming().pauseMs);
@@ -515,6 +561,7 @@ export default function AI_chat() {
   };
 
   const topicsToPass = selectedTopics.concat(customTopic ? [customTopic] : []);
+  const getRandomizedTopicsToPass = () => shuffleItems(topicsToPass);
   const maxLessonsForCategory = LESSON_COUNTS[vocabCategory] || 64;
 
   const getSelectedLevel = (): CEFRLevel => {
@@ -522,14 +569,164 @@ export default function AI_chat() {
   };
 
   const getMessageTiming = () => MESSAGE_TIMING_BY_LEVEL[getSelectedLevel()];
+  const getLevelPrompt = (prompts: Record<CEFRLevel, string[]>) => getRandomItem(prompts[getSelectedLevel()]);
+  const getLevelPracticeStartPrompt = (nextMode: PracticeMode) => (
+    getRandomItem(LEVEL_PRACTICE_START_PROMPTS[getSelectedLevel()][nextMode])
+  );
+  const getFeedbackSectionIntros = () => {
+    const prompts = LEVEL_FEEDBACK_SECTION_PROMPTS[getSelectedLevel()];
+    return Object.fromEntries(
+      Object.entries(prompts).map(([section, sectionPrompts]) => [
+        section,
+        getRandomItem(sectionPrompts),
+      ])
+    ) as Record<FeedbackSection, string>;
+  };
 
-  const getPrimaryPresetTopic = () => {
-    return selectedTopics.find((topic) => OPENING_QUESTIONS[topic]) || TOPICS[0];
+  const rememberOpeningQuestion = (question: string) => {
+    if (!question) return;
+    recentOpeningQuestionsRef.current.add(question);
+    if (recentOpeningQuestionsRef.current.size > 12) {
+      const [oldestQuestion] = Array.from(recentOpeningQuestionsRef.current);
+      recentOpeningQuestionsRef.current.delete(oldestQuestion);
+    }
+  };
+
+  const trimFinalPeriod = (text: string) => text.replace(/\.$/, "");
+  const lowerFirst = (text: string) => text ? `${text.charAt(0).toLowerCase()}${text.slice(1)}` : text;
+
+  const getWritingPromptVariants = (question: string) => {
+    const conciseArgument = question.match(/^Write a concise argument about (.+)\.$/i);
+    if (conciseArgument) {
+      const topic = trimFinalPeriod(conciseArgument[1]);
+      return [
+        `Take a clear position on ${topic}.`,
+        `In a focused paragraph, make a case about ${topic}.`,
+        `Present one claim and one reason about ${topic}.`,
+        `Argue your view on ${topic} in a concise response.`,
+      ];
+    }
+
+    const nuancedResponse = question.match(/^Write a nuanced response (?:about|evaluating|exploring) (.+)\.$/i);
+    if (nuancedResponse) {
+      const topic = trimFinalPeriod(nuancedResponse[1]);
+      return [
+        `Explore ${topic} from more than one perspective.`,
+        `Evaluate ${topic} in a thoughtful paragraph.`,
+        `Discuss the complexity of ${topic} with one example.`,
+        `Write a reflective response that considers different sides of ${topic}.`,
+      ];
+    }
+
+    const benefitRisk = question.match(/^Write a balanced paragraph about one benefit and one risk of (.+)\.$/i);
+    if (benefitRisk) {
+      const topic = trimFinalPeriod(benefitRisk[1]);
+      return [
+        `Compare one benefit and one risk of ${topic}.`,
+        `Explain one positive side and one possible problem with ${topic}.`,
+        `Write a balanced paragraph that weighs a benefit and a risk of ${topic}.`,
+        `Show both a helpful and a risky side of ${topic}.`,
+      ];
+    }
+
+    const balancedParagraph = question.match(/^Write a balanced paragraph about (.+)\.$/i);
+    if (balancedParagraph) {
+      const topic = trimFinalPeriod(balancedParagraph[1]);
+      return [
+        `Compare two sides of ${topic} in one paragraph.`,
+        `Give one benefit and one risk related to ${topic}.`,
+        `Write a paragraph that fairly presents both sides of ${topic}.`,
+        `Explain a balanced view of ${topic}.`,
+      ];
+    }
+
+    const adviceParagraph = question.match(/^Write one paragraph giving advice to someone who wants (.+)\.$/i);
+    if (adviceParagraph) {
+      const goal = trimFinalPeriod(adviceParagraph[1]);
+      return [
+        `Give practical advice to someone who wants ${goal}.`,
+        `Write one helpful paragraph for a person trying to have ${goal}.`,
+        `Suggest two realistic steps for someone who wants ${goal}.`,
+        `Explain what a person should do first if they want ${goal}.`,
+      ];
+    }
+
+    const oneParagraph = question.match(/^Write one paragraph (?:about|explaining|giving advice to someone who wants|giving|describing|comparing) (.+)\.$/i);
+    if (oneParagraph) {
+      const topic = trimFinalPeriod(oneParagraph[1]);
+      return [
+        `Use one paragraph to explain ${topic}.`,
+        `Develop one clear idea about ${topic}.`,
+        `Write a short response with one main point about ${topic}.`,
+        `Give an example and explain ${topic} in one paragraph.`,
+      ];
+    }
+
+    const paragraphTask = question.match(/^Write a paragraph (.+)\.$/i);
+    if (paragraphTask) {
+      const task = trimFinalPeriod(paragraphTask[1]);
+      return [
+        `In one paragraph, ${task}.`,
+        `Develop a clear paragraph ${task}.`,
+        `Write a focused response ${task}.`,
+        `Use one example while ${task}.`,
+      ];
+    }
+
+    const shortParagraph = question.match(/^Write a short paragraph about (.+)\.$/i);
+    if (shortParagraph) {
+      const topic = trimFinalPeriod(shortParagraph[1]);
+      return [
+        `Describe ${topic} in a short paragraph.`,
+        `In a short paragraph, share your thoughts about ${topic}.`,
+        `Write a few connected sentences about ${topic}.`,
+        `Give one example related to ${topic} in a short paragraph.`,
+      ];
+    }
+
+    const sentencePrompt = question.match(/^Write 3-4 sentences about (.+)\.$/i);
+    if (sentencePrompt) {
+      const topic = trimFinalPeriod(sentencePrompt[1]);
+      return [
+        `Describe ${topic} in 3-4 sentences.`,
+        `Write 3-4 sentences with one detail about ${topic}.`,
+        `Share a simple 3-4 sentence response about ${topic}.`,
+        `Use 3-4 sentences to tell me about ${topic}.`,
+      ];
+    }
+
+    return [question];
+  };
+
+  const getSpeakingPromptVariants = (question: string) => {
+    const withoutQuestionMark = question.replace(/\?$/, "");
+    return [
+      question,
+      `Tell me your thoughts: ${lowerFirst(withoutQuestionMark)}?`,
+      `Give your answer with one reason: ${lowerFirst(withoutQuestionMark)}?`,
+      `Let's discuss this: ${lowerFirst(withoutQuestionMark)}?`,
+    ];
+  };
+
+  const varyOpeningQuestionStyle = (question: string, practiceMode: PracticeMode) => {
+    const variants = practiceMode === "writing"
+      ? getWritingPromptVariants(question)
+      : getSpeakingPromptVariants(question);
+    return getRandomItemFrom(variants);
   };
 
   const getPresetOpeningQuestion = (practiceMode: PracticeMode) => {
-    const topic = getPrimaryPresetTopic();
-    return OPENING_QUESTIONS[topic][getSelectedLevel()][practiceMode];
+    const selectedPresetTopics = selectedTopics.filter((topic) => OPENING_QUESTIONS[topic]);
+    const candidateTopics = selectedPresetTopics.length > 0 ? selectedPresetTopics : Object.keys(OPENING_QUESTIONS);
+    const candidates = candidateTopics
+      .map((topic) => OPENING_QUESTIONS[topic]?.[getSelectedLevel()]?.[practiceMode])
+      .filter((question): question is string => Boolean(question));
+    const question = varyOpeningQuestionStyle(
+      getRandomItemFrom(candidates, recentOpeningQuestionsRef.current),
+      practiceMode
+    );
+    rememberOpeningQuestion(question);
+    return question || "Let's continue with the practice.";
   };
 
   const generateCustomOpeningQuestion = async (practiceMode: PracticeMode) => {
@@ -545,6 +742,8 @@ export default function AI_chat() {
           message:
             `Create exactly one clear ${practiceMode} practice question for an English learner at CEFR level ${level}. ` +
             `Topic: ${topic}. ` +
+            `Random seed: ${createRandomNonce()}. Use it to vary the exact question. ` +
+            `Avoid overused frames like "Write a concise argument about..." and vary the task style naturally. ` +
             `Return only the question. Do not include a greeting, numbering, explanation, or quotation marks.`,
           level,
           topics: [topic],
@@ -555,6 +754,7 @@ export default function AI_chat() {
       const data = await res.json();
       if (!res.ok || data.error) throw new Error(data.details || data.error || "Question request failed");
       const question = String(data.reply || "").trim();
+      if (question) rememberOpeningQuestion(question);
       return question || fallback;
     } catch {
       return fallback;
@@ -632,6 +832,13 @@ export default function AI_chat() {
     return Array.from({ length: end - start + 1 }, (_, i) => (start + i).toString());
   };
 
+  const getRandomizedVocabLessonsToPass = () => {
+    const lessons = vocabLessonType === "range"
+      ? getLessonNumbersFromRange()
+      : vocabIndividualLessons;
+    return shuffleItems(lessons);
+  };
+
   // Helper to generate component timing schedule
   const generateComponentTiming = () => {
     const structure = generateLessonStructure();
@@ -650,8 +857,6 @@ export default function AI_chat() {
   };
 
   // Load prompts from public/prompts/*.json with simple templating fallback
-  const [promptsCache, setPromptsCache] = useState<Record<string, string>>({});
-
   const PROMPTS_BASE = "/speakwise/prompts";
 
   const generateComponentContentFallback = (componentName: string) => {
@@ -661,7 +866,8 @@ export default function AI_chat() {
         return (
           `You are an English teacher conducting a vocabulary lesson. ` +
           `Start by saying a brief greeting (e.g., "Hi! Let's start with vocabulary practice."). ` +
-          `Then, introduce 5 vocabulary words related to the student's interests (${selectedTopics.join(", ")}). ` +
+          `Then, introduce 5 vocabulary words related to the student's interests (${shuffleItems(topicsToPass).join(", ")}). ` +
+          `Select and present the words in a random order using this random seed: ${createRandomNonce()}. ` +
           `For each word, provide the word, its meaning/definition, and an example sentence. ` +
           `After presenting all 5 words, ask the student one comprehension question to test their understanding ` +
           `(e.g., ask them to use one of the words in a sentence, or ask what a specific word means). ` +
@@ -716,19 +922,20 @@ export default function AI_chat() {
   };
 
   const fillTemplate = (template: string) => {
-    const topics = selectedTopics.concat(customTopic ? [customTopic] : []).join(', ');
-    return template.replace(/{{\s*topics\s*}}/g, topics || 'general topics').replace(/{{\s*level\s*}}/g, level || 'appropriate level');
+    const topics = getRandomizedTopicsToPass().join(', ');
+    const randomSeed = createRandomNonce();
+    const randomInstruction =
+      ` Use random seed ${randomSeed}; vary the selected words, their presentation order, and the final comprehension question.`;
+    return template
+      .replace(/{{\s*topics\s*}}/g, topics || 'general topics')
+      .replace(/{{\s*level\s*}}/g, level || 'appropriate level')
+      .replace(/([.!?])\s*$/, `$1${randomInstruction}`);
   };
 
   const getComponentPrompt = async (componentName: string) => {
-    // return cached if available
-    if (promptsCache[componentName]) return promptsCache[componentName];
-
     const filename = getPromptFilename(componentName);
     if (!filename) {
-      const fallback = generateComponentContentFallback(componentName);
-      setPromptsCache((s) => ({ ...s, [componentName]: fallback }));
-      return fallback;
+      return generateComponentContentFallback(componentName);
     }
 
     try {
@@ -736,14 +943,10 @@ export default function AI_chat() {
       if (!res.ok) throw new Error('prompt fetch failed');
       const json = await res.json();
       const template = typeof json.prompt === 'string' ? json.prompt : JSON.stringify(json);
-      const filled = fillTemplate(template);
-      setPromptsCache((s) => ({ ...s, [componentName]: filled }));
-      return filled;
+      return fillTemplate(template);
     } catch (e) {
       // fallback
-      const fallback = generateComponentContentFallback(componentName);
-      setPromptsCache((s) => ({ ...s, [componentName]: fallback }));
-      return fallback;
+      return generateComponentContentFallback(componentName);
     }
   };
 
@@ -814,9 +1017,7 @@ export default function AI_chat() {
         ? selectedTests.map(t => t === "Other" ? customTest : t)
         : [];
 
-      const vocabLessonsToPass = vocabLessonType === "range"
-        ? getLessonNumbersFromRange()
-        : vocabIndividualLessons;
+      const vocabLessonsToPass = getRandomizedVocabLessonsToPass();
 
       const componentTiming = generateComponentTiming();
 
@@ -825,13 +1026,13 @@ export default function AI_chat() {
           ? {
               message: messageWithQuestionContext,
               level,
-              topics: topicsToPass,
+              topics: getRandomizedTopicsToPass(),
               mode: "speaking",
             }
           : {
               message: messageWithQuestionContext,
               level,
-              topics: topicsToPass,
+              topics: getRandomizedTopicsToPass(),
               tests: testsToPass,
               skills: selectedSkills,
               duration: parseInt(selectedDuration),
@@ -844,6 +1045,7 @@ export default function AI_chat() {
               timeElapsedSeconds: timeElapsed,
               vocabCategory: selectedComponents.includes(VOCAB_COMPONENT) ? vocabCategory : null,
               vocabLessons: selectedComponents.includes(VOCAB_COMPONENT) ? vocabLessonsToPass : null,
+              randomSeed: createRandomNonce(),
               mode: "lesson",
             };
 
@@ -922,16 +1124,14 @@ export default function AI_chat() {
         ? selectedTests.map(t => t === "Other" ? customTest : t)
         : [];
 
-      const vocabLessonsToPass = vocabLessonType === "range"
-        ? getLessonNumbersFromRange()
-        : vocabIndividualLessons;
+      const vocabLessonsToPass = getRandomizedVocabLessonsToPass();
 
       const componentTiming = generateComponentTiming();
 
       const payload = {
         message: prompt,
         level,
-        topics: topicsToPass,
+        topics: getRandomizedTopicsToPass(),
         tests: testsToPass,
         skills: selectedSkills,
         duration: parseInt(selectedDuration),
@@ -944,6 +1144,7 @@ export default function AI_chat() {
         timeElapsedSeconds: timeElapsed,
         vocabCategory: selectedComponents.includes(VOCAB_COMPONENT) ? vocabCategory : null,
         vocabLessons: selectedComponents.includes(VOCAB_COMPONENT) ? vocabLessonsToPass : null,
+        randomSeed: createRandomNonce(),
         mode: "lesson",
       };
 
@@ -1003,14 +1204,15 @@ export default function AI_chat() {
       const positiveComment = String(
         feedback.positiveComment ||
         feedback.positive_comment ||
-        "Great effort. Your answer gives us a clear starting point to build on."
+        getLevelPrompt(LEVEL_POSITIVE_FALLBACK_PROMPTS)
       );
       const positiveEntry: ChatEntry = {
         sender: "llm",
         text: positiveComment,
         kind: "positiveComment",
       };
-      const feedbackIntro = getRandomItem(FEEDBACK_INTRO_MESSAGES);
+      const feedbackIntro = getLevelPrompt(LEVEL_FEEDBACK_INTRO_PROMPTS);
+      const sectionIntros = getFeedbackSectionIntros();
       const feedbackEntry: ChatEntry = {
         sender: "llm",
         text: "フィードバック",
@@ -1023,6 +1225,7 @@ export default function AI_chat() {
           overall: feedback.overall || "",
           positiveComment,
           suggestions: feedback.suggestions || [],
+          sectionIntros,
         },
       };
       setChatLog((prev) => [...prev, positiveEntry]);
@@ -1102,7 +1305,7 @@ export default function AI_chat() {
         body: JSON.stringify({
           message: prompt,
           level,
-          topics: topicsToPass,
+          topics: getRandomizedTopicsToPass(),
           mode: "speaking",
         }),
       });
@@ -1123,16 +1326,21 @@ export default function AI_chat() {
   };
 
   const getRandomOpeningQuestion = (practiceMode: PracticeMode) => {
-    // Get all available topics from OPENING_QUESTIONS
-    const availableTopics = Object.keys(OPENING_QUESTIONS);
-    // Randomly select a topic
-    const randomTopic = availableTopics[Math.floor(Math.random() * availableTopics.length)];
-    const level = getSelectedLevel();
-    const question = OPENING_QUESTIONS[randomTopic]?.[level]?.[practiceMode];
+    const selectedPresetTopics = selectedTopics.filter((topic) => OPENING_QUESTIONS[topic]);
+    const availableTopics = selectedPresetTopics.length > 0 ? selectedPresetTopics : Object.keys(OPENING_QUESTIONS);
+    const currentLevel = getSelectedLevel();
+    const candidates = shuffleItems(availableTopics)
+      .map((topic) => OPENING_QUESTIONS[topic]?.[currentLevel]?.[practiceMode])
+      .filter((question): question is string => Boolean(question));
+    const question = varyOpeningQuestionStyle(
+      getRandomItemFrom(candidates, recentOpeningQuestionsRef.current),
+      practiceMode
+    );
+    rememberOpeningQuestion(question);
     return question || "Let's continue with the practice.";
   };
 
-  const getRandomItem = <T,>(items: T[]) => items[Math.floor(Math.random() * items.length)];
+  const getRandomItem = <T,>(items: T[]) => getRandomItemFrom(items);
 
   const getLessonIntroLine = (nextMode: PracticeMode) => {
     const topicText = topicsToPass.length > 0 ? topicsToPass.join(", ") : "your selected topic";
@@ -1150,7 +1358,7 @@ export default function AI_chat() {
   };
 
   const continueStartupAfterMood = async (nextMode: PracticeMode) => {
-    const practiceLine = nextMode === "speaking" ? "Let's practice speaking." : "Let's practice writing.";
+    const practiceLine = getLevelPracticeStartPrompt(nextMode);
     appendAssistantMessage(practiceLine, "greeting");
     await waitForTyping(practiceLine);
 
@@ -1239,6 +1447,36 @@ export default function AI_chat() {
         { sender: "llm", text: "エラー: 新しい問題を生成できませんでした。" },
       ]);
     }
+  };
+
+  const renderFeedbackSection = (
+    entry: ChatEntry,
+    section: FeedbackSection,
+    label: string,
+    content: string | string[] | undefined
+  ) => {
+    const items = Array.isArray(content)
+      ? content.filter(Boolean)
+      : content
+        ? [content]
+        : [];
+    if (items.length === 0) return null;
+
+    return (
+      <div className={`feedback-section feedback-section-${section}`}>
+        <div className="feedback-section-intro">
+          {entry.feedback?.sectionIntros?.[section] || getRandomItem(LEVEL_FEEDBACK_SECTION_PROMPTS[getSelectedLevel()][section])}
+        </div>
+        <div className="feedback-section-box">
+          <div className="feedback-section-title">{label}</div>
+          <ul className="feedback-section-list">
+            {items.map((item, i) => (
+              <li key={`${section}-${i}`}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
   };
 
   const handleSpeakingStart = async () => {
@@ -2567,8 +2805,28 @@ export default function AI_chat() {
           .msg-question-label{font-size:13px;font-weight:800;color:#1f4f91;margin-bottom:8px}
           .msg-question-text{white-space:pre-wrap;font-size:22px;line-height:1.45;font-weight:800;color:#10213c}
           .msg-timer{background:#eef4ff;color:#13233f;padding:10px 12px;border-left:4px solid #4a78bd;border-radius:10px;margin-right:min(20%,220px);font-weight:700}
-          .feedback-card{margin-right:min(12%,140px);background:#f0f9ff;border:2px solid #3b82f6;border-radius:14px;padding:16px}
-          .feedback-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+          .feedback-card{margin-right:min(12%,140px);background:#ffffff;border:1px solid #d9e4f2;border-radius:14px;padding:16px;box-shadow:0 14px 32px rgba(31,79,145,0.10)}
+          .feedback-card-title{font-weight:800;color:#10213c;margin-bottom:14px;font-size:16px}
+          .feedback-section{margin:0 0 14px}
+          .feedback-section:last-child{margin-bottom:0}
+          .feedback-section-intro{font-size:14px;line-height:1.5;color:#526174;font-weight:700;margin:0 0 6px;padding-left:2px}
+          .feedback-section-box{padding:12px 14px;border-radius:12px;border:1px solid transparent;border-left-width:5px}
+          .feedback-section-title{font-weight:800;font-size:14px;margin-bottom:6px}
+          .feedback-section-list{margin:0;padding-left:18px;font-size:13px;line-height:1.6}
+          .feedback-section-list li{margin-bottom:4px}
+          .feedback-section-list li:last-child{margin-bottom:0}
+          .feedback-section-general .feedback-section-box{background:#eef6ff;border-color:#bfdbfe;border-left-color:#3b82f6;color:#1e3a8a}
+          .feedback-section-general .feedback-section-title{color:#1d4ed8}
+          .feedback-section-grammar .feedback-section-box{background:#fff7ed;border-color:#fed7aa;border-left-color:#f97316;color:#7c2d12}
+          .feedback-section-grammar .feedback-section-title{color:#c2410c}
+          .feedback-section-vocabulary .feedback-section-box{background:#f5f3ff;border-color:#ddd6fe;border-left-color:#8b5cf6;color:#4c1d95}
+          .feedback-section-vocabulary .feedback-section-title{color:#6d28d9}
+          .feedback-section-fluency .feedback-section-box{background:#ecfeff;border-color:#a5f3fc;border-left-color:#0891b2;color:#164e63}
+          .feedback-section-fluency .feedback-section-title{color:#0e7490}
+          .feedback-section-pronunciation .feedback-section-box{background:#f0fdf4;border-color:#bbf7d0;border-left-color:#16a34a;color:#14532d}
+          .feedback-section-pronunciation .feedback-section-title{color:#15803d}
+          .feedback-section-suggestions .feedback-section-box{background:#fff1f2;border-color:#fecdd3;border-left-color:#e11d48;color:#881337}
+          .feedback-section-suggestions .feedback-section-title{color:#be123c}
           .improved-answer-card{margin-right:min(12%,140px);background:#f8fafc;border:2px solid #22c55e;border-radius:14px;padding:16px;box-shadow:0 12px 28px rgba(34,197,94,0.10)}
           .improved-version{margin:0 0 12px;padding:12px;background:#ffffff;border-radius:10px;border:1px solid #bfdbfe}
           .improved-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
@@ -2620,7 +2878,7 @@ export default function AI_chat() {
             .chat-window{min-height:calc(100vh - 176px);padding:10px;border-radius:12px}
             .chat-message-spacer{height:68px}
             .msg-user,.msg-llm,.msg-timer,.msg-question,.feedback-card,.improved-answer-card{margin-left:0;margin-right:0}
-            .feedback-grid{grid-template-columns:1fr}
+            .feedback-section-box{padding:11px 12px}
             .improved-answer-card .improved-text{font-size:16px}
             .msg-question-text{font-size:19px}
             .msg-question{padding:16px}
@@ -2713,71 +2971,13 @@ export default function AI_chat() {
                         </div>
                       ) : entry.kind === "feedback" ? (
                         <div className="feedback-card">
-                          <div style={{ fontWeight: 800, color: "#1e40af", marginBottom: 12, fontSize: 16 }}>📊 フィードバック</div>
-                          
-                          {entry.feedback?.overall && (
-                            <div style={{ marginBottom: 12, padding: 12, background: "#dbeafe", borderRadius: 10, borderLeft: "4px solid #3b82f6" }}>
-                              <div style={{ fontWeight: 700, color: "#1e40af", fontSize: 14, marginBottom: 4 }}>総合評価</div>
-                              <div style={{ color: "#1e3a8a", lineHeight: 1.6 }}>{entry.feedback.overall}</div>
-                            </div>
-                          )}
-
-                          <div className="feedback-grid">
-                            {entry.feedback?.grammar && entry.feedback.grammar.length > 0 && (
-                              <div style={{ padding: 10, background: "#fef3c7", borderRadius: 10, borderLeft: "4px solid #f59e0b" }}>
-                                <div style={{ fontWeight: 700, color: "#92400e", fontSize: 13, marginBottom: 4 }}>文法</div>
-                                <ul style={{ margin: 0, paddingLeft: 20, fontSize: 12, color: "#78350f" }}>
-                                  {entry.feedback.grammar.map((item, i) => (
-                                    <li key={i} style={{ marginBottom: 3 }}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-
-                            {entry.feedback?.vocabulary && entry.feedback.vocabulary.length > 0 && (
-                              <div style={{ padding: 10, background: "#ddd6fe", borderRadius: 10, borderLeft: "4px solid #a78bfa" }}>
-                                <div style={{ fontWeight: 700, color: "#4c1d95", fontSize: 13, marginBottom: 4 }}>単語</div>
-                                <ul style={{ margin: 0, paddingLeft: 20, fontSize: 12, color: "#5b21b6" }}>
-                                  {entry.feedback.vocabulary.map((item, i) => (
-                                    <li key={i} style={{ marginBottom: 3 }}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-
-                            {entry.feedback?.fluency && entry.feedback.fluency.length > 0 && (
-                              <div style={{ padding: 10, background: "#cffafe", borderRadius: 10, borderLeft: "4px solid #06b6d4" }}>
-                                <div style={{ fontWeight: 700, color: "#164e63", fontSize: 13, marginBottom: 4 }}>流暢さ</div>
-                                <ul style={{ margin: 0, paddingLeft: 20, fontSize: 12, color: "#0c4a6e" }}>
-                                  {entry.feedback.fluency.map((item, i) => (
-                                    <li key={i} style={{ marginBottom: 3 }}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-
-                            {entry.feedback?.pronunciation && entry.feedback.pronunciation.length > 0 && (
-                              <div style={{ padding: 10, background: "#dcfce7", borderRadius: 10, borderLeft: "4px solid #22c55e" }}>
-                                <div style={{ fontWeight: 700, color: "#166534", fontSize: 13, marginBottom: 4 }}>発音</div>
-                                <ul style={{ margin: 0, paddingLeft: 20, fontSize: 12, color: "#15803d" }}>
-                                  {entry.feedback.pronunciation.map((item, i) => (
-                                    <li key={i} style={{ marginBottom: 3 }}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                          </div>
-
-                          {entry.feedback?.suggestions && entry.feedback.suggestions.length > 0 && (
-                            <div style={{ padding: 12, background: "#f3e8ff", borderRadius: 10, borderLeft: "4px solid #d946ef" }}>
-                              <div style={{ fontWeight: 700, color: "#6b21a8", fontSize: 14, marginBottom: 6 }}>💡 改善提案</div>
-                              <ul style={{ margin: 0, paddingLeft: 20, fontSize: 12, color: "#7e22ce" }}>
-                                {entry.feedback.suggestions.map((item, i) => (
-                                  <li key={i} style={{ marginBottom: 4 }}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
+                          <div className="feedback-card-title">フィードバック</div>
+                          {renderFeedbackSection(entry, "general", "総合評価", entry.feedback?.overall)}
+                          {renderFeedbackSection(entry, "grammar", "文法", entry.feedback?.grammar)}
+                          {renderFeedbackSection(entry, "vocabulary", "単語", entry.feedback?.vocabulary)}
+                          {renderFeedbackSection(entry, "fluency", "流暢さ", entry.feedback?.fluency)}
+                          {renderFeedbackSection(entry, "pronunciation", "発音", entry.feedback?.pronunciation)}
+                          {renderFeedbackSection(entry, "suggestions", "改善提案", entry.feedback?.suggestions)}
                         </div>
                       ) : entry.kind === "improvedAnswer" ? (
                         <div className="improved-answer-card">

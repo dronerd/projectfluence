@@ -29,10 +29,10 @@ curl -X POST http://localhost:3000/api/vidmatch/ingest-youtube \
   -H "Authorization: Bearer $VIDMATCH_INGEST_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
-    "query": "English listening practice travel B1",
+    "query": "English listening practice art and culture B1",
     "level": "B1",
     "skills": ["listening", "vocabulary"],
-    "topics": ["travel"],
+    "topics": ["Art & Culture"],
     "accent": "American",
     "maxResults": 10,
     "minQualityScore": 70
