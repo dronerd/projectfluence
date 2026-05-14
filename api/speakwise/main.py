@@ -459,6 +459,42 @@ def generate_improved_version(question: str, user_answer: str, level: str, pract
     return normalize_improved_version(improved) if isinstance(improved, (dict, str)) else None
 
 
+def build_simple_improved_version_prompt(question: str, user_answer: str, level: str, practice_mode: str) -> str:
+    return f"""Rewrite the student's answer into one improved English version.
+
+Practice Question:
+{question}
+
+Student's Answer:
+{user_answer}
+
+Student CEFR Level: {level}
+Practice Mode: {practice_mode}
+
+Return only the improved answer text. Do not include feedback, bullet points, labels, markdown, or explanations.
+Keep the student's intended meaning, but make the answer clearer, more natural, and appropriate for CEFR level {level}.
+"""
+
+
+def generate_simple_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
+    improved_text = chat_completion(
+        system_prompt="You rewrite learner English. Return only the improved answer text.",
+        message=build_simple_improved_version_prompt(question, user_answer, level, practice_mode),
+        max_tokens=500,
+    ).strip()
+
+    if not improved_text:
+        return None
+
+    return normalize_improved_version({
+        "title": "Improved version",
+        "summary": "This version improves clarity and natural expression.",
+        "revisedText": improved_text,
+        "segments": [{"text": improved_text, "type": "improvement", "note": "Improved version"}],
+        "changes": [],
+    })
+
+
 @app.post("/api/feedback")
 async def feedback(req: dict[str, Any]) -> JSONResponse:
     question = str(req.get("question") or "").strip()
@@ -502,8 +538,15 @@ async def improved_version(req: dict[str, Any]) -> JSONResponse:
         return JSONResponse({"error": "question and userAnswer are required"}, status_code=400)
 
     try:
-        # use the generate_improved_version function to get the improved version from the OpenAI model. 
-        improved = generate_improved_version(question, user_answer, level, practice_mode)
+        improved = None
+        try:
+            improved = generate_improved_version(question, user_answer, level, practice_mode)
+        except Exception as structured_exc:
+            logger.warning("Structured improved-version generation failed: %s", structured_exc)
+
+        if not improved or not improved.get("segments"):
+            improved = generate_simple_improved_version(question, user_answer, level, practice_mode)
+
         if not improved or not improved.get("segments"):
             return JSONResponse({"error": "Improved version generation failed"}, status_code=500)
         return JSONResponse({"improvedVersion": improved})

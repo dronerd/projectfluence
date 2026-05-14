@@ -1306,13 +1306,9 @@ export default function AI_chat() {
         }),
       });
       const improvedData = await improvedRes.json();
-      if (!improvedRes.ok || improvedData.error) {
-        throw new Error(improvedData.details || improvedData.error || "Improved version request failed");
-      }
-
-      const improvedVersion = normalizeImprovedVersion(
-        improvedData.improvedVersion || improvedData.improved_version
-      );
+      const improvedVersion = !improvedRes.ok || improvedData.error
+        ? await getImprovedVersionFromChat(question, userAnswer)
+        : normalizeImprovedVersion(improvedData.improvedVersion || improvedData.improved_version);
       const improvedEntry: ChatEntry = {
         sender: "llm",
         text: "改善版",
@@ -1335,6 +1331,38 @@ export default function AI_chat() {
     } finally {
       setImprovedVersionLoading(false);
     }
+  };
+
+  const getImprovedVersionFromChat = async (question: string, userAnswer: string) => {
+    const message =
+      `Rewrite the student's answer into one improved English version.\n\n` +
+      `Practice question: ${question}\n` +
+      `Student answer: ${userAnswer}\n\n` +
+      `Return only the improved answer text. Do not include feedback, labels, markdown, or explanations.`;
+    const fallbackModes = ["speaking", "casual"];
+    let lastError = "Improved version fallback request failed";
+
+    for (const fallbackMode of fallbackModes) {
+      const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message,
+          level,
+          topics: getRandomizedTopicsToPass(),
+          mode: fallbackMode,
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok && !data.error && data.reply) {
+        return normalizeImprovedVersion(String(data.reply).trim());
+      }
+
+      lastError = data.details || data.error || lastError;
+    }
+
+    throw new Error(lastError);
   };
 
   const handleNextFeedback = async () => {
