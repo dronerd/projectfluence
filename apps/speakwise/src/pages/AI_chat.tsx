@@ -164,7 +164,6 @@ type PracticeMode = "speaking" | "writing";
 type CEFRLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 
 const DEFAULT_LEVEL = "B2";
-const DEFAULT_TOPIC = TOPICS[0];
 
 const TESTS = ["特になし", "英検", "TOEFL", "TOEIC", "IELTS", "ケンブリッジ英検", "GTEC", "TEAP", "SAT", "ACT"];
 const SKILLS = ["リーディング", "リスニング", "ライティング", "スピーキング"];
@@ -312,7 +311,7 @@ export default function AI_chat() {
   // Common settings
   const [level, setLevel] = useState(DEFAULT_LEVEL);
   const [levelConfirmed, setLevelConfirmed] = useState(true);
-  const [selectedTopics, setSelectedTopics] = useState<string[]>([DEFAULT_TOPIC]);
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
   const [customTopic, setCustomTopic] = useState("");
 
   // Lesson settings
@@ -368,6 +367,7 @@ export default function AI_chat() {
   } | null>(null);
   const [lastUserAnswer, setLastUserAnswer] = useState("");
   const recentOpeningQuestionsRef = useRef<Set<string>>(new Set());
+  const recognitionRef = useRef<any>(null);
   // Removed: eikenActive, eikenStage, conversationHistory, eikenDisplayText, eikenTTS, eikenMuted, eikenUserInput
 
   // ページマウント時にRenderのバックエンドサーバーをウォームアップ
@@ -741,13 +741,25 @@ export default function AI_chat() {
   const getPresetOpeningQuestion = (practiceMode: PracticeMode) => {
     const selectedPresetTopics = selectedTopics.filter((topic) => OPENING_QUESTIONS[topic]);
     const candidateTopics = selectedPresetTopics.length > 0 ? selectedPresetTopics : Object.keys(OPENING_QUESTIONS);
-    const candidates = candidateTopics
-      .map((topic) => OPENING_QUESTIONS[topic]?.[getSelectedLevel()]?.[practiceMode])
-      .filter((question): question is string => Boolean(question));
-    const question = varyOpeningQuestionStyle(
-      getRandomItemFrom(candidates, recentOpeningQuestionsRef.current),
-      practiceMode
-    );
+    const currentLevel = getSelectedLevel();
+    
+    // Collect all available questions from selected topics
+    const allCandidateQuestions = candidateTopics
+      .map((topic) => OPENING_QUESTIONS[topic]?.[currentLevel]?.[practiceMode])
+      .filter((questionsArray): questionsArray is string[] => Array.isArray(questionsArray) && questionsArray.length > 0)
+      .flatMap((questionsArray) => questionsArray);
+    
+    // Fallback: if no questions found in selected topics, try all topics
+    const candidates = allCandidateQuestions.length > 0 
+      ? allCandidateQuestions
+      : Object.keys(OPENING_QUESTIONS)
+          .map((topic) => OPENING_QUESTIONS[topic]?.[currentLevel]?.[practiceMode])
+          .filter((questionsArray): questionsArray is string[] => Array.isArray(questionsArray) && questionsArray.length > 0)
+          .flatMap((questionsArray) => questionsArray);
+    
+    // Select a random question, avoiding recently used ones
+    const selectedQuestion = getRandomItemFrom(candidates, recentOpeningQuestionsRef.current);
+    const question = varyOpeningQuestionStyle(selectedQuestion, practiceMode);
     rememberOpeningQuestion(question);
     return question || "Let's continue with the practice.";
   };
@@ -1455,13 +1467,24 @@ export default function AI_chat() {
     const selectedPresetTopics = selectedTopics.filter((topic) => OPENING_QUESTIONS[topic]);
     const availableTopics = selectedPresetTopics.length > 0 ? selectedPresetTopics : Object.keys(OPENING_QUESTIONS);
     const currentLevel = getSelectedLevel();
-    const candidates = shuffleItems(availableTopics)
+    
+    // Collect all available questions from topics, shuffled for better variety
+    const allCandidateQuestions = shuffleItems(availableTopics)
       .map((topic) => OPENING_QUESTIONS[topic]?.[currentLevel]?.[practiceMode])
-      .filter((question): question is string => Boolean(question));
-    const question = varyOpeningQuestionStyle(
-      getRandomItemFrom(candidates, recentOpeningQuestionsRef.current),
-      practiceMode
-    );
+      .filter((questionsArray): questionsArray is string[] => Array.isArray(questionsArray) && questionsArray.length > 0)
+      .flatMap((questionsArray) => questionsArray);
+    
+    // Fallback: if no questions found, try all topics
+    const candidates = allCandidateQuestions.length > 0
+      ? allCandidateQuestions
+      : Object.keys(OPENING_QUESTIONS)
+          .map((topic) => OPENING_QUESTIONS[topic]?.[currentLevel]?.[practiceMode])
+          .filter((questionsArray): questionsArray is string[] => Array.isArray(questionsArray) && questionsArray.length > 0)
+          .flatMap((questionsArray) => questionsArray);
+    
+    // Select a random question, avoiding recently used ones
+    const selectedQuestion = getRandomItemFrom(candidates, recentOpeningQuestionsRef.current);
+    const question = varyOpeningQuestionStyle(selectedQuestion, practiceMode);
     rememberOpeningQuestion(question);
     return question || "Let's continue with the practice.";
   };
@@ -1539,23 +1562,61 @@ export default function AI_chat() {
 
     const recognition = new SpeechRecognitionConstructor();
     recognition.lang = "en-US";
-    recognition.interimResults = false;
+    recognition.interimResults = true; // Enable interim results for live transcription
     recognition.maxAlternatives = 1;
+    recognition.continuous = true; // Keep listening for continuous input
+
+    recognitionRef.current = recognition;
 
     recognition.onstart = () => setIsListening(true);
-    recognition.onend = () => setIsListening(false);
+    recognition.onend = () => {
+      setIsListening(false);
+      recognitionRef.current = null;
+    };
     recognition.onerror = () => {
       setIsListening(false);
+      recognitionRef.current = null;
       alert("音声を認識できませんでした。もう一度試すか、テキストで入力してください。");
     };
     recognition.onresult = (event: any) => {
-      const transcript = event.results?.[0]?.[0]?.transcript;
-      if (transcript) {
-        setAnswerDraft((prev) => [prev.trim(), transcript].filter(Boolean).join(" "));
+      let interimTranscript = "";
+      let finalTranscript = "";
+
+      // Process all results to separate interim and final
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          finalTranscript += transcript + " ";
+        } else {
+          interimTranscript += transcript;
+        }
+      }
+
+      // Update the answer draft with live transcription
+      if (finalTranscript) {
+        setAnswerDraft((prev) => [prev.trim(), finalTranscript.trim()].filter(Boolean).join(" "));
+      } else if (interimTranscript) {
+        // Show interim results as the user speaks
+        setAnswerDraft((prev) => {
+          const parts = prev.split("\n[interim]");
+          const mainText = parts[0].trim();
+          return mainText ? `${mainText}\n[interim] ${interimTranscript}` : interimTranscript;
+        });
       }
     };
 
     recognition.start();
+  };
+
+  const handleStopSpeaking = () => {
+    if (recognitionRef.current) {
+      recognitionRef.current.stop();
+      setIsListening(false);
+      recognitionRef.current = null;
+
+      // Clean up interim text marker
+      setAnswerDraft((prev) => prev.replace(/\n\[interim\].*/g, "").trim());
+    }
   };
 
   const handleGenerateNewQuestion = async () => {
@@ -3219,13 +3280,26 @@ export default function AI_chat() {
                         />
                         <div className="answer-actions">
                           {practiceMode === "speaking" && (
-                            <button
-                              type="button"
-                              className="lesson-gradient-btn"
-                              onClick={handleStartSpeaking}
-                            >
-                              {isListening ? "Listening..." : "Start speaking"}
-                            </button>
+                            <>
+                              {!isListening ? (
+                                <button
+                                  type="button"
+                                  className="lesson-gradient-btn"
+                                  onClick={handleStartSpeaking}
+                                >
+                                  Start speaking
+                                </button>
+                              ) : (
+                                <button
+                                  type="button"
+                                  className="lesson-gradient-btn"
+                                  onClick={handleStopSpeaking}
+                                  style={{ backgroundColor: "#ff6b6b" }}
+                                >
+                                  Stop speaking
+                                </button>
+                              )}
+                            </>
                           )}
                           <button
                             type="button"
