@@ -264,6 +264,72 @@ export const LEVEL_FEEDBACK_SECTION_PROMPTS: Record<LessonLevel, Record<Feedback
   },
 };
 
+export const LEVEL_IMPROVED_VERSION_INTRO_PROMPTS: Record<LessonLevel, string[]> = {
+  A1: [
+    "Here is an improved version of your text.",
+    "Now, here is a clearer version of your answer.",
+    "Here is one better way to write your answer.",
+  ],
+  A2: [
+    "Here is an improved version of your text.",
+    "Now, here is a more natural version of your answer.",
+    "Here is one clearer way to say your idea.",
+  ],
+  B1: [
+    "Here is an improved version of your text.",
+    "Now, here is a smoother version of your answer.",
+    "Here is one polished version you can compare with your answer.",
+  ],
+  B2: [
+    "Here is an improved version of your text.",
+    "Next, here is a more polished version of your response.",
+    "Now, let’s look at a clearer and more natural version.",
+  ],
+  C1: [
+    "Here is an improved version of your text.",
+    "Next, here is a more refined version of your response.",
+    "Now, here is a version with stronger clarity and precision.",
+  ],
+  C2: [
+    "Here is an improved version of your text.",
+    "Next, here is a more nuanced and polished version.",
+    "Now, here is a refined version with stronger precision and flow.",
+  ],
+};
+
+export const LEVEL_IMPROVED_VERSION_READY_PROMPTS: Record<LessonLevel, string[]> = {
+  A1: [
+    "Now, after reading my feedback, are you ready to see a better version of your answer?",
+    "When you are ready, you can look at an improved version of your text.",
+    "After you check the feedback, would you like to see a clearer version?",
+  ],
+  A2: [
+    "Now, after reading my feedback, are you ready to see an improved version of your response?",
+    "When you finish reading the feedback, would you like to see a better version?",
+    "After you review the feedback, you can compare it with an improved version.",
+  ],
+  B1: [
+    "Now, after reading my feedback, are you ready to see an improved version of your response?",
+    "Once you’ve reviewed the feedback, would you like to compare it with a stronger version?",
+    "When you are ready, you can see a smoother version of your answer.",
+  ],
+  B2: [
+    "Now, after reading my feedback, are you ready to see an improved version of your response?",
+    "Once you’ve looked through the feedback, would you like to compare your answer with a polished version?",
+    "When you’re ready, I can show you a clearer and more natural version of your response.",
+  ],
+  C1: [
+    "Now, after reading my feedback, are you ready to see an improved version of your response?",
+    "Once you’ve reviewed the feedback carefully, would you like to compare it with a more refined version?",
+    "When you’re ready, I can show you a version with stronger clarity and precision.",
+  ],
+  C2: [
+    "Now, after reading my feedback, are you ready to see an improved version of your response?",
+    "Once you’ve considered the feedback, would you like to compare it with a more nuanced version?",
+    "When you’re ready, I can show you a more polished version with stronger precision and flow.",
+  ],
+};
+
 export const LEVEL_PRACTICE_CONFIRMATION_PROMPTS: Record<LessonLevel, string[]> = {
   A1: [
     "Do you want to try this question?",

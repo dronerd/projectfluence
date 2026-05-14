@@ -164,6 +164,23 @@ def chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
     return completion.choices[0].message.content or ""
 
 
+def json_chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
+    try:
+        completion = get_openai_client().chat.completions.create(
+            model=os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini"),
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": message},
+            ],
+            temperature=0.45,
+            max_tokens=max_tokens,
+            response_format={"type": "json_object"},
+        )
+        return completion.choices[0].message.content or ""
+    except TypeError:
+        return chat_completion(system_prompt, message, max_tokens)
+
+
 @app.api_route("/health", methods=["GET", "HEAD"])
 def health() -> Response:
     return Response(status_code=200)
@@ -302,7 +319,10 @@ def normalize_feedback(feedback_json: dict[str, Any], user_answer: str, level: s
     return feedback_json
 
 
-def normalize_improved_version(improved: dict[str, Any]) -> dict[str, Any]:
+def normalize_improved_version(improved: dict[str, Any] | str) -> dict[str, Any]:
+    if isinstance(improved, str):
+        improved = {"text": improved}
+
     allowed_types = {"unchanged", "grammar", "improvement", "clarity"}
     segments = improved.get("segments")
     normalized_segments = []
@@ -321,7 +341,14 @@ def normalize_improved_version(improved: dict[str, Any]) -> dict[str, Any]:
             })
 
     if not normalized_segments:
-        revised_text = str(improved.get("text") or improved.get("revised") or "").strip()
+        revised_text = str(
+            improved.get("text")
+            or improved.get("revised")
+            or improved.get("revisedText")
+            or improved.get("improvedText")
+            or improved.get("answer")
+            or ""
+        ).strip()
         if revised_text:
             normalized_segments = [{"text": revised_text, "type": "improvement", "note": "Improved version"}]
 
@@ -335,7 +362,7 @@ def normalize_improved_version(improved: dict[str, Any]) -> dict[str, Any]:
 
 
 def build_improved_version_prompt(question: str, user_answer: str, level: str, practice_mode: str) -> str:
-    return f"""Rewrite the student's English answer into a clearly improved version.
+    return f"""Rewrite the student's English answer into one clearly improved version.
 
 Practice Question:
 {question}
@@ -351,10 +378,11 @@ Return ONLY valid JSON with this exact structure:
   "improvedVersion": {{
     "title": "Improved version",
     "summary": "One short sentence explaining the biggest improvement",
+    "revisedText": "The complete improved answer as one readable text.",
     "segments": [
       {{
-        "text": "A phrase in the improved answer.",
-        "type": "grammar",
+        "text": "A phrase or sentence from the improved answer.",
+        "type": "improvement",
         "note": "Short reason"
       }}
     ],
@@ -370,8 +398,11 @@ Return ONLY valid JSON with this exact structure:
 }}
 
 Rules:
+- This request is separate from feedback. Do not provide feedback lists.
+- Always return a complete improved answer in improvedVersion.revisedText.
 - improvedVersion.segments must combine to form one complete polished answer.
-- Do not simply copy the student's original response.
+- If detailed segments are difficult, return one segment containing the full improved answer.
+- Do not simply copy the student's original response unless it is already perfect.
 - Preserve the student's intended meaning.
 - Use "grammar" for grammar, tense, article, word form, spelling, or punctuation fixes.
 - Use "improvement" for stronger vocabulary or more natural phrasing.
@@ -382,16 +413,25 @@ Rules:
 
 
 def generate_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
-    improved_text = chat_completion(
-        system_prompt="You are a JSON provider. Return only valid JSON.",
+    improved_text = json_chat_completion(
+        system_prompt="You are a careful English rewriting assistant. Return only valid JSON.",
         message=build_improved_version_prompt(question, user_answer, level, practice_mode),
         max_tokens=900,
     )
     parsed = parse_json_object(improved_text)
+    if not parsed and improved_text.strip():
+        return normalize_improved_version(improved_text.strip())
     if not parsed:
         return None
-    improved = parsed.get("improvedVersion") or parsed.get("improved_version")
-    return normalize_improved_version(improved) if isinstance(improved, dict) else None
+
+    improved = (
+        parsed.get("improvedVersion")
+        or parsed.get("improved_version")
+        or parsed.get("revisedText")
+        or parsed.get("improvedText")
+        or parsed.get("text")
+    )
+    return normalize_improved_version(improved) if isinstance(improved, (dict, str)) else None
 
 
 @app.post("/api/feedback")

@@ -7,6 +7,8 @@ import {
   ANSWER_READY_PROMPTS,
   LEVEL_FEEDBACK_INTRO_PROMPTS,
   LEVEL_FEEDBACK_SECTION_PROMPTS,
+  LEVEL_IMPROVED_VERSION_INTRO_PROMPTS,
+  LEVEL_IMPROVED_VERSION_READY_PROMPTS,
   LEVEL_POSITIVE_FALLBACK_PROMPTS,
   LEVEL_PRACTICE_CONFIRMATION_PROMPTS,
   LEVEL_PRACTICE_START_PROMPTS,
@@ -45,6 +47,8 @@ interface ChatEntry {
     | "answerReady"
     | "positiveComment"
     | "feedbackIntro"
+    | "feedbackSectionIntro"
+    | "feedbackSection"
     | "feedback"
     | "improvedIntro"
     | "improvedAnswer";
@@ -58,6 +62,11 @@ interface ChatEntry {
     suggestions?: string[];
     sectionIntros?: Partial<Record<FeedbackSection, string>>;
     improvedVersion?: ImprovedVersion;
+  };
+  feedbackSection?: {
+    section: FeedbackSection;
+    label: string;
+    items: string[];
   };
 }
 
@@ -162,13 +171,6 @@ const MESSAGE_TIMING_BY_LEVEL: Record<CEFRLevel, { typingMs: number; pauseMs: nu
   C1: { typingMs: 40, pauseMs: 440 },
   C2: { typingMs: TYPING_SPEED_MS, pauseMs: STARTUP_MESSAGE_PAUSE_MS },
 };
-
-const IMPROVED_VERSION_INTRO_MESSAGES = [
-  "Now, here is a possible improved version of your answer.",
-  "Next, here’s one polished version you can compare with your answer.",
-  "Now let’s look at a clearer improved version.",
-  "Here is one natural way to improve your response.",
-];
 
 const IMPROVEMENT_LABELS: Record<ImprovementType, string> = {
   unchanged: "元の表現",
@@ -343,6 +345,11 @@ export default function AI_chat() {
   const [pendingStartupMode, setPendingStartupMode] = useState<PracticeMode | null>(null);
   const [lastQuestionIndexForConfirmation, setLastQuestionIndexForConfirmation] = useState<number | null>(null);
   const [feedbackLoading, setFeedbackLoading] = useState(false);
+  const [improvedVersionLoading, setImprovedVersionLoading] = useState(false);
+  const [pendingImprovedVersion, setPendingImprovedVersion] = useState<{
+    question: string;
+    userAnswer: string;
+  } | null>(null);
   const [lastUserAnswer, setLastUserAnswer] = useState("");
   const recentOpeningQuestionsRef = useRef<Set<string>>(new Set());
   // Removed: eikenActive, eikenStage, conversationHistory, eikenDisplayText, eikenTTS, eikenMuted, eikenUserInput
@@ -1008,6 +1015,7 @@ export default function AI_chat() {
 
     if (openingQuestion && textToSend.trim()) {
       setLastUserAnswer(textToSend);
+      setPendingImprovedVersion(null);
       getFeedback(openingQuestion, textToSend);
       return;
     }
@@ -1213,73 +1221,109 @@ export default function AI_chat() {
       };
       const feedbackIntro = getLevelPrompt(LEVEL_FEEDBACK_INTRO_PROMPTS);
       const sectionIntros = getFeedbackSectionIntros();
-      const feedbackEntry: ChatEntry = {
-        sender: "llm",
-        text: "フィードバック",
-        kind: "feedback",
-        feedback: {
-          grammar: feedback.grammar || [],
-          vocabulary: feedback.vocabulary || [],
-          pronunciation: feedback.pronunciation || [],
-          fluency: feedback.fluency || [],
-          overall: feedback.overall || "",
-          positiveComment,
-          suggestions: feedback.suggestions || [],
-          sectionIntros,
-        },
-      };
+      const feedbackSections = ([
+        { section: "general", label: "総合評価", content: feedback.overall || "" },
+        { section: "grammar", label: "文法", content: feedback.grammar || [] },
+        { section: "vocabulary", label: "単語", content: feedback.vocabulary || [] },
+        { section: "fluency", label: "流暢さ", content: feedback.fluency || [] },
+        { section: "pronunciation", label: "発音", content: feedback.pronunciation || [] },
+        { section: "suggestions", label: "改善提案", content: feedback.suggestions || [] },
+      ] satisfies Array<{ section: FeedbackSection; label: string; content: string | string[] | undefined }>).filter(({ content }) => (
+        Array.isArray(content) ? content.filter(Boolean).length > 0 : Boolean(content)
+      ));
       setChatLog((prev) => [...prev, positiveEntry]);
       await waitForTyping(positiveComment);
 
       setChatLog((prev) => [...prev, { sender: "llm", text: feedbackIntro, kind: "feedbackIntro" }]);
       await waitForTyping(feedbackIntro);
 
-      setChatLog((prev) => [...prev, feedbackEntry]);
-      await waitBetweenMessages();
+      for (const feedbackSection of feedbackSections) {
+        const transitionText = sectionIntros[feedbackSection.section];
+        setChatLog((prev) => [...prev, { sender: "llm", text: transitionText, kind: "feedbackSectionIntro" }]);
+        await waitForTyping(transitionText);
 
-      try {
-        const improvedRes = await fetch(`${SPEAKWISE_API_URL}/api/improved-version`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            question,
-            userAnswer,
-            level,
-            practiceMode,
-          }),
-        });
-        const improvedData = await improvedRes.json();
-        if (!improvedRes.ok || improvedData.error) {
-          throw new Error(improvedData.details || improvedData.error || "Improved version request failed");
-        }
-
-        const improvedVersion = normalizeImprovedVersion(
-          improvedData.improvedVersion || improvedData.improved_version
-        );
-        const improvedEntry: ChatEntry = {
-          sender: "llm",
-          text: "改善版",
-          kind: "improvedAnswer",
-          feedback: {
-            improvedVersion,
+        const items = Array.isArray(feedbackSection.content)
+          ? feedbackSection.content.filter(Boolean)
+          : [feedbackSection.content].filter((item): item is string => Boolean(item));
+        setChatLog((prev) => [
+          ...prev,
+          {
+            sender: "llm",
+            text: feedbackSection.label,
+            kind: "feedbackSection",
+            feedbackSection: {
+              section: feedbackSection.section,
+              label: feedbackSection.label,
+              items,
+            },
           },
-        };
-
-        if (improvedVersion.segments && improvedVersion.segments.length > 0) {
-          const improvedIntro = getRandomItem(IMPROVED_VERSION_INTRO_MESSAGES);
-          setChatLog((prev) => [...prev, { sender: "llm", text: improvedIntro, kind: "improvedIntro" }]);
-          await waitForTyping(improvedIntro);
-          setChatLog((prev) => [...prev, improvedEntry]);
-        }
-      } catch (improvedError) {
-        console.error("Improved version error:", improvedError);
+        ]);
+        await waitBetweenMessages();
       }
 
+      const improvedReadyPrompt = getLevelPrompt(LEVEL_IMPROVED_VERSION_READY_PROMPTS);
+      setChatLog((prev) => [...prev, { sender: "llm", text: improvedReadyPrompt, kind: "improvedIntro" }]);
+      await waitForTyping(improvedReadyPrompt);
+      setPendingImprovedVersion({ question, userAnswer });
       setFeedbackLoading(false);
     } catch (error) {
       console.error("Feedback error:", error);
       setFeedbackLoading(false);
       // Silently fail - don't break the chat experience
+    }
+  };
+
+  const handleSeeImprovedVersion = async () => {
+    if (!pendingImprovedVersion || improvedVersionLoading) return;
+
+    const { question, userAnswer } = pendingImprovedVersion;
+    setPendingImprovedVersion(null);
+    setImprovedVersionLoading(true);
+
+    try {
+      const improvedIntro = getLevelPrompt(LEVEL_IMPROVED_VERSION_INTRO_PROMPTS);
+      setChatLog((prev) => [...prev, { sender: "llm", text: improvedIntro, kind: "improvedIntro" }]);
+      await waitForTyping(improvedIntro);
+
+      const improvedRes = await fetch(`${SPEAKWISE_API_URL}/api/improved-version`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          question,
+          userAnswer,
+          level,
+          practiceMode,
+        }),
+      });
+      const improvedData = await improvedRes.json();
+      if (!improvedRes.ok || improvedData.error) {
+        throw new Error(improvedData.details || improvedData.error || "Improved version request failed");
+      }
+
+      const improvedVersion = normalizeImprovedVersion(
+        improvedData.improvedVersion || improvedData.improved_version
+      );
+      const improvedEntry: ChatEntry = {
+        sender: "llm",
+        text: "改善版",
+        kind: "improvedAnswer",
+        feedback: {
+          improvedVersion,
+        },
+      };
+
+      if (improvedVersion.segments && improvedVersion.segments.length > 0) {
+        setChatLog((prev) => [...prev, improvedEntry]);
+      }
+    } catch (improvedError) {
+      console.error("Improved version error:", improvedError);
+      setChatLog((prev) => [
+        ...prev,
+        { sender: "llm", text: "エラー: 改善版を取得できませんでした。" },
+      ]);
+      setPendingImprovedVersion({ question, userAnswer });
+    } finally {
+      setImprovedVersionLoading(false);
     }
   };
 
@@ -1450,7 +1494,6 @@ export default function AI_chat() {
   };
 
   const renderFeedbackSection = (
-    entry: ChatEntry,
     section: FeedbackSection,
     label: string,
     content: string | string[] | undefined
@@ -1464,9 +1507,6 @@ export default function AI_chat() {
 
     return (
       <div className={`feedback-section feedback-section-${section}`}>
-        <div className="feedback-section-intro">
-          {entry.feedback?.sectionIntros?.[section] || getRandomItem(LEVEL_FEEDBACK_SECTION_PROMPTS[getSelectedLevel()][section])}
-        </div>
         <div className="feedback-section-box">
           <div className="feedback-section-title">{label}</div>
           <ul className="feedback-section-list">
@@ -1485,6 +1525,8 @@ export default function AI_chat() {
     setOpeningQuestion("");
     setDisplayedText({}); // Reset displayed text to start fresh animations
     setChatLog([]);
+    setPendingImprovedVersion(null);
+    setImprovedVersionLoading(false);
     setLessonStartTime(Date.now());
     setTimeElapsed(0);
     setCurrentComponent(0);
@@ -1534,6 +1576,8 @@ export default function AI_chat() {
     setOpeningQuestion("");
     setDisplayedText({}); // Reset displayed text to start fresh animations
     setChatLog([]);
+    setPendingImprovedVersion(null);
+    setImprovedVersionLoading(false);
     setLessonStartTime(Date.now());
     setTimeElapsed(0);
     setCurrentComponent(0);
@@ -2735,6 +2779,8 @@ export default function AI_chat() {
                     navigate(testPath);
                   } else {
                     setChatLog([]);
+                    setPendingImprovedVersion(null);
+                    setImprovedVersionLoading(false);
                     setLessonStartTime(Date.now());
                     setTimeElapsed(0);
                     setCurrentComponent(0);
@@ -2807,9 +2853,9 @@ export default function AI_chat() {
           .msg-timer{background:#eef4ff;color:#13233f;padding:10px 12px;border-left:4px solid #4a78bd;border-radius:10px;margin-right:min(20%,220px);font-weight:700}
           .feedback-card{margin-right:min(12%,140px);background:#ffffff;border:1px solid #d9e4f2;border-radius:14px;padding:16px;box-shadow:0 14px 32px rgba(31,79,145,0.10)}
           .feedback-card-title{font-weight:800;color:#10213c;margin-bottom:14px;font-size:16px}
-          .feedback-section{margin:0 0 14px}
+          .feedback-section-message{margin-right:min(12%,140px)}
+          .feedback-section{margin:0 0 10px}
           .feedback-section:last-child{margin-bottom:0}
-          .feedback-section-intro{font-size:14px;line-height:1.5;color:#526174;font-weight:700;margin:0 0 6px;padding-left:2px}
           .feedback-section-box{padding:12px 14px;border-radius:12px;border:1px solid transparent;border-left-width:5px}
           .feedback-section-title{font-weight:800;font-size:14px;margin-bottom:6px}
           .feedback-section-list{margin:0;padding-left:18px;font-size:13px;line-height:1.6}
@@ -2827,8 +2873,8 @@ export default function AI_chat() {
           .feedback-section-pronunciation .feedback-section-title{color:#15803d}
           .feedback-section-suggestions .feedback-section-box{background:#fff1f2;border-color:#fecdd3;border-left-color:#e11d48;color:#881337}
           .feedback-section-suggestions .feedback-section-title{color:#be123c}
-          .improved-answer-card{margin-right:min(12%,140px);background:#f8fafc;border:2px solid #22c55e;border-radius:14px;padding:16px;box-shadow:0 12px 28px rgba(34,197,94,0.10)}
-          .improved-version{margin:0 0 12px;padding:12px;background:#ffffff;border-radius:10px;border:1px solid #bfdbfe}
+          .improved-answer-card{margin-right:min(12%,140px);background:#ffffff;border:1px solid #d9e4f2;border-radius:14px;padding:16px;box-shadow:0 14px 32px rgba(31,79,145,0.10)}
+          .improved-version{margin:0;padding:14px;background:#f0fdf4;border-radius:12px;border:1px solid #bbf7d0;border-left:5px solid #16a34a}
           .improved-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
           .improved-title{font-size:15px;font-weight:800;color:#166534}
           .improved-legend{display:flex;gap:6px;flex-wrap:wrap}
@@ -2837,8 +2883,8 @@ export default function AI_chat() {
           .legend-dot.grammar{background:#fde68a}
           .legend-dot.improvement{background:#bbf7d0}
           .legend-dot.clarity{background:#bae6fd}
-          .improved-text{font-size:15px;line-height:1.85;color:#10213c;background:#f8fafc;border-radius:8px;padding:12px;white-space:pre-wrap}
-          .improved-answer-card .improved-text{font-size:18px;line-height:1.9;background:#ffffff;border:1px solid #dcfce7}
+          .improved-text{font-size:15px;line-height:1.85;color:#10213c;background:#ffffff;border-radius:8px;padding:12px;white-space:pre-wrap;border:1px solid #dcfce7}
+          .improved-answer-card .improved-text{font-size:18px;line-height:1.9}
           .improved-segment{border-radius:5px;padding:2px 3px;margin:0 1px}
           .improved-segment.unchanged{padding:0;margin:0;background:transparent}
           .improved-segment.grammar{background:#fde68a;color:#713f12}
@@ -2859,6 +2905,10 @@ export default function AI_chat() {
           .answer-input{width:100%;min-height:132px;resize:vertical;border:1px solid #d9e4f2;border-radius:12px;padding:12px 14px;color:#10213c;font-size:16px;line-height:1.5;box-sizing:border-box}
           .answer-input:focus{outline:2px solid rgba(79,70,229,0.22);border-color:#7da2d7}
           .answer-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-top:10px}
+          .improved-version-action{display:flex;justify-content:flex-end;margin:16px 0 6px}
+          .improved-version-btn{min-height:44px;padding:0 18px;border:none;border-radius:999px;background:linear-gradient(90deg,#16a34a,#0e7490);color:#ffffff;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(14,116,144,0.18);transition:transform 0.16s ease,box-shadow 0.16s ease,opacity 0.16s ease}
+          .improved-version-btn:hover,.improved-version-btn:focus{transform:translateY(-1px);box-shadow:0 14px 32px rgba(14,116,144,0.24);outline:none}
+          .improved-version-btn:disabled{opacity:0.62;cursor:not-allowed;transform:none}
           @media(max-width:768px){
             .chat-header-content{gap:8px;min-height:52px;padding:0 14px}
             .chat-header-left{gap:8px;flex:1}
@@ -2877,12 +2927,13 @@ export default function AI_chat() {
             .chat-shell{padding-top:12px}
             .chat-window{min-height:calc(100vh - 176px);padding:10px;border-radius:12px}
             .chat-message-spacer{height:68px}
-            .msg-user,.msg-llm,.msg-timer,.msg-question,.feedback-card,.improved-answer-card{margin-left:0;margin-right:0}
+            .msg-user,.msg-llm,.msg-timer,.msg-question,.feedback-card,.feedback-section-message,.improved-answer-card{margin-left:0;margin-right:0}
             .feedback-section-box{padding:11px 12px}
             .improved-answer-card .improved-text{font-size:16px}
             .msg-question-text{font-size:19px}
             .msg-question{padding:16px}
             .answer-card{width:100%}
+            .improved-version-action{justify-content:center}
           }
           @media(max-width:420px){
             .chat-header-right{max-width:calc(100% - 54px)}
@@ -2924,6 +2975,8 @@ export default function AI_chat() {
                     setMode("choice");
                     setStep("initial");
                     setChatLog([]);
+                    setPendingImprovedVersion(null);
+                    setImprovedVersionLoading(false);
                     setOpeningQuestion("");
                     setLessonStartTime(null);
                     setTimeElapsed(0);
@@ -2965,19 +3018,27 @@ export default function AI_chat() {
                           <div className="msg-question-label">練習問題</div>
                           <div className="msg-question-text">{displayedText[index] ?? ""}</div>
                         </div>
-                      ) : entry.kind === "positiveComment" || entry.kind === "feedbackIntro" || entry.kind === "improvedIntro" ? (
+                      ) : entry.kind === "positiveComment" || entry.kind === "feedbackIntro" || entry.kind === "feedbackSectionIntro" || entry.kind === "improvedIntro" ? (
                         <div className="msg-llm">
                           <div style={{ whiteSpace: "pre-wrap" }}>{displayedText[index] ?? ""}</div>
+                        </div>
+                      ) : entry.kind === "feedbackSection" ? (
+                        <div className="feedback-section-message">
+                          {entry.feedbackSection && renderFeedbackSection(
+                            entry.feedbackSection.section,
+                            entry.feedbackSection.label,
+                            entry.feedbackSection.items
+                          )}
                         </div>
                       ) : entry.kind === "feedback" ? (
                         <div className="feedback-card">
                           <div className="feedback-card-title">フィードバック</div>
-                          {renderFeedbackSection(entry, "general", "総合評価", entry.feedback?.overall)}
-                          {renderFeedbackSection(entry, "grammar", "文法", entry.feedback?.grammar)}
-                          {renderFeedbackSection(entry, "vocabulary", "単語", entry.feedback?.vocabulary)}
-                          {renderFeedbackSection(entry, "fluency", "流暢さ", entry.feedback?.fluency)}
-                          {renderFeedbackSection(entry, "pronunciation", "発音", entry.feedback?.pronunciation)}
-                          {renderFeedbackSection(entry, "suggestions", "改善提案", entry.feedback?.suggestions)}
+                          {renderFeedbackSection("general", "総合評価", entry.feedback?.overall)}
+                          {renderFeedbackSection("grammar", "文法", entry.feedback?.grammar)}
+                          {renderFeedbackSection("vocabulary", "単語", entry.feedback?.vocabulary)}
+                          {renderFeedbackSection("fluency", "流暢さ", entry.feedback?.fluency)}
+                          {renderFeedbackSection("pronunciation", "発音", entry.feedback?.pronunciation)}
+                          {renderFeedbackSection("suggestions", "改善提案", entry.feedback?.suggestions)}
                         </div>
                       ) : entry.kind === "improvedAnswer" ? (
                         <div className="improved-answer-card">
@@ -3082,6 +3143,19 @@ export default function AI_chat() {
                           </button>
                         </div>
                       </div>
+                    </div>
+                  )}
+
+                  {pendingImprovedVersion && (
+                    <div className="improved-version-action">
+                      <button
+                        type="button"
+                        className="improved-version-btn"
+                        onClick={handleSeeImprovedVersion}
+                        disabled={improvedVersionLoading}
+                      >
+                        {improvedVersionLoading ? "Loading improved version..." : "See improved version"}
+                      </button>
                     </div>
                   )}
                   
