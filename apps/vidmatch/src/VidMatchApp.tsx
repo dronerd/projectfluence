@@ -27,15 +27,7 @@ type VidMatchVideo = {
 
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversation"];
-const TOPICS = [
-  "Computer Science & Technology",
-  "Medicine & Health",
-  "Business & Economics",
-  "Environmental Science & Sustainability",
-  "Law & Politics",
-  "Engineering",
-  "Art & Culture",
-];
+const TOPICS = ["travel", "daily life", "school"];
 const ACCENTS = ["American", "British", "Australian", "Canadian"];
 
 const featureCards = [
@@ -45,7 +37,7 @@ const featureCards = [
   },
   {
     title: "分野別インプット",
-    copy: "ビジネス、テクノロジー、環境、医療など、伸ばしたい専門分野に合わせて動画学習へ進めます。",
+    copy: "旅行、日常生活、学校など、今あるトピックに合わせて動画学習へ進めます。",
   },
   {
     title: "英語を英語のまま理解",
