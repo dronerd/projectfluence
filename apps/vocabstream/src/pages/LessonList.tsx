@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { apiGetVocabStreamLessonProgress, type VocabStreamLessonProgress } from "../api";
+import { useAuth } from "../AuthContext";
 
 type Lesson = {
   id: string;
@@ -52,7 +54,10 @@ export default function LessonList() {
   const { genreId } = useParams<{ genreId: string }>();
   const [lessons, setLessons] = useState<Lesson[]>([]);
   const [genreTitle, setGenreTitle] = useState<string>("");
+  const [lessonProgress, setLessonProgress] = useState<Record<string, VocabStreamLessonProgress>>({});
+  const [progressLoading, setProgressLoading] = useState(false);
   const nav = useNavigate();
+  const { token, user } = useAuth();
 
   useEffect(() => {
     if (!genreId) return;
@@ -60,6 +65,35 @@ export default function LessonList() {
     const count = LESSON_COUNT_BY_GENRE[genreId] ?? 10;
     setLessons(makeLessons(genreId, count));
   }, [genreId]);
+
+  useEffect(() => {
+    if (!genreId || !token || !user) {
+      setLessonProgress({});
+      setProgressLoading(false);
+      return;
+    }
+
+    let cancelled = false;
+    setProgressLoading(true);
+    apiGetVocabStreamLessonProgress(genreId, token)
+      .then((progress) => {
+        if (cancelled) return;
+        setLessonProgress(
+          Object.fromEntries(progress.map((item) => [item.lessonId, item])),
+        );
+      })
+      .catch((error) => {
+        console.warn("VocabStream lesson progress lookup failed", error);
+        if (!cancelled) setLessonProgress({});
+      })
+      .finally(() => {
+        if (!cancelled) setProgressLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [genreId, token, user]);
 
   if (!genreId)
     return (
@@ -76,31 +110,45 @@ export default function LessonList() {
       <button className="back-btn" onClick={() => nav("/learn")}>← 戻る</button>
 
       <div className="lessons-grid">
-        {lessons.map((l) => (
-          <article
-            key={l.id}
-            className="lesson-card"
-            onClick={() => nav(`/lesson/${l.id}`)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === "Enter" && nav(`/lesson/${l.id}`)}
-          >
-            <div className="lesson-content">
-              <div className="lesson-title">{l.title}</div>
-            </div>
+        {lessons.map((l) => {
+          const progress = lessonProgress[l.id];
+          const isCompleted = Boolean(progress && progress.totalPossible > 0);
+          const isLowScore = isCompleted && progress.percentScore < 60;
+          const statusClass = isLowScore ? "is-low-score" : isCompleted ? "is-completed" : "";
 
-            <button
-              className="start-btn"
-              onClick={(ev) => {
-                ev.stopPropagation();
-                nav(`/lesson/${l.id}`);
-              }}
+          return (
+            <article
+              key={l.id}
+              className={`lesson-card ${statusClass}`}
+              onClick={() => nav(`/lesson/${l.id}`)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" && nav(`/lesson/${l.id}`)}
             >
-              開始
-            </button>
-          </article>
-        ))}
+              <div className="lesson-content">
+                <div className="lesson-title">{l.title}</div>
+                {isCompleted && (
+                  <div className="lesson-meta">
+                    正答率 {Math.round(progress.percentScore)}%
+                  </div>
+                )}
+              </div>
+
+              <button
+                className="start-btn"
+                onClick={(ev) => {
+                  ev.stopPropagation();
+                  nav(`/lesson/${l.id}`);
+                }}
+              >
+                {isCompleted ? "復習" : "開始"}
+              </button>
+            </article>
+          );
+        })}
       </div>
+
+      {progressLoading && <p className="progress-note">学習履歴を読み込んでいます...</p>}
 
       <style>{styles}</style>
     </div>
@@ -230,6 +278,24 @@ html, body, #root {
   background: linear-gradient(135deg, #edf6ff 0%, #c5e2f5 100%);
 }
 
+.lesson-card.is-completed {
+  background: linear-gradient(135deg, #ecfdf5 0%, #bbf7d0 100%);
+  border-color: rgba(22, 163, 74, 0.42);
+}
+
+.lesson-card.is-completed::before {
+  background: linear-gradient(90deg, #15803d, #22c55e);
+}
+
+.lesson-card.is-low-score {
+  background: linear-gradient(135deg, #fffbeb 0%, #fde68a 100%);
+  border-color: rgba(202, 138, 4, 0.48);
+}
+
+.lesson-card.is-low-score::before {
+  background: linear-gradient(90deg, #ca8a04, #facc15);
+}
+
 /* Hover */
 .lesson-card:hover {
   transform: translateY(-6px);
@@ -245,7 +311,19 @@ html, body, #root {
   color: #102a56;
   letter-spacing: 0;
 }
-.lesson-meta { font-size: 14px; color: #6b7280; }
+.lesson-meta {
+  font-size: 14px;
+  color: #475569;
+  font-weight: 800;
+}
+
+.progress-note {
+  margin: 18px auto 0;
+  max-width: 1100px;
+  color: #475569;
+  font-weight: 800;
+  text-align: center;
+}
 
 /* Start Button inside card */
 .start-btn {

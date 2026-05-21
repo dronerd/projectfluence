@@ -33,6 +33,13 @@ export type VocabStreamProgressPayload = {
   questionAttempts: VocabStreamQuestionAttempt[];
 };
 
+export type VocabStreamLessonProgress = {
+  lessonId: string;
+  percentScore: number;
+  totalPossible: number;
+  updatedAt: string;
+};
+
 async function tryFetchJson(path: string): Promise<any | null> {
   try {
     const r = await fetch(path);
@@ -97,6 +104,25 @@ export async function apiSubmitVocabStreamProgress(payload: VocabStreamProgressP
   }
 
   return res.json();
+}
+
+export async function apiGetVocabStreamLessonProgress(genre: string, accessToken?: string | null) {
+  if (!accessToken) return [] as VocabStreamLessonProgress[];
+
+  const params = new URLSearchParams({ genre });
+  const res = await fetch(`/api/vocabstream/lesson-progress?${params}`, {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => null);
+    throw new Error(error?.error || "Failed to load VocabStream lesson progress");
+  }
+
+  const data = (await res.json()) as { progress?: VocabStreamLessonProgress[] };
+  return data.progress ?? [];
 }
 
 /* ------------------------

@@ -1,3 +1,5 @@
+create extension if not exists pgcrypto;
+
 create table if not exists public.vidmatch_videos (
   id uuid primary key default gen_random_uuid(),
   video_id text not null unique,
@@ -18,6 +20,27 @@ create table if not exists public.vidmatch_videos (
   updated_at timestamptz not null default now()
 );
 
+create table if not exists public.vidmatch_video_view_history (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users (id) on delete cascade,
+  video_id text not null,
+  title text not null,
+  channel_name text not null,
+  youtube_url text not null,
+  thumbnail_url text,
+  duration text,
+  level text,
+  skills text[] not null default '{}',
+  topics text[] not null default '{}',
+  accent text,
+  quality_score numeric(5, 2) not null default 0 check (quality_score >= 0 and quality_score <= 100),
+  click_count integer not null default 1 check (click_count >= 1),
+  created_at timestamptz not null default now(),
+  last_clicked_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (user_id, video_id)
+);
+
 alter table public.vidmatch_videos
 drop constraint if exists vidmatch_videos_level_check;
 
@@ -31,6 +54,10 @@ create index if not exists vidmatch_videos_transcript_available_idx on public.vi
 create index if not exists vidmatch_videos_skills_idx on public.vidmatch_videos using gin (skills);
 create index if not exists vidmatch_videos_topics_idx on public.vidmatch_videos using gin (topics);
 create index if not exists vidmatch_videos_tags_idx on public.vidmatch_videos using gin (tags);
+create index if not exists vidmatch_video_view_history_user_idx
+on public.vidmatch_video_view_history (user_id, last_clicked_at desc);
+create index if not exists vidmatch_video_view_history_video_idx
+on public.vidmatch_video_view_history (video_id);
 
 create or replace function public.set_updated_at()
 returns trigger as $$
@@ -46,10 +73,33 @@ before update on public.vidmatch_videos
 for each row
 execute function public.set_updated_at();
 
-alter table public.vidmatch_videos enable row level security;
+drop trigger if exists set_vidmatch_video_view_history_updated_at on public.vidmatch_video_view_history;
+create trigger set_vidmatch_video_view_history_updated_at
+before update on public.vidmatch_video_view_history
+for each row
+execute function public.set_updated_at();
 
+alter table public.vidmatch_videos enable row level security;
+alter table public.vidmatch_video_view_history enable row level security;
+
+drop policy if exists "Service role can manage VidMatch videos" on public.vidmatch_videos;
 create policy "Service role can manage VidMatch videos"
 on public.vidmatch_videos
+for all
+to service_role
+using (true)
+with check (true);
+
+drop policy if exists "Users can read own VidMatch history" on public.vidmatch_video_view_history;
+create policy "Users can read own VidMatch history"
+on public.vidmatch_video_view_history
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Service role can manage VidMatch history" on public.vidmatch_video_view_history;
+create policy "Service role can manage VidMatch history"
+on public.vidmatch_video_view_history
 for all
 to service_role
 using (true)

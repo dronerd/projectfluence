@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import AuthButton from "@/app/components/AuthButton";
+import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
 type Props = {
   pathname: string;
@@ -24,6 +25,12 @@ type VidMatchVideo = {
   description: string | null;
   tags: string[];
   quality_score: number;
+};
+
+type VidMatchHistoryItem = VidMatchVideo & {
+  click_count?: number;
+  last_clicked_at: string;
+  created_at: string;
 };
 
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
@@ -56,6 +63,10 @@ export default function VidMatchApp({ pathname }: Props) {
   const [recommendations, setRecommendations] = useState<VidMatchVideo[]>([]);
   const [recommendationError, setRecommendationError] = useState("");
   const [recommendationLoading, setRecommendationLoading] = useState(false);
+  const [history, setHistory] = useState<VidMatchHistoryItem[]>([]);
+  const [historyLoading, setHistoryLoading] = useState(false);
+  const [historyError, setHistoryError] = useState("");
+  const supabase = useMemo(() => getSupabaseBrowserClient(), []);
 
   const scrollToTop = useCallback(() => {
     if (typeof window !== "undefined") {
@@ -63,7 +74,8 @@ export default function VidMatchApp({ pathname }: Props) {
     }
   }, []);
 
-  const isNestedRoute = pathname !== "/";
+  const isHistoryRoute = pathname === "/history";
+  const isNestedRoute = pathname !== "/" && !isHistoryRoute;
 
   const toggleValue = (value: string, values: string[], setValues: React.Dispatch<React.SetStateAction<string[]>>) => {
     setValues(values.includes(value) ? values.filter((item) => item !== value) : [...values, value]);
@@ -107,6 +119,69 @@ export default function VidMatchApp({ pathname }: Props) {
       setRecommendations([]);
     } finally {
       setRecommendationLoading(false);
+    }
+  };
+
+  const getAccessToken = useCallback(async () => {
+    if (!supabase) return null;
+    const { data } = await supabase.auth.getSession();
+    return data.session?.access_token ?? null;
+  }, [supabase]);
+
+  const fetchHistory = useCallback(async () => {
+    setHistoryLoading(true);
+    setHistoryError("");
+
+    try {
+      const accessToken = await getAccessToken();
+      if (!accessToken) {
+        setHistory([]);
+        setHistoryError("ログインすると動画の視聴履歴を確認できます。");
+        return;
+      }
+
+      const response = await fetch("/api/vidmatch/history", {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+      const data = await response.json();
+
+      if (!response.ok || data.error) {
+        throw new Error(data.error || "History request failed");
+      }
+
+      setHistory(data.history ?? []);
+    } catch (error) {
+      console.error(error);
+      setHistoryError("視聴履歴を取得できませんでした。少し時間をおいて再試行してください。");
+      setHistory([]);
+    } finally {
+      setHistoryLoading(false);
+    }
+  }, [getAccessToken]);
+
+  useEffect(() => {
+    if (isHistoryRoute) {
+      fetchHistory();
+    }
+  }, [fetchHistory, isHistoryRoute]);
+
+  const recordVideoClick = async (video: VidMatchVideo) => {
+    try {
+      const accessToken = await getAccessToken();
+      if (!accessToken) return;
+
+      await fetch("/api/vidmatch/history", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify(video),
+      });
+    } catch (error) {
+      console.warn("VidMatch history tracking failed", error);
     }
   };
 
@@ -345,6 +420,7 @@ export default function VidMatchApp({ pathname }: Props) {
 
         .choice-chip,
         .recommend-button,
+        .history-button,
         .youtube-link {
           border: 1px solid #d1d5db;
           border-radius: 18px;
@@ -434,8 +510,20 @@ export default function VidMatchApp({ pathname }: Props) {
           color: #ffffff;
         }
 
+        .history-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 42px;
+          background: #ffffff;
+          color: #173a71;
+          text-decoration: none;
+        }
+
         .recommend-button:hover,
         .recommend-button:focus,
+        .history-button:hover,
+        .history-button:focus,
         .youtube-link:hover,
         .youtube-link:focus {
           transform: translateY(-6px);
@@ -475,6 +563,21 @@ export default function VidMatchApp({ pathname }: Props) {
           border-radius: 14px;
           background: #ffffff;
           box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+        }
+
+        .history-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 14px;
+          flex-wrap: wrap;
+          margin-bottom: 18px;
+        }
+
+        .history-date {
+          color: #64748b;
+          font-size: 14px;
+          font-weight: 800;
         }
 
         .recommendation-thumb {
@@ -661,6 +764,64 @@ export default function VidMatchApp({ pathname }: Props) {
       </header>
 
       <main className="vidmatch-main">
+        {isHistoryRoute ? (
+          <section className="vidmatch-section" aria-labelledby="vidmatch-history-title">
+            <div className="history-header">
+              <h2 id="vidmatch-history-title">動画の視聴履歴</h2>
+              <Link href="/vidmatch" className="history-button">
+                動画を探す
+              </Link>
+            </div>
+
+            {historyError && <p className="recommend-error">{historyError}</p>}
+            {historyLoading && <p className="empty-recommendations">視聴履歴を読み込んでいます...</p>}
+
+            {!historyLoading && history.length > 0 && (
+              <div className="recommendation-grid" aria-live="polite">
+                {history.map((video) => (
+                  <article key={video.video_id} className="recommendation-card">
+                    {video.thumbnail_url && (
+                      <img src={video.thumbnail_url} alt="" className="recommendation-thumb" loading="lazy" />
+                    )}
+                    <div className="recommendation-body">
+                      <h3 className="recommendation-title">{video.title}</h3>
+                      <p className="recommendation-meta">
+                        {video.channel_name} / {video.level || "level未設定"} / score{" "}
+                        {Math.round(Number(video.quality_score))}
+                      </p>
+                      <p className="history-date">
+                        最終クリック: {formatDateTime(video.last_clicked_at)}
+                      </p>
+                      <div className="recommendation-tags">
+                        {[...(video.skills ?? []), ...(video.topics ?? [])].slice(0, 6).map((tag) => (
+                          <span key={`${video.video_id}-${tag}`} className="recommendation-tag">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <a
+                        className="youtube-link"
+                        href={video.youtube_url}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => void recordVideoClick(video)}
+                      >
+                        YouTubeで見る
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+
+            {!historyLoading && !historyError && history.length === 0 && (
+              <p className="empty-recommendations">
+                まだ視聴履歴がありません。おすすめ動画から「YouTubeで見る」を押すとここに表示されます。
+              </p>
+            )}
+          </section>
+        ) : (
+          <>
         <section className="vidmatch-hero" aria-labelledby="vidmatch-title">
           <div className="vidmatch-heading">
             <Image
@@ -805,6 +966,9 @@ export default function VidMatchApp({ pathname }: Props) {
               >
                 {recommendationLoading ? "検索中..." : "おすすめを見る"}
               </button>
+              <Link href="/vidmatch/history" className="history-button">
+                動画の視聴履歴を見る
+              </Link>
               {recommendationError && <span className="recommend-error">{recommendationError}</span>}
             </div>
           </div>
@@ -833,7 +997,13 @@ export default function VidMatchApp({ pathname }: Props) {
                         {video.description.length > 150 ? `${video.description.slice(0, 150)}...` : video.description}
                       </p>
                     )}
-                    <a className="youtube-link" href={video.youtube_url} target="_blank" rel="noreferrer">
+                    <a
+                      className="youtube-link"
+                      href={video.youtube_url}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => void recordVideoClick(video)}
+                    >
                       YouTubeで見る
                     </a>
                   </div>
@@ -848,7 +1018,18 @@ export default function VidMatchApp({ pathname }: Props) {
             </p>
           )}
         </section>
+          </>
+        )}
       </main>
     </div>
   );
+}
+
+function formatDateTime(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("ja-JP", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(date);
 }
