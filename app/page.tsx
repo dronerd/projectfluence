@@ -217,7 +217,7 @@ export default function ExtraPage() {
 
           <div className="absolute right-4 flex items-center gap-3">
             <div className="hidden sm:flex items-center gap-2">
-              <AuthButton compact variant="banner" />
+              <AuthButton compact variant="banner" userMenu />
               <AuthButton compact variant="banner" initialMode="sign-up" />
             </div>
 
@@ -279,8 +279,8 @@ export default function ExtraPage() {
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <AuthButton />
-                <AuthButton initialMode="sign-up" />
+                <AuthButton hideWhenAuthenticated />
+                <AuthButton hideWhenAuthenticated initialMode="sign-up" />
                 <Link
                   href="/vocabstream"
                   className="rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600"
@@ -681,7 +681,7 @@ export default function ExtraPage() {
             <nav className="flex flex-col gap-4 text-lg">
               <div className="border-b border-gray-200 pb-4 sm:hidden">
                 <div className="flex flex-col gap-3">
-                  <AuthButton />
+                  <AuthButton userMenu />
                   <AuthButton initialMode="sign-up" />
                 </div>
               </div>

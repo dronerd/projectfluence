@@ -6,9 +6,11 @@ import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
 type AuthButtonProps = {
   compact?: boolean;
+  hideWhenAuthenticated?: boolean;
   variant?: "gradient" | "banner";
   initialMode?: AuthMode;
   onAuthenticated?: () => void;
+  userMenu?: boolean;
 };
 
 type AuthMode = "sign-in" | "sign-up";
@@ -17,9 +19,11 @@ let passwordRecoveryClaimed = false;
 
 export default function AuthButton({
   compact = false,
+  hideWhenAuthenticated = false,
   variant = "gradient",
   initialMode = "sign-in",
   onAuthenticated,
+  userMenu = false,
 }: AuthButtonProps) {
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
   const [user, setUser] = useState<User | null>(null);
@@ -29,9 +33,15 @@ export default function AuthButton({
   const [email, setEmail] = useState("");
   const [resetEmail, setResetEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmNewPassword, setConfirmNewPassword] = useState("");
   const [passwordUpdateOpen, setPasswordUpdateOpen] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  const [showConfirmNewPassword, setShowConfirmNewPassword] = useState(false);
+  const [accountMenuOpen, setAccountMenuOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -41,8 +51,13 @@ export default function AuthButton({
     setPasswordUpdateOpen(true);
     setEmail("");
     setPassword("");
+    setConfirmPassword("");
     setNewPassword("");
     setConfirmNewPassword("");
+    setShowPassword(false);
+    setShowConfirmPassword(false);
+    setShowNewPassword(false);
+    setShowConfirmNewPassword(false);
     setMessage(initialMessage);
     setModalOpen(true);
   }, []);
@@ -77,6 +92,7 @@ export default function AuthButton({
           setMessage("登録されました。");
           setEmail("");
           setPassword("");
+          setConfirmPassword("");
         } else {
           setModalOpen(false);
         }
@@ -102,6 +118,11 @@ export default function AuthButton({
       return;
     }
 
+    if (mode === "sign-up" && password !== confirmPassword) {
+      setMessage("確認用パスワードが一致しません。");
+      return;
+    }
+
     setLoading(true);
     try {
       const response =
@@ -120,6 +141,7 @@ export default function AuthButton({
         if (response.data.session) {
           setEmail("");
           setPassword("");
+          setConfirmPassword("");
         }
         setMessage(
           response.data.session
@@ -219,12 +241,18 @@ export default function AuthButton({
     if (!supabase) return;
     await supabase.auth.signOut();
     setUser(null);
+    setAccountMenuOpen(false);
     setEmail("");
     setPassword("");
+    setConfirmPassword("");
     setResetEmail("");
     setNewPassword("");
     setConfirmNewPassword("");
     setPasswordUpdateOpen(false);
+    setShowPassword(false);
+    setShowConfirmPassword(false);
+    setShowNewPassword(false);
+    setShowConfirmNewPassword(false);
     setMessage("");
     setModalOpen(false);
     passwordRecoveryClaimed = false;
@@ -236,14 +264,21 @@ export default function AuthButton({
     setPasswordUpdateOpen(false);
     setEmail("");
     setPassword("");
+    setConfirmPassword("");
     setResetEmail("");
     setNewPassword("");
     setConfirmNewPassword("");
+    setShowPassword(false);
+    setShowConfirmPassword(false);
+    setShowNewPassword(false);
+    setShowConfirmNewPassword(false);
     setMessage("");
+    setAccountMenuOpen(false);
     setModalOpen(true);
   }
 
   const label = user ? "ログアウト" : initialMode === "sign-up" ? "新規登録" : "ログイン";
+  const accountLabel = getUserDisplayLabel(user);
   const buttonClass =
     variant === "banner"
       ? "rounded-full border border-white/70 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-white/15"
@@ -251,8 +286,48 @@ export default function AuthButton({
         ? "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110"
         : "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:brightness-110";
 
+  if (user && hideWhenAuthenticated && !modalOpen) {
+    return null;
+  }
+
   if (user && initialMode === "sign-up" && !modalOpen) {
     return null;
+  }
+
+  if (user && userMenu && !modalOpen) {
+    return (
+      <div className="relative">
+        <button
+          type="button"
+          onClick={() => setAccountMenuOpen((open) => !open)}
+          className={`${buttonClass} flex max-w-[220px] items-center gap-2`}
+          aria-expanded={accountMenuOpen}
+          aria-haspopup="menu"
+        >
+          <span className="truncate">{accountLabel}</span>
+          <span aria-hidden="true" className="text-xs">▼</span>
+        </button>
+
+        {accountMenuOpen && (
+          <div
+            role="menu"
+            className="absolute right-0 mt-2 w-56 rounded-xl border border-gray-200 bg-white p-2 text-gray-900 shadow-xl"
+          >
+            <div className="border-b border-gray-100 px-3 py-2 text-xs text-gray-500">
+              <div className="truncate">{accountLabel}</div>
+            </div>
+            <button
+              type="button"
+              role="menuitem"
+              onClick={handleLogout}
+              className="mt-1 w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
+            >
+              ログアウト
+            </button>
+          </div>
+        )}
+      </div>
+    );
   }
 
   return (
@@ -290,6 +365,10 @@ export default function AuthButton({
                   onClick={() => {
                     setMode("sign-in");
                     setResetPasswordOpen(false);
+                    setPassword("");
+                    setConfirmPassword("");
+                    setShowPassword(false);
+                    setShowConfirmPassword(false);
                     setMessage("");
                   }}
                   className={`rounded-full px-3 py-2 ${mode === "sign-in" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
@@ -301,6 +380,10 @@ export default function AuthButton({
                   onClick={() => {
                     setMode("sign-up");
                     setResetPasswordOpen(false);
+                    setPassword("");
+                    setConfirmPassword("");
+                    setShowPassword(false);
+                    setShowConfirmPassword(false);
                     setMessage("");
                   }}
                   className={`rounded-full px-3 py-2 ${mode === "sign-up" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
@@ -314,28 +397,40 @@ export default function AuthButton({
               <form onSubmit={handlePasswordUpdate} className="mt-5 space-y-3">
                 <label className="block text-sm font-semibold text-gray-700">
                   新しいパスワード
-                  <input
-                    type="password"
-                    value={newPassword}
-                    onChange={(event) => setNewPassword(event.target.value)}
-                    required
-                    minLength={6}
-                    autoComplete="new-password"
-                    className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                  />
+                  <span className="relative mt-1 block">
+                    <input
+                      type={showNewPassword ? "text" : "password"}
+                      value={newPassword}
+                      onChange={(event) => setNewPassword(event.target.value)}
+                      required
+                      minLength={6}
+                      autoComplete="new-password"
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                    />
+                    <PasswordVisibilityButton
+                      visible={showNewPassword}
+                      onClick={() => setShowNewPassword((visible) => !visible)}
+                    />
+                  </span>
                   <span className="mt-1 block text-xs font-medium text-gray-500">6文字以上で入力してください。</span>
                 </label>
                 <label className="block text-sm font-semibold text-gray-700">
                   新しいパスワードを再入力
-                  <input
-                    type="password"
-                    value={confirmNewPassword}
-                    onChange={(event) => setConfirmNewPassword(event.target.value)}
-                    required
-                    minLength={6}
-                    autoComplete="new-password"
-                    className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                  />
+                  <span className="relative mt-1 block">
+                    <input
+                      type={showConfirmNewPassword ? "text" : "password"}
+                      value={confirmNewPassword}
+                      onChange={(event) => setConfirmNewPassword(event.target.value)}
+                      required
+                      minLength={6}
+                      autoComplete="new-password"
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                    />
+                    <PasswordVisibilityButton
+                      visible={showConfirmNewPassword}
+                      onClick={() => setShowConfirmNewPassword((visible) => !visible)}
+                    />
+                  </span>
                 </label>
                 <button
                   type="submit"
@@ -392,19 +487,45 @@ export default function AuthButton({
                   </label>
                   <label className="block text-sm font-semibold text-gray-700">
                     {mode === "sign-up" ? "パスワードを作成してください" : "パスワード"}
-                    <input
-                      type="password"
-                      value={password}
-                      onChange={(event) => setPassword(event.target.value)}
-                      required
-                      minLength={6}
-                      autoComplete={mode === "sign-up" ? "new-password" : "current-password"}
-                      className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                    />
+                    <span className="relative mt-1 block">
+                      <input
+                        type={showPassword ? "text" : "password"}
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}
+                        required
+                        minLength={6}
+                        autoComplete={mode === "sign-up" ? "new-password" : "current-password"}
+                        className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                      />
+                      <PasswordVisibilityButton
+                        visible={showPassword}
+                        onClick={() => setShowPassword((visible) => !visible)}
+                      />
+                    </span>
                     {mode === "sign-up" && (
                       <span className="mt-1 block text-xs font-medium text-gray-500">6文字以上で入力してください。</span>
                     )}
                   </label>
+                  {mode === "sign-up" && (
+                    <label className="block text-sm font-semibold text-gray-700">
+                      パスワードを再入力してください
+                      <span className="relative mt-1 block">
+                        <input
+                          type={showConfirmPassword ? "text" : "password"}
+                          value={confirmPassword}
+                          onChange={(event) => setConfirmPassword(event.target.value)}
+                          required
+                          minLength={6}
+                          autoComplete="new-password"
+                          className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                        />
+                        <PasswordVisibilityButton
+                          visible={showConfirmPassword}
+                          onClick={() => setShowConfirmPassword((visible) => !visible)}
+                        />
+                      </span>
+                    </label>
+                  )}
                   <button
                     type="submit"
                     disabled={loading}
@@ -484,4 +605,48 @@ function getAuthRedirectUrl() {
 function getPasswordResetRedirectUrl() {
   const baseUrl = getAuthRedirectUrl();
   return baseUrl ? `${baseUrl.replace(/\/$/, "")}/auth/reset-password` : undefined;
+}
+
+function getUserDisplayLabel(user: User | null) {
+  if (!user) return "";
+  const metadata = user.user_metadata;
+  const name =
+    typeof metadata?.full_name === "string"
+      ? metadata.full_name
+      : typeof metadata?.name === "string"
+        ? metadata.name
+        : "";
+
+  return name || user.email || "アカウント";
+}
+
+function PasswordVisibilityButton({
+  visible,
+  onClick,
+}: {
+  visible: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="absolute inset-y-0 right-0 flex w-11 items-center justify-center rounded-r-lg text-gray-500 transition hover:bg-gray-100 hover:text-gray-800"
+      aria-label={visible ? "パスワードを隠す" : "パスワードを表示"}
+    >
+      {visible ? (
+        <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="m3 3 18 18" />
+          <path d="M10.6 10.6a2 2 0 0 0 2.8 2.8" />
+          <path d="M9.9 4.2A10.4 10.4 0 0 1 12 4c5.2 0 8.5 4.2 9.5 5.7a1.5 1.5 0 0 1 0 1.6 16.3 16.3 0 0 1-2.1 2.6" />
+          <path d="M6.5 6.7a16 16 0 0 0-4 3 1.5 1.5 0 0 0 0 1.6C3.5 12.8 6.8 17 12 17a10.1 10.1 0 0 0 3.5-.6" />
+        </svg>
+      ) : (
+        <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M2.5 9.7a1.5 1.5 0 0 0 0 1.6C3.5 12.8 6.8 17 12 17s8.5-4.2 9.5-5.7a1.5 1.5 0 0 0 0-1.6C20.5 8.2 17.2 4 12 4S3.5 8.2 2.5 9.7Z" />
+          <circle cx="12" cy="10.5" r="2.5" />
+        </svg>
+      )}
+    </button>
+  );
 }
