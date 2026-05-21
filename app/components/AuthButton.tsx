@@ -73,13 +73,21 @@ export default function AuthButton({
               email: normalizedEmail,
               password,
               options: {
-                emailRedirectTo: typeof window !== "undefined" ? window.location.origin : undefined,
+                emailRedirectTo: getAuthRedirectUrl(),
               },
             })
           : await supabase.auth.signInWithPassword({ email: normalizedEmail, password });
 
       if (response.error) throw response.error;
-      setMessage(mode === "sign-up" ? "登録が完了しました。" : "");
+      if (mode === "sign-up") {
+        setMessage(
+          response.data.session
+            ? "登録が完了しました。"
+            : "確認メールを送信しました。メール内のリンクを開いてからログインしてください。",
+        );
+      } else {
+        setMessage("");
+      }
     } catch (error) {
       setMessage(formatAuthError(error, mode));
     } finally {
@@ -98,7 +106,7 @@ export default function AuthButton({
 
     setLoading(true);
     const { error } = await supabase.auth.resetPasswordForEmail(resetEmail.trim(), {
-      redirectTo: typeof window !== "undefined" ? window.location.origin : undefined,
+      redirectTo: getAuthRedirectUrl(),
     });
 
     if (error) {
@@ -121,7 +129,7 @@ export default function AuthButton({
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: typeof window !== "undefined" ? window.location.origin : undefined,
+        redirectTo: getAuthRedirectUrl(),
       },
     });
 
@@ -323,9 +331,17 @@ function formatAuthError(error: unknown, mode: AuthMode) {
     return "このメールアドレスはすでに登録されています。";
   }
 
+  if (normalized.includes("email not confirmed") || normalized.includes("not confirmed")) {
+    return "メールアドレスの確認が完了していません。確認メール内のリンクを開いてからログインしてください。";
+  }
+
   if (normalized.includes("invalid login credentials")) {
     return "メールアドレスまたはパスワードが正しくありません。";
   }
 
   return message;
+}
+
+function getAuthRedirectUrl() {
+  return process.env.NEXT_PUBLIC_SITE_URL || (typeof window !== "undefined" ? window.location.origin : undefined);
 }
