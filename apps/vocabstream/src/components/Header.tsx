@@ -244,10 +244,6 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           </div>
 
           <div className="header-right">
-            <Link to="/learn" className="header-pill vocab-pill" onClick={scrollToTop} aria-label="VocabStream learn page">
-              <img src="/images/vocabstream.png" alt="VocabStream logo" />
-              <span>Home</span>
-            </Link>
             {!isLoginPage && (
               <>
                 <AuthButton compact variant="banner" userMenu />
