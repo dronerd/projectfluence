@@ -42,13 +42,17 @@ export default function AuthButton({
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
       if (session?.user) {
-        setModalOpen(false);
+        if (mode === "sign-up") {
+          setMessage("登録されました。");
+        } else {
+          setModalOpen(false);
+        }
         onAuthenticated?.();
       }
     });
 
     return () => subscription.unsubscribe();
-  }, [onAuthenticated, supabase]);
+  }, [mode, onAuthenticated, supabase]);
 
   async function handleEmailAuth(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -82,7 +86,7 @@ export default function AuthButton({
       if (mode === "sign-up") {
         setMessage(
           response.data.session
-            ? "登録が完了しました。"
+            ? "登録されました。"
             : "確認メールを送信しました。メール内のリンクを開いてからログインしてください。",
         );
       } else {
@@ -159,6 +163,10 @@ export default function AuthButton({
       : compact
         ? "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110"
         : "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:brightness-110";
+
+  if (user && initialMode === "sign-up") {
+    return null;
+  }
 
   return (
     <>
@@ -259,7 +267,7 @@ export default function AuthButton({
                     />
                   </label>
                   <label className="block text-sm font-semibold text-gray-700">
-                    Password
+                    {mode === "sign-up" ? "パスワードを作成してください" : "パスワード"}
                     <input
                       type="password"
                       value={password}
@@ -269,6 +277,9 @@ export default function AuthButton({
                       autoComplete={mode === "sign-up" ? "new-password" : "current-password"}
                       className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                     />
+                    {mode === "sign-up" && (
+                      <span className="mt-1 block text-xs font-medium text-gray-500">6文字以上で入力してください。</span>
+                    )}
                   </label>
                   <button
                     type="submit"
@@ -304,7 +315,7 @@ export default function AuthButton({
                   disabled={loading}
                   className="w-full rounded-full border border-gray-300 px-4 py-3 font-bold text-gray-800 shadow-sm transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  Googleでログイン
+                  {mode === "sign-up" ? "Googleで登録" : "Googleでログイン"}
                 </button>
               </>
             )}
