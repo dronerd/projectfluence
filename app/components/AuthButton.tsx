@@ -44,6 +44,8 @@ export default function AuthButton({
       if (session?.user) {
         if (mode === "sign-up") {
           setMessage("登録されました。");
+          setEmail("");
+          setPassword("");
         } else {
           setModalOpen(false);
         }
@@ -84,6 +86,10 @@ export default function AuthButton({
 
       if (response.error) throw response.error;
       if (mode === "sign-up") {
+        if (response.data.session) {
+          setEmail("");
+          setPassword("");
+        }
         setMessage(
           response.data.session
             ? "登録されました。"
@@ -147,11 +153,19 @@ export default function AuthButton({
     if (!supabase) return;
     await supabase.auth.signOut();
     setUser(null);
+    setEmail("");
+    setPassword("");
+    setResetEmail("");
+    setMessage("");
+    setModalOpen(false);
   }
 
   function openAuthModal() {
     setMode(initialMode);
     setResetPasswordOpen(false);
+    setEmail("");
+    setPassword("");
+    setResetEmail("");
     setMessage("");
     setModalOpen(true);
   }
@@ -164,7 +178,7 @@ export default function AuthButton({
         ? "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110"
         : "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:brightness-110";
 
-  if (user && initialMode === "sign-up") {
+  if (user && initialMode === "sign-up" && !modalOpen) {
     return null;
   }
 
@@ -180,7 +194,7 @@ export default function AuthButton({
 
       {modalOpen && (
         <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/50 px-4">
-          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+          <div className="w-full max-w-md rounded-2xl bg-white p-6 text-gray-950 shadow-2xl">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h2 className="text-2xl font-bold text-gray-950">Project Fluence</h2>
@@ -204,7 +218,7 @@ export default function AuthButton({
                   setResetPasswordOpen(false);
                   setMessage("");
                 }}
-                className={`rounded-full px-3 py-2 ${mode === "sign-in" ? "bg-white shadow-sm" : "text-gray-600"}`}
+                className={`rounded-full px-3 py-2 ${mode === "sign-in" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
               >
                 ログイン
               </button>
@@ -215,7 +229,7 @@ export default function AuthButton({
                   setResetPasswordOpen(false);
                   setMessage("");
                 }}
-                className={`rounded-full px-3 py-2 ${mode === "sign-up" ? "bg-white shadow-sm" : "text-gray-600"}`}
+                className={`rounded-full px-3 py-2 ${mode === "sign-up" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
               >
                 新規登録
               </button>
