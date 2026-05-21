@@ -1,6 +1,6 @@
 import React from "react";
-import { useAuth } from "../AuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import AuthButton from "@/app/components/AuthButton";
+import { Link } from "react-router-dom";
 
 type HeaderProps = {
   title?: string;
@@ -9,9 +9,6 @@ type HeaderProps = {
 };
 
 export default function Header({ title, isLoginPage }: HeaderProps) {
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
-
   const scrollToTop = () => {
     const opts: ScrollToOptions = { top: 0, behavior: "smooth" };
     try {
@@ -21,16 +18,6 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
     } catch {
       if (document?.documentElement) document.documentElement.scrollTop = 0;
       if (document?.body) document.body.scrollTop = 0;
-    }
-  };
-
-  const handleLogoutAndGotoLanding = async () => {
-    try {
-      await logout?.();
-    } catch (err) {
-      console.error("logout error:", err);
-    } finally {
-      navigate("/learn");
     }
   };
 
@@ -56,7 +43,7 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
           border-bottom: 1px solid rgba(158, 180, 210, 0.16);
           width: 100%;
           box-sizing: border-box;
-          overflow-x: hidden;
+          overflow: visible;
           box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
         }
 
@@ -261,10 +248,11 @@ export default function Header({ title, isLoginPage }: HeaderProps) {
               <img src="/images/vocabstream.png" alt="VocabStream logo" />
               <span>Home</span>
             </Link>
-            {user && !isLoginPage && (
-              <button className="header-icon-btn" onClick={handleLogoutAndGotoLanding}>
-                <span>ログアウト</span>
-              </button>
+            {!isLoginPage && (
+              <>
+                <AuthButton compact variant="banner" userMenu />
+                <AuthButton compact variant="banner" initialMode="sign-up" />
+              </>
             )}
           </div>
         </div>

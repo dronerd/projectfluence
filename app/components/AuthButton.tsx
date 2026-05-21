@@ -44,6 +44,7 @@ export default function AuthButton({
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const signupSucceeded = mode === "sign-up" && message === "登録されました。";
 
   const openPasswordUpdateForm = useCallback((initialMessage = "新しいパスワードを設定してください。") => {
     setMode("sign-in");
@@ -156,6 +157,11 @@ export default function AuthButton({
     } finally {
       setLoading(false);
     }
+  }
+
+  function handleStartUsingApp() {
+    setMessage("");
+    setModalOpen(false);
   }
 
   async function handlePasswordReset(event: React.FormEvent<HTMLFormElement>) {
@@ -566,6 +572,15 @@ export default function AuthButton({
             )}
 
             {message && <p className="mt-4 rounded-lg bg-amber-50 p-3 text-sm text-amber-900">{message}</p>}
+            {signupSucceeded && (
+              <button
+                type="button"
+                onClick={handleStartUsingApp}
+                className="mt-3 w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md transition hover:brightness-110"
+              >
+                アプリを使い始める
+              </button>
+            )}
           </div>
         </div>
       )}
@@ -617,7 +632,7 @@ function getUserDisplayLabel(user: User | null) {
         ? metadata.name
         : "";
 
-  return name || user.email || "アカウント";
+  return user.email || name || "アカウント";
 }
 
 function PasswordVisibilityButton({

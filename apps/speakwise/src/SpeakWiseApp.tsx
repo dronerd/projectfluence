@@ -2,6 +2,7 @@
 
 import AIChat from "./pages/AI_chat";
 import { Navigate } from "./lib/router-compat";
+import AuthButton from "@/app/components/AuthButton";
 
 type Props = {
   pathname: string;
@@ -29,7 +30,10 @@ function SpeakWiseHeader() {
           </a>
         </div>
 
-        <div className="speakwise-header-right" aria-hidden="true" />
+        <div className="speakwise-header-right">
+          <AuthButton compact variant="banner" userMenu />
+          <AuthButton compact variant="banner" initialMode="sign-up" />
+        </div>
       </div>
     </header>
   );

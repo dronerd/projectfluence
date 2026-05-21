@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useCallback, useState } from "react";
+import AuthButton from "@/app/components/AuthButton";
 
 type Props = {
   pathname: string;
@@ -131,7 +132,7 @@ export default function VidMatchApp({ pathname }: Props) {
           border-bottom: 1px solid rgba(158, 180, 210, 0.16);
           width: 100%;
           box-sizing: border-box;
-          overflow-x: hidden;
+          overflow: visible;
           box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
         }
 
@@ -652,7 +653,10 @@ export default function VidMatchApp({ pathname }: Props) {
             </Link>
           </div>
 
-          <div className="header-right" aria-hidden="true" />
+          <div className="header-right">
+            <AuthButton compact variant="banner" userMenu />
+            <AuthButton compact variant="banner" initialMode="sign-up" />
+          </div>
         </div>
       </header>
 

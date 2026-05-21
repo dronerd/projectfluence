@@ -48,6 +48,8 @@ export default function ResetPasswordPage() {
 
     setNewPassword("");
     setConfirmPassword("");
+    setShowNewPassword(false);
+    setShowConfirmPassword(false);
     setSuccess(true);
     setMessage("パスワードを更新しました。");
   }
@@ -72,10 +74,12 @@ export default function ResetPasswordPage() {
                 disabled={success}
                 className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 disabled:bg-gray-100"
               />
-              <PasswordVisibilityButton
-                visible={showNewPassword}
-                onClick={() => setShowNewPassword((visible) => !visible)}
-              />
+              {!success && (
+                <PasswordVisibilityButton
+                  visible={showNewPassword}
+                  onClick={() => setShowNewPassword((visible) => !visible)}
+                />
+              )}
             </span>
             <span className="mt-1 block text-xs font-medium text-gray-500">6文字以上で入力してください。</span>
           </label>
@@ -93,10 +97,12 @@ export default function ResetPasswordPage() {
                 disabled={success}
                 className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 disabled:bg-gray-100"
               />
-              <PasswordVisibilityButton
-                visible={showConfirmPassword}
-                onClick={() => setShowConfirmPassword((visible) => !visible)}
-              />
+              {!success && (
+                <PasswordVisibilityButton
+                  visible={showConfirmPassword}
+                  onClick={() => setShowConfirmPassword((visible) => !visible)}
+                />
+              )}
             </span>
           </label>
 
@@ -118,7 +124,7 @@ export default function ResetPasswordPage() {
         {success && (
           <Link
             href="/"
-            className="mt-4 inline-flex w-full justify-center rounded-full border border-gray-300 px-4 py-3 text-sm font-bold text-gray-700 shadow-sm transition hover:bg-gray-50"
+            className="mt-4 inline-flex w-full justify-center rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 text-sm font-bold text-white shadow-md transition hover:brightness-110"
           >
             ホームに戻る
           </Link>
