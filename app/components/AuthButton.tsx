@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
@@ -12,6 +12,8 @@ type AuthButtonProps = {
 };
 
 type AuthMode = "sign-in" | "sign-up";
+
+let passwordRecoveryClaimed = false;
 
 export default function AuthButton({
   compact = false,
@@ -27,11 +29,35 @@ export default function AuthButton({
   const [email, setEmail] = useState("");
   const [resetEmail, setResetEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = useState("");
+  const [passwordUpdateOpen, setPasswordUpdateOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
+  const openPasswordUpdateForm = useCallback((initialMessage = "新しいパスワードを設定してください。") => {
+    setMode("sign-in");
+    setResetPasswordOpen(false);
+    setPasswordUpdateOpen(true);
+    setEmail("");
+    setPassword("");
+    setNewPassword("");
+    setConfirmNewPassword("");
+    setMessage(initialMessage);
+    setModalOpen(true);
+  }, []);
+
   useEffect(() => {
     if (!supabase) return;
+
+    const isPasswordRecoveryUrl =
+      typeof window !== "undefined" &&
+      (window.location.hash.includes("type=recovery") || window.location.search.includes("type=recovery"));
+
+    if (isPasswordRecoveryUrl && !passwordRecoveryClaimed) {
+      passwordRecoveryClaimed = true;
+      openPasswordUpdateForm();
+    }
 
     supabase.auth.getUser().then(({ data }) => {
       setUser(data.user ?? null);
@@ -39,8 +65,13 @@ export default function AuthButton({
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
       setUser(session?.user ?? null);
+      if (event === "PASSWORD_RECOVERY" && !passwordRecoveryClaimed) {
+        passwordRecoveryClaimed = true;
+        openPasswordUpdateForm();
+        return;
+      }
       if (session?.user) {
         if (mode === "sign-up") {
           setMessage("登録されました。");
@@ -54,7 +85,7 @@ export default function AuthButton({
     });
 
     return () => subscription.unsubscribe();
-  }, [mode, onAuthenticated, supabase]);
+  }, [mode, onAuthenticated, openPasswordUpdateForm, supabase]);
 
   async function handleEmailAuth(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -116,13 +147,48 @@ export default function AuthButton({
 
     setLoading(true);
     const { error } = await supabase.auth.resetPasswordForEmail(resetEmail.trim(), {
-      redirectTo: getAuthRedirectUrl(),
+      redirectTo: getPasswordResetRedirectUrl(),
     });
 
     if (error) {
       setMessage(error.message);
     } else {
       setMessage("パスワード再設定用のメールを送信しました。");
+    }
+    setLoading(false);
+  }
+
+  async function handlePasswordUpdate(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setMessage("");
+
+    if (!supabase) {
+      setMessage("Supabase public environment variables are not configured.");
+      return;
+    }
+
+    if (newPassword.length < 6) {
+      setMessage("パスワードは6文字以上で入力してください。");
+      return;
+    }
+
+    if (newPassword !== confirmNewPassword) {
+      setMessage("確認用パスワードが一致しません。");
+      return;
+    }
+
+    setLoading(true);
+    const { error } = await supabase.auth.updateUser({ password: newPassword });
+
+    if (error) {
+      setMessage(formatAuthError(error, "sign-in"));
+    } else {
+      setNewPassword("");
+      setConfirmNewPassword("");
+      setPasswordUpdateOpen(false);
+      setModalOpen(false);
+      setMessage("");
+      passwordRecoveryClaimed = false;
     }
     setLoading(false);
   }
@@ -156,16 +222,23 @@ export default function AuthButton({
     setEmail("");
     setPassword("");
     setResetEmail("");
+    setNewPassword("");
+    setConfirmNewPassword("");
+    setPasswordUpdateOpen(false);
     setMessage("");
     setModalOpen(false);
+    passwordRecoveryClaimed = false;
   }
 
   function openAuthModal() {
     setMode(initialMode);
     setResetPasswordOpen(false);
+    setPasswordUpdateOpen(false);
     setEmail("");
     setPassword("");
     setResetEmail("");
+    setNewPassword("");
+    setConfirmNewPassword("");
     setMessage("");
     setModalOpen(true);
   }
@@ -210,32 +283,69 @@ export default function AuthButton({
               </button>
             </div>
 
-            <div className="mt-5 grid grid-cols-2 rounded-full bg-gray-100 p-1 text-sm font-semibold">
-              <button
-                type="button"
-                onClick={() => {
-                  setMode("sign-in");
-                  setResetPasswordOpen(false);
-                  setMessage("");
-                }}
-                className={`rounded-full px-3 py-2 ${mode === "sign-in" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
-              >
-                ログイン
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setMode("sign-up");
-                  setResetPasswordOpen(false);
-                  setMessage("");
-                }}
-                className={`rounded-full px-3 py-2 ${mode === "sign-up" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
-              >
-                新規登録
-              </button>
-            </div>
+            {!passwordUpdateOpen && (
+              <div className="mt-5 grid grid-cols-2 rounded-full bg-gray-100 p-1 text-sm font-semibold">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMode("sign-in");
+                    setResetPasswordOpen(false);
+                    setMessage("");
+                  }}
+                  className={`rounded-full px-3 py-2 ${mode === "sign-in" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
+                >
+                  ログイン
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMode("sign-up");
+                    setResetPasswordOpen(false);
+                    setMessage("");
+                  }}
+                  className={`rounded-full px-3 py-2 ${mode === "sign-up" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
+                >
+                  新規登録
+                </button>
+              </div>
+            )}
 
-            {resetPasswordOpen ? (
+            {passwordUpdateOpen ? (
+              <form onSubmit={handlePasswordUpdate} className="mt-5 space-y-3">
+                <label className="block text-sm font-semibold text-gray-700">
+                  新しいパスワード
+                  <input
+                    type="password"
+                    value={newPassword}
+                    onChange={(event) => setNewPassword(event.target.value)}
+                    required
+                    minLength={6}
+                    autoComplete="new-password"
+                    className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                  />
+                  <span className="mt-1 block text-xs font-medium text-gray-500">6文字以上で入力してください。</span>
+                </label>
+                <label className="block text-sm font-semibold text-gray-700">
+                  新しいパスワードを再入力
+                  <input
+                    type="password"
+                    value={confirmNewPassword}
+                    onChange={(event) => setConfirmNewPassword(event.target.value)}
+                    required
+                    minLength={6}
+                    autoComplete="new-password"
+                    className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                  />
+                </label>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
+                >
+                  {loading ? "更新中..." : "パスワードを更新"}
+                </button>
+              </form>
+            ) : resetPasswordOpen ? (
               <form onSubmit={handlePasswordReset} className="mt-5 space-y-3">
                 <label className="block text-sm font-semibold text-gray-700">
                   メールアドレス
@@ -369,4 +479,9 @@ function formatAuthError(error: unknown, mode: AuthMode) {
 
 function getAuthRedirectUrl() {
   return process.env.NEXT_PUBLIC_SITE_URL || (typeof window !== "undefined" ? window.location.origin : undefined);
+}
+
+function getPasswordResetRedirectUrl() {
+  const baseUrl = getAuthRedirectUrl();
+  return baseUrl ? `${baseUrl.replace(/\/$/, "")}/auth/reset-password` : undefined;
 }
