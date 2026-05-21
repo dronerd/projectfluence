@@ -681,7 +681,7 @@ export default function ExtraPage() {
             <nav className="flex flex-col gap-4 text-lg">
               <div className="border-b border-gray-200 pb-4 sm:hidden">
                 <div className="flex flex-col gap-3">
-                  <AuthButton userMenu />
+                  <AuthButton />
                   <AuthButton initialMode="sign-up" />
                 </div>
               </div>

@@ -1,8 +1,9 @@
 
 // src/pages/AI_chat.tsx
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { useNavigate } from "../lib/router-compat";
 import { OPENING_QUESTIONS, LEVELS } from "../lib/openingQuestions";
+import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 import {
   ANSWER_READY_PROMPTS,
   LEVEL_FEEDBACK_INTRO_PROMPTS,
@@ -162,6 +163,25 @@ const TOPICS = [
 
 type PracticeMode = "speaking" | "writing";
 type CEFRLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
+type VocabLessonType = "range" | "individual";
+
+type SpeakWiseLessonSettings = {
+  practiceMode: PracticeMode;
+  level: CEFRLevel;
+  selectedTopics: string[];
+  customTopic: string;
+  selectedTests: string[];
+  customTest: string;
+  selectedSkills: string[];
+  selectedDuration: string;
+  selectedComponents: string[];
+  vocabCategory: string;
+  vocabLessonType: VocabLessonType;
+  vocabRangeStart: string;
+  vocabRangeEnd: string;
+  vocabIndividualLessons: string[];
+  selectedVoice: string;
+};
 
 const DEFAULT_LEVEL = "B2";
 
@@ -179,6 +199,24 @@ const MESSAGE_TIMING_BY_LEVEL: Record<CEFRLevel, { typingMs: number; pauseMs: nu
   B2: { typingMs: 50, pauseMs: 560 },
   C1: { typingMs: 40, pauseMs: 440 },
   C2: { typingMs: TYPING_SPEED_MS, pauseMs: STARTUP_MESSAGE_PAUSE_MS },
+};
+
+const DEFAULT_SPEAKWISE_LESSON_SETTINGS: SpeakWiseLessonSettings = {
+  practiceMode: "speaking",
+  level: DEFAULT_LEVEL,
+  selectedTopics: [],
+  customTopic: "",
+  selectedTests: ["特になし"],
+  customTest: "",
+  selectedSkills: [],
+  selectedDuration: "15",
+  selectedComponents: [GENERAL_COMPONENT],
+  vocabCategory: "word-beginner",
+  vocabLessonType: "range",
+  vocabRangeStart: "1",
+  vocabRangeEnd: "5",
+  vocabIndividualLessons: ["1"],
+  selectedVoice: "alloy",
 };
 
 const IMPROVEMENT_LABELS: Record<ImprovementType, string> = {
@@ -283,6 +321,73 @@ const normalizeImprovedVersion = (rawImprovedVersion: unknown): ImprovedVersion 
   };
 };
 
+function sanitizeSpeakWiseLessonSettings(value: unknown): SpeakWiseLessonSettings | null {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+  const settings = value as Partial<SpeakWiseLessonSettings>;
+  const practiceMode = isPracticeMode(settings.practiceMode)
+    ? settings.practiceMode
+    : DEFAULT_SPEAKWISE_LESSON_SETTINGS.practiceMode;
+
+  return {
+    practiceMode,
+    level: isCEFRLevel(settings.level) ? settings.level : DEFAULT_SPEAKWISE_LESSON_SETTINGS.level,
+    selectedTopics: readStringArray(settings.selectedTopics, TOPICS),
+    customTopic: readString(settings.customTopic),
+    selectedTests: readStringArray(settings.selectedTests, TESTS, ["特になし"]),
+    customTest: readString(settings.customTest),
+    selectedSkills: readStringArray(settings.selectedSkills, SKILLS),
+    selectedDuration: readAllowedString(settings.selectedDuration, ["5", "10", "15", "20", "25", "30"]) ||
+      DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedDuration,
+    selectedComponents: sanitizeComponents(settings.selectedComponents, practiceMode),
+    vocabCategory: readAllowedString(settings.vocabCategory, Object.keys(CATEGORIES)) ||
+      DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabCategory,
+    vocabLessonType: settings.vocabLessonType === "individual" ? "individual" : "range",
+    vocabRangeStart: readPositiveIntegerString(settings.vocabRangeStart) ||
+      DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabRangeStart,
+    vocabRangeEnd: readPositiveIntegerString(settings.vocabRangeEnd) ||
+      DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabRangeEnd,
+    vocabIndividualLessons: readStringArray(settings.vocabIndividualLessons).filter((lesson) => /^\d+$/.test(lesson)),
+    selectedVoice: readString(settings.selectedVoice) || DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedVoice,
+  };
+}
+
+function isPracticeMode(value: unknown): value is PracticeMode {
+  return value === "speaking" || value === "writing";
+}
+
+function isCEFRLevel(value: unknown): value is CEFRLevel {
+  return typeof value === "string" && LEVELS.includes(value as CEFRLevel);
+}
+
+function readString(value: unknown) {
+  return typeof value === "string" ? value.trim() : "";
+}
+
+function readStringArray(value: unknown, allowedValues?: readonly string[], fallback: string[] = []) {
+  if (!Array.isArray(value)) return fallback;
+  const values = value
+    .filter((item): item is string => typeof item === "string" && item.trim().length > 0)
+    .map((item) => item.trim());
+  const filtered = allowedValues ? values.filter((item) => allowedValues.includes(item)) : values;
+  return Array.from(new Set(filtered));
+}
+
+function readAllowedString(value: unknown, allowedValues: readonly string[]) {
+  const text = readString(value);
+  return allowedValues.includes(text) ? text : "";
+}
+
+function readPositiveIntegerString(value: unknown) {
+  const text = readString(value);
+  return /^\d+$/.test(text) && Number(text) > 0 ? text : "";
+}
+
+function sanitizeComponents(value: unknown, practiceMode: PracticeMode) {
+  const allowedComponents = practiceMode === "speaking" ? SPEAKING_COMPONENTS : WRITING_COMPONENTS;
+  const components = readStringArray(value, allowedComponents);
+  return components.length > 0 ? components : [GENERAL_COMPONENT];
+}
+
 export default function AI_chat() {
   const navigate = useNavigate();
 
@@ -309,22 +414,24 @@ export default function AI_chat() {
   const [step, setStep] = useState<ConversationStep>("initial");
 
   // Common settings
-  const [level, setLevel] = useState(DEFAULT_LEVEL);
+  const [level, setLevel] = useState<CEFRLevel>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.level);
   const [levelConfirmed, setLevelConfirmed] = useState(true);
-  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
-  const [customTopic, setCustomTopic] = useState("");
+  const [selectedTopics, setSelectedTopics] = useState<string[]>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedTopics);
+  const [customTopic, setCustomTopic] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.customTopic);
 
   // Lesson settings
-  const [selectedTests, setSelectedTests] = useState<string[]>(["特になし"]);
-  const [customTest, setCustomTest] = useState("");
-  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
-  const [selectedDuration, setSelectedDuration] = useState("15");
-  const [selectedComponents, setSelectedComponents] = useState<string[]>([GENERAL_COMPONENT]);
-  const [vocabCategory, setVocabCategory] = useState("word-beginner");
-  const [vocabLessonType, setVocabLessonType] = useState<"range" | "individual">("range");
-  const [vocabRangeStart, setVocabRangeStart] = useState("1");
-  const [vocabRangeEnd, setVocabRangeEnd] = useState("5");
-  const [vocabIndividualLessons, setVocabIndividualLessons] = useState<string[]>(["1"]);
+  const [selectedTests, setSelectedTests] = useState<string[]>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedTests);
+  const [customTest, setCustomTest] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.customTest);
+  const [selectedSkills, setSelectedSkills] = useState<string[]>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedSkills);
+  const [selectedDuration, setSelectedDuration] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedDuration);
+  const [selectedComponents, setSelectedComponents] = useState<string[]>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedComponents);
+  const [vocabCategory, setVocabCategory] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabCategory);
+  const [vocabLessonType, setVocabLessonType] = useState<VocabLessonType>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabLessonType);
+  const [vocabRangeStart, setVocabRangeStart] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabRangeStart);
+  const [vocabRangeEnd, setVocabRangeEnd] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabRangeEnd);
+  const [vocabIndividualLessons, setVocabIndividualLessons] = useState<string[]>(
+    DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabIndividualLessons,
+  );
 
   // Timer state for lessons
   const [lessonStartTime, setLessonStartTime] = useState<number | null>(null);
@@ -337,14 +444,14 @@ export default function AI_chat() {
 
   // Voice / audio playback state
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [selectedVoice, setSelectedVoice] = useState<string>("alloy");
+  const [selectedVoice, setSelectedVoice] = useState<string>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedVoice);
   const [loadingVoiceIndex, setLoadingVoiceIndex] = useState<number | null>(null);
 
   // Chat state
   const [userInput, setUserInput] = useState("");
   const [chatLog, setChatLog] = useState<ChatEntry[]>([]);
   const [openingQuestion, setOpeningQuestion] = useState("");
-  const [practiceMode, setPracticeMode] = useState<PracticeMode>("speaking");
+  const [practiceMode, setPracticeMode] = useState<PracticeMode>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.practiceMode);
   const [displayedText, setDisplayedText] = useState<Record<number, string>>({});
   const [awaitingQuestionChoice, setAwaitingQuestionChoice] = useState(false);
   const [awaitingMoodChoice, setAwaitingMoodChoice] = useState(false);
@@ -368,7 +475,170 @@ export default function AI_chat() {
   const [lastUserAnswer, setLastUserAnswer] = useState("");
   const recentOpeningQuestionsRef = useRef<Set<string>>(new Set());
   const recognitionRef = useRef<any>(null);
+  const settingsLoadedRef = useRef(false);
+  const supabase = useMemo(() => getSupabaseBrowserClient(), []);
+  const [settingsAccessToken, setSettingsAccessToken] = useState<string | null>(null);
   // Removed: eikenActive, eikenStage, conversationHistory, eikenDisplayText, eikenTTS, eikenMuted, eikenUserInput
+
+  const currentLessonSettings = useMemo<SpeakWiseLessonSettings>(() => ({
+    practiceMode,
+    level,
+    selectedTopics,
+    customTopic,
+    selectedTests,
+    customTest,
+    selectedSkills,
+    selectedDuration,
+    selectedComponents,
+    vocabCategory,
+    vocabLessonType,
+    vocabRangeStart,
+    vocabRangeEnd,
+    vocabIndividualLessons,
+    selectedVoice,
+  }), [
+    practiceMode,
+    level,
+    selectedTopics,
+    customTopic,
+    selectedTests,
+    customTest,
+    selectedSkills,
+    selectedDuration,
+    selectedComponents,
+    vocabCategory,
+    vocabLessonType,
+    vocabRangeStart,
+    vocabRangeEnd,
+    vocabIndividualLessons,
+    selectedVoice,
+  ]);
+
+  useEffect(() => {
+    if (!supabase) {
+      settingsLoadedRef.current = true;
+      setSettingsAccessToken(null);
+      return;
+    }
+
+    let mounted = true;
+    supabase.auth.getSession().then(({ data }) => {
+      if (!mounted) return;
+      setSettingsAccessToken(data.session?.access_token ?? null);
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      settingsLoadedRef.current = false;
+      setSettingsAccessToken(session?.access_token ?? null);
+    });
+
+    return () => {
+      mounted = false;
+      subscription.unsubscribe();
+    };
+  }, [supabase]);
+
+  useEffect(() => {
+    if (!settingsAccessToken) {
+      settingsLoadedRef.current = true;
+      return;
+    }
+
+    let cancelled = false;
+    settingsLoadedRef.current = false;
+
+    fetch("/api/speakwise/lesson-settings", {
+      headers: {
+        Authorization: `Bearer ${settingsAccessToken}`,
+      },
+    })
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok || data.error) {
+          throw new Error(data.error || "SpeakWise settings request failed");
+        }
+        return sanitizeSpeakWiseLessonSettings(data.settings);
+      })
+      .then((settings) => {
+        if (cancelled || !settings) return;
+        applyStoredLessonSettings(settings);
+      })
+      .catch((error) => {
+        console.warn("SpeakWise lesson settings lookup failed", error);
+      })
+      .finally(() => {
+        if (!cancelled) settingsLoadedRef.current = true;
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [settingsAccessToken]);
+
+  useEffect(() => {
+    if (!settingsAccessToken || !settingsLoadedRef.current) return;
+
+    const saveTimer = window.setTimeout(() => {
+      fetch("/api/speakwise/lesson-settings", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${settingsAccessToken}`,
+        },
+        body: JSON.stringify({ settings: currentLessonSettings }),
+      }).catch((error) => {
+        console.warn("SpeakWise lesson settings save failed", error);
+      });
+    }, 700);
+
+    return () => window.clearTimeout(saveTimer);
+  }, [currentLessonSettings, settingsAccessToken]);
+
+  function applyStoredLessonSettings(settings: SpeakWiseLessonSettings) {
+    setPracticeMode(settings.practiceMode);
+    setLevel(settings.level);
+    setLevelConfirmed(true);
+    setSelectedTopics(settings.selectedTopics);
+    setCustomTopic(settings.customTopic);
+    setSelectedTests(settings.selectedTests.length > 0 ? settings.selectedTests : ["特になし"]);
+    setCustomTest(settings.customTest);
+    setSelectedSkills(settings.selectedSkills);
+    setSelectedDuration(settings.selectedDuration);
+    setSelectedComponents(settings.selectedComponents.length > 0 ? settings.selectedComponents : [GENERAL_COMPONENT]);
+    setVocabCategory(settings.vocabCategory);
+    setVocabLessonType(settings.vocabLessonType);
+    setVocabRangeStart(settings.vocabRangeStart);
+    setVocabRangeEnd(settings.vocabRangeEnd);
+    setVocabIndividualLessons(
+      settings.vocabIndividualLessons.length > 0 ? settings.vocabIndividualLessons : ["1"],
+    );
+    setSelectedVoice(settings.selectedVoice);
+  }
+
+  async function recordSpeakWiseLessonSession(nextMode: PracticeMode) {
+    if (!settingsAccessToken) return;
+
+    try {
+      await fetch("/api/speakwise/lesson-sessions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${settingsAccessToken}`,
+        },
+        body: JSON.stringify({
+          mode: nextMode,
+          level,
+          plannedDurationMinutes: Number(selectedDuration) || 0,
+          selectedTopics: topicsToPass,
+          selectedComponents,
+        }),
+      });
+    } catch (error) {
+      console.warn("SpeakWise session analytics save failed", error);
+    }
+  }
 
   // ページマウント時にRenderのバックエンドサーバーをウォームアップ
   useEffect(() => {
@@ -1664,6 +1934,7 @@ export default function AI_chat() {
 
   const handleSpeakingStart = async () => {
     if (!validateSharedSetup()) return;
+    void recordSpeakWiseLessonSession("speaking");
 
     setOpeningQuestion("");
     setDisplayedText({}); // Reset displayed text to start fresh animations
@@ -1718,6 +1989,8 @@ export default function AI_chat() {
       navigate(testPath);
       return;
     }
+
+    void recordSpeakWiseLessonSession("writing");
 
     setOpeningQuestion("");
     setDisplayedText({}); // Reset displayed text to start fresh animations
@@ -2225,7 +2498,7 @@ export default function AI_chat() {
               <section className="setup-section full">
                 <h2>英語レベル</h2>
                 <div className="levels">
-                  {["A1", "A2", "B1", "B2", "C1", "C2"].map((lvl) => (
+                  {LEVELS.map((lvl) => (
                     <button
                       key={lvl}
                       onClick={() => {
@@ -2370,7 +2643,7 @@ export default function AI_chat() {
             </div>
 
             <div className="levels">
-              {["A1", "A2", "B1", "B2", "C1", "C2"].map((lvl) => (
+              {LEVELS.map((lvl) => (
                 <button
                   key={lvl}
                   onClick={() => {

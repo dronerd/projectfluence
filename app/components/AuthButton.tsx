@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import type { User } from "@supabase/supabase-js";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
@@ -291,6 +292,248 @@ export default function AuthButton({
       : compact
         ? "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110"
         : "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:brightness-110";
+  const authModal =
+    modalOpen && typeof document !== "undefined"
+      ? createPortal(
+          <div className="fixed inset-0 z-[70] flex items-start justify-center overflow-y-auto bg-black/50 px-4 py-6 sm:items-center">
+            <div className="my-auto max-h-[calc(100vh-3rem)] w-full max-w-md overflow-y-auto rounded-2xl bg-white p-6 text-gray-950 shadow-2xl">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-950">Project Fluence</h2>
+                  <p className="mt-1 text-sm text-gray-600">ログインすると学習進捗がアカウントに保存されます。</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setModalOpen(false)}
+                  className="rounded-full px-3 py-1 text-xl leading-none text-gray-600 hover:bg-gray-100"
+                  aria-label="Close login"
+                >
+                  x
+                </button>
+              </div>
+
+              {!passwordUpdateOpen && (
+                <div className="mt-5 grid grid-cols-2 rounded-full bg-gray-100 p-1 text-sm font-semibold">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMode("sign-in");
+                      setResetPasswordOpen(false);
+                      setPassword("");
+                      setConfirmPassword("");
+                      setShowPassword(false);
+                      setShowConfirmPassword(false);
+                      setMessage("");
+                    }}
+                    className={`rounded-full px-3 py-2 ${mode === "sign-in" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
+                  >
+                    ログイン
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMode("sign-up");
+                      setResetPasswordOpen(false);
+                      setPassword("");
+                      setConfirmPassword("");
+                      setShowPassword(false);
+                      setShowConfirmPassword(false);
+                      setMessage("");
+                    }}
+                    className={`rounded-full px-3 py-2 ${mode === "sign-up" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
+                  >
+                    新規登録
+                  </button>
+                </div>
+              )}
+
+              {passwordUpdateOpen ? (
+                <form onSubmit={handlePasswordUpdate} className="mt-5 space-y-3">
+                  <label className="block text-sm font-semibold text-gray-700">
+                    新しいパスワード
+                    <span className="relative mt-1 block">
+                      <input
+                        type={showNewPassword ? "text" : "password"}
+                        value={newPassword}
+                        onChange={(event) => setNewPassword(event.target.value)}
+                        required
+                        minLength={6}
+                        autoComplete="new-password"
+                        className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                      />
+                      <PasswordVisibilityButton
+                        visible={showNewPassword}
+                        onClick={() => setShowNewPassword((visible) => !visible)}
+                      />
+                    </span>
+                    <span className="mt-1 block text-xs font-medium text-gray-500">6文字以上で入力してください。</span>
+                  </label>
+                  <label className="block text-sm font-semibold text-gray-700">
+                    新しいパスワードを再入力
+                    <span className="relative mt-1 block">
+                      <input
+                        type={showConfirmNewPassword ? "text" : "password"}
+                        value={confirmNewPassword}
+                        onChange={(event) => setConfirmNewPassword(event.target.value)}
+                        required
+                        minLength={6}
+                        autoComplete="new-password"
+                        className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                      />
+                      <PasswordVisibilityButton
+                        visible={showConfirmNewPassword}
+                        onClick={() => setShowConfirmNewPassword((visible) => !visible)}
+                      />
+                    </span>
+                  </label>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
+                  >
+                    {loading ? "更新中..." : "パスワードを更新"}
+                  </button>
+                </form>
+              ) : resetPasswordOpen ? (
+                <form onSubmit={handlePasswordReset} className="mt-5 space-y-3">
+                  <label className="block text-sm font-semibold text-gray-700">
+                    メールアドレス
+                    <input
+                      type="email"
+                      value={resetEmail}
+                      onChange={(event) => setResetEmail(event.target.value)}
+                      required
+                      autoComplete="email"
+                      className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                    />
+                  </label>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
+                  >
+                    {loading ? "送信中..." : "再設定メールを送信"}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setResetPasswordOpen(false);
+                      setMessage("");
+                    }}
+                    className="w-full rounded-full border border-gray-300 px-4 py-3 font-bold text-gray-700 shadow-sm transition hover:bg-gray-50"
+                  >
+                    ログインに戻る
+                  </button>
+                </form>
+              ) : (
+                <>
+                  <form onSubmit={handleEmailAuth} className="mt-5 space-y-3">
+                    <label className="block text-sm font-semibold text-gray-700">
+                      メールアドレス
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                        required
+                        autoComplete="email"
+                        className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                      />
+                    </label>
+                    <label className="block text-sm font-semibold text-gray-700">
+                      {mode === "sign-up" ? "パスワードを作成してください" : "パスワード"}
+                      <span className="relative mt-1 block">
+                        <input
+                          type={showPassword ? "text" : "password"}
+                          value={password}
+                          onChange={(event) => setPassword(event.target.value)}
+                          required
+                          minLength={6}
+                          autoComplete={mode === "sign-up" ? "new-password" : "current-password"}
+                          className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                        />
+                        <PasswordVisibilityButton
+                          visible={showPassword}
+                          onClick={() => setShowPassword((visible) => !visible)}
+                        />
+                      </span>
+                      {mode === "sign-up" && (
+                        <span className="mt-1 block text-xs font-medium text-gray-500">6文字以上で入力してください。</span>
+                      )}
+                    </label>
+                    {mode === "sign-up" && (
+                      <label className="block text-sm font-semibold text-gray-700">
+                        パスワードを再入力してください
+                        <span className="relative mt-1 block">
+                          <input
+                            type={showConfirmPassword ? "text" : "password"}
+                            value={confirmPassword}
+                            onChange={(event) => setConfirmPassword(event.target.value)}
+                            required
+                            minLength={6}
+                            autoComplete="new-password"
+                            className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                          />
+                          <PasswordVisibilityButton
+                            visible={showConfirmPassword}
+                            onClick={() => setShowConfirmPassword((visible) => !visible)}
+                          />
+                        </span>
+                      </label>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      {loading ? "処理中..." : mode === "sign-up" ? "登録" : "ログイン"}
+                    </button>
+                  </form>
+
+                  {mode === "sign-in" && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setResetPasswordOpen(true);
+                        setMessage("");
+                      }}
+                      className="mt-3 text-sm font-semibold text-indigo-700 underline-offset-4 hover:underline"
+                    >
+                      パスワードを忘れた場合
+                    </button>
+                  )}
+
+                  <div className="my-5 flex items-center gap-3 text-xs text-gray-500">
+                    <span className="h-px flex-1 bg-gray-200" />
+                    or
+                    <span className="h-px flex-1 bg-gray-200" />
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={handleGoogleAuth}
+                    disabled={loading}
+                    className="w-full rounded-full border border-gray-300 px-4 py-3 font-bold text-gray-800 shadow-sm transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-70"
+                  >
+                    {mode === "sign-up" ? "Googleで登録" : "Googleでログイン"}
+                  </button>
+                </>
+              )}
+
+              {message && <p className="mt-4 rounded-lg bg-amber-50 p-3 text-sm text-amber-900">{message}</p>}
+              {signupSucceeded && (
+                <button
+                  type="button"
+                  onClick={handleStartUsingApp}
+                  className="mt-3 w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md transition hover:brightness-110"
+                >
+                  アプリを使い始める
+                </button>
+              )}
+            </div>
+          </div>,
+          document.body,
+        )
+      : null;
 
   if (user && hideWhenAuthenticated && !modalOpen) {
     return null;
@@ -322,6 +565,14 @@ export default function AuthButton({
             <div className="border-b border-gray-100 px-3 py-2 text-xs text-gray-500">
               <div className="truncate">{accountLabel}</div>
             </div>
+            <a
+              role="menuitem"
+              href="/analytics"
+              onClick={() => setAccountMenuOpen(false)}
+              className="mt-1 block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
+            >
+              学習分析
+            </a>
             <button
               type="button"
               role="menuitem"
@@ -345,245 +596,7 @@ export default function AuthButton({
       >
         {label}
       </button>
-
-      {modalOpen && (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/50 px-4">
-          <div className="w-full max-w-md rounded-2xl bg-white p-6 text-gray-950 shadow-2xl">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-950">Project Fluence</h2>
-                <p className="mt-1 text-sm text-gray-600">ログインすると学習進捗がアカウントに保存されます。</p>
-              </div>
-              <button
-                type="button"
-                onClick={() => setModalOpen(false)}
-                className="rounded-full px-3 py-1 text-xl leading-none text-gray-600 hover:bg-gray-100"
-                aria-label="Close login"
-              >
-                x
-              </button>
-            </div>
-
-            {!passwordUpdateOpen && (
-              <div className="mt-5 grid grid-cols-2 rounded-full bg-gray-100 p-1 text-sm font-semibold">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setMode("sign-in");
-                    setResetPasswordOpen(false);
-                    setPassword("");
-                    setConfirmPassword("");
-                    setShowPassword(false);
-                    setShowConfirmPassword(false);
-                    setMessage("");
-                  }}
-                  className={`rounded-full px-3 py-2 ${mode === "sign-in" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
-                >
-                  ログイン
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setMode("sign-up");
-                    setResetPasswordOpen(false);
-                    setPassword("");
-                    setConfirmPassword("");
-                    setShowPassword(false);
-                    setShowConfirmPassword(false);
-                    setMessage("");
-                  }}
-                  className={`rounded-full px-3 py-2 ${mode === "sign-up" ? "bg-white text-gray-950 shadow-sm" : "text-gray-600"}`}
-                >
-                  新規登録
-                </button>
-              </div>
-            )}
-
-            {passwordUpdateOpen ? (
-              <form onSubmit={handlePasswordUpdate} className="mt-5 space-y-3">
-                <label className="block text-sm font-semibold text-gray-700">
-                  新しいパスワード
-                  <span className="relative mt-1 block">
-                    <input
-                      type={showNewPassword ? "text" : "password"}
-                      value={newPassword}
-                      onChange={(event) => setNewPassword(event.target.value)}
-                      required
-                      minLength={6}
-                      autoComplete="new-password"
-                      className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                    />
-                    <PasswordVisibilityButton
-                      visible={showNewPassword}
-                      onClick={() => setShowNewPassword((visible) => !visible)}
-                    />
-                  </span>
-                  <span className="mt-1 block text-xs font-medium text-gray-500">6文字以上で入力してください。</span>
-                </label>
-                <label className="block text-sm font-semibold text-gray-700">
-                  新しいパスワードを再入力
-                  <span className="relative mt-1 block">
-                    <input
-                      type={showConfirmNewPassword ? "text" : "password"}
-                      value={confirmNewPassword}
-                      onChange={(event) => setConfirmNewPassword(event.target.value)}
-                      required
-                      minLength={6}
-                      autoComplete="new-password"
-                      className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                    />
-                    <PasswordVisibilityButton
-                      visible={showConfirmNewPassword}
-                      onClick={() => setShowConfirmNewPassword((visible) => !visible)}
-                    />
-                  </span>
-                </label>
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
-                >
-                  {loading ? "更新中..." : "パスワードを更新"}
-                </button>
-              </form>
-            ) : resetPasswordOpen ? (
-              <form onSubmit={handlePasswordReset} className="mt-5 space-y-3">
-                <label className="block text-sm font-semibold text-gray-700">
-                  メールアドレス
-                  <input
-                    type="email"
-                    value={resetEmail}
-                    onChange={(event) => setResetEmail(event.target.value)}
-                    required
-                    autoComplete="email"
-                    className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                  />
-                </label>
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
-                >
-                  {loading ? "送信中..." : "再設定メールを送信"}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setResetPasswordOpen(false);
-                    setMessage("");
-                  }}
-                  className="w-full rounded-full border border-gray-300 px-4 py-3 font-bold text-gray-700 shadow-sm transition hover:bg-gray-50"
-                >
-                  ログインに戻る
-                </button>
-              </form>
-            ) : (
-              <>
-                <form onSubmit={handleEmailAuth} className="mt-5 space-y-3">
-                  <label className="block text-sm font-semibold text-gray-700">
-                    メールアドレス
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(event) => setEmail(event.target.value)}
-                      required
-                      autoComplete="email"
-                      className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                    />
-                  </label>
-                  <label className="block text-sm font-semibold text-gray-700">
-                    {mode === "sign-up" ? "パスワードを作成してください" : "パスワード"}
-                    <span className="relative mt-1 block">
-                      <input
-                        type={showPassword ? "text" : "password"}
-                        value={password}
-                        onChange={(event) => setPassword(event.target.value)}
-                        required
-                        minLength={6}
-                        autoComplete={mode === "sign-up" ? "new-password" : "current-password"}
-                        className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                      />
-                      <PasswordVisibilityButton
-                        visible={showPassword}
-                        onClick={() => setShowPassword((visible) => !visible)}
-                      />
-                    </span>
-                    {mode === "sign-up" && (
-                      <span className="mt-1 block text-xs font-medium text-gray-500">6文字以上で入力してください。</span>
-                    )}
-                  </label>
-                  {mode === "sign-up" && (
-                    <label className="block text-sm font-semibold text-gray-700">
-                      パスワードを再入力してください
-                      <span className="relative mt-1 block">
-                        <input
-                          type={showConfirmPassword ? "text" : "password"}
-                          value={confirmPassword}
-                          onChange={(event) => setConfirmPassword(event.target.value)}
-                          required
-                          minLength={6}
-                          autoComplete="new-password"
-                          className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                        />
-                        <PasswordVisibilityButton
-                          visible={showConfirmPassword}
-                          onClick={() => setShowConfirmPassword((visible) => !visible)}
-                        />
-                      </span>
-                    </label>
-                  )}
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
-                  >
-                    {loading ? "処理中..." : mode === "sign-up" ? "登録" : "ログイン"}
-                  </button>
-                </form>
-
-                {mode === "sign-in" && (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setResetPasswordOpen(true);
-                      setMessage("");
-                    }}
-                    className="mt-3 text-sm font-semibold text-indigo-700 underline-offset-4 hover:underline"
-                  >
-                    パスワードを忘れた場合
-                  </button>
-                )}
-
-                <div className="my-5 flex items-center gap-3 text-xs text-gray-500">
-                  <span className="h-px flex-1 bg-gray-200" />
-                  or
-                  <span className="h-px flex-1 bg-gray-200" />
-                </div>
-
-                <button
-                  type="button"
-                  onClick={handleGoogleAuth}
-                  disabled={loading}
-                  className="w-full rounded-full border border-gray-300 px-4 py-3 font-bold text-gray-800 shadow-sm transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-70"
-                >
-                  {mode === "sign-up" ? "Googleで登録" : "Googleでログイン"}
-                </button>
-              </>
-            )}
-
-            {message && <p className="mt-4 rounded-lg bg-amber-50 p-3 text-sm text-amber-900">{message}</p>}
-            {signupSucceeded && (
-              <button
-                type="button"
-                onClick={handleStartUsingApp}
-                className="mt-3 w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md transition hover:brightness-110"
-              >
-                アプリを使い始める
-              </button>
-            )}
-          </div>
-        </div>
-      )}
+      {authModal}
     </>
   );
 }
