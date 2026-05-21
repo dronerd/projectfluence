@@ -105,7 +105,6 @@ export default function AnalyticsPage() {
   }, [supabase]);
 
   const totalStudyMinutes = Math.round(summary.speakwise.totalMinutes);
-  const strongVocabLessons = Math.max(0, summary.vocabstream.completedLessons - summary.vocabstream.lowScoreLessons);
 
   return (
     <div className="analytics-shell">
@@ -132,27 +131,12 @@ export default function AnalyticsPage() {
           <button type="button" className="back-button" onClick={() => window.history.back()}>
             ← 戻る
           </button>
-          <div className="quick-links">
-            <Link href="/vocabstream">VocabStream</Link>
-            <Link href="/vidmatch">VidMatch</Link>
-            <Link href="/speakwise">SpeakWise</Link>
-          </div>
         </div>
 
         <section className="hero-section">
           <h2>学習の現在地</h2>
-          <p>
-            VocabStream、VidMatch、SpeakWiseの記録をひとつにまとめて、次に何を伸ばすかを見やすくします。
-          </p>
           {loading && <p className="status-text">学習分析を読み込んでいます...</p>}
           {error && <p className="error-text">{error}</p>}
-        </section>
-
-        <section className="metric-grid" aria-label="Learning overview">
-          <MetricCard label="完了レッスン" value={summary.vocabstream.completedLessons} unit="lessons" />
-          <MetricCard label="安定スコア" value={strongVocabLessons} unit="lessons" />
-          <MetricCard label="保存動画" value={summary.vidmatch.savedVideos} unit="videos" />
-          <MetricCard label="SpeakWise時間" value={formatMinutes(totalStudyMinutes)} unit="total" />
         </section>
 
         <section className="detail-grid">
@@ -181,16 +165,6 @@ export default function AnalyticsPage() {
         </section>
       </main>
     </div>
-  );
-}
-
-function MetricCard({ label, value, unit }: { label: string; value: React.ReactNode; unit: string }) {
-  return (
-    <article className="metric-card">
-      <span>{label}</span>
-      <strong>{value}</strong>
-      <small>{unit}</small>
-    </article>
   );
 }
 
@@ -352,8 +326,7 @@ const styles = `
     flex-wrap: wrap;
   }
 
-  .back-button,
-  .quick-links a {
+  .back-button {
     min-height: 38px;
     border-radius: 999px;
     border: 1px solid #d1d5db;
@@ -366,20 +339,8 @@ const styles = `
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
   }
 
-  .quick-links {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .quick-links a {
-    display: inline-flex;
-    align-items: center;
-  }
-
   .hero-section,
-  .analytics-panel,
-  .metric-card {
+  .analytics-panel {
     background: #ffffff;
     border: 1px solid rgba(209, 213, 219, 0.82);
     border-radius: 16px;
@@ -414,38 +375,6 @@ const styles = `
     margin-top: 12px !important;
     font-weight: 800;
     color: #b42318 !important;
-  }
-
-  .metric-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
-    margin-top: 18px;
-  }
-
-  .metric-card {
-    min-height: 132px;
-    padding: 18px;
-    display: grid;
-    align-content: center;
-    gap: 8px;
-  }
-
-  .metric-card span {
-    color: #475569;
-    font-weight: 800;
-  }
-
-  .metric-card strong {
-    color: #10203b;
-    font-size: 32px;
-    line-height: 1;
-    font-weight: 900;
-  }
-
-  .metric-card small {
-    color: #64748b;
-    font-weight: 800;
   }
 
   .detail-grid {
@@ -523,7 +452,6 @@ const styles = `
   }
 
   @media (max-width: 900px) {
-    .metric-grid,
     .detail-grid {
       grid-template-columns: 1fr;
     }

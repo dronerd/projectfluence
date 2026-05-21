@@ -210,8 +210,8 @@ export default function ExtraPage() {
               aria-label="Scroll to top"
               className="pointer-events-auto text-base font-normal hover:underline bg-transparent border-none cursor-pointer"
             >
-              <span className="inline md:hidden text-lg"><strong>ページトップ</strong></span>
-              <span className="hidden md:inline text-xl"><strong>ページトップへ </strong>- Project Fluence</span>
+              <span className="inline md:hidden text-lg"><strong>Project Fluence</strong></span>
+              <span className="hidden md:inline text-xl"><strong>Project Fluence</strong></span>
             </button>
           </div>
 
@@ -283,19 +283,19 @@ export default function ExtraPage() {
                 <AuthButton hideWhenAuthenticated initialMode="sign-up" />
                 <Link
                   href="/vocabstream"
-                  className="rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600"
+                  className="hidden rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600 sm:inline-flex"
                 >
                   VocabStreamを開く
                 </Link>
                 <Link
                   href="/vidmatch"
-                  className="rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600"
+                  className="hidden rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600 sm:inline-flex"
                 >
                   VidMatchを開く
                 </Link>
                 <Link
                   href="/speakwise"
-                  className="rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600"
+                  className="hidden rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600 sm:inline-flex"
                 >
                   SpeakWiseAIを開く
                 </Link>
@@ -667,7 +667,7 @@ export default function ExtraPage() {
         <div className="fixed inset-0 bg-black bg-opacity-40 z-50">
           
           {/* Side panel */}
-          <div className="absolute right-0 top-0 w-64 h-full bg-white shadow-lg p-6">
+          <div className="absolute right-0 top-0 h-full w-64 overflow-y-auto bg-white p-6 shadow-lg">
             
             {/* Close button */}
             <button
@@ -681,10 +681,17 @@ export default function ExtraPage() {
             <nav className="flex flex-col gap-4 text-lg">
               <div className="border-b border-gray-200 pb-4 sm:hidden">
                 <div className="flex flex-col gap-3">
-                  <AuthButton />
+                  <AuthButton userMenu />
                   <AuthButton initialMode="sign-up" />
                 </div>
               </div>
+
+              <Link
+                href="/analytics"
+                onClick={() => setMenuOpen(false)}
+              >
+                学習分析
+              </Link>
 
               {/* Parent */}
               <div>
