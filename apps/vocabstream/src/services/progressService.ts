@@ -16,6 +16,9 @@ export type VocabStreamQuestionAttemptInput = {
 };
 
 export type SaveVocabStreamProgressInput = {
+  userId?: string;
+  userEmail?: string | null;
+  userDisplayName?: string | null;
   anonymousUserId?: string;
   userUsername?: string;
   lessonId: string;
@@ -41,6 +44,7 @@ type SupabaseError = {
 
 type VocabStreamLessonAttemptRow = {
   id: string;
+  user_id: string | null;
   anonymous_user_id: string | null;
   user_username: string | null;
   lesson_id: string;
@@ -67,8 +71,24 @@ export async function saveVocabStreamProgress(input: SaveVocabStreamProgressInpu
   const totalScore = clampNonNegativeInteger(input.meaningScore) + clampNonNegativeInteger(input.quizScore);
   const totalPossible = clampNonNegativeInteger(input.meaningTotal) + clampNonNegativeInteger(input.quizTotal);
   const percentScore = totalPossible ? Math.round((totalScore / totalPossible) * 100) : 0;
+  const userId = normalizeUuid(input.userId);
+
+  if (userId) {
+    await upsertSupabase(
+      `${supabaseUrl}/rest/v1/profiles?on_conflict=id`,
+      serviceRoleKey,
+      {
+        id: userId,
+        email: normalizeOptionalText(input.userEmail),
+        username: normalizeOptionalText(input.userUsername),
+        display_name: normalizeOptionalText(input.userDisplayName) ?? normalizeOptionalText(input.userUsername),
+        updated_at: new Date().toISOString(),
+      },
+    );
+  }
 
   const lessonPayload = {
+    user_id: userId,
     anonymous_user_id: normalizeOptionalText(input.anonymousUserId),
     user_username: normalizeOptionalText(input.userUsername),
     lesson_id: input.lessonId,
@@ -94,6 +114,33 @@ export async function saveVocabStreamProgress(input: SaveVocabStreamProgressInpu
     lessonPayload,
   );
 
+  if (userId) {
+    await upsertSupabase(
+      `${supabaseUrl}/rest/v1/vocabstream_user_lesson_progress?on_conflict=user_id,lesson_id`,
+      serviceRoleKey,
+      {
+        user_id: userId,
+        lesson_id: input.lessonId,
+        genre: input.genre,
+        lesson_number: Number.isFinite(input.lessonNumber) ? input.lessonNumber : null,
+        lesson_title: normalizeOptionalText(input.lessonTitle),
+        word_count: clampNonNegativeInteger(input.wordCount),
+        latest_lesson_attempt_id: lessonAttempt.id,
+        meaning_score: clampNonNegativeInteger(input.meaningScore),
+        meaning_total: clampNonNegativeInteger(input.meaningTotal),
+        quiz_score: clampNonNegativeInteger(input.quizScore),
+        quiz_total: clampNonNegativeInteger(input.quizTotal),
+        total_score: totalScore,
+        total_possible: totalPossible,
+        percent_score: percentScore,
+        replay_completed: Boolean(input.replayCompleted),
+        replay_correct: clampNonNegativeInteger(input.replayCorrect ?? 0),
+        replay_total: clampNonNegativeInteger(input.replayTotal ?? 0),
+        updated_at: new Date().toISOString(),
+      },
+    );
+  }
+
   const questionRows = input.questionAttempts.map((attempt) => ({
     lesson_attempt_id: lessonAttempt.id,
     question_type: attempt.questionType,
@@ -113,6 +160,24 @@ export async function saveVocabStreamProgress(input: SaveVocabStreamProgressInpu
   }
 
   return { lessonAttempt };
+}
+
+async function upsertSupabase(url: string, serviceRoleKey: string, payload: unknown): Promise<void> {
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      apikey: serviceRoleKey,
+      Authorization: `Bearer ${serviceRoleKey}`,
+      "Content-Type": "application/json",
+      Prefer: "resolution=merge-duplicates",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (!response.ok) {
+    const error = (await response.json().catch(() => null)) as SupabaseError | null;
+    throw new Error(error?.message ?? `Supabase upsert failed with status ${response.status}`);
+  }
 }
 
 async function insertSupabase<T>(url: string, serviceRoleKey: string, payload: unknown): Promise<T> {
@@ -148,6 +213,14 @@ function getRequiredEnv(name: string) {
 
 function normalizeOptionalText(value: unknown) {
   return typeof value === "string" && value.trim() ? value.trim() : null;
+}
+
+function normalizeUuid(value: unknown) {
+  if (typeof value !== "string") return null;
+  const trimmed = value.trim();
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(trimmed)
+    ? trimmed
+    : null;
 }
 
 function normalizeIsoDate(value: unknown) {

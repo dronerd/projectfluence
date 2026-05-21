@@ -3,6 +3,7 @@
 import React, { useCallback, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AuthButton from "./components/AuthButton";
 
 export default function ExtraPage() {
   const scrollToTop = useCallback((e?: React.MouseEvent<HTMLButtonElement>) => {
@@ -215,6 +216,11 @@ export default function ExtraPage() {
           </div>
 
           <div className="absolute right-4 flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-2">
+              <AuthButton compact variant="banner" />
+              <AuthButton compact variant="banner" initialMode="sign-up" />
+            </div>
+
             {/* Hamburger Button */}
             <button
               onClick={() => setMenuOpen(true)}
@@ -271,6 +277,29 @@ export default function ExtraPage() {
                   </a>
                 で紹介し、開発したAI英語学習アプリも提供します。
               </p>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <AuthButton />
+                <AuthButton initialMode="sign-up" />
+                <Link
+                  href="/vocabstream"
+                  className="rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600"
+                >
+                  VocabStreamを開く
+                </Link>
+                <Link
+                  href="/vidmatch"
+                  className="rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600"
+                >
+                  VidMatchを開く
+                </Link>
+                <Link
+                  href="/speakwise"
+                  className="rounded-full bg-gray-700 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:bg-gray-600"
+                >
+                  SpeakWiseAIを開く
+                </Link>
+              </div>
             </div>
 
             <aside className="md:col-span-1 bg-neutral-100 rounded-xl p-4 shadow-inner w-full min-w-0">
@@ -278,21 +307,7 @@ export default function ExtraPage() {
 
               <div className="mt-4 flex items-center gap-4 min-w-0">
                 
-                {/* Clickable Profile Image */}
-                <Link
-                  href="https://yutokuroki.vercel.app/ja"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-16 h-16 relative rounded-full overflow-hidden bg-gray-800 flex-shrink-0 block"
-                >
-                  <Image
-                    src="/images/profile2.JPG"
-                    alt="Yuto Kuroki profile"
-                    fill
-                    sizes="(max-width: 768px) 64px, 64px"
-                    className="object-cover"
-                  />
-                </Link>
+                
 
                 <div className="min-w-0">
                   <Link
@@ -664,6 +679,12 @@ export default function ExtraPage() {
 
             {/* Navigation */}
             <nav className="flex flex-col gap-4 text-lg">
+              <div className="border-b border-gray-200 pb-4 sm:hidden">
+                <div className="flex flex-col gap-3">
+                  <AuthButton />
+                  <AuthButton initialMode="sign-up" />
+                </div>
+              </div>
 
               {/* Parent */}
               <div>

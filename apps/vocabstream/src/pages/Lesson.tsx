@@ -42,7 +42,7 @@ const Lesson: React.FC = () => {
   const [step, setStep] = useState<number>(0);
   const [lesson, setLesson] = useState<LessonData | null>(null);
   const nav = useNavigate();
-  const { user } = useAuth();
+  const { token, user } = useAuth();
 
   // quiz state (example-sentence quiz)
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
@@ -402,7 +402,7 @@ const Lesson: React.FC = () => {
       replayCorrect,
       replayTotal,
       questionAttempts,
-    }).then(() => {
+    }, token).then(() => {
       setProgressSubmitError("");
     }).catch((error) => {
       const message = error instanceof Error ? error.message : "Failed to save progress";
@@ -426,6 +426,7 @@ const Lesson: React.FC = () => {
     replayResult.quizCorrect,
     replayResult.quizTotal,
     questionAttempts,
+    token,
     user?.username,
   ]);
 

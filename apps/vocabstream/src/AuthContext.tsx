@@ -1,62 +1,64 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";  
-import { apiMe } from "./api";
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+import type { User as SupabaseUser } from "@supabase/supabase-js";
+import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
-type User = { username: string; level: string; total_words: number } | null;
+type User = {
+  id: string;
+  email: string | null;
+  username: string;
+  level: string;
+  total_words: number;
+} | null;
 
 type AuthContextType = {
   token: string | null;
-  user: User; //３行前で設定したのがここに入る
+  user: User;
   setToken: (t: string | null) => void;
-  logout: () => void;
+  logout: () => Promise<void>;
 };
 
-//これを行うことで、他のコードですぐに使えるようになる
-//ログインしていると上でセットしたAuthContextTypeが、ログインしていないとundefinedが使われる。
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-//このページの主なアウトプット、import AuthProvider from "./AuthContext.tsx"と使えるようになる
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  //useState is used to store the token in React state.
-  //if login, use localStorage.getItem("token")
-  //but if not logged in, return null
   const [token, setTokenState] = useState<string | null>(null);
   const [user, setUser] = useState<User>(null);
-  const navigate = useNavigate(); // これで、navigateを使ってページの移動ができるようになる
+  const supabase = useMemo(() => getSupabaseBrowserClient(), []);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    setTokenState(window.localStorage.getItem("token"));
-  }, []);
-
-  useEffect(() => {
-    if (token) { //if there is token
-      apiMe(token) //fetch the token with API
-        .then((res) => setUser(res.user))  //if successful, update res with res.user
-        .catch(() => {
-          setToken(null);  //if fails, clead the token
-        });
-    } else {
-      setUser(null); //if no token, set user back to null
+    if (!supabase) {
+      setTokenState(null);
+      setUser(null);
+      return;
     }
-  }, [token]);
+
+    supabase.auth.getSession().then(({ data }) => {
+      setTokenState(data.session?.access_token ?? null);
+      setUser(toVocabStreamUser(data.session?.user ?? null));
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setTokenState(session?.access_token ?? null);
+      setUser(toVocabStreamUser(session?.user ?? null));
+    });
+
+    return () => subscription.unsubscribe();
+  }, [supabase]);
 
   function setToken(t: string | null) {
-    if (typeof window !== "undefined") {
-      if (t) window.localStorage.setItem("token", t);
-      else window.localStorage.removeItem("token");
-    }
     setTokenState(t);
   }
 
-  function logout() {
-    setToken(null);
-    navigate("/login"); // ← ログアウト後に必ずログインページへ
+  async function logout() {
+    if (supabase) {
+      await supabase.auth.signOut();
+    }
+    setTokenState(null);
+    setUser(null);
   }
 
   return (
-    //wraps everything insider the context provider
-    //any component calls useContext(AuthContext) will get access to token, user, setToken, and logout
     <AuthContext.Provider value={{ token, user, setToken, logout }}>
       {children}
     </AuthContext.Provider>
@@ -67,4 +69,27 @@ export function useAuth() {
   const ctx = useContext(AuthContext);
   if (!ctx) throw new Error("useAuth must be inside AuthProvider");
   return ctx;
+}
+
+function toVocabStreamUser(user: SupabaseUser | null): User {
+  if (!user) return null;
+
+  const username =
+    readString(user.user_metadata?.username) ||
+    readString(user.user_metadata?.full_name) ||
+    readString(user.user_metadata?.name) ||
+    user.email?.split("@")[0] ||
+    "Learner";
+
+  return {
+    id: user.id,
+    email: user.email ?? null,
+    username,
+    level: readString(user.user_metadata?.level) || "",
+    total_words: 0,
+  };
+}
+
+function readString(value: unknown) {
+  return typeof value === "string" && value.trim() ? value.trim() : "";
 }

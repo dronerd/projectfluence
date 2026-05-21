@@ -81,10 +81,13 @@ export async function apiMe(token: string) {
   return res.json();
 }
 
-export async function apiSubmitVocabStreamProgress(payload: VocabStreamProgressPayload) {
+export async function apiSubmitVocabStreamProgress(payload: VocabStreamProgressPayload, accessToken?: string | null) {
   const res = await fetch("/api/vocabstream/progress", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
+    },
     body: JSON.stringify(payload),
   });
 

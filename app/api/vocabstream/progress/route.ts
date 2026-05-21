@@ -8,6 +8,11 @@ import {
 export const runtime = "nodejs";
 
 type RequestBody = Partial<SaveVocabStreamProgressInput>;
+type SupabaseAuthUser = {
+  id: string;
+  email?: string;
+  user_metadata?: Record<string, unknown>;
+};
 
 const QUESTION_TYPES = ["meaning", "quiz"] as const;
 
@@ -17,11 +22,22 @@ export async function POST(request: NextRequest) {
   if (parsedBody instanceof NextResponse) return parsedBody;
 
   try {
-    const result = await saveVocabStreamProgress(parsedBody);
+    const authUser = await getAuthenticatedUser(request);
+    const result = await saveVocabStreamProgress({
+      ...parsedBody,
+      userId: authUser?.id,
+      userEmail: authUser?.email,
+      userUsername: readString(authUser?.user_metadata?.username) || parsedBody.userUsername,
+      userDisplayName:
+        readString(authUser?.user_metadata?.display_name) ||
+        readString(authUser?.user_metadata?.full_name) ||
+        readString(authUser?.user_metadata?.name),
+    });
     return NextResponse.json({ ok: true, lessonAttemptId: result.lessonAttempt.id });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Progress tracking failed";
-    return NextResponse.json({ error: message }, { status: 500 });
+    const status = message === "Invalid Supabase session." ? 401 : 500;
+    return NextResponse.json({ error: message }, { status });
   }
 }
 
@@ -113,4 +129,43 @@ function requiredNumber(value: unknown) {
 
 function isOneOf<T extends string>(value: unknown, allowedValues: readonly T[]): value is T {
   return typeof value === "string" && allowedValues.includes(value as T);
+}
+
+async function getAuthenticatedUser(request: NextRequest): Promise<SupabaseAuthUser | null> {
+  const authorization = request.headers.get("authorization");
+  if (!authorization) return null;
+
+  const match = authorization.match(/^Bearer\s+(.+)$/i);
+  if (!match?.[1]) {
+    throw new Error("Invalid Supabase session.");
+  }
+
+  const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
+  const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
+  const response = await fetch(`${supabaseUrl}/auth/v1/user`, {
+    headers: {
+      apikey: serviceRoleKey,
+      Authorization: `Bearer ${match[1]}`,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Invalid Supabase session.");
+  }
+
+  const user = (await response.json()) as SupabaseAuthUser;
+  return user.id ? user : null;
+}
+
+function getRequiredEnv(name: string) {
+  const value = process.env[name];
+  if (!value) {
+    throw new Error(`Missing required environment variable: ${name}`);
+  }
+
+  return value;
+}
+
+function readString(value: unknown) {
+  return typeof value === "string" && value.trim() ? value.trim() : undefined;
 }
