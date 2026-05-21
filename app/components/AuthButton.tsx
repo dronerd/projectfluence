@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
+import { useRouter } from "next/navigation";
 import type { User } from "@supabase/supabase-js";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
@@ -11,6 +12,7 @@ type AuthButtonProps = {
   variant?: "gradient" | "banner";
   initialMode?: AuthMode;
   onAuthenticated?: () => void;
+  logoutRedirectTo?: string;
   userMenu?: boolean;
 };
 
@@ -24,8 +26,10 @@ export default function AuthButton({
   variant = "gradient",
   initialMode = "sign-in",
   onAuthenticated,
+  logoutRedirectTo,
   userMenu = false,
 }: AuthButtonProps) {
+  const router = useRouter();
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
   const [user, setUser] = useState<User | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -246,7 +250,12 @@ export default function AuthButton({
 
   async function handleLogout() {
     if (!supabase) return;
-    await supabase.auth.signOut();
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      setMessage(error.message);
+      return;
+    }
+
     setUser(null);
     setAccountMenuOpen(false);
     setEmail("");
@@ -263,6 +272,11 @@ export default function AuthButton({
     setMessage("");
     setModalOpen(false);
     passwordRecoveryClaimed = false;
+
+    if (logoutRedirectTo) {
+      router.replace(logoutRedirectTo);
+      router.refresh();
+    }
   }
 
   function openAuthModal() {

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import React, { useEffect, useMemo, useState } from "react";
 import AuthButton from "@/app/components/AuthButton";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
@@ -113,7 +114,13 @@ export default function AnalyticsPage() {
       <header className="analytics-header">
         <div className="analytics-header-inner">
           <Link href="/" className="brand-link">
-            <img src="/images/logo.png" alt="Project Fluence" />
+            <Image
+              src="/images/logo.png"
+              alt="Project Fluence"
+              width={34}
+              height={34}
+              className="brand-logo"
+            />
             <span>Project Fluence</span>
           </Link>
           <div className="title-block">
@@ -121,7 +128,7 @@ export default function AnalyticsPage() {
             <h1>Analytics</h1>
           </div>
           <div className="header-actions">
-            <AuthButton compact variant="banner" userMenu />
+            <AuthButton compact variant="banner" userMenu logoutRedirectTo="/" />
           </div>
         </div>
       </header>
@@ -280,9 +287,13 @@ const styles = `
     font-weight: 800;
   }
 
-  .brand-link img {
+  .brand-link .brand-logo {
     width: 34px;
     height: 34px;
+    min-width: 34px;
+    flex: 0 0 34px;
+    display: block;
+    aspect-ratio: 1 / 1;
     border-radius: 10px;
     object-fit: cover;
   }
