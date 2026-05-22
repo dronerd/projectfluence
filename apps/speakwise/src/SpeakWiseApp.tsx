@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import AIChat from "./pages/AI_chat";
 import { Navigate } from "./lib/router-compat";
 import AuthButton from "@/app/components/AuthButton";
@@ -9,33 +10,97 @@ type Props = {
 };
 
 function SpeakWiseHeader() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="speakwise-header" role="banner">
-      <div className="speakwise-header-inner">
-        <div className="speakwise-header-left">
-          <a
-            href="/"
-            className="speakwise-pill speakwise-project-pill"
-            aria-label="Project Fluence landing page"
-          >
-            <img src="/images/logo.png" alt="Project Fluence" className="speakwise-brand-icon" />
-            <span>Project Fluence</span>
-          </a>
-        </div>
+    <>
+      <header className="speakwise-header" role="banner">
+        <div className="speakwise-header-inner">
+          <div className="speakwise-header-left">
+            <a
+              href="/"
+              className="speakwise-pill speakwise-project-pill"
+              aria-label="Project Fluence landing page"
+            >
+              <img src="/images/logo.png" alt="Project Fluence" className="speakwise-brand-icon" />
+              <span>Project Fluence</span>
+            </a>
+          </div>
 
-        <div className="speakwise-header-center">
-          <a href="/speakwise" className="speakwise-title-link" aria-label="SpeakWise home">
-            <span className="speakwise-overline">英会話アプリ</span>
-            <h1 className="speakwise-title">SpeakWiseAI</h1>
-          </a>
-        </div>
+          <div className="speakwise-header-center">
+            <a href="/speakwise" className="speakwise-title-link" aria-label="SpeakWise home">
+              <span className="speakwise-overline">英会話アプリ</span>
+              <h1 className="speakwise-title">SpeakWiseAI</h1>
+            </a>
+          </div>
 
-        <div className="speakwise-header-right">
-          <AuthButton compact variant="banner" userMenu />
-          <AuthButton compact variant="banner" initialMode="sign-up" />
+          <div className="speakwise-header-right">
+            <div className="hidden sm:flex items-center gap-2">
+              <AuthButton compact variant="banner" userMenu />
+              <AuthButton compact variant="banner" initialMode="sign-up" />
+            </div>
+            <button
+              type="button"
+              onClick={() => setMenuOpen(true)}
+              className="speakwise-menu-button"
+              aria-label="Open menu"
+            >
+              ☰
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      {menuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-40" style={{ zIndex: 1100 }}>
+          <div className="absolute right-0 top-0 h-full w-64 overflow-y-auto bg-white p-6 shadow-lg">
+            <button onClick={() => setMenuOpen(false)} className="text-xl mb-6" aria-label="Close menu">
+              ✕
+            </button>
+
+            <nav className="flex flex-col gap-4 text-lg text-gray-950">
+              <div className="border-b border-gray-200 pb-4 sm:hidden">
+                <div className="flex flex-col gap-3">
+                  <AuthButton userMenu inlineUserMenu authenticatedOnly />
+                  <AuthButton hideWhenAuthenticated />
+                  <AuthButton initialMode="sign-up" />
+                </div>
+              </div>
+
+              <div>
+                <a href="/#apps" onClick={() => setMenuOpen(false)}>
+                  英語学習アプリ
+                </a>
+                <div className="flex flex-col gap-2 mt-2 ml-4 text-base text-gray-600">
+                  <a href="/vocabstream" onClick={() => setMenuOpen(false)}>
+                    ・VocabStream
+                  </a>
+                  <a href="/vidmatch" onClick={() => setMenuOpen(false)}>
+                    ・VidMatch
+                  </a>
+                  <a href="/speakwise" onClick={() => setMenuOpen(false)}>
+                    ・SpeakWiseAI
+                  </a>
+                </div>
+              </div>
+
+              <a href="/#notes" onClick={() => setMenuOpen(false)}>
+                最近のnote記事
+              </a>
+              <a href="/#english-motivation" onClick={() => setMenuOpen(false)}>
+                英語を学ぶモチベーション
+              </a>
+              <a href="/#method" onClick={() => setMenuOpen(false)}>
+                効果的な英語学習方法
+              </a>
+              <a href="/#prompts" onClick={() => setMenuOpen(false)}>
+                AIプロンプト集
+              </a>
+            </nav>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -217,6 +282,16 @@ export default function SpeakWiseApp({ pathname }: Props) {
           border-radius: 9px;
           object-fit: cover;
           flex-shrink: 0;
+        }
+
+        .speakwise-menu-button {
+          color: white;
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          font-size: 30px;
+          line-height: 1;
+          padding: 0;
         }
 
         .speakwise-shell .app-container {

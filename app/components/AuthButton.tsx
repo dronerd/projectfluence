@@ -14,6 +14,8 @@ type AuthButtonProps = {
   onAuthenticated?: () => void;
   logoutRedirectTo?: string;
   userMenu?: boolean;
+  inlineUserMenu?: boolean;
+  authenticatedOnly?: boolean;
 };
 
 type AuthMode = "sign-in" | "sign-up";
@@ -28,6 +30,8 @@ export default function AuthButton({
   onAuthenticated,
   logoutRedirectTo,
   userMenu = false,
+  inlineUserMenu = false,
+  authenticatedOnly = false,
 }: AuthButtonProps) {
   const router = useRouter();
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
@@ -300,12 +304,17 @@ export default function AuthButton({
 
   const label = user ? "ログアウト" : initialMode === "sign-up" ? "新規登録" : "ログイン";
   const accountLabel = getUserDisplayLabel(user);
+  const accountEmail = user?.email || accountLabel;
   const buttonClass =
     variant === "banner"
       ? "rounded-full border border-white/70 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-white/15"
       : compact
         ? "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110"
         : "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:brightness-110";
+  const accountButtonClass =
+    variant === "banner"
+      ? "rounded-full border border-white/70 p-2 text-white shadow-sm transition hover:bg-white/15"
+      : "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 p-2 text-white shadow-md transition hover:brightness-110";
   const authModal =
     modalOpen && typeof document !== "undefined"
       ? createPortal(
@@ -557,27 +566,56 @@ export default function AuthButton({
     return null;
   }
 
+  if (!user && authenticatedOnly && !modalOpen) {
+    return null;
+  }
+
+  if (user && inlineUserMenu && !modalOpen) {
+    return (
+      <div className="w-full">
+        <div className="px-1 pb-3">
+          <div className="text-xs font-semibold uppercase text-gray-500">Email</div>
+          <div className="mt-1 break-all text-sm font-bold text-gray-900">{accountEmail}</div>
+        </div>
+        <a
+          href="/analytics"
+          className="block w-full rounded-lg px-1 py-2 text-left text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
+        >
+          学習分析
+        </a>
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="mt-1 w-full rounded-lg px-1 py-2 text-left text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
+        >
+          ログアウト
+        </button>
+      </div>
+    );
+  }
+
   if (user && userMenu && !modalOpen) {
     return (
       <div className="relative">
         <button
           type="button"
           onClick={() => setAccountMenuOpen((open) => !open)}
-          className={`${buttonClass} flex max-w-[220px] items-center gap-2`}
+          className={`${accountButtonClass} flex h-10 w-10 items-center justify-center`}
+          aria-label="Open account menu"
           aria-expanded={accountMenuOpen}
           aria-haspopup="menu"
         >
-          <span className="truncate">{accountLabel}</span>
-          <span aria-hidden="true" className="text-xs">▼</span>
+          <AccountIcon />
         </button>
 
         {accountMenuOpen && (
           <div
             role="menu"
-            className="absolute right-0 mt-2 w-56 rounded-xl border border-gray-200 bg-white p-2 text-gray-900 shadow-xl"
+            className="absolute right-0 z-[80] mt-2 w-64 rounded-xl border border-gray-200 bg-white p-2 text-gray-900 shadow-xl"
           >
-            <div className="border-b border-gray-100 px-3 py-2 text-xs text-gray-500">
-              <div className="truncate">{accountLabel}</div>
+            <div className="border-b border-gray-100 px-3 py-3">
+              <div className="text-xs font-semibold uppercase text-gray-500">Email</div>
+              <div className="mt-1 truncate text-sm font-bold text-gray-900">{accountEmail}</div>
             </div>
             <a
               role="menuitem"
@@ -612,6 +650,24 @@ export default function AuthButton({
       </button>
       {authModal}
     </>
+  );
+}
+
+function AccountIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+    >
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21a8 8 0 0 1 16 0" />
+    </svg>
   );
 }
 
