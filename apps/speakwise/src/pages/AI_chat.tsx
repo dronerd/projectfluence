@@ -60,9 +60,10 @@ type SpeakWiseSettings = {
 const SPEAKWISE_API_URL =
   process.env.NEXT_PUBLIC_SPEAKWISE_API_URL ||
   process.env.NEXT_PUBLIC_API_URL ||
-  "http://127.0.0.1:8000";
+  "";
 
 const LEVELS: CEFRLevel[] = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const DURATION_OPTIONS = [5, 10, 15, 20, 25, 30];
 
 const TOPICS = [
   "Daily life",
@@ -77,18 +78,31 @@ const TOPICS = [
   "Current events",
 ];
 
-const LESSON_MODES: Array<{ id: LessonMode; label: string; short: string }> = [
-  { id: "natural_conversation", label: "Natural Conversation", short: "Flexible conversation with light correction" },
-  { id: "vocabulary_phrase", label: "Vocabulary & Phrases", short: "Reuse VocabStream words with spaced review" },
-  { id: "grammar_practice", label: "Grammar Practice", short: "Target recurring grammar mistakes" },
-  { id: "speaking_practice", label: "Speaking Practice", short: "Longer answers, fluency, expression" },
-  { id: "pronunciation_practice", label: "Pronunciation Practice", short: "Sound, stress, and rhythm drills" },
-  { id: "listening_practice", label: "Listening Practice", short: "Short spoken-style prompts and questions" },
-  { id: "reading_comprehension", label: "Reading Comprehension", short: "Adaptive short texts and questions" },
-  { id: "pdf_reading", label: "PDF-Based Reading", short: "Practice from an uploaded or pasted text" },
-  { id: "writing_feedback", label: "Writing & Feedback", short: "Paragraph writing and revision" },
-  { id: "deep_discussion", label: "Deep Discussion", short: "Nuanced advanced argumentation" },
-  { id: "review_weakness", label: "Review & Weakness", short: "Train repeated mistakes from memory" },
+const TOPIC_LABELS: Record<string, string> = {
+  "Daily life": "日常生活",
+  Travel: "旅行",
+  Technology: "テクノロジー",
+  Business: "ビジネス",
+  School: "学校・留学",
+  Health: "健康",
+  Culture: "文化",
+  Environment: "環境",
+  "Academic topics": "学術・教養",
+  "Current events": "時事ニュース",
+};
+
+const LESSON_MODES: Array<{ id: LessonMode; label: string; labelJa: string; short: string }> = [
+  { id: "natural_conversation", label: "Natural Conversation", labelJa: "自然な英会話", short: "興味やレベルに合わせて会話し、大事なミスだけ自然に直します" },
+  { id: "vocabulary_phrase", label: "Vocabulary & Phrases", labelJa: "単語・フレーズ練習", short: "VocabStreamで学んだ単語を復習し、例文の中で使えるようにします" },
+  { id: "grammar_practice", label: "Grammar Practice", labelJa: "文法練習", short: "よく出る文法ミスを短く説明し、ピンポイントで練習します" },
+  { id: "speaking_practice", label: "Speaking Practice", labelJa: "スピーキング練習", short: "少し長めに話す練習をし、流暢さ・正確さ・表現を伸ばします" },
+  { id: "pronunciation_practice", label: "Pronunciation Practice", labelJa: "発音練習", short: "音、アクセント、リズムを短いドリルで練習します" },
+  { id: "listening_practice", label: "Listening Practice", labelJa: "リスニング練習", short: "短い音声風の英文を聞く想定で、理解度を確認します" },
+  { id: "reading_comprehension", label: "Reading Comprehension", labelJa: "読解練習", short: "レベルに合った短い英文を読み、内容理解を深めます" },
+  { id: "pdf_reading", label: "PDF-Based Reading", labelJa: "PDF読解練習", short: "アップロードまたは貼り付けた文章を使って読解問題を作ります" },
+  { id: "writing_feedback", label: "Writing & Feedback", labelJa: "ライティング添削", short: "短い文章を書き、文法・語彙・構成・自然さを改善します" },
+  { id: "deep_discussion", label: "Deep Discussion", labelJa: "深いディスカッション", short: "抽象的・学術的な話題で、意見の組み立て方を練習します" },
+  { id: "review_weakness", label: "Review & Weakness", labelJa: "弱点復習", short: "過去のミスや苦手分野をもとに、必要な練習を集中して行います" },
 ];
 
 const DEFAULT_SETTINGS: SpeakWiseSettings = {
@@ -124,7 +138,7 @@ function sanitizeSettings(value: unknown): SpeakWiseSettings | null {
   const raw = value as Partial<SpeakWiseSettings>;
   return {
     level: isLevel(raw.level) ? raw.level : DEFAULT_SETTINGS.level,
-    durationMinutes: [5, 10, 15, 20, 25, 30, 45, 60].includes(Number(raw.durationMinutes))
+    durationMinutes: DURATION_OPTIONS.includes(Number(raw.durationMinutes))
       ? Number(raw.durationMinutes)
       : DEFAULT_SETTINGS.durationMinutes,
     lessonMode: isLessonMode(raw.lessonMode) ? raw.lessonMode : "",
@@ -140,7 +154,7 @@ function sanitizeSettings(value: unknown): SpeakWiseSettings | null {
 }
 
 function summarizeMemory(memory: LearnerMemory | null) {
-  if (!memory) return "No stored learner memory loaded yet.";
+  if (!memory) return "まだ保存された学習メモリーはありません。";
   const recent = memory.recentSummaries?.[0] as { summary?: LessonSummary; mode?: string } | undefined;
   const patterns = (memory.mistakePatterns || []).slice(0, 3).map((item) => {
     const row = item as { mistake_type?: string; pattern?: string; count?: number };
@@ -156,12 +170,12 @@ function summarizeMemory(memory: LearnerMemory | null) {
   });
 
   return [
-    recent?.summary?.title ? `Last lesson: ${recent.summary.title}` : "",
-    recent?.summary?.weaknesses?.length ? `Recent weaknesses: ${recent.summary.weaknesses.join(", ")}` : "",
-    patterns.length ? `Repeated mistake patterns: ${patterns.join("; ")}` : "",
-    vocab.length ? `VocabStream context: ${vocab.join("; ")}` : "",
-    videos.length ? `VidMatch context: ${videos.join("; ")}` : "",
-  ].filter(Boolean).join("\n") || "No strong prior learning signals yet.";
+    recent?.summary?.title ? `前回のレッスン: ${recent.summary.title}` : "",
+    recent?.summary?.weaknesses?.length ? `最近の弱点: ${recent.summary.weaknesses.join(", ")}` : "",
+    patterns.length ? `繰り返し出ているミス: ${patterns.join("; ")}` : "",
+    vocab.length ? `VocabStreamの学習状況: ${vocab.join("; ")}` : "",
+    videos.length ? `VidMatchの視聴トピック: ${videos.join("; ")}` : "",
+  ].filter(Boolean).join("\n") || "まだ強い学習傾向は見つかっていません。";
 }
 
 export default function AIChat() {
@@ -290,6 +304,10 @@ export default function AIChat() {
   }
 
   async function callAgent(userText: string, phase: "start" | "continue" | "end" = "continue") {
+    if (!SPEAKWISE_API_URL) {
+      throw new Error("SpeakWise APIのURLが本番環境に設定されていません。");
+    }
+
     const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -327,7 +345,7 @@ export default function AIChat() {
     const nextMode = modeOverride || settings.lessonMode;
     if (!nextMode) {
       setPendingModeChoice(true);
-      setChatLog([{ sender: "assistant", text: "How are you today? What would you like to practice?" }]);
+      setChatLog([{ sender: "assistant", text: "今日はどんな英語を練習したいですか？下のボタンから選んでください。" }]);
       return;
     }
 
@@ -353,7 +371,8 @@ export default function AIChat() {
       const reply = await callAgent(startText, "start");
       await appendAssistant(reply);
     } catch (error) {
-      setChatLog([{ sender: "assistant", text: "I could not start the lesson. Please check the SpeakWise API connection." }]);
+      const message = error instanceof Error ? error.message : "不明なエラーが発生しました。";
+      setChatLog([{ sender: "assistant", text: `レッスンを開始できませんでした。${message}` }]);
       console.error(error);
     } finally {
       setIsSending(false);
@@ -393,7 +412,7 @@ export default function AIChat() {
       await appendAssistant(reply);
     } catch (error) {
       console.error(error);
-      setChatLog((prev) => [...prev, { sender: "assistant", text: "Sorry, I could not get a response this time." }]);
+      setChatLog((prev) => [...prev, { sender: "assistant", text: "すみません。今回はAIからの返答を取得できませんでした。" }]);
     } finally {
       setIsSending(false);
     }
@@ -424,13 +443,13 @@ export default function AIChat() {
       if (!res.ok || data.error) throw new Error(data.details || data.error || "Summary request failed");
       const nextSummary = data.summary as LessonSummary;
       setSummary(nextSummary);
-      const farewell = data.farewell || "Great work today. See you next lesson!";
+      const farewell = data.farewell || "今日のレッスン、お疲れさまでした。次回もこの内容をもとに続けましょう。";
       setChatLog((prev) => [...prev, { sender: "assistant", text: farewell }]);
       if (settings.voiceEnabled) await playVoice(farewell);
       await persistSummary(nextSummary);
     } catch (error) {
       console.error(error);
-      setChatLog((prev) => [...prev, { sender: "assistant", text: "Great work today. I could not save the full summary, but the lesson is complete." }]);
+      setChatLog((prev) => [...prev, { sender: "assistant", text: "今日のレッスンはここで終了です。詳細な要約は保存できませんでしたが、よく頑張りました。" }]);
     } finally {
       setIsEnding(false);
     }
@@ -461,6 +480,11 @@ export default function AIChat() {
 
   async function playVoice(text: string) {
     if (!text.trim()) return;
+    if (!SPEAKWISE_API_URL) {
+      console.warn("SpeakWise API URL is not configured for voice playback.");
+      return;
+    }
+
     try {
       audioRef.current?.pause();
       const res = await fetch(`${SPEAKWISE_API_URL}/api/voice`, {
@@ -483,7 +507,7 @@ export default function AIChat() {
   function toggleListening() {
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SpeechRecognition) {
-      alert("This browser does not support speech recognition. Please type your answer.");
+      alert("このブラウザでは音声入力がサポートされていません。テキストで入力してください。");
       return;
     }
     if (recognitionRef.current) {
@@ -517,7 +541,7 @@ export default function AIChat() {
       return;
     }
     updateSettings({
-      pdfContext: `PDF selected: ${file.name}. If text extraction is unavailable in the browser, ask the learner to paste a relevant excerpt before generating detailed questions.`,
+      pdfContext: `PDFファイル: ${file.name}\nブラウザ上で本文を直接読み取れない場合は、練習したい箇所の文章をここに貼り付けてください。`,
     });
   }
 
@@ -590,12 +614,12 @@ export default function AIChat() {
               <img src="/images/speakwise.png" alt="" />
               <div>
                 <h1>SpeakWise AI</h1>
-                <p>Longitudinal English learning agent</p>
+                <p>学習履歴をもとに成長を支える英語AI</p>
               </div>
             </div>
 
             <div className="sw-section">
-              <span className="sw-label">Level</span>
+              <span className="sw-label">英語レベル</span>
               <div className="sw-grid levels">
                 {LEVELS.map((level) => (
                   <button key={level} className={`sw-button ${settings.level === level ? "active" : ""}`} onClick={() => updateSettings({ level })}>
@@ -606,32 +630,32 @@ export default function AIChat() {
             </div>
 
             <div className="sw-section">
-              <span className="sw-label">Duration</span>
+              <span className="sw-label">レッスン時間</span>
               <select className="sw-select" value={settings.durationMinutes} onChange={(event) => updateSettings({ durationMinutes: Number(event.target.value) })}>
-                {[5, 10, 15, 20, 25, 30, 45, 60].map((minutes) => (
-                  <option key={minutes} value={minutes}>{minutes} minutes</option>
+                {DURATION_OPTIONS.map((minutes) => (
+                  <option key={minutes} value={minutes}>{minutes}分</option>
                 ))}
               </select>
             </div>
 
             <div className="sw-section">
-              <span className="sw-label">Topics</span>
+              <span className="sw-label">練習したいトピック</span>
               <div className="sw-grid">
                 {TOPICS.map((topic) => (
                   <button key={topic} className={`sw-button ${settings.selectedTopics.includes(topic) ? "active" : ""}`} onClick={() => toggleTopic(topic)}>
-                    {topic}
+                    {TOPIC_LABELS[topic] || topic}
                   </button>
                 ))}
               </div>
-              <input className="sw-input" style={{ marginTop: 8 }} value={settings.customTopic} onChange={(event) => updateSettings({ customTopic: event.target.value })} placeholder="Custom topic" />
+              <input className="sw-input" style={{ marginTop: 8 }} value={settings.customTopic} onChange={(event) => updateSettings({ customTopic: event.target.value })} placeholder="その他のトピックを自由に入力" />
             </div>
 
             <div className="sw-section">
-              <span className="sw-label">Lesson Mode</span>
+              <span className="sw-label">レッスンモード</span>
               <div style={{ display: "grid", gap: 8 }}>
                 {LESSON_MODES.map((mode) => (
                   <button key={mode.id} className={`sw-mode ${settings.lessonMode === mode.id ? "active" : ""}`} onClick={() => updateSettings({ lessonMode: mode.id })}>
-                    <strong>{mode.label}</strong>
+                    <strong>{mode.labelJa}</strong>
                     <span>{mode.short}</span>
                   </button>
                 ))}
@@ -640,38 +664,38 @@ export default function AIChat() {
 
             {settings.lessonMode === "pdf_reading" && (
               <div className="sw-section">
-                <span className="sw-label">PDF or Text</span>
+                <span className="sw-label">PDF・読解テキスト</span>
                 <input className="sw-input" type="file" accept=".pdf,.txt,text/plain,application/pdf" onChange={(event) => void handlePdfFile(event.target.files?.[0] ?? null)} />
-                <textarea className="sw-textarea" style={{ marginTop: 8 }} value={settings.pdfContext} onChange={(event) => updateSettings({ pdfContext: event.target.value.slice(0, 8000) })} placeholder="Paste a PDF excerpt here for more precise questions." />
+                <textarea className="sw-textarea" style={{ marginTop: 8 }} value={settings.pdfContext} onChange={(event) => updateSettings({ pdfContext: event.target.value.slice(0, 8000) })} placeholder="PDFの一部や、読解に使いたい英文をここに貼り付けてください。" />
               </div>
             )}
 
             <div className="sw-section">
-              <span className="sw-label">Voice</span>
+              <span className="sw-label">音声</span>
               <label className="sw-toggle">
-                <span>AI voice responses</span>
+                <span>AIの返答を音声で再生</span>
                 <input type="checkbox" checked={settings.voiceEnabled} onChange={(event) => updateSettings({ voiceEnabled: event.target.checked })} />
               </label>
               <select className="sw-select" style={{ marginTop: 8 }} value={settings.selectedVoice} onChange={(event) => updateSettings({ selectedVoice: event.target.value })}>
                 {VOICES.map((voice) => <option key={voice} value={voice}>{voice}</option>)}
               </select>
               <label className="sw-toggle">
-                <span>Start selected mode directly</span>
+                <span>選択したモードですぐ始める</span>
                 <input type="checkbox" checked={settings.directStart} onChange={(event) => updateSettings({ directStart: event.target.checked })} />
               </label>
             </div>
 
             <button className="sw-start" disabled={isSending || isEnding} onClick={() => void startLesson()}>
-              {settings.lessonMode ? "Start Lesson" : "Ask Me What To Practice"}
+              {settings.lessonMode ? "レッスンを開始" : "AIに練習内容を相談する"}
             </button>
             {lessonActive && (
               <button className="sw-start secondary" disabled={isEnding} onClick={() => void endLesson()}>
-                End and Save Summary
+                終了して要約を保存
               </button>
             )}
 
             <div className="sw-section">
-              <span className="sw-label">Learner Memory</span>
+              <span className="sw-label">学習メモリー</span>
               <div className="sw-memory">{memoryPreview}</div>
             </div>
           </aside>
@@ -681,15 +705,15 @@ export default function AIChat() {
               <div className="sw-chat-title">
                 <img src="/images/speakwise.png" alt="" />
                 <div>
-                  <strong>{selectedMode?.label || "Adaptive lesson"}</strong>
-                  <span>{lessonActive ? "SpeakWise is adapting to your stored progress in real time." : "Choose a mode or let SpeakWise ask what you want to practice."}</span>
+                  <strong>{selectedMode?.labelJa || "あなたに合わせた英語レッスン"}</strong>
+                  <span>{lessonActive ? "保存された学習履歴をもとに、今のレッスン内容を調整しています。" : "モードを選ぶか、AIに今日の練習内容を相談できます。"}</span>
                 </div>
               </div>
               <div className="sw-status">
                 <span className="sw-chip">{settings.level}</span>
-                <span className="sw-chip">{settings.durationMinutes} min</span>
-                {lessonStartedAt && <span className="sw-chip">{formatTime(remainingSeconds)} left</span>}
-                <span className="sw-chip">{settings.voiceEnabled ? "Voice on" : "Voice off"}</span>
+                <span className="sw-chip">{settings.durationMinutes}分</span>
+                {lessonStartedAt && <span className="sw-chip">残り {formatTime(remainingSeconds)}</span>}
+                <span className="sw-chip">{settings.voiceEnabled ? "音声オン" : "音声オフ"}</span>
               </div>
             </header>
 
@@ -697,8 +721,8 @@ export default function AIChat() {
               {chatLog.length === 0 ? (
                 <div className="sw-empty">
                   <div>
-                    <strong>How are you today?</strong>
-                    <p>Start a lesson and SpeakWise will use your history, weak points, VocabStream progress, and VidMatch topics where available.</p>
+                    <strong>今日はどんな英語を練習しますか？</strong>
+                    <p>レッスンを始めると、過去の学習履歴、苦手なミス、VocabStreamの進捗、VidMatchの視聴トピックを必要に応じて活用します。</p>
                   </div>
                 </div>
               ) : (
@@ -708,7 +732,7 @@ export default function AIChat() {
                       {entry.text}
                       {entry.sender === "assistant" && (
                         <div style={{ marginTop: 8 }}>
-                          <button className="sw-button" onClick={() => void playVoice(entry.text)}>Play voice</button>
+                          <button className="sw-button" onClick={() => void playVoice(entry.text)}>音声で再生</button>
                         </div>
                       )}
                     </div>
@@ -718,7 +742,7 @@ export default function AIChat() {
                     <div className="sw-mode-actions">
                       {LESSON_MODES.map((mode) => (
                         <button key={mode.id} className="sw-button" onClick={() => void startLesson(mode.id)}>
-                          {mode.label}
+                          {mode.labelJa}
                         </button>
                       ))}
                     </div>
@@ -726,13 +750,13 @@ export default function AIChat() {
 
                   {summary && (
                     <div className="sw-summary">
-                      <h2>{summary.title || "Lesson Summary"}</h2>
+                      <h2>{summary.title || "レッスン要約"}</h2>
                       {[
-                        { label: "Covered", items: summary.covered },
-                        { label: "You did well", items: summary.strengths },
-                        { label: "Weaknesses", items: summary.weaknesses },
-                        { label: "Next steps", items: summary.recommendations },
-                        { label: "Useful vocabulary", items: summary.usefulVocabulary },
+                        { label: "今日扱った内容", items: summary.covered },
+                        { label: "よくできた点", items: summary.strengths },
+                        { label: "今後の課題", items: summary.weaknesses },
+                        { label: "次におすすめの練習", items: summary.recommendations },
+                        { label: "今日の重要表現", items: summary.usefulVocabulary },
                       ].map(({ label, items }) => Array.isArray(items) && items.length > 0 && (
                         <div key={label}>
                           <strong>{label}</strong>
@@ -744,19 +768,19 @@ export default function AIChat() {
                   <div ref={chatEndRef} />
                 </>
               )}
-              {isSending && <div className="sw-msg assistant">Thinking...</div>}
-              {isEnding && <div className="sw-msg assistant">Preparing your lesson summary...</div>}
+              {isSending && <div className="sw-msg assistant">考えています...</div>}
+              {isEnding && <div className="sw-msg assistant">レッスン要約を作成しています...</div>}
             </div>
 
             <div className="sw-composer">
-              <button className={`sw-icon ${isListening ? "active" : ""}`} onClick={toggleListening} title="Voice input" aria-label="Voice input">
-                {isListening ? "Stop" : "Mic"}
+              <button className={`sw-icon ${isListening ? "active" : ""}`} onClick={toggleListening} title="音声入力" aria-label="音声入力">
+                {isListening ? "停止" : "音声"}
               </button>
               <textarea
                 className="sw-textarea"
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
-                placeholder="Type your answer or question..."
+                placeholder="英語で答えを入力してください。質問してもOKです。"
                 onKeyDown={(event) => {
                   if (event.key === "Enter" && !event.shiftKey) {
                     event.preventDefault();
@@ -765,7 +789,7 @@ export default function AIChat() {
                 }}
               />
               <button className="sw-send" disabled={!input.trim() || isSending || isEnding} onClick={() => void sendMessage()}>
-                Send
+                送信
               </button>
             </div>
           </section>

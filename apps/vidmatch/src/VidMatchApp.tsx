@@ -38,20 +38,26 @@ const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversa
 const TOPICS = ["travel", "daily life", "school"];
 const ACCENTS = ["American", "British", "Australian", "Canadian"];
 
-const featureCards = [
-  {
-    title: "語彙レベルに合う動画",
-    copy: "VocabStreamで学んだ単語や現在のCEFRレベルを手がかりに、理解しやすい英語動画を探しやすくします。",
-  },
-  {
-    title: "分野別インプット",
-    copy: "旅行、日常生活、学校など、今あるトピックに合わせて動画学習へ進めます。",
-  },
-  {
-    title: "英語を英語のまま理解",
-    copy: "日本語字幕に頼りすぎず、文脈・音声・表現を結びつけながら自然なインプット量を増やします。",
-  },
-];
+const SKILL_LABELS: Record<string, string> = {
+  listening: "リスニング",
+  vocabulary: "語彙",
+  pronunciation: "発音",
+  grammar: "文法",
+  conversation: "会話",
+};
+
+const TOPIC_LABELS: Record<string, string> = {
+  travel: "旅行",
+  "daily life": "日常生活",
+  school: "学校・留学",
+};
+
+const ACCENT_LABELS: Record<string, string> = {
+  American: "アメリカ英語",
+  British: "イギリス英語",
+  Australian: "オーストラリア英語",
+  Canadian: "カナダ英語",
+};
 
 export default function VidMatchApp({ pathname }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -342,91 +348,103 @@ export default function VidMatchApp({ pathname }: Props) {
           width: 100%;
           max-width: 1180px;
           margin: 0 auto;
-          padding: 104px 16px 96px;
+          padding: 86px 18px 44px;
           box-sizing: border-box;
         }
 
-        .vidmatch-hero,
+        .vidmatch-workspace {
+          display: grid;
+          grid-template-columns: 340px minmax(0, 1fr);
+          gap: 18px;
+          align-items: start;
+        }
+
+        .vidmatch-panel,
         .vidmatch-section {
           background: #ffffff;
-          border: 1px solid rgba(209, 213, 219, 0.8);
-          border-radius: 16px;
-          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+          border: 1px solid #d6e0ea;
+          border-radius: 8px;
+          box-shadow: 0 16px 38px rgba(22, 38, 60, 0.11);
         }
 
-        .vidmatch-hero {
-          padding: 24px;
+        .vidmatch-panel {
+          padding: 18px;
+          position: sticky;
+          top: 86px;
         }
 
-        .vidmatch-heading {
+        .vidmatch-brand {
           display: flex;
           align-items: center;
-          gap: 14px;
-          margin-bottom: 16px;
+          gap: 12px;
+          margin-bottom: 14px;
         }
 
         .vidmatch-logo-large {
-          width: 62px;
-          height: 62px;
-          border-radius: 12px;
+          width: 44px;
+          height: 44px;
+          border-radius: 8px;
           object-fit: cover;
           flex: 0 0 auto;
-          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
         }
 
-        .vidmatch-h1 {
+        .vidmatch-brand h2 {
           margin: 0;
-          color: #1f2937;
-          font-size: clamp(30px, 5vw, 54px);
+          color: #12213a;
+          font-size: 22px;
           line-height: 1;
           font-weight: 900;
         }
 
-        .vidmatch-copy {
-          max-width: 760px;
-          color: #334155;
-          font-size: 16px;
-          line-height: 1.8;
+        .vidmatch-brand p {
+          margin: 4px 0 0;
+          color: #64748b;
+          font-size: 13px;
+          line-height: 1.35;
         }
 
         .vidmatch-section {
-          margin-top: 24px;
-          padding: 22px;
+          padding: 18px;
         }
 
         .vidmatch-section h2 {
-          margin: 0 0 14px;
-          color: #173a71;
-          font-size: 24px;
+          margin: 0;
+          color: #12213a;
+          font-size: 21px;
           font-weight: 900;
         }
 
-        .vidmatch-card-grid {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 14px;
+        .vidmatch-section-subtitle {
+          margin: 5px 0 0;
+          color: #64748b;
+          font-size: 13px;
+          line-height: 1.5;
         }
 
-        .vidmatch-preferences {
-          display: grid;
-          gap: 20px;
-        }
-
-        .preference-group {
-          display: grid;
-          gap: 10px;
+        .vidmatch-control-section {
+          border-top: 1px solid #e2e8f0;
+          padding-top: 14px;
+          margin-top: 14px;
         }
 
         .preference-label {
-          color: #10203b;
-          font-size: 15px;
-          font-weight: 900;
+          display: block;
+          color: #475569;
+          font-size: 12px;
+          font-weight: 800;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
         }
 
         .chip-row {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+        }
+
+        .chip-row.levels {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
         .choice-chip,
@@ -434,90 +452,90 @@ export default function VidMatchApp({ pathname }: Props) {
         .history-button,
         .youtube-link {
           border: 1px solid #d1d5db;
-          border-radius: 18px;
-          min-height: 42px;
-          padding: 0 16px;
-          font-weight: 800;
+          border-radius: 8px;
+          min-height: 38px;
+          padding: 8px 10px;
+          font-weight: 750;
           cursor: pointer;
-          box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+          box-shadow: none;
           transition: transform 140ms cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 140ms ease,
             border-color 140ms ease, background 140ms ease, color 140ms ease;
         }
 
         .choice-chip {
           background: #ffffff;
-          color: #334155;
+          color: #162033;
         }
 
         .choice-chip:hover,
         .choice-chip:focus {
-          transform: translateY(-6px);
+          transform: translateY(-1px);
           border-color: #b8c4d6;
-          box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+          box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
           outline: none;
         }
 
         .choice-chip.is-selected {
-          background: linear-gradient(90deg, #4f46e5, #06b6d4);
-          border-color: transparent;
-          box-shadow: 0 12px 30px rgba(79, 70, 229, 0.18);
+          background: #195a8a;
+          border-color: #195a8a;
+          box-shadow: none;
           color: #ffffff;
-          transform: scale(1.02);
         }
 
         .choice-chip.is-selected:hover,
         .choice-chip.is-selected:focus {
           border-color: transparent;
-          box-shadow: 0 18px 36px rgba(79, 70, 229, 0.22);
+          box-shadow: 0 8px 18px rgba(25, 90, 138, 0.18);
         }
 
         .caption-toggle {
-          display: inline-flex;
+          display: flex;
           align-items: center;
+          justify-content: space-between;
           gap: 10px;
-          width: fit-content;
+          width: 100%;
           color: #334155;
-          font-weight: 800;
+          font-size: 14px;
+          font-weight: 700;
           cursor: pointer;
         }
 
         .caption-toggle input {
           width: 18px;
           height: 18px;
-          accent-color: #4f46e5;
+          accent-color: #195a8a;
         }
 
         .custom-topic-input {
           width: 100%;
-          min-height: 44px;
-          border: 1px solid #d1d5db;
-          border-radius: 14px;
-          padding: 0 14px;
+          min-height: 40px;
+          border: 1px solid #cbd5e1;
+          border-radius: 8px;
+          padding: 0 10px;
           color: #10203b;
           background: #ffffff;
-          box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
           font: inherit;
-          font-weight: 700;
+          font-size: 14px;
           box-sizing: border-box;
+          margin-top: 8px;
         }
 
         .custom-topic-input:focus {
-          border-color: #4f46e5;
-          box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.16);
+          border-color: #195a8a;
+          box-shadow: 0 0 0 3px rgba(25, 90, 138, 0.14);
           outline: none;
         }
 
         .recommend-actions {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-          flex-wrap: wrap;
+          display: grid;
+          gap: 8px;
         }
 
         .recommend-button {
-          background: linear-gradient(90deg, #4f46e5, #06b6d4);
-          border-color: transparent;
-          box-shadow: 0 12px 30px rgba(79, 70, 229, 0.18);
+          width: 100%;
+          background: #1b7f79;
+          border-color: #1b7f79;
+          box-shadow: none;
           color: #ffffff;
         }
 
@@ -525,9 +543,9 @@ export default function VidMatchApp({ pathname }: Props) {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 42px;
+          min-height: 38px;
           background: #ffffff;
-          color: #173a71;
+          color: #195a8a;
           text-decoration: none;
         }
 
@@ -537,9 +555,8 @@ export default function VidMatchApp({ pathname }: Props) {
         .history-button:focus,
         .youtube-link:hover,
         .youtube-link:focus {
-          transform: translateY(-6px);
-          border-color: transparent;
-          box-shadow: 0 18px 36px rgba(79, 70, 229, 0.22);
+          transform: translateY(-1px);
+          box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
           outline: none;
         }
 
@@ -547,7 +564,7 @@ export default function VidMatchApp({ pathname }: Props) {
           cursor: wait;
           opacity: 0.72;
           transform: none;
-          box-shadow: 0 12px 30px rgba(79, 70, 229, 0.18);
+          box-shadow: none;
         }
 
         .recommend-error,
@@ -570,10 +587,10 @@ export default function VidMatchApp({ pathname }: Props) {
         .recommendation-card {
           min-width: 0;
           overflow: hidden;
-          border: 1px solid #d1d5db;
-          border-radius: 14px;
+          border: 1px solid #d6e0ea;
+          border-radius: 8px;
           background: #ffffff;
-          box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
         }
 
         .history-header {
@@ -602,13 +619,13 @@ export default function VidMatchApp({ pathname }: Props) {
         .recommendation-body {
           display: grid;
           gap: 10px;
-          padding: 16px;
+          padding: 14px;
         }
 
         .recommendation-title {
           margin: 0;
           color: #10203b;
-          font-size: 18px;
+          font-size: 16px;
           line-height: 1.35;
           font-weight: 900;
         }
@@ -628,8 +645,8 @@ export default function VidMatchApp({ pathname }: Props) {
 
         .recommendation-tag {
           border-radius: 999px;
-          background: #e0f2fe;
-          color: #075985;
+          background: #edf4f8;
+          color: #195a8a;
           font-size: 12px;
           font-weight: 800;
           padding: 5px 9px;
@@ -641,30 +658,13 @@ export default function VidMatchApp({ pathname }: Props) {
           justify-content: center;
           width: fit-content;
           min-height: 40px;
-          background: linear-gradient(90deg, #4f46e5, #06b6d4);
-          border-color: transparent;
-          box-shadow: 0 12px 30px rgba(79, 70, 229, 0.18);
+          background: #195a8a;
+          border-color: #195a8a;
+          box-shadow: none;
           color: #ffffff;
           text-decoration: none;
         }
 
-        .vidmatch-feature-card {
-          min-width: 0;
-          padding: 18px;
-          border: 1px solid #d1d5db;
-          border-radius: 14px;
-          background: linear-gradient(135deg, #f8fbff 0%, #d7e0ec 100%);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .vidmatch-feature-card h3 {
-          margin: 0 0 8px;
-          color: #10203b;
-          font-size: 17px;
-          font-weight: 900;
-        }
-
-        .vidmatch-feature-card p,
         .vidmatch-section p {
           margin: 0;
           color: #334155;
@@ -704,11 +704,15 @@ export default function VidMatchApp({ pathname }: Props) {
           }
 
           .vidmatch-main {
-            padding-top: 126px;
+            padding-top: 86px;
           }
 
-          .vidmatch-card-grid {
+          .vidmatch-workspace {
             grid-template-columns: 1fr;
+          }
+
+          .vidmatch-panel {
+            position: static;
           }
 
           .recommendation-grid {
@@ -736,17 +740,17 @@ export default function VidMatchApp({ pathname }: Props) {
             padding-right: 12px;
           }
 
-          .vidmatch-hero,
-          .vidmatch-section {
-            padding: 18px;
+          .vidmatch-main {
+            padding-left: 8px;
+            padding-right: 8px;
           }
 
-          .vidmatch-heading {
-            align-items: flex-start;
+          .chip-row {
+            grid-template-columns: 1fr;
           }
 
-          .vidmatch-copy {
-            font-size: 14px;
+          .chip-row.levels {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
           }
         }
       `}</style>
@@ -892,204 +896,189 @@ export default function VidMatchApp({ pathname }: Props) {
             )}
           </section>
         ) : (
-          <>
-        <section className="vidmatch-hero" aria-labelledby="vidmatch-title">
-          <div className="vidmatch-heading">
-            <Image
-              src="/images/videofinder.png"
-              alt="VidMatch"
-              width={62}
-              height={62}
-              className="vidmatch-logo-large"
-            />
-            <h2 id="vidmatch-title" className="vidmatch-h1">
-              VidMatch
-            </h2>
-          </div>
-
-          <p className="vidmatch-copy">
-            VidMatchは、YouTube動画を英語レベル・語彙・分野に基づいて推薦する学習エンジンです。
-            いまの自分に合った英語インプットを増やし、聞き取れる表現と使える語彙を自然に広げることを目指します。
-          </p>
-
-          <p className="vidmatch-copy" style={{ marginTop: 14 }}>
-            Project Fluenceの他アプリと連携し、VocabStreamで学んだ語彙や興味分野をもとに、
-            理解しやすく、少し背伸びできる動画へ案内します。
-          </p>
-
-          {isNestedRoute && (
-            <p className="vidmatch-notice">
-              このページは現在ホームに集約されています。
-            </p>
-          )}
-        </section>
-
-        <section className="vidmatch-section" aria-labelledby="vidmatch-features-title">
-          <h2 id="vidmatch-features-title">VidMatchでできること</h2>
-          <div className="vidmatch-card-grid">
-            {featureCards.map((feature) => (
-              <article key={feature.title} className="vidmatch-feature-card">
-                <h3>{feature.title}</h3>
-                <p>{feature.copy}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="vidmatch-section" aria-labelledby="vidmatch-recommend-title">
-          <h2 id="vidmatch-recommend-title">動画を探す</h2>
-
-          <div className="vidmatch-preferences">
-            <div className="preference-group">
-              <span className="preference-label">レベル</span>
-              <div className="chip-row" role="group" aria-label="Choose English level">
-                {LEVELS.map((level) => (
-                  <button
-                    key={level}
-                    type="button"
-                    className={`choice-chip ${selectedLevel === level ? "is-selected" : ""}`}
-                    onClick={() => setSelectedLevel(level)}
-                  >
-                    {level}
-                  </button>
-                ))}
+          <div className="vidmatch-workspace">
+            <aside className="vidmatch-panel" aria-label="動画検索条件">
+              <div className="vidmatch-brand">
+                <Image
+                  src="/images/videofinder.png"
+                  alt=""
+                  width={44}
+                  height={44}
+                  className="vidmatch-logo-large"
+                />
+                <div>
+                  <h2>VidMatch</h2>
+                  <p>今の英語レベルに合う動画を探す</p>
+                </div>
               </div>
-            </div>
 
-            <div className="preference-group">
-              <span className="preference-label">伸ばしたいスキル</span>
-              <div className="chip-row" role="group" aria-label="Choose skills">
-                {SKILLS.map((skill) => (
-                  <button
-                    key={skill}
-                    type="button"
-                    className={`choice-chip ${selectedSkills.includes(skill) ? "is-selected" : ""}`}
-                    onClick={() => toggleValue(skill, selectedSkills, setSelectedSkills)}
-                  >
-                    {skill}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="preference-group">
-              <span className="preference-label">トピック</span>
-              <div className="chip-row" role="group" aria-label="Choose topics">
-                {TOPICS.map((topic) => (
-                  <button
-                    key={topic}
-                    type="button"
-                    className={`choice-chip ${selectedTopics.includes(topic) ? "is-selected" : ""}`}
-                    onClick={() => toggleValue(topic, selectedTopics, setSelectedTopics)}
-                  >
-                    {topic}
-                  </button>
-                ))}
-              </div>
-              <input
-                type="text"
-                className="custom-topic-input"
-                value={customTopics}
-                onChange={(event) => setCustomTopics(event.target.value)}
-                placeholder="自分のトピックを入力（複数の場合はカンマで区切る）"
-                aria-label="Enter custom topics"
-              />
-            </div>
-
-            <div className="preference-group">
-              <span className="preference-label">アクセント</span>
-              <div className="chip-row" role="group" aria-label="Choose accent">
-                <button
-                  type="button"
-                  className={`choice-chip ${selectedAccent === "" ? "is-selected" : ""}`}
-                  onClick={() => setSelectedAccent("")}
-                >
-                  any
-                </button>
-                {ACCENTS.map((accent) => (
-                  <button
-                    key={accent}
-                    type="button"
-                    className={`choice-chip ${selectedAccent === accent ? "is-selected" : ""}`}
-                    onClick={() => setSelectedAccent(accent)}
-                  >
-                    {accent}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <label className="caption-toggle">
-              <input
-                type="checkbox"
-                checked={captionOnly}
-                onChange={(event) => setCaptionOnly(event.target.checked)}
-              />
-              字幕・文字起こしあり
-            </label>
-
-            <div className="recommend-actions">
-              <button
-                type="button"
-                className="recommend-button"
-                onClick={fetchRecommendations}
-                disabled={recommendationLoading}
-              >
-                {recommendationLoading ? "検索中..." : "おすすめを見る"}
-              </button>
-              <Link href="/vidmatch/history" className="history-button">
-                動画の視聴履歴を見る
-              </Link>
-              {recommendationError && <span className="recommend-error">{recommendationError}</span>}
-            </div>
-          </div>
-
-          {recommendations.length > 0 && (
-            <div className="recommendation-grid" aria-live="polite">
-              {recommendations.map((video) => (
-                <article key={video.video_id} className="recommendation-card">
-                  {video.thumbnail_url && (
-                    <img src={video.thumbnail_url} alt="" className="recommendation-thumb" loading="lazy" />
-                  )}
-                  <div className="recommendation-body">
-                    <h3 className="recommendation-title">{video.title}</h3>
-                    <p className="recommendation-meta">
-                      {video.channel_name} / {video.level} / score {Math.round(Number(video.quality_score))}
-                    </p>
-                    <div className="recommendation-tags">
-                      {[...video.skills, ...video.topics].slice(0, 6).map((tag) => (
-                        <span key={`${video.video_id}-${tag}`} className="recommendation-tag">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    {video.description && (
-                      <p className="recommendation-description">
-                        {video.description.length > 150 ? `${video.description.slice(0, 150)}...` : video.description}
-                      </p>
-                    )}
-                    <a
-                      className="youtube-link"
-                      href={video.youtube_url}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={() => void recordVideoClick(video)}
+              <div className="vidmatch-control-section">
+                <span className="preference-label">英語レベル</span>
+                <div className="chip-row levels" role="group" aria-label="英語レベルを選択">
+                  {LEVELS.map((level) => (
+                    <button
+                      key={level}
+                      type="button"
+                      className={`choice-chip ${selectedLevel === level ? "is-selected" : ""}`}
+                      onClick={() => setSelectedLevel(level)}
                     >
-                      YouTubeで見る
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
-          )}
+                      {level}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-          {!recommendationLoading && recommendations.length === 0 && (
-            <p className="empty-recommendations" style={{ marginTop: 16 }}>
-              条件を選んで、おすすめ動画を表示できます。
-            </p>
-          )}
-        </section>
-          </>
+              <div className="vidmatch-control-section">
+                <span className="preference-label">伸ばしたいスキル</span>
+                <div className="chip-row" role="group" aria-label="伸ばしたいスキルを選択">
+                  {SKILLS.map((skill) => (
+                    <button
+                      key={skill}
+                      type="button"
+                      className={`choice-chip ${selectedSkills.includes(skill) ? "is-selected" : ""}`}
+                      onClick={() => toggleValue(skill, selectedSkills, setSelectedSkills)}
+                    >
+                      {SKILL_LABELS[skill] || skill}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="vidmatch-control-section">
+                <span className="preference-label">トピック</span>
+                <div className="chip-row" role="group" aria-label="トピックを選択">
+                  {TOPICS.map((topic) => (
+                    <button
+                      key={topic}
+                      type="button"
+                      className={`choice-chip ${selectedTopics.includes(topic) ? "is-selected" : ""}`}
+                      onClick={() => toggleValue(topic, selectedTopics, setSelectedTopics)}
+                    >
+                      {TOPIC_LABELS[topic] || topic}
+                    </button>
+                  ))}
+                </div>
+                <input
+                  type="text"
+                  className="custom-topic-input"
+                  value={customTopics}
+                  onChange={(event) => setCustomTopics(event.target.value)}
+                  placeholder="その他のトピックを入力"
+                  aria-label="その他のトピック"
+                />
+              </div>
+
+              <div className="vidmatch-control-section">
+                <span className="preference-label">アクセント</span>
+                <div className="chip-row" role="group" aria-label="アクセントを選択">
+                  <button
+                    type="button"
+                    className={`choice-chip ${selectedAccent === "" ? "is-selected" : ""}`}
+                    onClick={() => setSelectedAccent("")}
+                  >
+                    指定なし
+                  </button>
+                  {ACCENTS.map((accent) => (
+                    <button
+                      key={accent}
+                      type="button"
+                      className={`choice-chip ${selectedAccent === accent ? "is-selected" : ""}`}
+                      onClick={() => setSelectedAccent(accent)}
+                    >
+                      {ACCENT_LABELS[accent] || accent}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="vidmatch-control-section">
+                <label className="caption-toggle">
+                  <span>字幕・文字起こしあり</span>
+                  <input
+                    type="checkbox"
+                    checked={captionOnly}
+                    onChange={(event) => setCaptionOnly(event.target.checked)}
+                  />
+                </label>
+              </div>
+
+              <div className="vidmatch-control-section">
+                <div className="recommend-actions">
+                  <button
+                    type="button"
+                    className="recommend-button"
+                    onClick={fetchRecommendations}
+                    disabled={recommendationLoading}
+                  >
+                    {recommendationLoading ? "検索中..." : "おすすめ動画を表示"}
+                  </button>
+                  <Link href="/vidmatch/history" className="history-button">
+                    視聴履歴を見る
+                  </Link>
+                </div>
+                {recommendationError && <p className="recommend-error" style={{ marginTop: 10 }}>{recommendationError}</p>}
+              </div>
+            </aside>
+
+            <section className="vidmatch-section" aria-labelledby="vidmatch-recommend-title">
+              <div className="history-header">
+                <div>
+                  <h2 id="vidmatch-recommend-title">おすすめ動画</h2>
+                  <p className="vidmatch-section-subtitle">
+                    レベル、スキル、トピックに合わせて英語インプット用のYouTube動画を表示します。
+                  </p>
+                </div>
+                {isNestedRoute && (
+                  <p className="vidmatch-notice">
+                    このページは現在ホームに集約されています。
+                  </p>
+                )}
+              </div>
+
+              {recommendations.length > 0 ? (
+                <div className="recommendation-grid" aria-live="polite">
+                  {recommendations.map((video) => (
+                    <article key={video.video_id} className="recommendation-card">
+                      {video.thumbnail_url && (
+                        <img src={video.thumbnail_url} alt="" className="recommendation-thumb" loading="lazy" />
+                      )}
+                      <div className="recommendation-body">
+                        <h3 className="recommendation-title">{video.title}</h3>
+                        <p className="recommendation-meta">
+                          {video.channel_name} / {video.level} / score {Math.round(Number(video.quality_score))}
+                        </p>
+                        <div className="recommendation-tags">
+                          {[...video.skills, ...video.topics].slice(0, 6).map((tag) => (
+                            <span key={`${video.video_id}-${tag}`} className="recommendation-tag">
+                              {SKILL_LABELS[tag] || TOPIC_LABELS[tag] || tag}
+                            </span>
+                          ))}
+                        </div>
+                        {video.description && (
+                          <p className="recommendation-description">
+                            {video.description.length > 150 ? `${video.description.slice(0, 150)}...` : video.description}
+                          </p>
+                        )}
+                        <a
+                          className="youtube-link"
+                          href={video.youtube_url}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={() => void recordVideoClick(video)}
+                        >
+                          YouTubeで見る
+                        </a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <p className="empty-recommendations" style={{ marginTop: 16 }}>
+                  左の条件を選んで「おすすめ動画を表示」を押してください。
+                </p>
+              )}
+            </section>
+          </div>
         )}
       </main>
     </div>
