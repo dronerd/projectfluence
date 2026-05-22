@@ -5,6 +5,7 @@ export const runtime = "nodejs";
 
 type SessionBody = {
   mode?: unknown;
+  lessonMode?: unknown;
   level?: unknown;
   plannedDurationMinutes?: unknown;
   selectedTopics?: unknown;
@@ -35,6 +36,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         user_id: authUser.id,
         mode: parsed.mode,
+        lesson_mode: parsed.lessonMode,
         level: parsed.level,
         planned_duration_minutes: parsed.plannedDurationMinutes,
         selected_topics: parsed.selectedTopics,
@@ -47,7 +49,8 @@ export async function POST(request: NextRequest) {
       throw new Error(error?.message ?? `Supabase session insert failed with status ${response.status}`);
     }
 
-    return NextResponse.json({ ok: true });
+    const rows = (await response.json().catch(() => [])) as Array<{ id?: string }>;
+    return NextResponse.json({ ok: true, session: rows[0] ?? null });
   } catch (error) {
     const message = error instanceof Error ? error.message : "SpeakWise session analytics save failed";
     const status = message === "Invalid Supabase session." ? 401 : 500;
@@ -66,6 +69,11 @@ function parseSessionBody(body: SessionBody | null) {
 
   return {
     mode,
+    lessonMode: typeof body.lessonMode === "string" && body.lessonMode.trim()
+      ? body.lessonMode.trim()
+      : mode === "writing"
+        ? "writing_feedback"
+        : "speaking_practice",
     level,
     plannedDurationMinutes,
     selectedTopics: stringArray(body.selectedTopics),

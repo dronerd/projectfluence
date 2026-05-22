@@ -80,6 +80,79 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+LESSON_MODE_PROMPTS = {
+    "natural_conversation": {
+        "name": "Natural Conversation",
+        "workflow": (
+            "Hold a flexible free conversation based on the learner's level and interests. "
+            "Correct only important mistakes naturally and keep the conversation moving."
+        ),
+    },
+    "vocabulary_phrase": {
+        "name": "Vocabulary & Phrase Practice",
+        "workflow": (
+            "Practice words and phrases from VocabStream memory when available. "
+            "Use spaced repetition, short example sentences, and one active recall task at a time."
+        ),
+    },
+    "grammar_practice": {
+        "name": "Grammar Practice",
+        "workflow": (
+            "Focus on recurring grammar mistakes from memory. Give a short explanation, then one targeted practice question."
+        ),
+    },
+    "speaking_practice": {
+        "name": "Speaking Practice",
+        "workflow": (
+            "Ask open-ended questions and encourage longer answers. Give concise feedback on fluency, accuracy, and expression."
+        ),
+    },
+    "pronunciation_practice": {
+        "name": "Pronunciation Practice",
+        "workflow": (
+            "Provide pronunciation tips, short speaking drills, word stress, sentence rhythm, and minimal-pair practice. "
+            "If voice is enabled, write responses that work well as audio."
+        ),
+    },
+    "listening_practice": {
+        "name": "Listening Practice",
+        "workflow": (
+            "Present short audio-style passages or spoken prompts, then ask comprehension questions. "
+            "Keep passages appropriate for the learner's level."
+        ),
+    },
+    "reading_comprehension": {
+        "name": "Reading Comprehension",
+        "workflow": (
+            "Provide a short text, then ask comprehension and inference questions. Adjust difficulty to the learner's level."
+        ),
+    },
+    "pdf_reading": {
+        "name": "PDF-Based Reading Practice",
+        "workflow": (
+            "Use the provided PDF excerpt or selected document context. Extract the key idea, then ask comprehension questions."
+        ),
+    },
+    "writing_feedback": {
+        "name": "Writing & Feedback",
+        "workflow": (
+            "Ask for a short paragraph or essay. Give feedback on grammar, vocabulary, structure, and naturalness."
+        ),
+    },
+    "deep_discussion": {
+        "name": "Deep Discussion",
+        "workflow": (
+            "Discuss abstract or academic topics. Help the learner develop nuanced claims, counterarguments, and precise expression."
+        ),
+    },
+    "review_weakness": {
+        "name": "Review & Weakness Training",
+        "workflow": (
+            "Use past lesson records to create targeted practice. Focus on repeated mistakes and weak areas, one pattern at a time."
+        ),
+    },
+}
+
 
 @lru_cache(maxsize=1)
 def get_openai_client() -> OpenAI:
@@ -101,6 +174,76 @@ def bounded_int(value: Any, default: int, minimum: int, maximum: int) -> int:
     except (TypeError, ValueError):
         parsed = default
     return min(max(parsed, minimum), maximum)
+
+
+def safe_json_dumps(value: Any) -> str:
+    try:
+        return json.dumps(value, ensure_ascii=False, indent=2)
+    except TypeError:
+        return "{}"
+
+
+def build_agent_system_prompt(req: dict[str, Any]) -> str:
+    level = str(req.get("level") or "B2").strip() or "B2"
+    lesson_mode = str(req.get("lessonMode") or "natural_conversation")
+    mode_config = LESSON_MODE_PROMPTS.get(lesson_mode, LESSON_MODE_PROMPTS["natural_conversation"])
+    topics = as_string_list(req.get("topics"))
+    duration_minutes = bounded_int(req.get("durationMinutes"), 15, 1, 180)
+    elapsed_seconds = bounded_int(req.get("elapsedSeconds"), 0, 0, duration_minutes * 60)
+    remaining_minutes = max(0, round(((duration_minutes * 60) - elapsed_seconds) / 60))
+    phase = str(req.get("phase") or "continue")
+    learner_memory = req.get("learnerMemory") if isinstance(req.get("learnerMemory"), dict) else {}
+    pdf_context = str(req.get("pdfContext") or "").strip()
+    voice_enabled = bool(req.get("voiceEnabled"))
+
+    return f"""You are SpeakWise AI, a longitudinal English-learning agent.
+
+Core identity:
+- You are not a generic chatbot. You are a pedagogically structured tutor that adapts from persistent learner memory.
+- Use stored lesson summaries, mistake patterns, vocabulary history, VidMatch topics, recommendations, and preferences when relevant.
+- Make the adaptation visible, but do not overdo it. One brief memory-based connection is enough.
+
+Current lesson:
+- Mode: {mode_config["name"]} ({lesson_mode})
+- Mode workflow: {mode_config["workflow"]}
+- CEFR level: {level}
+- Topics: {", ".join(topics) if topics else "not selected"}
+- Planned duration: {duration_minutes} minutes
+- Approximate remaining time: {remaining_minutes} minutes
+- Phase: {phase}
+- Voice mode: {"on" if voice_enabled else "off"}
+
+Learner memory JSON:
+{safe_json_dumps(learner_memory)}
+
+PDF/document context:
+{pdf_context[:6000] if pdf_context else "No PDF/document context provided."}
+
+Teaching rules:
+- Start naturally. A greeting like "How are you today?" is good, but do not dump instructions.
+- Guide step by step with natural transitions.
+- Ask one clear question or task at a time.
+- Correct important grammar, vocabulary, pronunciation, or expression issues naturally.
+- Recordable mistakes should be visible as concise corrections or examples, not overwhelming lists.
+- In conversation mode, avoid correcting every tiny issue unless it blocks communication.
+- Near the end, transition toward a wrap-up instead of starting a large new task.
+- If the learner asks for another mode, smoothly switch or offer mode buttons in text form.
+- Keep responses concise and interactive. End with a next action for the learner unless the lesson is ending.
+"""
+
+
+def normalize_history(value: Any) -> list[dict[str, str]]:
+    if not isinstance(value, list):
+        return []
+    messages: list[dict[str, str]] = []
+    for item in value[-16:]:
+        if not isinstance(item, dict):
+            continue
+        role = "assistant" if item.get("role") == "assistant" else "user"
+        content = str(item.get("content") or "").strip()
+        if content:
+            messages.append({"role": role, "content": content[:4000]})
+    return messages
 
 
 def build_chat_system_prompt(req: dict[str, Any]) -> str:
@@ -172,6 +315,19 @@ def chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
     return completion.choices[0].message.content or ""
 
 
+def agent_chat_completion(system_prompt: str, req: dict[str, Any], max_tokens: int) -> str:
+    messages: list[dict[str, str]] = [{"role": "system", "content": system_prompt}]
+    messages.extend(normalize_history(req.get("history")))
+    messages.append({"role": "user", "content": str(req.get("message") or "").strip()})
+    completion = get_openai_client().chat.completions.create(
+        model=os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini"),
+        messages=messages,
+        temperature=0.65,
+        max_tokens=max_tokens,
+    )
+    return completion.choices[0].message.content or ""
+
+
 def json_chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
     try:
         completion = get_openai_client().chat.completions.create(
@@ -204,21 +360,122 @@ async def chat(req: dict[str, Any]) -> JSONResponse:
     if mode == "warmup":
         return JSONResponse({"status": "ok", "mode": "warmup"})
 
-    if mode not in {"speaking", "lesson"}:
-        return JSONResponse({"error": "Unknown mode. Use 'speaking', 'lesson', or 'warmup'."}, status_code=400)
+    if mode not in {"speaking", "lesson", "agent"}:
+        return JSONResponse({"error": "Unknown mode. Use 'speaking', 'lesson', 'agent', or 'warmup'."}, status_code=400)
 
     message = str(req.get("message") or "").strip()
     if not message:
         return JSONResponse({"error": "message is required"}, status_code=400)
 
     try:
-        max_tokens = 700 if mode == "lesson" else 500
-        reply = chat_completion(build_chat_system_prompt(req), message, max_tokens=max_tokens)
+        if mode == "agent":
+            reply = agent_chat_completion(build_agent_system_prompt(req), req, max_tokens=850)
+        else:
+            max_tokens = 700 if mode == "lesson" else 500
+            reply = chat_completion(build_chat_system_prompt(req), message, max_tokens=max_tokens)
         return JSONResponse({"reply": reply, "mode": mode})
     except RuntimeError as exc:
         return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
         return JSONResponse({"error": "OpenAI chat request failed", "details": str(exc)}, status_code=500)
+
+
+SUMMARY_JSON_SCHEMA = """{
+  "title": "Short lesson title",
+  "covered": ["What the lesson covered"],
+  "strengths": ["What the learner did well"],
+  "weaknesses": ["Mistakes or weak areas noticed"],
+  "recommendations": ["Recommended next steps"],
+  "usefulVocabulary": ["Useful vocabulary or phrases from the lesson"],
+  "mistakes": [
+    {
+      "type": "grammar | vocabulary | pronunciation | expression | fluency | structure",
+      "pattern": "Reusable mistake pattern",
+      "original": "Learner example if available",
+      "correction": "Natural correction",
+      "explanation": "Brief explanation"
+    }
+  ]
+}"""
+
+
+@app.post("/api/lesson-summary")
+async def lesson_summary(req: dict[str, Any]) -> JSONResponse:
+    history = normalize_history(req.get("history"))
+    if not history:
+        return JSONResponse({"error": "history is required"}, status_code=400)
+
+    lesson_mode = str(req.get("lessonMode") or "natural_conversation")
+    mode_config = LESSON_MODE_PROMPTS.get(lesson_mode, LESSON_MODE_PROMPTS["natural_conversation"])
+    level = str(req.get("level") or "B2")
+    topics = as_string_list(req.get("topics"))
+
+    prompt = f"""Summarize this SpeakWise lesson for persistent learner memory.
+
+Lesson mode: {mode_config["name"]}
+Level: {level}
+Topics: {", ".join(topics) if topics else "not selected"}
+
+Conversation:
+{safe_json_dumps(history)}
+
+Return ONLY valid JSON with this schema:
+{SUMMARY_JSON_SCHEMA}
+
+Rules:
+- Be concise and specific.
+- Include repeated or pedagogically useful mistakes only.
+- Make recommendations usable in the next lesson.
+- If there were no clear mistakes, use an empty mistakes array.
+"""
+
+    try:
+        raw = json_chat_completion(
+            system_prompt="You produce strict JSON lesson records for an English-learning app. Return only JSON.",
+            message=prompt,
+            max_tokens=1300,
+        )
+        parsed = parse_json_object(raw) or {}
+        summary = normalize_lesson_summary(parsed)
+        farewell = "Great work today. I saved the main points so next time we can build on them."
+        return JSONResponse({"summary": summary, "farewell": farewell})
+    except RuntimeError as exc:
+        return JSONResponse({"error": str(exc)}, status_code=500)
+    except Exception as exc:
+        return JSONResponse({"error": "Lesson summary generation failed", "details": str(exc)}, status_code=500)
+
+
+def normalize_string_list(value: Any, fallback: list[str] | None = None) -> list[str]:
+    if not isinstance(value, list):
+        return fallback or []
+    return [str(item).strip() for item in value if str(item).strip()][:8]
+
+
+def normalize_lesson_summary(raw: dict[str, Any]) -> dict[str, Any]:
+    mistakes = raw.get("mistakes")
+    normalized_mistakes = []
+    if isinstance(mistakes, list):
+        for mistake in mistakes[:12]:
+            if not isinstance(mistake, dict):
+                continue
+            mistake_type = str(mistake.get("type") or "expression").strip() or "expression"
+            normalized_mistakes.append({
+                "type": mistake_type,
+                "pattern": str(mistake.get("pattern") or mistake.get("explanation") or mistake_type).strip()[:240],
+                "original": str(mistake.get("original") or "").strip()[:400],
+                "correction": str(mistake.get("correction") or "").strip()[:400],
+                "explanation": str(mistake.get("explanation") or "").strip()[:400],
+            })
+
+    return {
+        "title": str(raw.get("title") or "SpeakWise lesson").strip()[:120],
+        "covered": normalize_string_list(raw.get("covered"), ["Interactive English practice"]),
+        "strengths": normalize_string_list(raw.get("strengths"), ["You stayed engaged and practiced actively."]),
+        "weaknesses": normalize_string_list(raw.get("weaknesses")),
+        "recommendations": normalize_string_list(raw.get("recommendations"), ["Review today's useful phrases before the next lesson."]),
+        "usefulVocabulary": normalize_string_list(raw.get("usefulVocabulary") or raw.get("useful_vocabulary")),
+        "mistakes": normalized_mistakes,
+    }
 
 @app.post("/api/voice")
 async def voice(req: dict[str, Any]):

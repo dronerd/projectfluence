@@ -1,539 +1,218 @@
-
-// src/pages/AI_chat.tsx
-import React, { useState, useEffect, useMemo, useRef } from "react";
-import { useNavigate } from "../lib/router-compat";
-import { OPENING_QUESTIONS, LEVELS } from "../lib/openingQuestions";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
-import {
-  ANSWER_READY_PROMPTS,
-  LEVEL_FEEDBACK_INTRO_PROMPTS,
-  LEVEL_FEEDBACK_SECTION_PROMPTS,
-  LEVEL_IMPROVED_VERSION_INTRO_PROMPTS,
-  LEVEL_IMPROVED_VERSION_READY_PROMPTS,
-  LEVEL_POSITIVE_FALLBACK_PROMPTS,
-  LEVEL_PRACTICE_CONFIRMATION_PROMPTS,
-  LEVEL_PRACTICE_START_PROMPTS,
-  LESSON_GREETING_PROMPTS,
-  LESSON_INTRO_TEMPLATES,
-  MOOD_OPTIONS,
-  MOOD_RESPONSES,
-  type FeedbackSection,
-  type MoodChoice,
-} from "../lib/lessonGreetings";
 
-// --- Types and category/lesson metadata ---
-type ConversationMode = "choice" | "speaking" | "lesson";
-type ConversationStep =
-  | "initial"
-  | "setup"
-  | "level"
-  | "topic"
-  | "confirm"
-  | "test"
-  | "skills"
-  | "duration"
-  | "components"
-  | "structure"
-  | "chatting";
+type CEFRLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
+type LessonMode =
+  | "natural_conversation"
+  | "vocabulary_phrase"
+  | "grammar_practice"
+  | "speaking_practice"
+  | "pronunciation_practice"
+  | "listening_practice"
+  | "reading_comprehension"
+  | "pdf_reading"
+  | "writing_feedback"
+  | "deep_discussion"
+  | "review_weakness";
 
-interface ChatEntry {
-  sender: "user" | "llm";
+type ChatEntry = {
+  sender: "user" | "assistant";
   text: string;
-  kind?:
-    | "question"
-    | "greeting"
-    | "moodResponse"
-    | "lessonIntro"
-    | "confirmation"
-    | "answerReady"
-    | "positiveComment"
-    | "feedbackIntro"
-    | "feedbackSectionIntro"
-    | "feedbackSection"
-    | "feedback"
-    | "improvedIntro"
-    | "improvedAnswer";
-  feedback?: {
-    grammar?: string[];
-    vocabulary?: string[];
-    pronunciation?: string[];
-    fluency?: string[];
-    overall?: string;
-    positiveComment?: string;
-    suggestions?: string[];
-    sectionIntros?: Partial<Record<FeedbackSection, string>>;
-    improvedVersion?: ImprovedVersion;
-  };
-  feedbackSection?: {
-    section: FeedbackSection;
-    label: string;
-    items: string[];
-  };
-}
+  audioLoading?: boolean;
+};
 
-interface PendingFeedbackSection {
-  transitionText: string;
-  section: FeedbackSection;
-  label: string;
-  items: string[];
-}
+type LearnerMemory = {
+  recentSummaries?: Array<Record<string, unknown>>;
+  mistakePatterns?: Array<Record<string, unknown>>;
+  vocabProgress?: Array<Record<string, unknown>>;
+  weakVocabItems?: Array<Record<string, unknown>>;
+  vidmatchHistory?: Array<Record<string, unknown>>;
+  recommendations?: string[];
+};
 
-type ImprovementType = "unchanged" | "grammar" | "improvement" | "clarity";
-
-interface ImprovedSegment {
-  text: string;
-  type?: ImprovementType;
-  note?: string;
-}
-
-interface ImprovedChange {
-  original?: string;
-  revised?: string;
-  type?: ImprovementType;
-  reason?: string;
-}
-
-interface ImprovedVersion {
+type LessonSummary = {
   title?: string;
-  summary?: string;
-  segments?: ImprovedSegment[];
-  changes?: ImprovedChange[];
-  text?: string;
-  revised?: string;
-}
+  covered?: string[];
+  strengths?: string[];
+  weaknesses?: string[];
+  recommendations?: string[];
+  usefulVocabulary?: string[];
+  mistakes?: Array<{
+    type: string;
+    original?: string;
+    correction?: string;
+    explanation?: string;
+  }>;
+};
+
+type SpeakWiseSettings = {
+  level: CEFRLevel;
+  durationMinutes: number;
+  lessonMode: LessonMode | "";
+  selectedTopics: string[];
+  customTopic: string;
+  directStart: boolean;
+  voiceEnabled: boolean;
+  selectedVoice: string;
+  pdfContext: string;
+};
 
 const SPEAKWISE_API_URL =
   process.env.NEXT_PUBLIC_SPEAKWISE_API_URL ||
   process.env.NEXT_PUBLIC_API_URL ||
   "http://127.0.0.1:8000";
 
-const VOCAB_COMPONENT = "単語";
-const GENERAL_COMPONENT = "全般";
-
-const CATEGORIES: Record<string, string> = {
-  "computer-science": "Computer Science",
-  "economics-business": "Economics & Business",
-  "engineering": "Engineering",
-  "environment": "Environment",
-  "idioms-advanced": "Idioms (Advanced)",
-  "idioms-beginner": "Idioms (Beginner)",
-  "idioms-intermediate": "Idioms (Intermediate)",
-  "idioms-proficiency": "Idioms (Proficiency)",
-  "law": "Law",
-  "medicine": "Medicine",
-  "politics": "Politics",
-  "word-advanced": "Words (Advanced)",
-  "word-beginner": "Words (Beginner)",
-  "word-intermediate": "Words (Intermediate)",
-  "word-proficiency": "Words (Proficiency)",
-};
-
-const LESSON_COUNTS: Record<string, number> = {
-  "computer-science": 40,
-  "economics-business": 36,
-  "engineering": 71,
-  "environment": 30,
-  "idioms-advanced": 28,
-  "idioms-beginner": 34,
-  "idioms-intermediate": 32,
-  "idioms-proficiency": 26,
-  "law": 22,
-  "medicine": 18,
-  "politics": 71,
-  "word-advanced": 44,
-  "word-beginner": 64,
-  "word-intermediate": 50,
-  "word-proficiency": 40,
-};
+const LEVELS: CEFRLevel[] = ["A1", "A2", "B1", "B2", "C1", "C2"];
 
 const TOPICS = [
-  "Computer Science & Technology",
-  "Medicine & Health",
-  "Business & Economics",
-  "Environmental Science & Sustainability",
-  "Law & Politics",
-  "Engineering",
-  "Art & Culture",
-  "Education & Learning",
-  "Sports & Fitness",
-  "Travel & Culture Exchange",
-  "Food & Nutrition",
-  "Social Media & Digital Life",
+  "Daily life",
+  "Travel",
+  "Technology",
+  "Business",
+  "School",
+  "Health",
+  "Culture",
+  "Environment",
+  "Academic topics",
+  "Current events",
 ];
 
-type PracticeMode = "speaking" | "writing";
-type CEFRLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
-type VocabLessonType = "range" | "individual";
+const LESSON_MODES: Array<{ id: LessonMode; label: string; short: string }> = [
+  { id: "natural_conversation", label: "Natural Conversation", short: "Flexible conversation with light correction" },
+  { id: "vocabulary_phrase", label: "Vocabulary & Phrases", short: "Reuse VocabStream words with spaced review" },
+  { id: "grammar_practice", label: "Grammar Practice", short: "Target recurring grammar mistakes" },
+  { id: "speaking_practice", label: "Speaking Practice", short: "Longer answers, fluency, expression" },
+  { id: "pronunciation_practice", label: "Pronunciation Practice", short: "Sound, stress, and rhythm drills" },
+  { id: "listening_practice", label: "Listening Practice", short: "Short spoken-style prompts and questions" },
+  { id: "reading_comprehension", label: "Reading Comprehension", short: "Adaptive short texts and questions" },
+  { id: "pdf_reading", label: "PDF-Based Reading", short: "Practice from an uploaded or pasted text" },
+  { id: "writing_feedback", label: "Writing & Feedback", short: "Paragraph writing and revision" },
+  { id: "deep_discussion", label: "Deep Discussion", short: "Nuanced advanced argumentation" },
+  { id: "review_weakness", label: "Review & Weakness", short: "Train repeated mistakes from memory" },
+];
 
-type SpeakWiseLessonSettings = {
-  practiceMode: PracticeMode;
-  level: CEFRLevel;
-  selectedTopics: string[];
-  customTopic: string;
-  selectedTests: string[];
-  customTest: string;
-  selectedSkills: string[];
-  selectedDuration: string;
-  selectedComponents: string[];
-  vocabCategory: string;
-  vocabLessonType: VocabLessonType;
-  vocabRangeStart: string;
-  vocabRangeEnd: string;
-  vocabIndividualLessons: string[];
-  selectedVoice: string;
-};
-
-const DEFAULT_LEVEL = "B2";
-
-const TESTS = ["特になし", "英検", "TOEFL", "TOEIC", "IELTS", "ケンブリッジ英検", "GTEC", "TEAP", "SAT", "ACT"];
-const SKILLS = ["リーディング", "リスニング", "ライティング", "スピーキング"];
-const WRITING_COMPONENTS = [GENERAL_COMPONENT, VOCAB_COMPONENT, "文法", "一貫性"];
-const SPEAKING_COMPONENTS = [GENERAL_COMPONENT, "単語", "文法", "一貫性", "流暢さ", "発音"];
-const TYPING_SPEED_MS = 30;
-const STARTUP_MESSAGE_PAUSE_MS = 360;
-
-const MESSAGE_TIMING_BY_LEVEL: Record<CEFRLevel, { typingMs: number; pauseMs: number }> = {
-  A1: { typingMs: 95, pauseMs: 1100 },
-  A2: { typingMs: 80, pauseMs: 900 },
-  B1: { typingMs: 65, pauseMs: 720 },
-  B2: { typingMs: 50, pauseMs: 560 },
-  C1: { typingMs: 40, pauseMs: 440 },
-  C2: { typingMs: TYPING_SPEED_MS, pauseMs: STARTUP_MESSAGE_PAUSE_MS },
-};
-
-const DEFAULT_SPEAKWISE_LESSON_SETTINGS: SpeakWiseLessonSettings = {
-  practiceMode: "speaking",
-  level: DEFAULT_LEVEL,
+const DEFAULT_SETTINGS: SpeakWiseSettings = {
+  level: "B2",
+  durationMinutes: 15,
+  lessonMode: "",
   selectedTopics: [],
   customTopic: "",
-  selectedTests: ["特になし"],
-  customTest: "",
-  selectedSkills: [],
-  selectedDuration: "15",
-  selectedComponents: [GENERAL_COMPONENT],
-  vocabCategory: "word-beginner",
-  vocabLessonType: "range",
-  vocabRangeStart: "1",
-  vocabRangeEnd: "5",
-  vocabIndividualLessons: ["1"],
+  directStart: false,
+  voiceEnabled: false,
   selectedVoice: "alloy",
+  pdfContext: "",
 };
 
-const IMPROVEMENT_LABELS: Record<ImprovementType, string> = {
-  unchanged: "元の表現",
-  grammar: "文法修正",
-  improvement: "表現改善",
-  clarity: "明確さ",
-};
+const VOICES = ["alloy", "ash", "coral", "echo", "fable", "nova", "sage", "shimmer"];
 
-const createRandomNonce = () => {
-  const timePart = Date.now().toString(36);
-  const perfPart =
-    typeof performance !== "undefined"
-      ? Math.floor(performance.now() * 1000).toString(36)
-      : "0";
-  const cryptoValues =
-    typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function"
-      ? crypto.getRandomValues(new Uint32Array(2))
-      : null;
-  const cryptoPart = cryptoValues
-    ? Array.from(cryptoValues, (value) => value.toString(36)).join("-")
-    : Math.floor((Math.random() + Date.now()) * 1000000000).toString(36);
-
-  return `${timePart}-${perfPart}-${cryptoPart}`;
-};
-
-const getRandomIndex = (length: number) => {
-  if (length <= 0) return 0;
-
-  if (typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function") {
-    const values = crypto.getRandomValues(new Uint32Array(1));
-    return values[0] % length;
-  }
-
-  const timeEntropy =
-    Date.now() +
-    (typeof performance !== "undefined" ? Math.floor(performance.now() * 1000) : 0);
-  return Math.abs(Math.floor((Math.random() * Number.MAX_SAFE_INTEGER) ^ timeEntropy)) % length;
-};
-
-const getRandomItemFrom = <T,>(items: T[], recentlyUsed: Set<T> = new Set()) => {
-  const availableItems = items.filter((item) => !recentlyUsed.has(item));
-  const pool = availableItems.length > 0 ? availableItems : items;
-  return pool[getRandomIndex(pool.length)];
-};
-
-const shuffleItems = <T,>(items: T[]) => {
-  const shuffled = [...items];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = getRandomIndex(i + 1);
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-};
-
-const getImprovementClass = (type?: ImprovementType) => {
-  if (type === "grammar") return "improved-segment grammar";
-  if (type === "improvement") return "improved-segment improvement";
-  if (type === "clarity") return "improved-segment clarity";
-  return "improved-segment unchanged";
-};
-
-const normalizeImprovedVersion = (rawImprovedVersion: unknown): ImprovedVersion => {
-  if (typeof rawImprovedVersion === "string" && rawImprovedVersion.trim()) {
-    return {
-      title: "Improved version",
-      summary: "",
-      segments: [{ text: rawImprovedVersion.trim(), type: "improvement", note: "Improved version" }],
-      changes: [],
-    };
-  }
-
-  const improvedVersion =
-    rawImprovedVersion && typeof rawImprovedVersion === "object"
-      ? (rawImprovedVersion as ImprovedVersion)
-      : {};
-  const rawSegments = Array.isArray(improvedVersion.segments) ? improvedVersion.segments : [];
-  const segments = rawSegments
-    .filter((segment): segment is ImprovedSegment => Boolean(segment && typeof segment.text === "string" && segment.text))
-    .map((segment) => ({
-      text: segment.text,
-      type: segment.type || "improvement",
-      note: segment.note || "",
-    }));
-
-  if (segments.length === 0) {
-    const fallbackImprovedText =
-      (typeof improvedVersion.text === "string" && improvedVersion.text.trim()) ||
-      (typeof improvedVersion.revised === "string" && improvedVersion.revised.trim()) ||
-      "";
-
-    if (fallbackImprovedText) {
-      segments.push({ text: fallbackImprovedText, type: "improvement", note: "Improved version" });
-    }
-  }
-
-  return {
-    title: improvedVersion.title || "Improved version",
-    summary: improvedVersion.summary || "",
-    segments,
-    changes: Array.isArray(improvedVersion.changes) ? improvedVersion.changes : [],
-  };
-};
-
-function sanitizeSpeakWiseLessonSettings(value: unknown): SpeakWiseLessonSettings | null {
-  if (!value || typeof value !== "object" || Array.isArray(value)) return null;
-  const settings = value as Partial<SpeakWiseLessonSettings>;
-  const practiceMode = isPracticeMode(settings.practiceMode)
-    ? settings.practiceMode
-    : DEFAULT_SPEAKWISE_LESSON_SETTINGS.practiceMode;
-
-  return {
-    practiceMode,
-    level: isCEFRLevel(settings.level) ? settings.level : DEFAULT_SPEAKWISE_LESSON_SETTINGS.level,
-    selectedTopics: readStringArray(settings.selectedTopics, TOPICS),
-    customTopic: readString(settings.customTopic),
-    selectedTests: readStringArray(settings.selectedTests, TESTS, ["特になし"]),
-    customTest: readString(settings.customTest),
-    selectedSkills: readStringArray(settings.selectedSkills, SKILLS),
-    selectedDuration: readAllowedString(settings.selectedDuration, ["5", "10", "15", "20", "25", "30"]) ||
-      DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedDuration,
-    selectedComponents: sanitizeComponents(settings.selectedComponents, practiceMode),
-    vocabCategory: readAllowedString(settings.vocabCategory, Object.keys(CATEGORIES)) ||
-      DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabCategory,
-    vocabLessonType: settings.vocabLessonType === "individual" ? "individual" : "range",
-    vocabRangeStart: readPositiveIntegerString(settings.vocabRangeStart) ||
-      DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabRangeStart,
-    vocabRangeEnd: readPositiveIntegerString(settings.vocabRangeEnd) ||
-      DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabRangeEnd,
-    vocabIndividualLessons: readStringArray(settings.vocabIndividualLessons).filter((lesson) => /^\d+$/.test(lesson)),
-    selectedVoice: readString(settings.selectedVoice) || DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedVoice,
-  };
+function isLessonMode(value: unknown): value is LessonMode {
+  return typeof value === "string" && LESSON_MODES.some((mode) => mode.id === value);
 }
 
-function isPracticeMode(value: unknown): value is PracticeMode {
-  return value === "speaking" || value === "writing";
-}
-
-function isCEFRLevel(value: unknown): value is CEFRLevel {
+function isLevel(value: unknown): value is CEFRLevel {
   return typeof value === "string" && LEVELS.includes(value as CEFRLevel);
 }
 
-function readString(value: unknown) {
-  return typeof value === "string" ? value.trim() : "";
+function readStringArray(value: unknown) {
+  return Array.isArray(value)
+    ? value.filter((item): item is string => typeof item === "string" && item.trim().length > 0).map((item) => item.trim())
+    : [];
 }
 
-function readStringArray(value: unknown, allowedValues?: readonly string[], fallback: string[] = []) {
-  if (!Array.isArray(value)) return fallback;
-  const values = value
-    .filter((item): item is string => typeof item === "string" && item.trim().length > 0)
-    .map((item) => item.trim());
-  const filtered = allowedValues ? values.filter((item) => allowedValues.includes(item)) : values;
-  return Array.from(new Set(filtered));
+function sanitizeSettings(value: unknown): SpeakWiseSettings | null {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+  const raw = value as Partial<SpeakWiseSettings>;
+  return {
+    level: isLevel(raw.level) ? raw.level : DEFAULT_SETTINGS.level,
+    durationMinutes: [5, 10, 15, 20, 25, 30, 45, 60].includes(Number(raw.durationMinutes))
+      ? Number(raw.durationMinutes)
+      : DEFAULT_SETTINGS.durationMinutes,
+    lessonMode: isLessonMode(raw.lessonMode) ? raw.lessonMode : "",
+    selectedTopics: readStringArray(raw.selectedTopics).filter((topic) => TOPICS.includes(topic)),
+    customTopic: typeof raw.customTopic === "string" ? raw.customTopic : "",
+    directStart: Boolean(raw.directStart),
+    voiceEnabled: Boolean(raw.voiceEnabled),
+    selectedVoice: typeof raw.selectedVoice === "string" && VOICES.includes(raw.selectedVoice)
+      ? raw.selectedVoice
+      : DEFAULT_SETTINGS.selectedVoice,
+    pdfContext: typeof raw.pdfContext === "string" ? raw.pdfContext.slice(0, 8000) : "",
+  };
 }
 
-function readAllowedString(value: unknown, allowedValues: readonly string[]) {
-  const text = readString(value);
-  return allowedValues.includes(text) ? text : "";
+function summarizeMemory(memory: LearnerMemory | null) {
+  if (!memory) return "No stored learner memory loaded yet.";
+  const recent = memory.recentSummaries?.[0] as { summary?: LessonSummary; mode?: string } | undefined;
+  const patterns = (memory.mistakePatterns || []).slice(0, 3).map((item) => {
+    const row = item as { mistake_type?: string; pattern?: string; count?: number };
+    return [row.mistake_type, row.pattern, row.count ? `${row.count}x` : ""].filter(Boolean).join(" ");
+  });
+  const vocab = (memory.vocabProgress || []).slice(0, 3).map((item) => {
+    const row = item as { lesson_title?: string; genre?: string; percent_score?: number };
+    return [row.lesson_title || row.genre, typeof row.percent_score === "number" ? `${row.percent_score}%` : ""].filter(Boolean).join(" ");
+  });
+  const videos = (memory.vidmatchHistory || []).slice(0, 2).map((item) => {
+    const row = item as { title?: string; topics?: string[]; level?: string };
+    return [row.title, row.level, row.topics?.join(", ")].filter(Boolean).join(" ");
+  });
+
+  return [
+    recent?.summary?.title ? `Last lesson: ${recent.summary.title}` : "",
+    recent?.summary?.weaknesses?.length ? `Recent weaknesses: ${recent.summary.weaknesses.join(", ")}` : "",
+    patterns.length ? `Repeated mistake patterns: ${patterns.join("; ")}` : "",
+    vocab.length ? `VocabStream context: ${vocab.join("; ")}` : "",
+    videos.length ? `VidMatch context: ${videos.join("; ")}` : "",
+  ].filter(Boolean).join("\n") || "No strong prior learning signals yet.";
 }
 
-function readPositiveIntegerString(value: unknown) {
-  const text = readString(value);
-  return /^\d+$/.test(text) && Number(text) > 0 ? text : "";
-}
+export default function AIChat() {
+  const supabase = useMemo(() => getSupabaseBrowserClient(), []);
+  const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [settingsLoaded, setSettingsLoaded] = useState(false);
+  const [settings, setSettings] = useState<SpeakWiseSettings>(DEFAULT_SETTINGS);
+  const [memory, setMemory] = useState<LearnerMemory | null>(null);
+  const [chatLog, setChatLog] = useState<ChatEntry[]>([]);
+  const [input, setInput] = useState("");
+  const [lessonActive, setLessonActive] = useState(false);
+  const [lessonStartedAt, setLessonStartedAt] = useState<number | null>(null);
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [isSending, setIsSending] = useState(false);
+  const [isEnding, setIsEnding] = useState(false);
+  const [summary, setSummary] = useState<LessonSummary | null>(null);
+  const [pendingModeChoice, setPendingModeChoice] = useState(false);
+  const [sessionId, setSessionId] = useState<string | null>(null);
+  const [isListening, setIsListening] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const recognitionRef = useRef<any>(null);
+  const autoEndedRef = useRef(false);
+  const chatEndRef = useRef<HTMLDivElement | null>(null);
 
-function sanitizeComponents(value: unknown, practiceMode: PracticeMode) {
-  const allowedComponents = practiceMode === "speaking" ? SPEAKING_COMPONENTS : WRITING_COMPONENTS;
-  const components = readStringArray(value, allowedComponents);
-  return components.length > 0 ? components : [GENERAL_COMPONENT];
-}
+  const topics = useMemo(
+    () => [...settings.selectedTopics, settings.customTopic.trim()].filter(Boolean),
+    [settings.selectedTopics, settings.customTopic],
+  );
+  const selectedMode = LESSON_MODES.find((mode) => mode.id === settings.lessonMode);
+  const totalSeconds = settings.durationMinutes * 60;
+  const remainingSeconds = Math.max(0, totalSeconds - elapsedSeconds);
 
-export default function AI_chat() {
-  const navigate = useNavigate();
-
-  // UI styling helpers and global background
   useEffect(() => {
-    const prev = document.body.style.backgroundColor;
-    document.body.style.backgroundColor = "transparent";
+    document.body.style.backgroundColor = "#eef4f8";
     return () => {
-      document.body.style.backgroundColor = prev;
+      document.body.style.backgroundColor = "";
     };
   }, []);
 
-  // Styling class names (used in JSX)
-  const containerClass = "app-container";
-  const contentClass = "card";
-
-  // Button class names
-  const btnPrimary = "btn btn-primary";
-  const btnSecondary = "btn btn-secondary";
-  const btnAccent = "btn btn-accent";
-
-  // Overall conversation state
-  const [mode, setMode] = useState<ConversationMode>("choice");
-  const [step, setStep] = useState<ConversationStep>("initial");
-
-  // Common settings
-  const [level, setLevel] = useState<CEFRLevel>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.level);
-  const [levelConfirmed, setLevelConfirmed] = useState(true);
-  const [selectedTopics, setSelectedTopics] = useState<string[]>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedTopics);
-  const [customTopic, setCustomTopic] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.customTopic);
-
-  // Lesson settings
-  const [selectedTests, setSelectedTests] = useState<string[]>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedTests);
-  const [customTest, setCustomTest] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.customTest);
-  const [selectedSkills, setSelectedSkills] = useState<string[]>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedSkills);
-  const [selectedDuration, setSelectedDuration] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedDuration);
-  const [selectedComponents, setSelectedComponents] = useState<string[]>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedComponents);
-  const [vocabCategory, setVocabCategory] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabCategory);
-  const [vocabLessonType, setVocabLessonType] = useState<VocabLessonType>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabLessonType);
-  const [vocabRangeStart, setVocabRangeStart] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabRangeStart);
-  const [vocabRangeEnd, setVocabRangeEnd] = useState(DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabRangeEnd);
-  const [vocabIndividualLessons, setVocabIndividualLessons] = useState<string[]>(
-    DEFAULT_SPEAKWISE_LESSON_SETTINGS.vocabIndividualLessons,
-  );
-
-  // Timer state for lessons
-  const [lessonStartTime, setLessonStartTime] = useState<number | null>(null);
-  const [timeElapsed, setTimeElapsed] = useState(0);
-  const [currentComponent, setCurrentComponent] = useState(0);
-
-  // Server warmup state
-  const [serverWarmed, setServerWarmed] = useState(false);
-  const [serverWarming, setServerWarming] = useState(false);
-
-  // Voice / audio playback state
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [selectedVoice, setSelectedVoice] = useState<string>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.selectedVoice);
-  const [loadingVoiceIndex, setLoadingVoiceIndex] = useState<number | null>(null);
-
-  // Chat state
-  const [userInput, setUserInput] = useState("");
-  const [chatLog, setChatLog] = useState<ChatEntry[]>([]);
-  const [openingQuestion, setOpeningQuestion] = useState("");
-  const [practiceMode, setPracticeMode] = useState<PracticeMode>(DEFAULT_SPEAKWISE_LESSON_SETTINGS.practiceMode);
-  const [displayedText, setDisplayedText] = useState<Record<number, string>>({});
-  const [awaitingQuestionChoice, setAwaitingQuestionChoice] = useState(false);
-  const [awaitingMoodChoice, setAwaitingMoodChoice] = useState(false);
-  const [awaitingAnswer, setAwaitingAnswer] = useState(false);
-  const [answerDraft, setAnswerDraft] = useState("");
-  const [isListening, setIsListening] = useState(false);
-  const [pendingStartupMode, setPendingStartupMode] = useState<PracticeMode | null>(null);
-  const [lastQuestionIndexForConfirmation, setLastQuestionIndexForConfirmation] = useState<number | null>(null);
-  const [feedbackLoading, setFeedbackLoading] = useState(false);
-  const [feedbackStepLoading, setFeedbackStepLoading] = useState(false);
-  const [pendingFeedbackSections, setPendingFeedbackSections] = useState<PendingFeedbackSection[]>([]);
-  const [improvedVersionLoading, setImprovedVersionLoading] = useState(false);
-  const [pendingImprovedVersion, setPendingImprovedVersion] = useState<{
-    question: string;
-    userAnswer: string;
-  } | null>(null);
-  const [pendingFeedbackImprovedVersion, setPendingFeedbackImprovedVersion] = useState<{
-    question: string;
-    userAnswer: string;
-  } | null>(null);
-  const [lastUserAnswer, setLastUserAnswer] = useState("");
-  const recentOpeningQuestionsRef = useRef<Set<string>>(new Set());
-  const recognitionRef = useRef<any>(null);
-  const settingsLoadedRef = useRef(false);
-  const supabase = useMemo(() => getSupabaseBrowserClient(), []);
-  const [settingsAccessToken, setSettingsAccessToken] = useState<string | null>(null);
-  // Removed: eikenActive, eikenStage, conversationHistory, eikenDisplayText, eikenTTS, eikenMuted, eikenUserInput
-
-  const currentLessonSettings = useMemo<SpeakWiseLessonSettings>(() => ({
-    practiceMode,
-    level,
-    selectedTopics,
-    customTopic,
-    selectedTests,
-    customTest,
-    selectedSkills,
-    selectedDuration,
-    selectedComponents,
-    vocabCategory,
-    vocabLessonType,
-    vocabRangeStart,
-    vocabRangeEnd,
-    vocabIndividualLessons,
-    selectedVoice,
-  }), [
-    practiceMode,
-    level,
-    selectedTopics,
-    customTopic,
-    selectedTests,
-    customTest,
-    selectedSkills,
-    selectedDuration,
-    selectedComponents,
-    vocabCategory,
-    vocabLessonType,
-    vocabRangeStart,
-    vocabRangeEnd,
-    vocabIndividualLessons,
-    selectedVoice,
-  ]);
-
   useEffect(() => {
     if (!supabase) {
-      settingsLoadedRef.current = true;
-      setSettingsAccessToken(null);
+      setSettingsLoaded(true);
       return;
     }
-
     let mounted = true;
     supabase.auth.getSession().then(({ data }) => {
-      if (!mounted) return;
-      setSettingsAccessToken(data.session?.access_token ?? null);
+      if (mounted) setAccessToken(data.session?.access_token ?? null);
     });
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      settingsLoadedRef.current = false;
-      setSettingsAccessToken(session?.access_token ?? null);
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setAccessToken(session?.access_token ?? null);
     });
-
     return () => {
       mounted = false;
       subscription.unsubscribe();
@@ -541,3132 +220,557 @@ export default function AI_chat() {
   }, [supabase]);
 
   useEffect(() => {
-    if (!settingsAccessToken) {
-      settingsLoadedRef.current = true;
+    if (!accessToken) {
+      setSettingsLoaded(true);
+      setMemory(null);
       return;
     }
 
     let cancelled = false;
-    settingsLoadedRef.current = false;
-
-    fetch("/api/speakwise/lesson-settings", {
-      headers: {
-        Authorization: `Bearer ${settingsAccessToken}`,
-      },
-    })
-      .then(async (response) => {
-        const data = await response.json();
-        if (!response.ok || data.error) {
-          throw new Error(data.error || "SpeakWise settings request failed");
-        }
-        return sanitizeSpeakWiseLessonSettings(data.settings);
-      })
-      .then((settings) => {
-        if (cancelled || !settings) return;
-        applyStoredLessonSettings(settings);
-      })
-      .catch((error) => {
-        console.warn("SpeakWise lesson settings lookup failed", error);
-      })
-      .finally(() => {
-        if (!cancelled) settingsLoadedRef.current = true;
-      });
+    Promise.all([
+      fetch("/api/speakwise/lesson-settings", { headers: { Authorization: `Bearer ${accessToken}` } })
+        .then((response) => response.json())
+        .then((data) => sanitizeSettings(data.settings)),
+      fetch("/api/speakwise/learner-memory", { headers: { Authorization: `Bearer ${accessToken}` } })
+        .then((response) => response.json())
+        .catch(() => null),
+    ]).then(([storedSettings, storedMemory]) => {
+      if (cancelled) return;
+      if (storedSettings) setSettings(storedSettings);
+      if (storedMemory && !storedMemory.error) setMemory(storedMemory);
+    }).finally(() => {
+      if (!cancelled) setSettingsLoaded(true);
+    });
 
     return () => {
       cancelled = true;
     };
-  }, [settingsAccessToken]);
+  }, [accessToken]);
 
   useEffect(() => {
-    if (!settingsAccessToken || !settingsLoadedRef.current) return;
-
-    const saveTimer = window.setTimeout(() => {
+    if (!settingsLoaded || !accessToken) return;
+    const timer = window.setTimeout(() => {
       fetch("/api/speakwise/lesson-settings", {
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${settingsAccessToken}`,
-        },
-        body: JSON.stringify({ settings: currentLessonSettings }),
-      }).catch((error) => {
-        console.warn("SpeakWise lesson settings save failed", error);
-      });
-    }, 700);
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
+        body: JSON.stringify({ settings }),
+      }).catch((error) => console.warn("SpeakWise settings save failed", error));
+    }, 600);
+    return () => window.clearTimeout(timer);
+  }, [accessToken, settings, settingsLoaded]);
 
-    return () => window.clearTimeout(saveTimer);
-  }, [currentLessonSettings, settingsAccessToken]);
+  useEffect(() => {
+    if (!lessonStartedAt || !lessonActive) return;
+    const timer = window.setInterval(() => {
+      setElapsedSeconds(Math.floor((Date.now() - lessonStartedAt) / 1000));
+    }, 1000);
+    return () => window.clearInterval(timer);
+  }, [lessonActive, lessonStartedAt]);
 
-  function applyStoredLessonSettings(settings: SpeakWiseLessonSettings) {
-    setPracticeMode(settings.practiceMode);
-    setLevel(settings.level);
-    setLevelConfirmed(true);
-    setSelectedTopics(settings.selectedTopics);
-    setCustomTopic(settings.customTopic);
-    setSelectedTests(settings.selectedTests.length > 0 ? settings.selectedTests : ["特になし"]);
-    setCustomTest(settings.customTest);
-    setSelectedSkills(settings.selectedSkills);
-    setSelectedDuration(settings.selectedDuration);
-    setSelectedComponents(settings.selectedComponents.length > 0 ? settings.selectedComponents : [GENERAL_COMPONENT]);
-    setVocabCategory(settings.vocabCategory);
-    setVocabLessonType(settings.vocabLessonType);
-    setVocabRangeStart(settings.vocabRangeStart);
-    setVocabRangeEnd(settings.vocabRangeEnd);
-    setVocabIndividualLessons(
-      settings.vocabIndividualLessons.length > 0 ? settings.vocabIndividualLessons : ["1"],
-    );
-    setSelectedVoice(settings.selectedVoice);
+  useEffect(() => {
+    if (!lessonActive || autoEndedRef.current || elapsedSeconds < totalSeconds || chatLog.length < 2) return;
+    autoEndedRef.current = true;
+    void endLesson();
+  }, [chatLog.length, elapsedSeconds, lessonActive, totalSeconds]);
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, [chatLog, isSending, summary]);
+
+  function updateSettings(patch: Partial<SpeakWiseSettings>) {
+    setSettings((prev) => ({ ...prev, ...patch }));
   }
 
-  async function recordSpeakWiseLessonSession(nextMode: PracticeMode) {
-    if (!settingsAccessToken) return;
+  function toggleTopic(topic: string) {
+    updateSettings({
+      selectedTopics: settings.selectedTopics.includes(topic)
+        ? settings.selectedTopics.filter((item) => item !== topic)
+        : [...settings.selectedTopics, topic],
+    });
+  }
 
+  async function callAgent(userText: string, phase: "start" | "continue" | "end" = "continue") {
+    const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        mode: "agent",
+        lessonMode: settings.lessonMode || "natural_conversation",
+        level: settings.level,
+        topics,
+        durationMinutes: settings.durationMinutes,
+        elapsedSeconds,
+        phase,
+        message: userText,
+        history: chatLog.slice(-12).map((entry) => ({
+          role: entry.sender === "assistant" ? "assistant" : "user",
+          content: entry.text,
+        })),
+        learnerMemory: memory,
+        pdfContext: settings.pdfContext,
+        voiceEnabled: settings.voiceEnabled,
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) throw new Error(data.details || data.error || "SpeakWise request failed");
+    return String(data.reply || "").trim();
+  }
+
+  async function appendAssistant(text: string) {
+    setChatLog((prev) => [...prev, { sender: "assistant", text }]);
+    if (settings.voiceEnabled) {
+      await playVoice(text);
+    }
+  }
+
+  async function startLesson(modeOverride?: LessonMode) {
+    const nextMode = modeOverride || settings.lessonMode;
+    if (!nextMode) {
+      setPendingModeChoice(true);
+      setChatLog([{ sender: "assistant", text: "How are you today? What would you like to practice?" }]);
+      return;
+    }
+
+    autoEndedRef.current = false;
+    setSummary(null);
+    setPendingModeChoice(false);
+    setLessonActive(true);
+    setLessonStartedAt(Date.now());
+    setElapsedSeconds(0);
+    setChatLog([]);
+    setSessionId(null);
+
+    if (modeOverride) updateSettings({ lessonMode: modeOverride });
+    void recordSessionStart(nextMode);
+
+    const label = LESSON_MODES.find((item) => item.id === nextMode)?.label || "English practice";
+    const startText = settings.directStart
+      ? `Start the lesson naturally. The selected mode is ${label}. Open with a short greeting, connect to memory if useful, then give the first task.`
+      : `Greet me naturally with "How are you today?", then begin ${label} step by step. If my selected options are enough, start directly.`;
+
+    setIsSending(true);
     try {
-      await fetch("/api/speakwise/lesson-sessions", {
+      const reply = await callAgent(startText, "start");
+      await appendAssistant(reply);
+    } catch (error) {
+      setChatLog([{ sender: "assistant", text: "I could not start the lesson. Please check the SpeakWise API connection." }]);
+      console.error(error);
+    } finally {
+      setIsSending(false);
+    }
+  }
+
+  async function recordSessionStart(lessonMode: LessonMode) {
+    if (!accessToken) return;
+    try {
+      const response = await fetch("/api/speakwise/lesson-sessions", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${settingsAccessToken}`,
-        },
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
         body: JSON.stringify({
-          mode: nextMode,
-          level,
-          plannedDurationMinutes: Number(selectedDuration) || 0,
-          selectedTopics: topicsToPass,
-          selectedComponents,
+          mode: lessonMode === "writing_feedback" ? "writing" : "speaking",
+          lessonMode,
+          level: settings.level,
+          plannedDurationMinutes: settings.durationMinutes,
+          selectedTopics: topics,
+          selectedComponents: [lessonMode],
         }),
       });
+      const data = await response.json().catch(() => null);
+      if (data?.session?.id) setSessionId(data.session.id);
     } catch (error) {
       console.warn("SpeakWise session analytics save failed", error);
     }
   }
 
-  // ページマウント時にRenderのバックエンドサーバーをウォームアップ
-  useEffect(() => {
-    // only warm once per page mount
-    let mounted = true;
-    const warmUp = async () => {
-      setServerWarming(true);
-      try {
-        await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: "__warmup__", mode: "warmup" }),
-        });
-        if (!mounted) return;
-        setServerWarmed(true);
-      } catch {
-        // The local/API server may be asleep or unavailable; chat requests will surface real errors when used.
-      } finally {
-        if (mounted) setServerWarming(false);
-      }
-    };
-
-    warmUp();
-    return () => {
-      mounted = false;
-    };
-  }, []);
-
-  // Timer effect for lessons
-  useEffect(() => {
-    if (!lessonStartTime || step !== "chatting") return;
-
-    const interval = setInterval(() => {
-      const elapsed = Math.floor((Date.now() - lessonStartTime) / 1000);
-      setTimeElapsed(elapsed);
-
-      // Calculate component timing
-      const structure = generateLessonStructure();
-      let cumulativeTime = 0;
-
-      for (let i = 0; i < structure.length; i++) {
-        const componentTime = structure[i].minutes * 60;
-        if (elapsed >= cumulativeTime + componentTime && currentComponent === i) {
-          // Time to move to next component
-          if (i < structure.length - 1) {
-            const nextIndex = i + 1;
-            setCurrentComponent(nextIndex);
-            const nextComponent = structure[nextIndex];
-            const movePrompt = `次は「${nextComponent.name}」に移ってください。`;
-            setChatLog((prev) => {
-              if (prev.some((e) => e.text === `⏱️ ${movePrompt}`)) return prev;
-              return [...prev, { sender: "llm", text: `⏱️ ${movePrompt}` }];
-            });
-            setTimeout(() => {
-              (async () => {
-                const p = await getComponentPrompt(nextComponent.name);
-                handleLessonStart(p);
-              })();
-            }, getMessageTiming().pauseMs);
-          }
-        }
-        cumulativeTime += componentTime;
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [lessonStartTime, currentComponent, step, selectedDuration, selectedComponents, level]);
-
-  // When in chatting step, hide global Header/BottomNav by adding a body class
-  useEffect(() => {
+  async function sendMessage(override?: string) {
+    const text = (override ?? input).trim();
+    if (!text || isSending || isEnding) return;
+    setInput("");
+    setChatLog((prev) => [...prev, { sender: "user", text }]);
+    setIsSending(true);
     try {
-      if (step === "chatting") {
-        document.body.classList.add("hide-global-navs");
-      } else {
-        document.body.classList.remove("hide-global-navs");
-      }
-    } catch (e) {
-      // ignore in SSR or environments without document
+      const reply = await callAgent(text);
+      await appendAssistant(reply);
+    } catch (error) {
+      console.error(error);
+      setChatLog((prev) => [...prev, { sender: "assistant", text: "Sorry, I could not get a response this time." }]);
+    } finally {
+      setIsSending(false);
     }
-    return () => {
-      try { document.body.classList.remove("hide-global-navs"); } catch (e) {}
-      // Removed: stop experimental flow if leaving chat
-    };
-  }, [step]);
+  }
 
-  // Typing animation effect for chat messages
-  useEffect(() => {
-    if (chatLog.length === 0) return;
-    
-    const lastIndex = chatLog.length - 1;
-    const lastEntry = chatLog[lastIndex];
-    
-    // If already displayed in full, skip
-    if (displayedText[lastIndex] === lastEntry.text) return;
-    
-    // Start typing animation
-    let currentCharIndex = (displayedText[lastIndex] || "").length;
-    const fullText = lastEntry.text;
-    
-    if (currentCharIndex >= fullText.length) return;
-
-    const { typingMs } = getMessageTiming();
-    
-    const timer = setInterval(() => {
-      currentCharIndex++;
-      setDisplayedText((prev) => ({
-        ...prev,
-        [lastIndex]: fullText.slice(0, currentCharIndex),
-      }));
-      
-      if (currentCharIndex >= fullText.length) {
-        clearInterval(timer);
-      }
-    }, typingMs);
-    
-    return () => clearInterval(timer);
-  }, [chatLog, displayedText, level]);
-
-  // Watch for when a question is fully displayed, then add confirmation message
-  useEffect(() => {
-    // Find the last question in chatLog
-    let lastQuestionIndex = -1;
-    for (let i = chatLog.length - 1; i >= 0; i--) {
-      if (chatLog[i].kind === "question") {
-        lastQuestionIndex = i;
-        break;
-      }
-    }
-    
-    // If no question or already added confirmation for this question, skip
-    if (lastQuestionIndex === -1 || lastQuestionIndex === lastQuestionIndexForConfirmation) {
-      return;
-    }
-    
-    // Check if this question is fully displayed
-    const questionText = chatLog[lastQuestionIndex].text;
-    const displayedQuestionText = displayedText[lastQuestionIndex];
-    
-    if (displayedQuestionText === questionText) {
-      // Question is fully displayed, add confirmation message after a short delay
-      const timer = setTimeout(() => {
-        setChatLog((prev) => [
-          ...prev,
-          { sender: "llm", text: getLevelPrompt(LEVEL_PRACTICE_CONFIRMATION_PROMPTS), kind: "confirmation" },
-        ]);
-        setLastQuestionIndexForConfirmation(lastQuestionIndex);
-      }, getMessageTiming().pauseMs);
-      
-      return () => clearTimeout(timer);
-    }
-  }, [displayedText, chatLog, lastQuestionIndexForConfirmation, level]);
-
-  useEffect(() => {
-    if (chatLog.length === 0 || awaitingQuestionChoice) return;
-
-    const lastIndex = chatLog.length - 1;
-    const lastEntry = chatLog[lastIndex];
-    if (lastEntry.kind === "confirmation" && displayedText[lastIndex] === lastEntry.text) {
-      setAwaitingQuestionChoice(true);
-    }
-  }, [awaitingQuestionChoice, chatLog, displayedText]);
-
-  // Helper functions
-  const handleTopicToggle = (topic: string) => {
-    if (selectedTopics.includes(topic)) {
-      setSelectedTopics(selectedTopics.filter((t) => t !== topic));
-    } else {
-      setSelectedTopics([...selectedTopics, topic]);
-    }
-  };
-
-  const handleSkillToggle = (skill: string) => {
-    if (selectedSkills.includes(skill)) {
-      setSelectedSkills(selectedSkills.filter((s) => s !== skill));
-    } else {
-      setSelectedSkills([...selectedSkills, skill]);
-    }
-  };
-
-  const handleComponentToggle = (component: string) => {
-    if (component === GENERAL_COMPONENT) {
-      setSelectedComponents([GENERAL_COMPONENT]);
-      return;
-    }
-
-    if (selectedComponents.includes(component)) {
-      const nextComponents = selectedComponents.filter((c) => c !== component);
-      setSelectedComponents(nextComponents.length > 0 ? nextComponents : [GENERAL_COMPONENT]);
-    } else {
-      setSelectedComponents([...selectedComponents.filter((c) => c !== GENERAL_COMPONENT), component]);
-    }
-  };
-
-  const handleTestToggle = (test: string) => {
-    if (test === "特になし") {
-      setSelectedTests(selectedTests.includes(test) ? [] : [test]);
-      return;
-    }
-
-    if (selectedTests.includes(test)) {
-      setSelectedTests(selectedTests.filter((t) => t !== test));
-    } else {
-      setSelectedTests([...selectedTests.filter((t) => t !== "特になし"), test]);
-    }
-  };
-
-  const handleVocabLessonToggle = (lesson: string) => {
-    if (vocabIndividualLessons.includes(lesson)) {
-      setVocabIndividualLessons(vocabIndividualLessons.filter((l) => l !== lesson));
-    } else {
-      setVocabIndividualLessons([...vocabIndividualLessons, lesson]);
-    }
-  };
-
-  const topicsToPass = selectedTopics.concat(customTopic ? [customTopic] : []);
-  const getRandomizedTopicsToPass = () => shuffleItems(topicsToPass);
-  const maxLessonsForCategory = LESSON_COUNTS[vocabCategory] || 64;
-
-  const getSelectedLevel = (): CEFRLevel => {
-    return LEVELS.includes(level as CEFRLevel) ? (level as CEFRLevel) : "A1";
-  };
-
-  const getMessageTiming = () => MESSAGE_TIMING_BY_LEVEL[getSelectedLevel()];
-  const getLevelPrompt = (prompts: Record<CEFRLevel, string[]>) => getRandomItem(prompts[getSelectedLevel()]);
-  const getLevelPracticeStartPrompt = (nextMode: PracticeMode) => (
-    getRandomItem(LEVEL_PRACTICE_START_PROMPTS[getSelectedLevel()][nextMode])
-  );
-  const getFeedbackSectionIntros = () => {
-    const prompts = LEVEL_FEEDBACK_SECTION_PROMPTS[getSelectedLevel()];
-    return Object.fromEntries(
-      Object.entries(prompts).map(([section, sectionPrompts]) => [
-        section,
-        getRandomItem(sectionPrompts),
-      ])
-    ) as Record<FeedbackSection, string>;
-  };
-
-  const rememberOpeningQuestion = (question: string) => {
-    if (!question) return;
-    recentOpeningQuestionsRef.current.add(question);
-    if (recentOpeningQuestionsRef.current.size > 12) {
-      const [oldestQuestion] = Array.from(recentOpeningQuestionsRef.current);
-      recentOpeningQuestionsRef.current.delete(oldestQuestion);
-    }
-  };
-
-  const trimFinalPeriod = (text: string) => text.replace(/\.$/, "");
-  const lowerFirst = (text: string) => text ? `${text.charAt(0).toLowerCase()}${text.slice(1)}` : text;
-
-  const getWritingPromptVariants = (question: string) => {
-    const conciseArgument = question.match(/^Write a concise argument about (.+)\.$/i);
-    if (conciseArgument) {
-      const topic = trimFinalPeriod(conciseArgument[1]);
-      return [
-        `Take a clear position on ${topic}.`,
-        `In a focused paragraph, make a case about ${topic}.`,
-        `Present one claim and one reason about ${topic}.`,
-        `Argue your view on ${topic} in a concise response.`,
-      ];
-    }
-
-    const nuancedResponse = question.match(/^Write a nuanced response (?:about|evaluating|exploring) (.+)\.$/i);
-    if (nuancedResponse) {
-      const topic = trimFinalPeriod(nuancedResponse[1]);
-      return [
-        `Explore ${topic} from more than one perspective.`,
-        `Evaluate ${topic} in a thoughtful paragraph.`,
-        `Discuss the complexity of ${topic} with one example.`,
-        `Write a reflective response that considers different sides of ${topic}.`,
-      ];
-    }
-
-    const benefitRisk = question.match(/^Write a balanced paragraph about one benefit and one risk of (.+)\.$/i);
-    if (benefitRisk) {
-      const topic = trimFinalPeriod(benefitRisk[1]);
-      return [
-        `Compare one benefit and one risk of ${topic}.`,
-        `Explain one positive side and one possible problem with ${topic}.`,
-        `Write a balanced paragraph that weighs a benefit and a risk of ${topic}.`,
-        `Show both a helpful and a risky side of ${topic}.`,
-      ];
-    }
-
-    const balancedParagraph = question.match(/^Write a balanced paragraph about (.+)\.$/i);
-    if (balancedParagraph) {
-      const topic = trimFinalPeriod(balancedParagraph[1]);
-      return [
-        `Compare two sides of ${topic} in one paragraph.`,
-        `Give one benefit and one risk related to ${topic}.`,
-        `Write a paragraph that fairly presents both sides of ${topic}.`,
-        `Explain a balanced view of ${topic}.`,
-      ];
-    }
-
-    const adviceParagraph = question.match(/^Write one paragraph giving advice to someone who wants (.+)\.$/i);
-    if (adviceParagraph) {
-      const goal = trimFinalPeriod(adviceParagraph[1]);
-      return [
-        `Give practical advice to someone who wants ${goal}.`,
-        `Write one helpful paragraph for a person trying to have ${goal}.`,
-        `Suggest two realistic steps for someone who wants ${goal}.`,
-        `Explain what a person should do first if they want ${goal}.`,
-      ];
-    }
-
-    const oneParagraph = question.match(/^Write one paragraph (?:about|explaining|giving advice to someone who wants|giving|describing|comparing) (.+)\.$/i);
-    if (oneParagraph) {
-      const topic = trimFinalPeriod(oneParagraph[1]);
-      return [
-        `Use one paragraph to explain ${topic}.`,
-        `Develop one clear idea about ${topic}.`,
-        `Write a short response with one main point about ${topic}.`,
-        `Give an example and explain ${topic} in one paragraph.`,
-      ];
-    }
-
-    const paragraphTask = question.match(/^Write a paragraph (.+)\.$/i);
-    if (paragraphTask) {
-      const task = trimFinalPeriod(paragraphTask[1]);
-      return [
-        `In one paragraph, ${task}.`,
-        `Develop a clear paragraph ${task}.`,
-        `Write a focused response ${task}.`,
-        `Use one example while ${task}.`,
-      ];
-    }
-
-    const shortParagraph = question.match(/^Write a short paragraph about (.+)\.$/i);
-    if (shortParagraph) {
-      const topic = trimFinalPeriod(shortParagraph[1]);
-      return [
-        `Describe ${topic} in a short paragraph.`,
-        `In a short paragraph, share your thoughts about ${topic}.`,
-        `Write a few connected sentences about ${topic}.`,
-        `Give one example related to ${topic} in a short paragraph.`,
-      ];
-    }
-
-    const sentencePrompt = question.match(/^Write 3-4 sentences about (.+)\.$/i);
-    if (sentencePrompt) {
-      const topic = trimFinalPeriod(sentencePrompt[1]);
-      return [
-        `Describe ${topic} in 3-4 sentences.`,
-        `Write 3-4 sentences with one detail about ${topic}.`,
-        `Share a simple 3-4 sentence response about ${topic}.`,
-        `Use 3-4 sentences to tell me about ${topic}.`,
-      ];
-    }
-
-    return [question];
-  };
-
-  const getSpeakingPromptVariants = (question: string) => {
-    const withoutQuestionMark = question.replace(/\?$/, "");
-    return [
-      question,
-      `Tell me your thoughts: ${lowerFirst(withoutQuestionMark)}?`,
-      `Give your answer with one reason: ${lowerFirst(withoutQuestionMark)}?`,
-      `Let's discuss this: ${lowerFirst(withoutQuestionMark)}?`,
-    ];
-  };
-
-  const varyOpeningQuestionStyle = (question: string, practiceMode: PracticeMode) => {
-    const variants = practiceMode === "writing"
-      ? getWritingPromptVariants(question)
-      : getSpeakingPromptVariants(question);
-    return getRandomItemFrom(variants);
-  };
-
-  const getPresetOpeningQuestion = (practiceMode: PracticeMode) => {
-    const selectedPresetTopics = selectedTopics.filter((topic) => OPENING_QUESTIONS[topic]);
-    const candidateTopics = selectedPresetTopics.length > 0 ? selectedPresetTopics : Object.keys(OPENING_QUESTIONS);
-    const currentLevel = getSelectedLevel();
-    
-    // Collect all available questions from selected topics
-    const allCandidateQuestions = candidateTopics
-      .map((topic) => OPENING_QUESTIONS[topic]?.[currentLevel]?.[practiceMode])
-      .filter((questionsArray): questionsArray is string[] => Array.isArray(questionsArray) && questionsArray.length > 0)
-      .flatMap((questionsArray) => questionsArray);
-    
-    // Fallback: if no questions found in selected topics, try all topics
-    const candidates = allCandidateQuestions.length > 0 
-      ? allCandidateQuestions
-      : Object.keys(OPENING_QUESTIONS)
-          .map((topic) => OPENING_QUESTIONS[topic]?.[currentLevel]?.[practiceMode])
-          .filter((questionsArray): questionsArray is string[] => Array.isArray(questionsArray) && questionsArray.length > 0)
-          .flatMap((questionsArray) => questionsArray);
-    
-    // Select a random question, avoiding recently used ones
-    const selectedQuestion = getRandomItemFrom(candidates, recentOpeningQuestionsRef.current);
-    const question = varyOpeningQuestionStyle(selectedQuestion, practiceMode);
-    rememberOpeningQuestion(question);
-    return question || "Let's continue with the practice.";
-  };
-
-  const generateCustomOpeningQuestion = async (practiceMode: PracticeMode) => {
-    const fallback = getPresetOpeningQuestion(practiceMode);
-    const topic = customTopic.trim();
-    if (!topic) return fallback;
-
+  async function endLesson() {
+    if (isEnding || chatLog.length === 0) return;
+    setIsEnding(true);
+    setLessonActive(false);
     try {
-      const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
+      const res = await fetch(`${SPEAKWISE_API_URL}/api/lesson-summary`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message:
-            `Create exactly one clear ${practiceMode} practice question for an English learner at CEFR level ${level}. ` +
-            `Topic: ${topic}. ` +
-            `Random seed: ${createRandomNonce()}. Use it to vary the exact question. ` +
-            `Avoid overused frames like "Write a concise argument about..." and vary the task style naturally. ` +
-            `Return only the question. Do not include a greeting, numbering, explanation, or quotation marks.`,
-          level,
-          topics: [topic],
-          mode: "speaking",
+          lessonMode: settings.lessonMode || "natural_conversation",
+          level: settings.level,
+          topics,
+          durationMinutes: settings.durationMinutes,
+          elapsedSeconds,
+          history: chatLog.map((entry) => ({
+            role: entry.sender === "assistant" ? "assistant" : "user",
+            content: entry.text,
+          })),
+          learnerMemory: memory,
         }),
       });
-
       const data = await res.json();
-      if (!res.ok || data.error) throw new Error(data.details || data.error || "Question request failed");
-      const question = String(data.reply || "").trim();
-      if (question) rememberOpeningQuestion(question);
-      return question || fallback;
-    } catch {
-      return fallback;
-    }
-  };
-
-  const getOpeningQuestion = async (practiceMode: PracticeMode) => {
-    if (customTopic.trim()) return generateCustomOpeningQuestion(practiceMode);
-    return getPresetOpeningQuestion(practiceMode);
-  };
-
-  const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-  const waitForTyping = (text: string) => {
-    const { typingMs, pauseMs } = getMessageTiming();
-    return wait(text.length * typingMs + pauseMs);
-  };
-
-  const waitBetweenMessages = () => wait(getMessageTiming().pauseMs);
-
-  const appendAssistantMessage = (text: string, kind?: ChatEntry["kind"]) => {
-    setChatLog((prev) => [...prev, { sender: "llm", text, kind }]);
-  };
-
-  const handlePracticeModeSelect = (nextMode: PracticeMode) => {
-    setPracticeMode(nextMode);
-    if (nextMode === "speaking") {
-      setSelectedSkills(["スピーキング"]);
-      setSelectedComponents([GENERAL_COMPONENT]);
-      return;
-    }
-
-    setSelectedSkills(["ライティング"]);
-    setSelectedComponents([GENERAL_COMPONENT]);
-  };
-
-  const getCurrentComponentOptions = () => (
-    practiceMode === "speaking" ? SPEAKING_COMPONENTS : WRITING_COMPONENTS
-  );
-
-  const isComponentDisabled = (component: string) => (
-    component === GENERAL_COMPONENT && selectedComponents.some((selected) => selected !== GENERAL_COMPONENT)
-  );
-
-  const handleHomeStart = () => {
-    if (!validateSharedSetup()) return;
-
-    if (practiceMode === "speaking") {
-      setMode("speaking");
-      setSelectedSkills(["スピーキング"]);
-      handleSpeakingStart();
-      return;
-    }
-
-    if (selectedComponents.length === 0) {
-      alert("練習内容を少なくとも1つ選択してください");
-      return;
-    }
-
-    setMode("lesson");
-    setSelectedSkills(["ライティング"]);
-    handleWritingStart();
-  };
-
-  // Helper for generating lesson numbers for individual selection
-  const generateLessonNumbers = () => {
-    const max = LESSON_COUNTS[vocabCategory] || 64;
-    return Array.from({ length: max }, (_, i) => (i + 1).toString());
-  };
-
-  // Helper for generating lesson numbers for range selection
-  const getLessonNumbersFromRange = () => {
-    const start = Math.max(1, parseInt(vocabRangeStart) || 1);
-    const end = Math.min(maxLessonsForCategory, parseInt(vocabRangeEnd) || 5);
-    return Array.from({ length: end - start + 1 }, (_, i) => (start + i).toString());
-  };
-
-  const getRandomizedVocabLessonsToPass = () => {
-    const lessons = vocabLessonType === "range"
-      ? getLessonNumbersFromRange()
-      : vocabIndividualLessons;
-    return shuffleItems(lessons);
-  };
-
-  // Helper to generate component timing schedule
-  const generateComponentTiming = () => {
-    const structure = generateLessonStructure();
-    let cumulativeTime = 0;
-    return structure.map((item) => {
-      const startTime = cumulativeTime;
-      const endTime = cumulativeTime + item.minutes * 60;
-      cumulativeTime = endTime;
-      return {
-        component: item.name,
-        startSeconds: startTime,
-        endSeconds: endTime,
-        durationSeconds: item.minutes * 60,
-      };
-    });
-  };
-
-  // Load prompts from public/prompts/*.json with simple templating fallback
-  const PROMPTS_BASE = "/speakwise/prompts";
-
-  const generateComponentContentFallback = (componentName: string) => {
-    // keep the previous hardcoded prompts as a fallback if fetch fails
-    switch (componentName) {
-      case "単語":
-        return (
-          `You are an English teacher conducting a vocabulary lesson. ` +
-          `Start by saying a brief greeting (e.g., "Hi! Let's start with vocabulary practice."). ` +
-          `Then, introduce 5 vocabulary words related to the student's interests (${shuffleItems(topicsToPass).join(", ")}). ` +
-          `Select and present the words in a random order using this random seed: ${createRandomNonce()}. ` +
-          `For each word, provide the word, its meaning/definition, and an example sentence. ` +
-          `After presenting all 5 words, ask the student one comprehension question to test their understanding ` +
-          `(e.g., ask them to use one of the words in a sentence, or ask what a specific word means). ` +
-          `Keep the tone friendly and encouraging. The student's level is ${level}.`
-        );
-      case GENERAL_COMPONENT:
-        return (
-          `You are an English teacher conducting a balanced ${practiceMode} lesson. ` +
-          `Use the student's interests (${selectedTopics.join(", ")}) and level (${level}) to practice naturally. ` +
-          `Give helpful, friendly feedback across vocabulary, grammar, coherence, fluency, and clarity.`
-        );
-      case "文法":
-        return (
-          `You are an English teacher conducting a grammar lesson. ` +
-          `Start by saying a brief greeting (e.g., "Hi! Let's practice grammar."). ` +
-          `Then, present a grammar concept or exercise appropriate for the student's level (${level}). ` +
-          `For example, you could: (1) provide a sentence with a blank and ask the student to fill it with the correct grammar form, ` +
-          `or (2) ask the student to correct a sentence with a grammar error, or (3) ask them to write a sentence using a specific grammar pattern. ` +
-          `After the student responds, provide feedback and explain the grammar rule briefly. ` +
-          `Keep the tone friendly and encouraging.`
-        );
-      case "一貫性":
-        return (
-          `You are an English teacher helping the student improve coherence. ` +
-          `Focus on organizing ideas logically, connecting sentences smoothly, and making the answer easy to follow. ` +
-          `Use the student's level (${level}) and interests (${selectedTopics.join(", ")}) to guide the practice.`
-        );
-      case "流暢さ":
-        return (
-          `You are an English speaking coach helping the student improve fluency. ` +
-          `Focus on natural pacing, reducing pauses, and expressing ideas smoothly at level ${level}.`
-        );
-      case "発音":
-        return (
-          `You are an English pronunciation coach. ` +
-          `Focus on clear sounds, word stress, sentence rhythm, and practical pronunciation feedback at level ${level}.`
-        );
-      default:
-        return `You are an English teacher. Start with a brief greeting and help the student learn English in a friendly way.`;
-    }
-  };
-
-  const getPromptFilename = (componentName: string) => {
-    switch (componentName) {
-      case "単語":
-        return 'vocab_practice.json';
-      case "文法":
-        return 'grammar_practice.json';
-      default:
-        return null;
-    }
-  };
-
-  const fillTemplate = (template: string) => {
-    const topics = getRandomizedTopicsToPass().join(', ');
-    const randomSeed = createRandomNonce();
-    const randomInstruction =
-      ` Use random seed ${randomSeed}; vary the selected words, their presentation order, and the final comprehension question.`;
-    return template
-      .replace(/{{\s*topics\s*}}/g, topics || 'general topics')
-      .replace(/{{\s*level\s*}}/g, level || 'appropriate level')
-      .replace(/([.!?])\s*$/, `$1${randomInstruction}`);
-  };
-
-  const getComponentPrompt = async (componentName: string) => {
-    const filename = getPromptFilename(componentName);
-    if (!filename) {
-      return generateComponentContentFallback(componentName);
-    }
-
-    try {
-      const res = await fetch(`${PROMPTS_BASE}/${filename}`);
-      if (!res.ok) throw new Error('prompt fetch failed');
-      const json = await res.json();
-      const template = typeof json.prompt === 'string' ? json.prompt : JSON.stringify(json);
-      return fillTemplate(template);
-    } catch (e) {
-      // fallback
-      return generateComponentContentFallback(componentName);
-    }
-  };
-
-  // Experimental: EIKEN Grade 1 speaking practice helpers
-  const getTestPath = () => {
-    // Temporarily disabled to continue conversation/lesson normally
-    return null;
-    /*
-    const test = selectedTests.find(t => ['英検', 'TOEIC', 'IELTS', 'TOEFL'].includes(t));
-    if (!test) return null;
-    const skill = selectedSkills.find(s => ['リスニング', 'スピーキング', 'リーディング', 'ライティング'].includes(s));
-    if (!skill) return null;
-    let grade = '';
-    if (test === '英検') {
-      if (level === 'C1' || level === 'C2') grade = '1';
-      else if (level === 'B2') grade = 'pre1';
-      else if (level === 'B1') grade = 'pre2';
-      else if (level === 'A2') grade = '3';
-      else return null;
-    }
-    const skillPath = skill === 'リスニング' ? 'listening' : skill === 'スピーキング' ? 'speaking' : skill === 'リーディング' ? 'reading' : 'writing';
-    if (test === '英検') {
-      return `/${grade}_${skillPath}`;
-    } else {
-      const testLower = test.toLowerCase();
-      return `/${testLower}_${skillPath}`;
-    }
-    */
-  };
-
-  const isTestEligible = () => {
-    return getTestPath() !== null;
-  };
-
-  // Removed: startEikenSession, stopEikenSession, eikenStep, eikenSubmitResponse
-
-  // Lesson structure preview
-  const generateLessonStructure = () => {
-    const durationMin = parseInt(selectedDuration);
-    const componentCount = selectedComponents.length || 1;
-    const timePerComponent = Math.floor(durationMin / componentCount);
-
-    return selectedComponents.map((comp) => ({
-      name: comp,
-      minutes: timePerComponent,
-    }));
-  };
-
-  const handleSend = async (overrideText?: string) => {
-    const textToSend = overrideText ?? userInput;
-    if (!textToSend.trim()) return;
-
-    setChatLog((prev) => [...prev, { sender: "user", text: textToSend }]);
-    const inputText = textToSend;
-    const messageWithQuestionContext = openingQuestion
-      ? `Practice question: ${openingQuestion}\nStudent response: ${inputText}`
-      : inputText;
-    setUserInput("");
-
-    if (openingQuestion && textToSend.trim()) {
-      setLastUserAnswer(textToSend);
-      setPendingImprovedVersion(null);
-      setPendingFeedbackImprovedVersion(null);
-      setPendingFeedbackSections([]);
-      setFeedbackStepLoading(false);
-      getFeedback(openingQuestion, textToSend);
-      return;
-    }
-
-    try {
-      const testsToPass = selectedTests.length > 0
-        ? selectedTests.map(t => t === "Other" ? customTest : t)
-        : [];
-
-      const vocabLessonsToPass = getRandomizedVocabLessonsToPass();
-
-      const componentTiming = generateComponentTiming();
-
-      const payload =
-        mode === "speaking"
-          ? {
-              message: messageWithQuestionContext,
-              level,
-              topics: getRandomizedTopicsToPass(),
-              mode: "speaking",
-            }
-          : {
-              message: messageWithQuestionContext,
-              level,
-              topics: getRandomizedTopicsToPass(),
-              tests: testsToPass,
-              skills: selectedSkills,
-              duration: parseInt(selectedDuration),
-              durationMinutes: parseInt(selectedDuration),
-              currentComponent: currentComponent,
-              currentComponentName: selectedComponents[currentComponent] || null,
-              components: selectedComponents,
-              componentTiming: componentTiming,
-              totalTimeElapsed: timeElapsed,
-              timeElapsedSeconds: timeElapsed,
-              vocabCategory: selectedComponents.includes(VOCAB_COMPONENT) ? vocabCategory : null,
-              vocabLessons: selectedComponents.includes(VOCAB_COMPONENT) ? vocabLessonsToPass : null,
-              randomSeed: createRandomNonce(),
-              mode: "lesson",
-            };
-
-      const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      const data = await res.json();
-      if (!res.ok || data.error) {
-        throw new Error(data.details || data.error || "Chat request failed");
-      }
-      let replyText: string = data.reply || "No response";
-      const llmResponse: ChatEntry = { sender: "llm", text: replyText };
-      setChatLog((prev) => [...prev, llmResponse]);
-
+      if (!res.ok || data.error) throw new Error(data.details || data.error || "Summary request failed");
+      const nextSummary = data.summary as LessonSummary;
+      setSummary(nextSummary);
+      const farewell = data.farewell || "Great work today. See you next lesson!";
+      setChatLog((prev) => [...prev, { sender: "assistant", text: farewell }]);
+      if (settings.voiceEnabled) await playVoice(farewell);
+      await persistSummary(nextSummary);
     } catch (error) {
       console.error(error);
-      setChatLog((prev) => [
-        ...prev,
-        { sender: "llm", text: "エラー: レスポンスを取得できませんでした。" },
-      ]);
+      setChatLog((prev) => [...prev, { sender: "assistant", text: "Great work today. I could not save the full summary, but the lesson is complete." }]);
+    } finally {
+      setIsEnding(false);
     }
-  };
+  }
 
-  // Fetch voice audio from backend and play it
-  const fetchAndPlayVoice = async (text: string, idx?: number) => {
-    if (!text) return;
-
+  async function persistSummary(nextSummary: LessonSummary) {
+    if (!accessToken) return;
     try {
-      if (audioRef.current) {
-        try {
-          audioRef.current.pause();
-        } catch (e) {}
-        audioRef.current = null;
-      }
-      if (typeof idx === "number") setLoadingVoiceIndex(idx);
+      const response = await fetch("/api/speakwise/learner-memory", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
+        body: JSON.stringify({
+          sessionId,
+          lessonMode: settings.lessonMode || "natural_conversation",
+          level: settings.level,
+          durationMinutes: settings.durationMinutes,
+          elapsedSeconds,
+          topics,
+          summary: nextSummary,
+        }),
+      });
+      const data = await response.json().catch(() => null);
+      if (data && !data.error) setMemory(data.memory ?? memory);
+    } catch (error) {
+      console.warn("SpeakWise learner memory save failed", error);
+    }
+  }
 
+  async function playVoice(text: string) {
+    if (!text.trim()) return;
+    try {
+      audioRef.current?.pause();
       const res = await fetch(`${SPEAKWISE_API_URL}/api/voice`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text, voice: selectedVoice }),
+        body: JSON.stringify({ text, voice: settings.selectedVoice }),
       });
-
-      if (!res.ok) {
-        console.error("Voice request failed", res.statusText);
-        setLoadingVoiceIndex(null);
-        return;
-      }
-
+      if (!res.ok) return;
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const audio = new Audio(url);
       audioRef.current = audio;
-      audio.play().catch((e) => console.error("Audio play failed", e));
-      audio.onended = () => {
-        try {
-          URL.revokeObjectURL(url);
-        } catch (e) {}
-        if (typeof idx === "number") setLoadingVoiceIndex(null);
-        audioRef.current = null;
-      };
+      audio.onended = () => URL.revokeObjectURL(url);
+      await audio.play();
     } catch (error) {
-      console.error(error);
-      if (typeof idx === "number") setLoadingVoiceIndex(null);
+      console.warn("SpeakWise voice playback failed", error);
     }
-  };
+  }
 
-  // Helper to start a lesson by sending the first component prompt to the AI
-  const handleLessonStart = async (prompt: string) => {
-    if (!prompt.trim()) return;
-
-    try {
-      const testsToPass = selectedTests.length > 0
-        ? selectedTests.map(t => t === "Other" ? customTest : t)
-        : [];
-
-      const vocabLessonsToPass = getRandomizedVocabLessonsToPass();
-
-      const componentTiming = generateComponentTiming();
-
-      const payload = {
-        message: prompt,
-        level,
-        topics: getRandomizedTopicsToPass(),
-        tests: testsToPass,
-        skills: selectedSkills,
-        duration: parseInt(selectedDuration),
-        durationMinutes: parseInt(selectedDuration),
-        currentComponent: currentComponent,
-        currentComponentName: selectedComponents[currentComponent] || null,
-        components: selectedComponents,
-        componentTiming: componentTiming,
-        totalTimeElapsed: timeElapsed,
-        timeElapsedSeconds: timeElapsed,
-        vocabCategory: selectedComponents.includes(VOCAB_COMPONENT) ? vocabCategory : null,
-        vocabLessons: selectedComponents.includes(VOCAB_COMPONENT) ? vocabLessonsToPass : null,
-        randomSeed: createRandomNonce(),
-        mode: "lesson",
-      };
-
-      const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      const data = await res.json();
-      if (!res.ok || data.error) {
-        throw new Error(data.details || data.error || "Lesson request failed");
-      }
-      let replyText: string = data.reply || "No response";
-      const llmResponse: ChatEntry = { sender: "llm", text: replyText };
-      setChatLog((prev) => [...prev, llmResponse]);
-    } catch (error) {
-      console.error(error);
-      setChatLog((prev) => [
-        ...prev,
-        { sender: "llm", text: "エラー: レスポンスを取得できませんでした。" },
-      ]);
-    }
-  };
-
-  // Get structured feedback from API
-  const getFeedback = async (question: string, userAnswer: string) => {
-    try {
-      setFeedbackLoading(true);
-
-      const skillsFocus = selectedComponents.length > 0 ? selectedComponents.join(", ") : "General";
-      const testsToEvaluate = selectedTests.length > 0 
-        ? selectedTests.filter(t => t !== "特になし").join(", ") 
-        : "None";
-
-      const feedbackRequest = fetch(`${SPEAKWISE_API_URL}/api/feedback`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question,
-          userAnswer,
-          level,
-          tests: testsToEvaluate,
-          skills: skillsFocus,
-          practiceMode,
-        }),
-      });
-
-      const res = await feedbackRequest;
-
-      const data = await res.json();
-      if (!res.ok || data.error) {
-        throw new Error(data.details || data.error || "Feedback request failed");
-      }
-
-      const feedback = data.feedback || {};
-      const positiveComment = String(
-        feedback.positiveComment ||
-        feedback.positive_comment ||
-        getLevelPrompt(LEVEL_POSITIVE_FALLBACK_PROMPTS)
-      );
-      const positiveEntry: ChatEntry = {
-        sender: "llm",
-        text: positiveComment,
-        kind: "positiveComment",
-      };
-      const feedbackIntro = getLevelPrompt(LEVEL_FEEDBACK_INTRO_PROMPTS);
-      const sectionIntros = getFeedbackSectionIntros();
-      const feedbackSections = ([
-        { section: "general", label: "総合評価", content: feedback.overall || "" },
-        { section: "grammar", label: "文法", content: feedback.grammar || [] },
-        { section: "vocabulary", label: "単語", content: feedback.vocabulary || [] },
-        { section: "fluency", label: "流暢さ", content: feedback.fluency || [] },
-        { section: "pronunciation", label: "発音", content: feedback.pronunciation || [] },
-        { section: "suggestions", label: "改善提案", content: feedback.suggestions || [] },
-      ] satisfies Array<{ section: FeedbackSection; label: string; content: string | string[] | undefined }>).filter(({ content }) => (
-        Array.isArray(content) ? content.filter(Boolean).length > 0 : Boolean(content)
-      ));
-      setChatLog((prev) => [...prev, positiveEntry]);
-      await waitForTyping(positiveComment);
-
-      setChatLog((prev) => [...prev, { sender: "llm", text: feedbackIntro, kind: "feedbackIntro" }]);
-      await waitForTyping(feedbackIntro);
-
-      const queuedFeedbackSections = feedbackSections.map((feedbackSection) => {
-        const items = Array.isArray(feedbackSection.content)
-          ? feedbackSection.content.filter(Boolean)
-          : [feedbackSection.content].filter((item): item is string => Boolean(item));
-
-        return {
-          transitionText: sectionIntros[feedbackSection.section],
-          section: feedbackSection.section,
-          label: feedbackSection.label,
-          items,
-        };
-      });
-
-      setPendingFeedbackSections(queuedFeedbackSections);
-      setPendingFeedbackImprovedVersion({ question, userAnswer });
-      if (queuedFeedbackSections.length === 0) {
-        const improvedReadyPrompt = getLevelPrompt(LEVEL_IMPROVED_VERSION_READY_PROMPTS);
-        setChatLog((prev) => [...prev, { sender: "llm", text: improvedReadyPrompt, kind: "improvedIntro" }]);
-        await waitForTyping(improvedReadyPrompt);
-        setPendingImprovedVersion({ question, userAnswer });
-        setPendingFeedbackImprovedVersion(null);
-      }
-      setFeedbackLoading(false);
-    } catch (error) {
-      console.error("Feedback error:", error);
-      setFeedbackLoading(false);
-      // Silently fail - don't break the chat experience
-    }
-  };
-
-  const handleSeeImprovedVersion = async () => {
-    if (!pendingImprovedVersion || improvedVersionLoading) return;
-
-    const { question, userAnswer } = pendingImprovedVersion;
-    setPendingImprovedVersion(null);
-    setImprovedVersionLoading(true);
-
-    try {
-      const improvedIntro = getLevelPrompt(LEVEL_IMPROVED_VERSION_INTRO_PROMPTS);
-      setChatLog((prev) => [...prev, { sender: "llm", text: improvedIntro, kind: "improvedIntro" }]);
-      await waitForTyping(improvedIntro);
-
-      const improvedRes = await fetch(`${SPEAKWISE_API_URL}/api/improved-version`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question,
-          userAnswer,
-          level,
-          practiceMode,
-        }),
-      });
-      const improvedData = await improvedRes.json();
-      const improvedVersion = !improvedRes.ok || improvedData.error
-        ? await getImprovedVersionFromChat(question, userAnswer)
-        : normalizeImprovedVersion(improvedData.improvedVersion || improvedData.improved_version);
-      const improvedEntry: ChatEntry = {
-        sender: "llm",
-        text: "改善版",
-        kind: "improvedAnswer",
-        feedback: {
-          improvedVersion,
-        },
-      };
-
-      if (improvedVersion.segments && improvedVersion.segments.length > 0) {
-        setChatLog((prev) => [...prev, improvedEntry]);
-      }
-    } catch (improvedError) {
-      console.error("Improved version error:", improvedError);
-      setChatLog((prev) => [
-        ...prev,
-        { sender: "llm", text: "エラー: 改善版を取得できませんでした。" },
-      ]);
-      setPendingImprovedVersion({ question, userAnswer });
-    } finally {
-      setImprovedVersionLoading(false);
-    }
-  };
-
-  const getImprovedVersionFromChat = async (question: string, userAnswer: string) => {
-    const message =
-      `Rewrite the student's answer into one improved English version.\n\n` +
-      `Practice question: ${question}\n` +
-      `Student answer: ${userAnswer}\n\n` +
-      `Return only the improved answer text. Do not include feedback, labels, markdown, or explanations.`;
-    const fallbackModes = ["speaking", "casual"];
-    let lastError = "Improved version fallback request failed";
-
-    for (const fallbackMode of fallbackModes) {
-      const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message,
-          level,
-          topics: getRandomizedTopicsToPass(),
-          mode: fallbackMode,
-        }),
-      });
-
-      const data = await res.json();
-      if (res.ok && !data.error && data.reply) {
-        return normalizeImprovedVersion(String(data.reply).trim());
-      }
-
-      lastError = data.details || data.error || lastError;
-    }
-
-    throw new Error(lastError);
-  };
-
-  const handleNextFeedback = async () => {
-    if (feedbackStepLoading || pendingFeedbackSections.length === 0) return;
-
-    const [nextSection, ...remainingSections] = pendingFeedbackSections;
-    setFeedbackStepLoading(true);
-    setPendingFeedbackSections(remainingSections);
-
-    try {
-      setChatLog((prev) => [
-        ...prev,
-        { sender: "llm", text: nextSection.transitionText, kind: "feedbackSectionIntro" },
-      ]);
-      await waitForTyping(nextSection.transitionText);
-
-      setChatLog((prev) => [
-        ...prev,
-        {
-          sender: "llm",
-          text: nextSection.label,
-          kind: "feedbackSection",
-          feedbackSection: {
-            section: nextSection.section,
-            label: nextSection.label,
-            items: nextSection.items,
-          },
-        },
-      ]);
-      await waitBetweenMessages();
-
-      if (remainingSections.length === 0 && pendingFeedbackImprovedVersion) {
-        const improvedReadyPrompt = getLevelPrompt(LEVEL_IMPROVED_VERSION_READY_PROMPTS);
-        setChatLog((prev) => [...prev, { sender: "llm", text: improvedReadyPrompt, kind: "improvedIntro" }]);
-        await waitForTyping(improvedReadyPrompt);
-        setPendingImprovedVersion(pendingFeedbackImprovedVersion);
-        setPendingFeedbackImprovedVersion(null);
-      }
-    } finally {
-      setFeedbackStepLoading(false);
-    }
-  };
-
-  const validateSharedSetup = () => {
-    if (!levelConfirmed || !level) {
-      alert("英語レベルを選択してください");
-      return false;
-    }
-
-    if (selectedTopics.length === 0 && !customTopic.trim()) {
-      alert("少なくとも1つのトピックを選択してください");
-      return false;
-    }
-
-    return true;
-  };
-
-  const handleSpeakingPromptStart = async (prompt: string) => {
-    try {
-      const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message: prompt,
-          level,
-          topics: getRandomizedTopicsToPass(),
-          mode: "speaking",
-        }),
-      });
-
-      const data = await res.json();
-      if (!res.ok || data.error) {
-        throw new Error(data.details || data.error || "Chat request failed");
-      }
-      const replyText: string = data.reply || "No response";
-      setChatLog((prev) => [...prev, { sender: "llm", text: replyText }]);
-    } catch (error) {
-      console.error(error);
-      setChatLog((prev) => [
-        ...prev,
-        { sender: "llm", text: "エラー: レスポンスを取得できませんでした。" },
-      ]);
-    }
-  };
-
-  const getRandomOpeningQuestion = (practiceMode: PracticeMode) => {
-    const selectedPresetTopics = selectedTopics.filter((topic) => OPENING_QUESTIONS[topic]);
-    const availableTopics = selectedPresetTopics.length > 0 ? selectedPresetTopics : Object.keys(OPENING_QUESTIONS);
-    const currentLevel = getSelectedLevel();
-    
-    // Collect all available questions from topics, shuffled for better variety
-    const allCandidateQuestions = shuffleItems(availableTopics)
-      .map((topic) => OPENING_QUESTIONS[topic]?.[currentLevel]?.[practiceMode])
-      .filter((questionsArray): questionsArray is string[] => Array.isArray(questionsArray) && questionsArray.length > 0)
-      .flatMap((questionsArray) => questionsArray);
-    
-    // Fallback: if no questions found, try all topics
-    const candidates = allCandidateQuestions.length > 0
-      ? allCandidateQuestions
-      : Object.keys(OPENING_QUESTIONS)
-          .map((topic) => OPENING_QUESTIONS[topic]?.[currentLevel]?.[practiceMode])
-          .filter((questionsArray): questionsArray is string[] => Array.isArray(questionsArray) && questionsArray.length > 0)
-          .flatMap((questionsArray) => questionsArray);
-    
-    // Select a random question, avoiding recently used ones
-    const selectedQuestion = getRandomItemFrom(candidates, recentOpeningQuestionsRef.current);
-    const question = varyOpeningQuestionStyle(selectedQuestion, practiceMode);
-    rememberOpeningQuestion(question);
-    return question || "Let's continue with the practice.";
-  };
-
-  const getRandomItem = <T,>(items: T[]) => getRandomItemFrom(items);
-
-  const getLessonIntroLine = (nextMode: PracticeMode) => {
-    const topicText = topicsToPass.length > 0 ? topicsToPass.join(", ") : "your selected topic";
-    const selectedTestText = selectedTests
-      .filter((test) => test !== "特になし")
-      .map((test) => test === "Other" ? customTest : test)
-      .filter(Boolean)
-      .join(", ");
-    const testText = selectedTestText || "a general English practice";
-    return getRandomItem(LESSON_INTRO_TEMPLATES)
-      .replace("{mode}", nextMode)
-      .replace("{level}", level)
-      .replace("{topics}", topicText)
-      .replace("{tests}", testText);
-  };
-
-  const continueStartupAfterMood = async (nextMode: PracticeMode) => {
-    const practiceLine = getLevelPracticeStartPrompt(nextMode);
-    appendAssistantMessage(practiceLine, "greeting");
-    await waitForTyping(practiceLine);
-
-    const introLine = getLessonIntroLine(nextMode);
-    appendAssistantMessage(introLine, "lessonIntro");
-    await waitForTyping(introLine);
-
-    const question = await getOpeningQuestion(nextMode);
-    setOpeningQuestion(question);
-    appendAssistantMessage(question, "question");
-  };
-
-  const handleMoodChoice = async (mood: MoodChoice) => {
-    if (!pendingStartupMode) return;
-
-    setAwaitingMoodChoice(false);
-    const selectedMood = MOOD_OPTIONS.find((option) => option.id === mood)?.label || mood;
-    const response = getRandomItem(MOOD_RESPONSES[mood]);
-    setChatLog((prev) => [...prev, { sender: "user", text: selectedMood }]);
-    await waitBetweenMessages();
-    appendAssistantMessage(response, "moodResponse");
-    await waitForTyping(response);
-    await continueStartupAfterMood(pendingStartupMode);
-    setPendingStartupMode(null);
-  };
-
-  const handleUsePracticeQuestion = async () => {
-    setAwaitingQuestionChoice(false);
-    setAnswerDraft("");
-    const readyPrompt = getRandomItem(ANSWER_READY_PROMPTS[practiceMode]);
-    appendAssistantMessage(readyPrompt, "answerReady");
-    await waitForTyping(readyPrompt);
-    setAwaitingAnswer(true);
-  };
-
-  const handleAnswerSubmit = async () => {
-    if (!answerDraft.trim()) return;
-    const answer = answerDraft.trim();
-    setAwaitingAnswer(false);
-    setAnswerDraft("");
-    await handleSend(answer);
-  };
-
-  const handleStartSpeaking = () => {
-    const SpeechRecognitionConstructor =
-      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-
-    if (!SpeechRecognitionConstructor) {
-      alert("このブラウザでは音声入力がサポートされていません。テキストで入力してください。");
+  function toggleListening() {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert("This browser does not support speech recognition. Please type your answer.");
       return;
     }
-
-    const recognition = new SpeechRecognitionConstructor();
-    recognition.lang = "en-US";
-    recognition.interimResults = true; // Enable interim results for live transcription
-    recognition.maxAlternatives = 1;
-    recognition.continuous = true; // Keep listening for continuous input
-
-    recognitionRef.current = recognition;
-
-    recognition.onstart = () => setIsListening(true);
-    recognition.onend = () => {
-      setIsListening(false);
-      recognitionRef.current = null;
-    };
-    recognition.onerror = () => {
-      setIsListening(false);
-      recognitionRef.current = null;
-      alert("音声を認識できませんでした。もう一度試すか、テキストで入力してください。");
-    };
-    recognition.onresult = (event: any) => {
-      let interimTranscript = "";
-      let finalTranscript = "";
-
-      // Process all results to separate interim and final
-      for (let i = event.resultIndex; i < event.results.length; i++) {
-        const transcript = event.results[i][0].transcript;
-        if (event.results[i].isFinal) {
-          finalTranscript += transcript + " ";
-        } else {
-          interimTranscript += transcript;
-        }
-      }
-
-      // Update the answer draft with live transcription
-      if (finalTranscript) {
-        setAnswerDraft((prev) => [prev.trim(), finalTranscript.trim()].filter(Boolean).join(" "));
-      } else if (interimTranscript) {
-        // Show interim results as the user speaks
-        setAnswerDraft((prev) => {
-          const parts = prev.split("\n[interim]");
-          const mainText = parts[0].trim();
-          return mainText ? `${mainText}\n[interim] ${interimTranscript}` : interimTranscript;
-        });
-      }
-    };
-
-    recognition.start();
-  };
-
-  const handleStopSpeaking = () => {
     if (recognitionRef.current) {
       recognitionRef.current.stop();
-      setIsListening(false);
       recognitionRef.current = null;
-
-      // Clean up interim text marker
-      setAnswerDraft((prev) => prev.replace(/\n\[interim\].*/g, "").trim());
-    }
-  };
-
-  const handleGenerateNewQuestion = async () => {
-    try {
-      setAwaitingQuestionChoice(false);
-      setLastQuestionIndexForConfirmation(null);
-      // Use random selection from the question list instead of generating new one
-      const newQuestion = getRandomOpeningQuestion(practiceMode);
-      setOpeningQuestion(newQuestion);
-      setChatLog((prev) => [...prev, { sender: "llm", text: newQuestion, kind: "question" }]);
-    } catch (error) {
-      console.error(error);
-      setChatLog((prev) => [
-        ...prev,
-        { sender: "llm", text: "エラー: 新しい問題を生成できませんでした。" },
-      ]);
-    }
-  };
-
-  const renderFeedbackSection = (
-    section: FeedbackSection,
-    label: string,
-    content: string | string[] | undefined
-  ) => {
-    const items = Array.isArray(content)
-      ? content.filter(Boolean)
-      : content
-        ? [content]
-        : [];
-    if (items.length === 0) return null;
-
-    return (
-      <div className={`feedback-section feedback-section-${section}`}>
-        <div className="feedback-section-box">
-          <div className="feedback-section-title">{label}</div>
-          <ul className="feedback-section-list">
-            {items.map((item, i) => (
-              <li key={`${section}-${i}`}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    );
-  };
-
-  const handleSpeakingStart = async () => {
-    if (!validateSharedSetup()) return;
-    void recordSpeakWiseLessonSession("speaking");
-
-    setOpeningQuestion("");
-    setDisplayedText({}); // Reset displayed text to start fresh animations
-    setChatLog([]);
-    setPendingImprovedVersion(null);
-    setPendingFeedbackImprovedVersion(null);
-    setPendingFeedbackSections([]);
-    setFeedbackStepLoading(false);
-    setImprovedVersionLoading(false);
-    setLessonStartTime(Date.now());
-    setTimeElapsed(0);
-    setCurrentComponent(0);
-    setStep("chatting");
-    setAwaitingQuestionChoice(false);
-    setAwaitingMoodChoice(false);
-    setPendingStartupMode("speaking");
-    setLastQuestionIndexForConfirmation(null);
-
-    await waitBetweenMessages();
-    appendAssistantMessage("Hello!", "greeting");
-    await waitForTyping("Hello!");
-    const greeting = getRandomItem(LESSON_GREETING_PROMPTS);
-    appendAssistantMessage(greeting, "greeting");
-    await waitForTyping(greeting);
-    setAwaitingMoodChoice(true);
-  };
-
-  const handleWritingStart = async () => {
-    if (!validateSharedSetup()) return;
-
-    if (selectedComponents.length === 0) {
-      alert("練習内容を少なくとも1つ選択してください");
+      setIsListening(false);
       return;
     }
-
-    if (selectedComponents.includes(VOCAB_COMPONENT)) {
-      if (vocabLessonType === "range") {
-        const start = parseInt(vocabRangeStart);
-        const end = parseInt(vocabRangeEnd);
-        if (start < 1 || end > maxLessonsForCategory || start > end) {
-          alert(`レッスン番号は1～${maxLessonsForCategory}の範囲で、開始≤終了となるように入力してください`);
-          return;
-        }
-      } else if (vocabIndividualLessons.length === 0) {
-        alert("少なくとも1つの単語レッスンを選択してください");
-        return;
+    const recognition = new SpeechRecognition();
+    recognition.lang = "en-US";
+    recognition.interimResults = true;
+    recognition.continuous = true;
+    recognition.onstart = () => setIsListening(true);
+    recognition.onend = () => setIsListening(false);
+    recognition.onerror = () => setIsListening(false);
+    recognition.onresult = (event: any) => {
+      let finalText = "";
+      for (let i = event.resultIndex; i < event.results.length; i += 1) {
+        if (event.results[i].isFinal) finalText += `${event.results[i][0].transcript} `;
       }
-    }
-
-    const testPath = getTestPath();
-    if (testPath) {
-      navigate(testPath);
-      return;
-    }
-
-    void recordSpeakWiseLessonSession("writing");
-
-    setOpeningQuestion("");
-    setDisplayedText({}); // Reset displayed text to start fresh animations
-    setChatLog([]);
-    setPendingImprovedVersion(null);
-    setPendingFeedbackImprovedVersion(null);
-    setPendingFeedbackSections([]);
-    setFeedbackStepLoading(false);
-    setImprovedVersionLoading(false);
-    setLessonStartTime(Date.now());
-    setTimeElapsed(0);
-    setCurrentComponent(0);
-    setStep("chatting");
-    setAwaitingQuestionChoice(false);
-    setAwaitingMoodChoice(false);
-    setPendingStartupMode("writing");
-    setLastQuestionIndexForConfirmation(null);
-
-    await waitBetweenMessages();
-    appendAssistantMessage("Hello!", "greeting");
-    await waitForTyping("Hello!");
-    const greeting = getRandomItem(LESSON_GREETING_PROMPTS);
-    appendAssistantMessage(greeting, "greeting");
-    await waitForTyping(greeting);
-    setAwaitingMoodChoice(true);
-  };
-
-  // Choice screen
-  if (mode === "choice" || step === "initial") {
-    const isWriting = practiceMode === "writing";
-    const vocabCategories = Object.entries(CATEGORIES).filter(([key]) =>
-      key.includes("word") || key.includes("idioms") || key.includes("business")
-    );
-    const allLessons = generateLessonNumbers();
-
-    return (
-      <>
-        {/* Page styles are embedded here for single-file portability */}
-        <style>{`
-          :root{
-            --bg: transparent;
-            --card-bg: linear-gradient(180deg, rgba(250, 252, 255, 0.98), rgba(237, 243, 250, 0.96));
-            --muted: #60738f;
-            --accent-a: #1f4f91;
-            --accent-b: #4a78bd;
-            --accent-c: #6f87a9;
-            --radius: 16px;
-            --container-max: 1180px;
-          }
-          *{box-sizing:border-box}
-          .disclaimer{
-            position:fixed;
-            top:0;
-            left:0;
-            right:0;
-            background: #fff7c2;
-            border-bottom: 1px solid #f5d36b;
-            color:#6b4a00;
-            padding:10px 16px;
-            text-align:center;
-            z-index:60;
-            font-size:14px;
-          }
-          @media (max-width: 480px) {
-            .disclaimer {
-              padding: 6px 12px;   /* ← 高さが小さくなる */
-              font-size: 13px;     /*（オプション）文字も少し小さく */
-            }
-          }
-          .app-container{
-            min-height:100vh;
-            display:flex;
-            align-items:flex-start;
-            justify-content:center;
-            width:100%;
-            padding: 36px 20px 60px;
-            background: transparent;
-          }
-          .card{
-            width:100%;
-            max-width:var(--container-max);
-            background:var(--card-bg);
-            border-radius:var(--radius);
-            border: 1px solid rgba(125, 151, 191, 0.22);
-            box-shadow: 0 20px 55px rgba(4, 10, 24, 0.24);
-            padding:32px;
-            text-align:center;
-          }
-          .choice-stack {
-            width: 100%;
-            max-width: var(--container-max);
-            margin: 0 auto;
-          }
-          .choice-stack .card {
-            max-width: none;
-          }
-          h1{margin:0 0 8px 0;font-size:28px;font-weight:800;color:#0f1d35}
-          p.lead{color:var(--muted);margin:0 0 18px 0}
-          .about-section {
-            margin-bottom: 24px;
-            padding: 24px;
-            background: #ffffff;
-            border: 1px solid rgba(209, 213, 219, 0.8);
-            border-radius: 16px;
-            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-          }
-          .about-heading {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-            margin-bottom: 16px;
-          }
-          .about-logo {
-            width: 52px;
-            height: 52px;
-            border-radius: 10px;
-            object-fit: cover;
-            flex: 0 0 auto;
-          }
-          .about-copy {
-            max-width: 760px;
-            margin: 0 auto;
-            color: #334155;
-            font-size: 16px;
-            line-height: 1.8;
-            text-align: center;
-          }
-
-          .options{
-            display:grid;
-            grid-template-columns:1fr;
-            gap:18px;
-            margin:26px 0;
-          }
-          @media(min-width:720px){
-            .options{grid-template-columns:1fr 1fr}
-          }
-
-          .btn{
-            border:1px solid #d1d5db;
-            padding:0;
-            cursor:pointer;
-            display:inline-flex;
-            align-items:center;
-            justify-content:center;
-            border-radius:18px;
-            font-weight:700;
-            transition: transform .14s cubic-bezier(.2,.9,.2,1), box-shadow .14s ease, border-color .14s ease, background .14s ease;
-          }
-          .btn:active{transform:translateY(1px)}
-          .btn-primary{
-            height:80px;
-            background:linear-gradient(90deg,#4f46e5,#06b6d4);
-            color:#ffffff;
-            box-shadow:0 12px 30px rgba(79,70,229,0.18);
-            font-size:18px;
-            border:none;
-          }
-          .btn-secondary{
-            height:80px;
-            background:linear-gradient(90deg,#4f46e5,#06b6d4);
-            color:#ffffff;
-            box-shadow:0 12px 30px rgba(79,70,229,0.18);
-            font-size:18px;
-            border:none;
-          }
-          .btn:hover{
-            transform:translateY(-6px);
-            box-shadow:0 18px 36px rgba(31,79,145,0.22);
-            border-color:transparent;
-          }
-          .back-row{display:flex;justify-content:center;margin-top:8px}
-          .btn-accent{
-            padding:10px 18px;
-            background:white;
-            border:1px solid #d1d5db;
-            color:#374151;
-            border-radius:12px;
-            box-shadow: 0 4px 12px rgba(15,23,42,0.08);
-            font-weight:600;
-          }
-          .home-setup-card{text-align:left}
-          .home-setup-header{text-align:center;margin-bottom:24px}
-          .setup-grid{display:grid;grid-template-columns:1fr;gap:18px}
-          @media(min-width:860px){.setup-grid{grid-template-columns:1fr 1fr}}
-          .setup-section{background:#ffffff;border:1px solid rgba(209,213,219,.82);border-radius:16px;padding:18px;box-shadow:0 10px 24px rgba(15,23,42,0.08)}
-          .setup-section.full{grid-column:1 / -1}
-          .setup-section h2{font-size:18px;font-weight:800;margin:0 0 10px;color:#10213c}
-          .levels,.option-grid,.dur-grid,.mode-grid{display:grid;gap:8px}
-          .levels{grid-template-columns:repeat(3,1fr)}
-          .option-grid,.mode-grid{grid-template-columns:repeat(2,1fr)}
-          .dur-grid{grid-template-columns:repeat(3,1fr)}
-          @media(min-width:720px){
-            .levels{grid-template-columns:repeat(6,1fr)}
-            .option-grid.wide{grid-template-columns:repeat(3,1fr)}
-            .dur-grid{grid-template-columns:repeat(6,1fr)}
-          }
-          .mode-btn,.level-btn,.option-btn,.dur-btn,.cat-btn{min-height:42px;padding:9px 10px;border-radius:14px;border:1px solid #d1d5db;background:#ffffff;cursor:pointer;transition:transform .14s cubic-bezier(.2,.9,.2,1), box-shadow .14s ease, border-color .14s ease, background .14s ease;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 4px 12px rgba(15,23,42,0.08);font-size:14px;line-height:1.25}
-          .option-btn:disabled{opacity:.46;cursor:not-allowed;transform:none;box-shadow:0 4px 12px rgba(15,23,42,0.08)}
-          .mode-btn{min-height:52px;font-size:16px;font-weight:800}
-          .level-btn{flex-direction:column;min-height:56px}
-          .mode-btn.active,.level-btn.active,.option-btn.active,.dur-btn.active,.cat-btn.active{background:linear-gradient(90deg,#4f46e5,#06b6d4);color:white;box-shadow:0 12px 30px rgba(79,70,229,0.18);border-color:transparent;transform:scale(1.02)}
-          .mode-btn:hover,.level-btn:hover,.option-btn:hover,.dur-btn:hover,.cat-btn:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(15,23,42,0.12);border-color:#b8c4d6}
-          .mode-btn.active:hover,.level-btn.active:hover,.option-btn.active:hover,.dur-btn.active:hover,.cat-btn.active:hover{box-shadow:0 18px 36px rgba(79,70,229,0.22);border-color:transparent}
-          .input-text{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
-          .cat-list{display:grid;grid-template-columns:1fr;gap:10px}
-          @media(min-width:720px){.cat-list{grid-template-columns:repeat(2,1fr)}}
-          .cat-btn{align-items:flex-start;flex-direction:column}
-          .lesson-method{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0}
-          .range-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-          .grid-lessons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-height:220px;overflow:auto;padding:8px;background:#f8fafc;border-radius:8px;border:1px solid #eef2f6}
-          .home-actions{display:flex;justify-content:center;margin-top:22px}
-          .home-start-btn{min-height:48px;padding:0 22px;background:linear-gradient(90deg,#4f46e5,#06b6d4);color:white;border:none;border-radius:12px;box-shadow:0 12px 30px rgba(79,70,229,0.18);font-size:16px;font-weight:800;cursor:pointer}
-          @media (max-width: 720px) {
-            .app-container{
-              padding:24px 0 48px;
-            }
-            .choice-stack{
-              width:min(100%, var(--container-max));
-              margin-inline:auto;
-            }
-            .about-section { padding: 18px; }
-            .about-heading { flex-direction: column; gap: 10px; }
-            .about-copy { font-size: 14px; text-align: left; }
-            .home-setup-card{padding:18px}
-            .home-setup-header{margin-bottom:18px}
-            .setup-grid{gap:12px}
-            .setup-section{padding:14px;border-radius:14px}
-            .setup-section h2{font-size:16px;margin-bottom:8px}
-            .levels,.option-grid,.dur-grid,.mode-grid{gap:7px}
-            .mode-btn,.level-btn,.option-btn,.dur-btn,.cat-btn{min-height:36px;padding:7px 8px;border-radius:12px;font-size:13px}
-            .mode-btn{min-height:44px;font-size:14px}
-            .level-btn{min-height:48px}
-            .level-btn div:first-child{font-size:15px !important;margin-bottom:2px !important}
-            .level-btn div:last-child{font-size:10px !important}
-            .input-text{padding:8px;font-size:13px}
-            .home-start-btn{min-height:42px;padding:0 16px;font-size:14px}
-          }
-
-        `}</style>
-
-     
-        <main className={containerClass}>
-          <div className="choice-stack">
-            <section className="about-section" aria-labelledby="speakwise-about-title">
-              <div className="about-heading">
-                <img className="about-logo" src="/images/speakwise.png" alt="SpeakWiseAI" />
-                <h2
-                  id="speakwise-about-title"
-                  style={{
-                    fontSize: 32,
-                    fontWeight: 900,
-                    textAlign: "center",
-                    margin: 0,
-                    color: "#1f2937",
-                  }}
-                >
-                  SpeakWiseAI
-                </h2>
-              </div>
-
-              <p className="about-copy">
-                SpeakWiseAIは、AIと英語でやり取りしながら、
-                <strong>話す力と書く力を実践的に伸ばす</strong>ための英語学習アプリです。
-                レベルや興味分野に合わせて、自然な会話練習やライティング練習を始められます。
-              </p>
-
-              <p className="about-copy" style={{ marginTop: 18, fontWeight: 700, color: "#173a71" }}>
-                まずは、今日練習したいスキルを選んでください。
-              </p>
-            </section>
-
-            <div className={`${contentClass} home-setup-card`}>
-              <div className="home-setup-header">
-                <h1>学習設定</h1>
-                <p className="lead">練習したいスキル、レベル、トピック、テスト対策を選んで始めましょう。</p>
-              </div>
-
-              <div className="setup-grid">
-                <section className="setup-section full">
-                  <h2>学習</h2>
-                  <div className="mode-grid">
-                    <button
-                      type="button"
-                      onClick={() => handlePracticeModeSelect("speaking")}
-                      className={`mode-btn ${practiceMode === "speaking" ? "active" : ""}`}
-                      aria-pressed={practiceMode === "speaking"}
-                    >
-                      スピーキング
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handlePracticeModeSelect("writing")}
-                      className={`mode-btn ${practiceMode === "writing" ? "active" : ""}`}
-                      aria-pressed={practiceMode === "writing"}
-                    >
-                      ライティング
-                    </button>
-                  </div>
-                </section>
-
-                <section className="setup-section full">
-                  <h2>英語レベル</h2>
-                  <div className="levels">
-                    {LEVELS.map((lvl) => (
-                      <button
-                        key={lvl}
-                        type="button"
-                        onClick={() => {
-                          setLevel(lvl);
-                          setLevelConfirmed(true);
-                        }}
-                        className={`level-btn ${level === lvl ? "active" : ""}`}
-                      >
-                        <div style={{ fontSize: 18, marginBottom: 4, fontWeight: 800 }}>{lvl}</div>
-                        <div style={{ fontSize: 12, opacity: 0.82 }}>
-                          {lvl === "A1" && "初級"}
-                          {lvl === "A2" && "初中級"}
-                          {lvl === "B1" && "中級"}
-                          {lvl === "B2" && "中上級"}
-                          {lvl === "C1" && "上級"}
-                          {lvl === "C2" && "最上級"}
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                </section>
-
-                <section className="setup-section full">
-                  <h2>興味のあるトピック</h2>
-                  <div className="option-grid wide">
-                    {TOPICS.map((topic) => (
-                      <button
-                        key={topic}
-                        type="button"
-                        onClick={() => handleTopicToggle(topic)}
-                        className={`option-btn ${selectedTopics.includes(topic) ? "active" : ""}`}
-                        aria-pressed={selectedTopics.includes(topic)}
-                      >
-                        <span style={{ fontWeight: 700 }}>{topic}</span>
-                      </button>
-                    ))}
-                  </div>
-                  <div style={{ marginTop: 12 }}>
-                    <label style={{ display: "block", fontWeight: 700, marginBottom: 6 }}>その他のトピック</label>
-                    <input
-                      type="text"
-                      value={customTopic}
-                      onChange={(e) => setCustomTopic(e.target.value)}
-                      placeholder="例: 留学、研究発表、旅行、ニュース..."
-                      className="input-text"
-                    />
-                  </div>
-                </section>
-
-                <section className="setup-section full">
-                  <h2>対策しているテスト</h2>
-                  <div className="option-grid wide">
-                    {TESTS.map((test) => (
-                      <button
-                        key={test}
-                        type="button"
-                        onClick={() => handleTestToggle(test)}
-                        className={`option-btn ${selectedTests.includes(test) ? "active" : ""}`}
-                        aria-pressed={selectedTests.includes(test)}
-                      >
-                        <span style={{ fontWeight: 700 }}>{test}</span>
-                      </button>
-                    ))}
-                  </div>
-                </section>
-
-                {
-                  <>
-                    <section className="setup-section full">
-                      <h2>レッスンの時間</h2>
-                      <div className="dur-grid">
-                        {[5, 10, 15, 20, 25, 30].map((min) => (
-                          <button
-                            key={min}
-                            type="button"
-                            onClick={() => setSelectedDuration(min.toString())}
-                            className={`dur-btn ${selectedDuration === min.toString() ? "active" : ""}`}
-                          >
-                            <span style={{ fontWeight: 800 }}>{min}分</span>
-                          </button>
-                        ))}
-                      </div>
-                    </section>
-
-                    <section className="setup-section full">
-                      <h2>{practiceMode === "speaking" ? "スピーキング" : "ライティング"}で重点的に学びたい内容</h2>
-                      <div className="option-grid wide">
-                        {getCurrentComponentOptions().map((component) => (
-                          <button
-                            key={component}
-                            type="button"
-                            onClick={() => handleComponentToggle(component)}
-                            className={`option-btn ${selectedComponents.includes(component) ? "active" : ""}`}
-                            aria-pressed={selectedComponents.includes(component)}
-                            disabled={isComponentDisabled(component)}
-                          >
-                            <span style={{ fontWeight: 700 }}>{component}</span>
-                          </button>
-                        ))}
-                      </div>
-                    </section>
-
-                  </>
-                }
-              </div>
-
-              <div className="home-actions">
-                <button type="button" onClick={handleHomeStart} className="home-start-btn">
-                  SpeakWiseAIとレッスンを開始する
-                </button>
-              </div>
-
-              <p style={{ marginTop: 18, textAlign: "center" }}>
-                ⚠️ 本機能は現在まだ開発実験段階であるため、機能が不安定な場合があります。
-                <br/>会話の内容は保存されず、プライバシーは保護されます。
-              </p>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  if (step === "setup") {
-    const isWriting = mode === "lesson";
-    const vocabCategories = Object.entries(CATEGORIES).filter(([key]) =>
-      key.includes("word") || key.includes("idioms") || key.includes("business")
-    );
-    const allLessons = generateLessonNumbers();
-
-    return (
-      <>
-        <style>{`
-          .app-container{padding:36px 20px 60px}
-          .card{padding:28px;text-align:left}
-          .setup-header{text-align:center;margin-bottom:24px}
-          .setup-grid{display:grid;grid-template-columns:1fr;gap:18px}
-          @media(min-width:860px){.setup-grid{grid-template-columns:1fr 1fr}}
-          .setup-section{background:#ffffff;border:1px solid rgba(209,213,219,.82);border-radius:16px;padding:18px;box-shadow:0 10px 24px rgba(15,23,42,0.08)}
-          .setup-section.full{grid-column:1 / -1}
-          .setup-section h2{font-size:18px;font-weight:800;margin:0 0 10px;color:#10213c}
-          .levels,.option-grid,.dur-grid{display:grid;gap:8px}
-          .levels{grid-template-columns:repeat(3,1fr)}
-          .option-grid{grid-template-columns:repeat(2,1fr)}
-          .dur-grid{grid-template-columns:repeat(3,1fr)}
-          @media(min-width:720px){
-            .levels{grid-template-columns:repeat(6,1fr)}
-            .option-grid.wide{grid-template-columns:repeat(3,1fr)}
-            .dur-grid{grid-template-columns:repeat(6,1fr)}
-          }
-          .level-btn,.option-btn,.dur-btn,.cat-btn{min-height:42px;padding:9px 10px;border-radius:14px;border:1px solid #d1d5db;background:#ffffff;cursor:pointer;transition:transform .14s cubic-bezier(.2,.9,.2,1), box-shadow .14s ease, border-color .14s ease, background .14s ease;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 4px 12px rgba(15,23,42,0.08);font-size:14px;line-height:1.25}
-          .option-btn:disabled{opacity:.46;cursor:not-allowed;transform:none;box-shadow:0 4px 12px rgba(15,23,42,0.08)}
-          .level-btn{flex-direction:column;min-height:56px}
-          .level-btn.active,.option-btn.active,.dur-btn.active,.cat-btn.active{background:linear-gradient(180deg,#1f4f91,#4a78bd);color:white;box-shadow:0 12px 30px rgba(31,79,145,0.16);transform:scale(1.02)}
-          .level-btn:hover,.option-btn:hover,.dur-btn:hover,.cat-btn:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(15,23,42,0.12);border-color:#b8c4d6}
-          .level-btn.active:hover,.option-btn.active:hover,.dur-btn.active:hover,.cat-btn.active:hover{box-shadow:0 18px 36px rgba(31,79,145,0.18);border-color:#4a78bd}
-          .input-text{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
-          .cat-list{display:grid;grid-template-columns:1fr;gap:10px}
-          @media(min-width:720px){.cat-list{grid-template-columns:repeat(2,1fr)}}
-          .cat-btn{align-items:flex-start;flex-direction:column}
-          .lesson-method{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0}
-          .range-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-          .grid-lessons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-height:220px;overflow:auto;padding:8px;background:#f8fafc;border-radius:8px;border:1px solid #eef2f6}
-          .setup-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
-          .btn-accent{padding:10px 18px;background:white;border:1px solid #d1d5db;color:#374151;border-radius:12px;box-shadow:0 4px 12px rgba(15,23,42,0.08);font-weight:700;cursor:pointer}
-          .btn-primary{min-height:48px;padding:0 22px;background:linear-gradient(90deg,#4f46e5,#06b6d4);color:white;border:none;border-radius:12px;box-shadow:0 12px 30px rgba(79,70,229,0.18);font-size:16px;font-weight:800;cursor:pointer}
-          .lead{color:#60738f}
-          @media(max-width:720px){
-            .app-container{padding:24px 12px 48px}
-            .card{padding:18px}
-            .setup-header{margin-bottom:18px}
-            .setup-grid{gap:12px}
-            .setup-section{padding:14px;border-radius:14px}
-            .setup-section h2{font-size:16px;margin-bottom:8px}
-            .levels,.option-grid,.dur-grid{gap:7px}
-            .level-btn,.option-btn,.dur-btn,.cat-btn{min-height:36px;padding:7px 8px;border-radius:12px;font-size:13px}
-            .level-btn{min-height:48px}
-            .level-btn div:first-child{font-size:15px !important;margin-bottom:2px !important}
-            .level-btn div:last-child{font-size:10px !important}
-            .input-text{padding:8px;font-size:13px}
-            .btn-primary{min-height:42px;padding:0 16px;font-size:14px}
-            .btn-accent{padding:8px 14px;font-size:13px}
-          }
-        `}</style>
-
-        <main className={containerClass}>
-          <div className={contentClass}>
-            <div className="setup-header">
-              <h1 style={{ fontSize: 26, marginBottom: 6 }}>
-                {isWriting ? "ライティング練習の設定" : "スピーキング練習の設定"}
-              </h1>
-              <p className="lead" style={{ margin: 0 }}>
-                レベル、トピック、練習内容をこの画面でまとめて選べます。
-              </p>
-            </div>
-
-            <div className="setup-grid">
-              <section className="setup-section full">
-                <h2>英語レベル</h2>
-                <div className="levels">
-                  {LEVELS.map((lvl) => (
-                    <button
-                      key={lvl}
-                      onClick={() => {
-                        setLevel(lvl);
-                        setLevelConfirmed(true);
-                      }}
-                      className={`level-btn ${level === lvl ? "active" : ""}`}
-                    >
-                      <div style={{ fontSize: 18, marginBottom: 4, fontWeight: 800 }}>{lvl}</div>
-                      <div style={{ fontSize: 12, opacity: 0.82 }}>
-                        {lvl === "A1" && "初級"}
-                        {lvl === "A2" && "初中級"}
-                        {lvl === "B1" && "中級"}
-                        {lvl === "B2" && "中上級"}
-                        {lvl === "C1" && "上級"}
-                        {lvl === "C2" && "最上級"}
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </section>
-
-              <section className="setup-section full">
-                <h2>興味のあるトピック</h2>
-                <div className="option-grid wide">
-                  {TOPICS.map((topic) => (
-                    <button
-                      key={topic}
-                      onClick={() => handleTopicToggle(topic)}
-                      className={`option-btn ${selectedTopics.includes(topic) ? "active" : ""}`}
-                      aria-pressed={selectedTopics.includes(topic)}
-                    >
-                      <span style={{ fontWeight: 700 }}>{topic}</span>
-                    </button>
-                  ))}
-                </div>
-                <div style={{ marginTop: 12 }}>
-                  <label style={{ display: "block", fontWeight: 700, marginBottom: 6 }}>その他のトピック</label>
-                  <input
-                    type="text"
-                    value={customTopic}
-                    onChange={(e) => setCustomTopic(e.target.value)}
-                    placeholder="例: 留学、研究発表、旅行、ニュース..."
-                    className="input-text"
-                  />
-                </div>
-              </section>
-
-              {isWriting && (
-                <>
-                  <section className="setup-section">
-                    <h2>対策しているテスト</h2>
-                    <div className="option-grid">
-                      {TESTS.map((test) => (
-                        <button
-                          key={test}
-                          onClick={() => handleTestToggle(test)}
-                          className={`option-btn ${selectedTests.includes(test) ? "active" : ""}`}
-                          aria-pressed={selectedTests.includes(test)}
-                        >
-                          <span style={{ fontWeight: 700 }}>{test}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </section>
-
-                  <section className="setup-section">
-                    <h2>練習時間</h2>
-                    <div className="dur-grid">
-                      {[5, 10, 15, 20, 25, 30].map((min) => (
-                        <button
-                          key={min}
-                          onClick={() => setSelectedDuration(min.toString())}
-                          className={`dur-btn ${selectedDuration === min.toString() ? "active" : ""}`}
-                        >
-                          <span style={{ fontWeight: 800 }}>{min}分</span>
-                        </button>
-                      ))}
-                    </div>
-                  </section>
-
-                  <section className="setup-section full">
-                    <h2>{practiceMode === "speaking" ? "スピーキング" : "ライティング"}で重点的に学びたい内容</h2>
-                    <div className="option-grid wide">
-                      {getCurrentComponentOptions().map((component) => (
-                        <button
-                          key={component}
-                          onClick={() => handleComponentToggle(component)}
-                          className={`option-btn ${selectedComponents.includes(component) ? "active" : ""}`}
-                          aria-pressed={selectedComponents.includes(component)}
-                          disabled={isComponentDisabled(component)}
-                        >
-                          <span style={{ fontWeight: 700 }}>{component}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </section>
-
-                </>
-              )}
-            </div>
-
-            <div className="setup-actions">
-              <button onClick={() => setMode("choice")} className="btn-accent">← 戻る</button>
-              <button onClick={isWriting ? handleWritingStart : handleSpeakingStart} className="btn-primary">
-                SpeakWiseAIとレッスンを開始する
-              </button>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  // Level selection 
-  if (step === "level") {
-    return (
-      <>
-        <style>{`
-          .app-container{padding:110px 20px 60px}
-          .card{padding:28px}
-          .levels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
-          @media(min-width:720px){.levels{grid-template-columns:repeat(6,1fr)}}
-          .level-btn, .option-btn, .dur-btn, .cat-btn{padding:18px;border-radius:12px;border:1px solid #e6e9ef;background:white;cursor:pointer;transition:transform .14s ease, box-shadow .14s ease;display:flex;flex-direction:column;align-items:center}
-          .level-btn.active, .option-btn.active{background:linear-gradient(180deg,#1f4f91,#4a78bd);color:white;box-shadow:0 12px 30px rgba(31,79,145,0.18);transform:scale(1.03)}
-          .actions-row{display:flex;gap:12px;justify-content:center;margin-top:16px;flex-wrap:wrap}
-          .next-btn{padding:12px 20px;border-radius:12px;background:#efefef;border:none;cursor:pointer}
-          .selected-display{margin-bottom:12px}
-          .selected-display .label{color:#374151}
-          .selected-display .items{font-weight:800;color:#3730a3}
-        `}</style>
-
-
-        <main className={containerClass}>
-          <div className={contentClass}>
-            <h1 style={{ fontSize: 22, marginBottom: 6 }}>英語レベルの設定</h1>
-            <p className="lead">あなたの現在の英語レベルを選んでください</p>
-
-            <div className="selected-display">
-              <span className="label">選択中： </span>
-              <span className="items">{level || "未選択"}</span>
-            </div>
-
-            <div className="levels">
-              {LEVELS.map((lvl) => (
-                <button
-                  key={lvl}
-                  onClick={() => {
-                    setLevel(lvl);
-                    setLevelConfirmed(true);
-                  }}
-                  className={`level-btn ${level === lvl ? "active" : ""}`}
-                >
-                  <div style={{ fontSize: 18, marginBottom: 4 }}>{lvl}</div>
-                  <div style={{ fontSize: 12, opacity: 0.8 }}>
-                    {lvl === "A1" && "初級"}
-                    {lvl === "A2" && "初中級"}
-                    {lvl === "B1" && "中級"}
-                    {lvl === "B2" && "中上級"}
-                    {lvl === "C1" && "上級"}
-                    {lvl === "C2" && "最上級"}
-                  </div>
-                </button>
-              ))}
-            </div>
-
-            <div className="actions-row">
-              <button
-                onClick={() => setMode("choice")}
-                className="btn-accent"
-              >
-                ← 戻る
-              </button>
-              <button
-                onClick={() => {
-                  if (!levelConfirmed) {
-                    alert("レベルを選択してください（選択中が表示されます）");
-                    return;
-                  }
-                  setStep("topic");
-                }}
-                className={levelConfirmed ? btnPrimary : "btn-accent"}
-                style={levelConfirmed ? undefined : { opacity: 0.8 }}
-              >
-                次へ →
-              </button>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  // Topic selection (updated to use option buttons + selected summary)
-  if (step === "topic") {
-    return (
-      <>
-        <style>{`
-          .form-list{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
-          .option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}
-          @media(min-width:720px){.option-grid{grid-template-columns:repeat(4,1fr)}}
-          .option-btn{padding:12px;border-radius:10px;border:1px solid #e6e9ef;background:white;cursor:pointer;display:flex;align-items:center;gap:8px;justify-content:center}
-          .option-btn.active{background:linear-gradient(180deg,#1f4f91,#4a78bd);color:white;box-shadow:0 12px 30px rgba(31,79,145,0.14);transform:scale(1.02)}
-          .input-text{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
-          .actions-row{display:flex;gap:12px;justify-content:center;margin-top:8px}
-          .selected-line{margin-bottom:12px}
-        `}</style>
-
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
-          <div className={contentClass}>
-            <h1 style={{ fontSize: 22 }}>興味の設定</h1>
-            <p className="lead">興味のあるトピックを選択してください。（＊複数選択可能です）</p>
-
-            <div className="selected-line">
-              <span style={{ color: "#374151" }}>選択中： </span>
-              <span style={{ fontWeight: 800, color: "#3730a3" }}>
-                {selectedTopics.length > 0 ? selectedTopics.join('・') : '未選択'}
-              </span>
-            </div>
-
-            <div className="option-grid">
-              {TOPICS.map((topic) => (
-                <button
-                  key={topic}
-                  onClick={() => handleTopicToggle(topic)}
-                  className={`option-btn ${selectedTopics.includes(topic) ? 'active' : ''}`}
-                  aria-pressed={selectedTopics.includes(topic)}
-                >
-                  <span style={{ fontWeight: 600 }}>{topic}</span>
-                </button>
-              ))}
-            </div>
-
-            <div style={{ marginBottom: 10 }}>
-              <label style={{ display: "block", fontWeight: 700, marginBottom: 6 }}>その他のトピック (自由記入):</label>
-              <input
-                type="text"
-                value={customTopic}
-                onChange={(e) => setCustomTopic(e.target.value)}
-                placeholder="カスタムトピックを入力..."
-                className="input-text"
-              />
-            </div>
-
-            <div className="actions-row">
-              <button onClick={() => { setLevel(DEFAULT_LEVEL); setLevelConfirmed(true); setStep("level"); }} className="btn-accent">← 戻る</button>
-              <button onClick={() => {
-                if (selectedTopics.length === 0 && !customTopic) {
-                  alert("少なくとも1つのトピックを選択してください");
-                  return;
-                }
-                if (mode === "speaking") {
-                  setStep("confirm");
-                } else {
-                  setStep("test");
-                }
-              }} className={btnPrimary}>次へ →</button>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  const handleLegacySpeakingStart = async () => {
-    const speakingPrompt = `You are a friendly English speaking-practice partner. Start the conversation with a warm greeting and ask the user a simple, open-ended question to get them talking. For example, you could ask "How are you today?" or "What have you been up to?" based on their interests (${selectedTopics.join(", ")}). Keep the tone natural, friendly, and encouraging. The user is at level ${level}.`;
-
-    setChatLog([]);
-    setOpeningQuestion("");
-    setStep("chatting");
-
-    setTimeout(() => {
-      handleSpeakingPromptStart(speakingPrompt);
-    }, getMessageTiming().pauseMs);
-  };
-
-  if (mode === "speaking" && step === "confirm") {
-    return (
-      <>
-        <style>{`
-          .summary{max-width:720px;margin:0 auto}
-          .summary-box{background:#e8f0fb;padding:14px;border-radius:10px;margin-bottom:12px}
-          .summary-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-          .tag{background:#d6e4f7;padding:6px 10px;border-radius:999px;font-size:13px}
-          .controls{display:flex;gap:10px;justify-content:center}
-                    .modern-orange-btn {
-            background: linear-gradient(135deg, #1f4f91, #4a78bd);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s;
-            box-shadow: 0 4px 12px rgba(31, 79, 145, 0.28);
-          }
-
-          .modern-orange-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(31, 79, 145, 0.4);
-            opacity: 0.95;
-          }
-
-          .modern-orange-btn:active {
-            transform: translateY(0);
-            box-shadow: 0 3px 8px rgba(31, 79, 145, 0.32);
-            opacity: 0.9;
-          }
-        `}</style>
-
-        <main style={{ paddingTop: 92 }} className="app-container">
-          <div className="card summary">
-            <h1 style={{ fontSize: 22 }}>設定の確認</h1>
-
-            <div className="summary-box">
-              <div style={{ marginBottom: 8 }}>
-                <h3 style={{ margin: 0, fontWeight: 800 }}>英語レベル:</h3>
-                <p style={{ margin: "6px 0 0", fontSize: 18 }}>{level}</p>
-              </div>
-              <div style={{ marginTop: 10 }}>
-                <h3 style={{ margin: 0, fontWeight: 800 }}>トピック:</h3>
-                <div className="summary-tags">
-                  {topicsToPass.map((topic) => (
-                    <div key={topic} className="tag">{topic}</div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="controls">
-              <button onClick={() => setStep("topic")} className="btn-accent">← 編集</button>
-              <button onClick={handleLegacySpeakingStart} className="modern-orange-btn">会話を開始する</button>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  // Test selection (updated to option buttons + selected summary)
-  if (mode === "lesson" && step === "test") {
-    return (
-      <>
-        <style>{`
-          .list-col{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
-          .option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}
-          @media(min-width:720px){.option-grid{grid-template-columns:repeat(3,1fr)}}
-          .option-btn{padding:12px;border-radius:10px;border:1px solid #eef2f6;background:white;cursor:pointer;display:flex;align-items:center;justify-content:center}
-          .option-btn.active{background:linear-gradient(180deg,#1f4f91,#4a78bd);color:white;box-shadow:0 12px 30px rgba(31,79,145,0.14)}
-          .option-btn:disabled{opacity:.46;cursor:not-allowed}
-          .small-input{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
-          .controls{display:flex;gap:10px;justify-content:center}
-          .selected-line{margin-bottom:12px}
-        `}</style>
-
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
-          <div className={contentClass}>
-            <h1 style={{ fontSize: 22 }}>英語試験への対策の設定</h1>
-            <p className="lead">受験予定の英語試験を選択してください （＊複数選択可能です）</p>
-
-            <div className="selected-line">
-              <span style={{ color: "#374151" }}>選択中： </span>
-              <span style={{ fontWeight: 800, color: "#3730a3" }}>
-                {selectedTests.length > 0 ? selectedTests.join('・') : '未選択'}
-              </span>
-            </div>
-
-            <div className="option-grid">
-              {TESTS.map((test) => (
-                <button
-                  key={test}
-                  onClick={() => handleTestToggle(test)}
-                  className={`option-btn ${selectedTests.includes(test) ? 'active' : ''}`}
-                  aria-pressed={selectedTests.includes(test)}
-                >
-                  <span style={{ fontWeight: 600 }}>{test}</span>
-                </button>
-              ))}
-            </div>
-
-            {selectedTests.includes("Other") && (
-              <div style={{ marginBottom: 12 }}>
-                <label style={{ display: "block", fontWeight: 700, marginBottom: 6 }}>その他の試験名:</label>
-                <input
-                  type="text"
-                  value={customTest}
-                  onChange={(e) => setCustomTest(e.target.value)}
-                  placeholder="試験名を入力..."
-                  className="small-input"
-                />
-              </div>
-            )}
-
-            <div className="controls">
-              <button onClick={() => setStep("topic")} className="btn-accent">← 戻る</button>
-              <button onClick={() => {
-                if (selectedTests.length === 0) {
-                  alert("少なくとも1つの試験を選択してください");
-                  return;
-                }
-                setStep("skills");
-              }} className={btnPrimary}>次へ →</button>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  // Skills selection (updated to option buttons + summary)
-  if (mode === "lesson" && step === "skills") {
-    return (
-      <>
-        <style>{`
-          .list-col{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
-          .option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}
-          @media(min-width:720px){.option-grid{grid-template-columns:repeat(3,1fr)}}
-          .option-btn{padding:12px;border-radius:10px;border:1px solid #eef2f6;background:white;cursor:pointer;display:flex;align-items:center;justify-content:center}
-          .option-btn.active{background:linear-gradient(180deg,#1f4f91,#4a78bd);color:white;box-shadow:0 12px 30px rgba(31,79,145,0.14)}
-          .controls{display:flex;gap:10px;justify-content:center}
-          .selected-line{margin-bottom:12px}
-        `}</style>
-
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
-          <div className={contentClass}>
-            <h1 style={{ fontSize: 22 }}>伸ばしたいスキルを選択してください</h1>
-
-            <div className="selected-line">
-              <span style={{ color: "#374151" }}>選択中： </span>
-              <span style={{ fontWeight: 800, color: "#3730a3" }}>
-                {selectedSkills.length > 0 ? selectedSkills.join('・') : '未選択'}
-              </span>
-            </div>
-
-            <div className="option-grid">
-              {SKILLS.map((skill) => (
-                <button
-                  key={skill}
-                  onClick={() => handleSkillToggle(skill)}
-                  className={`option-btn ${selectedSkills.includes(skill) ? 'active' : ''}`}
-                  aria-pressed={selectedSkills.includes(skill)}
-                >
-                  <span style={{ fontWeight: 600 }}>{skill}</span>
-                </button>
-              ))}
-            </div>
-
-            <div className="controls">
-              <button onClick={() => setStep("test")} className="btn-accent">← 戻る</button>
-              <button onClick={() => {
-                if (selectedSkills.length === 0) {
-                  alert("少なくとも1つのスキルを選択してください");
-                  return;
-                }
-                setStep("duration");
-              }} className={btnPrimary}>次へ →</button>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  // Duration selection (kept similar, but updated selected display style)
-  if (mode === "lesson" && step === "duration") {
-    return (
-      <>
-        <style>{`
-          .dur-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
-          @media(min-width:720px){.dur-grid{grid-template-columns:repeat(6,1fr)}}
-          .dur-btn{padding:16px;border-radius:10px;border:1px solid #e6e9ef;background:#f3f4f6;cursor:pointer}
-          .dur-btn.active{background:#355c91;color:white;box-shadow:0 10px 28px rgba(53,92,145,0.16);transform:scale(1.03)}
-          .summary-box{background:#eff6ff;padding:12px;border-radius:10px;margin-bottom:12px;text-align:center}
-        `}</style>
-
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
-          <div className={contentClass}>
-            <h1 style={{ fontSize: 22 }}>レッスンの希望時間を選択してください</h1>
-            <p className="lead">レッスンに費やしたい時間を選んでください</p>
-
-            <div className="selected-display">
-              <span className="label">選択中： </span>
-          
-              <span className="items" style={{ fontWeight: 800, color: "#3730a3" }}>
-                {selectedDuration ? `${selectedDuration}分` : "未選択"}
-                <br/>
-              </span>
-            </div>
-
-            <div className="dur-grid">
-              {[5, 10, 15, 20, 25, 30].map((min) => (
-                <button
-                  key={min}
-                  onClick={() => setSelectedDuration(min.toString())}
-                  className={`dur-btn ${selectedDuration === min.toString() ? "active" : ""}`}
-                >
-                  <div style={{ fontSize: 18 }}>{min}</div>
-                  <div style={{ fontSize: 12, opacity: 0.8 }}>分</div>
-                </button>
-              ))}
-            </div>
-
-            <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
-              <button onClick={() => setStep("skills")} className="btn-accent">← 戻る</button>
-              <button onClick={() => setStep("components")} className={btnPrimary}>次へ →</button>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  // Components selection (updated to option buttons + selected summary)
-  if (mode === "lesson" && step === "components") {
-    return (
-      <>
-        <style>{`
-          .list-col{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
-          .option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}
-          @media(min-width:720px){.option-grid{grid-template-columns:repeat(3,1fr)}}
-          .option-btn{padding:12px;border-radius:10px;border:1px solid #eef2f6;background:white;cursor:pointer;display:flex;align-items:center;justify-content:center}
-          .option-btn.active{background:linear-gradient(180deg,#1f4f91,#4a78bd);color:white;box-shadow:0 12px 30px rgba(31,79,145,0.14)}
-          .controls{display:flex;gap:10px;justify-content:center}
-          .selected-line{margin-bottom:12px}
-        `}</style>
-
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
-          <div className={contentClass}>
-            <h1 style={{ fontSize: 22 }}>{practiceMode === "speaking" ? "スピーキング" : "ライティング"}で重点的に学びたい内容を選択してください</h1>
-
-            <div className="selected-line">
-              <span style={{ color: "#374151" }}>選択中： </span>
-              <span style={{ fontWeight: 800, color: "#3730a3" }}>
-                {selectedComponents.length > 0 ? selectedComponents.join('・') : '未選択'}
-              </span>
-            </div>
-
-            <div className="option-grid">
-              {getCurrentComponentOptions().map((component) => (
-                <button
-                  key={component}
-                  onClick={() => handleComponentToggle(component)}
-                  className={`option-btn ${selectedComponents.includes(component) ? 'active' : ''}`}
-                  aria-pressed={selectedComponents.includes(component)}
-                  disabled={isComponentDisabled(component)}
-                >
-                  <span style={{ fontWeight: 600 }}>{component}</span>
-                </button>
-              ))}
-            </div>
-
-            <div className="controls">
-              <button onClick={() => setStep("duration")} className="btn-accent">← 戻る</button>
-              <button onClick={() => {
-                if (selectedComponents.length === 0) {
-                  alert("少なくとも1つのコンポーネントを選択してください");
-                  return;
-                }
-                setStep("structure");
-              }} className={btnPrimary}>次へ →</button>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  // Vocab category section kept mostly the same (cat-btn already fits the style)
-  // Lesson mode - Lesson structure preview
-  if (mode === "lesson" && step === "structure") {
-    const structure = generateLessonStructure();
-    // Keep testsDisplay as an array so we can map it like topicsToPass/selectedSkills
-    const testsDisplay = selectedTests.length > 0 ? selectedTests.map(t => t === "Other" ? customTest : t) : [];
-
-    let vocabDisplay = "";
-    if (selectedComponents.includes(VOCAB_COMPONENT)) {
-      if (vocabLessonType === "range") {
-        vocabDisplay = `${CATEGORIES[vocabCategory as keyof typeof CATEGORIES]} - Lesson ${vocabRangeStart} ～ ${vocabRangeEnd}`;
-      } else {
-        vocabDisplay = `${CATEGORIES[vocabCategory as keyof typeof CATEGORIES]} - ${vocabIndividualLessons.length}レッスン`;
-      }
-    }
-
-    return (
-      <>
-        <style>{`
-          .summary-grid{display:block;gap:12px}
-          @media(min-width:920px){
-            .summary-grid{display:flex;align-items:stretch;gap:12px}
-            .summary-block, .green-block{flex:1;margin-bottom:0;display:flex;flex-direction:column}
-            .summary-block{margin-right:12px}
-          }
-          .summary-block{background:#eff6ff;padding:12px;border-radius:10px;margin-bottom:12px;display:flex;flex-direction:column}
-          .green-block{background:#ecfdf5;padding:12px;border-radius:10px;margin-bottom:12px;display:flex;flex-direction:column}
-          .struct-item{display:flex;justify-content:space-between;align-items:center;padding:10px;background:white;border-radius:8px;border:1px solid #eef2f6}
-          .controls{display:flex;gap:12px;justify-content:center}
-                    .modern-orange-btn {
-            background: linear-gradient(135deg, #1f4f91, #4a78bd);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s;
-            box-shadow: 0 4px 12px rgba(31, 79, 145, 0.28);
-          }
-
-          .modern-orange-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(31, 79, 145, 0.4);
-            opacity: 0.95;
-          }
-
-          .modern-orange-btn:active {
-            transform: translateY(0);
-            box-shadow: 0 3px 8px rgba(31, 79, 145, 0.32);
-            opacity: 0.9;
-          }
-        `}</style>
-
-        <main className={containerClass} style={{ paddingTop: '92px' }}>
-          <div className={contentClass}>
-            <h1 style={{ fontSize: 22 }}>レッスンの設定を確認してください</h1>
-
-            <div className="summary-grid">
-              <div className="summary-block">
-              <div style={{ marginBottom: 8 }}>
-                <h3 style={{ margin: 0, fontWeight: 800 }}>英語レベル:</h3>
-                <p style={{ margin: "6px 0 0", fontSize: 18 }}>{level}</p>
-              </div>
-
-              <div style={{ marginTop: 10 }}>
-                <h3 style={{ margin: 0, fontWeight: 800 }}>トピック:</h3>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
-                  {topicsToPass.map((topic) => (
-                    <div key={topic} style={{ background: "#d6e4f7", padding: "6px 10px", borderRadius: 999 }}>{topic}</div>
-                  ))}
-                </div>
-              </div>
-
-              <div style={{ marginTop: 10 }}>
-                <h3 style={{ margin: 0, fontWeight: 800 }}>試験:</h3>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
-                  {testsDisplay.map((test) => (
-                    <div key={test} style={{ background: "#d6e4f7", padding: "6px 10px", borderRadius: 999 }}>{test}</div>
-                  ))}
-                </div>
-                
-              </div>
-
-              <div style={{ marginTop: 10 }}>
-                <h3 style={{ margin: 0, fontWeight: 800 }}>スキル:</h3>
-                <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
-                  {selectedSkills.map((skill) => (
-                    <div key={skill} style={{ background: "#d6e4f7", padding: "6px 10px", borderRadius: 999 }}>{skill}</div>
-                  ))}
-                </div>
-              </div>
-              </div>
-
-              <div className="green-block">
-              <h2 style={{ margin: "0 0 8px 0" }}>レッスン時間と構成</h2>
-              <div style={{ marginBottom: 8 }}>
-                <h3 style={{ margin: 0, fontWeight: 800 }}>希望時間:</h3>
-                <p style={{ margin: "6px 0 0", fontSize: 18 }}>{selectedDuration}分</p>
-              </div>
-
-              <div>
-                <h3 style={{ margin: 0, fontWeight: 800 }}>内容構成:</h3>
-                <div style={{ marginTop: 8, display: "grid", gap: 8 }}>
-                  {structure.map((item, idx) => (
-                    <div key={idx} className="struct-item">
-                      <span style={{ fontWeight: 700 }}>{item.name}</span>
-                      <span style={{ background: "#bbf7d0", padding: "6px 10px", borderRadius: 999, fontWeight: 700 }}>{item.minutes}分</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              </div>
-            </div>
-
-            {vocabDisplay && (
-              <div style={{ background: "#e8f0fb", padding: 12, borderRadius: 10, marginBottom: 12 }}>
-                <p style={{ margin: 0 }}><strong>単語:</strong> {vocabDisplay}</p>
-              </div>
-            )}
-
-            <div className="controls">
-              <button onClick={() => setStep("components")} className="btn-accent">← 編集</button>
-
-              <button onClick={() => {
-                const firstComp = selectedComponents && selectedComponents.length > 0 ? selectedComponents[0] : null;
-                if (firstComp) {
-                  // If test practice conditions are met, jump to specific test page
-                  const testPath = getTestPath();
-                  if (testPath) {
-                    navigate(testPath);
-                  } else {
-                    setChatLog([]);
-                    setPendingImprovedVersion(null);
-                    setPendingFeedbackImprovedVersion(null);
-                    setPendingFeedbackSections([]);
-                    setFeedbackStepLoading(false);
-                    setImprovedVersionLoading(false);
-                    setLessonStartTime(Date.now());
-                    setTimeElapsed(0);
-                    setCurrentComponent(0);
-                    setStep("chatting");
-                    setTimeout(() => {
-                      (async () => {
-                        const prompt = await getComponentPrompt(firstComp);
-                        handleLessonStart(prompt);
-                      })();
-                    }, getMessageTiming().pauseMs);
-                  }
-                }
-              }} className="modern-orange-btn"  style={{ padding: "14px 22px", borderRadius: 14 }}>レッスンを開始する</button>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  // Chat interface (both modes)
-  if (step === "chatting") {
-    const formatTime = (seconds: number) => {
-      const mins = Math.floor(seconds / 60);
-      const secs = seconds % 60;
-      return `${mins}:${secs.toString().padStart(2, "0")}`;
+      if (finalText.trim()) setInput((prev) => [prev, finalText.trim()].filter(Boolean).join(" "));
     };
+    recognitionRef.current = recognition;
+    recognition.start();
+  }
 
-    const structure = generateLessonStructure();
-    const componentTiming = generateComponentTiming();
-    const totalLessonTime = parseInt(selectedDuration) * 60;
-
-    let currentComponentInfo = null;
-    if (mode === "lesson" && currentComponent < componentTiming.length) {
-      currentComponentInfo = componentTiming[currentComponent];
+  async function handlePdfFile(file: File | null) {
+    if (!file) return;
+    if (file.type === "text/plain" || file.name.endsWith(".txt")) {
+      updateSettings({ pdfContext: (await file.text()).slice(0, 8000) });
+      return;
     }
+    updateSettings({
+      pdfContext: `PDF selected: ${file.name}. If text extraction is unavailable in the browser, ask the learner to paste a relevant excerpt before generating detailed questions.`,
+    });
+  }
 
-    return (
-      <>
-        <style>{`
-          .chat-header{position:sticky;top:0;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);background:linear-gradient(90deg,#4f46e5 0%,#06b6d4 100%);backdrop-filter:blur(18px);border-bottom:1px solid rgba(158,180,210,0.16);padding:6px 0;z-index:100;box-shadow:0 18px 40px rgba(0,0,0,0.22);box-sizing:border-box}
-          .chat-header-content{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;max-width:1280px;min-height:52px;margin:0 auto;padding:0 18px;box-sizing:border-box}
-          .chat-header-left{display:flex;align-items:center;gap:12px;min-width:0}
-          .chat-pill{display:inline-flex;align-items:center;gap:10px;min-height:38px;padding:0 10px;border:1px solid rgba(158,180,210,0.16);border-radius:999px;font-size:14px;font-weight:800;text-decoration:none;cursor:pointer;box-shadow:0 12px 28px rgba(3,8,20,0.18);transition:transform 160ms ease,box-shadow 160ms ease,border-color 160ms ease}
-          .chat-pill:hover,.chat-pill:focus{transform:translateY(-2px);box-shadow:0 16px 32px rgba(3,8,20,0.24);border-color:rgba(158,180,210,0.28);outline:none}
-          .chat-project-pill{background:linear-gradient(135deg,rgba(255,255,255,0.96),rgba(235,242,251,0.92));color:#0b1730}
-          .chat-app-pill{background:rgba(17,31,61,0.72);color:#edf4ff}
-          .chat-pill-img{width:34px;height:34px;border-radius:10px;object-fit:cover;display:block;box-shadow:0 8px 18px rgba(3,8,20,0.18)}
-          .chat-header-right{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:nowrap;min-width:0;color:#edf4ff}
-          .level-pill{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:0 10px;border-radius:999px;background:rgba(17,31,61,0.72);border:1px solid rgba(158,180,210,0.16);color:#edf4ff;box-shadow:0 12px 28px rgba(3,8,20,0.18);white-space:nowrap}
-          .level-label{font-size:12px;line-height:1;font-weight:800;color:#dbeafe}
-          .level-value{font-size:18px;line-height:1;font-weight:900;color:#ffffff}
-          .time-pill{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 10px;border-radius:999px;background:rgba(17,31,61,0.72);border:1px solid rgba(158,180,210,0.16);font-size:13px;line-height:1;font-weight:800;color:#edf4ff;box-shadow:0 12px 28px rgba(3,8,20,0.18);white-space:nowrap}
-          .speakwise-shell .chat-main{width:100%;max-width:1180px;min-height:100vh;margin:0 auto;padding:12px 20px 32px}
-          .chat-shell{display:flex;flex-direction:column;gap:12px;width:100%;padding-top:14px}
-          .current-session{position:sticky;top:68px;z-index:50;background:linear-gradient(90deg,#edf4ff,#dfe9f8);padding:12px 18px;border-radius:14px;border:1px solid #cfe0f6;box-shadow:0 8px 24px rgba(31,79,145,0.10)}
-          .current-session-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:center}
-          .current-session p{margin:0;font-size:13px;color:#374151}
-          .current-session span{margin-left:6px;color:#526174}
-          .current-session-center{text-align:center}
-          .current-session-right{text-align:right}
-          .chat-window{background:#f6f9fd;border-radius:14px;padding:16px;min-height:calc(100vh - 166px);overflow:auto;border:1px solid #d9e4f2}
-          .chat-message-spacer{height:72px;flex:0 0 auto}
-          .chat-empty{min-height:160px}
-          .msg-user{background:#d6e4f7;color:#10213c;padding:12px 14px;border-radius:14px;margin-left:min(20%,220px);text-align:right;line-height:1.55}
-          .msg-llm{background:#e9eef5;color:#13233f;padding:12px 14px;border-radius:14px;margin-right:min(20%,220px);text-align:left;line-height:1.55}
-          .msg-question{background:#ffffff;padding:18px 20px;border-radius:14px;margin-right:min(12%,140px);text-align:left;border:2px solid #7da2d7;box-shadow:0 12px 28px rgba(31,79,145,0.14)}
-          .msg-question-label{font-size:13px;font-weight:800;color:#1f4f91;margin-bottom:8px}
-          .msg-question-text{white-space:pre-wrap;font-size:22px;line-height:1.45;font-weight:800;color:#10213c}
-          .msg-timer{background:#eef4ff;color:#13233f;padding:10px 12px;border-left:4px solid #4a78bd;border-radius:10px;margin-right:min(20%,220px);font-weight:700}
-          .feedback-card{margin-right:min(12%,140px);background:#ffffff;border:1px solid #d9e4f2;border-radius:14px;padding:16px;box-shadow:0 14px 32px rgba(31,79,145,0.10)}
-          .feedback-card-title{font-weight:800;color:#10213c;margin-bottom:14px;font-size:18px}
-          .feedback-section-message{margin-right:min(12%,140px)}
-          .feedback-section{margin:0 0 10px}
-          .feedback-section:last-child{margin-bottom:0}
-          .feedback-section-box{padding:12px 14px;border-radius:12px;border:1px solid transparent;border-left-width:5px}
-          .feedback-section-title{font-weight:800;font-size:16px;margin-bottom:8px}
-          .feedback-section-list{margin:0;padding-left:20px;font-size:15px;line-height:1.7}
-          .feedback-section-list li{margin-bottom:4px}
-          .feedback-section-list li:last-child{margin-bottom:0}
-          .feedback-section-general .feedback-section-box{background:#eef6ff;border-color:#bfdbfe;border-left-color:#3b82f6;color:#1e3a8a}
-          .feedback-section-general .feedback-section-title{color:#1d4ed8}
-          .feedback-section-grammar .feedback-section-box{background:#fff7ed;border-color:#fed7aa;border-left-color:#f97316;color:#7c2d12}
-          .feedback-section-grammar .feedback-section-title{color:#c2410c}
-          .feedback-section-vocabulary .feedback-section-box{background:#f5f3ff;border-color:#ddd6fe;border-left-color:#8b5cf6;color:#4c1d95}
-          .feedback-section-vocabulary .feedback-section-title{color:#6d28d9}
-          .feedback-section-fluency .feedback-section-box{background:#ecfeff;border-color:#a5f3fc;border-left-color:#0891b2;color:#164e63}
-          .feedback-section-fluency .feedback-section-title{color:#0e7490}
-          .feedback-section-pronunciation .feedback-section-box{background:#f0fdf4;border-color:#bbf7d0;border-left-color:#16a34a;color:#14532d}
-          .feedback-section-pronunciation .feedback-section-title{color:#15803d}
-          .feedback-section-suggestions .feedback-section-box{background:#fff1f2;border-color:#fecdd3;border-left-color:#e11d48;color:#881337}
-          .feedback-section-suggestions .feedback-section-title{color:#be123c}
-          .improved-answer-card{margin-right:min(12%,140px);background:#ffffff;border:1px solid #d9e4f2;border-radius:14px;padding:16px;box-shadow:0 14px 32px rgba(31,79,145,0.10)}
-          .improved-version{margin:0;padding:14px;background:#f0fdf4;border-radius:12px;border:1px solid #bbf7d0;border-left:5px solid #16a34a}
-          .improved-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
-          .improved-title{font-size:15px;font-weight:800;color:#166534}
-          .improved-legend{display:flex;gap:6px;flex-wrap:wrap}
-          .legend-chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;color:#334155}
-          .legend-dot{width:10px;height:10px;border-radius:999px;display:inline-block;border:1px solid rgba(15,23,42,0.12)}
-          .legend-dot.grammar{background:#fde68a}
-          .legend-dot.improvement{background:#bbf7d0}
-          .legend-dot.clarity{background:#bae6fd}
-          .improved-text{font-size:15px;line-height:1.85;color:#10213c;background:#ffffff;border-radius:8px;padding:12px;white-space:pre-wrap;border:1px solid #dcfce7}
-          .improved-answer-card .improved-text{font-size:18px;line-height:1.9}
-          .improved-segment{border-radius:5px;padding:2px 3px;margin:0 1px}
-          .improved-segment.unchanged{padding:0;margin:0;background:transparent}
-          .improved-segment.grammar{background:#fde68a;color:#713f12}
-          .improved-segment.improvement{background:#bbf7d0;color:#14532d}
-          .improved-segment.clarity{background:#bae6fd;color:#075985}
-          .improved-summary{margin-top:8px;font-size:12px;line-height:1.5;color:#475569}
-          .change-list{margin-top:10px;display:grid;gap:8px}
-          .change-row{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px;font-size:12px;color:#334155}
-          .change-row strong{color:#1e40af}
-          .voice-controls{margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-          .chat-actions{display:flex;gap:8px;justify-content:center;margin-top:10px}
-          .mood-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:16px 0 4px}
-          .mood-btn,.lesson-gradient-btn{min-height:42px;padding:0 16px;border:none;border-radius:999px;background:linear-gradient(90deg,#4f46e5,#06b6d4);color:#ffffff;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(79,70,229,0.18);transition:transform 0.16s ease,box-shadow 0.16s ease,opacity 0.16s ease}
-          .mood-btn:hover,.mood-btn:focus,.lesson-gradient-btn:hover,.lesson-gradient-btn:focus{transform:translateY(-1px);box-shadow:0 14px 32px rgba(79,70,229,0.24);outline:none}
-          .mood-btn:active,.lesson-gradient-btn:active{transform:translateY(0);opacity:0.92}
-          .lesson-gradient-btn:disabled{opacity:0.62;cursor:not-allowed;transform:none}
-          .answer-panel{display:flex;justify-content:flex-end;margin:14px 0 4px}
-          .answer-card{width:min(92%,860px);background:#ffffff;border:1px solid #cbd8ea;border-radius:16px 16px 4px 16px;padding:12px;box-shadow:0 10px 26px rgba(15,23,42,0.10)}
-          .answer-input{width:100%;min-height:132px;resize:vertical;border:1px solid #d9e4f2;border-radius:12px;padding:12px 14px;color:#10213c;font-size:16px;line-height:1.5;box-sizing:border-box}
-          .answer-input:focus{outline:2px solid rgba(79,70,229,0.22);border-color:#7da2d7}
-          .answer-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-top:10px}
-          .feedback-next-action,.improved-version-action{display:flex;justify-content:center;margin:16px 0 6px}
-          @media(max-width:768px){
-            .chat-header-content{gap:8px;min-height:52px;padding:0 14px}
-            .chat-header-left{gap:8px;flex:1}
-            .chat-pill{min-height:38px;padding:0 8px;font-size:13px}
-            .chat-project-pill span,.chat-app-pill span{display:none}
-            .chat-pill-img{width:32px;height:32px;border-radius:9px}
-            .chat-header-right{gap:6px;max-width:calc(100% - 58px);overflow-x:auto;justify-content:flex-end}
-            .level-pill{min-height:34px;padding:0 8px;gap:6px}
-            .level-label{display:none}
-            .level-value{font-size:17px}
-            .time-pill{font-size:12px;min-height:34px;padding:0 8px}
-            .speakwise-shell .chat-main{padding:10px 10px 24px}
-            .current-session{top:68px;padding:10px 12px}
-            .current-session-grid{grid-template-columns:1fr;gap:6px}
-            .current-session-center,.current-session-right{text-align:left}
-            .chat-shell{padding-top:12px}
-            .chat-window{min-height:calc(100vh - 176px);padding:10px;border-radius:12px}
-            .chat-message-spacer{height:68px}
-            .msg-user,.msg-llm,.msg-timer,.msg-question,.feedback-card,.feedback-section-message,.improved-answer-card{margin-left:0;margin-right:0}
-            .feedback-section-box{padding:11px 12px}
-            .feedback-section-title{font-size:15px}
-            .feedback-section-list{font-size:14px}
-            .improved-answer-card .improved-text{font-size:16px}
-            .msg-question-text{font-size:19px}
-            .msg-question{padding:16px}
-            .answer-card{width:100%}
-          }
-          @media(max-width:420px){
-            .chat-header-right{max-width:calc(100% - 54px)}
-            .speakwise-shell .chat-main{padding-top:10px}
-            .current-session{top:68px}
-            .chat-window{min-height:calc(100vh - 176px)}
-          }
-        `}</style>
+  const formatTime = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${minutes}:${secs.toString().padStart(2, "0")}`;
+  };
 
-        <main className={`${containerClass} chat-main`}>
-          {/* Fixed header outside the card */}
-          <div className="chat-header">
-            <div className="chat-header-content">
-              <div className="chat-header-left">
-                <a href="/" className="chat-pill chat-project-pill" aria-label="Project Fluence landing page">
-                  <img className="chat-pill-img" src="/images/logo.png" alt="Project Fluence" />
-                  <span>Project Fluence</span>
-                </a>
-              </div>
-              <div className="chat-header-right">
-                <span className="level-pill" aria-label={`英語レベル ${level}`}>
-                  <span className="level-label">レベル</span>
-                  <span className="level-value">{level}</span>
-                </span>
-                {lessonStartTime && (
-                  <>
-                    <span className="time-pill">
-                      経過: {formatTime(timeElapsed)}
-                    </span>
-                    <span className="time-pill">
-                      合計: {formatTime(totalLessonTime)}
-                    </span>
-                  </>
-                )}
-                <button
-                  type="button"
-                  className="chat-pill chat-app-pill"
-                  onClick={() => {
-                    setMode("choice");
-                    setStep("initial");
-                    setChatLog([]);
-                    setPendingImprovedVersion(null);
-                    setPendingFeedbackImprovedVersion(null);
-                    setPendingFeedbackSections([]);
-                    setFeedbackStepLoading(false);
-                    setImprovedVersionLoading(false);
-                    setOpeningQuestion("");
-                    setLessonStartTime(null);
-                    setTimeElapsed(0);
-                    setCurrentComponent(0);
-                    setDisplayedText({});
-                    setAwaitingMoodChoice(false);
-                    setAwaitingAnswer(false);
-                    setAnswerDraft("");
-                    setIsListening(false);
-                    setPendingStartupMode(null);
-                  }}
-                  title="クリックして最初に戻る"
-                  aria-label="SpeakWiseAI home"
-                >
-                  <img className="chat-pill-img" src="/images/speakwise.png" alt="" />
-                  <span>Home</span>
-                </button>
+  const memoryPreview = summarizeMemory(memory);
+
+  return (
+    <>
+      <style>{`
+        .sw-page{min-height:100vh;padding:28px 18px 44px;color:#142033}
+        .sw-shell{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px}
+        .sw-panel,.sw-chat{background:#fff;border:1px solid #d6e0ea;border-radius:8px;box-shadow:0 16px 38px rgba(22,38,60,.11)}
+        .sw-panel{padding:18px;align-self:start;position:sticky;top:18px}
+        .sw-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+        .sw-brand img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+        .sw-brand h1{font-size:22px;line-height:1;margin:0;color:#12213a}
+        .sw-brand p{margin:4px 0 0;color:#64748b;font-size:13px}
+        .sw-section{border-top:1px solid #e2e8f0;padding-top:14px;margin-top:14px}
+        .sw-label{display:block;font-size:12px;font-weight:800;color:#475569;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em}
+        .sw-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+        .sw-grid.levels{grid-template-columns:repeat(3,minmax(0,1fr))}
+        .sw-button,.sw-mode,.sw-icon,.sw-send{border:1px solid #cbd5e1;background:#f8fafc;color:#162033;border-radius:8px;min-height:38px;padding:8px 10px;font-weight:750;cursor:pointer}
+        .sw-button.active,.sw-mode.active{background:#195a8a;color:white;border-color:#195a8a}
+        .sw-mode{text-align:left;display:block;min-height:76px}
+        .sw-mode strong{display:block;font-size:14px}
+        .sw-mode span{display:block;margin-top:5px;font-size:12px;line-height:1.35;color:inherit;opacity:.82}
+        .sw-input,.sw-select,.sw-textarea{width:100%;border:1px solid #cbd5e1;border-radius:8px;padding:10px;background:#fff;color:#132033;font-size:14px}
+        .sw-textarea{min-height:94px;resize:vertical;line-height:1.45}
+        .sw-toggle{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px;color:#334155;font-size:14px}
+        .sw-toggle input{width:18px;height:18px}
+        .sw-start{width:100%;min-height:44px;border:0;border-radius:8px;background:#1b7f79;color:white;font-weight:850;font-size:15px;cursor:pointer;margin-top:14px}
+        .sw-start.secondary{background:#334155}
+        .sw-memory{white-space:pre-wrap;background:#f4f8fb;border:1px solid #d9e6ef;border-radius:8px;padding:10px;font-size:12px;line-height:1.5;color:#475569;max-height:180px;overflow:auto}
+        .sw-chat{min-height:calc(100vh - 56px);display:flex;flex-direction:column;overflow:hidden}
+        .sw-chat-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid #e2e8f0;background:#f8fbfd}
+        .sw-chat-title{display:flex;align-items:center;gap:10px;min-width:0}
+        .sw-chat-title img{width:36px;height:36px;border-radius:8px}
+        .sw-chat-title strong{display:block;color:#12213a}
+        .sw-chat-title span{display:block;color:#64748b;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
+        .sw-status{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+        .sw-chip{border:1px solid #cbd5e1;background:#fff;border-radius:999px;padding:6px 9px;font-size:12px;font-weight:800;color:#334155}
+        .sw-messages{flex:1;overflow:auto;padding:18px;background:#edf4f8}
+        .sw-msg{max-width:78%;margin:0 0 12px;padding:12px 14px;border-radius:8px;line-height:1.6;white-space:pre-wrap}
+        .sw-msg.user{margin-left:auto;background:#d8eafa;color:#12213a;text-align:left}
+        .sw-msg.assistant{margin-right:auto;background:#fff;color:#162033;border:1px solid #d7e3ed}
+        .sw-empty{height:100%;display:grid;place-items:center;text-align:center;color:#64748b;padding:28px}
+        .sw-mode-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+        .sw-summary{margin:12px 0 0;background:#fff;border:1px solid #b8d8d5;border-left:5px solid #1b7f79;border-radius:8px;padding:14px;color:#16302f}
+        .sw-summary h2{font-size:16px;margin:0 0 8px}
+        .sw-summary ul{margin:6px 0 0;padding-left:20px}
+        .sw-composer{border-top:1px solid #d6e0ea;background:#fff;padding:12px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:end}
+        .sw-composer textarea{min-height:48px;max-height:150px}
+        .sw-icon{width:44px;min-height:44px;padding:0;display:grid;place-items:center;font-size:18px}
+        .sw-icon.active{background:#1b7f79;color:#fff;border-color:#1b7f79}
+        .sw-send{min-height:44px;background:#195a8a;color:white;border-color:#195a8a;padding:0 18px}
+        .sw-send:disabled,.sw-start:disabled{opacity:.55;cursor:not-allowed}
+        @media(max-width:900px){.sw-shell{grid-template-columns:1fr}.sw-panel{position:static}.sw-chat{min-height:72vh}.sw-msg{max-width:92%}}
+        @media(max-width:560px){.sw-page{padding:12px 8px 24px}.sw-chat-head{align-items:flex-start;flex-direction:column}.sw-status{justify-content:flex-start}.sw-grid{grid-template-columns:1fr}.sw-grid.levels{grid-template-columns:repeat(3,1fr)}.sw-composer{grid-template-columns:1fr}.sw-icon,.sw-send{width:100%}}
+      `}</style>
+
+      <main className="sw-page">
+        <div className="sw-shell">
+          <aside className="sw-panel">
+            <div className="sw-brand">
+              <img src="/images/speakwise.png" alt="" />
+              <div>
+                <h1>SpeakWise AI</h1>
+                <p>Longitudinal English learning agent</p>
               </div>
             </div>
-          </div>
 
-          <div className="chat-shell">
-            {/* Removed: Eiken panel */}
+            <div className="sw-section">
+              <span className="sw-label">Level</span>
+              <div className="sw-grid levels">
+                {LEVELS.map((level) => (
+                  <button key={level} className={`sw-button ${settings.level === level ? "active" : ""}`} onClick={() => updateSettings({ level })}>
+                    {level}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-            <div className="chat-window" role="log" aria-live="polite">
+            <div className="sw-section">
+              <span className="sw-label">Duration</span>
+              <select className="sw-select" value={settings.durationMinutes} onChange={(event) => updateSettings({ durationMinutes: Number(event.target.value) })}>
+                {[5, 10, 15, 20, 25, 30, 45, 60].map((minutes) => (
+                  <option key={minutes} value={minutes}>{minutes} minutes</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="sw-section">
+              <span className="sw-label">Topics</span>
+              <div className="sw-grid">
+                {TOPICS.map((topic) => (
+                  <button key={topic} className={`sw-button ${settings.selectedTopics.includes(topic) ? "active" : ""}`} onClick={() => toggleTopic(topic)}>
+                    {topic}
+                  </button>
+                ))}
+              </div>
+              <input className="sw-input" style={{ marginTop: 8 }} value={settings.customTopic} onChange={(event) => updateSettings({ customTopic: event.target.value })} placeholder="Custom topic" />
+            </div>
+
+            <div className="sw-section">
+              <span className="sw-label">Lesson Mode</span>
+              <div style={{ display: "grid", gap: 8 }}>
+                {LESSON_MODES.map((mode) => (
+                  <button key={mode.id} className={`sw-mode ${settings.lessonMode === mode.id ? "active" : ""}`} onClick={() => updateSettings({ lessonMode: mode.id })}>
+                    <strong>{mode.label}</strong>
+                    <span>{mode.short}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {settings.lessonMode === "pdf_reading" && (
+              <div className="sw-section">
+                <span className="sw-label">PDF or Text</span>
+                <input className="sw-input" type="file" accept=".pdf,.txt,text/plain,application/pdf" onChange={(event) => void handlePdfFile(event.target.files?.[0] ?? null)} />
+                <textarea className="sw-textarea" style={{ marginTop: 8 }} value={settings.pdfContext} onChange={(event) => updateSettings({ pdfContext: event.target.value.slice(0, 8000) })} placeholder="Paste a PDF excerpt here for more precise questions." />
+              </div>
+            )}
+
+            <div className="sw-section">
+              <span className="sw-label">Voice</span>
+              <label className="sw-toggle">
+                <span>AI voice responses</span>
+                <input type="checkbox" checked={settings.voiceEnabled} onChange={(event) => updateSettings({ voiceEnabled: event.target.checked })} />
+              </label>
+              <select className="sw-select" style={{ marginTop: 8 }} value={settings.selectedVoice} onChange={(event) => updateSettings({ selectedVoice: event.target.value })}>
+                {VOICES.map((voice) => <option key={voice} value={voice}>{voice}</option>)}
+              </select>
+              <label className="sw-toggle">
+                <span>Start selected mode directly</span>
+                <input type="checkbox" checked={settings.directStart} onChange={(event) => updateSettings({ directStart: event.target.checked })} />
+              </label>
+            </div>
+
+            <button className="sw-start" disabled={isSending || isEnding} onClick={() => void startLesson()}>
+              {settings.lessonMode ? "Start Lesson" : "Ask Me What To Practice"}
+            </button>
+            {lessonActive && (
+              <button className="sw-start secondary" disabled={isEnding} onClick={() => void endLesson()}>
+                End and Save Summary
+              </button>
+            )}
+
+            <div className="sw-section">
+              <span className="sw-label">Learner Memory</span>
+              <div className="sw-memory">{memoryPreview}</div>
+            </div>
+          </aside>
+
+          <section className="sw-chat">
+            <header className="sw-chat-head">
+              <div className="sw-chat-title">
+                <img src="/images/speakwise.png" alt="" />
+                <div>
+                  <strong>{selectedMode?.label || "Adaptive lesson"}</strong>
+                  <span>{lessonActive ? "SpeakWise is adapting to your stored progress in real time." : "Choose a mode or let SpeakWise ask what you want to practice."}</span>
+                </div>
+              </div>
+              <div className="sw-status">
+                <span className="sw-chip">{settings.level}</span>
+                <span className="sw-chip">{settings.durationMinutes} min</span>
+                {lessonStartedAt && <span className="sw-chip">{formatTime(remainingSeconds)} left</span>}
+                <span className="sw-chip">{settings.voiceEnabled ? "Voice on" : "Voice off"}</span>
+              </div>
+            </header>
+
+            <div className="sw-messages" role="log" aria-live="polite">
               {chatLog.length === 0 ? (
-                <div className="chat-empty" aria-hidden="true" />
+                <div className="sw-empty">
+                  <div>
+                    <strong>How are you today?</strong>
+                    <p>Start a lesson and SpeakWise will use your history, weak points, VocabStream progress, and VidMatch topics where available.</p>
+                  </div>
+                </div>
               ) : (
                 <>
-                  <div className="chat-message-spacer" aria-hidden="true" />
                   {chatLog.map((entry, index) => (
-                    <div key={index} style={{ marginBottom: 10 }}>
-                      {entry.sender === "user" ? (
-                        <div className="msg-user">{entry.text}</div>
-                      ) : entry.text.startsWith("⏱️") ? (
-                        <div className="msg-timer">{entry.text}</div>
-                      ) : entry.kind === "question" ? (
-                        <div className="msg-question">
-                          <div className="msg-question-label">練習問題</div>
-                          <div className="msg-question-text">{displayedText[index] ?? ""}</div>
-                        </div>
-                      ) : entry.kind === "positiveComment" || entry.kind === "feedbackIntro" || entry.kind === "feedbackSectionIntro" || entry.kind === "improvedIntro" ? (
-                        <div className="msg-llm">
-                          <div style={{ whiteSpace: "pre-wrap" }}>{displayedText[index] ?? ""}</div>
-                        </div>
-                      ) : entry.kind === "feedbackSection" ? (
-                        <div className="feedback-section-message">
-                          {entry.feedbackSection && renderFeedbackSection(
-                            entry.feedbackSection.section,
-                            entry.feedbackSection.label,
-                            entry.feedbackSection.items
-                          )}
-                        </div>
-                      ) : entry.kind === "feedback" ? (
-                        <div className="feedback-card">
-                          <div className="feedback-card-title">フィードバック</div>
-                          {renderFeedbackSection("general", "総合評価", entry.feedback?.overall)}
-                          {renderFeedbackSection("grammar", "文法", entry.feedback?.grammar)}
-                          {renderFeedbackSection("vocabulary", "単語", entry.feedback?.vocabulary)}
-                          {renderFeedbackSection("fluency", "流暢さ", entry.feedback?.fluency)}
-                          {renderFeedbackSection("pronunciation", "発音", entry.feedback?.pronunciation)}
-                          {renderFeedbackSection("suggestions", "改善提案", entry.feedback?.suggestions)}
-                        </div>
-                      ) : entry.kind === "improvedAnswer" ? (
-                        <div className="improved-answer-card">
-                          <div className="improved-version">
-                            <div className="improved-header">
-                              <div className="improved-title">改善版</div>
-                              <div className="improved-legend" aria-label="改善箇所の凡例">
-                                <span className="legend-chip"><span className="legend-dot grammar" />文法修正</span>
-                                <span className="legend-chip"><span className="legend-dot improvement" />表現改善</span>
-                                <span className="legend-chip"><span className="legend-dot clarity" />明確さ</span>
-                              </div>
-                            </div>
-                            <div className="improved-text">
-                              {entry.feedback?.improvedVersion?.segments?.map((segment, i) => (
-                                <span
-                                  key={`${segment.text}-${i}`}
-                                  className={getImprovementClass(segment.type)}
-                                  title={segment.note || IMPROVEMENT_LABELS[segment.type || "unchanged"]}
-                                >
-                                  {segment.text}
-                                </span>
-                              ))}
-                            </div>
-                            {entry.feedback?.improvedVersion?.summary && (
-                              <div className="improved-summary">{entry.feedback.improvedVersion.summary}</div>
-                            )}
-                            {entry.feedback?.improvedVersion?.changes && entry.feedback.improvedVersion.changes.length > 0 && (
-                              <div className="change-list">
-                                {entry.feedback.improvedVersion.changes.slice(0, 3).map((change, i) => (
-                                  <div key={i} className="change-row">
-                                    <strong>{IMPROVEMENT_LABELS[change.type || "improvement"]}: </strong>
-                                    {change.original && <span>{change.original} → </span>}
-                                    {change.revised && <span>{change.revised}</span>}
-                                    {change.reason && <span>（{change.reason}）</span>}
-                                  </div>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="msg-llm">
-                          <div style={{ whiteSpace: "pre-wrap" }}>{displayedText[index] ?? ""}</div>
-                          {!entry.kind && !entry.text.includes("Let's practice") && !entry.text.includes("練習をしましょう") && !entry.text.includes("Hello!") && !entry.text.includes("Would you like") && (
-                            <div className="voice-controls">
-                              <button onClick={() => fetchAndPlayVoice(entry.text, index)} style={{ background: "#2563eb", color: "white", border: "none", padding: "6px 10px", borderRadius: 8, cursor: "pointer" }}>
-                                {loadingVoiceIndex === index ? "読み込み中..." : "🔊 再生"}
-                              </button>
-                              <div style={{ fontSize: 12, color: "#6b7280" }}>声を選択:</div>
-                              <select value={selectedVoice} onChange={(e) => setSelectedVoice(e.target.value)} style={{ padding: "6px 8px", borderRadius: 6 }}>
-                                <option value="alloy">音声１</option>
-                                <option value="verse">音声２</option>
-                              </select>
-                            </div>
-                          )}
+                    <div key={`${entry.sender}-${index}`} className={`sw-msg ${entry.sender}`}>
+                      {entry.text}
+                      {entry.sender === "assistant" && (
+                        <div style={{ marginTop: 8 }}>
+                          <button className="sw-button" onClick={() => void playVoice(entry.text)}>Play voice</button>
                         </div>
                       )}
                     </div>
                   ))}
 
-                  {awaitingMoodChoice && (
-                    <div className="mood-actions" aria-label="今日の気分を選択">
-                      {MOOD_OPTIONS.map((option) => (
-                        <button
-                          key={option.id}
-                          type="button"
-                          className="mood-btn"
-                          onClick={() => handleMoodChoice(option.id)}
-                        >
-                          {option.label}
+                  {pendingModeChoice && (
+                    <div className="sw-mode-actions">
+                      {LESSON_MODES.map((mode) => (
+                        <button key={mode.id} className="sw-button" onClick={() => void startLesson(mode.id)}>
+                          {mode.label}
                         </button>
                       ))}
                     </div>
                   )}
 
-                  {awaitingAnswer && (
-                    <div className="answer-panel">
-                      <div className="answer-card">
-                        <textarea
-                          className="answer-input"
-                          value={answerDraft}
-                          onChange={(e) => setAnswerDraft(e.target.value)}
-                          placeholder={practiceMode === "speaking" ? "Your spoken answer will appear here..." : "Write your answer here..."}
-                          aria-label="Your answer"
-                        />
-                        <div className="answer-actions">
-                          {practiceMode === "speaking" && (
-                            <>
-                              {!isListening ? (
-                                <button
-                                  type="button"
-                                  className="lesson-gradient-btn"
-                                  onClick={handleStartSpeaking}
-                                >
-                                  Start speaking
-                                </button>
-                              ) : (
-                                <button
-                                  type="button"
-                                  className="lesson-gradient-btn"
-                                  onClick={handleStopSpeaking}
-                                  style={{ backgroundColor: "#ff6b6b" }}
-                                >
-                                  Stop speaking
-                                </button>
-                              )}
-                            </>
-                          )}
-                          <button
-                            type="button"
-                            className="lesson-gradient-btn"
-                            onClick={handleAnswerSubmit}
-                          >
-                            Send answer
-                          </button>
+                  {summary && (
+                    <div className="sw-summary">
+                      <h2>{summary.title || "Lesson Summary"}</h2>
+                      {[
+                        { label: "Covered", items: summary.covered },
+                        { label: "You did well", items: summary.strengths },
+                        { label: "Weaknesses", items: summary.weaknesses },
+                        { label: "Next steps", items: summary.recommendations },
+                        { label: "Useful vocabulary", items: summary.usefulVocabulary },
+                      ].map(({ label, items }) => Array.isArray(items) && items.length > 0 && (
+                        <div key={label}>
+                          <strong>{label}</strong>
+                          <ul>{items.map((item) => <li key={item}>{item}</li>)}</ul>
                         </div>
-                      </div>
+                      ))}
                     </div>
                   )}
-
-                  {pendingFeedbackSections.length > 0 && (
-                    <div className="feedback-next-action">
-                      <button
-                        type="button"
-                        className="lesson-gradient-btn"
-                        onClick={handleNextFeedback}
-                        disabled={feedbackStepLoading}
-                      >
-                        {feedbackStepLoading ? "Loading feedback..." : "Next feedback"}
-                      </button>
-                    </div>
-                  )}
-
-                  {pendingImprovedVersion && (
-                    <div className="improved-version-action">
-                      <button
-                        type="button"
-                        className="lesson-gradient-btn"
-                        onClick={handleSeeImprovedVersion}
-                        disabled={improvedVersionLoading}
-                      >
-                        {improvedVersionLoading ? "Loading improved version..." : "See improved version"}
-                      </button>
-                    </div>
-                  )}
-                  
-                  {/* Show choice buttons when awaiting question choice */}
-                  {awaitingQuestionChoice && (
-                    <div style={{ marginTop: 16, display: "flex", gap: 12, justifyContent: "center" }}>
-                      <button
-                        className="lesson-gradient-btn"
-                        onClick={() => {
-                          handleUsePracticeQuestion();
-                        }}
-                        style={{
-                          padding: "12px 20px",
-                          borderRadius: "10px",
-                          color: "white",
-                          border: "none",
-                          fontWeight: "bold",
-                          fontSize: "15px",
-                          cursor: "pointer",
-                        }}
-                        onMouseDown={(e) => (e.currentTarget.style.transform = "scale(0.96)")}
-                        onMouseUp={(e) => (e.currentTarget.style.transform = "scale(1)")}
-                      >
-                        この練習問題を使う
-                      </button>
-                      <button
-                        onClick={() => {
-                          setAwaitingQuestionChoice(false);
-                          // Generate a new question
-                          handleGenerateNewQuestion();
-                        }}
-                        style={{
-                          padding: "12px 20px",
-                          borderRadius: "10px",
-                          background: "white",
-                          color: "#1f4f91",
-                          border: "2px solid #1f4f91",
-                          fontWeight: "bold",
-                          fontSize: "15px",
-                          cursor: "pointer",
-                          transition: "transform 0.15s ease, box-shadow 0.15s ease",
-                        }}
-                        onMouseDown={(e) => (e.currentTarget.style.transform = "scale(0.96)")}
-                        onMouseUp={(e) => (e.currentTarget.style.transform = "scale(1)")}
-                      >
-                        別の問題を生成する
-                      </button>
-                    </div>
-                  )}
+                  <div ref={chatEndRef} />
                 </>
               )}
+              {isSending && <div className="sw-msg assistant">Thinking...</div>}
+              {isEnding && <div className="sw-msg assistant">Preparing your lesson summary...</div>}
             </div>
 
-          </div>
-        </main>
-      </>
-    );
-  }
-
-  return null;
+            <div className="sw-composer">
+              <button className={`sw-icon ${isListening ? "active" : ""}`} onClick={toggleListening} title="Voice input" aria-label="Voice input">
+                {isListening ? "Stop" : "Mic"}
+              </button>
+              <textarea
+                className="sw-textarea"
+                value={input}
+                onChange={(event) => setInput(event.target.value)}
+                placeholder="Type your answer or question..."
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" && !event.shiftKey) {
+                    event.preventDefault();
+                    void sendMessage();
+                  }
+                }}
+              />
+              <button className="sw-send" disabled={!input.trim() || isSending || isEnding} onClick={() => void sendMessage()}>
+                Send
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+    </>
+  );
 }
