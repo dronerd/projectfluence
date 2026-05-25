@@ -140,14 +140,17 @@ export default function SpeakWiseApp({ pathname }: Props) {
         }
 
         .speakwise-shell {
-          min-height: 100vh;
+          min-height: 100dvh;
           background: #e5e7eb;
           color: var(--sw-text);
         }
 
         .speakwise-content {
-          min-height: 100vh;
-          padding: 96px 16px 96px;
+          height: 100dvh;
+          min-height: 0;
+          padding: 76px 16px 18px;
+          box-sizing: border-box;
+          overflow: hidden;
         }
 
         .speakwise-header {
@@ -366,6 +369,8 @@ export default function SpeakWiseApp({ pathname }: Props) {
 
           .speakwise-content {
             padding-inline: 12px;
+            padding-top: 72px;
+            padding-bottom: 12px;
           }
         }
       `}</style>

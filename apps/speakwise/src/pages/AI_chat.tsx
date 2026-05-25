@@ -193,6 +193,7 @@ export default function AIChat() {
   const [isEnding, setIsEnding] = useState(false);
   const [summary, setSummary] = useState<LessonSummary | null>(null);
   const [pendingModeChoice, setPendingModeChoice] = useState(false);
+  const [optionsOpen, setOptionsOpen] = useState(true);
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [isListening, setIsListening] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -207,6 +208,7 @@ export default function AIChat() {
   const selectedMode = LESSON_MODES.find((mode) => mode.id === settings.lessonMode);
   const totalSeconds = settings.durationMinutes * 60;
   const remainingSeconds = Math.max(0, totalSeconds - elapsedSeconds);
+  const lessonViewStarted = Boolean(lessonStartedAt || pendingModeChoice || chatLog.length > 0 || summary);
 
   useEffect(() => {
     document.body.style.backgroundColor = "#eef4f8";
@@ -345,6 +347,7 @@ export default function AIChat() {
     const nextMode = modeOverride || settings.lessonMode;
     if (!nextMode) {
       setPendingModeChoice(true);
+      setOptionsOpen(false);
       setChatLog([{ sender: "assistant", text: "今日はどんな英語を練習したいですか？下のボタンから選んでください。" }]);
       return;
     }
@@ -353,6 +356,7 @@ export default function AIChat() {
     setSummary(null);
     setPendingModeChoice(false);
     setLessonActive(true);
+    setOptionsOpen(false);
     setLessonStartedAt(Date.now());
     setElapsedSeconds(0);
     setChatLog([]);
@@ -556,10 +560,12 @@ export default function AIChat() {
   return (
     <>
       <style>{`
-        .sw-page{min-height:100vh;padding:28px 18px 44px;color:#142033}
-        .sw-shell{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px}
+        .sw-page{height:100%;min-height:0;padding:0;color:#142033}
+        .sw-shell{height:100%;min-height:0;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px}
         .sw-panel,.sw-chat{background:#fff;border:1px solid #d6e0ea;border-radius:8px;box-shadow:0 16px 38px rgba(22,38,60,.11)}
-        .sw-panel{padding:18px;align-self:start;position:sticky;top:18px}
+        .sw-panel{padding:18px;align-self:start;position:sticky;top:0;max-height:100%;overflow:auto}
+        .sw-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+        .sw-panel-close{display:none;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid #cbd5e1;border-radius:8px;background:#f8fafc;color:#162033;font-size:20px;line-height:1;cursor:pointer;flex-shrink:0}
         .sw-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
         .sw-brand img{width:44px;height:44px;border-radius:8px;object-fit:cover}
         .sw-brand h1{font-size:22px;line-height:1;margin:0;color:#12213a}
@@ -580,15 +586,16 @@ export default function AIChat() {
         .sw-start{width:100%;min-height:44px;border:0;border-radius:8px;background:#1b7f79;color:white;font-weight:850;font-size:15px;cursor:pointer;margin-top:14px}
         .sw-start.secondary{background:#334155}
         .sw-memory{white-space:pre-wrap;background:#f4f8fb;border:1px solid #d9e6ef;border-radius:8px;padding:10px;font-size:12px;line-height:1.5;color:#475569;max-height:180px;overflow:auto}
-        .sw-chat{min-height:calc(100vh - 56px);display:flex;flex-direction:column;overflow:hidden}
+        .sw-chat{height:100%;min-height:0;display:flex;flex-direction:column;overflow:hidden}
         .sw-chat-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid #e2e8f0;background:#f8fbfd}
+        .sw-chat-menu{display:none;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #cbd5e1;border-radius:8px;background:#fff;color:#162033;font-size:22px;line-height:1;cursor:pointer;flex-shrink:0}
         .sw-chat-title{display:flex;align-items:center;gap:10px;min-width:0}
         .sw-chat-title img{width:36px;height:36px;border-radius:8px}
         .sw-chat-title strong{display:block;color:#12213a}
         .sw-chat-title span{display:block;color:#64748b;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
         .sw-status{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
         .sw-chip{border:1px solid #cbd5e1;background:#fff;border-radius:999px;padding:6px 9px;font-size:12px;font-weight:800;color:#334155}
-        .sw-messages{flex:1;overflow:auto;padding:18px;background:#edf4f8}
+        .sw-messages{flex:1;min-height:0;overflow:auto;padding:18px;background:#edf4f8;overscroll-behavior:contain}
         .sw-msg{max-width:78%;margin:0 0 12px;padding:12px 14px;border-radius:8px;line-height:1.6;white-space:pre-wrap}
         .sw-msg.user{margin-left:auto;background:#d8eafa;color:#12213a;text-align:left}
         .sw-msg.assistant{margin-right:auto;background:#fff;color:#162033;border:1px solid #d7e3ed}
@@ -598,24 +605,31 @@ export default function AIChat() {
         .sw-summary h2{font-size:16px;margin:0 0 8px}
         .sw-summary ul{margin:6px 0 0;padding-left:20px}
         .sw-composer{border-top:1px solid #d6e0ea;background:#fff;padding:12px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:end}
-        .sw-composer textarea{min-height:48px;max-height:150px}
+        .sw-composer textarea{height:48px;min-height:48px;max-height:96px;resize:none;overflow:auto}
         .sw-icon{width:44px;min-height:44px;padding:0;display:grid;place-items:center;font-size:18px}
         .sw-icon.active{background:#1b7f79;color:#fff;border-color:#1b7f79}
         .sw-send{min-height:44px;background:#195a8a;color:white;border-color:#195a8a;padding:0 18px}
         .sw-send:disabled,.sw-start:disabled{opacity:.55;cursor:not-allowed}
-        @media(max-width:900px){.sw-shell{grid-template-columns:1fr}.sw-panel{position:static}.sw-chat{min-height:72vh}.sw-msg{max-width:92%}}
-        @media(max-width:560px){.sw-page{padding:12px 8px 24px}.sw-chat-head{align-items:flex-start;flex-direction:column}.sw-status{justify-content:flex-start}.sw-grid{grid-template-columns:1fr}.sw-grid.levels{grid-template-columns:repeat(3,1fr)}.sw-composer{grid-template-columns:1fr}.sw-icon,.sw-send{width:100%}}
+        @media(max-width:900px){.sw-shell{grid-template-columns:1fr}.sw-shell.pre-lesson .sw-chat{display:none}.sw-shell.lesson-started.options-closed .sw-panel{display:none}.sw-panel{position:static;max-height:100%;}.sw-panel-close,.sw-chat-menu{display:inline-flex}.sw-msg{max-width:92%}}
+        @media(max-width:560px){.sw-chat-head{align-items:stretch;flex-direction:column}.sw-chat-title-row{align-items:flex-start}.sw-status{justify-content:flex-start}.sw-grid{grid-template-columns:1fr}.sw-grid.levels{grid-template-columns:repeat(3,1fr)}.sw-composer{grid-template-columns:auto 1fr auto;gap:6px;padding:8px}.sw-icon{width:40px;min-height:40px;font-size:12px}.sw-send{min-height:40px;padding:0 12px}.sw-composer textarea{height:42px;min-height:42px;font-size:16px}.sw-msg{max-width:96%}}
       `}</style>
 
       <main className="sw-page">
-        <div className="sw-shell">
+        <div className={`sw-shell ${lessonViewStarted ? "lesson-started" : "pre-lesson"} ${optionsOpen ? "options-open" : "options-closed"}`}>
           <aside className="sw-panel">
-            <div className="sw-brand">
-              <img src="/images/speakwise.png" alt="" />
-              <div>
-                <h1>SpeakWise AI</h1>
-                <p>学習履歴をもとに成長を支える英語AI</p>
+            <div className="sw-panel-head">
+              <div className="sw-brand">
+                <img src="/images/speakwise.png" alt="" />
+                <div>
+                  <h1>SpeakWise AI</h1>
+                  <p>学習履歴をもとに成長を支える英語AI</p>
+                </div>
               </div>
+              {lessonViewStarted && (
+                <button type="button" className="sw-panel-close" onClick={() => setOptionsOpen(false)} aria-label="設定を閉じる">
+                  ×
+                </button>
+              )}
             </div>
 
             <div className="sw-section">
@@ -702,7 +716,10 @@ export default function AIChat() {
 
           <section className="sw-chat">
             <header className="sw-chat-head">
-              <div className="sw-chat-title">
+              <div className="sw-chat-title sw-chat-title-row">
+                <button type="button" className="sw-chat-menu" onClick={() => setOptionsOpen(true)} aria-label="設定を開く" aria-expanded={optionsOpen}>
+                  ☰
+                </button>
                 <img src="/images/speakwise.png" alt="" />
                 <div>
                   <strong>{selectedMode?.labelJa || "あなたに合わせた英語レッスン"}</strong>

@@ -50,6 +50,7 @@ export type RecommendVideosInput = {
   accent?: string;
   transcriptAvailable?: boolean;
   limit?: number;
+  similarToVideoId?: string;
 };
 
 type YoutubeSearchResponse = {
@@ -180,6 +181,10 @@ export async function saveVideosToSupabase(videos: VidMatchVideo[]): Promise<Vid
 }
 
 export async function getRecommendedVideos(input: RecommendVideosInput): Promise<VidMatchVideo[]> {
+  if (input.similarToVideoId) {
+    return getSimilarVideos(input.similarToVideoId, input.limit);
+  }
+
   const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
   const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
   const limit = Math.min(Math.max(input.limit ?? 6, 1), 12);
@@ -219,6 +224,67 @@ export async function getRecommendedVideos(input: RecommendVideosInput): Promise
     .filter((video) => matchesArrayFilter(video.topics, input.topics))
     .filter((video) => matchesAccent(video.accent, input.accent))
     .slice(0, limit);
+}
+
+async function getSimilarVideos(videoId: string, limitInput?: number): Promise<VidMatchVideo[]> {
+  const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
+  const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
+  const limit = Math.min(Math.max(limitInput ?? 6, 1), 12);
+  const select =
+    "video_id,title,channel_name,youtube_url,thumbnail_url,duration,level,skills,topics,accent,transcript_available,description,tags,quality_score,source,source_video_id,speaker_name,source_url,created_at";
+
+  const sourceParams = new URLSearchParams({
+    select,
+    video_id: `eq.${videoId}`,
+    limit: "1",
+  });
+
+  const sourceResponse = await fetch(`${supabaseUrl}/rest/v1/vidmatch_videos?${sourceParams}`, {
+    headers: {
+      apikey: serviceRoleKey,
+      Authorization: `Bearer ${serviceRoleKey}`,
+      "Content-Type": "application/json",
+    },
+    cache: "no-store",
+  });
+
+  if (!sourceResponse.ok) {
+    const error = (await sourceResponse.json().catch(() => null)) as SupabaseError | null;
+    throw new Error(error?.message ?? `Supabase source video query failed with status ${sourceResponse.status}`);
+  }
+
+  const sourceVideos = (await sourceResponse.json()) as VidMatchVideo[];
+  const sourceVideo = sourceVideos[0];
+  if (!sourceVideo) return [];
+
+  const candidateParams = new URLSearchParams({
+    select,
+    order: "quality_score.desc,created_at.desc",
+    limit: "200",
+  });
+
+  const candidateResponse = await fetch(`${supabaseUrl}/rest/v1/vidmatch_videos?${candidateParams}`, {
+    headers: {
+      apikey: serviceRoleKey,
+      Authorization: `Bearer ${serviceRoleKey}`,
+      "Content-Type": "application/json",
+    },
+    cache: "no-store",
+  });
+
+  if (!candidateResponse.ok) {
+    const error = (await candidateResponse.json().catch(() => null)) as SupabaseError | null;
+    throw new Error(error?.message ?? `Supabase similar video query failed with status ${candidateResponse.status}`);
+  }
+
+  const candidates = (await candidateResponse.json()) as VidMatchVideo[];
+  return candidates
+    .filter((video) => video.video_id !== sourceVideo.video_id)
+    .map((video) => ({ video, similarityScore: scoreSimilarity(sourceVideo, video) }))
+    .filter((item) => item.similarityScore > 0)
+    .sort((a, b) => b.similarityScore - a.similarityScore || b.video.quality_score - a.video.quality_score)
+    .slice(0, limit)
+    .map((item) => item.video);
 }
 
 function normalizeYoutubeVideo(
@@ -338,6 +404,29 @@ function matchesArrayFilter(values: string[], selectedValues?: string[]) {
 function matchesAccent(videoAccent: string | null, selectedAccent?: string) {
   if (!selectedAccent) return true;
   return videoAccent?.toLowerCase() === selectedAccent.toLowerCase();
+}
+
+function scoreSimilarity(sourceVideo: VidMatchVideo, candidate: VidMatchVideo) {
+  const skillOverlap = countOverlap(sourceVideo.skills, candidate.skills);
+  const topicOverlap = countOverlap(sourceVideo.topics, candidate.topics);
+  const tagOverlap = countOverlap(sourceVideo.tags, candidate.tags);
+  let score = 0;
+
+  if (candidate.level === sourceVideo.level) score += 24;
+  if (sourceVideo.accent && candidate.accent?.toLowerCase() === sourceVideo.accent.toLowerCase()) score += 10;
+  if (candidate.transcript_available === sourceVideo.transcript_available) score += 4;
+
+  score += skillOverlap * 18;
+  score += topicOverlap * 16;
+  score += Math.min(tagOverlap, 6) * 4;
+  score += Number(candidate.quality_score || 0) / 10;
+
+  return score;
+}
+
+function countOverlap(leftValues: string[], rightValues: string[]) {
+  const normalizedRight = new Set(rightValues.map((value) => value.toLowerCase()));
+  return leftValues.filter((value) => normalizedRight.has(value.toLowerCase())).length;
 }
 
 async function fetchJson<T>(url: string): Promise<T> {

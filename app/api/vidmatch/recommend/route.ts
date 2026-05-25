@@ -33,6 +33,7 @@ function parseRecommendationInput(searchParams: URLSearchParams): RecommendVideo
   const accent = searchParams.get("accent")?.trim() || undefined;
   const transcriptAvailable = searchParams.get("transcript_available");
   const limit = Number(searchParams.get("limit") ?? 6);
+  const similarToVideoId = searchParams.get("similar_to")?.trim() || undefined;
 
   if (level && !isOneOf(level, LEVELS)) {
     return NextResponse.json({ error: "level must be one of A1, A2, B1, B2, C1, C2." }, { status: 400 });
@@ -46,6 +47,10 @@ function parseRecommendationInput(searchParams: URLSearchParams): RecommendVideo
     return topics;
   }
 
+  if (similarToVideoId && similarToVideoId.length > 128) {
+    return NextResponse.json({ error: "similar_to is too long." }, { status: 400 });
+  }
+
   return {
     level: level ? (level as VidMatchLevel) : undefined,
     skills: skills as VidMatchSkill[],
@@ -53,6 +58,7 @@ function parseRecommendationInput(searchParams: URLSearchParams): RecommendVideo
     accent,
     transcriptAvailable: transcriptAvailable === "true" ? true : undefined,
     limit: Number.isFinite(limit) ? limit : 6,
+    similarToVideoId,
   };
 }
 

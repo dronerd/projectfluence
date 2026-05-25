@@ -115,6 +115,7 @@ export default function VidMatchApp({ pathname }: Props) {
   const [recommendations, setRecommendations] = useState<VidMatchVideo[]>([]);
   const [recommendationError, setRecommendationError] = useState("");
   const [recommendationLoading, setRecommendationLoading] = useState(false);
+  const [similarSourceVideoId, setSimilarSourceVideoId] = useState("");
   const [history, setHistory] = useState<VidMatchHistoryItem[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
   const [historyError, setHistoryError] = useState("");
@@ -131,7 +132,9 @@ export default function VidMatchApp({ pathname }: Props) {
   }, []);
 
   const isHistoryRoute = pathname === "/history";
-  const isNestedRoute = pathname !== "/" && !isHistoryRoute;
+  const isSimilarRoute = pathname.startsWith("/similar/");
+  const similarVideoId = isSimilarRoute ? decodeURIComponent(pathname.replace("/similar/", "")) : "";
+  const isNestedRoute = pathname !== "/" && !isHistoryRoute && !isSimilarRoute;
 
   const toggleValue = (value: string, values: string[], setValues: React.Dispatch<React.SetStateAction<string[]>>) => {
     setValues(values.includes(value) ? values.filter((item) => item !== value) : [...values, value]);
@@ -167,6 +170,7 @@ export default function VidMatchApp({ pathname }: Props) {
   const fetchRecommendations = async () => {
     setRecommendationLoading(true);
     setRecommendationError("");
+    setSimilarSourceVideoId("");
 
     const params = new URLSearchParams({
       level: selectedLevel,
@@ -195,6 +199,34 @@ export default function VidMatchApp({ pathname }: Props) {
       setRecommendationLoading(false);
     }
   };
+
+  const fetchSimilarRecommendations = useCallback(async (videoId: string) => {
+    setRecommendationLoading(true);
+    setRecommendationError("");
+    setSimilarSourceVideoId(videoId);
+
+    const params = new URLSearchParams({
+      similar_to: videoId,
+      limit: "6",
+    });
+
+    try {
+      const response = await fetch(`/api/vidmatch/recommend?${params}`);
+      const data = await response.json();
+
+      if (!response.ok || data.error) {
+        throw new Error(data.error || "Similar recommendation request failed");
+      }
+
+      setRecommendations(data.videos ?? []);
+    } catch (error) {
+      console.error(error);
+      setRecommendationError("似たビデオを取得できませんでした。少し時間をおいて再試行してください。");
+      setRecommendations([]);
+    } finally {
+      setRecommendationLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     if (!supabase) {
@@ -331,6 +363,12 @@ export default function VidMatchApp({ pathname }: Props) {
       fetchHistory();
     }
   }, [fetchHistory, isHistoryRoute]);
+
+  useEffect(() => {
+    if (isSimilarRoute && similarVideoId) {
+      fetchSimilarRecommendations(similarVideoId);
+    }
+  }, [fetchSimilarRecommendations, isSimilarRoute, similarVideoId]);
 
   const recordVideoClick = async (video: VidMatchVideo) => {
     try {
@@ -719,6 +757,11 @@ export default function VidMatchApp({ pathname }: Props) {
           text-decoration: none;
         }
 
+        .sidebar-history-button {
+          width: 100%;
+          box-sizing: border-box;
+        }
+
         .recommend-button:hover,
         .recommend-button:focus,
         .history-button:hover,
@@ -811,6 +854,13 @@ export default function VidMatchApp({ pathname }: Props) {
           display: flex;
           flex-wrap: wrap;
           gap: 8px;
+        }
+
+        .recommendation-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          align-items: center;
         }
 
         .recommendation-tag {
@@ -1044,15 +1094,23 @@ export default function VidMatchApp({ pathname }: Props) {
                           </span>
                         ))}
                       </div>
-                      <a
-                        className="youtube-link"
-                        href={video.youtube_url}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={() => void recordVideoClick(video)}
-                      >
-                        YouTubeで見る
-                      </a>
+                      <div className="recommendation-actions">
+                        <a
+                          className="youtube-link"
+                          href={video.youtube_url}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={() => void recordVideoClick(video)}
+                        >
+                          YouTubeで見る
+                        </a>
+                        <Link
+                          href={`/vidmatch/similar/${encodeURIComponent(video.video_id)}`}
+                          className="history-button"
+                        >
+                          似たビデオを探す
+                        </Link>
+                      </div>
                     </div>
                   </article>
                 ))}
@@ -1062,6 +1120,81 @@ export default function VidMatchApp({ pathname }: Props) {
             {!historyLoading && !historyError && history.length === 0 && (
               <p className="empty-recommendations">
                 まだ視聴履歴がありません。おすすめ動画から「YouTubeで見る」を押すとここに表示されます。
+              </p>
+            )}
+          </section>
+        ) : isSimilarRoute ? (
+          <section className="vidmatch-section" aria-labelledby="vidmatch-similar-title">
+            <div className="history-header">
+              <div>
+                <h2 id="vidmatch-similar-title">似たビデオ</h2>
+                <p className="vidmatch-section-subtitle">
+                  視聴履歴の動画とレベル、スキル、トピック、タグが近い動画をデータベースから表示します。
+                </p>
+              </div>
+              <div className="recommendation-actions">
+                <Link href="/vidmatch/history" className="history-button">
+                  視聴履歴に戻る
+                </Link>
+                <Link href="/vidmatch" className="history-button">
+                  動画を探す
+                </Link>
+              </div>
+            </div>
+
+            {recommendationError && <p className="recommend-error">{recommendationError}</p>}
+            {recommendationLoading && <p className="empty-recommendations">似たビデオを検索しています...</p>}
+
+            {!recommendationLoading && recommendations.length > 0 && (
+              <div className="recommendation-grid" aria-live="polite">
+                {recommendations.map((video) => (
+                  <article key={video.video_id} className="recommendation-card">
+                    {video.thumbnail_url && (
+                      <img src={video.thumbnail_url} alt="" className="recommendation-thumb" loading="lazy" />
+                    )}
+                    <div className="recommendation-body">
+                      <h3 className="recommendation-title">{video.title}</h3>
+                      <p className="recommendation-meta">
+                        {video.channel_name} / {video.level} / score {Math.round(Number(video.quality_score))}
+                      </p>
+                      <div className="recommendation-tags">
+                        {[...video.skills, ...video.topics].slice(0, 6).map((tag) => (
+                          <span key={`${video.video_id}-${tag}`} className="recommendation-tag">
+                            {SKILL_LABELS[tag] || TOPIC_LABELS[tag] || tag}
+                          </span>
+                        ))}
+                      </div>
+                      {video.description && (
+                        <p className="recommendation-description">
+                          {video.description.length > 150 ? `${video.description.slice(0, 150)}...` : video.description}
+                        </p>
+                      )}
+                      <div className="recommendation-actions">
+                        <a
+                          className="youtube-link"
+                          href={video.youtube_url}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={() => void recordVideoClick(video)}
+                        >
+                          YouTubeで見る
+                        </a>
+                        <Link
+                          href={`/vidmatch/similar/${encodeURIComponent(video.video_id)}`}
+                          className="history-button"
+                        >
+                          似たビデオを探す
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+
+            {!recommendationLoading && !recommendationError && recommendations.length === 0 && (
+              <p className="empty-recommendations">
+                {similarSourceVideoId ? "この動画に似たビデオはまだ見つかりませんでした。" : "視聴履歴から動画を選んでください。"}
               </p>
             )}
           </section>
@@ -1090,6 +1223,12 @@ export default function VidMatchApp({ pathname }: Props) {
               {!settingsLoading && !settingsError && !accessToken && (
                 <p className="settings-status">ログインすると検索条件が自動保存されます。</p>
               )}
+
+              <div className="vidmatch-control-section">
+                <Link href="/vidmatch/history" className="history-button sidebar-history-button">
+                  視聴履歴を見る
+                </Link>
+              </div>
 
               <div className="vidmatch-control-section">
                 <span className="preference-label">英語レベル</span>
@@ -1191,9 +1330,6 @@ export default function VidMatchApp({ pathname }: Props) {
                   >
                     {recommendationLoading ? "検索中..." : "おすすめ動画を表示"}
                   </button>
-                  <Link href="/vidmatch/history" className="history-button">
-                    視聴履歴を見る
-                  </Link>
                 </div>
                 {recommendationError && <p className="recommend-error" style={{ marginTop: 10 }}>{recommendationError}</p>}
               </div>
