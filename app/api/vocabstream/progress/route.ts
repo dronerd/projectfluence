@@ -103,6 +103,12 @@ function parseQuestionAttempt(value: unknown): VocabStreamQuestionAttemptInput |
     attemptOrder: requiredNumber(attempt.attemptOrder),
     choices: Array.isArray(attempt.choices) ? attempt.choices.filter(isNonEmptyString).map((choice) => choice.trim()) : [],
     answeredAt: optionalString(attempt.answeredAt),
+    sourceCategory: optionalString(attempt.sourceCategory),
+    sourceLessonId: optionalString(attempt.sourceLessonId),
+    sourceLessonNumber: optionalNumber(attempt.sourceLessonNumber) ?? null,
+    definition: optionalString(attempt.definition),
+    example: optionalString(attempt.example),
+    explanation: optionalString(attempt.explanation),
   };
 }
 

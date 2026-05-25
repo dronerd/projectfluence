@@ -113,6 +113,28 @@ create table if not exists public.vocabstream_user_lesson_progress (
   unique (user_id, lesson_id)
 );
 
+create table if not exists public.vocabstream_user_mistakes (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users (id) on delete cascade,
+  word text not null,
+  word_key text not null,
+  definition text,
+  example text,
+  explanation text,
+  source_category text not null,
+  source_lesson_id text,
+  source_lesson_number integer,
+  mistake_count integer not null default 1 check (mistake_count >= 1),
+  last_question_type text check (last_question_type in ('meaning', 'quiz')),
+  last_prompt text,
+  last_correct_answer text,
+  last_selected_answer text,
+  last_mistaken_at timestamptz not null default now(),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (user_id, source_category, word_key)
+);
+
 create index if not exists profiles_updated_at_idx
 on public.profiles (updated_at desc);
 
@@ -147,9 +169,16 @@ on public.vocabstream_user_lesson_progress (user_id, updated_at desc);
 create index if not exists vocabstream_user_lesson_progress_genre_idx
 on public.vocabstream_user_lesson_progress (user_id, genre, lesson_number);
 
+create index if not exists vocabstream_user_mistakes_user_idx
+on public.vocabstream_user_mistakes (user_id, mistake_count desc, updated_at desc);
+
+create index if not exists vocabstream_user_mistakes_source_idx
+on public.vocabstream_user_mistakes (user_id, source_category, source_lesson_number);
+
 alter table public.vocabstream_lesson_attempts enable row level security;
 alter table public.vocabstream_question_attempts enable row level security;
 alter table public.vocabstream_user_lesson_progress enable row level security;
+alter table public.vocabstream_user_mistakes enable row level security;
 alter table public.profiles enable row level security;
 
 drop policy if exists "Users can read own profile" on public.profiles;
@@ -203,9 +232,24 @@ for select
 to authenticated
 using (auth.uid() = user_id);
 
+drop policy if exists "Users can read own VocabStream mistakes" on public.vocabstream_user_mistakes;
+create policy "Users can read own VocabStream mistakes"
+on public.vocabstream_user_mistakes
+for select
+to authenticated
+using (auth.uid() = user_id);
+
 drop policy if exists "Service role can manage VocabStream lesson progress" on public.vocabstream_user_lesson_progress;
 create policy "Service role can manage VocabStream lesson progress"
 on public.vocabstream_user_lesson_progress
+for all
+to service_role
+using (true)
+with check (true);
+
+drop policy if exists "Service role can manage VocabStream mistakes" on public.vocabstream_user_mistakes;
+create policy "Service role can manage VocabStream mistakes"
+on public.vocabstream_user_mistakes
 for all
 to service_role
 using (true)

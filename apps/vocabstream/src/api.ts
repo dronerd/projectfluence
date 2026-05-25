@@ -13,6 +13,16 @@ export type VocabStreamQuestionAttempt = {
   attemptOrder: number;
   choices?: string[];
   answeredAt?: string;
+  sourceCategory?: string;
+  sourceLessonId?: string;
+  sourceLessonNumber?: number | null;
+  definition?: string;
+  example?: string;
+  explanation?: string;
+  japaneseMeaning?: string;
+  synonyms?: string;
+  antonyms?: string;
+  forms?: string;
 };
 
 export type VocabStreamProgressPayload = {
@@ -38,6 +48,42 @@ export type VocabStreamLessonProgress = {
   percentScore: number;
   totalPossible: number;
   updatedAt: string;
+};
+
+export type VocabStreamWeakWord = {
+  word: string;
+  definition: string;
+  example?: string;
+  explanation?: string;
+  japaneseMeaning?: string;
+  synonyms?: string;
+  antonyms?: string;
+  forms?: string;
+  mistakeCount: number;
+  sourceCategory: string;
+  sourceLessonId?: string;
+  sourceLessonNumber?: number | null;
+  lastMistakenAt?: string;
+};
+
+export type VocabStreamReviewQuestion = {
+  id: string;
+  questionType: "meaning" | "quiz";
+  word: string;
+  prompt: string;
+  choices: string[];
+  answerIndex: number;
+  correctAnswer: string;
+  definition: string;
+  example?: string;
+  explanation?: string;
+  japaneseMeaning?: string;
+  synonyms?: string;
+  antonyms?: string;
+  forms?: string;
+  sourceCategory: string;
+  sourceLessonId?: string;
+  sourceLessonNumber?: number | null;
 };
 
 async function tryFetchJson(path: string): Promise<any | null> {
@@ -123,6 +169,23 @@ export async function apiGetVocabStreamLessonProgress(genre: string, accessToken
 
   const data = (await res.json()) as { progress?: VocabStreamLessonProgress[] };
   return data.progress ?? [];
+}
+
+export async function apiGetVocabStreamReview(accessToken?: string | null) {
+  if (!accessToken) return { weakWords: [] as VocabStreamWeakWord[], questions: [] as VocabStreamReviewQuestion[] };
+
+  const res = await fetch("/api/vocabstream/review", {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => null);
+    throw new Error(error?.error || "Failed to load VocabStream review");
+  }
+
+  return res.json() as Promise<{ weakWords: VocabStreamWeakWord[]; questions: VocabStreamReviewQuestion[] }>;
 }
 
 /* ------------------------

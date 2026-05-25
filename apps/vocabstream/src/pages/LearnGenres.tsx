@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthContext";
 
 type Lesson = { id: string; title: string; };
 type LevelOrder = { [key: string]: string[] };
@@ -26,6 +27,7 @@ export default function LearnGenres() {
   const [genres] = useState<Lesson[]>(STATIC_GENRES);
   const [isSmall, setIsSmall] = useState<boolean>(false);
   const nav = useNavigate();
+  const { user } = useAuth();
 
   useEffect(() => {
     function update() {
@@ -175,6 +177,58 @@ export default function LearnGenres() {
           box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
         }
 
+        .review-section {
+          margin-bottom: 24px;
+          padding: 22px;
+          background: #ffffff;
+          border: 1px solid rgba(209, 213, 219, 0.8);
+          border-radius: 16px;
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        .review-section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 18px;
+        }
+
+        .review-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          justify-content: flex-end;
+        }
+
+        .review-button,
+        .weak-close-button {
+          border: none;
+          border-radius: 999px;
+          cursor: pointer;
+          font-weight: 900;
+          line-height: 1.2;
+          transition: transform .14s ease, box-shadow .14s ease;
+        }
+
+        .review-button {
+          min-height: 46px;
+          padding: 12px 18px;
+          font-size: 15px;
+        }
+
+        .review-button.primary {
+          color: #fff;
+          background: linear-gradient(135deg, #d97706 0%, #f59e0b 55%, #fbbf24 100%);
+          box-shadow: 0 10px 20px rgba(217, 119, 6, 0.22);
+        }
+
+        .review-button.secondary,
+        .weak-close-button {
+          color: #12366d;
+          background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 45%, #cffafe 100%);
+          box-shadow: 0 10px 20px rgba(29, 78, 216, 0.14);
+        }
+
         .about-heading {
           display: flex;
           align-items: center;
@@ -237,6 +291,10 @@ export default function LearnGenres() {
             transform: translateY(-6px);
             box-shadow: 0 18px 36px rgba(0,0,0,0.12);
           }
+          .review-button:hover,
+          .weak-close-button:hover {
+            transform: translateY(-2px);
+          }
           .lesson-card:focus-visible {
             outline: none;
             transform: translateY(-6px);
@@ -249,6 +307,9 @@ export default function LearnGenres() {
           .about-section { padding: 18px; }
           .about-heading { flex-direction: column; gap: 10px; }
           .about-copy { font-size: 14px; text-align: left; }
+          .review-section { padding: 18px; align-items: stretch; flex-direction: column; }
+          .review-actions { justify-content: stretch; }
+          .review-button { width: 100%; }
         }
       `}</style>
 
@@ -281,6 +342,27 @@ export default function LearnGenres() {
             下の一覧から、学習したい分野やレベルを選んで始めましょう。
           </p>
         </section>
+
+        {user && (
+          <section className="review-section" aria-labelledby="vocabstream-review-title">
+            <div>
+              <h3 id="vocabstream-review-title" style={{ fontSize: isSmall ? 19 : 24, fontWeight: 900, margin: 0, color: "#173a71" }}>
+                復習
+              </h3>
+              <p style={{ color: "#475569", lineHeight: 1.7, margin: "8px 0 0" }}>
+                これまでに間違えた単語から、あなた専用の復習レッスンを作成します。
+              </p>
+            </div>
+            <div className="review-actions">
+              <button className="review-button primary" onClick={() => nav("/review")}>
+                復習
+              </button>
+              <button className="review-button secondary" onClick={() => nav("/weak-words")}>
+                苦手な単語を見る
+              </button>
+            </div>
+          </section>
+        )}
 
         {Object.entries(categories).map(([categoryName, lessons]) => {
           const order = levelOrder[categoryName];

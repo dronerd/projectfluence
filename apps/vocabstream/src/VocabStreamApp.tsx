@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import LearnGenres from "./pages/LearnGenres";
 import LessonList from "./pages/LessonList";
 import Lesson from "./pages/Lesson";
+import ReviewLesson from "./pages/ReviewLesson";
+import WeakWords from "./pages/WeakWords";
 import StillUnderDevelopment from "./pages/Still_under_development";
 import { RouterCompatProvider } from "./lib/router-compat";
 import { matchPath } from "./lib/routes";
@@ -45,6 +47,8 @@ const routeTable: RouteEntry[] = [
     render: () => <Lesson />,
     params: (params: Record<string, string>) => params,
   },
+  { pattern: "/review", render: () => <ReviewLesson />, params: () => ({}) },
+  { pattern: "/weak-words", render: () => <WeakWords />, params: () => ({}) },
   { pattern: "/others", render: () => <LearnGenres />, params: () => ({}) },
   {
     pattern: "/still_under_development",

@@ -26,6 +26,10 @@ export type VidMatchVideo = {
   description: string | null;
   tags: string[];
   quality_score: number;
+  source: string;
+  source_video_id: string;
+  speaker_name: string | null;
+  source_url: string;
   created_at?: string;
 };
 
@@ -182,7 +186,7 @@ export async function getRecommendedVideos(input: RecommendVideosInput): Promise
 
   const params = new URLSearchParams({
     select:
-      "video_id,title,channel_name,youtube_url,thumbnail_url,duration,level,skills,topics,accent,transcript_available,description,tags,quality_score,created_at",
+      "video_id,title,channel_name,youtube_url,thumbnail_url,duration,level,skills,topics,accent,transcript_available,description,tags,quality_score,source,source_video_id,speaker_name,source_url,created_at",
     order: "quality_score.desc,created_at.desc",
     limit: "100",
   });
@@ -244,6 +248,10 @@ function normalizeYoutubeVideo(
     description: snippet?.description ?? null,
     tags: snippet?.tags ?? [],
     quality_score: scoreVideo(item),
+    source: "youtube",
+    source_video_id: item.id,
+    speaker_name: null,
+    source_url: `https://www.youtube.com/watch?v=${item.id}`,
   };
 }
 

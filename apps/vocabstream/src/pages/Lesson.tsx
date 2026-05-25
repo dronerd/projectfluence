@@ -641,6 +641,12 @@ const Lesson: React.FC = () => {
       isCorrect,
       isReplay: isReplayMode && replayType === "quiz",
       choices: q.choices,
+      sourceCategory: genreFolder ?? undefined,
+      sourceLessonId: lessonId ?? undefined,
+      sourceLessonNumber: lessonNumber,
+      definition: getLessonWord(q.word)?.meaning || getLessonWord(q.word)?.japaneseMeaning,
+      example: q.sentence,
+      explanation: getLessonWord(q.word)?.meaning || undefined,
     });
     setSelectedChoice(choiceIndex);
     if (!isReplayMode) setQuizAttempted(true);
@@ -678,6 +684,12 @@ const Lesson: React.FC = () => {
       isCorrect,
       isReplay: isReplayMode && replayType === "meaning",
       choices: q.choices,
+      sourceCategory: genreFolder ?? undefined,
+      sourceLessonId: lessonId ?? undefined,
+      sourceLessonNumber: lessonNumber,
+      definition: q.prompt,
+      example: lesson?.words[q.originalIndex]?.example,
+      explanation: lesson?.words[q.originalIndex]?.meaning || q.prompt,
     });
     setMeaningSelectedChoice(choiceIndex);
     if (!isReplayMode) setMeaningAttempted(true);
@@ -704,6 +716,10 @@ const Lesson: React.FC = () => {
     if (finishLock) return; // prevent double execution
     setFinishLock(true);
     nav(-1);
+  }
+
+  function getLessonWord(word: string) {
+    return lesson?.words.find((item) => item.word?.toLowerCase() === word.toLowerCase());
   }
 
   // try to navigate to the next numbered lesson within the same genre folder

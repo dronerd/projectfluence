@@ -16,9 +16,29 @@ create table if not exists public.vidmatch_videos (
   description text,
   tags text[] not null default '{}',
   quality_score numeric(5, 2) not null default 0 check (quality_score >= 0 and quality_score <= 100),
+  source text not null default 'youtube',
+  source_video_id text not null default '',
+  speaker_name text,
+  source_url text,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.vidmatch_videos
+add column if not exists source text not null default 'youtube';
+alter table public.vidmatch_videos
+add column if not exists source_video_id text not null default '';
+alter table public.vidmatch_videos
+add column if not exists speaker_name text;
+alter table public.vidmatch_videos
+add column if not exists source_url text;
+
+update public.vidmatch_videos
+set
+  source = coalesce(nullif(source, ''), 'youtube'),
+  source_video_id = coalesce(nullif(source_video_id, ''), video_id),
+  source_url = coalesce(source_url, youtube_url)
+where source_video_id = '' or source_url is null or source = '';
 
 create table if not exists public.vidmatch_video_view_history (
   id uuid primary key default gen_random_uuid(),
@@ -41,6 +61,13 @@ create table if not exists public.vidmatch_video_view_history (
   unique (user_id, video_id)
 );
 
+create table if not exists public.vidmatch_user_settings (
+  user_id uuid primary key references auth.users (id) on delete cascade,
+  settings jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
 alter table public.vidmatch_videos
 drop constraint if exists vidmatch_videos_level_check;
 
@@ -58,6 +85,8 @@ create index if not exists vidmatch_video_view_history_user_idx
 on public.vidmatch_video_view_history (user_id, last_clicked_at desc);
 create index if not exists vidmatch_video_view_history_video_idx
 on public.vidmatch_video_view_history (video_id);
+create index if not exists vidmatch_user_settings_updated_at_idx
+on public.vidmatch_user_settings (updated_at desc);
 
 create or replace function public.set_updated_at()
 returns trigger as $$
@@ -79,8 +108,15 @@ before update on public.vidmatch_video_view_history
 for each row
 execute function public.set_updated_at();
 
+drop trigger if exists set_vidmatch_user_settings_updated_at on public.vidmatch_user_settings;
+create trigger set_vidmatch_user_settings_updated_at
+before update on public.vidmatch_user_settings
+for each row
+execute function public.set_updated_at();
+
 alter table public.vidmatch_videos enable row level security;
 alter table public.vidmatch_video_view_history enable row level security;
+alter table public.vidmatch_user_settings enable row level security;
 
 drop policy if exists "Service role can manage VidMatch videos" on public.vidmatch_videos;
 create policy "Service role can manage VidMatch videos"
@@ -100,6 +136,21 @@ using (auth.uid() = user_id);
 drop policy if exists "Service role can manage VidMatch history" on public.vidmatch_video_view_history;
 create policy "Service role can manage VidMatch history"
 on public.vidmatch_video_view_history
+for all
+to service_role
+using (true)
+with check (true);
+
+drop policy if exists "Users can read own VidMatch settings" on public.vidmatch_user_settings;
+create policy "Users can read own VidMatch settings"
+on public.vidmatch_user_settings
+for select
+to authenticated
+using (auth.uid() = user_id);
+
+drop policy if exists "Service role can manage VidMatch settings" on public.vidmatch_user_settings;
+create policy "Service role can manage VidMatch settings"
+on public.vidmatch_user_settings
 for all
 to service_role
 using (true)

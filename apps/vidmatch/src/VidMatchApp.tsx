@@ -33,10 +33,27 @@ type VidMatchHistoryItem = VidMatchVideo & {
   created_at: string;
 };
 
+type VidMatchSettings = {
+  selectedLevel: string;
+  selectedSkills: string[];
+  selectedTopics: string[];
+  customTopics: string;
+  selectedAccent: string;
+  captionOnly: boolean;
+};
+
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversation"];
 const TOPICS = ["travel", "daily life", "school"];
 const ACCENTS = ["American", "British", "Australian", "Canadian"];
+const DEFAULT_SETTINGS: VidMatchSettings = {
+  selectedLevel: "B1",
+  selectedSkills: ["listening"],
+  selectedTopics: [],
+  customTopics: "",
+  selectedAccent: "",
+  captionOnly: false,
+};
 
 const SKILL_LABELS: Record<string, string> = {
   listening: "リスニング",
@@ -59,20 +76,52 @@ const ACCENT_LABELS: Record<string, string> = {
   Canadian: "カナダ英語",
 };
 
+function readStringArray(value: unknown) {
+  return Array.isArray(value)
+    ? value.filter((item): item is string => typeof item === "string" && item.trim().length > 0).map((item) => item.trim())
+    : [];
+}
+
+function sanitizeSettings(value: unknown): VidMatchSettings | null {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+  const raw = value as Partial<VidMatchSettings>;
+  const selectedLevel = typeof raw.selectedLevel === "string" && LEVELS.includes(raw.selectedLevel)
+    ? raw.selectedLevel
+    : DEFAULT_SETTINGS.selectedLevel;
+  const selectedSkills = readStringArray(raw.selectedSkills).filter((skill) => SKILLS.includes(skill));
+  const selectedTopics = readStringArray(raw.selectedTopics).filter((topic) => TOPICS.includes(topic));
+  const selectedAccent = typeof raw.selectedAccent === "string" && ACCENTS.includes(raw.selectedAccent)
+    ? raw.selectedAccent
+    : "";
+
+  return {
+    selectedLevel,
+    selectedSkills: selectedSkills.length ? selectedSkills : DEFAULT_SETTINGS.selectedSkills,
+    selectedTopics,
+    customTopics: typeof raw.customTopics === "string" ? raw.customTopics.slice(0, 240) : "",
+    selectedAccent,
+    captionOnly: Boolean(raw.captionOnly),
+  };
+}
+
 export default function VidMatchApp({ pathname }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedLevel, setSelectedLevel] = useState("B1");
-  const [selectedSkills, setSelectedSkills] = useState<string[]>(["listening"]);
-  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
-  const [customTopics, setCustomTopics] = useState("");
-  const [selectedAccent, setSelectedAccent] = useState("");
-  const [captionOnly, setCaptionOnly] = useState(false);
+  const [selectedLevel, setSelectedLevel] = useState(DEFAULT_SETTINGS.selectedLevel);
+  const [selectedSkills, setSelectedSkills] = useState<string[]>(DEFAULT_SETTINGS.selectedSkills);
+  const [selectedTopics, setSelectedTopics] = useState<string[]>(DEFAULT_SETTINGS.selectedTopics);
+  const [customTopics, setCustomTopics] = useState(DEFAULT_SETTINGS.customTopics);
+  const [selectedAccent, setSelectedAccent] = useState(DEFAULT_SETTINGS.selectedAccent);
+  const [captionOnly, setCaptionOnly] = useState(DEFAULT_SETTINGS.captionOnly);
   const [recommendations, setRecommendations] = useState<VidMatchVideo[]>([]);
   const [recommendationError, setRecommendationError] = useState("");
   const [recommendationLoading, setRecommendationLoading] = useState(false);
   const [history, setHistory] = useState<VidMatchHistoryItem[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
   const [historyError, setHistoryError] = useState("");
+  const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [settingsLoaded, setSettingsLoaded] = useState(false);
+  const [settingsLoading, setSettingsLoading] = useState(false);
+  const [settingsError, setSettingsError] = useState("");
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
 
   const scrollToTop = useCallback(() => {
@@ -96,6 +145,24 @@ export default function VidMatchApp({ pathname }: Props) {
 
     return Array.from(new Set([...selectedTopics, ...typedTopics]));
   };
+
+  const applySettings = useCallback((settings: VidMatchSettings) => {
+    setSelectedLevel(settings.selectedLevel);
+    setSelectedSkills(settings.selectedSkills);
+    setSelectedTopics(settings.selectedTopics);
+    setCustomTopics(settings.customTopics);
+    setSelectedAccent(settings.selectedAccent);
+    setCaptionOnly(settings.captionOnly);
+  }, []);
+
+  const currentSettings = useMemo<VidMatchSettings>(() => ({
+    selectedLevel,
+    selectedSkills,
+    selectedTopics,
+    customTopics,
+    selectedAccent,
+    captionOnly,
+  }), [captionOnly, customTopics, selectedAccent, selectedLevel, selectedSkills, selectedTopics]);
 
   const fetchRecommendations = async () => {
     setRecommendationLoading(true);
@@ -129,11 +196,102 @@ export default function VidMatchApp({ pathname }: Props) {
     }
   };
 
-  const getAccessToken = useCallback(async () => {
-    if (!supabase) return null;
-    const { data } = await supabase.auth.getSession();
-    return data.session?.access_token ?? null;
+  useEffect(() => {
+    if (!supabase) {
+      setSettingsLoaded(true);
+      return;
+    }
+
+    let mounted = true;
+    supabase.auth.getSession().then(({ data }) => {
+      if (!mounted) return;
+      const token = data.session?.access_token ?? null;
+      setAccessToken(token);
+      setSettingsLoaded(!token);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      const token = session?.access_token ?? null;
+      setAccessToken(token);
+      setSettingsLoaded(!token);
+      if (!token) {
+        setSettingsLoading(false);
+        setSettingsError("");
+      }
+    });
+
+    return () => {
+      mounted = false;
+      subscription.unsubscribe();
+    };
   }, [supabase]);
+
+  useEffect(() => {
+    if (!accessToken) return;
+
+    let cancelled = false;
+    setSettingsLoading(true);
+    setSettingsLoaded(false);
+    setSettingsError("");
+
+    fetch("/api/vidmatch/settings", {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    })
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok || data.error) {
+          throw new Error(data.error || "Settings request failed");
+        }
+        return sanitizeSettings(data.settings);
+      })
+      .then((storedSettings) => {
+        if (!cancelled && storedSettings) applySettings(storedSettings);
+      })
+      .catch((error) => {
+        console.warn("VidMatch settings load failed", error);
+        if (!cancelled) setSettingsError("保存済みの条件を読み込めませんでした。");
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setSettingsLoading(false);
+          setSettingsLoaded(true);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [accessToken, applySettings]);
+
+  useEffect(() => {
+    if (!settingsLoaded || !accessToken) return;
+
+    const timer = window.setTimeout(() => {
+      fetch("/api/vidmatch/settings", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ settings: currentSettings }),
+      })
+        .then(async (response) => {
+          if (!response.ok) {
+            const data = await response.json().catch(() => null) as { error?: string } | null;
+            throw new Error(data?.error || "Settings save failed");
+          }
+          setSettingsError("");
+        })
+        .catch((error) => {
+          console.warn("VidMatch settings save failed", error);
+          setSettingsError("条件を保存できませんでした。");
+        });
+    }, 600);
+
+    return () => window.clearTimeout(timer);
+  }, [accessToken, currentSettings, settingsLoaded]);
+
+  const getAccessToken = useCallback(async () => accessToken, [accessToken]);
 
   const fetchHistory = useCallback(async () => {
     setHistoryLoading(true);
@@ -425,6 +583,18 @@ export default function VidMatchApp({ pathname }: Props) {
           border-top: 1px solid #e2e8f0;
           padding-top: 14px;
           margin-top: 14px;
+        }
+
+        .settings-status {
+          margin: 12px 0 0;
+          color: #475569;
+          font-size: 12px;
+          font-weight: 750;
+          line-height: 1.5;
+        }
+
+        .settings-status.is-error {
+          color: #b42318;
         }
 
         .preference-label {
@@ -911,6 +1081,15 @@ export default function VidMatchApp({ pathname }: Props) {
                   <p>今の英語レベルに合う動画を探す</p>
                 </div>
               </div>
+              {settingsLoading && (
+                <p className="settings-status" aria-live="polite">保存済みの条件を読み込み中...</p>
+              )}
+              {!settingsLoading && settingsError && (
+                <p className="settings-status is-error" aria-live="polite">{settingsError}</p>
+              )}
+              {!settingsLoading && !settingsError && !accessToken && (
+                <p className="settings-status">ログインすると検索条件が自動保存されます。</p>
+              )}
 
               <div className="vidmatch-control-section">
                 <span className="preference-label">英語レベル</span>

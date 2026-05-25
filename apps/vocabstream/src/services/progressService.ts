@@ -13,6 +13,12 @@ export type VocabStreamQuestionAttemptInput = {
   attemptOrder: number;
   choices?: string[];
   answeredAt?: string;
+  sourceCategory?: string;
+  sourceLessonId?: string;
+  sourceLessonNumber?: number | null;
+  definition?: string;
+  example?: string;
+  explanation?: string;
 };
 
 export type SaveVocabStreamProgressInput = {
@@ -159,7 +165,114 @@ export async function saveVocabStreamProgress(input: SaveVocabStreamProgressInpu
     await insertSupabase(`${supabaseUrl}/rest/v1/vocabstream_question_attempts`, serviceRoleKey, questionRows);
   }
 
+  if (userId) {
+    await recordMistakes({
+      supabaseUrl,
+      serviceRoleKey,
+      userId,
+      lessonId: input.lessonId,
+      genre: input.genre,
+      lessonNumber: input.lessonNumber,
+      attempts: input.questionAttempts,
+    });
+  }
+
   return { lessonAttempt };
+}
+
+async function recordMistakes(input: {
+  supabaseUrl: string;
+  serviceRoleKey: string;
+  userId: string;
+  lessonId: string;
+  genre: string;
+  lessonNumber?: number | null;
+  attempts: VocabStreamQuestionAttemptInput[];
+}) {
+  const mistakenAttempts = input.attempts.filter((attempt) => !attempt.isCorrect && normalizeOptionalText(attempt.word));
+  if (mistakenAttempts.length === 0) return;
+
+  const now = new Date().toISOString();
+  const grouped = new Map<string, { attempt: VocabStreamQuestionAttemptInput; count: number }>();
+  for (const attempt of mistakenAttempts) {
+    const sourceCategory = normalizeOptionalText(attempt.sourceCategory) ?? input.genre;
+    const word = normalizeOptionalText(attempt.word);
+    if (!word) continue;
+    const key = `${sourceCategory.toLowerCase()}::${word.toLowerCase()}`;
+    const previous = grouped.get(key);
+    grouped.set(key, {
+      attempt: {
+        ...previous?.attempt,
+        ...attempt,
+        sourceCategory,
+      },
+      count: (previous?.count ?? 0) + 1,
+    });
+  }
+
+  for (const { attempt, count } of grouped.values()) {
+    const word = normalizeOptionalText(attempt.word);
+    if (!word) continue;
+    const sourceCategory = normalizeOptionalText(attempt.sourceCategory) ?? input.genre;
+    const sourceLessonId = normalizeOptionalText(attempt.sourceLessonId) ?? input.lessonId;
+    const sourceLessonNumber =
+      Number.isFinite(attempt.sourceLessonNumber) ? attempt.sourceLessonNumber : input.lessonNumber ?? null;
+    const existing = await readMistakeRow(input.supabaseUrl, input.serviceRoleKey, input.userId, sourceCategory, word);
+    const payload = {
+      user_id: input.userId,
+      word,
+      word_key: word.toLowerCase(),
+      definition: normalizeOptionalText(attempt.definition) ?? normalizeOptionalText(attempt.prompt) ?? "",
+      example: normalizeOptionalText(attempt.example),
+      explanation: normalizeOptionalText(attempt.explanation),
+      source_category: sourceCategory,
+      source_lesson_id: sourceLessonId,
+      source_lesson_number: Number.isFinite(sourceLessonNumber) ? sourceLessonNumber : null,
+      mistake_count: (existing?.mistake_count ?? 0) + count,
+      last_question_type: attempt.questionType,
+      last_prompt: normalizeOptionalText(attempt.prompt),
+      last_correct_answer: attempt.correctAnswer,
+      last_selected_answer: attempt.selectedAnswer,
+      last_mistaken_at: now,
+      updated_at: now,
+    };
+
+    await upsertSupabase(
+      `${input.supabaseUrl}/rest/v1/vocabstream_user_mistakes?on_conflict=user_id,source_category,word_key`,
+      input.serviceRoleKey,
+      payload,
+    );
+  }
+}
+
+async function readMistakeRow(
+  supabaseUrl: string,
+  serviceRoleKey: string,
+  userId: string,
+  sourceCategory: string,
+  word: string,
+): Promise<{ mistake_count: number } | null> {
+  const params = new URLSearchParams({
+    select: "mistake_count",
+    user_id: `eq.${userId}`,
+    source_category: `eq.${sourceCategory}`,
+    word_key: `eq.${word.toLowerCase()}`,
+    limit: "1",
+  });
+  const response = await fetch(`${supabaseUrl}/rest/v1/vocabstream_user_mistakes?${params}`, {
+    headers: {
+      apikey: serviceRoleKey,
+      Authorization: `Bearer ${serviceRoleKey}`,
+    },
+  });
+
+  if (!response.ok) {
+    const error = (await response.json().catch(() => null)) as SupabaseError | null;
+    throw new Error(error?.message ?? `Supabase mistake read failed with status ${response.status}`);
+  }
+
+  const rows = (await response.json()) as { mistake_count: number }[];
+  return rows[0] ?? null;
 }
 
 async function upsertSupabase(url: string, serviceRoleKey: string, payload: unknown): Promise<void> {
