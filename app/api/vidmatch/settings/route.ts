@@ -4,6 +4,7 @@ import { getAuthenticatedUser, getRequiredEnv } from "@/app/api/_lib/supabaseAut
 
 import { ApiError, apiError, fetchWithTimeout as fetch, readJsonBody } from "@/app/api/_lib/http";
 import { LEVELS, SKILLS, ACCENTS } from "@/apps/vidmatch/src/services/videoContract";
+import { TOPICS, normalizeTopics } from "@/apps/vidmatch/src/services/videoTaxonomy";
 
 export const runtime = "nodejs";
 
@@ -94,11 +95,11 @@ function isPlainObject(value: unknown): value is Record<string, unknown> {
 function validateSettings(settings: Record<string, unknown>) {
   const allowedArray = (value: unknown, choices: readonly string[], max: number) => Array.isArray(value) && value.length <= max && value.every((entry) => typeof entry === "string" && choices.includes(entry));
   if (typeof settings.selectedLevel !== "string" || !LEVELS.includes(settings.selectedLevel as typeof LEVELS[number]) ||
-    !allowedArray(settings.selectedSkills, SKILLS, 5) || !allowedArray(settings.selectedTopics, ["travel", "daily life", "school"], 3) ||
+    !allowedArray(settings.selectedSkills, SKILLS, 5) || !allowedArray(settings.selectedTopics, TOPICS, 10) ||
     typeof settings.customTopics !== "string" || settings.customTopics.length > 240 ||
     typeof settings.selectedAccent !== "string" || (settings.selectedAccent !== "" && !ACCENTS.includes(settings.selectedAccent as typeof ACCENTS[number])) ||
     typeof settings.captionOnly !== "boolean") throw new ApiError(400, "Invalid video search settings.", "invalid_request");
   const topics = settings.customTopics.split(/[,、]/).map((topic) => topic.trim()).filter(Boolean);
-  if (topics.length + (settings.selectedTopics as string[]).length > 10 || topics.some((topic) => topic.length > 80)) throw new ApiError(400, "Too many topics, or a topic is too long.", "invalid_request");
+  if (normalizeTopics([...topics, ...(settings.selectedTopics as string[])]).length > 10 || topics.some((topic) => topic.length > 80)) throw new ApiError(400, "Too many topics, or a topic is too long.", "invalid_request");
   return { selectedLevel: settings.selectedLevel, selectedSkills: settings.selectedSkills, selectedTopics: settings.selectedTopics, customTopics: settings.customTopics, selectedAccent: settings.selectedAccent, captionOnly: settings.captionOnly };
 }

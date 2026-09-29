@@ -1,0 +1,3259 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "videoId": "-E_HCGKQXBk",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "work",
+        "daily life"
+      ],
+      "format": "storytelling",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/personal-introduction",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The public lesson identifies this exact video as an A1 self-introduction and describes listening exercises using the speaker's personal information. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "1m4hryJ4Nag",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "daily life",
+        "entertainment"
+      ],
+      "format": "comedy",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/rain-la",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A1 lesson links the rain-themed sketch and describes choosing words heard in its dialogue. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "4U9Cqc8Pj8w",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "travel",
+        "daily life"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-holiday-activities/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A1 learning task. Children discuss familiar holiday activities with a concrete everyday vocabulary focus. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "8zP8P2xCo_E",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "daily life"
+      ],
+      "format": "storytelling",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/hate-mornings",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A1 lesson identifies a morning-routine story and includes correction tasks based on information learners see and hear in the video. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "9UsYwTL5T30",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A2",
+      "topics": [
+        "work",
+        "design"
+      ],
+      "format": "tour",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/minimalist-desk",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A1-A2 lesson links this workspace video and describes a speaker discussing desk items, with listening tasks about the order in which items are mentioned. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "B-55BQ3Tesc",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A2",
+      "topics": [
+        "health",
+        "daily life"
+      ],
+      "format": "demonstration",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/healthy-lifestyle",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The publisher labels this exact linked video lesson A1/A2 and describes ordering exercise activities according to their spoken sequence. This preserves lesson suitability, not a measured speech level. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "ByQ9hQLs0gs",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "work",
+        "daily life"
+      ],
+      "format": "documentary",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/assisting-customers",
+        "checkedAt": "2026-09-29T08:24:04.364Z",
+        "statement": "The exact A1 lesson describes a shop assistant's work duties and job satisfaction with comprehension tasks. This is substantive occupation content; The provider also declares English audio. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:24:04.364Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "PEbxI_Y5UBo",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "entertainment",
+        "culture"
+      ],
+      "format": "storytelling",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/first-concert-experience",
+        "checkedAt": "2026-09-29T08:21:19.384Z",
+        "statement": "The public A1 lesson directly links four people recalling their first concerts and describes listening comprehension about the speakers and their experiences. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:21:19.384Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "QCWi8Ddob1k",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A2",
+      "topics": [
+        "travel",
+        "daily life"
+      ],
+      "format": "demonstration",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/pack-weekend-trip",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A1-A2 lesson identifies this packing guide and explicitly includes a listening activity about what to bring for a short trip. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "QdAWxs9ID14",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A2",
+      "topics": [
+        "entertainment",
+        "culture"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/favorite-movie",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The public A1-A2 lesson links this exact video and describes ordering film names heard in people's accounts of their favorite movies. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "VoMFusMOWfM",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "daily life",
+        "travel"
+      ],
+      "format": "tour",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/neighborhood",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A1 lesson directly links the video and describes listening for places and adjectives used by the neighborhood guide. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "ZmA_ZahTyr8",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "travel",
+        "daily life"
+      ],
+      "format": "storytelling",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/we-love-travelling/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A1 learning task. A travelling family gives visual context for everyday holiday preferences. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "bsgj0UdxMSQ",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "food",
+        "entertainment"
+      ],
+      "format": "comedy",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/ordering-restaurant",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A1 lesson directly identifies this restaurant sketch and describes listening to an exchange between a waiter and a customer. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "k-CsvMEW8t4",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "food",
+        "culture"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/nationalities-cuisine",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A1 lesson directly links this food-preference interview and describes identifying foods and nationalities heard in it. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "orqgsTFcoos",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A2",
+      "topics": [
+        "daily life",
+        "society"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/city-country-life",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A1-A2 lesson directly links the video and describes interviews with city and rural residents followed by comprehension tasks. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "s-lM2uwiwyQ",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A2",
+      "topics": [
+        "work",
+        "health"
+      ],
+      "format": "documentary",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/medical-assistant-routine",
+        "checkedAt": "2026-09-29T08:24:04.364Z",
+        "statement": "The exact A1-A2 lesson describes a medical assistant's daily tasks and sequence of work, including comprehension activities. Employer branding is present, but the described content concerns the occupation; The provider also declares English audio. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:24:04.364Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "zWsVcGTQNtc",
+      "level": "A1",
+      "levelMin": "A1",
+      "levelMax": "A1",
+      "topics": [
+        "daily life",
+        "design"
+      ],
+      "format": "vlog",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/my-favourite-room/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A1 learning task. A room-by-room home tour connects concrete objects and locations with spoken description. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "1duv0yXErPc",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "B1",
+      "topics": [
+        "nature",
+        "sport"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/surfing-dogs",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The official A2 index and exact lesson page identify this dog-surfing report with A2-B1 suitability and explicitly describe a listening exercise. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "1uVpWlQpf54",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "B1",
+      "topics": [
+        "technology",
+        "daily life"
+      ],
+      "format": "storytelling",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/talk-about-smartphone-habits/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A2/B1 learning task. A practical experiment with phone habits invites comparison with the learner's routine. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "6KbPngIb8Ws",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "B1",
+      "topics": [
+        "food",
+        "travel"
+      ],
+      "format": "tour",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/pizza-rome-esl-lesson",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The exact publisher page links this Rome food video and labels its lesson A2-B1, with vocabulary and comprehension activities based on the video. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "9HBd4th3b7M",
+      "level": "A2",
+      "levelMin": "A1",
+      "levelMax": "A2",
+      "topics": [
+        "daily life",
+        "business"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-object-pronouns/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A1/A2 learning task. Concrete shopping preferences provide short everyday exchanges; use the upper end of the publisher range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "C8H2WC2e7go",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "B1",
+      "topics": [
+        "entertainment",
+        "technology",
+        "society"
+      ],
+      "format": "documentary",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/grandma-gamer",
+        "checkedAt": "2026-09-29T08:21:19.384Z",
+        "statement": "The public A2-B1 lesson directly links a documentary about an older video-game player and explicitly describes a listening exercise based on it. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:21:19.384Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "RNs-BngyKUY",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "A2",
+      "topics": [
+        "travel",
+        "history"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-past-simple/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A2 learning task. A message discovered across the ocean provides a memorable short narrative about past events. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "Ru51XZX3Koc",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "A2",
+      "topics": [
+        "travel",
+        "culture"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/landmarks",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The exact A2 lesson links an explanation of international landmarks and describes comprehension questions about their meaning and significance. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "YXYoX2bMru0",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "A2",
+      "topics": [
+        "entertainment",
+        "culture"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/music-preferences",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A2 lesson directly identifies an interview about music preferences and explicitly asks learners to recognize musicians named by speakers. This is spoken discussion, not a music-video lesson. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "coFeKEUot4o",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "A2",
+      "topics": [
+        "travel",
+        "culture"
+      ],
+      "format": "tour",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/tis-the-season/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A2 learning task. Seasonal city activities provide concrete places and plans rather than an abstract topic. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "eQwU9Sz3aQE",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "B1",
+      "topics": [
+        "work"
+      ],
+      "format": "demonstration",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/tell-me-about-yourself",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The exact A2-B1 lesson describes watching and listening to a speaker demonstrating an answer to a job-interview introduction question. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "fYvPcyHtpOs",
+      "level": "A2",
+      "levelMin": "A1",
+      "levelMax": "A2",
+      "topics": [
+        "daily life",
+        "design"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/beginner-lesson-on-homes/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A1/A2 learning task. An unusual small home offers visible context for rooms and family routines; choose the upper beginner range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "jJI5AsI5lBc",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "A2",
+      "topics": [
+        "travel"
+      ],
+      "format": "conversation",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/checking-in-airport",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A2 lesson directly links an airport check-in conversation and describes a dialogue completion activity based on the passenger and airline worker. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "nXzb2cABGAs",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "B1",
+      "topics": [
+        "environment",
+        "history"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/earth-day",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The exact A2-B1 publisher lesson links this environmental-history video and explicitly describes listening for facts about Earth Day. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "qtVbAEKVw8w",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "A2",
+      "topics": [
+        "daily life",
+        "entertainment"
+      ],
+      "format": "comedy",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/chores",
+        "checkedAt": "2026-09-29T08:24:04.364Z",
+        "statement": "The current exact lesson labels this household-chore video A2 and explicitly describes a video listening task involving missing verbs and comprehension questions. An older blog calls the lesson A1; the current lesson page takes precedence. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:24:04.364Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "rwbmDuHmeQM",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "A2",
+      "topics": [
+        "daily life",
+        "society"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/life-experiences-present-perfect-ever-never/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A2 learning task. Short personal recollections provide varied voices and familiar past-experience questions. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "uSzUfHnxojA",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "A2",
+      "topics": [
+        "food",
+        "daily life"
+      ],
+      "format": "tour",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/grocery-store-shopping",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The A2 lesson directly links a grocery-store tour and describes its presenter discussing foods and shopping choices. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "uw-ts4TvcsY",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "B1",
+      "topics": [
+        "environment",
+        "science"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/about-hurricanes",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The official publisher index assigns A2-B1 to this exact linked hurricane explainer, and the lesson describes a listening exercise about the subject. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "vPrtNzvDS5M",
+      "level": "A2",
+      "levelMin": "A2",
+      "levelMax": "A2",
+      "topics": [
+        "food",
+        "daily life"
+      ],
+      "format": "demonstration",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://app.fluentize.com/lesson/french-toast",
+        "checkedAt": "2026-09-29T08:19:37.846704Z",
+        "statement": "The exact linked cooking video appears in a publisher lesson labelled A2 with instructional comprehension tasks. No independent acoustic assessment was performed. Publisher task suitability is retained; audio quality and speech rate were not measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence public-source review (Codex)",
+      "reviewedAt": "2026-09-29T08:19:37.846704Z",
+      "learningValue": "strong",
+      "contentValue": "adequate",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "-QxZv_wJ1aA",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "nature",
+        "work",
+        "travel"
+      ],
+      "format": "documentary",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/phrasal-verbs-with-away/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. A working airport dog provides a concrete story connecting animal behavior with a recognizable job. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "1eudHvnRMEw",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "travel",
+        "daily life"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/talking-about-bucket-lists/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. An ambitious journey offers a concrete sequence of places and achievements. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "2mxhnZqpeCM",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "history",
+        "daily life"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-past-perfect/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. An old purse found at school creates a concrete mystery with a clear chronological story. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "5USw_7MKooU",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "society",
+        "work"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/journalism-and-the-news/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. A youth-oriented journalism explanation introduces how reporters gather and check information. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "62_UtYoyWo4",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "society",
+        "travel"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/speaking-lesson-on-big-cities/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. A city population story invites comparison of urban life across countries. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "6sITr5V1XdE",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "work",
+        "school"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/does-everyone-need-a-mentor/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. Guidance about finding a mentor supports following practical steps and discussing professional relationships. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "6ywODcJ8yu8",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "technology",
+        "history"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/past-predictions/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. An archive report makes past predictions about everyday technology easy to discuss. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "ChQBHSL8vVg",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "society",
+        "history",
+        "school"
+      ],
+      "format": "storytelling",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/the-youth-changing-the-world/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. A young campaigner's story connects personal events with education and participation in society. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "EdKkZe8IHn8",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "health",
+        "psychology"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/dental-health-vocabulary/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. A hospital's discussion of dental anxiety supports understanding everyday concerns and reassurance. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "Eqc4A3J5rWg",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "travel",
+        "daily life"
+      ],
+      "format": "tour",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/are-you-ready-to-go/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. Packing suggestions connect objects, choices and practical reasons within a familiar travel situation. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "ExJZAegsOis",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "work"
+      ],
+      "format": "conversation",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/vocabulary-for-job-interviews/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. A job interview scenario supplies useful listening for common workplace exchanges. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "MnrINCauK-E",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "work",
+        "psychology"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-reported-speech/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. Practical networking advice offers transferable workplace vocabulary and a clear purpose. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "OQsd7UYsl6I",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "society",
+        "daily life"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/mommunes/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. Parents describe shared households and childcare, adding personal perspectives to a familiar family topic. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "RZnWtHZFgEA",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "daily life",
+        "entertainment"
+      ],
+      "format": "comedy",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/lesson-on-making-plans/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. Friends negotiate conflicting schedules in a short scripted exchange, supporting practical planning and conversational turn-taking. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "WhDNMdU1zhQ",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "technology",
+        "daily life"
+      ],
+      "format": "demonstration",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/a-trip-down-memory-lane/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. Practical photo preservation connects familiar keepsakes with an ordered explanation of a digital task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "YY6qwSYppIo",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "psychology",
+        "science"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/how-good-is-your-memory/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. A memory competition supplies concrete examples for discussing recall and everyday strategies. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "YkSIjJQ73jI",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "work",
+        "psychology"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/should-i-feel-bad-about-it/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. Reporting about difficulty taking time off connects workplace expectations with familiar feelings; retain the publisher's B1-B2 range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "Zy1h49_L8ME",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "work",
+        "business"
+      ],
+      "format": "demonstration",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-customer-service/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. Contrasting service interactions supports listening for tone, requests and responses. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "d55UGal_0BM",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "design",
+        "environment"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/lets-stop-this-monster/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. Youth-oriented reporting connects clothing purchases with production and waste, inviting practical comparisons. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "fF6Skl8eKnA",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "travel",
+        "psychology"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/gradable-and-ungradable-adjectives/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. A flight mix-up creates a compact story with recognizable emotions and sequence. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "ioZuCfD1Ce8",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "travel",
+        "society"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-overtourism/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. Residents' perspectives introduce practical community impacts of tourism. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "lTtfqECMEb8",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "food",
+        "science"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/dinner-table-phrases/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. A familiar dessert question connects everyday eating with a short causal explanation. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "ls-_j2A1RfA",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "technology",
+        "society"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-delivery-services/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. Changing letter delivery connects everyday communication to wider social change. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "n804iflkIGw",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "food",
+        "health"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/food-is-more-than-just-fuel/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. An explanation linking food choices and sleep supplies concrete examples for discussing habits; retain the publisher's B1-B2 range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "o1Y4Z0oh1GE",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "psychology",
+        "daily life"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/im-an-introvert-adjectives-to-describe-people/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. Different social preferences provide a familiar context for describing personalities without treating them as diagnoses. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "tEmt1Znux58",
+      "level": "B1",
+      "levelMin": "B1",
+      "levelMax": "B1",
+      "topics": [
+        "health",
+        "psychology"
+      ],
+      "format": "demonstration",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/the-power-of-breathing/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1 learning task. A hospital's breathing demonstration supplies an ordered everyday listening task rather than individualized medical advice. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "yfz1i-B_Be0",
+      "level": "B1",
+      "levelMin": "A2",
+      "levelMax": "B1",
+      "topics": [
+        "health",
+        "daily life"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/the-joy-of-walking/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a A2/B1 learning task. A physician explains ordinary walking habits; useful for following practical advice rather than specialist treatment. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "-PQEP3wdVo0",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "business",
+        "society"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/lesson-on-supply-chain-management/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. A comparison of inventory systems supplies connected reasoning about trade-offs and disruption. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "0S_hqbCbo9Y",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "C1",
+      "topics": [
+        "psychology",
+        "daily life"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/lone-wolf-or-social-butterfly-understanding-personalities/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2/C1 learning task. An examination of birth-order beliefs supports distinguishing common assumptions from explanations. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "1nDzaO7Hsnk",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "business",
+        "daily life"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/members-only-subscription-models/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. Advice about recurring subscriptions links familiar spending decisions with reasons and consequences. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "2pPj4GpO1Jc",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "C1",
+      "topics": [
+        "nature",
+        "health"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/talk-about-the-impact-of-nature/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2/C1 learning task. The relationship between natural surroundings and calm offers accessible real-life context. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "4A86JYyGV-4",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "work",
+        "food"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/its-never-too-late-to-dream-big/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. A person combining medicine and cooking describes career choices, providing a sustained personal account. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "6GaWpvH7k6I",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "technology",
+        "work"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/discussing-ai-and-jobs/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. A report on changing careers supports listening for consequences and contrasting possibilities. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "7SvQSKaYbwE",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "environment",
+        "business"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/how-to-combat-plastic-packaging/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. Reporting compares companies' packaging approaches, supporting evaluation of alternatives and their limitations. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "8q7D4EmbSCw",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "design",
+        "culture",
+        "creativity"
+      ],
+      "format": "talk",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/englands-most-eccentric-dresser/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. A designer explains self-expression through clothing in a sustained personal presentation. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "IXKcAwZKjTk",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "C1",
+      "topics": [
+        "business",
+        "design"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/elegance-versus-bling-phrases-for-giving-opinions/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2/C1 learning task. A luxury company's dilemma offers contrasting options and reasons for a business discussion. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "L761OoyW7qg",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "C1",
+      "topics": [
+        "nature",
+        "environment"
+      ],
+      "format": "documentary",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/save-coral-reefs/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2/C1 learning task. A practical coral-restoration story connects human actions with visible ecological goals. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "QCFb4BiDDcE",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "work",
+        "psychology",
+        "society"
+      ],
+      "format": "talk",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/unconscious-bias-in-recruitment/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. A recruiter draws on experience to explain hiring assumptions, supporting attention to argument and examples. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "UHAqhP8EeYQ",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "C1",
+      "topics": [
+        "creativity",
+        "psychology"
+      ],
+      "format": "talk",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/discussing-hobbies/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2/C1 learning task. A personal argument about turning hobbies into work provides stance and opinion language. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "UNP03fDSj1U",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "daily life",
+        "psychology"
+      ],
+      "format": "talk",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/give-it-a-shot-for-30-days-30-day-english-challenge/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. A speaker reflects on a limited personal challenge and connects experience with practical suggestions. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "ZkXrTHpnQrQ",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "C1",
+      "topics": [
+        "technology",
+        "culture"
+      ],
+      "format": "talk",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/talking-about-critical-thinking/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2/C1 learning task. A discussion of language change connects familiar AI tools with communication and critical reflection. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "atLvsjIIsOI",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "work",
+        "technology"
+      ],
+      "format": "demonstration",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/business-presentations-in-english/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. Presentation advice connects concrete delivery choices with their effect on an online audience. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "bioiu-XAmUE",
+      "level": "B2",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "entertainment",
+        "technology"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/the-return-of-physical-media/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. A return to physical media connects cultural preferences with reasons for changing habits. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "dbCR0KSU52g",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "C1",
+      "topics": [
+        "nature",
+        "environment"
+      ],
+      "format": "documentary",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/is-it-too-late-to-save-wildlife/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2/C1 learning task. A broadcaster explains pressures on wildlife, offering connected causes and consequences within the publisher's B2-C1 range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "kOVdiDUlNsg",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "psychology",
+        "daily life"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/talking-about-friendships/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. An explanation of lasting friendship links familiar experience with connected reasoning. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "l_NYrWqUR40",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "psychology",
+        "work"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-confidence/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. A structured confidence explanation offers a useful sequence of ideas and practical examples. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "lmbhEZRfRbQ",
+      "level": "B2",
+      "levelMin": "B1",
+      "levelMax": "B2",
+      "topics": [
+        "technology",
+        "society"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/speaking-lesson-on-ai-partners/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B1/B2 learning task. AI companionship raises concrete questions about relationships and digital life. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "lnkP70OE-_s",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "C1",
+      "topics": [
+        "creativity",
+        "work"
+      ],
+      "format": "storytelling",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/talking-about-recognition-at-work/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2/C1 learning task. A creative professional reflects on recognition and work through a short personal narrative. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "pcDV08dBpcA",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "C1",
+      "topics": [
+        "environment",
+        "technology"
+      ],
+      "format": "documentary",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/i-get-electricity-from/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2/C1 learning task. An electricity-sharing example connects individual households with a broader energy system; retain the publisher's B2-C1 range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "s6yhQhFrZIc",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "culture",
+        "business"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/discussing-trends/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. The growth of beauty trends connects consumer culture with an economic explanation. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "sK3PesDJxVs",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "creativity",
+        "work",
+        "culture"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/there-is-a-lot-of-work-behind-the-scenes/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. An artist's perspective challenges assumptions about creative work and professional identity. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "vs-Km-0QsBc",
+      "level": "B2",
+      "levelMin": "B2",
+      "levelMax": "B2",
+      "topics": [
+        "daily life",
+        "psychology"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/saying-no-in-english/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a B2 learning task. An explanation of polite refusal combines practical expressions with interpersonal reasons for using them. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "0Y2bzRZMpoI",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "nature",
+        "environment"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-animal-treatment/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. A practical farming story links animal care and land management with a tangible outcome. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "2sWQ_3IAxoA",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "science",
+        "work"
+      ],
+      "format": "documentary",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/does-teamwork-make-the-dream-work/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. An astronaut training challenge provides interaction and teamwork under pressure. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "6Z-YZ3A4mdk",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "culture",
+        "creativity"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/art-that-refuses-to-settle/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. A museum introduces performance art, supporting interpretation of artistic purpose and evaluation of unfamiliar work. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "8MqTOEospfo",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "science",
+        "society"
+      ],
+      "format": "talk",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/advanced-class-debate/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. A science communicator argues for scientific thinking, supporting analysis of stance and persuasion. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "95jabRNJ6Ng",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "business",
+        "environment"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esg-from-compliance-to-commitment/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Competing views on investment standards support careful listening for stance and qualification. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "AESkozhaT4s",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "psychology",
+        "society"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/speaking-lesson-on-adulthood/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Competing meanings of adulthood support interpretation of definitions, evidence and social expectations. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "Aj_UWp8Y5D4",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "school",
+        "work"
+      ],
+      "format": "storytelling",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/advanced-lesson-on-education/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. An educator's perspective supports following experiences and arguments about working conditions. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "BrJv_wUEKko",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "culture",
+        "entertainment"
+      ],
+      "format": "comedy",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-pronunciation-and-spelling/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. A comedian plays with spelling and pronunciation, adding humorous implication within the publisher's C1-C2 task range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "JeU_EYFH1Jk",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "technology",
+        "food",
+        "environment"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/discussing-farming/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Reporting on agricultural AI connects a concrete farming setting with claims about technological change. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "LalLLhuj_3Q",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "culture",
+        "society"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-becoming-adults/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. A coming-of-age tradition adds a cultural perspective and varied English voices. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "NaPBcUUqbew",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "society",
+        "history"
+      ],
+      "format": "talk",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/prisons-rehabilitation-or-retribution/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. An argument about imprisonment supports following evidence, causes and social consequences without graphic material. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "PbEVwQdWdAQ",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "science",
+        "society"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-forensic-science/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. Forensic examples connect technical methods with evidential reasoning; the lesson supports the level, not the scientific topic alone. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "U8t7ynemJLI",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "creativity",
+        "society"
+      ],
+      "format": "storytelling",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/inclusivity-in-the-art-world/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Art and accessibility provide a personal perspective on inclusive creative practice. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "Ww9V1IA-HwI",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "culture",
+        "creativity"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/lesson-on-metaphors/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. An explanation of metaphor invites interpretation of figurative meaning rather than only literal comprehension. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "Z54YLWUp8Ro",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "technology",
+        "creativity",
+        "society"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-copyright/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. Reporting on writers and generative AI introduces competing claims about ownership and creative work. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "iMtXqTmfta0",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "design",
+        "nature",
+        "technology"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/how-nature-inspires-innovation/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Examples of nature-inspired design connect analogies with proposed solutions and their underlying reasoning. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "l7fyqpHKARg",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "society",
+        "work",
+        "business"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/closing-the-gender-pay-gap/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. A discussion of unequal pay presents causes and possible responses, supporting attention to qualification and evidence. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "qdK5uK7B0Lo",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "society",
+        "history"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/lets-talk-about-democracy/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. A civic explanation introduces competing institutional arguments and nuanced distinctions. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "sd9d5z7idyQ",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "history",
+        "society",
+        "daily life"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/families-advanced-speaking-lesson/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. A historical argument about household structure supports following social change and questioning familiar assumptions. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "tMiyzuO1qMs",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "psychology",
+        "work"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/talking-about-multitasking/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Multitasking provides useful language for sustained explanations of attention and everyday trade-offs. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "tVm85IAjH50",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "business",
+        "society"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/financial-crimes/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. An explanation of financial crime links a process with its social consequences and specialist vocabulary. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "uk-JuzGlSgs",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C1",
+      "topics": [
+        "psychology",
+        "daily life"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/why-are-we-late-personality-traits/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1 learning task. An account of punctuality connects personal habits with different interpretations of time and behavior. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "wNlnSMe8imo",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "food",
+        "science"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/our-food-choices/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. The process behind cultivated food introduces specialist vocabulary in a concrete production context. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "yEKtQD5R2pc",
+      "level": "C1",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "society",
+        "work"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/in-news-we-trust/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Perspectives on journalism invite comparison of institutional pressures and the reliability of information. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "4IaBt9rEx1A",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "food",
+        "society",
+        "technology"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/lesson-plan-on-global-problems/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. A food-access initiative supports evaluating a practical response to a complex problem within a publisher-graded C2 task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "4eIDBV4Mpek",
+      "level": "C2",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "psychology",
+        "business"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/how-brands-influence-our-thinking/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Experts connect branding with cognition, supporting inference and discussion of persuasive mechanisms. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "B7vP3KTbI7c",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "culture",
+        "society"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/advanced-lesson-on-flags/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. Conflicting interpretations of a national symbol support nuanced debate; C2 denotes publisher task suitability. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "CJmd0kPpIDg",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "design",
+        "business",
+        "environment"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/talking-about-used-things/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. Reporting on clothing rental supports evaluating commercial and social trade-offs within a publisher-graded C2 task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "Dru78IHxQE0",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "society",
+        "science"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/underpopulation-or-overpopulation/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. Competing population arguments offer an advanced comparison task; technical subject alone does not establish difficulty. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "GyN2RhbhiEU",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "science",
+        "school"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/irregular-plural-nouns/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. Scientific laws and theories support a publisher-graded task contrasting definitions and evidence. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "I6ArK38wkSg",
+      "level": "C2",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "entertainment",
+        "daily life"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/the-quirky-side-of-you/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. A multi-guest conversation about unusual routines provides natural turn-taking and humorous implication. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "JMlJcOSRX-8",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "psychology",
+        "science"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/advanced-conditional-structures/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. A researcher discusses twin studies and competing explanations; C2 denotes the publisher's hypothetical reasoning task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "JwhouCNq-Fc",
+      "level": "C2",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "culture",
+        "creativity"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/why-poetry-still-matters/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. A discussion of poetry supports interpretation and evaluation of literary ideas; C2 is task suitability within a C1-C2 publisher range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "Z3HJCQJ2Lmo",
+      "level": "C2",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "business",
+        "work"
+      ],
+      "format": "talk",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/sealing-the-deal/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Negotiation strategies invite attention to figurative framing and pragmatic language within a C1-C2 task range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "fmmu1bCzgYg",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "entertainment",
+        "creativity"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/all-about-acting/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. An actor reflects on performance and emotion; C2 refers to the publisher's emphasis and interpretation task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "gVPZDn2v_Kg",
+      "level": "C2",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "business",
+        "work"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/uncertain-times-in-business/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. A management framework invites advanced comparison of uncertainty, ambiguity and practical responses. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "goBY5FnI-yA",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "business",
+        "society"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/wealth-tax/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. A tax-policy dispute supports weighing competing interests; C2 denotes the publisher's advanced discussion task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "j3OqAN4ISOw",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "travel",
+        "design"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/advanced-lesson-on-airports/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. An unconventional airport design supports advanced discussion of constraints and alternatives; level is publisher task suitability. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "lv2GooT7Gyc",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "technology",
+        "creativity",
+        "entertainment"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/advanced-lesson-on-ai/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. An AI-generated performer raises competing views on creative labor; C2 denotes the publisher's argumentation task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "lv4fWhObaTM",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "history",
+        "culture"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/shakespeare-the-be-all-and-end-all/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. The continuing influence of Shakespeare provides idiomatic and literary language for an advanced listening task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "mFc80PhnU7w",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "technology",
+        "environment"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/e-waste-recycling/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. A recycling process connects technical description with evaluation of waste solutions; C2 denotes publisher task suitability. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "paXKoZ1pr5w",
+      "level": "C2",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "entertainment",
+        "science",
+        "creativity"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/the-stuff-of-science-fiction/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. A discussion of speculative fiction connects prediction and imagination; C2 is task suitability within a C1-C2 publisher range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "qssbbzS3lbM",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "technology",
+        "science",
+        "society"
+      ],
+      "format": "talk",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/esl-lesson-on-transhumanism/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. A pro-transhumanism argument invites scrutiny of assumptions and ethics; C2 refers to the publisher's discussion task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "sPvXIeTr2qI",
+      "level": "C2",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "entertainment",
+        "history",
+        "technology"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/video-games-c2-lesson-plan/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. A history of influential games supports interpretation of cultural change; the publisher explicitly favors C2 within its C1-C2 range. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "vTWhsgs3ZRA",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "business",
+        "technology"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/advanced-lesson-on-pricing/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. Dynamic pricing connects mechanisms with questions of fairness; C2 refers to the publisher's evaluative task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "wLDrP_QX4Fo",
+      "level": "C2",
+      "levelMin": "C1",
+      "levelMax": "C2",
+      "topics": [
+        "entertainment",
+        "culture"
+      ],
+      "format": "interview",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/advanced-lesson-on-humour/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C1/C2 learning task. Humorous narration foregrounds irony, understatement and culturally situated meaning. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "xgwRAjmARZc",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "culture",
+        "business",
+        "daily life"
+      ],
+      "format": "news report",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/to-tip-or-not-to-tip/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. Changing tipping practices invite comparison of expectations and economic pressures within a publisher-graded C2 task. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    },
+    {
+      "videoId": "ym3XO5VsvMw",
+      "level": "C2",
+      "levelMin": "C2",
+      "levelMax": "C2",
+      "topics": [
+        "design",
+        "culture"
+      ],
+      "format": "explainer",
+      "evidence": {
+        "kind": "publisher_cefr",
+        "sourceUrl": "https://eslbrains.com/beauty-in-the-broken-life-philosophies/",
+        "checkedAt": "2026-09-29T08:25:57Z",
+        "statement": "The publisher links this exact video within a C2 learning task. A craft philosophy supports discussion of imperfection and abstract values with visual context. This is documented task suitability; speech speed, audio quality and intrinsic CEFR were not independently measured.",
+        "englishConfirmed": true,
+        "exactVideoMatch": true
+      },
+      "reviewer": "ProjectFluence source-evidence review",
+      "reviewedAt": "2026-09-29T08:25:57Z",
+      "learningValue": "strong",
+      "contentValue": "strong",
+      "confidence": "medium"
+    }
+  ]
+}

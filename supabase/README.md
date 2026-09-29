@@ -94,3 +94,80 @@ PGLITE_MODULE=/tmp/projectfluence-sql-validation/node_modules/@electric-sql/pgli
 This uses minimal `auth.users`/`auth.uid()` and role fixtures. It verifies migration adoption, transactions/rollback, stable-ID retries, privileged RPC grants, RLS ownership, signup collisions, counters, and analytics above 1000 rows. PGlite has core `gen_random_uuid()` but not the unused `pgcrypto` package, so the test omits only `CREATE EXTENSION pgcrypto`. It serializes connections; it does not prove multi-connection contention behavior, hosted Auth, PostgREST shape, or real OAuth delivery. Complete the full Supabase staging smoke checks before production.
 
 References: [Supabase migrations](https://supabase.com/docs/guides/local-development/database-migrations), [RLS](https://supabase.com/docs/guides/database/postgres/row-level-security), [database function grants](https://supabase.com/docs/guides/database/functions), [local CLI config](https://supabase.com/docs/guides/local-development/cli/config), [Auth redirects](https://supabase.com/docs/guides/auth/redirect-urls).
+
+## VidMatch curated catalog migration (not a hosted deployment)
+
+`20260930000100_vidmatch_curation.sql` adds private discovery/run/evaluation records, separate editorial provenance and provider freshness, expiring worker leases, and transactional publication. It does not add fabricated content or overwrite existing editorial labels. Apply it only through the migration workflow above, after reviewing a backup/staging copy. Code using the new fields/RPCs must be deployed after this migration.
+
+Existing catalog/history rows receive a 30-day **adoption retention window**, not a fabricated verification timestamp. Their availability starts `unknown`. Run curated-manifest approval after migration: a matching-level legacy seed can gain provenance and become active without changing its existing level, skills, topics, accent, or quality score. A conflicting level remains unactivated and is reported as an activation conflict, requiring explicit review. Merely refreshing provider metadata does not certify editorial quality.
+
+The committed transcript SQL remains available but this pipeline does not depend on any uncommitted transcript service. Caption presence means the provider reports captions, not that this application acquired a transcript. Approval does not require a transcript API, and provider popularity statistics are not a grading input.
+
+### Durable records and permissions
+
+- `vidmatch_ingestion_runs`: unique stable run key, evaluator version/configuration, lease token/expiry, terminal state, safe metrics/error code.
+- `vidmatch_candidates`: unique video ID, own discovery context, purgeable provider snapshot/hash/timestamps, work stage, retry time and expiring claim. Rejections remain durable; expired snapshots enter `stale` until fresh discovery.
+- `vidmatch_evaluations`: one result per run/video, stable evaluation UUID, input hash, retry digest, decision/reasons, own editorial rationale, separate purgeable provider snapshot, and publication result. Editorial rationale must not contain copied provider titles/descriptions or private user content.
+- Catalog additions: channel ID, content format, confidence, CEFR range, review timestamp, latest evaluation, availability/check timestamps, two-strike state and provider expiry. Confidence is an editorial confidence category represented numerically, not a calibrated statistical probability.
+- History gains its own provider snapshot expiry. Learning identities, click counts, activity dates, and own classifications survive metadata redaction.
+
+Only `service_role` can read/write pipeline tables or invoke public pipeline RPCs. Browser roles receive neither table grants nor executable RPC grants; RLS is enabled. Functions use a fixed empty search path. Worker authentication remains the responsibility of the existing protected server routes; never provide a service key to the browser.
+
+### RPC contract
+
+Every RPC returns a scalar JSON object. All discovery, result, and check batches contain at most 50 items; candidate/result batches must have unique video IDs.
+
+| RPC | Parameters | Result / behavior |
+| --- | --- | --- |
+| `begin_vidmatch_ingestion_run` | `p_run_key text`, `p_evaluator_version text`, `p_config jsonb`, `p_lease_seconds integer = 900` | `{run_id, lease_token, lease_until, status, claimed}`. Lease range 30–3600 seconds. Duplicate active/finished runs return `claimed:false` and no token. Expired/failed runs can recover the same ID with a new token; changed configuration under the same key fails. |
+| `stage_vidmatch_candidates` | `p_run_id uuid`, `p_lease_token uuid`, `p_candidates jsonb` | `{staged}`. Stores discovery without publishing. Other workers' live claims and newer metadata are preserved. A live claim owner may rebind fresh provider metadata/current review hash before commit. Same rejected input/version respects its retry time. |
+| `claim_vidmatch_candidates` | `p_run_id uuid`, `p_lease_token uuid`, `p_limit integer = 25` | `{candidates:[rows]}`. Claims due fresh candidates with `FOR UPDATE SKIP LOCKED`; recovers expired claims. One evaluation per video per run. |
+| `commit_vidmatch_evaluations` | `p_run_id uuid`, `p_lease_token uuid`, `p_results jsonb` | `{approved,rejected,deferred,inserted,existing,activation_conflicts}`. Stores evaluation and catalog changes in one transaction. Identical retries return the recorded result; changed retries fail. Expired/replaced tokens cannot perform new work. |
+| `finish_vidmatch_ingestion_run` | `p_run_id uuid`, `p_lease_token uuid`, `p_status text`, `p_metrics jsonb`, `p_error_code text = null` | `{run_id,status}`. Status is `completed`, `partial`, or `failed`. Releases unfinished claims. The same final request is idempotent. |
+| `refresh_vidmatch_provider_metadata` | `p_checks jsonb` | `{active,suspect,inactive,transient,ignored,unknown}`. Refreshes provider fields and availability only; never changes editorial judgments. |
+| `purge_expired_vidmatch_provider_data` | `p_limit integer = 50` | `{purged,remaining,catalog,history,candidates,evaluations}`. Total rows changed is at most the limit. Repeat while `remaining:true`, subject to a bounded job budget; report an incomplete purge so the next scheduled run resumes it. |
+
+A candidate is:
+
+```json
+{
+  "video_id": "Abcdef12345",
+  "discovery_source": "manual",
+  "discovery_context": {"query": "own search query"},
+  "provider_metadata": {"title": "provider title", "channel_name": "provider channel", "channel_id": "provider ID", "thumbnail_url": "https://i.ytimg.com/vi/Abcdef12345/hqdefault.jpg", "duration": "PT5M", "description": "provider description", "tags": [], "captions_available": true, "privacy_status": "public", "upload_status": "processed", "age_restricted": false, "embeddable": true, "region_restricted": false, "live": false},
+  "metadata_checked_at": "ACTUAL_FETCH_TIME_ISO8601",
+  "input_sha256": "64_lowercase_hex_characters"
+}
+```
+
+An evaluation is `{video_id,evaluation_id,input_sha256,decision,reason_codes,evidence,editorial,retry_after?}`. `decision` is `approved`, `rejected`, or `deferred`. The evidence object contains independently authored rationale and source identifiers, not a second provider-metadata copy. Approved editorial payloads require `level`, `skills[]`, `topics[]`, `quality_score` (0–100), `classification_confidence` (0–1), and `editorial_reviewed_at`; optional fields are `accent`, `content_format`, `level_min`, `level_max`. The level must be inside any supplied range. Rejected/deferred evaluations can supply an empty editorial object. Deferred results require a future `retry_after`. IDs must match the claimed snapshot/hash. Approval requires fresh public/processed, embeddable, non-age-restricted, non-region-restricted, non-live metadata; an invalid item rolls back its whole batch.
+
+The worker records `review_available` and the current independent `review_sha256` in discovery context. It skips unchanged approved records and rejected/deferred cooldowns before spending metadata quota. Claims from earlier runs are rechecked and rebound to the exact current provider/review hash before publication. Provider search results alone never supply missing English or CEFR evidence. Reservation RPCs (`begin`, `claim`, and bounded `purge`) are not automatically retried after an ambiguous lost response; their leases/expiry permit a later safe recovery.
+
+Default worker execution is limited to four claim batches and 180 seconds, checked between bounded operations with headroom for finishing the run. The HTTP cron shares an absolute 240-second budget between health and discovery, reserves the remaining minute for completion, and reports partial discovery when health leaves insufficient time. Catalog pages and legacy channel resolution respect the same deadline. A CLI import can explicitly request up to 40 batches and 600 seconds. Discovery uses the manifest only as an evidence lookup; importing stages its full contents in bounded batches. `partial` is terminal for its run key so repeated scheduler requests spend no more quota. To continue an incomplete import, use a new unique run key with the same reviewed manifest; already approved unchanged rows are skipped and released pending claims are available. Failed/expired attempts can recover the same run key. Health maintenance purges one batch by default and reports `remaining:true`; a separate bounded maintenance invocation may request additional batches.
+
+A refresh check is `{video_id,status,checked_at,provider_metadata?}`. `status` is `available`, `missing`, `restricted`, or `transient_error`. Only `available` includes the complete normalized provider snapshot above. All timestamps represent actual observations; future timestamps beyond five minutes fail. Older/duplicate confirmed checks are ignored. A first confirmed missing/restricted observation sets `suspect` and is excluded from recommendations immediately. A second distinct observation at least 24 hours after the first sets `inactive`. Early confirmations remain suspect; transport/API errors do not add a strike or prolong provider-data expiry. Success resets strikes; reviewed entries become active, unreviewed entries remain unknown.
+
+### Availability and retention operations
+
+Recommendations must require all of:
+
+```text
+availability_status = active
+editorial_reviewed_at is not null
+provider_metadata_expires_at > current time
+```
+
+Apply the same rules to similarity candidates and source visibility. Run provider rechecks well before 30 days, with each successful snapshot expiring no later than 30 days after its actual fetch. Run bounded purge batches on the scheduled job even if provider refresh fails. Do not report a provider outage as confirmed deletion, and do not refresh `metadata_checked_at` from a cached observation merely to extend expiry.
+
+Purge replaces expired catalog/history provider titles with an application-authored unavailable placeholder, removes copied channel/thumbnail/duration/description/tags metadata where present, and marks catalog entries inactive. It preserves catalog rows, video identifiers/canonical links, own editorial fields/evidence, and learning history identities/activity. Expired candidate/evaluation provider snapshots are cleared separately. Expiry becomes null after redaction so repeated bounded purges advance; inactive/stale status prevents accidental reuse. Fresh discovery can restart evaluation and fresh verified provider data can restore already reviewed content. The existing history-write RPC propagates catalog expiry on each new click so historical copies cannot persist indefinitely by accident.
+
+Provider copies in files, exported manifests, logs, and external backups need their own retention handling; database purge cannot erase those. Store durable manual annotations separately from expiring provider snapshots. This migration deliberately does not delete preexisting transcript text without ownership/source provenance: review the retention rules for those separate transcript records before enabling any transcript acquisition pipeline.
+
+### Additional SQL validation
+
+```sh
+PGLITE_MODULE=/tmp/projectfluence-sql-validation/node_modules/@electric-sql/pglite/dist/index.js node --experimental-strip-types scripts/validate-vidmatch-curation-db.mjs
+```
+
+The suite exercises adoption of legacy catalog rows, duplicate schedules, staged publication, identical/conflicting retries, rejected/deferred records, transactional rollback, recovered leases, matching-level activation without editorial overwrite, level conflicts, the 24-hour confirmation rule, transient failures, provider-only refresh, bounded metadata redaction preserving learning history, stale rediscovery, role denial, owned claim rebinding, and the real TypeScript worker's RPC sequence. It runs only against an isolated PostgreSQL/WASM instance with provider fixtures. Full Supabase/PostgREST execution and simultaneous independent PostgreSQL connections remain staging checks; the embedded engine serializes calls.
