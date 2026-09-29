@@ -5,13 +5,13 @@
   "words": [
     { "word": "read", "meaning": "to look at words and understand them", "japaneseMeaning": "読む", "synonyms": "", "antonyms": "", "forms": "read, reads, reading, read, read", "example": "I read a book after dinner." },
     { "word": "write", "meaning": "to make words with a pen or keyboard", "japaneseMeaning": "書く", "synonyms": "", "antonyms": "erase", "forms": "write, writes, writing, wrote, written", "example": "Please write your name." },
-    { "word": "ask", "meaning": "to say a question", "japaneseMeaning": "尋ねる、頼む", "synonyms": "question", "antonyms": "answer", "forms": "ask, asks, asking, asked, asked", "example": "Ask the teacher for help." },
+    { "word": "ask", "meaning": "to say or write a question", "japaneseMeaning": "尋ねる、頼む", "synonyms": "question", "antonyms": "answer", "forms": "ask, asks, asking, asked, asked", "example": "Ask the teacher what this word means." },
     { "word": "answer", "meaning": "to say or write a reply", "japaneseMeaning": "答える", "synonyms": "reply", "antonyms": "ask", "forms": "answer, answers, answering, answered, answered", "example": "Please answer the question." },
     { "word": "spell", "meaning": "to say or write the letters of a word", "japaneseMeaning": "つづる、スペルする", "synonyms": "", "antonyms": "", "forms": "spell, spells, spelling, spelled, spelled", "example": "Can you spell your name?" },
     { "word": "copy", "meaning": "to write the same thing again", "japaneseMeaning": "写す、コピーする", "synonyms": "", "antonyms": "", "forms": "copy, copies, copying, copied, copied", "example": "Copy the sentence in your notebook." },
     { "word": "draw", "meaning": "to make a picture with a pen or pencil", "japaneseMeaning": "描く", "synonyms": "sketch", "antonyms": "erase", "forms": "draw, draws, drawing, drew, drawn", "example": "Draw a cat on the paper." },
     { "word": "count", "meaning": "to say numbers in order", "japaneseMeaning": "数える", "synonyms": "", "antonyms": "", "forms": "count, counts, counting, counted, counted", "example": "Count the apples on the table." },
-    { "word": "color", "meaning": "to add color to a picture", "japaneseMeaning": "色を塗る", "synonyms": "", "antonyms": "", "forms": "color, colors, coloring, colored, colored", "example": "Color the flower yellow." },
+    { "word": "color", "meaning": "to fill a picture with crayons, pencils, or other colored materials", "japaneseMeaning": "色を塗る", "synonyms": "", "antonyms": "", "forms": "color, colors, coloring, colored, colored", "example": "Color the flower yellow." },
     { "word": "check", "meaning": "to look to see if something is right", "japaneseMeaning": "確認する", "synonyms": "look at", "antonyms": "ignore", "forms": "check, checks, checking, checked, checked", "example": "Check your answer before class." }
   ]
 }

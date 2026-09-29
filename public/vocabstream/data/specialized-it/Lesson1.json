@@ -1,0 +1,135 @@
+{
+  "lesson_id": "specialized-it-lesson-1",
+  "title": "Lesson 1",
+  "paragraph": "コンピューターとデータ",
+  "words": [
+    {
+      "word": "software",
+      "meaning": "programs that tell a computer what to do",
+      "japaneseMeaning": "ソフトウェア",
+      "example": "You need to update the software before opening this file.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "hardware",
+        "file"
+      ]
+    },
+    {
+      "word": "hardware",
+      "meaning": "the physical parts of a computer system",
+      "japaneseMeaning": "ハードウェア",
+      "example": "The repair team checks the hardware for damage.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "network",
+        "folder"
+      ]
+    },
+    {
+      "word": "browser",
+      "meaning": "a program used to open and view websites",
+      "japaneseMeaning": "ブラウザー",
+      "example": "Open the link in your browser.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "database",
+        "backup"
+      ]
+    },
+    {
+      "word": "server",
+      "meaning": "a computer or program that provides services to other computers",
+      "japaneseMeaning": "サーバー",
+      "example": "The server sends the requested page to your browser.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "file",
+        "storage"
+      ]
+    },
+    {
+      "word": "network",
+      "meaning": "a group of connected devices that can exchange information",
+      "japaneseMeaning": "ネットワーク",
+      "example": "All the office computers use the same network.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "folder",
+        "software"
+      ]
+    },
+    {
+      "word": "database",
+      "meaning": "an organized collection of information that a computer can search and update",
+      "japaneseMeaning": "データベース",
+      "example": "We store customer addresses in a database.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "backup",
+        "hardware"
+      ]
+    },
+    {
+      "word": "file",
+      "meaning": "a named collection of information stored on a computer",
+      "japaneseMeaning": "ファイル",
+      "example": "Save the document as a new file.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "storage",
+        "browser"
+      ]
+    },
+    {
+      "word": "folder",
+      "meaning": "a place used to group files on a computer",
+      "japaneseMeaning": "フォルダー",
+      "example": "Put the photos in a separate folder.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "software",
+        "server"
+      ]
+    },
+    {
+      "word": "backup",
+      "meaning": "an extra copy of data kept in case the original is lost",
+      "japaneseMeaning": "バックアップ",
+      "example": "Make a backup before you replace the computer.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "hardware",
+        "network"
+      ],
+      "sentencePractice": {
+        "prompt": "Keep an extra copy of the data in case the original is lost. This extra copy is a ____.",
+        "distractors": [
+          "browser",
+          "network"
+        ],
+        "reviewNote": "The defined role is a recoverable copy of data, not software for viewing sites or connected devices."
+      }
+    },
+    {
+      "word": "storage",
+      "meaning": "space or equipment used to keep digital information",
+      "japaneseMeaning": "記憶領域・ストレージ",
+      "example": "The device has enough storage for all our videos.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "browser",
+        "database"
+      ]
+    }
+  ]
+}

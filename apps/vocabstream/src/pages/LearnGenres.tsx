@@ -1,13 +1,13 @@
 import { Link } from "../lib/router-compat";
 import { useAuth } from "../AuthContext";
-import { vocabularyCourses, idiomCourses, upcomingCourses, type VocabularyCourse } from "../lib/catalog";
+import { vocabularyCourses, idiomCourses, specializedCourses, courseLessonNumbers, type VocabularyCourse } from "../lib/catalog";
 
 function Courses({ courses }: { courses: VocabularyCourse[] }) {
   return <div className="vs-course-grid">{courses.map((course) => <Link className="vs-course" to={`/learn/${course.id}`} key={course.id}>
     <span className="vs-level">CEFR {course.level}</span>
     <h3>{course.title}</h3>
     <p>{course.description}</p>
-    <span className="vs-course-footer">{course.lessons} レッスン <span aria-hidden="true">→</span></span>
+    <span className="vs-course-footer">{courseLessonNumbers(course).length} レッスン <span aria-hidden="true">→</span></span>
   </Link>)}</div>;
 }
 
@@ -17,7 +17,7 @@ export default function LearnGenres() {
     <header className="vs-page-heading">
       <p className="pf-eyebrow">VOCABULARY PRACTICE</p>
       <h1>レベルを選ぶ</h1>
-      <p>英語の定義と例文で学び、クイズで確認します。</p>
+      <p>画像ややさしい説明、例文で学び、クイズで確認します。</p>
     </header>
     <section className="vs-start-strip" aria-labelledby="vs-start-title">
       <div><h2 id="vs-start-title">{user ? "単語を復習" : "初めての方へ"}</h2>
@@ -32,7 +32,7 @@ export default function LearnGenres() {
       <div className="vs-section-heading"><div><h2 id="vs-idioms-title">熟語</h2></div><span className="vs-muted">4 レベル</span></div>
       <Courses courses={idiomCourses} />
     </section>
-    <section className="vs-upcoming" aria-labelledby="vs-upcoming-title"><div><h2 id="vs-upcoming-title">専門分野のことば</h2><span className="vs-badge">準備中</span></div><div className="vs-topic-list">{upcomingCourses.map((name) => <span key={name}>{name}</span>)}</div></section>
+    <section className="vs-section" aria-labelledby="vs-specialized-title"><div className="vs-section-heading"><h2 id="vs-specialized-title">専門分野のことば</h2><span className="vs-muted">6 分野</span></div><p className="vs-muted">分野の入門に役立つ英語を学びます。表示レベルは英語の目安です。</p><Courses courses={specializedCourses} /></section>
 
   </div>;
 }

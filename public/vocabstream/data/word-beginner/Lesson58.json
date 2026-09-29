@@ -4,14 +4,14 @@
   "paragraph": "This lesson practices useful nouns for town and public places.",
   "words": [
     { "word": "corner", "meaning": "the place where two roads or walls meet", "japaneseMeaning": "角", "synonyms": "turn, edge", "antonyms": "center", "forms": "corner, corners", "example": "The bakery is on the corner." },
-    { "word": "crosswalk", "meaning": "a marked place where people cross a road", "japaneseMeaning": "横断歩道", "synonyms": "crossing, road line", "antonyms": "road", "forms": "crosswalk, crosswalks", "example": "Use the crosswalk to cross the street." },
-    { "word": "sidewalk", "meaning": "a path beside a road for people to walk on", "japaneseMeaning": "歩道", "synonyms": "footpath, path", "antonyms": "road", "forms": "sidewalk, sidewalks", "example": "Walk on the sidewalk, not the road." },
-    { "word": "overpass", "meaning": "a road or path over another road", "japaneseMeaning": "陸橋／高架橋", "synonyms": "bridge, crossing", "antonyms": "tunnel", "forms": "overpass, overpasses", "example": "Walk across the overpass." },
-    { "word": "tunnel", "meaning": "a road or path under the ground", "japaneseMeaning": "トンネル", "synonyms": "underground road, passage", "antonyms": "bridge", "forms": "tunnel, tunnels", "example": "The train goes through a tunnel." },
-    { "word": "square", "meaning": "an open place in a town", "japaneseMeaning": "広場", "synonyms": "plaza, open place", "antonyms": "room", "forms": "square, squares", "example": "People meet in the town square." },
-    { "word": "fountain", "meaning": "a place where water goes up into the air", "japaneseMeaning": "噴水", "synonyms": "water place, spring", "antonyms": "dry place", "forms": "fountain, fountains", "example": "There is a fountain in the park." },
-    { "word": "bench", "meaning": "a long seat for two or more people", "japaneseMeaning": "ベンチ", "synonyms": "seat, long chair", "antonyms": "floor", "forms": "bench, benches", "example": "We sit on a bench near the tree." },
-    { "word": "notice", "meaning": "a written message with information", "japaneseMeaning": "掲示／お知らせ", "synonyms": "sign, message", "antonyms": "blank board", "forms": "notice, notices", "example": "Read the notice before you enter." },
+    { "word": "crosswalk", "meaning": "a marked place where people cross a road", "japaneseMeaning": "横断歩道", "synonyms": "pedestrian crossing", "antonyms": "", "forms": "crosswalk, crosswalks", "example": "Use the crosswalk to cross the street." },
+    { "word": "sidewalk", "meaning": "a path beside a road for people to walk on", "japaneseMeaning": "歩道", "synonyms": "footpath", "antonyms": "", "forms": "sidewalk, sidewalks", "example": "Walk on the sidewalk, not the road." },
+    { "word": "overpass", "meaning": "a road or path over another road", "japaneseMeaning": "陸橋／高架橋", "synonyms": "bridge, crossing", "antonyms": "", "forms": "overpass, overpasses", "example": "Walk across the overpass." },
+    { "word": "tunnel", "meaning": "a road or path under the ground", "japaneseMeaning": "トンネル", "synonyms": "underground road, passage", "antonyms": "", "forms": "tunnel, tunnels", "example": "The train goes through a tunnel." },
+    { "word": "square", "meaning": "an open place in a town", "japaneseMeaning": "広場", "synonyms": "plaza, open place", "antonyms": "", "forms": "square, squares", "example": "People meet in the town square." },
+    { "word": "fountain", "meaning": "a place where water goes up into the air", "japaneseMeaning": "噴水", "synonyms": "", "antonyms": "", "forms": "fountain, fountains", "example": "There is a fountain in the park." },
+    { "word": "bench", "meaning": "a long seat for two or more people", "japaneseMeaning": "ベンチ", "synonyms": "", "antonyms": "", "forms": "bench, benches", "example": "We sit on a bench near the tree." },
+    { "word": "notice", "meaning": "a written message with information", "japaneseMeaning": "掲示／お知らせ", "synonyms": "announcement", "antonyms": "", "forms": "notice, notices", "example": "Read the notice before you enter." },
     { "word": "gateway", "meaning": "a gate or place where you go in", "japaneseMeaning": "出入口／門", "synonyms": "gate, way in", "antonyms": "exit", "forms": "gateway, gateways", "example": "The gateway is on the left." }
   ]
 }

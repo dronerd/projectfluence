@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>小さな四角に区切られた、茶色い板チョコレート。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><rect x="59" y="30" width="122" height="126" rx="8" fill="#805545"/><g fill="#a3755c" stroke="#684737" stroke-width="3"><rect x="68" y="39" width="29" height="46" rx="3"/><rect x="105" y="39" width="29" height="46" rx="3"/><rect x="142" y="39" width="29" height="46" rx="3"/><rect x="68" y="94" width="29" height="48" rx="3"/><rect x="105" y="94" width="29" height="48" rx="3"/><rect x="142" y="94" width="29" height="48" rx="3"/></g><path fill="#bdd7df" d="m51 109 30 11 30-9 25 11 26-12 26 5v46H51Z"/></g>
+</svg>

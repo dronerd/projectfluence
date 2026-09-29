@@ -7,7 +7,7 @@
       {"word": "prior", "meaning": "earlier in time", "japaneseMeaning": "以前の", "synonyms": "previous, earlier", "antonyms": "subsequent, later", "example": "He had prior experience in the field."},
       {"word": "simultaneous", "meaning": "happening at the same time", "japaneseMeaning": "同時の", "synonyms": "concurrent, synchronous", "antonyms": "sequential, staggered", "example": "The two events were simultaneous."},
       {"word": "ongoing", "meaning": "continuing without interruption", "japaneseMeaning": "進行中の", "synonyms": "continuous, current", "antonyms": "finished, halted", "example": "The ongoing project requires attention."},
-      {"word": "interim", "meaning": "temporary period", "japaneseMeaning": "暫定的な", "synonyms": "temporary, provisional", "antonyms": "permanent, final", "example": "An interim report was submitted."},
+      {"word": "interim", "meaning": "temporary and intended to last until something permanent is ready", "japaneseMeaning": "暫定的な", "synonyms": "temporary, provisional", "antonyms": "permanent, final", "example": "An interim report was submitted."},
       {"word": "duration", "meaning": "length of time", "japaneseMeaning": "期間", "synonyms": "period, span", "antonyms": "", "example": "The duration of the meeting was two hours."},
       {"word": "phase", "meaning": "stage in a process", "japaneseMeaning": "段階", "synonyms": "stage, step", "antonyms": "", "example": "The project entered its final phase."},
       {"word": "interval", "meaning": "time between events", "japaneseMeaning": "間隔", "synonyms": "gap, period", "antonyms": "continuity, unbroken", "example": "Short intervals improved efficiency."},

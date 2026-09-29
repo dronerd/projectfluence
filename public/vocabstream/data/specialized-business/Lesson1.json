@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-business-lesson-1",
+  "title": "Lesson 1",
+  "paragraph": "会計とお金",
+  "words": [
+    {
+      "word": "revenue",
+      "meaning": "money a business earns from its sales before costs are subtracted",
+      "japaneseMeaning": "売上高",
+      "example": "The report shows revenue for the last three months.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "budget",
+        "forecast"
+      ]
+    },
+    {
+      "word": "expense",
+      "meaning": "money spent to operate a business or carry out an activity",
+      "japaneseMeaning": "経費",
+      "example": "Travel is our largest expense this month.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "cash flow",
+        "investment"
+      ]
+    },
+    {
+      "word": "profit",
+      "meaning": "the money remaining when costs are subtracted from revenue",
+      "japaneseMeaning": "利益",
+      "example": "The shop made a small profit in its first year.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "invoice",
+        "asset"
+      ],
+      "sentencePractice": {
+        "prompt": "Sales brought in £100 and all costs were £70. The remaining £30 was the ____.",
+        "distractors": [
+          "revenue",
+          "expense"
+        ],
+        "reviewNote": "Revenue is100 and expense70; their30 difference is profit, not either input."
+      }
+    },
+    {
+      "word": "budget",
+      "meaning": "a plan for how much money can be received and spent",
+      "japaneseMeaning": "予算",
+      "example": "We need to agree on a budget before ordering equipment.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "forecast",
+        "liability"
+      ]
+    },
+    {
+      "word": "cash flow",
+      "meaning": "the movement of money into and out of a business over time",
+      "japaneseMeaning": "キャッシュフロー",
+      "example": "Late payments can cause cash flow problems.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "investment",
+        "revenue"
+      ]
+    },
+    {
+      "word": "invoice",
+      "meaning": "a document listing goods or services supplied and the amount to pay",
+      "japaneseMeaning": "請求書",
+      "example": "Please send the invoice to our accounts team.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "asset",
+        "expense"
+      ],
+      "sentencePractice": {
+        "prompt": "The supplier sent a document listing the delivered goods and the amount we must pay. This document is an ____.",
+        "distractors": [
+          "asset",
+          "agenda"
+        ],
+        "reviewNote": "A bill for supplied goods differs from an owned resource or meeting topics."
+      }
+    },
+    {
+      "word": "forecast",
+      "meaning": "an estimate of what is likely to happen in the future",
+      "japaneseMeaning": "予測",
+      "example": "The sales forecast helps us plan how much stock to order.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "liability",
+        "profit"
+      ]
+    },
+    {
+      "word": "investment",
+      "meaning": "money or other resources put into something to gain a future benefit",
+      "japaneseMeaning": "投資",
+      "example": "The company announced an investment in staff training.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "revenue",
+        "budget"
+      ]
+    },
+    {
+      "word": "asset",
+      "meaning": "something of value owned or controlled by a person or business",
+      "japaneseMeaning": "資産",
+      "example": "The building is the company's largest asset.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "expense",
+        "cash flow"
+      ]
+    },
+    {
+      "word": "liability",
+      "meaning": "a debt or financial obligation that a person or business owes",
+      "japaneseMeaning": "負債",
+      "example": "The bank loan is recorded as a liability.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "profit",
+        "invoice"
+      ]
+    }
+  ]
+}

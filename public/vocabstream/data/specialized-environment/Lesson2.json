@@ -1,0 +1,135 @@
+{
+  "lesson_id": "specialized-environment-lesson-2",
+  "title": "Lesson 2",
+  "paragraph": "気候とエネルギー",
+  "words": [
+    {
+      "word": "emission",
+      "meaning": "the release of a substance or energy into the environment",
+      "japaneseMeaning": "排出",
+      "example": "The report measures the emission of gases from the factory.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "renewable energy",
+        "mitigation"
+      ]
+    },
+    {
+      "word": "greenhouse gas",
+      "meaning": "a gas in the atmosphere that absorbs heat radiation and contributes to warming",
+      "japaneseMeaning": "温室効果ガス",
+      "example": "Carbon dioxide is a greenhouse gas.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "fossil fuel",
+        "adaptation"
+      ]
+    },
+    {
+      "word": "carbon footprint",
+      "meaning": "an estimate of greenhouse gases linked to an activity, product, or person",
+      "japaneseMeaning": "カーボンフットプリント",
+      "example": "The study compared the carbon footprint of different journeys.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "energy efficiency",
+        "resilience"
+      ]
+    },
+    {
+      "word": "renewable energy",
+      "meaning": "energy from sources that are naturally replenished on a human timescale",
+      "japaneseMeaning": "再生可能エネルギー",
+      "example": "The town is investing in renewable energy.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "mitigation",
+        "sea level"
+      ]
+    },
+    {
+      "word": "fossil fuel",
+      "meaning": "coal, oil, or gas formed from ancient living material",
+      "japaneseMeaning": "化石燃料",
+      "example": "Coal is a fossil fuel used to generate electricity.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "adaptation",
+        "emission"
+      ]
+    },
+    {
+      "word": "energy efficiency",
+      "meaning": "using less energy to provide the same useful service",
+      "japaneseMeaning": "エネルギー効率",
+      "example": "Better windows improve the building's energy efficiency.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "resilience",
+        "greenhouse gas"
+      ]
+    },
+    {
+      "word": "mitigation",
+      "meaning": "action to reduce the causes or severity of climate change",
+      "japaneseMeaning": "気候変動の緩和策",
+      "example": "The plan includes mitigation measures to reduce emissions.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "sea level",
+        "carbon footprint"
+      ]
+    },
+    {
+      "word": "adaptation",
+      "meaning": "adjustments that reduce harm from actual or expected climate effects",
+      "japaneseMeaning": "気候変動への適応",
+      "example": "Planting shade trees is one form of urban adaptation.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "emission",
+        "renewable energy"
+      ],
+      "sentencePractice": {
+        "prompt": "The city plants shade trees to cope with hotter summers. Adjusting to these climate effects is ____.",
+        "distractors": [
+          "mitigation",
+          "emission"
+        ],
+        "reviewNote": "Coping with experienced heat is adaptation; mitigation addresses causes and emission is a release."
+      }
+    },
+    {
+      "word": "resilience",
+      "meaning": "the ability of a community or system to cope with disruption and recover",
+      "japaneseMeaning": "回復力・強靱性",
+      "example": "The flood plan aims to improve the town's resilience.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "greenhouse gas",
+        "fossil fuel"
+      ]
+    },
+    {
+      "word": "sea level",
+      "meaning": "the height of the ocean surface relative to a reference point",
+      "japaneseMeaning": "海面水位",
+      "example": "The team monitors changes in sea level along the coast.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "carbon footprint",
+        "energy efficiency"
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@
   "paragraph": "This lesson practices useful adjectives for animals and people.",
   "words": [
     { "word": "cute", "meaning": "nice and lovely to look at", "japaneseMeaning": "かわいい", "synonyms": "pretty, sweet", "antonyms": "ugly, scary", "forms": "cute, cuter, cutest", "example": "The puppy is cute." },
-    { "word": "feral", "meaning": "living outside after being away from people", "japaneseMeaning": "野生化した", "synonyms": "wild, untamed", "antonyms": "tame, trained", "forms": "feral, more feral, most feral", "example": "A feral cat lives near the park." },
+    { "word": "feral", "meaning": "living wild, from a kind of animal that people usually keep", "japaneseMeaning": "野生化した", "synonyms": "wild, untamed", "antonyms": "tame, trained", "forms": "feral, more feral, most feral", "example": "A feral cat lives near the park.", "usageNote": "野生化した動物について使う少し発展的な語です。単に「野生の」なら wild。" },
     { "word": "tame", "meaning": "not afraid of people", "japaneseMeaning": "飼いならされた", "synonyms": "friendly, trained", "antonyms": "wild, scary", "forms": "tame, tamer, tamest", "example": "This horse is tame." },
     { "word": "tiny", "meaning": "very small", "japaneseMeaning": "とても小さい", "synonyms": "very small, little", "antonyms": "huge, big", "forms": "tiny, tinier, tiniest", "example": "A tiny insect is on the leaf." },
     { "word": "huge", "meaning": "very big", "japaneseMeaning": "巨大な", "synonyms": "very big, large", "antonyms": "tiny, small", "forms": "huge, huger, hugest", "example": "An elephant is huge." },

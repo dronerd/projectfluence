@@ -1,0 +1,135 @@
+{
+  "lesson_id": "specialized-business-lesson-3",
+  "title": "Lesson 3",
+  "paragraph": "市場と事業運営",
+  "words": [
+    {
+      "word": "market share",
+      "meaning": "the proportion of total market sales made by one company or product",
+      "japaneseMeaning": "市場占有率",
+      "example": "The brand increased its market share last year.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "competition",
+        "retention"
+      ]
+    },
+    {
+      "word": "demand",
+      "meaning": "the amount of a product or service that buyers want and can buy",
+      "japaneseMeaning": "需要",
+      "example": "Demand for the service rises during the summer.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "strategy",
+        "procurement"
+      ]
+    },
+    {
+      "word": "supply",
+      "meaning": "the amount of a product or service available to buyers",
+      "japaneseMeaning": "供給",
+      "example": "Limited supply pushed prices higher.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "productivity",
+        "break-even point"
+      ]
+    },
+    {
+      "word": "competition",
+      "meaning": "the situation in which businesses try to win the same customers",
+      "japaneseMeaning": "競争",
+      "example": "Competition encouraged the shops to improve their service.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "retention",
+        "return on investment"
+      ]
+    },
+    {
+      "word": "strategy",
+      "meaning": "a broad plan for achieving a long-term goal",
+      "japaneseMeaning": "戦略",
+      "example": "Our strategy focuses on reliable service rather than low prices.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "procurement",
+        "market share"
+      ]
+    },
+    {
+      "word": "productivity",
+      "meaning": "the amount of output produced for a given amount of work or resources",
+      "japaneseMeaning": "生産性",
+      "example": "The new process improved productivity without longer working hours.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "break-even point",
+        "demand"
+      ]
+    },
+    {
+      "word": "retention",
+      "meaning": "the ability to keep customers or employees over time",
+      "japaneseMeaning": "顧客や従業員の維持・定着",
+      "example": "Better support can improve customer retention.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "return on investment",
+        "supply"
+      ]
+    },
+    {
+      "word": "procurement",
+      "meaning": "the process of obtaining goods and services for an organization",
+      "japaneseMeaning": "調達",
+      "example": "The procurement team compares offers from several suppliers.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "market share",
+        "competition"
+      ]
+    },
+    {
+      "word": "break-even point",
+      "meaning": "the level of sales at which revenue equals total costs",
+      "japaneseMeaning": "損益分岐点",
+      "example": "The café reached its break-even point after selling two hundred meals.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "demand",
+        "strategy"
+      ],
+      "sentencePractice": {
+        "prompt": "At this sales level, revenue exactly equals total costs, so there is neither profit nor loss. We are at the ____.",
+        "distractors": [
+          "market share",
+          "return on investment"
+        ],
+        "reviewNote": "Equal total revenue and cost uniquely identifies the no-profit/no-loss sales threshold."
+      }
+    },
+    {
+      "word": "return on investment",
+      "meaning": "a measure comparing the gain from an investment with its cost",
+      "japaneseMeaning": "投資収益率",
+      "example": "The team estimated the return on investment before buying the equipment.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "supply",
+        "productivity"
+      ]
+    }
+  ]
+}

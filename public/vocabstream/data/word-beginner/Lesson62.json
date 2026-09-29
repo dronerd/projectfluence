@@ -3,15 +3,15 @@
   "title": "Lesson 62",
   "paragraph": "This lesson practices useful nouns for nature and weather.",
   "words": [
-    { "word": "sky", "meaning": "the space above the earth", "japaneseMeaning": "空", "synonyms": "air, heavens", "antonyms": "ground", "forms": "sky, skies", "example": "The sky is blue today." },
-    { "word": "cloud", "meaning": "a white or gray shape in the sky", "japaneseMeaning": "雲", "synonyms": "mist, sky shape", "antonyms": "clear sky", "forms": "cloud, clouds", "example": "A dark cloud is over the mountain." },
+    { "word": "sky", "meaning": "the space above the earth", "japaneseMeaning": "空", "synonyms": "air, heavens", "antonyms": "", "forms": "sky, skies", "example": "The sky is blue today." },
+    { "word": "cloud", "meaning": "a white or gray shape in the sky", "japaneseMeaning": "雲", "synonyms": "", "antonyms": "", "forms": "cloud, clouds", "example": "A dark cloud is over the mountain." },
     { "word": "wind", "meaning": "moving air", "japaneseMeaning": "風", "synonyms": "air, breeze", "antonyms": "still air", "forms": "wind, winds", "example": "The wind is strong today." },
     { "word": "storm", "meaning": "very bad weather with wind or rain", "japaneseMeaning": "嵐", "synonyms": "bad weather, heavy rain", "antonyms": "calm weather", "forms": "storm, storms", "example": "The storm starts at night." },
     { "word": "sunlight", "meaning": "light from the sun", "japaneseMeaning": "日光", "synonyms": "sunshine, light", "antonyms": "darkness, shade", "forms": "sunlight", "example": "Sunlight comes through the window." },
-    { "word": "ice", "meaning": "frozen water", "japaneseMeaning": "氷", "synonyms": "frozen water, frost", "antonyms": "water, heat", "forms": "ice", "example": "There is ice on the lake." },
-    { "word": "leaf", "meaning": "a flat green part of a plant or tree", "japaneseMeaning": "葉", "synonyms": "plant part, green part", "antonyms": "root", "forms": "leaf, leaves", "example": "A leaf falls from the tree." },
-    { "word": "root", "meaning": "the part of a plant under the ground", "japaneseMeaning": "根", "synonyms": "plant base, bottom", "antonyms": "leaf, top", "forms": "root, roots", "example": "The root takes water from the ground." },
-    { "word": "branch", "meaning": "a part of a tree that grows from the trunk", "japaneseMeaning": "枝", "synonyms": "tree arm, part", "antonyms": "root, trunk", "forms": "branch, branches", "example": "A bird sits on the branch." },
-    { "word": "field", "meaning": "open land used for plants or sports", "japaneseMeaning": "畑／野原／運動場", "synonyms": "open land, ground", "antonyms": "building", "forms": "field, fields", "example": "The soccer field is wet." }
+    { "word": "ice", "meaning": "frozen water", "japaneseMeaning": "氷", "synonyms": "", "antonyms": "", "forms": "ice", "example": "There is ice on the lake." },
+    { "word": "leaf", "meaning": "a flat green part of a plant or tree", "japaneseMeaning": "葉", "synonyms": "", "antonyms": "", "forms": "leaf, leaves", "example": "A leaf falls from the tree." },
+    { "word": "root", "meaning": "the part of a plant under the ground", "japaneseMeaning": "根", "synonyms": "", "antonyms": "", "forms": "root, roots", "example": "The root takes water from the ground." },
+    { "word": "branch", "meaning": "a part of a tree that grows from the trunk", "japaneseMeaning": "枝", "synonyms": "", "antonyms": "", "forms": "branch, branches", "example": "A bird sits on the branch." },
+    { "word": "field", "meaning": "open land used for plants or sports", "japaneseMeaning": "畑／野原／運動場", "synonyms": "open land, ground", "antonyms": "", "forms": "field, fields", "example": "The soccer field is wet." }
   ]
 }

@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-environment-lesson-1",
+  "title": "Lesson 1",
+  "paragraph": "生態系と保全",
+  "words": [
+    {
+      "word": "ecosystem",
+      "meaning": "living things and their physical surroundings interacting in one place",
+      "japaneseMeaning": "生態系",
+      "example": "The wetland ecosystem supports many kinds of birds.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "species",
+        "restoration"
+      ]
+    },
+    {
+      "word": "habitat",
+      "meaning": "the natural place where a plant or animal lives",
+      "japaneseMeaning": "生息地",
+      "example": "The project aims to protect the turtle's habitat.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "population",
+        "invasive species"
+      ],
+      "sentencePractice": {
+        "prompt": "The turtle needs a natural place to live and feed. That place is its ____.",
+        "distractors": [
+          "population",
+          "species"
+        ],
+        "reviewNote": "A living place differs from a local group of organisms or their biological kind."
+      }
+    },
+    {
+      "word": "biodiversity",
+      "meaning": "the variety of living things, including differences within and between species",
+      "japaneseMeaning": "生物多様性",
+      "example": "The survey recorded biodiversity in the forest.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "conservation",
+        "food chain"
+      ]
+    },
+    {
+      "word": "species",
+      "meaning": "a group of similar organisms recognized as a distinct kind",
+      "japaneseMeaning": "種",
+      "example": "Researchers identified a rare species of butterfly.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "restoration",
+        "pollination"
+      ]
+    },
+    {
+      "word": "population",
+      "meaning": "all the members of one species living in a particular area",
+      "japaneseMeaning": "個体群",
+      "example": "The local deer population has grown in recent years.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "invasive species",
+        "ecosystem"
+      ]
+    },
+    {
+      "word": "conservation",
+      "meaning": "the protection and careful management of nature and natural resources",
+      "japaneseMeaning": "自然保護・保全",
+      "example": "The charity supports river conservation.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "food chain",
+        "habitat"
+      ]
+    },
+    {
+      "word": "restoration",
+      "meaning": "work to return a damaged natural area toward a healthier condition",
+      "japaneseMeaning": "自然環境の再生",
+      "example": "Wetland restoration created new places for birds to feed.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "pollination",
+        "biodiversity"
+      ]
+    },
+    {
+      "word": "invasive species",
+      "meaning": "an introduced species that spreads and causes harm in its new environment",
+      "japaneseMeaning": "侵略的外来種",
+      "example": "Volunteers remove an invasive species from the riverbank.",
+      "definitionType": "text",
+      "domain": "environment",
+      "usageNote": "外来種のすべてが invasive なのではなく、広がって害を与えるものを指します。",
+      "meaningDistractors": [
+        "ecosystem",
+        "species"
+      ]
+    },
+    {
+      "word": "food chain",
+      "meaning": "a sequence showing how energy passes as one organism eats another",
+      "japaneseMeaning": "食物連鎖",
+      "example": "The diagram shows a food chain in the pond.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "habitat",
+        "population"
+      ]
+    },
+    {
+      "word": "pollination",
+      "meaning": "the transfer of pollen that helps flowering plants produce seeds",
+      "japaneseMeaning": "受粉",
+      "example": "Many crops depend on insects for pollination.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "biodiversity",
+        "conservation"
+      ],
+      "sentencePractice": {
+        "prompt": "Insects carry pollen from one flower to another, helping seeds form. This transfer is ____.",
+        "distractors": [
+          "restoration",
+          "recycling"
+        ],
+        "reviewNote": "The specified pollen transfer is not habitat repair or processing waste."
+      }
+    }
+  ]
+}

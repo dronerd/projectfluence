@@ -3,9 +3,9 @@
   "title": "Lesson 22",
   "paragraph": "Job nouns for talking about people's work.",
   "words": [
-    { "word": "doctor", "meaning": "a person who helps sick people", "japaneseMeaning": "医者", "synonyms": "", "antonyms": "", "forms": "doctor, doctors", "example": "The doctor checked my throat." },
+    { "word": "doctor", "meaning": "a person trained to find and treat illnesses", "japaneseMeaning": "医者", "synonyms": "", "antonyms": "", "forms": "doctor, doctors", "example": "The doctor checked my throat.", "meaningDistractors": ["pilot", "farmer"] },
     { "word": "farmer", "meaning": "a person who grows food or keeps animals", "japaneseMeaning": "農家、農夫", "synonyms": "", "antonyms": "", "forms": "farmer, farmers", "example": "The farmer grows rice." },
-    { "word": "nurse", "meaning": "a person who helps sick people and doctors", "japaneseMeaning": "看護師", "synonyms": "", "antonyms": "", "forms": "nurse, nurses", "example": "The nurse gave me medicine." },
+    { "word": "nurse", "meaning": "a person trained to care for sick or injured people", "japaneseMeaning": "看護師", "synonyms": "", "antonyms": "", "forms": "nurse, nurses", "example": "The nurse gave me medicine.", "meaningDistractors": ["driver", "plumber"] },
     { "word": "driver", "meaning": "a person who drives a car, bus, or taxi", "japaneseMeaning": "運転手", "synonyms": "", "antonyms": "", "forms": "driver, drivers", "example": "The driver stopped the bus." },
     { "word": "cashier", "meaning": "a person who takes money in a shop", "japaneseMeaning": "レジ係", "synonyms": "clerk", "antonyms": "", "forms": "cashier, cashiers", "example": "The cashier gave me change." },
     { "word": "plumber", "meaning": "a person who fixes water pipes", "japaneseMeaning": "配管工", "synonyms": "", "antonyms": "", "forms": "plumber, plumbers", "example": "The plumber fixed the sink." },

@@ -1,0 +1,135 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-1",
+  "title": "Lesson 1",
+  "paragraph": "症状と治療",
+  "words": [
+    {
+      "word": "symptom",
+      "meaning": "a change in the body that a person notices and reports when unwell",
+      "japaneseMeaning": "症状",
+      "example": "The nurse asked when the first symptom appeared.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "prescription",
+        "allergy"
+      ]
+    },
+    {
+      "word": "diagnosis",
+      "meaning": "the identification of a health condition after examining the evidence",
+      "japaneseMeaning": "診断",
+      "example": "The doctor explained the diagnosis in plain language.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "dose",
+        "infection"
+      ]
+    },
+    {
+      "word": "treatment",
+      "meaning": "care given to manage a health condition or help someone recover",
+      "japaneseMeaning": "治療",
+      "example": "The team discussed the treatment options with the patient.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "side effect",
+        "inflammation"
+      ]
+    },
+    {
+      "word": "prescription",
+      "meaning": "an instruction from an authorized clinician for a medicine or treatment",
+      "japaneseMeaning": "処方・処方箋",
+      "example": "The pharmacist checked the prescription before preparing the medicine.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "allergy",
+        "recovery"
+      ]
+    },
+    {
+      "word": "dose",
+      "meaning": "the amount of a medicine taken at one time",
+      "japaneseMeaning": "1回分の投与量",
+      "example": "The label states the dose prescribed for this patient.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "infection",
+        "symptom"
+      ],
+      "sentencePractice": {
+        "prompt": "The label states how much medicine the patient should take at one time. This amount is the ____.",
+        "distractors": [
+          "symptom",
+          "diagnosis"
+        ],
+        "reviewNote": "An amount of medicine at one time is distinct from a reported experience or identified condition."
+      }
+    },
+    {
+      "word": "side effect",
+      "meaning": "an additional effect of a treatment besides the intended effect",
+      "japaneseMeaning": "副作用",
+      "example": "The leaflet lists a possible side effect of the medicine.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "inflammation",
+        "diagnosis"
+      ]
+    },
+    {
+      "word": "allergy",
+      "meaning": "an immune reaction to a substance that is usually harmless",
+      "japaneseMeaning": "アレルギー",
+      "example": "The nurse recorded the patient's allergy before treatment.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "recovery",
+        "treatment"
+      ]
+    },
+    {
+      "word": "infection",
+      "meaning": "the entry and growth of harmful organisms in the body",
+      "japaneseMeaning": "感染症・感染",
+      "example": "The team took a sample to check for infection.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "symptom",
+        "prescription"
+      ]
+    },
+    {
+      "word": "inflammation",
+      "meaning": "the body's response to injury or irritation, often involving redness, heat, or swelling",
+      "japaneseMeaning": "炎症",
+      "example": "The examination showed signs of inflammation around the joint.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "diagnosis",
+        "dose"
+      ]
+    },
+    {
+      "word": "recovery",
+      "meaning": "the process of returning toward health after illness or injury",
+      "japaneseMeaning": "回復",
+      "example": "The therapist discussed goals for recovery with the patient.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "treatment",
+        "side effect"
+      ]
+    }
+  ]
+}

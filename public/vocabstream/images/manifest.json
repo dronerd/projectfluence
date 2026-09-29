@@ -1,0 +1,488 @@
+{
+  "version": 1,
+  "creator": "ProjectFluence",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "images": [
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "apple",
+      "image": {
+        "src": "/vocabstream/images/apple.svg",
+        "alt": "葉と短い枝が付いた、赤いりんご。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/apple.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "banana",
+      "image": {
+        "src": "/vocabstream/images/banana.svg",
+        "alt": "皮をむいていない、細長く曲がった黄色いバナナ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/banana.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "grape",
+      "image": {
+        "src": "/vocabstream/images/grape.svg",
+        "alt": "紫色のぶどうの房と、房から離れた一粒。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/grape.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "lemon",
+      "image": {
+        "src": "/vocabstream/images/lemon.svg",
+        "alt": "両端が少しとがった黄色いレモンと、断面の見える輪切り。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/lemon.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "potato",
+      "image": {
+        "src": "/vocabstream/images/potato.svg",
+        "alt": "表面に小さなくぼみがある、茶色いじゃがいも。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/potato.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "tomato",
+      "image": {
+        "src": "/vocabstream/images/tomato.svg",
+        "alt": "緑色の星形のへたが付いた、丸い赤いトマト。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/tomato.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "onion",
+      "image": {
+        "src": "/vocabstream/images/onion.svg",
+        "alt": "先が細く、薄茶色の皮と根がある玉ねぎ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/onion.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "carrot",
+      "image": {
+        "src": "/vocabstream/images/carrot.svg",
+        "alt": "緑の葉が付いた、先の細いオレンジ色のにんじん。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/carrot.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "bread",
+      "image": {
+        "src": "/vocabstream/images/bread.svg",
+        "alt": "茶色い皮のある一斤のパンと、切り分けた一枚。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/bread.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 1,
+      "word": "cheese",
+      "image": {
+        "src": "/vocabstream/images/cheese.svg",
+        "alt": "丸い穴の開いた、黄色いチーズのかたまり。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/cheese.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 2,
+      "word": "pizza",
+      "image": {
+        "src": "/vocabstream/images/pizza.svg",
+        "alt": "チーズと丸い具がのった、丸いピザ。一切れが少し離れている。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pizza.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 2,
+      "word": "sandwich",
+      "image": {
+        "src": "/vocabstream/images/sandwich.svg",
+        "alt": "二枚の三角形のパンの間に、葉野菜や具をはさんだサンドイッチ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/sandwich.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 2,
+      "word": "cookie",
+      "image": {
+        "src": "/vocabstream/images/cookie.svg",
+        "alt": "丸い生地に茶色いチョコチップが入ったクッキー。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/cookie.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 2,
+      "word": "chocolate",
+      "image": {
+        "src": "/vocabstream/images/chocolate.svg",
+        "alt": "小さな四角に区切られた、茶色い板チョコレート。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/chocolate.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 2,
+      "word": "donut",
+      "image": {
+        "src": "/vocabstream/images/donut.svg",
+        "alt": "真ん中に穴がある、丸いドーナツ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/donut.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 3,
+      "word": "plate",
+      "image": {
+        "src": "/vocabstream/images/plate.svg",
+        "alt": "食べ物をのせる、平らで丸い青い皿。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/plate.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 3,
+      "word": "spoon",
+      "image": {
+        "src": "/vocabstream/images/spoon.svg",
+        "alt": "丸くくぼんだ先と長い柄がある、金属のスプーン。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/spoon.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 3,
+      "word": "knife",
+      "image": {
+        "src": "/vocabstream/images/knife.svg",
+        "alt": "食べ物を切る銀色の刃と、茶色い持ち手があるナイフ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/knife.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 3,
+      "word": "bottle",
+      "image": {
+        "src": "/vocabstream/images/bottle.svg",
+        "alt": "細い口とふたがある、透明な飲み物のボトル。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/bottle.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 4,
+      "word": "shirt",
+      "image": {
+        "src": "/vocabstream/images/shirt.svg",
+        "alt": "えりと前ボタン、短い袖がある青いシャツ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/shirt.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 4,
+      "word": "shoes",
+      "image": {
+        "src": "/vocabstream/images/shoes.svg",
+        "alt": "ひもが付いた、左右一組の運動靴。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/shoes.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 4,
+      "word": "socks",
+      "image": {
+        "src": "/vocabstream/images/socks.svg",
+        "alt": "足首と足先を包む、左右一組の靴下。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/socks.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 4,
+      "word": "hat",
+      "image": {
+        "src": "/vocabstream/images/hat.svg",
+        "alt": "つばのある、茶色い帽子。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/hat.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 5,
+      "word": "pencil",
+      "image": {
+        "src": "/vocabstream/images/pencil.svg",
+        "alt": "先を削ると木と芯が見える、黄色い鉛筆。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pencil.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 5,
+      "word": "pen",
+      "image": {
+        "src": "/vocabstream/images/pen.svg",
+        "alt": "インクで書く、クリップとノックボタンのある青いペン。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 5,
+      "word": "book",
+      "image": {
+        "src": "/vocabstream/images/book.svg",
+        "alt": "表紙を開くと、両側のページに文章が印刷されている本。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/book.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 5,
+      "word": "notebook",
+      "image": {
+        "src": "/vocabstream/images/notebook.svg",
+        "alt": "左側をリングでとじた、文字を書くための横線入りノート。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/notebook.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 5,
+      "word": "ruler",
+      "image": {
+        "src": "/vocabstream/images/ruler.svg",
+        "alt": "長さを測り、まっすぐな線を引くための目盛り付き定規。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/ruler.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 5,
+      "word": "eraser",
+      "image": {
+        "src": "/vocabstream/images/eraser.svg",
+        "alt": "鉛筆の線を消す、紙の帯が巻かれた白い消しゴム。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/eraser.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 5,
+      "word": "backpack",
+      "image": {
+        "src": "/vocabstream/images/backpack.svg",
+        "alt": "二本の肩ひもと前ポケットのある、青いリュックサック。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/backpack.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    }
+  ]
+}

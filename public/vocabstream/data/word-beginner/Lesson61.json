@@ -10,7 +10,7 @@
     { "word": "outdoors", "meaning": "outside a building", "japaneseMeaning": "屋外で", "synonyms": "outside, out", "antonyms": "indoors, inside", "forms": "outdoors", "example": "The children play outdoors after school." },
     { "word": "ahead", "meaning": "in front or in the future", "japaneseMeaning": "前方に／これから先に", "synonyms": "forward, in front", "antonyms": "behind, back", "forms": "ahead", "example": "The station is ahead on the right." },
     { "word": "behind", "meaning": "at the back of something", "japaneseMeaning": "後ろに", "synonyms": "at the back, after", "antonyms": "ahead, in front", "forms": "behind", "example": "The bus stop is behind the bank." },
-    { "word": "elsewhere", "meaning": "in another place", "japaneseMeaning": "他の場所で", "synonyms": "somewhere else, away", "antonyms": "here, there", "forms": "elsewhere", "example": "This shop is full, so let's eat elsewhere." },
+    { "word": "elsewhere", "meaning": "in another place", "japaneseMeaning": "他の場所で", "synonyms": "somewhere else, away", "antonyms": "here, there", "forms": "elsewhere", "example": "This café is full, so let's eat elsewhere." },
     { "word": "anywhere", "meaning": "in any place", "japaneseMeaning": "どこでも／どこかに", "synonyms": "any place, somewhere", "antonyms": "nowhere, no place", "forms": "anywhere", "example": "You can sit anywhere in this room." },
     { "word": "nowhere", "meaning": "in no place", "japaneseMeaning": "どこにも〜ない", "synonyms": "no place, not anywhere", "antonyms": "anywhere, somewhere", "forms": "nowhere", "example": "I looked everywhere, but my ticket was nowhere." }
   ]

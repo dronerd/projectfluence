@@ -11,7 +11,7 @@
       {"word": "custom", "meaning": "usual way of behaving in a society", "japaneseMeaning": "習慣", "synonyms": "practice, tradition", "antonyms": "abnormality, deviation", "example": "It is a custom to greet guests."},
       {"word": "diversity", "meaning": "variety and difference", "japaneseMeaning": "多様性", "synonyms": "variety, multiplicity", "antonyms": "uniformity, homogeneity", "example": "Diversity enriches society."},
       {"word": "belonging", "meaning": "feeling part of a group", "japaneseMeaning": "所属感", "synonyms": "acceptance, inclusion", "antonyms": "alienation, exclusion", "example": "Belonging is important for mental health."},
-      {"word": "ritual", "meaning": "ceremonial act", "japaneseMeaning": "儀式", "synonyms": "ceremony, tradition", "antonyms": "casual, informal", "example": "Morning rituals prepare us for the day."},
+      {"word": "ritual", "meaning": "ceremonial act", "japaneseMeaning": "儀式", "synonyms": "ceremony, tradition", "antonyms": "", "example": "Lighting the candles is an important ritual in the ceremony."},
       {"word": "interpretation", "meaning": "explanation of meaning", "japaneseMeaning": "解釈", "synonyms": "understanding, explanation", "antonyms": "misunderstanding, confusion", "example": "Interpretation of art is subjective."}
     ]
   }

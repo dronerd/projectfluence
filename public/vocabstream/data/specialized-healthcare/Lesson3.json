@@ -1,0 +1,135 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-3",
+  "title": "Lesson 3",
+  "paragraph": "検査と回復",
+  "words": [
+    {
+      "word": "blood pressure",
+      "meaning": "the pressure of blood against the walls of blood vessels",
+      "japaneseMeaning": "血圧",
+      "example": "The nurse measured the patient's blood pressure.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "hydration",
+        "specimen"
+      ]
+    },
+    {
+      "word": "pulse",
+      "meaning": "the beat felt in an artery as the heart pumps blood",
+      "japaneseMeaning": "脈拍",
+      "example": "The clinician checked the patient's pulse.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "mobility",
+        "imaging"
+      ]
+    },
+    {
+      "word": "respiration",
+      "meaning": "the process of breathing",
+      "japaneseMeaning": "呼吸",
+      "example": "The chart records the patient's respiration rate.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "screening",
+        "rehabilitation"
+      ]
+    },
+    {
+      "word": "hydration",
+      "meaning": "the state of having enough water in the body",
+      "japaneseMeaning": "体内の水分状態",
+      "example": "The care team assessed the patient's hydration.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "specimen",
+        "prevention"
+      ]
+    },
+    {
+      "word": "mobility",
+      "meaning": "the ability to move the body or travel from place to place",
+      "japaneseMeaning": "移動能力",
+      "example": "The therapist assessed mobility after the operation.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "imaging",
+        "blood pressure"
+      ]
+    },
+    {
+      "word": "screening",
+      "meaning": "checking people for signs of a condition before clear symptoms appear",
+      "japaneseMeaning": "スクリーニング検査",
+      "example": "The leaflet explains who is invited for screening.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "rehabilitation",
+        "pulse"
+      ]
+    },
+    {
+      "word": "specimen",
+      "meaning": "a small amount of tissue or fluid collected for examination",
+      "japaneseMeaning": "検体",
+      "example": "The specimen was labelled before it went to the laboratory.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "prevention",
+        "respiration"
+      ],
+      "sentencePractice": {
+        "prompt": "The nurse collected a small amount of fluid for the laboratory to examine. This sample is a ____.",
+        "distractors": [
+          "caregiver",
+          "prescription"
+        ],
+        "reviewNote": "A sample of fluid is neither a person providing care nor a treatment instruction."
+      }
+    },
+    {
+      "word": "imaging",
+      "meaning": "methods of producing pictures of the inside of the body",
+      "japaneseMeaning": "画像検査",
+      "example": "The clinician reviewed the imaging results.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "blood pressure",
+        "hydration"
+      ]
+    },
+    {
+      "word": "rehabilitation",
+      "meaning": "support and treatment to improve function after illness or injury",
+      "japaneseMeaning": "リハビリテーション",
+      "example": "Rehabilitation helped the patient return to daily activities.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "pulse",
+        "mobility"
+      ]
+    },
+    {
+      "word": "prevention",
+      "meaning": "action intended to reduce the chance of illness or injury",
+      "japaneseMeaning": "予防",
+      "example": "The workshop focused on the prevention of workplace injuries.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "respiration",
+        "screening"
+      ]
+    }
+  ]
+}

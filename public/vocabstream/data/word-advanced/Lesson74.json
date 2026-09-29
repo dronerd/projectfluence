@@ -4,7 +4,7 @@
     "paragraph": "Economy and growth focus on productivity, revenue, and trade. Investment and stability drive prosperity and economic development.",
     "words": [
       {"word": "productivity", "meaning": "efficiency of production", "japaneseMeaning": "生産性", "synonyms": "efficiency, output", "antonyms": "inefficiency, idleness", "example": "Productivity increased with new methods."},
-      {"word": "inflation", "meaning": "rise in prices", "japaneseMeaning": "インフレーション", "synonyms": "price increase, escalation", "antonyms": "deflation, decrease", "example": "Inflation affects purchasing power."},
+      {"word": "inflation", "meaning": "a general increase in prices across an economy over time", "japaneseMeaning": "インフレーション", "synonyms": "", "antonyms": "deflation", "example": "Inflation affects purchasing power."},
       {"word": "revenue", "meaning": "income of an organization or government", "japaneseMeaning": "収入", "synonyms": "income, earnings", "antonyms": "expense, loss", "example": "The company's revenue grew last year."},
       {"word": "trade", "meaning": "buying and selling goods", "japaneseMeaning": "貿易、取引", "synonyms": "commerce, exchange", "antonyms": "hoarding, isolation", "example": "International trade benefits the economy."},
       {"word": "investment", "meaning": "putting money into assets for profit", "japaneseMeaning": "投資", "synonyms": "funding, venture", "antonyms": "spending, waste", "example": "Investment in technology increased productivity."},

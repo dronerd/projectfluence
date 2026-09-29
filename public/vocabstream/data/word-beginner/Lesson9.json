@@ -5,7 +5,7 @@
   "words": [
     { "word": "zoo", "meaning": "a place where people can see animals", "japaneseMeaning": "動物園", "synonyms": "", "antonyms": "", "forms": "zoo, zoos", "example": "We saw a lion at the zoo." },
     { "word": "mountain", "meaning": "a very high hill", "japaneseMeaning": "山", "synonyms": "", "antonyms": "", "forms": "mountain, mountains", "example": "The mountain is covered with snow." },
-    { "word": "city", "meaning": "a large town with many people", "japaneseMeaning": "都市", "synonyms": "large town", "antonyms": "village", "forms": "city, cities", "example": "Tokyo is a big city." },
+    { "word": "city", "meaning": "a large town with many people", "japaneseMeaning": "都市", "synonyms": "large town", "antonyms": "", "forms": "city, cities", "example": "Tokyo is a big city." },
     { "word": "store", "meaning": "a place where people buy things", "japaneseMeaning": "店", "synonyms": "shop", "antonyms": "", "forms": "store, stores", "example": "The store sells shoes." },
     { "word": "mall", "meaning": "a large building with many shops", "japaneseMeaning": "ショッピングモール", "synonyms": "shopping center", "antonyms": "", "forms": "mall, malls", "example": "We bought shoes at the mall." },
     { "word": "station", "meaning": "a place where trains or buses stop", "japaneseMeaning": "駅", "synonyms": "", "antonyms": "", "forms": "station, stations", "example": "The station is near my school." },

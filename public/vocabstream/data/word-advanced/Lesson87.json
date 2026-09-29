@@ -12,7 +12,7 @@
       {"word": "prosperity", "meaning": "state of being successful and wealthy", "japaneseMeaning": "繁栄", "synonyms": "wealth, success", "antonyms": "poverty, decline", "example": "Economic policies aim to increase prosperity."},
       {"word": "deficit", "meaning": "shortfall or lack of money", "japaneseMeaning": "赤字", "synonyms": "shortfall, shortage", "antonyms": "surplus, excess", "example": "The government budget showed a deficit."},
       {"word": "financial", "meaning": "relating to money", "japaneseMeaning": "財政の", "synonyms": "monetary, economic", "antonyms": "nonfinancial, unrelated", "example": "Financial planning ensures stability."},
-      {"word": "inflation", "meaning": "rise in prices over time", "japaneseMeaning": "インフレ", "synonyms": "price increase, escalation", "antonyms": "deflation, decrease", "example": "High inflation reduces purchasing power."}
+      {"word": "inflation", "meaning": "a general increase in prices across an economy over time", "japaneseMeaning": "インフレ", "synonyms": "", "antonyms": "deflation", "example": "High inflation reduces purchasing power."}
     ]
   }
  

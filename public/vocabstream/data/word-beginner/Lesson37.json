@@ -3,8 +3,8 @@
   "title": "Lesson 37",
   "paragraph": "This lesson practices useful adverbs for place and order.",
   "words": [
-    { "word": "leftward", "meaning": "toward the left", "japaneseMeaning": "左へ", "synonyms": "to the left, left", "antonyms": "rightward, right", "forms": "leftward", "example": "Move leftward to make space." },
-    { "word": "rightward", "meaning": "toward the right", "japaneseMeaning": "右へ", "synonyms": "to the right, right", "antonyms": "leftward, left", "forms": "rightward", "example": "Slide the box rightward." },
+    { "word": "leftward", "meaning": "toward the left", "japaneseMeaning": "左へ", "synonyms": "to the left, left", "antonyms": "rightward, right", "forms": "leftward", "example": "Move leftward to make space.", "usageNote": "方向を表す少し発展的な語です。日常会話では to the left もよく使います。" },
+    { "word": "rightward", "meaning": "toward the right", "japaneseMeaning": "右へ", "synonyms": "to the right, right", "antonyms": "leftward, left", "forms": "rightward", "example": "Slide the box rightward.", "usageNote": "方向を表す少し発展的な語です。日常会話では to the right もよく使います。" },
     { "word": "upward", "meaning": "toward a higher place", "japaneseMeaning": "上へ", "synonyms": "up, higher", "antonyms": "downward, down", "forms": "upward", "example": "The balloon moves upward." },
     { "word": "downward", "meaning": "toward a lower place", "japaneseMeaning": "下へ", "synonyms": "down, lower", "antonyms": "upward, up", "forms": "downward", "example": "The ball rolls downward." },
     { "word": "upstairs", "meaning": "on or to a higher floor", "japaneseMeaning": "上の階に／上の階で", "synonyms": "above, up", "antonyms": "downstairs, below", "forms": "upstairs", "example": "My room is upstairs." },

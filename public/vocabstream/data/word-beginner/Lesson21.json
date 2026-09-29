@@ -5,7 +5,7 @@
   "words": [
     { "word": "apartment", "meaning": "rooms where someone lives in a building", "japaneseMeaning": "アパート、マンション", "synonyms": "flat", "antonyms": "house", "forms": "apartment, apartments", "example": "Their apartment has two bedrooms." },
     { "word": "balcony", "meaning": "a small outside area on an upper floor", "japaneseMeaning": "バルコニー", "synonyms": "", "antonyms": "", "forms": "balcony, balconies", "example": "She drinks tea on the balcony." },
-    { "word": "basement", "meaning": "a room below the first floor", "japaneseMeaning": "地下室", "synonyms": "cellar", "antonyms": "", "forms": "basement, basements", "example": "The old boxes are in the basement." },
+    { "word": "basement", "meaning": "a room or floor below ground level", "japaneseMeaning": "地下室", "synonyms": "cellar", "antonyms": "", "forms": "basement, basements", "example": "The old boxes are in the basement." },
     { "word": "bridge", "meaning": "a road or path over water or another road", "japaneseMeaning": "橋", "synonyms": "", "antonyms": "", "forms": "bridge, bridges", "example": "We walked across the bridge." },
     { "word": "building", "meaning": "a place with walls and a roof", "japaneseMeaning": "建物", "synonyms": "", "antonyms": "", "forms": "building, buildings", "example": "That building is very tall." },
     { "word": "castle", "meaning": "a large old strong building", "japaneseMeaning": "城", "synonyms": "", "antonyms": "", "forms": "castle, castles", "example": "The castle is on the hill." },

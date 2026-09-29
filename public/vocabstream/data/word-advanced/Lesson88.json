@@ -6,7 +6,7 @@
       {"word": "poverty", "meaning": "state of being poor", "japaneseMeaning": "貧困", "synonyms": "destitution, deprivation", "antonyms": "wealth, prosperity", "example": "Poverty affects millions globally."},
       {"word": "inequality", "meaning": "lack of equality", "japaneseMeaning": "不平等", "synonyms": "disparity, imbalance", "antonyms": "equality, fairness", "example": "Inequality leads to social tension."},
       {"word": "sustainability", "meaning": "ability to maintain environmental balance", "japaneseMeaning": "持続可能性", "synonyms": "renewability, eco-friendliness", "antonyms": "depletion, wastefulness", "example": "Sustainability protects future resources."},
-      {"word": "climate", "meaning": "weather conditions of an area", "japaneseMeaning": "気候", "synonyms": "atmosphere, weather", "antonyms": "", "example": "Climate change affects ecosystems."},
+      {"word": "climate", "meaning": "the usual weather conditions in an area over many years", "japaneseMeaning": "気候", "synonyms": "", "antonyms": "", "example": "Climate change affects ecosystems."},
       {"word": "education", "meaning": "process of learning", "japaneseMeaning": "教育", "synonyms": "teaching, instruction", "antonyms": "ignorance, neglect", "example": "Education empowers individuals."},
       {"word": "healthcare", "meaning": "system of medical services", "japaneseMeaning": "医療", "synonyms": "medical care, treatment", "antonyms": "neglect, unhealthiness", "example": "Healthcare is essential for society."},
       {"word": "migration", "meaning": "movement from one place to another", "japaneseMeaning": "移住、移動", "synonyms": "relocation, movement", "antonyms": "staying, settlement", "example": "Migration affects demographics."},

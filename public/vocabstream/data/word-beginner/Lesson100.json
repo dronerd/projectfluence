@@ -3,7 +3,7 @@
   "title": "Lesson 100",
   "paragraph": "This lesson practices useful adjectives for safety and final review.",
   "words": [
-    { "word": "safe", "meaning": "not dangerous", "japaneseMeaning": "安全な", "synonyms": "secure, okay", "antonyms": "dangerous, unsafe", "forms": "safe, safer, safest", "example": "This road is safe in the daytime." },
+    { "word": "safe", "meaning": "not dangerous", "japaneseMeaning": "安全な", "synonyms": "secure, okay", "antonyms": "dangerous, unsafe", "forms": "safe, safer, safest", "example": "This road is safe in the daytime.", "duplicateOf": {"category": "word-beginner", "lessonNumber": 28, "word": "safe"} },
     { "word": "unsafe", "meaning": "not safe", "japaneseMeaning": "安全でない", "synonyms": "dangerous, risky", "antonyms": "safe, secure", "forms": "unsafe, more unsafe, most unsafe", "example": "The old bridge is unsafe." },
     { "word": "careful", "meaning": "doing things with care", "japaneseMeaning": "注意深い", "synonyms": "safe, watchful", "antonyms": "careless, quick", "forms": "careful, more careful, most careful", "example": "Be careful near the road." },
     { "word": "careless", "meaning": "not giving enough care", "japaneseMeaning": "不注意な", "synonyms": "not careful, unsafe", "antonyms": "careful, safe", "forms": "careless, more careless, most careless", "example": "A careless driver is dangerous." },

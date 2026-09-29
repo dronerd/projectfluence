@@ -1,0 +1,136 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-53",
+  "title": "Lesson 53",
+  "paragraph": "交渉と視点",
+  "words": [
+    {
+      "word": "strike a balance",
+      "meaning": "to find a suitable position between competing needs",
+      "japaneseMeaning": "バランスを取る",
+      "example": "The policy must strike a balance between access and privacy.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "stand your ground",
+        "reach a consensus"
+      ]
+    },
+    {
+      "word": "find common ground",
+      "meaning": "to discover shared views that make agreement possible",
+      "japaneseMeaning": "共通の立場を見つける",
+      "example": "Both sides tried to find common ground on funding.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "take issue with",
+        "put into perspective"
+      ]
+    },
+    {
+      "word": "meet halfway",
+      "meaning": "to reach agreement by each side giving up some demands",
+      "japaneseMeaning": "互いに譲歩する",
+      "example": "If both sides meet halfway, we can reach an agreement.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "concede a point",
+        "the bigger picture"
+      ]
+    },
+    {
+      "word": "stand your ground",
+      "meaning": "to keep your position despite pressure to change it",
+      "japaneseMeaning": "自分の立場を守る",
+      "example": "You can stand your ground while still listening respectfully.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "reach a consensus",
+        "room for manoeuvre"
+      ]
+    },
+    {
+      "word": "take issue with",
+      "meaning": "to disagree with or object to a particular point",
+      "japaneseMeaning": "～に異議を唱える",
+      "example": "I take issue with the assumption behind that argument.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "put into perspective",
+        "strike a balance"
+      ]
+    },
+    {
+      "word": "concede a point",
+      "meaning": "to admit that part of another person's argument is correct",
+      "japaneseMeaning": "相手の論点の一部を認める",
+      "example": "You can concede a point without accepting the whole argument.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "the bigger picture",
+        "find common ground"
+      ]
+    },
+    {
+      "word": "reach a consensus",
+      "meaning": "to arrive at an opinion that a group can agree on",
+      "japaneseMeaning": "合意に達する",
+      "example": "The committee took hours to reach a consensus.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "room for manoeuvre",
+        "stand your ground"
+      ],
+      "sentencePractice": {
+        "prompt": "After discussing their differences, all committee members agreed. They had managed to ____.",
+        "distractors": [
+          "weather the storm",
+          "read between the lines"
+        ],
+        "reviewNote": "All members reaching agreement defines consensus, not surviving hardship or interpreting hints."
+      }
+    },
+    {
+      "word": "put into perspective",
+      "meaning": "to show the true importance of something by comparing it",
+      "japaneseMeaning": "広い視野で位置づける",
+      "example": "The longer time period helps put into perspective the recent decline.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "strike a balance",
+        "stand your ground"
+      ]
+    },
+    {
+      "word": "the bigger picture",
+      "meaning": "the whole situation rather than only one detail",
+      "japaneseMeaning": "全体像",
+      "example": "We need to look at the bigger picture before changing the policy.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "find common ground",
+        "take issue with"
+      ]
+    },
+    {
+      "word": "room for manoeuvre",
+      "meaning": "freedom to change a plan or make choices",
+      "japaneseMeaning": "調整や選択の余地",
+      "example": "A flexible budget gives us room for manoeuvre.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "usageNote": "manoeuvre はイギリス式のつづりです。アメリカ英語では maneuver。",
+      "meaningDistractors": [
+        "meet halfway",
+        "concede a point"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "lesson_id": "idioms-beginner-lesson-51",
+  "title": "Lesson 51",
+  "paragraph": "朝と夜の習慣",
+  "words": [
+    {
+      "word": "get up",
+      "meaning": "to leave your bed and stand up after sleeping",
+      "japaneseMeaning": "起きてベッドから出る",
+      "example": "I get up at seven every morning.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "usageNote": "目が覚める wake up と、ベッドから出る get up は区別します。",
+      "meaningDistractors": [
+        "take off",
+        "go to bed"
+      ]
+    },
+    {
+      "word": "wake up",
+      "meaning": "to stop sleeping",
+      "japaneseMeaning": "目を覚ます",
+      "example": "I wake up when my alarm rings.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "usageNote": "目が覚めても、まだベッドにいる場合があります。ベッドから出るのは get up。",
+      "meaningDistractors": [
+        "brush your teeth",
+        "fall asleep"
+      ]
+    },
+    {
+      "word": "put on",
+      "meaning": "to move clothes onto your body",
+      "japaneseMeaning": "身に着ける",
+      "example": "Put on your coat before you go outside.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "have breakfast",
+        "stay up"
+      ]
+    },
+    {
+      "word": "take off",
+      "meaning": "to remove clothes from your body",
+      "japaneseMeaning": "脱ぐ",
+      "example": "Please take off your shoes at the door.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "go to bed",
+        "get dressed"
+      ],
+      "sentencePractice": {
+        "prompt": "This room has a no-shoes rule. Please ____ your shoes before you enter.",
+        "distractors": [
+          "put on",
+          "try on"
+        ],
+        "reviewNote": "A no-shoes rule requires removing shoes, not putting them on or testing their fit."
+      }
+    },
+    {
+      "word": "brush your teeth",
+      "meaning": "to clean your teeth with a small brush",
+      "japaneseMeaning": "歯を磨く",
+      "example": "Brush your teeth after breakfast.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "fall asleep",
+        "get up"
+      ]
+    },
+    {
+      "word": "have breakfast",
+      "meaning": "to eat the first meal of the day",
+      "japaneseMeaning": "朝食を食べる",
+      "example": "We have breakfast at the kitchen table.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "stay up",
+        "wake up"
+      ]
+    },
+    {
+      "word": "go to bed",
+      "meaning": "to get into bed to sleep",
+      "japaneseMeaning": "寝るためにベッドに入る",
+      "example": "I go to bed at ten on school nights.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "get dressed",
+        "put on"
+      ]
+    },
+    {
+      "word": "fall asleep",
+      "meaning": "to start sleeping",
+      "japaneseMeaning": "眠りに落ちる",
+      "example": "I often fall asleep on the train.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "get up",
+        "take off"
+      ]
+    },
+    {
+      "word": "stay up",
+      "meaning": "to remain awake instead of going to bed",
+      "japaneseMeaning": "寝ずに起きている",
+      "example": "We stay up late on Friday nights.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "wake up",
+        "brush your teeth"
+      ]
+    },
+    {
+      "word": "get dressed",
+      "meaning": "to put your clothes on",
+      "japaneseMeaning": "服を着る",
+      "example": "I get dressed before breakfast.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "take off",
+        "have breakfast"
+      ]
+    }
+  ]
+}

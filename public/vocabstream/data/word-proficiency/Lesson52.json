@@ -9,7 +9,12 @@
         "japaneseMeaning": "共感、感情移入",
         "synonyms": "compassion, understanding",
         "antonyms": "indifference, apathy",
-        "example": "Her empathy allowed her to comfort friends in distress."
+        "example": "Her empathy allowed her to comfort friends in distress.",
+        "duplicateOf": {
+          "category": "word-proficiency",
+          "lessonNumber": 28,
+          "word": "empathy"
+        }
       },
       {
         "word": "compassion",

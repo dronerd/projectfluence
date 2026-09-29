@@ -12,12 +12,15 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test:frontend": "node --test --experimental-strip-types apps/vocabstream/src/lib/learning.test.ts",
+    "test:frontend": "node --test --experimental-strip-types apps/vocabstream/src/lib/learning.test.ts apps/vocabstream/src/lib/questionPolicy.test.ts apps/vocabstream/src/lib/reviewPolicy.test.ts apps/vocabstream/src/lib/catalog.test.ts scripts/audit-vocabstream.test.mjs",
     "test:browser": "node scripts/validate-frontend.mjs",
     "test:backend": "node --test --experimental-strip-types app/api/_lib/http.test.ts lib/browserRequest.test.ts apps/vocabstream/src/lib/progressContract.test.ts apps/vidmatch/src/services/videoContract.test.ts apps/speakwise/src/lib/*.test.ts apps/vidmatch/src/services/recommendation.test.ts apps/vidmatch/src/services/curation/*.test.ts",
     "test:speakwise-api": "api/speakwise/.venv/bin/python -m unittest discover -s api/speakwise/tests -v",
     "test": "npm run test:frontend && npm run test:backend",
-    "vidmatch:catalog": "node --experimental-strip-types scripts/vidmatch-catalog.mjs"
+    "vidmatch:catalog": "node --experimental-strip-types scripts/vidmatch-catalog.mjs",
+    "vocabstream:audit": "node --experimental-strip-types scripts/audit-vocabstream.mjs",
+    "vocabstream:ambiguity": "node --experimental-strip-types scripts/audit-vocabstream-ambiguity.mjs",
+    "prebuild": "npm run vocabstream:audit && npm run vocabstream:ambiguity"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.1",

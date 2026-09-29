@@ -1,0 +1,136 @@
+{
+  "lesson_id": "idioms-beginner-lesson-52",
+  "title": "Lesson 52",
+  "paragraph": "家での動作",
+  "words": [
+    {
+      "word": "turn on",
+      "meaning": "to make a light or machine start working",
+      "japaneseMeaning": "電源を入れる・明かりをつける",
+      "example": "Please turn on the kitchen light.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "put down",
+        "clean up"
+      ],
+      "sentencePractice": {
+        "prompt": "It is dark in here. Please ____ the light so we can see.",
+        "distractors": [
+          "turn off",
+          "clean up"
+        ],
+        "reviewNote": "Starting the light provides illumination; switching it off or tidying cannot do that."
+      }
+    },
+    {
+      "word": "turn off",
+      "meaning": "to make a light or machine stop working",
+      "japaneseMeaning": "電源を切る・明かりを消す",
+      "example": "Turn off the television before bed.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "sit down",
+        "wash up"
+      ]
+    },
+    {
+      "word": "pick up",
+      "meaning": "to lift something with your hand",
+      "japaneseMeaning": "拾い上げる",
+      "example": "Please pick up the pencil from the floor.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "stand up",
+        "take a shower"
+      ]
+    },
+    {
+      "word": "put down",
+      "meaning": "to place something you are holding on a surface",
+      "japaneseMeaning": "持っている物を置く",
+      "example": "Put down the hot cup carefully.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "clean up",
+        "make the bed"
+      ]
+    },
+    {
+      "word": "sit down",
+      "meaning": "to move into a sitting position",
+      "japaneseMeaning": "座る",
+      "example": "Please sit down on this chair.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "wash up",
+        "turn on"
+      ]
+    },
+    {
+      "word": "stand up",
+      "meaning": "to move from sitting to a position on your feet",
+      "japaneseMeaning": "立ち上がる",
+      "example": "Please stand up when I call your name.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "take a shower",
+        "turn off"
+      ]
+    },
+    {
+      "word": "clean up",
+      "meaning": "to make a place clean and tidy",
+      "japaneseMeaning": "片づける",
+      "example": "We clean up the kitchen after dinner.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "turn off",
+        "pick up"
+      ]
+    },
+    {
+      "word": "wash up",
+      "meaning": "to wash plates and cups after a meal",
+      "japaneseMeaning": "食器を洗う",
+      "example": "I cook, and my brother helps me wash up.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "usageNote": "食器を洗う意味では主にイギリス英語。アメリカ英語では do the dishes が一般的です。",
+      "meaningDistractors": [
+        "turn on",
+        "put down"
+      ]
+    },
+    {
+      "word": "take a shower",
+      "meaning": "to wash your body under water falling from above",
+      "japaneseMeaning": "シャワーを浴びる",
+      "example": "I take a shower after football practice.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "turn off",
+        "sit down"
+      ]
+    },
+    {
+      "word": "make the bed",
+      "meaning": "to put the covers on a bed neatly",
+      "japaneseMeaning": "ベッドを整える",
+      "example": "I make the bed before I leave my room.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "pick up",
+        "stand up"
+      ]
+    }
+  ]
+}

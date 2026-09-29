@@ -1,0 +1,135 @@
+{
+  "lesson_id": "specialized-academic-lesson-3",
+  "title": "Lesson 3",
+  "paragraph": "論文と学術表現",
+  "words": [
+    {
+      "word": "citation",
+      "meaning": "a reference in a text that identifies the source of an idea or information",
+      "japaneseMeaning": "文献の引用表示",
+      "example": "Add a citation when you use another author's findings.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "peer review",
+        "argument"
+      ]
+    },
+    {
+      "word": "reference list",
+      "meaning": "the list of sources cited in a piece of writing",
+      "japaneseMeaning": "参考文献一覧",
+      "example": "Check that every citation has an entry in the reference list.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "paraphrase",
+        "counterargument"
+      ]
+    },
+    {
+      "word": "abstract",
+      "meaning": "a short summary of a research paper or presentation",
+      "japaneseMeaning": "要旨",
+      "example": "Read the abstract to see whether the paper is relevant.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "plagiarism",
+        "implication"
+      ]
+    },
+    {
+      "word": "peer review",
+      "meaning": "evaluation of academic work by other people with relevant expertise",
+      "japaneseMeaning": "査読",
+      "example": "The paper was revised after peer review.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "argument",
+        "conclusion"
+      ],
+      "sentencePractice": {
+        "prompt": "Other experts evaluate the submitted paper before a publication decision. This evaluation is ____.",
+        "distractors": [
+          "plagiarism",
+          "paraphrase"
+        ],
+        "reviewNote": "Expert evaluation differs from uncredited appropriation or rewriting the meaning in new words."
+      }
+    },
+    {
+      "word": "paraphrase",
+      "meaning": "to express an idea using different wording while keeping its meaning",
+      "japaneseMeaning": "言い換える",
+      "example": "You still need a citation when you paraphrase another author's idea.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "counterargument",
+        "citation"
+      ]
+    },
+    {
+      "word": "plagiarism",
+      "meaning": "presenting another person's words or ideas as your own without appropriate credit",
+      "japaneseMeaning": "盗用・剽窃",
+      "example": "The workshop explains how to avoid plagiarism.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "implication",
+        "reference list"
+      ]
+    },
+    {
+      "word": "argument",
+      "meaning": "a connected set of reasons offered to support a claim",
+      "japaneseMeaning": "論証",
+      "example": "The essay develops an argument using several sources.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "conclusion",
+        "abstract"
+      ]
+    },
+    {
+      "word": "counterargument",
+      "meaning": "a reason or position that challenges an argument",
+      "japaneseMeaning": "反論",
+      "example": "The author considers a counterargument before reaching a conclusion.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "citation",
+        "peer review"
+      ]
+    },
+    {
+      "word": "implication",
+      "meaning": "a possible consequence or meaning of a finding",
+      "japaneseMeaning": "示唆・含意",
+      "example": "One implication is that the course may need more practice sessions.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "reference list",
+        "paraphrase"
+      ]
+    },
+    {
+      "word": "conclusion",
+      "meaning": "the final judgment drawn from the discussion and evidence",
+      "japaneseMeaning": "結論",
+      "example": "The conclusion states what the evidence allows us to claim.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "abstract",
+        "plagiarism"
+      ]
+    }
+  ]
+}

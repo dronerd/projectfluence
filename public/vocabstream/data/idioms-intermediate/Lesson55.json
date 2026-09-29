@@ -1,0 +1,137 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-55",
+  "title": "Lesson 55",
+  "paragraph": "意見と日常会話",
+  "words": [
+    {
+      "word": "in my opinion",
+      "meaning": "used to introduce what you think",
+      "japaneseMeaning": "私の意見では",
+      "example": "In my opinion, the second plan is better.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "as a result",
+        "take your time"
+      ]
+    },
+    {
+      "word": "on the other hand",
+      "meaning": "used to introduce a different side of a situation",
+      "japaneseMeaning": "一方で",
+      "example": "The flat is small. On the other hand, it is cheap.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "at least",
+        "it depends"
+      ]
+    },
+    {
+      "word": "for example",
+      "meaning": "used before something that shows what you mean",
+      "japaneseMeaning": "例えば",
+      "example": "Many foods contain protein, for example, eggs and beans.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "by mistake",
+        "once in a while"
+      ]
+    },
+    {
+      "word": "as a result",
+      "meaning": "because of something that happened before",
+      "japaneseMeaning": "その結果",
+      "example": "It snowed all night. As a result, the roads were closed.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "take your time",
+        "from time to time"
+      ]
+    },
+    {
+      "word": "at least",
+      "meaning": "not less than the amount mentioned",
+      "japaneseMeaning": "少なくとも",
+      "example": "We need at least four people to play.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "it depends",
+        "in my opinion"
+      ]
+    },
+    {
+      "word": "by mistake",
+      "meaning": "without intending to do it; because of an error",
+      "japaneseMeaning": "間違って",
+      "example": "I took your bag by mistake.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "once in a while",
+        "on the other hand"
+      ],
+      "sentencePractice": {
+        "prompt": "I thought the bag was mine, but it was yours. I took it ____.",
+        "distractors": [
+          "on purpose",
+          "on time"
+        ],
+        "reviewNote": "The false belief establishes an unintentional error, not intention or punctuality."
+      }
+    },
+    {
+      "word": "take your time",
+      "meaning": "to do something without rushing",
+      "japaneseMeaning": "ゆっくり取り組む",
+      "example": "Take your time; we don't need to leave yet.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "from time to time",
+        "for example"
+      ]
+    },
+    {
+      "word": "it depends",
+      "meaning": "used when the answer changes with the situation",
+      "japaneseMeaning": "場合による",
+      "example": "Can we have a picnic? It depends on the weather.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "in my opinion",
+        "as a result"
+      ]
+    },
+    {
+      "word": "once in a while",
+      "meaning": "sometimes, but not often",
+      "japaneseMeaning": "時々",
+      "example": "We visit that café once in a while.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "usageNote": "from time to time と近い意味です。同じ意味の表現を選択肢に並べて出題しません。",
+      "meaningDistractors": [
+        "by mistake",
+        "at least"
+      ]
+    },
+    {
+      "word": "from time to time",
+      "meaning": "occasionally rather than regularly",
+      "japaneseMeaning": "折に触れて・時々",
+      "example": "I read my old school diary from time to time.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "usageNote": "once in a while と近い意味です。同じ意味の表現を選択肢に並べて出題しません。",
+      "meaningDistractors": [
+        "by mistake",
+        "at least"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-academic-lesson-1",
+  "title": "Lesson 1",
+  "paragraph": "研究の設計",
+  "words": [
+    {
+      "word": "hypothesis",
+      "meaning": "a proposed explanation or prediction that can be tested",
+      "japaneseMeaning": "仮説",
+      "example": "The experiment was designed to test the hypothesis.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "methodology",
+        "control group"
+      ],
+      "sentencePractice": {
+        "prompt": "Before collecting data, the researchers proposed a testable explanation. This proposed explanation is a ____.",
+        "distractors": [
+          "citation",
+          "sample"
+        ],
+        "reviewNote": "A testable proposed explanation differs from a source reference or selected observations."
+      }
+    },
+    {
+      "word": "research question",
+      "meaning": "the specific question a study aims to answer",
+      "japaneseMeaning": "研究課題・研究の問い",
+      "example": "A clear research question helps us choose a suitable method.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "sample",
+        "independent variable"
+      ]
+    },
+    {
+      "word": "literature review",
+      "meaning": "a structured discussion of previous research relevant to a topic",
+      "japaneseMeaning": "先行研究の検討",
+      "example": "The literature review identifies gaps in earlier studies.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "participant",
+        "dependent variable"
+      ]
+    },
+    {
+      "word": "methodology",
+      "meaning": "the system of methods and reasoning used to conduct research",
+      "japaneseMeaning": "研究方法論",
+      "example": "The methodology section explains why these methods were chosen.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "control group",
+        "replication"
+      ]
+    },
+    {
+      "word": "sample",
+      "meaning": "a smaller group or set selected from a larger population for study",
+      "japaneseMeaning": "標本・サンプル",
+      "example": "The sample included students from three universities.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "independent variable",
+        "hypothesis"
+      ]
+    },
+    {
+      "word": "participant",
+      "meaning": "a person who takes part in a research study",
+      "japaneseMeaning": "研究参加者",
+      "example": "Each participant received an explanation of the task.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "dependent variable",
+        "research question"
+      ]
+    },
+    {
+      "word": "control group",
+      "meaning": "a comparison group that does not receive the condition being tested",
+      "japaneseMeaning": "対照群",
+      "example": "The control group followed the usual training programme.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "replication",
+        "literature review"
+      ]
+    },
+    {
+      "word": "independent variable",
+      "meaning": "a factor a study changes or uses to explain differences in an outcome",
+      "japaneseMeaning": "独立変数",
+      "example": "In this experiment, temperature was the independent variable.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "hypothesis",
+        "methodology"
+      ]
+    },
+    {
+      "word": "dependent variable",
+      "meaning": "the outcome measured in a study",
+      "japaneseMeaning": "従属変数",
+      "example": "The dependent variable was the time needed to finish the task.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "research question",
+        "sample"
+      ],
+      "sentencePractice": {
+        "prompt": "The researchers changed temperature and measured reaction time as the outcome. Reaction time was the ____.",
+        "distractors": [
+          "independent variable",
+          "control group"
+        ],
+        "reviewNote": "The measured outcome, not the changed factor or a comparison group, is dependent."
+      }
+    },
+    {
+      "word": "replication",
+      "meaning": "repeating a study to see whether its findings can be obtained again",
+      "japaneseMeaning": "追試",
+      "example": "Independent replication would strengthen confidence in the result.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "literature review",
+        "participant"
+      ]
+    }
+  ]
+}

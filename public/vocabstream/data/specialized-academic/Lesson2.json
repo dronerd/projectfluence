@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-academic-lesson-2",
+  "title": "Lesson 2",
+  "paragraph": "データの解釈",
+  "words": [
+    {
+      "word": "evidence",
+      "meaning": "information used to support or challenge a claim",
+      "japaneseMeaning": "証拠・根拠",
+      "example": "The conclusion must be supported by evidence.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "causation",
+        "validity"
+      ]
+    },
+    {
+      "word": "data",
+      "meaning": "recorded observations or measurements used for analysis",
+      "japaneseMeaning": "データ",
+      "example": "The researchers checked the data before analysis.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "bias",
+        "reliability"
+      ]
+    },
+    {
+      "word": "correlation",
+      "meaning": "a pattern in which two measured quantities vary together",
+      "japaneseMeaning": "相関",
+      "example": "The study found a correlation between sleep time and test scores.",
+      "definitionType": "text",
+      "domain": "academic",
+      "usageNote": "2つの量が一緒に変化する関係です。それだけでは、一方が他方の原因だとは言えません。",
+      "meaningDistractors": [
+        "limitation",
+        "confidence interval"
+      ],
+      "sentencePractice": {
+        "prompt": "Two measurements vary together, but this alone does not show that one causes the other. This pattern is ____.",
+        "distractors": [
+          "causation",
+          "replication"
+        ],
+        "reviewNote": "Co-variation without established cause is correlation; repetition is a study procedure."
+      }
+    },
+    {
+      "word": "causation",
+      "meaning": "a relationship in which one factor produces a change in another",
+      "japaneseMeaning": "因果関係",
+      "example": "Correlation alone does not establish causation.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "validity",
+        "outlier"
+      ]
+    },
+    {
+      "word": "bias",
+      "meaning": "a systematic influence that can distort a study or its interpretation",
+      "japaneseMeaning": "偏り・バイアス",
+      "example": "The team changed the sampling method to reduce bias.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "reliability",
+        "evidence"
+      ]
+    },
+    {
+      "word": "limitation",
+      "meaning": "a feature that restricts what a study can show or how widely it applies",
+      "japaneseMeaning": "研究上の限界",
+      "example": "The small sample size is a limitation of this study.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "confidence interval",
+        "data"
+      ]
+    },
+    {
+      "word": "validity",
+      "meaning": "the extent to which a method or conclusion fits what it is intended to measure or establish",
+      "japaneseMeaning": "妥当性",
+      "example": "The authors discuss the validity of the questionnaire.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "outlier",
+        "correlation"
+      ]
+    },
+    {
+      "word": "reliability",
+      "meaning": "the consistency of measurements when a method is repeated under similar conditions",
+      "japaneseMeaning": "信頼性",
+      "example": "Repeated measurements helped assess the instrument's reliability.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "evidence",
+        "causation"
+      ]
+    },
+    {
+      "word": "confidence interval",
+      "meaning": "a range calculated by a method designed to contain the true value at a stated rate across repeated samples",
+      "japaneseMeaning": "信頼区間",
+      "example": "The report gives a confidence interval around the estimate.",
+      "definitionType": "text",
+      "domain": "academic",
+      "usageNote": "繰り返し標本を取るときの区間の作り方に関する用語です。計算済みの区間に真の値が入る確率を直接表すものではありません。",
+      "meaningDistractors": [
+        "data",
+        "bias"
+      ]
+    },
+    {
+      "word": "outlier",
+      "meaning": "an observation that differs greatly from most other observations",
+      "japaneseMeaning": "外れ値",
+      "example": "The team checked whether the outlier resulted from a recording error.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "correlation",
+        "limitation"
+      ],
+      "sentencePractice": {
+        "prompt": "Nearly all values are between 10 and 12, but one is 90. The unusually distant observation is an ____.",
+        "distractors": [
+          "abstract",
+          "argument"
+        ],
+        "reviewNote": "A numerically distant observation is not a summary or a chain of reasons."
+      }
+    }
+  ]
+}

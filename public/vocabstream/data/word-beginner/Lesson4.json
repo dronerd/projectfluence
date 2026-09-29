@@ -10,7 +10,31 @@
       "synonyms": "top",
       "antonyms": "",
       "forms": "shirt, shirts",
-      "example": "My shirt is white."
+      "example": "My shirt is white.",
+      "sentencePractice": {
+        "prompt": "He put on a ____ with long sleeves and buttons down the front.",
+        "distractors": [
+          "shoes",
+          "hat"
+        ],
+        "reviewNote": "Only the target has sleeves in this clothing set."
+      },
+      "image": {
+        "src": "/vocabstream/images/shirt.svg",
+        "alt": "えりと前ボタン、短い袖がある青いシャツ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/shirt.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "shoes",
+        "hat"
+      ]
     },
     {
       "word": "pants",
@@ -34,10 +58,34 @@
       "word": "shoes",
       "meaning": "things worn on the feet",
       "japaneseMeaning": "靴",
-      "synonyms": "footwear",
+      "synonyms": "",
       "antonyms": "",
       "forms": "shoe, shoes",
-      "example": "My shoes are by the door."
+      "example": "My shoes are by the door.",
+      "sentencePractice": {
+        "prompt": "I tied the laces of my ____ before walking outside.",
+        "distractors": [
+          "hat",
+          "socks"
+        ],
+        "reviewNote": "Laces and outdoor footwear identify shoes; ordinary hats and socks have no laces."
+      },
+      "image": {
+        "src": "/vocabstream/images/shoes.svg",
+        "alt": "ひもが付いた、左右一組の運動靴。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/shoes.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "hat",
+        "socks"
+      ]
     },
     {
       "word": "socks",
@@ -46,16 +94,64 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "sock, socks",
-      "example": "These socks are clean."
+      "example": "These socks are clean.",
+      "sentencePractice": {
+        "prompt": "I put the soft ____ on my feet before putting on my shoes.",
+        "distractors": [
+          "shirt",
+          "hat"
+        ],
+        "reviewNote": "The location and dressing sequence identify socks rather than upper-body clothing."
+      },
+      "image": {
+        "src": "/vocabstream/images/socks.svg",
+        "alt": "足首と足先を包む、左右一組の靴下。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/socks.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "shirt",
+        "hat"
+      ]
     },
     {
       "word": "hat",
       "meaning": "clothing worn on the head",
       "japaneseMeaning": "帽子",
-      "synonyms": "cap",
+      "synonyms": "",
       "antonyms": "",
       "forms": "hat, hats",
-      "example": "The hat is on the shelf."
+      "example": "The hat is on the shelf.",
+      "sentencePractice": {
+        "prompt": "I put a ____ on my head to keep the sun off my face.",
+        "distractors": [
+          "shirt",
+          "shoes"
+        ],
+        "reviewNote": "Headwear that shields the face identifies hat within this choice set."
+      },
+      "image": {
+        "src": "/vocabstream/images/hat.svg",
+        "alt": "つばのある、茶色い帽子。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/hat.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "shirt",
+        "shoes"
+      ]
     },
     {
       "word": "jacket",
@@ -68,9 +164,9 @@
     },
     {
       "word": "jeans",
-      "meaning": "strong blue pants",
+      "meaning": "pants made from strong cotton cloth called denim",
       "japaneseMeaning": "ジーンズ",
-      "synonyms": "pants",
+      "synonyms": "",
       "antonyms": "",
       "forms": "jeans",
       "example": "These jeans are too long."

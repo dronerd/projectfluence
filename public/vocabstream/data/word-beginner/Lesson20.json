@@ -12,6 +12,6 @@
     { "word": "outside", "meaning": "not inside a room or building", "japaneseMeaning": "外に、外で", "synonyms": "outdoors", "antonyms": "inside", "forms": "outside", "example": "The children play outside." },
     { "word": "near", "meaning": "not far away", "japaneseMeaning": "近くに", "synonyms": "close", "antonyms": "far", "forms": "near, nearer, nearest", "example": "My house is near school." },
     { "word": "far", "meaning": "not near", "japaneseMeaning": "遠くに", "synonyms": "away", "antonyms": "near", "forms": "far, farther, farthest", "example": "The park is far from here." },
-    { "word": "today", "meaning": "on this day", "japaneseMeaning": "今日", "synonyms": "this day", "antonyms": "tomorrow", "forms": "today", "example": "Today is sunny." }
+    { "word": "today", "meaning": "on this day", "japaneseMeaning": "今日", "synonyms": "this day", "antonyms": "", "forms": "today", "example": "Today is sunny." }
   ]
 }

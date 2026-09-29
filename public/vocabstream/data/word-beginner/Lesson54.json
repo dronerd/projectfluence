@@ -3,15 +3,15 @@
   "title": "Lesson 54",
   "paragraph": "This lesson practices useful nouns for hobbies and free time.",
   "words": [
-    { "word": "hobby", "meaning": "something you enjoy doing in your free time", "japaneseMeaning": "趣味", "synonyms": "free-time activity, interest", "antonyms": "work", "forms": "hobby, hobbies", "example": "My hobby is drawing." },
-    { "word": "game", "meaning": "an activity with rules for fun", "japaneseMeaning": "ゲーム／試合", "synonyms": "play, match", "antonyms": "work", "forms": "game, games", "example": "We play a board game after dinner." },
-    { "word": "puzzle", "meaning": "a game or question you solve", "japaneseMeaning": "パズル", "synonyms": "problem, game", "antonyms": "answer", "forms": "puzzle, puzzles", "example": "This puzzle is fun." },
-    { "word": "comic", "meaning": "a book or story with pictures", "japaneseMeaning": "漫画", "synonyms": "picture book, manga", "antonyms": "textbook", "forms": "comic, comics", "example": "I read a comic on the train." },
-    { "word": "cartoon", "meaning": "a funny drawing or animated show", "japaneseMeaning": "漫画／アニメ", "synonyms": "animation, drawing", "antonyms": "real film", "forms": "cartoon, cartoons", "example": "My sister watches a cartoon on TV." },
-    { "word": "movie", "meaning": "a story shown on a screen", "japaneseMeaning": "映画", "synonyms": "film, video", "antonyms": "book", "forms": "movie, movies", "example": "We saw a movie last night." },
-    { "word": "song", "meaning": "music with words", "japaneseMeaning": "歌", "synonyms": "music, tune", "antonyms": "silence", "forms": "song, songs", "example": "This song is easy to sing." },
-    { "word": "music", "meaning": "sounds that people sing or play", "japaneseMeaning": "音楽", "synonyms": "song, tune", "antonyms": "silence", "forms": "music", "example": "We listen to music after school." },
-    { "word": "photo", "meaning": "a picture made with a camera", "japaneseMeaning": "写真", "synonyms": "picture, image", "antonyms": "none", "forms": "photo, photos", "example": "Take a photo of the flowers." },
-    { "word": "camera", "meaning": "a thing used to take photos", "japaneseMeaning": "カメラ", "synonyms": "photo tool, recorder", "antonyms": "none", "forms": "camera, cameras", "example": "This camera is easy to use." }
+    { "word": "hobby", "meaning": "something you enjoy doing in your free time", "japaneseMeaning": "趣味", "synonyms": "free-time activity, interest", "antonyms": "", "forms": "hobby, hobbies", "example": "My hobby is drawing." },
+    { "word": "game", "meaning": "an activity with rules for fun", "japaneseMeaning": "ゲーム／試合", "synonyms": "play, match", "antonyms": "", "forms": "game, games", "example": "We play a board game after dinner." },
+    { "word": "puzzle", "meaning": "a game or question you solve", "japaneseMeaning": "パズル", "synonyms": "problem, game", "antonyms": "", "forms": "puzzle, puzzles", "example": "This puzzle is fun." },
+    { "word": "comic", "meaning": "a book or story with pictures", "japaneseMeaning": "漫画", "synonyms": "comic book", "antonyms": "", "forms": "comic, comics", "example": "I read a comic on the train." },
+    { "word": "cartoon", "meaning": "a funny drawing or animated show", "japaneseMeaning": "漫画／アニメ", "synonyms": "animation, drawing", "antonyms": "", "forms": "cartoon, cartoons", "example": "My sister watches a cartoon on TV." },
+    { "word": "movie", "meaning": "a story shown on a screen", "japaneseMeaning": "映画", "synonyms": "film, video", "antonyms": "", "forms": "movie, movies", "example": "We saw a movie last night." },
+    { "word": "song", "meaning": "music with words", "japaneseMeaning": "歌", "synonyms": "music, tune", "antonyms": "", "forms": "song, songs", "example": "This song is easy to sing." },
+    { "word": "music", "meaning": "sounds that people sing or play", "japaneseMeaning": "音楽", "synonyms": "song, tune", "antonyms": "", "forms": "music", "example": "We listen to music after school." },
+    { "word": "photo", "meaning": "a picture made with a camera", "japaneseMeaning": "写真", "synonyms": "picture, image", "antonyms": "", "forms": "photo, photos", "example": "Take a photo of the flowers." },
+    { "word": "camera", "meaning": "a thing used to take photos", "japaneseMeaning": "カメラ", "synonyms": "", "antonyms": "", "forms": "camera, cameras", "example": "This camera is easy to use." }
   ]
 }

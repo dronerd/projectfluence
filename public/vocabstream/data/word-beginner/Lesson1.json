@@ -7,91 +7,331 @@
       "word": "apple",
       "meaning": "a round red, green, or yellow fruit",
       "japaneseMeaning": "りんご",
-      "synonyms": "fruit",
+      "synonyms": "",
       "antonyms": "",
       "forms": "apple, apples",
-      "example": "I eat an apple after lunch."
+      "example": "I eat an apple after lunch.",
+      "sentencePractice": {
+        "prompt": "This round fruit has red skin and grows on a tree. It is an ____.",
+        "distractors": [
+          "carrot",
+          "potato"
+        ],
+        "reviewNote": "The tree-grown fruit clue excludes the two underground vegetables."
+      },
+      "image": {
+        "src": "/vocabstream/images/apple.svg",
+        "alt": "葉と短い枝が付いた、赤いりんご。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/apple.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "carrot",
+        "potato"
+      ]
     },
     {
       "word": "banana",
       "meaning": "a long yellow fruit",
       "japaneseMeaning": "バナナ",
-      "synonyms": "fruit",
+      "synonyms": "",
       "antonyms": "",
       "forms": "banana, bananas",
-      "example": "The banana is sweet."
+      "example": "The banana is sweet.",
+      "sentencePractice": {
+        "prompt": "Peel the long yellow fruit before you eat it. It is a ____.",
+        "distractors": [
+          "lemon",
+          "onion"
+        ],
+        "reviewNote": "Shape and peeling together identify banana; the distractors do not fit both clues."
+      },
+      "image": {
+        "src": "/vocabstream/images/banana.svg",
+        "alt": "皮をむいていない、細長く曲がった黄色いバナナ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/banana.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "lemon",
+        "onion"
+      ]
     },
     {
       "word": "grape",
-      "meaning": "a small round fruit",
+      "meaning": "a small round fruit that grows in bunches",
       "japaneseMeaning": "ぶどう",
-      "synonyms": "fruit",
+      "synonyms": "",
       "antonyms": "",
       "forms": "grape, grapes",
-      "example": "She put a grape in her lunch box."
+      "example": "She put a grape in her lunch box.",
+      "sentencePractice": {
+        "prompt": "This small round fruit comes in a bunch. I picked one ____ from the bunch.",
+        "distractors": [
+          "carrot",
+          "cheese"
+        ],
+        "reviewNote": "A small fruit growing in a bunch excludes a vegetable and a dairy food."
+      },
+      "image": {
+        "src": "/vocabstream/images/grape.svg",
+        "alt": "紫色のぶどうの房と、房から離れた一粒。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/grape.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "carrot",
+        "cheese"
+      ]
     },
     {
       "word": "lemon",
       "meaning": "a sour yellow fruit",
       "japaneseMeaning": "レモン",
-      "synonyms": "fruit",
+      "synonyms": "",
       "antonyms": "",
       "forms": "lemon, lemons",
-      "example": "I put lemon in my tea."
+      "example": "I put lemon in my tea.",
+      "sentencePractice": {
+        "prompt": "I squeezed the sour yellow fruit into my tea. It was a ____.",
+        "distractors": [
+          "banana",
+          "potato"
+        ],
+        "reviewNote": "Sour juice from a yellow fruit identifies lemon within this choice set."
+      },
+      "image": {
+        "src": "/vocabstream/images/lemon.svg",
+        "alt": "両端が少しとがった黄色いレモンと、断面の見える輪切り。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/lemon.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "banana",
+        "potato"
+      ]
     },
     {
       "word": "potato",
-      "meaning": "a round vegetable that grows in the ground",
+      "meaning": "a round or oval vegetable that grows under the ground",
       "japaneseMeaning": "じゃがいも",
-      "synonyms": "vegetable",
+      "synonyms": "",
       "antonyms": "",
       "forms": "potato, potatoes",
-      "example": "This potato is hot."
+      "example": "This potato is hot.",
+      "sentencePractice": {
+        "prompt": "This vegetable grows under the ground. We can bake it or cut it into fries. It is a ____.",
+        "distractors": [
+          "tomato",
+          "grape"
+        ],
+        "reviewNote": "The underground vegetable used for fries distinguishes potato from the other foods."
+      },
+      "image": {
+        "src": "/vocabstream/images/potato.svg",
+        "alt": "表面に小さなくぼみがある、茶色いじゃがいも。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/potato.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "tomato",
+        "grape"
+      ]
     },
     {
       "word": "tomato",
       "meaning": "a soft red fruit used like a vegetable",
       "japaneseMeaning": "トマト",
-      "synonyms": "fruit",
+      "synonyms": "",
       "antonyms": "",
       "forms": "tomato, tomatoes",
-      "example": "The tomato is in the salad."
+      "example": "The tomato is in the salad.",
+      "sentencePractice": {
+        "prompt": "For the salad, I sliced the soft red fruit with many small seeds. It was a ____.",
+        "distractors": [
+          "bread",
+          "onion"
+        ],
+        "reviewNote": "Red fruit with seeds distinguishes tomato from bread and the layered vegetable."
+      },
+      "image": {
+        "src": "/vocabstream/images/tomato.svg",
+        "alt": "緑色の星形のへたが付いた、丸い赤いトマト。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/tomato.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "bread",
+        "onion"
+      ]
     },
     {
       "word": "onion",
       "meaning": "a round vegetable with a strong smell",
       "japaneseMeaning": "玉ねぎ",
-      "synonyms": "vegetable",
+      "synonyms": "",
       "antonyms": "",
       "forms": "onion, onions",
-      "example": "My mother cut an onion."
+      "example": "My mother cut an onion.",
+      "sentencePractice": {
+        "prompt": "I cut this round vegetable, and my eyes filled with water. It was an ____.",
+        "distractors": [
+          "apple",
+          "potato"
+        ],
+        "reviewNote": "Cutting the vegetable causes watering eyes; an apple or potato does not ordinarily cause this."
+      },
+      "image": {
+        "src": "/vocabstream/images/onion.svg",
+        "alt": "先が細く、薄茶色の皮と根がある玉ねぎ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/onion.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "apple",
+        "potato"
+      ]
     },
     {
       "word": "carrot",
       "meaning": "a long orange vegetable",
       "japaneseMeaning": "にんじん",
-      "synonyms": "vegetable",
+      "synonyms": "",
       "antonyms": "",
       "forms": "carrot, carrots",
-      "example": "The rabbit eats a carrot."
+      "example": "The rabbit eats a carrot.",
+      "sentencePractice": {
+        "prompt": "The rabbit ate the long orange vegetable. It was a ____.",
+        "distractors": [
+          "lemon",
+          "cheese"
+        ],
+        "reviewNote": "The vegetable's shape and color rule out the fruit and dairy distractors."
+      },
+      "image": {
+        "src": "/vocabstream/images/carrot.svg",
+        "alt": "緑の葉が付いた、先の細いオレンジ色のにんじん。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/carrot.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "lemon",
+        "cheese"
+      ]
     },
     {
       "word": "bread",
       "meaning": "food made from flour and baked",
       "japaneseMeaning": "パン",
-      "synonyms": "food",
+      "synonyms": "",
       "antonyms": "",
       "forms": "bread",
-      "example": "I eat bread for breakfast."
+      "example": "I eat bread for breakfast.",
+      "sentencePractice": {
+        "prompt": "The baker mixed flour and water, then baked a loaf of ____.",
+        "distractors": [
+          "juice",
+          "cheese"
+        ],
+        "reviewNote": "A baked loaf made from flour and water is bread; juice and cheese do not fit this recipe."
+      },
+      "image": {
+        "src": "/vocabstream/images/bread.svg",
+        "alt": "茶色い皮のある一斤のパンと、切り分けた一枚。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/bread.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "juice",
+        "cheese"
+      ]
     },
     {
       "word": "cheese",
       "meaning": "a food made from milk",
       "japaneseMeaning": "チーズ",
-      "synonyms": "food",
+      "synonyms": "",
       "antonyms": "",
       "forms": "cheese, cheeses",
-      "example": "Cheese is on the pizza."
+      "example": "Cheese is on the pizza.",
+      "sentencePractice": {
+        "prompt": "This yellow food is made from milk. We put it on pizza. It is ____.",
+        "distractors": [
+          "sugar",
+          "carrot"
+        ],
+        "reviewNote": "The milk source excludes sugar and carrot; the food context is familiar and concrete."
+      },
+      "image": {
+        "src": "/vocabstream/images/cheese.svg",
+        "alt": "丸い穴の開いた、黄色いチーズのかたまり。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/cheese.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "sugar",
+        "carrot"
+      ]
     }
   ]
 }

@@ -1,0 +1,136 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-54",
+  "title": "Lesson 54",
+  "paragraph": "旅行と予定",
+  "words": [
+    {
+      "word": "check in",
+      "meaning": "to register your arrival at a hotel or airport",
+      "japaneseMeaning": "チェックインする",
+      "example": "We can check in at the hotel after three.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "break down",
+        "get lost"
+      ]
+    },
+    {
+      "word": "check out",
+      "meaning": "to leave a hotel and finish paying your bill",
+      "japaneseMeaning": "チェックアウトする",
+      "example": "We need to check out before eleven.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "pick someone up",
+        "be worth it"
+      ],
+      "sentencePractice": {
+        "prompt": "At the hotel desk, we need to ____ by settling the bill and handing back the key.",
+        "distractors": [
+          "check in",
+          "set off"
+        ],
+        "reviewNote": "Settling the hotel bill and returning the room key define the checkout procedure, not beginning a journey or registering arrival."
+      }
+    },
+    {
+      "word": "set off",
+      "meaning": "to begin a journey",
+      "japaneseMeaning": "出発する",
+      "example": "We will set off early to avoid traffic.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "book in advance",
+        "just in case"
+      ]
+    },
+    {
+      "word": "break down",
+      "meaning": "to stop working because of a fault in a machine",
+      "japaneseMeaning": "故障する",
+      "example": "Old cars sometimes break down on long journeys.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "get lost",
+        "so far"
+      ]
+    },
+    {
+      "word": "pick someone up",
+      "meaning": "to collect someone and take them somewhere in a vehicle",
+      "japaneseMeaning": "人を車などで迎えに行く",
+      "example": "I need to pick someone up from the station tonight.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "usageNote": "someone の位置に迎える相手を入れます。例: pick my sister up / pick her up。",
+      "meaningDistractors": [
+        "be worth it",
+        "check in"
+      ]
+    },
+    {
+      "word": "book in advance",
+      "meaning": "to arrange a ticket or room before you need it",
+      "japaneseMeaning": "前もって予約する",
+      "example": "You should book in advance during the holidays.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "just in case",
+        "check out"
+      ]
+    },
+    {
+      "word": "get lost",
+      "meaning": "to not know where you are or how to reach your destination",
+      "japaneseMeaning": "道に迷う",
+      "example": "Take a map so you don't get lost.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "so far",
+        "set off"
+      ]
+    },
+    {
+      "word": "be worth it",
+      "meaning": "to be useful or enjoyable enough for the time or money spent",
+      "japaneseMeaning": "それだけの価値がある",
+      "example": "The walk is long, but the view will be worth it.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "check in",
+        "break down"
+      ]
+    },
+    {
+      "word": "just in case",
+      "meaning": "because something might happen and you want to be ready",
+      "japaneseMeaning": "念のため",
+      "example": "Take an umbrella just in case.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "check out",
+        "pick someone up"
+      ]
+    },
+    {
+      "word": "so far",
+      "meaning": "until now",
+      "japaneseMeaning": "今までのところ",
+      "example": "The journey has been easy so far.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "set off",
+        "book in advance"
+      ]
+    }
+  ]
+}

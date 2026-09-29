@@ -3,15 +3,15 @@
   "title": "Lesson 8",
   "paragraph": "Animal nouns for pets, farms, and stories.",
   "words": [
-    { "word": "cat", "meaning": "a small pet animal", "japaneseMeaning": "猫", "synonyms": "pet", "antonyms": "", "forms": "cat, cats", "example": "The cat sleeps on the sofa." },
+    { "word": "cat", "meaning": "a small animal often kept as a pet that makes a \"meow\" sound", "japaneseMeaning": "猫", "synonyms": "", "antonyms": "", "forms": "cat, cats", "example": "The cat sleeps on the sofa." },
     { "word": "rabbit", "meaning": "a small animal with long ears", "japaneseMeaning": "うさぎ", "synonyms": "", "antonyms": "", "forms": "rabbit, rabbits", "example": "The rabbit eats a carrot." },
     { "word": "mouse", "meaning": "a very small animal with a long tail", "japaneseMeaning": "ねずみ", "synonyms": "", "antonyms": "", "forms": "mouse, mice", "example": "A mouse is under the table." },
     { "word": "cow", "meaning": "a large farm animal that gives milk", "japaneseMeaning": "牛", "synonyms": "", "antonyms": "", "forms": "cow, cows", "example": "The cow is in the field." },
     { "word": "pig", "meaning": "a farm animal with a round body", "japaneseMeaning": "豚", "synonyms": "", "antonyms": "", "forms": "pig, pigs", "example": "The pig is pink." },
     { "word": "sheep", "meaning": "a farm animal with thick wool", "japaneseMeaning": "羊", "synonyms": "", "antonyms": "", "forms": "sheep, sheep", "example": "The sheep eats grass." },
     { "word": "goat", "meaning": "a farm animal with horns", "japaneseMeaning": "ヤギ", "synonyms": "", "antonyms": "", "forms": "goat, goats", "example": "The goat is on the hill." },
-    { "word": "duck", "meaning": "a bird that swims on water", "japaneseMeaning": "アヒル、カモ", "synonyms": "bird", "antonyms": "", "forms": "duck, ducks", "example": "The duck swims in the pond." },
-    { "word": "lion", "meaning": "a large wild cat", "japaneseMeaning": "ライオン", "synonyms": "", "antonyms": "", "forms": "lion, lions", "example": "The lion lives at the zoo." },
+    { "word": "duck", "meaning": "a bird that swims on water", "japaneseMeaning": "アヒル、カモ", "synonyms": "", "antonyms": "", "forms": "duck, ducks", "example": "The duck swims in the pond." },
+    { "word": "lion", "meaning": "a large wild cat; males often have long hair around their necks", "japaneseMeaning": "ライオン", "synonyms": "", "antonyms": "", "forms": "lion, lions", "example": "The lion lives at the zoo.", "meaningDistractors": ["duck", "rabbit"] },
     { "word": "tiger", "meaning": "a large wild cat with stripes", "japaneseMeaning": "トラ", "synonyms": "", "antonyms": "", "forms": "tiger, tigers", "example": "The tiger has black stripes." }
   ]
 }

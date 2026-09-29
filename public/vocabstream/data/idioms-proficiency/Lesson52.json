@@ -1,0 +1,136 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-52",
+  "title": "Lesson 52",
+  "paragraph": "計画の実行",
+  "words": [
+    {
+      "word": "iron out",
+      "meaning": "to resolve small problems in a plan or agreement",
+      "japaneseMeaning": "細かな問題を解決する",
+      "example": "We still need to iron out a few details before signing.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "scale back",
+        "follow through"
+      ]
+    },
+    {
+      "word": "phase out",
+      "meaning": "to stop using something gradually",
+      "japaneseMeaning": "段階的に廃止する",
+      "example": "The company will phase out the old system over two years.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "factor in",
+        "bring to fruition"
+      ],
+      "sentencePractice": {
+        "prompt": "We will stop using this system gradually over two years. We plan to ____ the system.",
+        "distractors": [
+          "roll out",
+          "factor in"
+        ],
+        "reviewNote": "Gradual withdrawal is different from introducing a system or including it in a calculation."
+      }
+    },
+    {
+      "word": "roll out",
+      "meaning": "to introduce a new product or service to users",
+      "japaneseMeaning": "製品やサービスを展開する",
+      "example": "We will roll out the update in stages.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "allow for",
+        "at the outset"
+      ]
+    },
+    {
+      "word": "scale back",
+      "meaning": "to reduce the size or extent of an activity",
+      "japaneseMeaning": "規模を縮小する",
+      "example": "The team had to scale back its original plans.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "follow through",
+        "in the pipeline"
+      ]
+    },
+    {
+      "word": "factor in",
+      "meaning": "to include something when calculating or planning",
+      "japaneseMeaning": "計算や計画に織り込む",
+      "example": "Remember to factor in maintenance costs.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "bring to fruition",
+        "iron out"
+      ]
+    },
+    {
+      "word": "allow for",
+      "meaning": "to plan for the possibility of something",
+      "japaneseMeaning": "見込んで備える",
+      "example": "The schedule should allow for unexpected delays.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "at the outset",
+        "phase out"
+      ]
+    },
+    {
+      "word": "follow through",
+      "meaning": "to continue an action until it is completed",
+      "japaneseMeaning": "最後までやり遂げる",
+      "example": "A good proposal needs people who will follow through.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "in the pipeline",
+        "roll out"
+      ]
+    },
+    {
+      "word": "bring to fruition",
+      "meaning": "to make a plan become a successful reality",
+      "japaneseMeaning": "計画を実現させる",
+      "example": "It took years to bring the community garden plan to fruition.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "usageNote": "目的語は bring と to fruition の間にも置けます。やや改まった表現です。",
+      "meaningDistractors": [
+        "iron out",
+        "scale back"
+      ]
+    },
+    {
+      "word": "at the outset",
+      "meaning": "at the beginning of an activity or process",
+      "japaneseMeaning": "最初の段階で",
+      "example": "We agreed on our priorities at the outset.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "phase out",
+        "factor in"
+      ]
+    },
+    {
+      "word": "in the pipeline",
+      "meaning": "being planned or developed but not yet available",
+      "japaneseMeaning": "計画中・開発中で",
+      "example": "Several improvements are in the pipeline.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "roll out",
+        "allow for"
+      ]
+    }
+  ]
+}

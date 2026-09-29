@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-advanced-lesson-51",
+  "title": "Lesson 51",
+  "paragraph": "話し合いと説明",
+  "words": [
+    {
+      "word": "bring up",
+      "meaning": "to introduce a subject in a conversation",
+      "japaneseMeaning": "話題を持ち出す",
+      "example": "Please bring up the delivery problem at the meeting.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "talk over",
+        "turn down"
+      ]
+    },
+    {
+      "word": "point out",
+      "meaning": "to draw someone's attention to a fact",
+      "japaneseMeaning": "指摘する",
+      "example": "I should point out that these figures are only estimates.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "sum up",
+        "put forward"
+      ]
+    },
+    {
+      "word": "get across",
+      "meaning": "to communicate an idea so that people understand it",
+      "japaneseMeaning": "考えを伝える",
+      "example": "A simple diagram can help you get across your main point.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "back up",
+        "turn down"
+      ]
+    },
+    {
+      "word": "talk over",
+      "meaning": "to discuss something before making a decision",
+      "japaneseMeaning": "話し合う",
+      "example": "We need to talk over the options before we choose.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "turn down",
+        "spell out"
+      ]
+    },
+    {
+      "word": "sum up",
+      "meaning": "to describe the main points briefly",
+      "japaneseMeaning": "要約する",
+      "example": "Could you sum up the discussion in a few sentences?",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "put forward",
+        "bring up"
+      ]
+    },
+    {
+      "word": "back up",
+      "meaning": "to support a statement with evidence",
+      "japaneseMeaning": "証拠で裏づける",
+      "example": "You need examples to back up your argument.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "clear up",
+        "point out"
+      ],
+      "sentencePractice": {
+        "prompt": "Your claim needs evidence. Please ____ your argument with reliable data.",
+        "distractors": [
+          "turn down",
+          "put off"
+        ],
+        "reviewNote": "Reliable data supports the argument rather than refusing or delaying it."
+      }
+    },
+    {
+      "word": "turn down",
+      "meaning": "to refuse an offer or request",
+      "japaneseMeaning": "断る",
+      "example": "She decided to turn down the job offer.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "spell out",
+        "get across"
+      ]
+    },
+    {
+      "word": "put forward",
+      "meaning": "to suggest an idea for people to consider",
+      "japaneseMeaning": "提案する",
+      "example": "Each group can put forward one solution.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "turn down",
+        "talk over"
+      ]
+    },
+    {
+      "word": "clear up",
+      "meaning": "to remove confusion by explaining something",
+      "japaneseMeaning": "疑問や誤解を解消する",
+      "example": "I hope this email will clear up the misunderstanding.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "point out",
+        "sum up"
+      ]
+    },
+    {
+      "word": "spell out",
+      "meaning": "to explain something clearly and in detail",
+      "japaneseMeaning": "詳しく明確に説明する",
+      "example": "The contract must spell out each person's responsibilities.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "turn down",
+        "back up"
+      ]
+    }
+  ]
+}

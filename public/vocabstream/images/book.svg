@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>表紙を開くと、両側のページに文章が印刷されている本。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#739aaf" d="m30 51 90 13 90-13v101l-90-12-90 12Z"/><path fill="#fff3db" d="M35 37q42-12 85 12 43-24 85-12v102q-42-13-85 9-43-22-85-9Z"/><path d="M120 49v99"/><g stroke="#acb1a5" stroke-width="3"><path d="m49 58 53 7m-53 9 53 7m-53 9 53 7m-53 9 43 6m35-45 54-9m-54 25 54-9m-54 25 54-9m-54 25 41-7"/></g></g>
+</svg>

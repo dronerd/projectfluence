@@ -4,7 +4,7 @@
     "title": "Lesson 86",
     "paragraph": "Power and society examine authority, hierarchy, and influence. Leadership and autonomy affect social dynamics.",
     "words": [
-      {"word": "hierarchy", "meaning": "system of ranking", "japaneseMeaning": "階層", "synonyms": "ranking, order", "antonyms": "equality, flatness", "example": "Hierarchy defines organizational roles."},
+      {"word": "hierarchy", "meaning": "system of ranking", "japaneseMeaning": "階層", "synonyms": "ranking, order", "antonyms": "equality, flatness", "example": "Hierarchy defines organizational roles.", "duplicateOf": {"category": "word-advanced", "lessonNumber": 82, "word": "hierarchy"}},
       {"word": "authority", "meaning": "power to influence or command", "japaneseMeaning": "権威、権限", "synonyms": "control, dominance", "antonyms": "subordination, impotence", "example": "The teacher has authority over the class."},
       {"word": "influence", "meaning": "capacity to affect others", "japaneseMeaning": "影響力", "synonyms": "impact, sway", "antonyms": "ineffectiveness, impotence", "example": "Her influence changed the outcome."},
       {"word": "dominance", "meaning": "power or control over others", "japaneseMeaning": "支配", "synonyms": "supremacy, superiority", "antonyms": "subordination, weakness", "example": "Dominance in politics is often debated."},

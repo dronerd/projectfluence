@@ -3,15 +3,15 @@
   "title": "Lesson 42",
   "paragraph": "This lesson practices useful nouns for food and cooking.",
   "words": [
-    { "word": "recipe", "meaning": "instructions for cooking food", "japaneseMeaning": "レシピ", "synonyms": "cooking guide, instructions", "antonyms": "none", "forms": "recipe, recipes", "example": "This recipe is easy to follow." },
-    { "word": "oven", "meaning": "a machine that cooks food with heat", "japaneseMeaning": "オーブン", "synonyms": "cooker, stove", "antonyms": "freezer", "forms": "oven, ovens", "example": "Put the bread in the oven." },
-    { "word": "saucer", "meaning": "a small plate under a cup", "japaneseMeaning": "受け皿", "synonyms": "small plate, dish", "antonyms": "cup", "forms": "saucer, saucers", "example": "Put the cup on the saucer." },
-    { "word": "bowl", "meaning": "a deep round dish for food", "japaneseMeaning": "ボウル／鉢", "synonyms": "dish, container", "antonyms": "plate", "forms": "bowl, bowls", "example": "I eat soup from a bowl." },
-    { "word": "fork", "meaning": "a tool with points used for eating", "japaneseMeaning": "フォーク", "synonyms": "eating tool, utensil", "antonyms": "spoon", "forms": "fork, forks", "example": "Use a fork to eat the salad." },
-    { "word": "ladle", "meaning": "a large spoon for soup", "japaneseMeaning": "おたま", "synonyms": "large spoon, scoop", "antonyms": "fork", "forms": "ladle, ladles", "example": "Use the ladle for the soup." },
-    { "word": "pan", "meaning": "a flat cooking dish used on a stove", "japaneseMeaning": "フライパン", "synonyms": "cooking dish, skillet", "antonyms": "bowl", "forms": "pan, pans", "example": "The eggs are in the pan." },
-    { "word": "sauce", "meaning": "a liquid put on food for taste", "japaneseMeaning": "ソース", "synonyms": "dressing, topping", "antonyms": "dry food", "forms": "sauce, sauces", "example": "This pasta has tomato sauce." },
-    { "word": "snack", "meaning": "a small amount of food between meals", "japaneseMeaning": "軽食／おやつ", "synonyms": "small food, treat", "antonyms": "meal", "forms": "snack, snacks", "example": "I eat a snack after school." },
-    { "word": "dessert", "meaning": "sweet food eaten after a meal", "japaneseMeaning": "デザート", "synonyms": "sweet, treat", "antonyms": "main dish", "forms": "dessert, desserts", "example": "We have fruit for dessert." }
+    { "word": "recipe", "meaning": "instructions for cooking food", "japaneseMeaning": "レシピ", "synonyms": "cooking guide, instructions", "antonyms": "", "forms": "recipe, recipes", "example": "This recipe is easy to follow." },
+    { "word": "oven", "meaning": "a kitchen machine with a hot space inside for baking food", "japaneseMeaning": "オーブン", "synonyms": "", "antonyms": "", "forms": "oven, ovens", "example": "Put the bread in the oven." },
+    { "word": "saucer", "meaning": "a small plate under a cup", "japaneseMeaning": "受け皿", "synonyms": "", "antonyms": "", "forms": "saucer, saucers", "example": "Put the cup on the saucer." },
+    { "word": "bowl", "meaning": "a deep round dish for food", "japaneseMeaning": "ボウル／鉢", "synonyms": "", "antonyms": "", "forms": "bowl, bowls", "example": "I eat soup from a bowl." },
+    { "word": "fork", "meaning": "a tool with points used for eating", "japaneseMeaning": "フォーク", "synonyms": "", "antonyms": "", "forms": "fork, forks", "example": "Use a fork to eat the salad." },
+    { "word": "ladle", "meaning": "a large spoon for soup", "japaneseMeaning": "おたま", "synonyms": "", "antonyms": "", "forms": "ladle, ladles", "example": "Use the ladle for the soup." },
+    { "word": "pan", "meaning": "a flat cooking dish used on a stove", "japaneseMeaning": "フライパン", "synonyms": "", "antonyms": "", "forms": "pan, pans", "example": "The eggs are in the pan." },
+    { "word": "sauce", "meaning": "a liquid put on food for taste", "japaneseMeaning": "ソース", "synonyms": "dressing, topping", "antonyms": "", "forms": "sauce, sauces", "example": "This pasta has tomato sauce." },
+    { "word": "snack", "meaning": "a small amount of food between meals", "japaneseMeaning": "軽食／おやつ", "synonyms": "", "antonyms": "", "forms": "snack, snacks", "example": "I eat a snack after school." },
+    { "word": "dessert", "meaning": "sweet food eaten after a meal", "japaneseMeaning": "デザート", "synonyms": "sweet, treat", "antonyms": "", "forms": "dessert, desserts", "example": "We have fruit for dessert." }
   ]
 }

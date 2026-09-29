@@ -11,7 +11,7 @@
     { "word": "dangerously", "meaning": "in a dangerous way", "japaneseMeaning": "危険に", "synonyms": "unsafely, badly", "antonyms": "safely, carefully", "forms": "dangerously, more dangerously, most dangerously", "example": "The car turns dangerously." },
     { "word": "wildly", "meaning": "in an uncontrolled way", "japaneseMeaning": "乱暴に／激しく", "synonyms": "crazily, strongly", "antonyms": "calmly, gently", "forms": "wildly, more wildly, most wildly", "example": "The dog runs wildly in the yard." },
     { "word": "calmly", "meaning": "without worry or anger", "japaneseMeaning": "落ち着いて", "synonyms": "quietly, peacefully", "antonyms": "angrily, nervously", "forms": "calmly, more calmly, most calmly", "example": "She calmly holds the cat." },
-    { "word": "closely", "meaning": "near or with attention", "japaneseMeaning": "近くに／注意深く", "synonyms": "near, carefully", "antonyms": "far away, loosely", "forms": "closely, more closely, most closely", "example": "The bird flies closely over the tree." },
-    { "word": "distantly", "meaning": "from far away", "japaneseMeaning": "遠くに", "synonyms": "far away, remotely", "antonyms": "closely, nearby", "forms": "distantly, more distantly, most distantly", "example": "The horse appears distantly in the field." }
+    { "word": "closely", "meaning": "near or with attention", "japaneseMeaning": "近くに／注意深く", "synonyms": "near, carefully", "antonyms": "far away, loosely", "forms": "closely, more closely, most closely", "example": "Watch the bird closely to see how it moves." },
+    { "word": "distantly", "meaning": "from far away", "japaneseMeaning": "遠くに", "synonyms": "far away, remotely", "antonyms": "closely, nearby", "forms": "distantly, more distantly, most distantly", "example": "A bell rang distantly across the fields.", "usageNote": "離れた場所から届く音などに使う語です。日常会話では far away で表すこともできます。" }
   ]
 }

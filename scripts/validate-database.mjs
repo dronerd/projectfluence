@@ -6,6 +6,8 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
+import { makeLessonQuestions, createAttempt } from '../apps/vocabstream/src/lib/learning.ts';
+import { parseVocabStreamProgress } from '../apps/vocabstream/src/lib/progressContract.ts';
 const { PGlite } = await import(process.env.PGLITE_MODULE || '@electric-sql/pglite');
 const db = new PGlite();
 const query = (sql, params = []) => db.query(sql, params);
@@ -158,6 +160,66 @@ try {
       assert.equal((await upgrade.query('select count(*)::int n from public.speakwise_lesson_summaries')).rows[0].n,2);
       assert.equal((await upgrade.query('select count(*)::int n from public.speakwise_mistake_patterns')).rows[0].n,0);
     } finally { await upgrade.close(); }
+  });
+  const curriculumUser=randomUUID();
+  await query("insert into auth.users(id,email) values($1,'curriculum-fixture@example.test')",[curriculumUser]);
+  const originalLesson=JSON.parse(await readFile(new URL('../public/vocabstream/data/idioms-beginner/Lesson1.json',import.meta.url),'utf8'));
+  const originalId=randomUUID();
+  const originalPayload={...payload,lesson_id:'idioms-beginner-lesson-1',genre:'idioms-beginner',lesson_number:1,lesson_title:originalLesson.title,
+    question_attempts:[{...payload.question_attempts[0],word:originalLesson.words[0].word,correct_answer:originalLesson.words[0].word,selected_answer:originalLesson.words[1].word,
+      choices:[originalLesson.words[0].word,originalLesson.words[1].word],definition:'Historical definition snapshot',example:'Historical example snapshot',source_category:'idioms-beginner',source_lesson_id:'idioms-beginner-lesson-1',source_lesson_number:1}]};
+  await save(originalId,originalPayload,curriculumUser);
+  const originalSnapshot=async()=>({
+    attempt:(await query('select * from public.vocabstream_lesson_attempts where id=$1',[originalId])).rows,
+    questions:(await query('select * from public.vocabstream_question_attempts where lesson_attempt_id=$1',[originalId])).rows,
+    progress:(await query("select * from public.vocabstream_user_lesson_progress where user_id=$1 and lesson_id='idioms-beginner-lesson-1'",[curriculumUser])).rows,
+    mistakes:(await query("select * from public.vocabstream_user_mistakes where user_id=$1 and source_lesson_id='idioms-beginner-lesson-1'",[curriculumUser])).rows,
+  });
+  const originalBefore=await originalSnapshot();
+  const curriculumAttempts=[];
+  await check('new idiom, specialist and image meaning attempts save and retry without a schema migration',async()=>{
+    for(const fixture of [
+      {category:'idioms-beginner',number:51},
+      {category:'specialized-it',number:1},
+      {category:'word-beginner',number:1,image:true},
+    ]) {
+      const lesson=JSON.parse(await readFile(new URL(`../public/vocabstream/data/${fixture.category}/Lesson${fixture.number}.json`,import.meta.url),'utf8'));
+      const lessonId=`${fixture.category}-lesson-${fixture.number}`;
+      const question=makeLessonQuestions(lesson,lessonId).find(q=>q.questionType==='meaning'&&(!fixture.image||q.promptMode==='image'));
+      assert.ok(question,'the real lesson must generate a usable fixture question');
+      const attemptId=randomUUID();
+      const parsed=parseVocabStreamProgress({attemptId,lessonId,genre:fixture.category,lessonNumber:fixture.number,lessonTitle:lesson.title,wordCount:lesson.words.length,
+        meaningScore:0,meaningTotal:1,quizScore:0,quizTotal:0,questionAttempts:[createAttempt(question,(question.answerIndex+1)%question.choices.length,1)]});
+      const answer=parsed.questionAttempts[0];
+      const write={lesson_id:parsed.lessonId,genre:parsed.genre,lesson_number:parsed.lessonNumber,lesson_title:parsed.lessonTitle,word_count:parsed.wordCount,
+        meaning_score:0,meaning_total:1,quiz_score:0,quiz_total:0,replay_completed:false,replay_correct:0,replay_total:0,
+        question_attempts:[{question_type:answer.questionType,word:answer.word,prompt:answer.prompt,correct_answer:answer.correctAnswer,selected_answer:answer.selectedAnswer,
+          is_correct:answer.isCorrect,is_replay:false,attempt_order:answer.attemptOrder,choices:answer.choices,answered_at:answer.answeredAt,
+          definition:answer.definition,example:answer.example,explanation:answer.explanation,source_category:answer.sourceCategory,source_lesson_id:answer.sourceLessonId,source_lesson_number:answer.sourceLessonNumber}]};
+      await save(attemptId,write,curriculumUser);await save(attemptId,write,curriculumUser);
+      const stored=(await query('select * from public.vocabstream_lesson_attempts where id=$1',[attemptId])).rows[0];
+      assert.equal(stored.lesson_id,lessonId);assert.equal(stored.quiz_total,0);assert.equal(stored.meaning_total,1);
+      const rows=(await query('select * from public.vocabstream_question_attempts where lesson_attempt_id=$1',[attemptId])).rows;
+      assert.equal(rows.length,1);assert.equal(rows[0].word,question.word);assert.equal(rows[0].prompt,question.prompt);assert.deepEqual(rows[0].choices,question.choices);
+      const mistake=(await query('select * from public.vocabstream_user_mistakes where user_id=$1 and source_category=$2 and word_key=lower($3)',[curriculumUser,fixture.category,question.word])).rows[0];
+      assert.equal(mistake.mistake_count,1);assert.equal(mistake.source_lesson_id,lessonId);assert.equal(mistake.definition,question.definition);
+      if(fixture.image){assert.equal(question.promptMode,'image');assert.equal('image' in answer,false);assert.equal('promptMode' in answer,false);}
+      await assert.rejects(save(attemptId,write,bob),error=>error.code==='42501');
+      curriculumAttempts.push(attemptId);
+    }
+  });
+  await check('new curriculum saves leave original lesson identities and historical answer snapshots unchanged',async()=>{
+    assert.deepEqual(await originalSnapshot(),originalBefore);
+    assert.equal(await scalar('select count(*)::int from public.vocabstream_lesson_attempts where user_id=$1',[curriculumUser]),4);
+    assert.equal(await scalar('select count(*)::int from public.vocabstream_user_lesson_progress where user_id=$1',[curriculumUser]),4);
+  });
+  await check('new curriculum and image answer history stay private to their owner',async()=>{
+    await query("select set_config('request.jwt.claim.sub',$1,false)",[bob]);await db.exec('set role authenticated');
+    for(const table of ['vocabstream_lesson_attempts','vocabstream_question_attempts','vocabstream_user_lesson_progress','vocabstream_user_mistakes'])assert.equal(await scalar(`select count(*)::int from public.${table}`),0,table);
+    await db.exec('reset role');await query("select set_config('request.jwt.claim.sub',$1,false)",[curriculumUser]);await db.exec('set role authenticated');
+    assert.equal(await scalar('select count(*)::int from public.vocabstream_question_attempts'),4);
+    for(const id of curriculumAttempts)assert.equal(await scalar('select count(*)::int from public.vocabstream_lesson_attempts where id=$1',[id]),1);
+    await db.exec('reset role');
   });
   console.log(`DATABASE_CHECKS_OK ${checks}; isolated PostgreSQL/WASM; no hosted Supabase calls`);
 } finally { await db.close(); }

@@ -12,6 +12,6 @@
     { "word": "late", "meaning": "after the usual time", "japaneseMeaning": "遅く", "synonyms": "after time, behind", "antonyms": "early, soon", "forms": "late, later, latest", "example": "The bus arrived late." },
     { "word": "soon", "meaning": "after a short time", "japaneseMeaning": "すぐに／まもなく", "synonyms": "quickly, shortly", "antonyms": "later, never", "forms": "soon, sooner, soonest", "example": "Please come home soon." },
     { "word": "slowly", "meaning": "not quickly", "japaneseMeaning": "ゆっくりと", "synonyms": "not fast, gently", "antonyms": "quickly, fast", "forms": "slowly, more slowly, most slowly", "example": "Speak slowly, please." },
-    { "word": "carefully", "meaning": "with care", "japaneseMeaning": "注意深く", "synonyms": "with care, safely", "antonyms": "carelessly, quickly", "forms": "carefully, more carefully, most carefully", "example": "Read the question carefully." }
+    { "word": "carefully", "meaning": "with attention so that you do not make mistakes or cause harm", "japaneseMeaning": "注意深く", "synonyms": "with care, safely", "antonyms": "carelessly, quickly", "forms": "carefully, more carefully, most carefully", "example": "Read the question carefully." }
   ]
 }

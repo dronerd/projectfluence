@@ -12,7 +12,7 @@
       {"word": "accessibility", "meaning": "ease of access", "japaneseMeaning": "アクセス可能性", "synonyms": "availability, approachability", "antonyms": "inaccessibility, obstruction", "example": "Accessibility is key for inclusivity."},
       {"word": "disruption", "meaning": "disturbance or interruption", "japaneseMeaning": "混乱、破壊", "synonyms": "interference, disturbance", "antonyms": "stability, continuity", "example": "The new technology caused disruption."},
       {"word": "automation", "meaning": "use of machines instead of humans", "japaneseMeaning": "自動化", "synonyms": "mechanization, robotics", "antonyms": "manual, human work", "example": "Automation reduces labor costs."},
-      {"word": "interface", "meaning": "point of interaction between systems", "japaneseMeaning": "インターフェース", "synonyms": "connection, interaction", "antonyms": "disconnection, barrier", "example": "The user interface is intuitive."},
+      {"word": "interface", "meaning": "a point or means of interaction between people and systems, or between systems", "japaneseMeaning": "インターフェース", "synonyms": "", "antonyms": "", "example": "The user interface is intuitive."},
       {"word": "intelligence", "meaning": "ability to acquire knowledge or solve problems", "japaneseMeaning": "知能", "synonyms": "reasoning, cognition", "antonyms": "stupidity, ignorance", "example": "Artificial intelligence is advancing rapidly."}
     ]
   }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>細い口とふたがある、透明な飲み物のボトル。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#e4f0f2" d="M102 38h36v28c25 16 31 28 31 43v40c0 10-98 10-98 0v-40c0-15 6-27 31-43Z"/><path fill="#badce7" stroke="none" d="M76 107q25-9 46 0t42 0v39q-40 8-88 0Z"/><rect x="99" y="23" width="42" height="20" rx="4" fill="#7faaa9"/><path stroke="#fff" d="M88 97v38"/><path d="M102 54h36"/></g>
+</svg>

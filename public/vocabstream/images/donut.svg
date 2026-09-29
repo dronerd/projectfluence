@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>真ん中に穴がある、丸いドーナツ。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#d59a63" fill-rule="evenodd" d="M186 95a66 58 0 1 0-132 0 66 58 0 1 0 132 0Zm-44 0a22 19 0 1 1-44 0 22 19 0 1 1 44 0Z"/><path fill="#e69caa" fill-rule="evenodd" d="M182 88c-12-59-112-59-124 0l12 11 13-2 13 9 6-20c12-15 26-15 37 0l6 20 15-9 12 2Zm-40 7a22 19 0 1 1-44 0 22 19 0 1 1 44 0Z"/><g stroke-width="4"><path stroke="#fff3c8" d="m80 68 8 3m65-3 7 5m-48-23 2 8"/><path stroke="#89b9b0" d="m98 57-3 6m45-9 6 3"/></g><ellipse cx="120" cy="95" rx="22" ry="19" fill="#f5f8f6"/></g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>先が細く、薄茶色の皮と根がある玉ねぎ。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#dbb181" d="M105 36q7 24-24 40-40 26-16 58 19 28 55 24 36 4 55-24 24-32-16-58-31-16-24-40Z"/><path stroke="#a67a51" d="M112 56q-46 62-13 92m29-92q46 62 13 92m-23-87v88"/><path d="m110 158-6 9m16-9v11m10-11 6 9"/></g>
+</svg>

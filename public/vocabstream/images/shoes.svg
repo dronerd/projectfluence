@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>ひもが付いた、左右一組の運動靴。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#85b6aa" d="m41 57 24 8 12-16 19 15v32l32 20c9 6 9 22-3 25H38c-16-19-9-40 3-84Z"/><path fill="#e4ebdf" d="M32 123q40 7 100-1v17H38Z"/><path fill="#95c3b8" d="m143 33 20 9 12-14 18 13v35l25 26c9 12 1 23-10 23h-52c-21-12-25-35-13-92Z"/><path fill="#e4ebdf" d="M145 105q28 9 77 2v16h-66Z"/><path stroke="#f9f4e4" d="m68 77 23 5m-25 8 24 5m70-38 20 5m-21 10 22 4"/></g>
+</svg>

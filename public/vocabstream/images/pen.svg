@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>インクで書く、クリップとノックボタンのある青いペン。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(35 120 90)"><path fill="#7fa9c5" d="M108 38q12-7 24 0v104h-24Z"/><path fill="#c9d6de" d="m108 142 12 22 12-22Z"/><rect x="113" y="19" width="14" height="18" rx="3" fill="#b4c9d5"/><path stroke="#c8dce7" d="M125 43h15v44"/><path stroke="#577c96" d="M111 112h18m-18 9h18m-18 9h18"/><path d="m120 160 0 5"/></g></g>
+</svg>

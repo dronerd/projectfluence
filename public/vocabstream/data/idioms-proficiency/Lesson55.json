@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-55",
+  "title": "Lesson 55",
+  "paragraph": "解釈と振り返り",
+  "words": [
+    {
+      "word": "read between the lines",
+      "meaning": "to understand a meaning that is suggested but not stated",
+      "japaneseMeaning": "行間を読む",
+      "example": "You need to read between the lines to understand her concerns.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "take for granted",
+        "by and large"
+      ],
+      "sentencePractice": {
+        "prompt": "Her concerns were only hinted at, never stated directly. To understand them, we had to ____.",
+        "distractors": [
+          "stand your ground",
+          "reach a consensus"
+        ],
+        "reviewNote": "Understanding concerns that are hinted at requires interpreting indirect meaning, not defending a position or agreeing as a group."
+      }
+    },
+    {
+      "word": "get to the heart of",
+      "meaning": "to reach the most important part of a problem or subject",
+      "japaneseMeaning": "核心に迫る",
+      "example": "That question helps us get to the heart of the disagreement.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "make allowances for",
+        "all things considered"
+      ]
+    },
+    {
+      "word": "lose sight of",
+      "meaning": "to stop remembering or considering something important",
+      "japaneseMeaning": "重要なことを見失う",
+      "example": "We must not lose sight of the people affected.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "come to terms with",
+        "for all intents and purposes"
+      ]
+    },
+    {
+      "word": "take for granted",
+      "meaning": "to fail to value something because you expect it to be there",
+      "japaneseMeaning": "当然だと思ってありがたみを忘れる",
+      "example": "It is easy to take for granted a reliable water supply.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "by and large",
+        "in no uncertain terms"
+      ]
+    },
+    {
+      "word": "make allowances for",
+      "meaning": "to judge someone less strictly because of their circumstances",
+      "japaneseMeaning": "事情を考慮して大目に見る",
+      "example": "We should make allowances for people who are new to the job.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "all things considered",
+        "read between the lines"
+      ]
+    },
+    {
+      "word": "come to terms with",
+      "meaning": "to gradually accept a difficult reality",
+      "japaneseMeaning": "つらい現実を受け入れる",
+      "example": "It took time to come to terms with the change.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "for all intents and purposes",
+        "get to the heart of"
+      ]
+    },
+    {
+      "word": "by and large",
+      "meaning": "generally, although there may be exceptions",
+      "japaneseMeaning": "概して",
+      "example": "By and large, the new system works well.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "in no uncertain terms",
+        "lose sight of"
+      ]
+    },
+    {
+      "word": "all things considered",
+      "meaning": "after thinking about all the relevant facts",
+      "japaneseMeaning": "すべてを考慮すると",
+      "example": "All things considered, postponing the launch was sensible.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "read between the lines",
+        "take for granted"
+      ]
+    },
+    {
+      "word": "for all intents and purposes",
+      "meaning": "in practical effect, even if not officially or completely",
+      "japaneseMeaning": "実質的には",
+      "example": "For all intents and purposes, the project is finished.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "get to the heart of",
+        "make allowances for"
+      ]
+    },
+    {
+      "word": "in no uncertain terms",
+      "meaning": "clearly and firmly, leaving no doubt about the meaning",
+      "japaneseMeaning": "はっきりと断固として",
+      "example": "She explained in no uncertain terms why the delay was unacceptable.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "lose sight of",
+        "come to terms with"
+      ]
+    }
+  ]
+}

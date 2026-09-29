@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-advanced-lesson-52",
+  "title": "Lesson 52",
+  "paragraph": "仕事と計画",
+  "words": [
+    {
+      "word": "carry out",
+      "meaning": "to do a planned task, test, or investigation",
+      "japaneseMeaning": "実施する",
+      "example": "We will carry out a survey next month.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "put off",
+        "keep track of"
+      ]
+    },
+    {
+      "word": "set up",
+      "meaning": "to start or establish an organization or system",
+      "japaneseMeaning": "設立する・仕組みを作る",
+      "example": "They want to set up a local reading group.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "take on",
+        "meet a deadline"
+      ]
+    },
+    {
+      "word": "put off",
+      "meaning": "to delay something until a later time",
+      "japaneseMeaning": "延期する",
+      "example": "We had to put off the trip because of the storm.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "follow up",
+        "learn the ropes"
+      ],
+      "sentencePractice": {
+        "prompt": "The trip cannot happen tomorrow. We need to ____ the trip until next month.",
+        "distractors": [
+          "carry out",
+          "set up"
+        ],
+        "reviewNote": "The new later date explicitly requires postponement."
+      }
+    },
+    {
+      "word": "deal with",
+      "meaning": "to take action to manage a problem or situation",
+      "japaneseMeaning": "対処する",
+      "example": "The support team will deal with your request.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "keep track of",
+        "get the ball rolling"
+      ]
+    },
+    {
+      "word": "take on",
+      "meaning": "to accept a new task or responsibility",
+      "japaneseMeaning": "引き受ける",
+      "example": "I can't take on any more work this week.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "meet a deadline",
+        "carry out"
+      ]
+    },
+    {
+      "word": "follow up",
+      "meaning": "to take further action after an earlier event",
+      "japaneseMeaning": "後に続く対応をする",
+      "example": "I'll follow up with an email after our call.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "learn the ropes",
+        "set up"
+      ]
+    },
+    {
+      "word": "keep track of",
+      "meaning": "to stay aware of changes or the position of something",
+      "japaneseMeaning": "継続して把握する",
+      "example": "This app helps me keep track of my spending.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "get the ball rolling",
+        "put off"
+      ]
+    },
+    {
+      "word": "meet a deadline",
+      "meaning": "to finish work by the required time",
+      "japaneseMeaning": "締め切りに間に合わせる",
+      "example": "We need a clear plan to meet a deadline this tight.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "carry out",
+        "deal with"
+      ]
+    },
+    {
+      "word": "learn the ropes",
+      "meaning": "to learn how to do a new job or activity",
+      "japaneseMeaning": "仕事などの要領を覚える",
+      "example": "A colleague helped me learn the ropes during my first week.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "set up",
+        "take on"
+      ]
+    },
+    {
+      "word": "get the ball rolling",
+      "meaning": "to make an activity or process start",
+      "japaneseMeaning": "物事を動き始めさせる",
+      "example": "Let's get the ball rolling by choosing a date.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "put off",
+        "follow up"
+      ]
+    }
+  ]
+}

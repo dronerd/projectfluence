@@ -3,15 +3,15 @@
   "title": "Lesson 38",
   "paragraph": "This lesson practices useful nouns for health and the body.",
   "words": [
-    { "word": "headache", "meaning": "a pain in your head", "japaneseMeaning": "頭痛", "synonyms": "head pain, pain", "antonyms": "comfort", "forms": "headache, headaches", "example": "I have a headache today." },
-    { "word": "stomachache", "meaning": "a pain in your stomach", "japaneseMeaning": "腹痛", "synonyms": "stomach pain, pain", "antonyms": "comfort", "forms": "stomachache, stomachaches", "example": "She has a stomachache after lunch." },
-    { "word": "fever", "meaning": "a body temperature that is too high", "japaneseMeaning": "熱", "synonyms": "high temperature, illness", "antonyms": "normal temperature", "forms": "fever, fevers", "example": "He stays home because he has a fever." },
-    { "word": "injury", "meaning": "a hurt place on your body", "japaneseMeaning": "けが", "synonyms": "hurt, wound", "antonyms": "health, safety", "forms": "injury, injuries", "example": "He has a small injury on his knee." },
-    { "word": "toothache", "meaning": "a pain in your tooth", "japaneseMeaning": "歯痛", "synonyms": "tooth pain, pain", "antonyms": "comfort", "forms": "toothache, toothaches", "example": "I go to the dentist for my toothache." },
-    { "word": "plaster", "meaning": "a small cover for a cut on your skin", "japaneseMeaning": "ばんそうこう", "synonyms": "bandage, cover", "antonyms": "none", "forms": "plaster, plasters", "example": "Put a plaster on the cut." },
-    { "word": "dentist", "meaning": "a person who checks and fixes teeth", "japaneseMeaning": "歯医者", "synonyms": "tooth doctor, doctor", "antonyms": "patient", "forms": "dentist, dentists", "example": "The dentist checks my tooth." },
-    { "word": "pharmacist", "meaning": "a person who prepares and sells medicine", "japaneseMeaning": "薬剤師", "synonyms": "medicine worker, helper", "antonyms": "patient", "forms": "pharmacist, pharmacists", "example": "The pharmacist gives me medicine." },
-    { "word": "patient", "meaning": "a sick person who gets care", "japaneseMeaning": "患者", "synonyms": "sick person, visitor", "antonyms": "doctor, nurse", "forms": "patient, patients", "example": "The patient waits in the clinic." },
-    { "word": "clinic", "meaning": "a small place where people see a doctor", "japaneseMeaning": "診療所／クリニック", "synonyms": "doctor's office, health center", "antonyms": "home", "forms": "clinic, clinics", "example": "There is a clinic near the station." }
+    { "word": "headache", "meaning": "a pain in your head", "japaneseMeaning": "頭痛", "synonyms": "head pain", "antonyms": "", "forms": "headache, headaches", "example": "I have a headache today." },
+    { "word": "stomachache", "meaning": "a pain in your stomach", "japaneseMeaning": "腹痛", "synonyms": "stomach pain", "antonyms": "", "forms": "stomachache, stomachaches", "example": "She has a stomachache after lunch." },
+    { "word": "fever", "meaning": "a body temperature that is too high", "japaneseMeaning": "熱", "synonyms": "high temperature", "antonyms": "normal temperature", "forms": "fever, fevers", "example": "He stays home because he has a fever." },
+    { "word": "injury", "meaning": "a hurt place on your body", "japaneseMeaning": "けが", "synonyms": "hurt, wound", "antonyms": "", "forms": "injury, injuries", "example": "He has a small injury on his knee." },
+    { "word": "toothache", "meaning": "a pain in your tooth", "japaneseMeaning": "歯痛", "synonyms": "tooth pain", "antonyms": "", "forms": "toothache, toothaches", "example": "I go to the dentist for my toothache." },
+    { "word": "plaster", "meaning": "a small cover for a cut on your skin", "japaneseMeaning": "ばんそうこう", "synonyms": "adhesive bandage", "antonyms": "", "forms": "plaster, plasters", "example": "Put a plaster on the cut." },
+    { "word": "dentist", "meaning": "a person who checks and fixes teeth", "japaneseMeaning": "歯医者", "synonyms": "", "antonyms": "", "forms": "dentist, dentists", "example": "The dentist checks my tooth." },
+    { "word": "pharmacist", "meaning": "a person who prepares and sells medicine", "japaneseMeaning": "薬剤師", "synonyms": "", "antonyms": "", "forms": "pharmacist, pharmacists", "example": "The pharmacist gives me medicine." },
+    { "word": "patient", "meaning": "a sick person who gets care", "japaneseMeaning": "患者", "synonyms": "", "antonyms": "", "forms": "patient, patients", "example": "The patient waits in the clinic." },
+    { "word": "clinic", "meaning": "a small place where people see a doctor", "japaneseMeaning": "診療所／クリニック", "synonyms": "doctor's office, health center", "antonyms": "", "forms": "clinic, clinics", "example": "There is a clinic near the station." }
   ]
 }

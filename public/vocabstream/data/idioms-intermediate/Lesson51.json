@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-51",
+  "title": "Lesson 51",
+  "paragraph": "人づきあい",
+  "words": [
+    {
+      "word": "look after",
+      "meaning": "to care for someone or something",
+      "japaneseMeaning": "～の世話をする",
+      "example": "Can you look after my cat this weekend?",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "make friends",
+        "come over"
+      ],
+      "sentencePractice": {
+        "prompt": "My cat needs food and water while I am away. Could you ____ her for a week?",
+        "distractors": [
+          "get along with",
+          "let down"
+        ],
+        "reviewNote": "The stated task is caring for the animal, not a relationship or disappointing her."
+      }
+    },
+    {
+      "word": "get along with",
+      "meaning": "to have a friendly relationship with someone",
+      "japaneseMeaning": "～とうまく付き合う",
+      "example": "I get along with my new classmates.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "have in common",
+        "cheer up"
+      ]
+    },
+    {
+      "word": "keep in touch",
+      "meaning": "to continue communicating with someone",
+      "japaneseMeaning": "連絡を取り合う",
+      "example": "Let's keep in touch after the course ends.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "take turns",
+        "let down"
+      ]
+    },
+    {
+      "word": "make friends",
+      "meaning": "to start friendly relationships with people",
+      "japaneseMeaning": "友達を作る",
+      "example": "Joining a club helped me make friends.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "come over",
+        "make up"
+      ]
+    },
+    {
+      "word": "have in common",
+      "meaning": "to share a feature, experience, or interest",
+      "japaneseMeaning": "共通点がある",
+      "example": "Music is something we have in common.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "cheer up",
+        "look after"
+      ]
+    },
+    {
+      "word": "take turns",
+      "meaning": "to do something one person after another",
+      "japaneseMeaning": "交代でする",
+      "example": "We take turns cooking dinner.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "let down",
+        "get along with"
+      ]
+    },
+    {
+      "word": "come over",
+      "meaning": "to visit someone's home",
+      "japaneseMeaning": "家に訪ねてくる",
+      "example": "Would you like to come over for lunch?",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "make up",
+        "keep in touch"
+      ]
+    },
+    {
+      "word": "cheer up",
+      "meaning": "to become happier after feeling sad",
+      "japaneseMeaning": "元気になる",
+      "example": "I hope this card will help you cheer up.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "look after",
+        "make friends"
+      ]
+    },
+    {
+      "word": "let down",
+      "meaning": "to disappoint someone who expected your help",
+      "japaneseMeaning": "期待を裏切る",
+      "example": "I promised to help, and I don't want to let down my team.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "get along with",
+        "have in common"
+      ]
+    },
+    {
+      "word": "make up",
+      "meaning": "to become friendly again after an argument",
+      "japaneseMeaning": "仲直りする",
+      "example": "We had an argument, but we soon decided to make up.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "keep in touch",
+        "take turns"
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import type { LearningQuestion, LessonWord } from "./lib/content";
 import { requestSignal } from "@/lib/browserRequest";
 import type { VocabStreamProgressPayload } from "./lib/progressContract";
 export type { VocabStreamProgressPayload, VocabStreamQuestionAttempt } from "./lib/progressContract";
@@ -9,7 +10,7 @@ export type VocabStreamLessonProgress = {
   updatedAt: string;
 };
 
-export type VocabStreamWeakWord = {
+export type VocabStreamWeakWord = Pick<LessonWord, "image" | "definitionType" | "usageNote" | "expressionType"> & {
   word: string;
   definition: string;
   example?: string;
@@ -25,25 +26,7 @@ export type VocabStreamWeakWord = {
   lastMistakenAt?: string;
 };
 
-export type VocabStreamReviewQuestion = {
-  id: string;
-  questionType: "meaning" | "quiz";
-  word: string;
-  prompt: string;
-  choices: string[];
-  answerIndex: number;
-  correctAnswer: string;
-  definition: string;
-  example?: string;
-  explanation?: string;
-  japaneseMeaning?: string;
-  synonyms?: string;
-  antonyms?: string;
-  forms?: string;
-  sourceCategory: string;
-  sourceLessonId?: string;
-  sourceLessonNumber?: number | null;
-};
+export type VocabStreamReviewQuestion = LearningQuestion;
 
 export async function apiSubmitVocabStreamProgress(payload: VocabStreamProgressPayload, accessToken?: string | null) {
   const deadline = requestSignal(20_000);

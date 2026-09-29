@@ -11,7 +11,7 @@
     { "word": "visit", "meaning": "to go to see a person or place", "japaneseMeaning": "訪れる／訪問する", "synonyms": "go to, see", "antonyms": "leave, avoid", "forms": "visit, visits, visiting, visited, visited", "example": "We visit the museum on Sunday." },
     { "word": "lead", "meaning": "to show someone where to go", "japaneseMeaning": "導く／案内する", "synonyms": "guide, show", "antonyms": "follow, lose", "forms": "lead, leads, leading, led, led", "example": "My friend leads us to the station." },
     { "word": "approach", "meaning": "to come near a place or person", "japaneseMeaning": "近づく", "synonyms": "come near, move toward", "antonyms": "leave, move away", "forms": "approach, approaches, approaching, approached, approached", "example": "Approach the ticket gate slowly." },
-    { "word": "depart", "meaning": "to leave a place", "japaneseMeaning": "出発する", "synonyms": "leave, go out", "antonyms": "arrive, come in", "forms": "depart, departs, departing, departed, departed", "example": "Depart the building after the show." },
+    { "word": "depart", "meaning": "to leave a place", "japaneseMeaning": "出発する", "synonyms": "leave, go out", "antonyms": "arrive, come in", "forms": "depart, departs, departing, departed, departed", "example": "The train will depart from platform two.", "usageNote": "leave より改まった表現です。案内放送や時刻表でよく使われます。" },
     { "word": "follow", "meaning": "to go after someone or something", "japaneseMeaning": "ついて行く", "synonyms": "go after, come after", "antonyms": "lead, leave", "forms": "follow, follows, following, followed, followed", "example": "Follow the yellow line to the platform." }
   ]
 }

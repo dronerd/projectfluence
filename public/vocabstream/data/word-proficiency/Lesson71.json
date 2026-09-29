@@ -49,7 +49,12 @@
         "japaneseMeaning": "経験的な、実証的な",
         "synonyms": "observational, experimental",
         "antonyms": "theoretical, speculative",
-        "example": "The study provided empirical evidence supporting the theory."
+        "example": "The study provided empirical evidence supporting the theory.",
+        "duplicateOf": {
+          "category": "word-proficiency",
+          "lessonNumber": 16,
+          "word": "empirical"
+        }
       },
       {
         "word": "factual",

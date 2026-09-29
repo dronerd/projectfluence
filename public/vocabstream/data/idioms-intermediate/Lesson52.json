@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-52",
+  "title": "Lesson 52",
+  "paragraph": "学習と問題解決",
+  "words": [
+    {
+      "word": "find out",
+      "meaning": "to learn information that you did not know",
+      "japaneseMeaning": "調べて知る",
+      "example": "I need to find out what time the museum opens.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "carry on",
+        "hand in"
+      ]
+    },
+    {
+      "word": "work out",
+      "meaning": "to find the answer to a problem by thinking",
+      "japaneseMeaning": "解いて答えを見つける",
+      "example": "Let's work out the total cost together.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "write down",
+        "catch up"
+      ]
+    },
+    {
+      "word": "give up",
+      "meaning": "to stop trying to do something difficult",
+      "japaneseMeaning": "あきらめる",
+      "example": "The puzzle is hard, but don't give up.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "hand in",
+        "make progress"
+      ]
+    },
+    {
+      "word": "carry on",
+      "meaning": "to continue doing something",
+      "japaneseMeaning": "続ける",
+      "example": "Please carry on with your work while I answer the phone.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "look up",
+        "pay attention"
+      ]
+    },
+    {
+      "word": "write down",
+      "meaning": "to put information on paper so you can remember it",
+      "japaneseMeaning": "書き留める",
+      "example": "Write down the address before you forget it.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "catch up",
+        "find out"
+      ]
+    },
+    {
+      "word": "hand in",
+      "meaning": "to give completed work to a teacher or manager",
+      "japaneseMeaning": "提出する",
+      "example": "We must hand in our reports by Friday.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "make progress",
+        "work out"
+      ],
+      "sentencePractice": {
+        "prompt": "The report is finished. Our teacher asked us to ____ our work by Friday so she can mark it.",
+        "distractors": [
+          "give up",
+          "look up"
+        ],
+        "reviewNote": "Completed work must be submitted for marking; abandoning it or searching for it does not fit."
+      }
+    },
+    {
+      "word": "look up",
+      "meaning": "to search for information in a book or online",
+      "japaneseMeaning": "調べる",
+      "example": "You can look up that word in a dictionary.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "pay attention",
+        "give up"
+      ]
+    },
+    {
+      "word": "catch up",
+      "meaning": "to reach the same stage as others after falling behind",
+      "japaneseMeaning": "遅れを取り戻す",
+      "example": "I missed two classes and need to catch up.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "find out",
+        "carry on"
+      ]
+    },
+    {
+      "word": "make progress",
+      "meaning": "to improve or move closer to a goal",
+      "japaneseMeaning": "進歩する",
+      "example": "You will make progress if you practise regularly.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "work out",
+        "write down"
+      ]
+    },
+    {
+      "word": "pay attention",
+      "meaning": "to listen to or watch something carefully",
+      "japaneseMeaning": "注意を払う",
+      "example": "Please pay attention to the safety instructions.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "give up",
+        "hand in"
+      ]
+    }
+  ]
+}

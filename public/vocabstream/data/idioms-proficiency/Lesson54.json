@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-54",
+  "title": "Lesson 54",
+  "paragraph": "影響とリスク",
+  "words": [
+    {
+      "word": "an unintended consequence",
+      "meaning": "a result of an action that was not planned",
+      "japaneseMeaning": "意図しない結果",
+      "example": "Higher rents were an unintended consequence of the new development.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "a slippery slope",
+        "weather the storm"
+      ]
+    },
+    {
+      "word": "a double-edged sword",
+      "meaning": "something that has both helpful and harmful effects",
+      "japaneseMeaning": "諸刃の剣",
+      "example": "Constant access to email can be a double-edged sword.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "set a precedent",
+        "at stake"
+      ]
+    },
+    {
+      "word": "the tip of the iceberg",
+      "meaning": "a small visible part of a much larger problem",
+      "japaneseMeaning": "氷山の一角",
+      "example": "These complaints may be the tip of the iceberg.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "take its toll",
+        "a foregone conclusion"
+      ],
+      "sentencePractice": {
+        "prompt": "Only a few faults are visible, but many more are hidden. What we can see is ____.",
+        "distractors": [
+          "a foregone conclusion",
+          "a double-edged sword"
+        ],
+        "reviewNote": "The contrast is visible versus hidden size, not a certain outcome or mixed benefits and harms."
+      }
+    },
+    {
+      "word": "a slippery slope",
+      "meaning": "a situation in which one step may lead to worse results",
+      "japaneseMeaning": "悪い方向へ進みかねない危うい状況",
+      "example": "Ignoring one safety check could become a slippery slope.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "weather the storm",
+        "in retrospect"
+      ]
+    },
+    {
+      "word": "set a precedent",
+      "meaning": "to establish an example that may guide future decisions",
+      "japaneseMeaning": "先例を作る",
+      "example": "The ruling could set a precedent for similar cases.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "at stake",
+        "an unintended consequence"
+      ]
+    },
+    {
+      "word": "take its toll",
+      "meaning": "to gradually cause harm through repeated pressure or use",
+      "japaneseMeaning": "徐々に悪影響を及ぼす",
+      "example": "Working without rest can take its toll on your health.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a foregone conclusion",
+        "a double-edged sword"
+      ]
+    },
+    {
+      "word": "weather the storm",
+      "meaning": "to survive a difficult period",
+      "japaneseMeaning": "困難な時期を乗り切る",
+      "example": "A reserve fund helped the charity weather the storm.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "in retrospect",
+        "the tip of the iceberg"
+      ]
+    },
+    {
+      "word": "at stake",
+      "meaning": "at risk of being lost or damaged",
+      "japaneseMeaning": "危機にさらされて",
+      "example": "More than money is at stake; our reputation matters too.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "an unintended consequence",
+        "a slippery slope"
+      ]
+    },
+    {
+      "word": "a foregone conclusion",
+      "meaning": "a result that seems certain before it happens",
+      "japaneseMeaning": "最初から明らかな結果",
+      "example": "The final vote was far from a foregone conclusion.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "a double-edged sword",
+        "set a precedent"
+      ]
+    },
+    {
+      "word": "in retrospect",
+      "meaning": "when thinking about a past event with what you know now",
+      "japaneseMeaning": "振り返ってみると",
+      "example": "In retrospect, we should have tested the idea earlier.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "the tip of the iceberg",
+        "take its toll"
+      ]
+    }
+  ]
+}

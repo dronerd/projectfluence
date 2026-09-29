@@ -3,7 +3,7 @@
   "title": "Lesson 52",
   "paragraph": "This lesson practices useful adjectives for feelings.",
   "words": [
-    { "word": "glad", "meaning": "happy about something", "japaneseMeaning": "うれしい", "synonyms": "happy, pleased", "antonyms": "sad, unhappy", "forms": "glad, gladder, gladdest", "example": "I am glad to see you." },
+    { "word": "glad", "meaning": "happy about something", "japaneseMeaning": "うれしい", "synonyms": "happy, pleased", "antonyms": "sad, unhappy", "forms": "glad, gladder, gladdest", "example": "I am glad to see you.", "meaningDistractors": ["ashamed", "nervous"] },
     { "word": "proud", "meaning": "happy because of something good you did", "japaneseMeaning": "誇りに思う", "synonyms": "pleased, happy", "antonyms": "ashamed, sorry", "forms": "proud, prouder, proudest", "example": "She is proud of her drawing." },
     { "word": "ashamed", "meaning": "feeling bad because you did something wrong", "japaneseMeaning": "恥ずかしい／恥じている", "synonyms": "sorry, embarrassed", "antonyms": "proud, glad", "forms": "ashamed, more ashamed, most ashamed", "example": "He is ashamed of his lie." },
     { "word": "embarrassed", "meaning": "feeling shy or uncomfortable because people notice you", "japaneseMeaning": "恥ずかしい／きまり悪い", "synonyms": "shy, ashamed", "antonyms": "confident, proud", "forms": "embarrassed, more embarrassed, most embarrassed", "example": "I feel embarrassed when I make a mistake." },
@@ -11,7 +11,7 @@
     { "word": "nervous", "meaning": "worried before something happens", "japaneseMeaning": "緊張した／不安な", "synonyms": "worried, afraid", "antonyms": "calm, confident", "forms": "nervous, more nervous, most nervous", "example": "I am nervous before the test." },
     { "word": "calm", "meaning": "not angry or worried", "japaneseMeaning": "落ち着いた", "synonyms": "quiet, relaxed", "antonyms": "nervous, angry", "forms": "calm, calmer, calmest", "example": "Try to stay calm during the exam." },
     { "word": "upset", "meaning": "sad, worried, or angry", "japaneseMeaning": "動揺した／腹を立てた", "synonyms": "sad, bothered", "antonyms": "calm, pleased", "forms": "upset, more upset, most upset", "example": "She is upset about the broken cup." },
-    { "word": "pleased", "meaning": "happy and satisfied", "japaneseMeaning": "満足した／うれしい", "synonyms": "happy, glad", "antonyms": "unhappy, disappointed", "forms": "pleased, more pleased, most pleased", "example": "My teacher is pleased with my work." },
+    { "word": "pleased", "meaning": "happy and satisfied", "japaneseMeaning": "満足した／うれしい", "synonyms": "happy, glad", "antonyms": "unhappy, disappointed", "forms": "pleased, more pleased, most pleased", "example": "My teacher is pleased with my work.", "meaningDistractors": ["worried", "disappointed"] },
     { "word": "disappointed", "meaning": "sad because something was not good", "japaneseMeaning": "がっかりした", "synonyms": "sad, unhappy", "antonyms": "pleased, glad", "forms": "disappointed, more disappointed, most disappointed", "example": "I am disappointed with my low score." }
   ]
 }

@@ -82,7 +82,12 @@
         "japaneseMeaning": "決心した、断固とした",
         "synonyms": "resolute, steadfast",
         "antonyms": "hesitant, indecisive",
-        "example": "She was determined to achieve her dreams."
+        "example": "She was determined to achieve her dreams.",
+        "duplicateOf": {
+          "category": "word-proficiency",
+          "lessonNumber": 79,
+          "word": "determined"
+        }
       }
     ]
   }
