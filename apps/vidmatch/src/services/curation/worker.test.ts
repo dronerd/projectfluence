@@ -107,9 +107,27 @@ test('shared request deadline includes run reservation time and does not alter s
 test('provider failure adds no missing strike and still purges expired provider data',async()=>{
   const store=new FakeStore(),provider=new FakeProvider();provider.failure=new ServiceFailure('PROVIDER_FORBIDDEN_OR_QUOTA',403);
   store.purges=[{purged:50,remaining:true}];
-  await assert.rejects(checkCatalogHealth(store,provider),error=>error===provider.failure);
+  await assert.rejects(checkCatalogHealth(store,provider,{maxPurgeBatches:1}),error=>error===provider.failure);
   const checks=store.calls.find(call=>call.name==='refresh_vidmatch_provider_metadata')!.args.p_checks as {status:string}[];
   assert.equal(checks[0].status,'transient_error');assert.equal(store.calls.filter(call=>call.name==='purge_expired_vidmatch_provider_data').length,1);
+});
+
+test('default health retention drains an import-sized expiry burst and stops when empty',async()=>{
+  const store=new FakeStore(),provider=new FakeProvider();
+  store.purges=[...Array.from({length:17},()=>({purged:50,remaining:true})),{purged:20,remaining:false}];
+  const result=await checkCatalogHealth(store,provider);
+  assert.deepEqual(result.purge,{purged:870,remaining:false,batches:18});
+  const calls=store.calls.filter(call=>call.name==='purge_expired_vidmatch_provider_data');
+  assert.equal(calls.length,18);assert.ok(calls.every(call=>call.args.p_limit===50));
+});
+
+test('default health retention caps a larger backlog at twenty bounded batches',async()=>{
+  const store=new FakeStore(),provider=new FakeProvider();
+  store.purges=Array.from({length:25},()=>({purged:50,remaining:true}));
+  const result=await checkCatalogHealth(store,provider);
+  assert.deepEqual(result.purge,{purged:1000,remaining:true,batches:20});
+  assert.equal(store.calls.filter(call=>call.name==='purge_expired_vidmatch_provider_data').length,20);
+  assert.equal(store.purges.length,5);
 });
 
 test('a lost claim response is never retried as a second reservation',async()=>{

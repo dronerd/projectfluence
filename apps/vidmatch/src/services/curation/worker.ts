@@ -157,7 +157,7 @@ export async function runWorker(store: WorkerStore, provider: WorkerProvider, ma
 }
 export async function checkCatalogHealth(store:WorkerStore,provider:WorkerProvider, options: {maxPurgeBatches?:number;deadlineMs?:number} = {}) {
   const deadline=Date.now()+(options.deadlineMs??60_000);
-  const maxPurgeBatches=Math.max(1,Math.min(options.maxPurgeBatches??1,20));
+  const maxPurgeBatches=Math.max(1,Math.min(options.maxPurgeBatches??20,20));
   const batch=await store.healthBatch();
   let result:unknown;
   let providerFailure:unknown;

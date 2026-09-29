@@ -13,7 +13,8 @@ try {
   if(values['env-file'])process.loadEnvFile(values['env-file']);
   if(!['inspect','import','discover','health'].includes(command))throw new ServiceFailure('INVALID_COMMAND',400);
   const target=Number(values['target-per-level']);
-  if(!Number.isInteger(target)||target<1||target>100)throw new ServiceFailure('INVALID_TARGET',400);
+  // Catalog capacity only; editorial gates and the five-per-channel limit still apply.
+  if(!Number.isInteger(target)||target<1||target>200)throw new ServiceFailure('INVALID_TARGET',400);
   if(values['legacy-schema']&&!['inspect','import'].includes(command))throw new ServiceFailure('LEGACY_MODE_ONLY_FOR_IMPORT',400);
   if(['discover','health'].includes(command)&&!values.write)throw new ServiceFailure('USE_WRITE_FOR_MAINTENANCE_RUN',400);
   const store=new CatalogStore(process.env.SUPABASE_URL??'',process.env.SUPABASE_SERVICE_ROLE_KEY??'');

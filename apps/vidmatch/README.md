@@ -26,7 +26,7 @@ The supported levels remain **A1, A2, B1, B2, C1, C2**. A primary level is a sug
 
 Use the catalog’s consistent format vocabulary: `explainer`, `interview`, `conversation`, `vlog`, `documentary`, `talk`, `storytelling`, `demonstration`, `news report`, `comedy`, `tour`. Do not create a new synonym just to evade a diversity penalty.
 
-Quality scores use **only independent editorial inputs** (`strong=90`, `adequate=70`; weak rejects). Confidence `.9/.7/.4` represents high/medium/low editorial confidence, not a statistical probability. Low-confidence beginner content is deferred. Missing values are not invented. Technical eligibility is a separate gate, not a popularity score. Approved candidates are selected for underrepresented topics/formats, with no more than five videos from a channel per level in a 30-video target; existing entries count. The cap is a practical ceiling of roughly one sixth of that initial target, not a claim about an ideal global ratio.
+Quality scores use **only independent editorial inputs** (`strong=90`, `adequate=70`; weak rejects). Confidence `.9/.7/.4` represents high/medium/low editorial confidence, not a statistical probability. Low-confidence beginner content is deferred. Missing values are not invented. Technical eligibility is a separate gate, not a popularity score. Approved candidates are selected for underrepresented topics/formats, with no more than five videos from a channel per level; existing entries count. The cap stays fixed as the catalog grows, so increasing capacity does not increase source concentration.
 
 Default full-video duration ranges are 1–15 minutes for A1/A2, 2–25 for B1/B2, and 2–45 for C1/C2. These fit a casual listening session and can be changed explicitly in `curation/policy.ts` after reviewing actual learning use. Duration never determines CEFR or quality.
 
@@ -36,7 +36,7 @@ References: [CEFR Companion Volume](https://rm.coe.int/cefr-companion-volume-wit
 
 ## Before running anything
 
-Use Node **22.18+** (within the repository's engine range), `npm ci`, and the root Supabase migration chain in `supabase/migrations`. Do not apply the old app-local `schema.sql` as the production schema. See [Supabase deployment](../../../supabase/README.md) and the [deployment guide](../../../docs/production-deployment.md).
+Use Node **22.18+** (within the repository's engine range), `npm ci`, and the root Supabase migration chain in `supabase/migrations`. Do not apply the old app-local `schema.sql` as the production schema. See [Supabase deployment](../../../supabase/README.md) and the [current deployment walkthrough](../../../docs/deployment-current-setup.md).
 
 | Variable | Obtain from | Location | Secret | Purpose |
 | --- | --- | --- | --- | --- |
@@ -55,17 +55,19 @@ No additional browser environment variables, Supabase Storage buckets, service-r
 From the Git repository root, use an **ignored** environment file. The CLI defaults to a read-only inspection and never applies SQL.
 
 ```sh
-npm run vidmatch:catalog -- inspect --env-file .env.local --report /tmp/vidmatch-review.json
-npm run vidmatch:catalog -- import --env-file .env.local --write
+npm run vidmatch:catalog -- inspect --env-file .env.local --target-per-level 200 --report /tmp/vidmatch-review.json
+npm run vidmatch:catalog -- import --env-file .env.local --target-per-level 200 --write
 ```
+
+`--target-per-level` is total capacity including existing rows, not the number to add. The CLI accepts 1–200; its small default of 30 is not suitable for importing this expanded library. It never requires filling a level with weak candidates.
 
 The first command revalidates metadata and selected thumbnails and reports candidate rejection/diversity reasons. The second uses the migration's leased, atomic publication RPCs. Repeating the same reviewed-manifest import is idempotent. Changed editorial evidence creates a new import identity. A budget-limited `partial` run is terminal for that key; continue with an explicit new `--run-key import-followup-YYYYMMDD-1`. Reviewed completed candidates retain their history and are not reinserted. Keep API snapshots and diagnostic exports temporary and out of Git.
 
 For an existing **pre-migration** project only, the explicit compatibility path inserts legacy columns without changing or deleting any existing row:
 
 ```sh
-npm run vidmatch:catalog -- inspect --env-file .env.local --legacy-schema --report /tmp/vidmatch-before-import.json
-npm run vidmatch:catalog -- import --env-file .env.local --legacy-schema --write --report /tmp/vidmatch-import-result.json
+npm run vidmatch:catalog -- inspect --env-file .env.local --target-per-level 200 --legacy-schema --report /tmp/vidmatch-before-import.json
+npm run vidmatch:catalog -- import --env-file .env.local --target-per-level 200 --legacy-schema --write --report /tmp/vidmatch-import-result.json
 ```
 
 This bridge does not provide the new hosted review/freshness enforcement. After applying the migration, run the normal `import --write` command to attach verified provenance/availability to matching-level legacy seed entries. Other legacy entries remain `unknown` until reviewed. A level conflict is reported and must not be silently overwritten. Live catalog inserts are shared data even when the code is on a branch.
@@ -92,14 +94,14 @@ npm run vidmatch:catalog -- discover --env-file .env.local --write
 npm run vidmatch:catalog -- health --env-file .env.local --write
 ```
 
-Availability checks exclude suspect videos after a confirmed missing/restricted result and mark inactive after a second confirmation at least 24 hours later. Transient API failures do not add strikes. Provider metadata expires within 30 days; bounded purge redacts old provider copies without deleting learning history or independent editorial annotations. Run health often enough to cover the entire catalog within that window (50 oldest entries per run). Monitor `remaining` purge/backlog counts and schedule additional health passes as the catalog grows.
+Availability checks exclude suspect videos after a confirmed missing/restricted result and mark inactive after a second confirmation at least 24 hours later. Transient API failures do not add strikes. Provider metadata expires within 30 days; bounded purge redacts old provider copies without deleting learning history or independent editorial annotations. Run health often enough to cover the entire catalog within that window (50 oldest entries per run). Each health run also purges up to 20 batches of 50 expired provider snapshots, stopping early when drained or when its time budget is low. This covers the larger import’s expiry burst without unbounded cleanup. Monitor `remaining` purge/backlog counts and schedule additional health passes if necessary.
 
 ## Deployment ordering for this branch
 
 1. Keep the branch separate until the main application's deployment setup is ready. The work does not merge itself or deploy hosted SQL.
 2. Back up the existing project; validate the root migrations in staging. Follow the baseline/adoption procedure in `supabase/README.md`; inspect `npx supabase db push --dry-run` before applying to the intended linked project.
 3. Apply migrations through `20260930000100_vidmatch_curation.sql` using the Supabase CLI.
-4. Using that same project's server credentials, run `npm run vidmatch:catalog -- import --env-file .env.local --write`. Check inserted/existing/activation-conflict counts and active counts per level. Refreshing metadata alone does not approve unreviewed legacy videos.
+4. Using that same project's server credentials, run `npm run vidmatch:catalog -- import --env-file .env.local --target-per-level 200 --write`. Check inserted/existing/activation-conflict counts and active counts per level. Refreshing metadata alone does not approve unreviewed legacy videos.
 5. Deploy this branch's Next.js build to the already configured Vercel or Render service. Keep `VIDMATCH_LEGACY_CATALOG` unset. The Python SpeakWise service needs no changes for this branch.
 6. Enable exactly one daily scheduler with the same `CRON_SECRET` as Next. The actual Next URL is needed for Render's `PROJECTFLUENCE_URL`; Vercel calls its own route automatically.
 7. Exercise all six levels, topics, pagination, similar results, thumbnails and native YouTube links on desktop/mobile; sign in and verify saved preferences/click history. Check safe server logs and browser console. Run health twice only with the documented confirmation interval when testing unavailable states; use staging fixtures rather than intentionally removing production content.

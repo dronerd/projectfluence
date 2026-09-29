@@ -261,6 +261,21 @@ test("default diversity cap permits at most five entries per level and channel",
   assert.equal(selectDiverseCandidates(incoming.filter((row) => row.channelId === "channel-0")).length, 5);
 });
 
+test("larger catalogs retain channel caps and remain idempotent across repeated imports", () => {
+  const existing = Array.from({ length: 5 }, (_, index) => candidate(index, { channelId: "already-full" }));
+  const incoming = [candidate(6, { channelId: "already-full" }), ...Array.from({ length: 180 }, (_, index) =>
+    candidate(index + 10, { channelId: `new-channel-${index % 30}` }))];
+  const original = structuredClone(existing);
+  const result = selectDiverseCandidates(incoming, { existing, targetPerLevel: 200 });
+  assert.equal(result.length, 150, "Capacity must not override the five-per-channel quality rule.");
+  assert.equal(new Set(result.map((row) => row.videoId)).size, 150);
+  const counts = new Map<string, number>();
+  for (const row of [...existing, ...result]) counts.set(row.channelId, (counts.get(row.channelId) ?? 0) + 1);
+  assert.ok([...counts.values()].every((count) => count <= 5));
+  assert.deepEqual(selectDiverseCandidates(incoming, { existing: [...existing, ...result], targetPerLevel: 200 }), []);
+  assert.deepEqual(existing, original);
+});
+
 test("diversity handles each level independently and leaves an honest shortage", () => {
   const incoming = [candidate(1, { level: "A1", channelId: "shared" }), candidate(2, { level: "A1", channelId: "shared" }), candidate(3, { level: "C2", channelId: "shared" })];
   const result = selectDiverseCandidates(incoming, { maxPerLevelChannel: 1 });
