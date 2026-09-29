@@ -9,7 +9,25 @@
       "synonyms": "earlier, former",
       "antonyms": "next, later",
       "forms": "previous, previously",
-      "example": "The previous lesson was easier than this one."
+      "example": "The previous lesson was easier than this one.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/previous.svg",
+        "alt": "今の時点より前にあった段階を、時間の流れの左側に示している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/previous.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "visible",
+        "vivid"
+      ]
     },
     {
       "word": "traditional",

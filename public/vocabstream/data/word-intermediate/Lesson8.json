@@ -9,7 +9,25 @@
       "synonyms": "extra, further",
       "antonyms": "fewer, missing",
       "forms": "additional, additionally",
-      "example": "We need an additional chair for the guest."
+      "example": "We need an additional chair for the guest.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/additional.svg",
+        "alt": "四個の球に別の一個を加えて、合計五個になる図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/additional.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "cultural",
+        "native"
+      ]
     },
     {
       "word": "cultural",
@@ -54,7 +72,25 @@
       "synonyms": "small, neat",
       "antonyms": "large, spread out",
       "forms": "compact, compactly",
-      "example": "This compact camera is easy to carry when traveling."
+      "example": "This compact camera is easy to carry when traveling.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/compact.svg",
+        "alt": "小さな部屋の平面図。ベッド、机、収納が一つの空間に収まっている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/compact.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "elderly",
+        "native"
+      ]
     },
     {
       "word": "internal",
@@ -63,7 +99,25 @@
       "synonyms": "inner, inside",
       "antonyms": "external, outside",
       "forms": "internal, internally",
-      "example": "The mechanic checked the internal parts of the engine."
+      "example": "The mechanic checked the internal parts of the engine.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/internal.svg",
+        "alt": "箱の断面の内側に置かれた部品を指している図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/internal.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "minor",
+        "native"
+      ]
     },
     {
       "word": "major",

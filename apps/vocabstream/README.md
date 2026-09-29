@@ -6,7 +6,7 @@ VocabStream runs inside the root Next.js application. Static lesson JSON in `pub
 
 - Word courses retain their original 100 lessons each, ordered entries, spelling and level labels: beginner A1–A2, intermediate B1, advanced B2, proficiency C1–C2.
 - Genuine expression courses display **Lessons 1–10**, 100 expressions per level. Their unchanged internal lesson addresses are 51–60 in the existing `idioms-*` categories. `displayLessonNumber` and `lessonLabel` keep user-facing numbering separate from persisted identity. Previous lessons 1–50 were repeated placeholder vocabulary; they remain reachable through “以前のレッスン・学習記録を見る” and are labeled “以前の Lesson N” to distinguish their history.
-- Specialist courses have eight ten-word lessons each (80 terms per field): `specialized-it`, `specialized-engineering`, `specialized-healthcare`, `specialized-business`, `specialized-environment`, `specialized-academic`.
+- Specialist courses have ten ten-word lessons each (100 terms per field): `specialized-it`, `specialized-engineering`, `specialized-healthcare`, `specialized-business`, `specialized-environment`, `specialized-academic`.
 - Persisted lesson identity is `<course>-lesson-<N>`, **not** the legacy JSON `lesson_id`. Mistake identity is user + source category + lowercased word. Do not rename words, shift lesson positions, or repurpose old lesson numbers.
 - `scripts/vocabstream-baseline.json` freezes all 600 original files' IDs and ordered word strings. Append new lessons; do not regenerate this baseline to make a compatibility failure disappear.
 
@@ -30,7 +30,11 @@ The example above demonstrates the shape only; it is not publishable content. Fo
 
 Unreviewed examples remain on study cards and available for browser speech synthesis. They are **not automatically converted to scored gaps**. This prevents random same-lesson distractors, partial-word blanks and invented gaps. Meaning questions use explicit pairs when supplied; the older fallback excludes duplicate labels, identical meanings and listed synonyms. It cannot recognize every semantic relationship, so new content should include reviewed explicit pairs.
 
-The beginner course contains 70 illustrated entries, covering food, everyday objects, clothing, animals, vehicles and nature. Images are selective: use them for an unmistakable concrete sense, not abstract relationships or ambiguous scenes. `image+text` combines local artwork with a short definition. Image questions show the illustration first, with Japanese accessible descriptions and a text fallback. See [image attribution](../../public/vocabstream/images/ATTRIBUTION.md) and `manifest.json`. Optional image data must include dimensions, source, source URL, creator and license. The current renderer accepts local `/vocabstream/images/` assets; external image services are unnecessary.
+Images remain in the repository catalog; Supabase stores learner progress. `image+text` combines local artwork with the existing definition and example. Choose `imageRole: "meaning"` only when the illustration clearly conveys the exact taught sense. Use `imageRole: "supporting"` for quantity, spatial, relationship or process diagrams that need explanation. Supporting diagrams keep text-based questions and appear after the answer. Existing entries without `imageRole` retain their original meaning-image behavior.
+
+Saved weak-word cards show the current lesson image with lazy loading. Review quizzes, sentence feedback, and the expanded answer summary also display appropriate images. Exact course/lesson/headword matching hydrates metadata even for words studied before images existed. Unresolvable historical records remain text-only rather than acquiring an image for a different sense. No image fields are written to learner progress.
+
+Images include Japanese alternative descriptions, intrinsic dimensions and an on-error text fallback. `WordImage` accepts local `/vocabstream/images/` assets, CC0 original artwork, and CC BY 4.0 artwork with a source URL, creator, credit and license URL. The shared renderer displays Twemoji attribution wherever the image appears. See [image credits](../../public/vocabstream/images/ATTRIBUTION.md) and `manifest.json`; each artwork has a SHA256 and selection rationale. Do not relabel third-party artwork as CC0.
 
 ## Quality checks
 
@@ -38,6 +42,7 @@ Run with the Node version in `package.json` (Node 22.18+):
 
 ```sh
 npm run vocabstream:audit
+npm run vocabstream:images
 npm run vocabstream:ambiguity -- --output /tmp/vocabstream-ambiguity.json
 npm test
 npm run typecheck
@@ -45,15 +50,18 @@ npm run lint
 npm run build
 ```
 
-The production build runs both audits automatically before Next.js compiles. The dataset audit checks every entry, original identities, required fields, images/provenance, option structure and canonical references. The ambiguity report exports all completed sentences; `unique_answer: null` means static checks cannot certify semantic uniqueness. `--include-study` also lists unscored examples awaiting review. Automated checks supplement curriculum review.
+The production build runs all three audits automatically before Next.js compiles. The dataset audit checks every entry, original identities, required fields, images/provenance, option structure and canonical references. The image audit checks manifest/lesson consistency, all artwork hashes, local file existence, safe SVG content, full-course choice validity and license metadata. The ambiguity report exports all completed sentences; `unique_answer: null` means static checks cannot certify semantic uniqueness. `--include-study` also lists unscored examples awaiting review. Automated checks supplement curriculum review.
 
 Browser fixtures use the existing external Playwright/Axe tool installation:
 
 ```sh
-FLUENCE_BROWSER_TOOLS=/path/to/browser-tools \
-FLUENCE_BASE_URL=http://127.0.0.1:3136 \
-FLUENCE_SUPABASE_URL=http://127.0.0.1:3137 \
+export FLUENCE_BROWSER_TOOLS=/path/to/browser-tools
+export FLUENCE_BASE_URL=http://127.0.0.1:3136
+export FLUENCE_SUPABASE_URL=http://127.0.0.1:3137
 node scripts/validate-vocabstream-curriculum.mjs
+
+# Use the same environment variables for focused saved-word/review image checks:
+node --experimental-strip-types scripts/validate-vocabstream-review-images.mjs
 ```
 
 Use a local build configured with the same dummy public Supabase URL. The script intercepts authentication and application API calls; its saved-progress assertions are browser fixtures. `scripts/validate-vocabstream-api.mjs` exercises real local Next routes against an isolated HTTP service fixture. `scripts/validate-database.mjs` exercises the actual PostgreSQL functions and RLS through PGlite; see its `PGLITE_MODULE` requirement. No hosted credentials are required for these checks.
@@ -64,4 +72,4 @@ This curriculum update needs **no new database migration, image bucket, secret, 
 
 For a new environment, complete the branch's existing [production deployment guide](../../docs/production-deployment.md), including its Supabase migration sequence and authentication URLs. Do not run the old application `schema.sql` as a replacement for the root migrations. Keep `SUPABASE_SERVICE_ROLE_KEY` server-only. Nothing in this update applies hosted migrations or changes existing learner records.
 
-See [the expansion report](../../docs/vocabstream-expansion.md) for current counts and validation, and [the initial curriculum audit](../../docs/vocabstream-curriculum-audit.md) for the original findings and progress-compatibility design.
+See [the specialist and image expansion report](../../docs/vocabstream-images-specialists.md) for current counts and validation, [the prior expansion](../../docs/vocabstream-expansion.md) for its historical results, and [the initial curriculum audit](../../docs/vocabstream-curriculum-audit.md) for the original findings and progress-compatibility design.

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>三つに分かれた大きな長方形の、中央の一部分を強調している。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="48" y="62" width="265" height="128" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><line x1="137" y1="62" x2="137" y2="190" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><line x1="225" y1="62" x2="225" y2="190" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><rect x="140" y="65" width="82" height="122" rx="1" fill="#d9b76c" stroke="none" stroke-width="2.5"/><line x1="180" y1="35" x2="180" y2="55" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="180,55 185.0,45.0 175.0,45.0" fill="#40565b"/><text x="180" y="218" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">全体の中の一部分</text>
+</svg>

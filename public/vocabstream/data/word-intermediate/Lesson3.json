@@ -18,7 +18,25 @@
       "synonyms": "alike, close",
       "antonyms": "different, unlike",
       "forms": "similar, similarly, similarity",
-      "example": "My bag is similar to yours, but mine is blue."
+      "example": "My bag is similar to yours, but mine is blue.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/similar.svg",
+        "alt": "同じ形の二軒の家で、一方だけ窓が一つ多い比較。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/similar.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "official",
+        "personal"
+      ]
     },
     {
       "word": "suitable",

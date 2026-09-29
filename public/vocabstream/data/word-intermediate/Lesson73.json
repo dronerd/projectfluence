@@ -9,7 +9,25 @@
       "synonyms": "main, key",
       "antonyms": "minor, outer",
       "forms": "central, more central, most central",
-      "example": "Trust is central to a good friendship."
+      "example": "Trust is central to a good friendship.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/central.svg",
+        "alt": "周囲の四つの地点の真ん中にある地点を強調した図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/central.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "marital",
+        "irritated"
+      ]
     },
     {
       "word": "permanent",

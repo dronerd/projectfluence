@@ -36,7 +36,25 @@
       "synonyms": "system, connection",
       "antonyms": "separation, single part",
       "forms": "network, networks",
-      "example": "The train network connects many small towns."
+      "example": "The train network connects many small towns.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/network.svg",
+        "alt": "中央の端末と周囲の三台の端末が線でつながる構成図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/network.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "society",
+        "priority"
+      ]
     },
     {
       "word": "priority",

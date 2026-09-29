@@ -5,6 +5,7 @@ import { getCourse } from "../lib/catalog";
 import { Link } from "../lib/router-compat";
 import { speakEnglish } from "../pages/speech";
 import VocabularyImage from "./VocabularyImage";
+import { validWordImage } from "../lib/questionPolicy";
 
 export function focusLearningHeading(heading: HTMLElement | null) {
   if (!heading) return;
@@ -26,7 +27,8 @@ export function WordDetails({ word }: { word: Partial<LessonWord> }) {
 
 export default function PracticeQuestion({ question, index, total, selected, onChoose, onNext, nextLabel = "次の問題へ", controls }: { question: VocabStreamReviewQuestion; index: number; total: number; selected: number | null; onChoose: (choice: number) => void; onNext: () => void; nextLabel?: string; controls?: ReactNode }) {
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const imagePrompt = question.promptMode === "image" && question.image;
+  const image = validWordImage(question.image);
+  const imagePrompt = question.promptMode === "image" && image;
   useEffect(() => { focusLearningHeading(headingRef.current); }, [question.id]);
   return <>
     <div className="vs-practice-topline"><span>{imagePrompt ? "画像で単語を確認" : question.questionType === "meaning" ? "意味に合う単語を選ぶ" : "例文を完成させる"}</span><div className="vs-practice-tools"><span>{index + 1} / {total} 問</span>{controls}</div></div>
@@ -40,6 +42,7 @@ export default function PracticeQuestion({ question, index, total, selected, onC
     })}</div>
     {selected !== null && <>
       <div className="vs-feedback vs-answer-feedback" role="status"><strong>{selected === question.answerIndex ? "正解です！" : <>正解は <span lang="en">{question.correctAnswer}</span> です。</>}</strong></div>
+      {image && !imagePrompt && <VocabularyImage image={image} />}
       <div className="vs-actions vs-answer-actions"><button className="pf-button" onClick={onNext}>{nextLabel}<span aria-hidden="true">→</span></button><button className="pf-button-secondary" onClick={() => speakEnglish(`${question.word}. ${question.example || ""}`)}>音声を聞く</button></div>
       <details className="vs-details"><summary>意味・例文を確認</summary><p lang="en">{question.definition}</p>{question.example && <p className="vs-example" lang="en">{question.example}</p>}<WordDetails word={question} /></details>
     </>}

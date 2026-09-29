@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>横と縦の二本の道路が交わる場所を、丸で囲んだ図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="25" y="91" width="310" height="63" rx="0" fill="#b7c6c6" stroke="none" stroke-width="2.5"/><rect x="148" y="27" width="65" height="186" rx="0" fill="#b7c6c6" stroke="none" stroke-width="2.5"/><line x1="30" y1="123" x2="142" y2="123" stroke="#fffdf5" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 10"/><line x1="216" y1="123" x2="331" y2="123" stroke="#fffdf5" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 10"/><line x1="181" y1="29" x2="181" y2="85" stroke="#fffdf5" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 10"/><line x1="181" y1="163" x2="181" y2="210" stroke="#fffdf5" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 10"/><circle cx="181" cy="123" r="45" fill="none" stroke="#77aebc" stroke-width="2.5"/>
+</svg>

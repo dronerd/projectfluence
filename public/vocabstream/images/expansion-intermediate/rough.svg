@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>なめらかな表面と、細かくでこぼこした表面を拡大して比べた図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="30" y="40" width="133" height="159" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><rect x="197" y="40" width="133" height="159" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><path d="M41 145h112" fill="none" stroke="#b7c6c6" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M206 146l9-26 11 28 12-44 10 37 10-19 12 31 10-33 11 20 9-24 11 28" fill="none" stroke="#77aebc" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><text x="95" y="80" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">なめらか</text><text x="264" y="80" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">でこぼこ</text>
+</svg>

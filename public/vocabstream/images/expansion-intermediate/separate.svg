@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>くっついていた二つの積み木を、離れた位置へ動かす図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="35" y="91" width="58" height="59" rx="3" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><rect x="93" y="91" width="58" height="59" rx="3" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><line x1="166" y1="120" x2="207" y2="120" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="207,120 197.0,115.0 197.0,125.0" fill="#40565b"/><rect x="222" y="91" width="42" height="59" rx="3" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><rect x="297" y="91" width="42" height="59" rx="3" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><line x1="280" y1="78" x2="252" y2="78" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="252,78 262.0,83.0 262.0,73.0" fill="#40565b"/><line x1="280" y1="78" x2="311" y2="78" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="311,78 301.0,73.0 301.0,83.0" fill="#40565b"/>
+</svg>

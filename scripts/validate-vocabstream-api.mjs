@@ -20,8 +20,15 @@ const specialistLesson=await lesson('specialized-it',1),specialistWord=specialis
 assert.ok(imageWord&&idiomWord&&specialistWord);
 const addedImage=(await lesson('word-beginner',8)).words.find(word=>word.image);
 const addedIdiom=(await lesson('idioms-beginner',60)).words.find(word=>word.sentencePractice);
-const addedSpecialist=(await lesson('specialized-it',8)).words.find(word=>word.sentencePractice);
+const addedSpecialist=(await lesson('specialized-it',10)).words.find(word=>word.sentencePractice);
 assert.ok(addedImage&&addedIdiom&&addedSpecialist,'expanded curriculum must be present');
+const manifest=JSON.parse(await readFile(new URL('../public/vocabstream/images/manifest.json',import.meta.url),'utf8'));
+const supportingRef=manifest.images.find(item=>item.category==='word-intermediate'&&item.role==='supporting');
+assert.ok(supportingRef);
+const supportingWord=(await lesson(supportingRef.category,supportingRef.lessonNumber)).words.find(word=>word.word===supportingRef.word);
+const licensedRef=manifest.images.find(item=>item.image.license==='CC-BY-4.0'&&item.role==='meaning');
+assert.ok(licensedRef);
+const licensedWord=(await lesson(licensedRef.category,licensedRef.lessonNumber)).words.find(word=>word.word===licensedRef.word);
 const repeated=new Map();
 for(const file of (await readdir(new URL('word-beginner/',root))).filter(name=>/^Lesson\d+\.json$/.test(name)).sort()){
   const data=JSON.parse(await readFile(new URL(`word-beginner/${file}`,root),'utf8'));
@@ -32,8 +39,9 @@ assert.ok(repeatedEntries,'fixture requires a real repeated headword with differ
 const repeatedWord=repeatedEntries[0];
 const row=(word,category,number,id)=>({id,word:word.word,definition:'Outdated stored definition',example:'Outdated stored example',explanation:'Outdated stored explanation',source_category:category,source_lesson_id:`${category}-lesson-${number}`,source_lesson_number:number,mistake_count:7,last_mistaken_at:'2026-09-29T00:00:00Z'});
 const rows=[row(imageWord,'word-beginner',1,'image-row'),row(idiomWord,'idioms-beginner',51,'new-idiom-row'),row(specialistWord,'specialized-it',1,'specialist-row'),row(repeatedWord,'word-beginner',repeatedWord.number,'repeated-word-row'),
-  row(addedImage,'word-beginner',8,'added-image-row'),row(addedIdiom,'idioms-beginner',60,'added-idiom-row'),row(addedSpecialist,'specialized-it',8,'added-specialist-row'),
+  row(addedImage,'word-beginner',8,'added-image-row'),row(addedIdiom,'idioms-beginner',60,'added-idiom-row'),row(addedSpecialist,'specialized-it',10,'added-specialist-row'),
   {...row({word:'historical-fixture-word'},'word-beginner',999,'historical-row'),definition:'Historical saved meaning',example:'Historical saved study example'}];
+rows.push(row(supportingWord,supportingRef.category,supportingRef.lessonNumber,'supporting-image-row'),row(licensedWord,licensedRef.category,licensedRef.lessonNumber,'licensed-image-row'));
 const requests=[],writes=[];
 let fixtureError;
 const fixture=createServer(async(req,res)=>{
@@ -75,7 +83,7 @@ try{
   let review;
   await check('actual review route hydrates exact packaged sources and preserves historical fallback',async()=>{
     const response=await call('/api/vocabstream/review');assert.equal(response.status,200,JSON.stringify(response.body));review=response.body;
-    for(const [id,current]of [['image-row',imageWord],['new-idiom-row',idiomWord],['specialist-row',specialistWord],['repeated-word-row',repeatedWord],['added-image-row',addedImage],['added-idiom-row',addedIdiom],['added-specialist-row',addedSpecialist]]){
+    for(const [id,current]of [['image-row',imageWord],['new-idiom-row',idiomWord],['specialist-row',specialistWord],['repeated-word-row',repeatedWord],['added-image-row',addedImage],['added-idiom-row',addedIdiom],['added-specialist-row',addedSpecialist],['supporting-image-row',supportingWord],['licensed-image-row',licensedWord]]){
       const stored=review.weakWords.find(word=>word.id===id);assert.ok(stored,id);assert.equal(stored.definition,current.meaning);assert.equal(stored.example,current.example);assert.equal(stored.mistakeCount,7);assert.equal(stored.historical,false);
     }
     const imageQuestion=review.questions.find(question=>question.word===imageWord.word&&question.questionType==='meaning');
@@ -83,7 +91,11 @@ try{
     assert.ok(review.questions.some(question=>question.word===idiomWord.word&&question.promptMode==='sentence'));
     assert.ok(review.questions.some(question=>question.word===addedImage.word&&question.promptMode==='image'));
     assert.ok(review.questions.some(question=>question.word===addedIdiom.word&&question.promptMode==='sentence'&&question.sourceLessonNumber===60));
-    assert.ok(review.questions.some(question=>question.word===addedSpecialist.word&&question.promptMode==='sentence'&&question.sourceLessonNumber===8));
+    assert.ok(review.questions.some(question=>question.word===addedSpecialist.word&&question.promptMode==='sentence'&&question.sourceLessonNumber===10));
+    const supportingQuestion=review.questions.find(question=>question.word===supportingWord.word&&question.sourceCategory===supportingRef.category&&question.questionType==='meaning');
+    assert.equal(supportingQuestion.promptMode,'text');assert.equal(supportingQuestion.image.src,supportingWord.image.src);assert.equal(supportingQuestion.imageRole,'supporting');
+    const licensedQuestion=review.questions.find(question=>question.word===licensedWord.word&&question.sourceCategory===licensedRef.category&&question.questionType==='meaning');
+    assert.equal(licensedQuestion.promptMode,'image');assert.equal(licensedQuestion.image.license,'CC-BY-4.0');assert.ok(licensedQuestion.image.credit);
     const historical=review.questions.filter(question=>question.word==='historical-fixture-word');
     assert.equal(historical.length,1);assert.equal(historical[0].prompt,'Historical saved meaning');assert.equal(historical[0].questionType,'meaning');assert.equal(historical[0].image,undefined);
   });

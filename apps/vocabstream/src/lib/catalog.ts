@@ -12,12 +12,12 @@ export const idiomCourses: VocabularyCourse[] = vocabularyCourses.map((course, i
   description: ["毎日の生活や会話で使う、基本の表現", "人づきあい・学習・旅行に役立つ表現", "仕事や話し合いで考えを伝える表現", "議論や文章で、細かな意味を正確に伝える表現"][index],
 }));
 export const specializedCourses: VocabularyCourse[] = [
-  { id: "specialized-it", title: "IT・コンピューター", level: "B1–B2", description: "ソフトウェア・開発・セキュリティの基本語", lessons: 8 },
-  { id: "specialized-engineering", title: "工学", level: "B2", description: "力・電気・設計や製造に使う基本語", lessons: 8 },
-  { id: "specialized-healthcare", title: "医療・健康", level: "B1–B2", description: "診療・ケア・検査について伝える基本語", lessons: 8 },
-  { id: "specialized-business", title: "ビジネス・経済", level: "B1–B2", description: "会計・会議・事業運営で使う基本語", lessons: 8 },
-  { id: "specialized-environment", title: "環境科学", level: "B2", description: "生態系・気候・資源について学ぶ基本語", lessons: 8 },
-  { id: "specialized-academic", title: "大学・研究", level: "B2–C1", description: "研究方法・データ・論文で使う基本語", lessons: 8 },
+  { id: "specialized-it", title: "IT・コンピューター", level: "B1–B2", description: "ソフトウェア・開発・セキュリティの基本語", lessons: 10 },
+  { id: "specialized-engineering", title: "工学", level: "B2", description: "力・電気・設計や製造に使う基本語", lessons: 10 },
+  { id: "specialized-healthcare", title: "医療・健康", level: "B1–B2", description: "診療・ケア・検査について伝える基本語", lessons: 10 },
+  { id: "specialized-business", title: "ビジネス・経済", level: "B1–B2", description: "会計・会議・事業運営で使う基本語", lessons: 10 },
+  { id: "specialized-environment", title: "環境科学", level: "B2", description: "生態系・気候・資源について学ぶ基本語", lessons: 10 },
+  { id: "specialized-academic", title: "大学・研究", level: "B2–C1", description: "研究方法・データ・論文で使う基本語", lessons: 10 },
 ];
 export const allCourses = [...vocabularyCourses, ...idiomCourses, ...specializedCourses];
 export function courseLessonNumbers(course: VocabularyCourse, legacy = false): number[] {

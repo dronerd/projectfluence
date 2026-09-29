@@ -3,15 +3,185 @@
   "title": "Lesson 29",
   "paragraph": "This lesson practices useful adverbs for time and manner.",
   "words": [
-    { "word": "always", "meaning": "every time", "japaneseMeaning": "いつも", "synonyms": "every time, all the time", "antonyms": "never, sometimes", "forms": "always", "example": "I always brush my teeth before bed." },
-    { "word": "usually", "meaning": "on most days or most times", "japaneseMeaning": "ふつう／たいてい", "synonyms": "often, normally", "antonyms": "rarely, never", "forms": "usually", "example": "We usually eat dinner at seven." },
-    { "word": "often", "meaning": "many times", "japaneseMeaning": "よく／しばしば", "synonyms": "many times, usually", "antonyms": "rarely, never", "forms": "often", "example": "I often play tennis on Sundays." },
-    { "word": "sometimes", "meaning": "not always, but at some times", "japaneseMeaning": "時々", "synonyms": "now and then, at times", "antonyms": "always, never", "forms": "sometimes", "example": "She sometimes walks to school." },
-    { "word": "never", "meaning": "not at any time", "japaneseMeaning": "決して〜ない", "synonyms": "not ever, no time", "antonyms": "always, often", "forms": "never", "example": "Never run in the hall." },
-    { "word": "early", "meaning": "before the usual time", "japaneseMeaning": "早く", "synonyms": "before time, soon", "antonyms": "late, slowly", "forms": "early, earlier, earliest", "example": "I got up early today." },
-    { "word": "late", "meaning": "after the usual time", "japaneseMeaning": "遅く", "synonyms": "after time, behind", "antonyms": "early, soon", "forms": "late, later, latest", "example": "The bus arrived late." },
-    { "word": "soon", "meaning": "after a short time", "japaneseMeaning": "すぐに／まもなく", "synonyms": "quickly, shortly", "antonyms": "later, never", "forms": "soon, sooner, soonest", "example": "Please come home soon." },
-    { "word": "slowly", "meaning": "not quickly", "japaneseMeaning": "ゆっくりと", "synonyms": "not fast, gently", "antonyms": "quickly, fast", "forms": "slowly, more slowly, most slowly", "example": "Speak slowly, please." },
-    { "word": "carefully", "meaning": "with attention so that you do not make mistakes or cause harm", "japaneseMeaning": "注意深く", "synonyms": "with care, safely", "antonyms": "carelessly, quickly", "forms": "carefully, more carefully, most carefully", "example": "Read the question carefully." }
+    {
+      "word": "always",
+      "meaning": "every time",
+      "japaneseMeaning": "いつも",
+      "synonyms": "every time, all the time",
+      "antonyms": "never, sometimes",
+      "forms": "always",
+      "example": "I always brush my teeth before bed.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/always.svg",
+        "alt": "七回すべてに実行の印がある頻度の例。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/always.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "sometimes",
+        "never"
+      ]
+    },
+    {
+      "word": "usually",
+      "meaning": "on most days or most times",
+      "japaneseMeaning": "ふつう／たいてい",
+      "synonyms": "often, normally",
+      "antonyms": "rarely, never",
+      "forms": "usually",
+      "example": "We usually eat dinner at seven."
+    },
+    {
+      "word": "often",
+      "meaning": "many times",
+      "japaneseMeaning": "よく／しばしば",
+      "synonyms": "many times, usually",
+      "antonyms": "rarely, never",
+      "forms": "often",
+      "example": "I often play tennis on Sundays."
+    },
+    {
+      "word": "sometimes",
+      "meaning": "not always, but at some times",
+      "japaneseMeaning": "時々",
+      "synonyms": "now and then, at times",
+      "antonyms": "always, never",
+      "forms": "sometimes",
+      "example": "She sometimes walks to school.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/sometimes.svg",
+        "alt": "七回のうち一部だけに実行の印がある頻度の例。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/sometimes.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "always",
+        "never"
+      ]
+    },
+    {
+      "word": "never",
+      "meaning": "not at any time",
+      "japaneseMeaning": "決して〜ない",
+      "synonyms": "not ever, no time",
+      "antonyms": "always, often",
+      "forms": "never",
+      "example": "Never run in the hall.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/never.svg",
+        "alt": "七回のうち実行の印が一度もない頻度の例。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/never.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "always",
+        "sometimes"
+      ]
+    },
+    {
+      "word": "early",
+      "meaning": "before the usual time",
+      "japaneseMeaning": "早く",
+      "synonyms": "before time, soon",
+      "antonyms": "late, slowly",
+      "forms": "early, earlier, earliest",
+      "example": "I got up early today.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/early.svg",
+        "alt": "予定の九時に対して、八時四十五分に着いた例。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/early.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "late",
+        "slowly"
+      ]
+    },
+    {
+      "word": "late",
+      "meaning": "after the usual time",
+      "japaneseMeaning": "遅く",
+      "synonyms": "after time, behind",
+      "antonyms": "early, soon",
+      "forms": "late, later, latest",
+      "example": "The bus arrived late.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/late.svg",
+        "alt": "予定の九時に対して、九時十五分に着いた例。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/late.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "early",
+        "soon"
+      ]
+    },
+    {
+      "word": "soon",
+      "meaning": "after a short time",
+      "japaneseMeaning": "すぐに／まもなく",
+      "synonyms": "quickly, shortly",
+      "antonyms": "later, never",
+      "forms": "soon, sooner, soonest",
+      "example": "Please come home soon."
+    },
+    {
+      "word": "slowly",
+      "meaning": "not quickly",
+      "japaneseMeaning": "ゆっくりと",
+      "synonyms": "not fast, gently",
+      "antonyms": "quickly, fast",
+      "forms": "slowly, more slowly, most slowly",
+      "example": "Speak slowly, please."
+    },
+    {
+      "word": "carefully",
+      "meaning": "with attention so that you do not make mistakes or cause harm",
+      "japaneseMeaning": "注意深く",
+      "synonyms": "with care, safely",
+      "antonyms": "carelessly, quickly",
+      "forms": "carefully, more carefully, most carefully",
+      "example": "Read the question carefully."
+    }
   ]
 }

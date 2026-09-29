@@ -9,7 +9,25 @@
       "synonyms": "arrive, touch down",
       "antonyms": "take off, leave",
       "forms": "land, lands, landing, landed",
-      "example": "The plane will land at six o'clock."
+      "example": "The plane will land at six o'clock.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/land.svg",
+        "alt": "飛行機が空から滑走路に向かって斜めに降りてくる図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/land.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "notify",
+        "regret"
+      ]
     },
     {
       "word": "notify",
@@ -54,7 +72,25 @@
       "synonyms": "copy, repeat",
       "antonyms": "delete, remove",
       "forms": "duplicate, duplicates, duplicating, duplicated",
-      "example": "Please duplicate the file before you edit it."
+      "example": "Please duplicate the file before you edit it.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/duplicate.svg",
+        "alt": "一枚の文書から、同じ内容の文書をもう一枚作る図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/duplicate.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "regret",
+        "wonder"
+      ]
     },
     {
       "word": "post",
@@ -72,7 +108,25 @@
       "synonyms": "turn, spin",
       "antonyms": "stop, stay still",
       "forms": "rotate, rotates, rotating, rotated",
-      "example": "Students rotate roles during the group activity."
+      "example": "Students rotate roles during the group activity.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/rotate.svg",
+        "alt": "中心点を動かさず、三角形を九十度回転させる図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/rotate.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "regret",
+        "post"
+      ]
     },
     {
       "word": "indicate",

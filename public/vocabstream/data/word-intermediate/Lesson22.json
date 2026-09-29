@@ -90,7 +90,25 @@
       "synonyms": "device, machine",
       "antonyms": "tool, furniture",
       "forms": "appliance, appliances",
-      "example": "The store sells kitchen appliances on the second floor."
+      "example": "The store sells kitchen appliances on the second floor.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/appliance.svg",
+        "alt": "家庭で使う洗濯機とトースターが並ぶ図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/appliance.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "disease",
+        "competition"
+      ]
     }
   ]
 }

@@ -10,7 +10,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "butter",
-      "example": "I put butter on bread."
+      "example": "I put butter on bread.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9c8.svg",
+        "alt": "切り分けた黄色いバター。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9c8.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "bread",
+        "soup"
+      ]
     },
     {
       "word": "cereal",
@@ -19,7 +37,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "cereal, cereals",
-      "example": "Cereal is easy to eat in the morning."
+      "example": "Cereal is easy to eat in the morning.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/cereal.svg",
+        "alt": "穀物の箱と、牛乳に浮かぶ薄片の入った朝食用のボウル。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/cereal.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "soup",
+        "salad"
+      ]
     },
     {
       "word": "soup",
@@ -28,7 +64,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "soup, soups",
-      "example": "This soup has carrots in it."
+      "example": "This soup has carrots in it.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f372.svg",
+        "alt": "野菜などの具が入ったスープの器。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f372.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "salad",
+        "cookie"
+      ]
     },
     {
       "word": "pizza",
@@ -103,7 +157,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "salad, salads",
-      "example": "The salad has tomato in it."
+      "example": "The salad has tomato in it.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f957.svg",
+        "alt": "葉野菜やトマトを盛ったサラダ。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f957.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "soup",
+        "bread"
+      ]
     },
     {
       "word": "cookie",

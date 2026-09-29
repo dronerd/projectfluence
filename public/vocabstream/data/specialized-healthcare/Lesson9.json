@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-9",
+  "title": "Lesson 9",
+  "paragraph": "症状や体調を説明する言葉",
+  "words": [
+    {
+      "word": "fever",
+      "meaning": "a body temperature higher than the usual healthy level, often as part of a response to illness",
+      "japaneseMeaning": "発熱",
+      "example": "The nurse asked when the fever had started.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "cough",
+        "fatigue"
+      ]
+    },
+    {
+      "word": "cough",
+      "meaning": "a sudden forceful release of air from the lungs through the mouth",
+      "japaneseMeaning": "せき",
+      "example": "The patient described a cough that interrupted sleep.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "nausea",
+        "fever"
+      ]
+    },
+    {
+      "word": "nausea",
+      "meaning": "the unpleasant feeling that you may vomit",
+      "japaneseMeaning": "吐き気",
+      "example": "She told the clinician that the nausea began after breakfast.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "vomiting",
+        "fatigue"
+      ],
+      "sentencePractice": {
+        "prompt": "The patient feels as though she may be sick, but she has not brought up any stomach contents. The word for the feeling itself is ____.",
+        "distractors": [
+          "vomiting",
+          "fatigue"
+        ],
+        "reviewNote": "The feeling of possibly vomiting is nausea; vomiting names the physical event and fatigue describes tiredness or low energy."
+      }
+    },
+    {
+      "word": "vomiting",
+      "meaning": "bringing the contents of the stomach up and out through the mouth",
+      "japaneseMeaning": "嘔吐",
+      "example": "The nurse asked how often the vomiting had occurred.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "nausea",
+        "cough"
+      ]
+    },
+    {
+      "word": "diarrhoea",
+      "meaning": "passing loose or watery stools more often than is usual for the person",
+      "japaneseMeaning": "下痢",
+      "example": "The patient reported diarrhoea during the consultation.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "constipation",
+        "vomiting"
+      ],
+      "usageNote": "米国英語では diarrhea と綴ります。"
+    },
+    {
+      "word": "constipation",
+      "meaning": "difficulty passing stools, often with hard stools or fewer bowel movements than usual",
+      "japaneseMeaning": "便秘",
+      "example": "The clinician asked about the duration of the constipation.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "diarrhoea",
+        "nausea"
+      ]
+    },
+    {
+      "word": "fatigue",
+      "meaning": "a feeling of unusual tiredness or lack of energy",
+      "japaneseMeaning": "疲労・強いだるさ",
+      "example": "The patient said that fatigue made daily tasks harder.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "fever",
+        "cough"
+      ]
+    },
+    {
+      "word": "shortness of breath",
+      "meaning": "a feeling that breathing is difficult or that you cannot get enough air",
+      "japaneseMeaning": "息切れ・呼吸困難感",
+      "example": "He described shortness of breath during the assessment.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "nausea",
+        "fatigue"
+      ]
+    },
+    {
+      "word": "rash",
+      "meaning": "an area of skin that becomes irritated or changes in appearance, often with spots or redness",
+      "japaneseMeaning": "発疹・皮疹",
+      "example": "The nurse recorded where the rash first appeared.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "bruise",
+        "fracture"
+      ]
+    },
+    {
+      "word": "bruise",
+      "meaning": "a discoloured mark caused by bleeding under unbroken skin after small blood vessels are damaged",
+      "japaneseMeaning": "あざ・皮下出血の跡",
+      "example": "The clinician examined the bruise on her upper arm.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "rash",
+        "fracture"
+      ],
+      "sentencePractice": {
+        "prompt": "A knock damages small blood vessels beneath skin that remains unbroken, leaving a dark mark. The term for this mark is ____.",
+        "distractors": [
+          "rash",
+          "fracture"
+        ],
+        "reviewNote": "The described mark from bleeding beneath unbroken skin after a knock is a bruise; rash describes a skin eruption or irritation and fracture names a break in bone."
+      }
+    }
+  ]
+}

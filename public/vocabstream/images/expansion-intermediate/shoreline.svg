@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>陸と海が接する曲がった境目だけを、赤い線で強調している。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<path d="M25 29h159q-26 27 3 57t-4 61 13 62H25Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M184 29h151v180H196q-46-1-13-62t4-61-3-57Z" fill="#dcecef" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M184 29q-26 27 3 57t-4 61 13 62" fill="none" stroke="#d9887b" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><text x="81" y="125" text-anchor="middle" font-size="24" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">陸</text><text x="274" y="125" text-anchor="middle" font-size="24" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">海</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>同じ動作の周りを矢印が巡り、何度も行うことを示す図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="126" y="92" width="110" height="40" rx="5" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><text x="181.0" y="118" text-anchor="middle" font-size="15" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">同じ動作</text><path d="M245 79q69 39 0 86M111 165q-65-38 0-86" fill="none" stroke="#b7c6c6" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><line x1="245" y1="165" x2="223" y2="176" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="223,176 234.18033988749895,176.0 229.70820393249934,167.05572809000085" fill="#40565b"/><line x1="111" y1="79" x2="134" y2="67" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="134,67 122.82132150487035,67.19273583612294 127.44698157182054,76.05858429777747" fill="#40565b"/><text x="180" y="220" text-anchor="middle" font-size="18" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">もう一度・もう一度</text>
+</svg>

@@ -63,7 +63,25 @@
       "synonyms": "close, cover",
       "antonyms": "open, uncover",
       "forms": "seal, seals, sealing, sealed",
-      "example": "Seal the bag before you put it in the fridge."
+      "example": "Seal the bag before you put it in the fridge.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/seal.svg",
+        "alt": "開いている瓶にふたを下ろし、すき間を閉じて中身を漏れなくする前後の図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/seal.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "analyze",
+        "associate"
+      ]
     },
     {
       "word": "associate",

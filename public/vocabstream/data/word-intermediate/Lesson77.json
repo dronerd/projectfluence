@@ -18,7 +18,25 @@
       "synonyms": "hallway, passage",
       "antonyms": "room, open space",
       "forms": "corridor, corridors",
-      "example": "Students waited quietly in the corridor."
+      "example": "Students waited quietly in the corridor.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/corridor.svg",
+        "alt": "両側に部屋のドアが並び、奥へ続く建物内の長い廊下。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/corridor.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "talent",
+        "doubt"
+      ]
     },
     {
       "word": "habit",

@@ -18,8 +18,9 @@ export function validWordImage(value: unknown): WordImage | undefined {
   const image=value as Partial<WordImage>;
   if (!bounded(image.src,300) || !/^\/vocabstream\/images\/[A-Za-z0-9_/-]+\.(?:svg|png|webp|jpe?g)$/.test(image.src)
     || image.src.includes("..") || !bounded(image.alt,500) || !bounded(image.source,200) || !bounded(image.sourceUrl,1000)
-    || !bounded(image.creator,200) || image.license!=="CC0-1.0" || !Number.isInteger(image.width) || !Number.isInteger(image.height)
+    || !bounded(image.creator,200) || !["CC0-1.0","CC-BY-4.0"].includes(image.license??"") || !Number.isInteger(image.width) || !Number.isInteger(image.height)
     || (image.width??0)<1 || (image.width??0)>4096 || (image.height??0)<1 || (image.height??0)>4096) return undefined;
+  if (image.license==="CC-BY-4.0" && (!bounded(image.credit,300) || image.licenseUrl!=="https://creativecommons.org/licenses/by/4.0/")) return undefined;
   try {
     const url=new URL(image.sourceUrl,"https://local.invalid");
     if (url.username || url.password || (url.origin==="https://local.invalid" ? !image.sourceUrl.startsWith("/vocabstream/images/") : url.protocol!=="https:")) return undefined;
@@ -73,9 +74,9 @@ export function buildWordQuestions(word:LessonWord,catalog:readonly LessonWord[]
   if(!bounded(word.word,200))return [];
   const result:LearningQuestion[]=[];
   const image=validWordImage(word.image);
-  const useImage=(word.definitionType==="image"||word.definitionType==="image+text") && image && !image.alt.toLowerCase().includes(word.word.toLowerCase());
+  const useImage=word.imageRole!=="supporting" && (word.definitionType==="image"||word.definitionType==="image+text") && image && !image.alt.toLowerCase().includes(word.word.toLowerCase());
   const definition=word.meaning||word.japaneseMeaning||image?.alt||"";
-  const common={word:word.word,correctAnswer:word.word,definition,definitionType:word.definitionType,example:word.example,explanation:word.explanation,japaneseMeaning:word.japaneseMeaning,synonyms:word.synonyms,antonyms:word.antonyms,forms:word.forms,usageNote:word.usageNote,expressionType:word.expressionType,sourceCategory:source.category,sourceLessonId:source.lessonId,sourceLessonNumber:source.lessonNumber??null};
+  const common={word:word.word,correctAnswer:word.word,definition,definitionType:word.definitionType,imageRole:word.imageRole,...(image?{image}:{}),example:word.example,explanation:word.explanation,japaneseMeaning:word.japaneseMeaning,synonyms:word.synonyms,antonyms:word.antonyms,forms:word.forms,usageNote:word.usageNote,expressionType:word.expressionType,sourceCategory:source.category,sourceLessonId:source.lessonId,sourceLessonNumber:source.lessonNumber??null};
   const choices=meaningChoices(word,catalog);
   if(definition && choices.length>=2) result.push({...common,id:`meaning-${idSuffix}`,questionType:"meaning",prompt:useImage?"画像に合う英語を選んでください。":definition,promptMode:useImage?"image":"text",...(useImage?{image}:{}),choices,answerIndex:choices.indexOf(word.word)});
   const sentence=sentenceChoices(word);

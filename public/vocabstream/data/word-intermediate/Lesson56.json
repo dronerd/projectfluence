@@ -18,7 +18,25 @@
       "synonyms": "due date, cutoff",
       "antonyms": "start, free time",
       "forms": "deadline, deadlines",
-      "example": "Finish your project before the deadline."
+      "example": "Finish your project before the deadline.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/deadline.svg",
+        "alt": "時間の線上の金曜十七時に赤い境界があり、その時刻までに提出することを示す。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/deadline.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "festival",
+        "consent"
+      ]
     },
     {
       "word": "festival",
@@ -81,7 +99,25 @@
       "synonyms": "crossing, junction",
       "antonyms": "straight road, separation",
       "forms": "intersection, intersections",
-      "example": "Turn left at the next intersection."
+      "example": "Turn left at the next intersection.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/intersection.svg",
+        "alt": "横と縦の二本の道路が交わる場所を、丸で囲んだ図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/intersection.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "consent",
+        "file"
+      ]
     },
     {
       "word": "storage",
@@ -90,7 +126,25 @@
       "synonyms": "keeping, warehouse",
       "antonyms": "use, disposal",
       "forms": "storage",
-      "example": "The school needs more storage for sports equipment."
+      "example": "The school needs more storage for sports equipment.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/storage.svg",
+        "alt": "後で使う箱が、棚の段ごとに整理して置かれている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/storage.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "festival",
+        "linguistic"
+      ]
     }
   ]
 }

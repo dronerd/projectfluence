@@ -63,7 +63,25 @@
       "synonyms": "put up, hold up",
       "antonyms": "remove, lower",
       "forms": "hang, hangs, hanging, hung",
-      "example": "The staff will hang the posters before the event."
+      "example": "The staff will hang the posters before the event.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/hang.svg",
+        "alt": "横棒のハンガーに布が掛かり、上から支えられてぶら下がっている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/hang.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "consider",
+        "conclude"
+      ]
     },
     {
       "word": "hide",
@@ -81,7 +99,25 @@
       "synonyms": "reduce, drop",
       "antonyms": "raise, increase",
       "forms": "lower, lowers, lowering, lowered",
-      "example": "Please lower your voice in the library."
+      "example": "Please lower your voice in the library.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/lower.svg",
+        "alt": "つり下げられた箱が、高い位置から低い位置へ下がる前後の図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/lower.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "conclude",
+        "volunteer"
+      ]
     },
     {
       "word": "volunteer",

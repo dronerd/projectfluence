@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-academic-lesson-9",
+  "title": "Lesson 9",
+  "paragraph": "研究データの整理と計画",
+  "words": [
+    {
+      "word": "dataset",
+      "meaning": "a collection of related data organized for analysis or reuse",
+      "japaneseMeaning": "データセット",
+      "example": "The dataset contains the measurements used in the report.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "codebook",
+        "manuscript"
+      ]
+    },
+    {
+      "word": "codebook",
+      "meaning": "a guide explaining the variables, labels, and coding rules in a dataset",
+      "japaneseMeaning": "コードブック・データ項目の説明書",
+      "example": "The codebook explains what each response number means.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "dataset",
+        "transcript"
+      ]
+    },
+    {
+      "word": "transcript",
+      "meaning": "a written record of spoken language from an interview or recording",
+      "japaneseMeaning": "逐語録・音声の文字起こし",
+      "example": "The researcher checked the transcript against the recording.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "questionnaire",
+        "codebook"
+      ],
+      "sentencePractice": {
+        "prompt": "The researcher turns an audio interview into a written record of what was said. The written record is a ____.",
+        "distractors": [
+          "questionnaire",
+          "codebook"
+        ],
+        "reviewNote": "Recorded speech written out is a transcript; a questionnaire provides questions and a codebook explains data labels or rules."
+      }
+    },
+    {
+      "word": "coding",
+      "meaning": "assigning labels to parts of qualitative data to organize and interpret them",
+      "japaneseMeaning": "質的データへのコード付与",
+      "example": "Coding helped the team organize the interview responses.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "random sampling",
+        "paraphrase"
+      ],
+      "usageNote": "ここでは質的研究でのラベル付けです。プログラムを書くという意味ではありません。"
+    },
+    {
+      "word": "theme",
+      "meaning": "a recurring pattern of meaning identified across qualitative data",
+      "japaneseMeaning": "質的分析で見いだされるテーマ",
+      "example": "Trust was a theme across several participants' accounts.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "hypothesis",
+        "outlier"
+      ]
+    },
+    {
+      "word": "missing data",
+      "meaning": "values that were expected to be collected but are absent from a dataset",
+      "japaneseMeaning": "欠測データ",
+      "example": "The researchers described how they handled missing data.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "outlier",
+        "citation"
+      ]
+    },
+    {
+      "word": "response rate",
+      "meaning": "the proportion of eligible people invited to a study or survey who provide a response",
+      "japaneseMeaning": "回答率",
+      "example": "The report gives the response rate as well as the number invited.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "effect size",
+        "standard deviation"
+      ],
+      "usageNote": "分母に含める対象や「回答」とする基準は調査ごとに明記する必要があります。",
+      "sentencePractice": {
+        "prompt": "Eighty of the one hundred eligible people invited return the survey. The measure comparing completed responses with invited eligible people is the ____.",
+        "distractors": [
+          "effect size",
+          "standard deviation"
+        ],
+        "reviewNote": "Responses divided by eligible invitees gives the stated response rate; effect size describes magnitude and standard deviation describes numerical spread."
+      }
+    },
+    {
+      "word": "confounding variable",
+      "meaning": "a factor related to both the suspected cause and the outcome that can distort their apparent relationship",
+      "japaneseMeaning": "交絡変数",
+      "example": "Previous experience was considered a possible confounding variable.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "dependent variable",
+        "control group"
+      ]
+    },
+    {
+      "word": "preregistration",
+      "meaning": "recording a study's planned questions, methods, or analyses before the relevant data are collected or examined",
+      "japaneseMeaning": "事前登録",
+      "example": "The preregistration describes the planned outcome measures.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "peer review",
+        "replication"
+      ]
+    },
+    {
+      "word": "data management plan",
+      "meaning": "a document describing how research data will be collected, stored, protected, and shared or retained",
+      "japaneseMeaning": "データ管理計画",
+      "example": "The data management plan explains who can access the recordings.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "reference list",
+        "questionnaire"
+      ]
+    }
+  ]
+}

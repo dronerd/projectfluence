@@ -18,7 +18,25 @@
       "synonyms": "block, obstacle",
       "antonyms": "opening, help",
       "forms": "barrier, barriers",
-      "example": "Language can be a barrier when people travel."
+      "example": "Language can be a barrier when people travel.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/barrier.svg",
+        "alt": "道を横切る棒が進む道をふさぎ、その手前で矢印が止まっている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/barrier.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "headquarters",
+        "fee"
+      ]
     },
     {
       "word": "behavior",

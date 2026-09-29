@@ -36,7 +36,25 @@
       "synonyms": "choice, possibility",
       "antonyms": "requirement, necessity",
       "forms": "option, options",
-      "example": "Taking the bus is the cheapest option today."
+      "example": "Taking the bus is the cheapest option today.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/option.svg",
+        "alt": "出発点から二つの道に分かれ、どちらかを選べる図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/option.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "issue",
+        "qualification"
+      ]
     },
     {
       "word": "issue",
@@ -90,7 +108,25 @@
       "synonyms": "repayment, money back",
       "antonyms": "payment, charge",
       "forms": "refund, refunds",
-      "example": "I asked for a refund because the camera did not work."
+      "example": "I asked for a refund because the camera did not work.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/refund.svg",
+        "alt": "店に商品を返し、店から代金が戻ってくる様子。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/refund.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "survey",
+        "announcement"
+      ]
     }
   ]
 }

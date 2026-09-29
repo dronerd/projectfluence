@@ -61,7 +61,7 @@ test("every advertised lesson exists and every new item has a usable reviewed ch
     assert.equal(new Set(currentWords.map(word => normalizeWord(word.word))).size, currentWords.length, `${course.id}: duplicated current curriculum headword`);
     for (const word of currentWords) assert.equal(meaningChoices(word, currentWords).length, 3, `${course.id}/${word.word}: choices must work in review as well as lessons`);
   }
-  assert.equal(newItems, 880);
+  assert.equal(newItems, 1000);
 });
 
 test("the complete corpus produces valid options and never silently drops reviewed practice or illustrations", async () => {
@@ -79,11 +79,17 @@ test("the complete corpus produces valid options and never silently drops review
         const own = questions.filter(question => question.word === word.word);
         if (word.meaningDistractors) assert.ok(own.some(question => question.questionType === "meaning"), `${course.id}/${number}/${word.word}: explicit meaning pair rejected`);
         if (word.sentencePractice) assert.ok(own.some(question => question.questionType === "quiz"), `${course.id}/${number}/${word.word}: curated gap rejected`);
-        if (word.image) { assert.ok(own.some(question => question.promptMode === "image"), `${course.id}/${number}/${word.word}: image rejected`); images++; }
+        if (word.image) {
+          const meaning = own.find(question => question.questionType === "meaning");
+          assert.equal(meaning?.image?.src, word.image.src, `${course.id}/${number}/${word.word}: review image lost`);
+          assert.equal(meaning?.promptMode, word.imageRole === "supporting" ? "text" : "image");
+          for (const question of own) assert.equal(question.image?.src, word.image.src, "Sentence feedback must retain the study image.");
+          images++;
+        }
         inspected++;
       }
     }
   }
-  assert.equal(inspected, 6879);
-  assert.equal(images, 70);
+  assert.equal(inspected, 6999);
+  assert.ok(images > 370, "Expansion must add more than 300 illustrated entries to the previous 70.");
 });

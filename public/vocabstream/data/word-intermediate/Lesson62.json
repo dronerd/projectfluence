@@ -63,7 +63,25 @@
       "synonyms": "amount, total",
       "antonyms": "shortage, lack",
       "forms": "quantity, quantities",
-      "example": "The store ordered a large quantity of paper."
+      "example": "The store ordered a large quantity of paper.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/quantity.svg",
+        "alt": "七個の球をまとめて数え、七個という数量を示している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/quantity.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "strategy",
+        "attention"
+      ]
     },
     {
       "word": "attention",
@@ -81,7 +99,25 @@
       "synonyms": "group, bunch",
       "antonyms": "single item, separation",
       "forms": "cluster, clusters",
-      "example": "A cluster of small shops stands near the station."
+      "example": "A cluster of small shops stands near the station.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/cluster.svg",
+        "alt": "近い位置に集まった七個の球を囲み、離れた二個の球と区別している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/cluster.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "boundary",
+        "catalog"
+      ]
     },
     {
       "word": "catalog",

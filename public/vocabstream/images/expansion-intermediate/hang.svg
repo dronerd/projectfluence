@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>横棒のハンガーに布が掛かり、上から支えられてぶら下がっている。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<line x1="61" y1="49" x2="297" y2="49" stroke="#b7c6c6" stroke-width="7" stroke-linecap="round"/><path d="M180 51q-15 9-1 25l-68 34h137l-68-34" fill="none" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M128 109h105v92H128Z" fill="#77aebc" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="180" y="228" text-anchor="middle" font-size="16" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">上から支えられている</text>
+</svg>

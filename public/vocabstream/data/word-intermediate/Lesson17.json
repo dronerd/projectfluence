@@ -90,7 +90,25 @@
       "synonyms": "hold, include",
       "antonyms": "release, exclude",
       "forms": "contain, contains, containing, contained",
-      "example": "This box can contain twenty small books."
+      "example": "This box can contain twenty small books.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/contain.svg",
+        "alt": "透明な断面の箱の中に、球と三角の部品が入っている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/contain.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "argue",
+        "complain"
+      ]
     }
   ]
 }

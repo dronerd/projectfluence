@@ -20,7 +20,8 @@
     "vidmatch:catalog": "node --experimental-strip-types scripts/vidmatch-catalog.mjs",
     "vocabstream:audit": "node --experimental-strip-types scripts/audit-vocabstream.mjs",
     "vocabstream:ambiguity": "node --experimental-strip-types scripts/audit-vocabstream-ambiguity.mjs",
-    "prebuild": "npm run vocabstream:audit && npm run vocabstream:ambiguity"
+    "prebuild": "npm run vocabstream:audit && npm run vocabstream:images && npm run vocabstream:ambiguity",
+    "vocabstream:images": "node --experimental-strip-types scripts/audit-vocabstream-images.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.1",

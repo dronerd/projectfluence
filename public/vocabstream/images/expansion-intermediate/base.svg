@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>建物の一番下で全体を支える土台が、別の色で示されている。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="101" y="176" width="160" height="32" rx="5" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><rect x="122" y="75" width="120" height="99" rx="5" fill="#dcecef" stroke="#40565b" stroke-width="2.5"/><path d="M111 73 182 27 253 73" fill="#d9887b" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><line x1="62" y1="190" x2="93" y2="190" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="93,190 83.0,185.0 83.0,195.0" fill="#40565b"/><text x="52" y="225" text-anchor="middle" font-size="15" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">下の支え</text>
+</svg>

@@ -9,7 +9,25 @@
       "synonyms": "collect, build up",
       "antonyms": "reduce, spend",
       "forms": "accumulate, accumulates, accumulating, accumulated",
-      "example": "Dust accumulated on the old shelves."
+      "example": "Dust accumulated on the old shelves.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/accumulate.svg",
+        "alt": "日がたつにつれ、瓶の中の硬貨が少しずつ積み重なる図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/accumulate.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "disappear",
+        "gesture"
+      ]
     },
     {
       "word": "focus",

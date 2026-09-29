@@ -3,15 +3,169 @@
   "title": "Lesson 37",
   "paragraph": "This lesson practices useful adverbs for place and order.",
   "words": [
-    { "word": "leftward", "meaning": "toward the left", "japaneseMeaning": "左へ", "synonyms": "to the left, left", "antonyms": "rightward, right", "forms": "leftward", "example": "Move leftward to make space.", "usageNote": "方向を表す少し発展的な語です。日常会話では to the left もよく使います。" },
-    { "word": "rightward", "meaning": "toward the right", "japaneseMeaning": "右へ", "synonyms": "to the right, right", "antonyms": "leftward, left", "forms": "rightward", "example": "Slide the box rightward.", "usageNote": "方向を表す少し発展的な語です。日常会話では to the right もよく使います。" },
-    { "word": "upward", "meaning": "toward a higher place", "japaneseMeaning": "上へ", "synonyms": "up, higher", "antonyms": "downward, down", "forms": "upward", "example": "The balloon moves upward." },
-    { "word": "downward", "meaning": "toward a lower place", "japaneseMeaning": "下へ", "synonyms": "down, lower", "antonyms": "upward, up", "forms": "downward", "example": "The ball rolls downward." },
-    { "word": "upstairs", "meaning": "on or to a higher floor", "japaneseMeaning": "上の階に／上の階で", "synonyms": "above, up", "antonyms": "downstairs, below", "forms": "upstairs", "example": "My room is upstairs." },
-    { "word": "downstairs", "meaning": "on or to a lower floor", "japaneseMeaning": "下の階に／下の階で", "synonyms": "below, down", "antonyms": "upstairs, above", "forms": "downstairs", "example": "Breakfast is downstairs." },
-    { "word": "first", "meaning": "before all others", "japaneseMeaning": "最初に", "synonyms": "before, at the start", "antonyms": "last, finally", "forms": "first", "example": "Wash your hands first." },
-    { "word": "next", "meaning": "after this one", "japaneseMeaning": "次に", "synonyms": "then, after", "antonyms": "before, last", "forms": "next", "example": "Next, open your book." },
-    { "word": "finally", "meaning": "at the end", "japaneseMeaning": "最後に／ついに", "synonyms": "last, at the end", "antonyms": "first, before", "forms": "finally", "example": "Finally, write your name." },
-    { "word": "again", "meaning": "one more time", "japaneseMeaning": "再び／もう一度", "synonyms": "once more, another time", "antonyms": "once, never", "forms": "again", "example": "Please say that again." }
+    {
+      "word": "leftward",
+      "meaning": "toward the left",
+      "japaneseMeaning": "左へ",
+      "synonyms": "to the left, left",
+      "antonyms": "rightward, right",
+      "forms": "leftward",
+      "example": "Move leftward to make space.",
+      "usageNote": "方向を表す少し発展的な語です。日常会話では to the left もよく使います。",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/leftward.svg",
+        "alt": "中央の点から左へ進む矢印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/leftward.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "rightward",
+        "upward"
+      ]
+    },
+    {
+      "word": "rightward",
+      "meaning": "toward the right",
+      "japaneseMeaning": "右へ",
+      "synonyms": "to the right, right",
+      "antonyms": "leftward, left",
+      "forms": "rightward",
+      "example": "Slide the box rightward.",
+      "usageNote": "方向を表す少し発展的な語です。日常会話では to the right もよく使います。",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/rightward.svg",
+        "alt": "中央の点から右へ進む矢印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/rightward.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "leftward",
+        "downward"
+      ]
+    },
+    {
+      "word": "upward",
+      "meaning": "toward a higher place",
+      "japaneseMeaning": "上へ",
+      "synonyms": "up, higher",
+      "antonyms": "downward, down",
+      "forms": "upward",
+      "example": "The balloon moves upward."
+    },
+    {
+      "word": "downward",
+      "meaning": "toward a lower place",
+      "japaneseMeaning": "下へ",
+      "synonyms": "down, lower",
+      "antonyms": "upward, up",
+      "forms": "downward",
+      "example": "The ball rolls downward."
+    },
+    {
+      "word": "upstairs",
+      "meaning": "on or to a higher floor",
+      "japaneseMeaning": "上の階に／上の階で",
+      "synonyms": "above, up",
+      "antonyms": "downstairs, below",
+      "forms": "upstairs",
+      "example": "My room is upstairs.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/upstairs.svg",
+        "alt": "階段を上の階へ進む向きの矢印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/upstairs.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "downstairs",
+        "outside"
+      ]
+    },
+    {
+      "word": "downstairs",
+      "meaning": "on or to a lower floor",
+      "japaneseMeaning": "下の階に／下の階で",
+      "synonyms": "below, down",
+      "antonyms": "upstairs, above",
+      "forms": "downstairs",
+      "example": "Breakfast is downstairs.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/downstairs.svg",
+        "alt": "階段を下の階へ進む向きの矢印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/downstairs.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "upstairs",
+        "inside"
+      ]
+    },
+    {
+      "word": "first",
+      "meaning": "before all others",
+      "japaneseMeaning": "最初に",
+      "synonyms": "before, at the start",
+      "antonyms": "last, finally",
+      "forms": "first",
+      "example": "Wash your hands first."
+    },
+    {
+      "word": "next",
+      "meaning": "after this one",
+      "japaneseMeaning": "次に",
+      "synonyms": "then, after",
+      "antonyms": "before, last",
+      "forms": "next",
+      "example": "Next, open your book."
+    },
+    {
+      "word": "finally",
+      "meaning": "at the end",
+      "japaneseMeaning": "最後に／ついに",
+      "synonyms": "last, at the end",
+      "antonyms": "first, before",
+      "forms": "finally",
+      "example": "Finally, write your name."
+    },
+    {
+      "word": "again",
+      "meaning": "one more time",
+      "japaneseMeaning": "再び／もう一度",
+      "synonyms": "once more, another time",
+      "antonyms": "once, never",
+      "forms": "again",
+      "example": "Please say that again."
+    }
   ]
 }

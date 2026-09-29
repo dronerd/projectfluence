@@ -3,15 +3,167 @@
   "title": "Lesson 18",
   "paragraph": "Determiners for pointing to things and talking about amounts.",
   "words": [
-    { "word": "this", "meaning": "used for one thing near you", "japaneseMeaning": "これ、この", "synonyms": "the near one", "antonyms": "that", "forms": "this", "example": "This book is new." },
-    { "word": "that", "meaning": "used for one thing not near you", "japaneseMeaning": "あれ、あの", "synonyms": "the far one", "antonyms": "this", "forms": "that", "example": "That bag is mine." },
-    { "word": "these", "meaning": "used for two or more things near you", "japaneseMeaning": "これら、この", "synonyms": "the near ones", "antonyms": "those", "forms": "these", "example": "These apples are red." },
-    { "word": "those", "meaning": "used for two or more things not near you", "japaneseMeaning": "あれら、あの", "synonyms": "the far ones", "antonyms": "these", "forms": "those", "example": "Those shoes are clean." },
-    { "word": "many", "meaning": "a large number of things or people", "japaneseMeaning": "多くの", "synonyms": "a lot of", "antonyms": "few", "forms": "many", "example": "Many students like music." },
-    { "word": "much", "meaning": "a large amount of something", "japaneseMeaning": "多くの", "synonyms": "a lot of", "antonyms": "little", "forms": "much", "example": "I do not have much time." },
-    { "word": "some", "meaning": "a small number or amount", "japaneseMeaning": "いくつかの、少しの", "synonyms": "a few, a little", "antonyms": "", "forms": "some", "example": "Some children are outside." },
-    { "word": "any", "meaning": "one or more, often in questions or negatives", "japaneseMeaning": "いくつかの、どれでも", "synonyms": "some", "antonyms": "", "forms": "any", "example": "Do you have any water?" },
-    { "word": "all", "meaning": "the whole number or amount", "japaneseMeaning": "すべての", "synonyms": "every, whole", "antonyms": "", "forms": "all", "example": "All students need a pencil." },
-    { "word": "every", "meaning": "each one in a group", "japaneseMeaning": "すべての、毎〜", "synonyms": "each", "antonyms": "no", "forms": "every", "example": "Every desk has a book." }
+    {
+      "word": "this",
+      "meaning": "used for one thing near you",
+      "japaneseMeaning": "これ、この",
+      "synonyms": "the near one",
+      "antonyms": "that",
+      "forms": "this",
+      "example": "This book is new.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/this.svg",
+        "alt": "話し手の近くにある一つの物を指す図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/this.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "that",
+        "these"
+      ]
+    },
+    {
+      "word": "that",
+      "meaning": "used for one thing not near you",
+      "japaneseMeaning": "あれ、あの",
+      "synonyms": "the far one",
+      "antonyms": "this",
+      "forms": "that",
+      "example": "That bag is mine.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/that.svg",
+        "alt": "話し手から遠い一つの物を指す図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/that.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "this",
+        "those"
+      ]
+    },
+    {
+      "word": "these",
+      "meaning": "used for two or more things near you",
+      "japaneseMeaning": "これら、この",
+      "synonyms": "the near ones",
+      "antonyms": "those",
+      "forms": "these",
+      "example": "These apples are red.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/these.svg",
+        "alt": "話し手の近くにある複数の物を指す図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/these.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "those",
+        "this"
+      ]
+    },
+    {
+      "word": "those",
+      "meaning": "used for two or more things not near you",
+      "japaneseMeaning": "あれら、あの",
+      "synonyms": "the far ones",
+      "antonyms": "these",
+      "forms": "those",
+      "example": "Those shoes are clean.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/those.svg",
+        "alt": "話し手から遠い複数の物を指す図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/those.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "these",
+        "that"
+      ]
+    },
+    {
+      "word": "many",
+      "meaning": "a large number of things or people",
+      "japaneseMeaning": "多くの",
+      "synonyms": "a lot of",
+      "antonyms": "few",
+      "forms": "many",
+      "example": "Many students like music."
+    },
+    {
+      "word": "much",
+      "meaning": "a large amount of something",
+      "japaneseMeaning": "多くの",
+      "synonyms": "a lot of",
+      "antonyms": "little",
+      "forms": "much",
+      "example": "I do not have much time."
+    },
+    {
+      "word": "some",
+      "meaning": "a small number or amount",
+      "japaneseMeaning": "いくつかの、少しの",
+      "synonyms": "a few, a little",
+      "antonyms": "",
+      "forms": "some",
+      "example": "Some children are outside."
+    },
+    {
+      "word": "any",
+      "meaning": "one or more, often in questions or negatives",
+      "japaneseMeaning": "いくつかの、どれでも",
+      "synonyms": "some",
+      "antonyms": "",
+      "forms": "any",
+      "example": "Do you have any water?"
+    },
+    {
+      "word": "all",
+      "meaning": "the whole number or amount",
+      "japaneseMeaning": "すべての",
+      "synonyms": "every, whole",
+      "antonyms": "",
+      "forms": "all",
+      "example": "All students need a pencil."
+    },
+    {
+      "word": "every",
+      "meaning": "each one in a group",
+      "japaneseMeaning": "すべての、毎〜",
+      "synonyms": "each",
+      "antonyms": "no",
+      "forms": "every",
+      "example": "Every desk has a book."
+    }
   ]
 }

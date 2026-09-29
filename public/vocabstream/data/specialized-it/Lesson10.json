@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-it-lesson-10",
+  "title": "Lesson 10",
+  "paragraph": "使いやすい画面と利用者支援",
+  "words": [
+    {
+      "word": "user interface",
+      "meaning": "the controls and displays through which a person interacts with a system",
+      "japaneseMeaning": "ユーザーインターフェース",
+      "example": "The user interface includes a search box and a list of results.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "database",
+        "source code"
+      ]
+    },
+    {
+      "word": "accessibility",
+      "meaning": "the ability of people with different needs and disabilities to use a digital product",
+      "japaneseMeaning": "アクセシビリティ",
+      "example": "The team improved accessibility by adding keyboard controls.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "scalability",
+        "encryption"
+      ]
+    },
+    {
+      "word": "usability",
+      "meaning": "how effectively and easily intended users can complete tasks with a product",
+      "japaneseMeaning": "使いやすさ・ユーザビリティ",
+      "example": "The usability test showed that people struggled to find the save button.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "compatibility",
+        "throughput"
+      ]
+    },
+    {
+      "word": "navigation",
+      "meaning": "the ways users move between pages, screens, or sections of a digital product",
+      "japaneseMeaning": "画面間の移動・ナビゲーション",
+      "example": "Clear navigation helps users return to the main menu.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "authentication",
+        "synchronization"
+      ]
+    },
+    {
+      "word": "search filter",
+      "meaning": "an option that limits search results to items meeting a chosen condition",
+      "japaneseMeaning": "検索フィルター",
+      "example": "Use the search filter to show only files created this month.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "keyboard shortcut",
+        "tooltip"
+      ]
+    },
+    {
+      "word": "keyboard shortcut",
+      "meaning": "a key or combination of keys used to carry out a command",
+      "japaneseMeaning": "キーボードショートカット",
+      "example": "The keyboard shortcut saves the file without opening a menu.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "search filter",
+        "notification"
+      ]
+    },
+    {
+      "word": "tooltip",
+      "meaning": "a short help message shown beside a control when a user points to or focuses on it",
+      "japaneseMeaning": "ツールチップ・短い補足表示",
+      "example": "A tooltip explains what the unfamiliar button does.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "notification",
+        "support ticket"
+      ],
+      "sentencePractice": {
+        "prompt": "When the pointer pauses over a button, a small message appears beside it to explain the button's purpose. This contextual help is a ____.",
+        "distractors": [
+          "notification",
+          "support ticket"
+        ],
+        "reviewNote": "Help triggered beside a pointed-to control is a tooltip; an event notification and a tracked support request do not name this interface feature."
+      }
+    },
+    {
+      "word": "responsive design",
+      "meaning": "an approach in which a page layout adapts to different screen sizes",
+      "japaneseMeaning": "レスポンシブデザイン",
+      "example": "Responsive design keeps the form usable on a narrow phone screen.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "encryption",
+        "synchronization"
+      ],
+      "sentencePractice": {
+        "prompt": "The page rearranges its layout to fit a phone, tablet, or wide desktop screen. This approach is called ____.",
+        "distractors": [
+          "encryption",
+          "synchronization"
+        ],
+        "reviewNote": "Adapting layout to screen size defines responsive design; encoding information and keeping data copies consistent are different processes."
+      }
+    },
+    {
+      "word": "troubleshooting",
+      "meaning": "the process of finding the cause of a technical problem and working toward a solution",
+      "japaneseMeaning": "トラブルシューティング・問題の原因調査と解決",
+      "example": "Troubleshooting began with checking the network connection.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "deployment",
+        "encryption"
+      ]
+    },
+    {
+      "word": "support ticket",
+      "meaning": "a tracked request for technical help that records an issue and its progress",
+      "japaneseMeaning": "サポートへの問い合わせ記録・チケット",
+      "example": "The support ticket includes a description of the failed upload.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "profile",
+        "cookie"
+      ]
+    }
+  ]
+}

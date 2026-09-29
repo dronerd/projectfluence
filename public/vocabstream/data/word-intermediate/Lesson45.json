@@ -45,7 +45,25 @@
       "synonyms": "put in, include",
       "antonyms": "remove, take out",
       "forms": "insert, inserts, inserting, inserted",
-      "example": "Insert your student card before printing the file."
+      "example": "Insert your student card before printing the file.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/insert.svg",
+        "alt": "小さなカードを、機械の細い差し込み口へ入れる図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/insert.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "report",
+        "graduate"
+      ]
     },
     {
       "word": "fight",

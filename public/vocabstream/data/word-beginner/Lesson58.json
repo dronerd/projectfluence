@@ -3,15 +3,185 @@
   "title": "Lesson 58",
   "paragraph": "This lesson practices useful nouns for town and public places.",
   "words": [
-    { "word": "corner", "meaning": "the place where two roads or walls meet", "japaneseMeaning": "角", "synonyms": "turn, edge", "antonyms": "center", "forms": "corner, corners", "example": "The bakery is on the corner." },
-    { "word": "crosswalk", "meaning": "a marked place where people cross a road", "japaneseMeaning": "横断歩道", "synonyms": "pedestrian crossing", "antonyms": "", "forms": "crosswalk, crosswalks", "example": "Use the crosswalk to cross the street." },
-    { "word": "sidewalk", "meaning": "a path beside a road for people to walk on", "japaneseMeaning": "歩道", "synonyms": "footpath", "antonyms": "", "forms": "sidewalk, sidewalks", "example": "Walk on the sidewalk, not the road." },
-    { "word": "overpass", "meaning": "a road or path over another road", "japaneseMeaning": "陸橋／高架橋", "synonyms": "bridge, crossing", "antonyms": "", "forms": "overpass, overpasses", "example": "Walk across the overpass." },
-    { "word": "tunnel", "meaning": "a road or path under the ground", "japaneseMeaning": "トンネル", "synonyms": "underground road, passage", "antonyms": "", "forms": "tunnel, tunnels", "example": "The train goes through a tunnel." },
-    { "word": "square", "meaning": "an open place in a town", "japaneseMeaning": "広場", "synonyms": "plaza, open place", "antonyms": "", "forms": "square, squares", "example": "People meet in the town square." },
-    { "word": "fountain", "meaning": "a place where water goes up into the air", "japaneseMeaning": "噴水", "synonyms": "", "antonyms": "", "forms": "fountain, fountains", "example": "There is a fountain in the park." },
-    { "word": "bench", "meaning": "a long seat for two or more people", "japaneseMeaning": "ベンチ", "synonyms": "", "antonyms": "", "forms": "bench, benches", "example": "We sit on a bench near the tree." },
-    { "word": "notice", "meaning": "a written message with information", "japaneseMeaning": "掲示／お知らせ", "synonyms": "announcement", "antonyms": "", "forms": "notice, notices", "example": "Read the notice before you enter." },
-    { "word": "gateway", "meaning": "a gate or place where you go in", "japaneseMeaning": "出入口／門", "synonyms": "gate, way in", "antonyms": "exit", "forms": "gateway, gateways", "example": "The gateway is on the left." }
+    {
+      "word": "corner",
+      "meaning": "the place where two roads or walls meet",
+      "japaneseMeaning": "角",
+      "synonyms": "turn, edge",
+      "antonyms": "center",
+      "forms": "corner, corners",
+      "example": "The bakery is on the corner."
+    },
+    {
+      "word": "crosswalk",
+      "meaning": "a marked place where people cross a road",
+      "japaneseMeaning": "横断歩道",
+      "synonyms": "pedestrian crossing",
+      "antonyms": "",
+      "forms": "crosswalk, crosswalks",
+      "example": "Use the crosswalk to cross the street.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/crosswalk.svg",
+        "alt": "車道に白い帯を並べて示した横断歩道。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/crosswalk.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "sidewalk",
+        "tunnel"
+      ]
+    },
+    {
+      "word": "sidewalk",
+      "meaning": "a path beside a road for people to walk on",
+      "japaneseMeaning": "歩道",
+      "synonyms": "footpath",
+      "antonyms": "",
+      "forms": "sidewalk, sidewalks",
+      "example": "Walk on the sidewalk, not the road.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/sidewalk.svg",
+        "alt": "車道の脇で歩行者が歩く区画を示した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/sidewalk.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "crosswalk",
+        "tunnel"
+      ]
+    },
+    {
+      "word": "overpass",
+      "meaning": "a road or path over another road",
+      "japaneseMeaning": "陸橋／高架橋",
+      "synonyms": "bridge, crossing",
+      "antonyms": "",
+      "forms": "overpass, overpasses",
+      "example": "Walk across the overpass."
+    },
+    {
+      "word": "tunnel",
+      "meaning": "a road or path under the ground",
+      "japaneseMeaning": "トンネル",
+      "synonyms": "underground road, passage",
+      "antonyms": "",
+      "forms": "tunnel, tunnels",
+      "example": "The train goes through a tunnel.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/tunnel.svg",
+        "alt": "地形の下を通り抜ける道路のトンネル。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/tunnel.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "bridge",
+        "bench"
+      ]
+    },
+    {
+      "word": "square",
+      "meaning": "an open place in a town",
+      "japaneseMeaning": "広場",
+      "synonyms": "plaza, open place",
+      "antonyms": "",
+      "forms": "square, squares",
+      "example": "People meet in the town square."
+    },
+    {
+      "word": "fountain",
+      "meaning": "a place where water goes up into the air",
+      "japaneseMeaning": "噴水",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "fountain, fountains",
+      "example": "There is a fountain in the park.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/26f2.svg",
+        "alt": "水を上へ噴き上げる噴水。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/26f2.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "bench",
+        "tunnel"
+      ]
+    },
+    {
+      "word": "bench",
+      "meaning": "a long seat for two or more people",
+      "japaneseMeaning": "ベンチ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "bench, benches",
+      "example": "We sit on a bench near the tree.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/bench.svg",
+        "alt": "複数人が座れる横長のベンチ。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/bench.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "stairs",
+        "gateway"
+      ]
+    },
+    {
+      "word": "notice",
+      "meaning": "a written message with information",
+      "japaneseMeaning": "掲示／お知らせ",
+      "synonyms": "announcement",
+      "antonyms": "",
+      "forms": "notice, notices",
+      "example": "Read the notice before you enter."
+    },
+    {
+      "word": "gateway",
+      "meaning": "a gate or place where you go in",
+      "japaneseMeaning": "出入口／門",
+      "synonyms": "gate, way in",
+      "antonyms": "exit",
+      "forms": "gateway, gateways",
+      "example": "The gateway is on the left."
+    }
   ]
 }

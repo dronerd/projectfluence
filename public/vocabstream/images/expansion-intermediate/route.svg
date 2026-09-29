@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>二つの地点の間を道路に沿って進む道筋を、青い線で示した地図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="31" y="43" width="300" height="163" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><path d="M52 87h112v97m-44-124v105h150m-81-119v72h121" fill="none" stroke="#b7c6c6" stroke-width="15" stroke-linejoin="round" stroke-linecap="round"/><path d="M61 173H112V82h123v78h68" fill="none" stroke="#77aebc" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><path d="M63 173q-20-20-13-32 13-18 26 0 7 12-13 32Z" fill="#d9887b" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="63" cy="146" r="4" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><path d="M303 162q-20-20-13-32 13-18 26 0 7 12-13 32Z" fill="#d9887b" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="303" cy="135" r="4" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><text x="180" y="229" text-anchor="middle" font-size="16" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">出発地から目的地までの道</text>
+</svg>

@@ -36,7 +36,25 @@
       "synonyms": "edge, boundary",
       "antonyms": "center, inside",
       "forms": "border, borders",
-      "example": "We crossed the border early in the morning."
+      "example": "We crossed the border early in the morning.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/border.svg",
+        "alt": "二つの国の領域が接する線を、赤く太く示した地図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/border.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "tourist",
+        "research"
+      ]
     },
     {
       "word": "indicator",

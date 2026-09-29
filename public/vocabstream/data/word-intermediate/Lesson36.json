@@ -36,7 +36,25 @@
       "synonyms": "bring in, buy in",
       "antonyms": "export, send out",
       "forms": "import, imports, importing, imported",
-      "example": "The shop will import coffee from Brazil."
+      "example": "The shop will import coffee from Brazil.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/import.svg",
+        "alt": "外国から国境を越え、国内の倉庫へ商品を運び入れる図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/import.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "rule",
+        "convey"
+      ]
     },
     {
       "word": "equip",

@@ -3,15 +3,221 @@
   "title": "Lesson 10",
   "paragraph": "People nouns for family and simple descriptions.",
   "words": [
-    { "word": "parent", "meaning": "a mother or father", "japaneseMeaning": "親", "synonyms": "mother or father", "antonyms": "", "forms": "parent, parents", "example": "One parent needs to sign the form." },
-    { "word": "brother", "meaning": "a boy or man with the same parent as you", "japaneseMeaning": "兄、弟、兄弟", "synonyms": "", "antonyms": "", "forms": "brother, brothers", "example": "My brother likes soccer." },
-    { "word": "sister", "meaning": "a girl or woman with the same parent as you", "japaneseMeaning": "姉、妹、姉妹", "synonyms": "", "antonyms": "", "forms": "sister, sisters", "example": "My sister is in the kitchen." },
-    { "word": "son", "meaning": "a boy or man who is someone's child", "japaneseMeaning": "息子", "synonyms": "", "antonyms": "", "forms": "son, sons", "example": "Their son is five years old." },
-    { "word": "daughter", "meaning": "a girl or woman who is someone's child", "japaneseMeaning": "娘", "synonyms": "", "antonyms": "", "forms": "daughter, daughters", "example": "Her daughter reads every night." },
-    { "word": "friend", "meaning": "a person you like and know well", "japaneseMeaning": "友達", "synonyms": "pal", "antonyms": "enemy", "forms": "friend, friends", "example": "My friend sits next to me." },
-    { "word": "man", "meaning": "an adult male person", "japaneseMeaning": "男性、男の人", "synonyms": "", "antonyms": "", "forms": "man, men", "example": "The man is a doctor." },
-    { "word": "woman", "meaning": "an adult female person", "japaneseMeaning": "女性、女の人", "synonyms": "", "antonyms": "", "forms": "woman, women", "example": "The woman is my teacher." },
-    { "word": "grandma", "meaning": "your mother's or father's mother", "japaneseMeaning": "おばあちゃん", "synonyms": "grandmother", "antonyms": "", "forms": "grandma, grandmas", "example": "My grandma makes good soup." },
-    { "word": "grandpa", "meaning": "your mother's or father's father", "japaneseMeaning": "おじいちゃん", "synonyms": "grandfather", "antonyms": "", "forms": "grandpa, grandpas", "example": "My grandpa walks every morning." }
+    {
+      "word": "parent",
+      "meaning": "a mother or father",
+      "japaneseMeaning": "親",
+      "synonyms": "mother or father",
+      "antonyms": "",
+      "forms": "parent, parents",
+      "example": "One parent needs to sign the form.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/parent.svg",
+        "alt": "基準となる人を示し、親に当たる家族の位置を強調した関係図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/parent.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "brother",
+        "sister"
+      ]
+    },
+    {
+      "word": "brother",
+      "meaning": "a boy or man with the same parent as you",
+      "japaneseMeaning": "兄、弟、兄弟",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "brother, brothers",
+      "example": "My brother likes soccer.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/brother.svg",
+        "alt": "基準となる人を示し、兄、弟、兄弟に当たる家族の位置を強調した関係図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/brother.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "sister",
+        "parent"
+      ]
+    },
+    {
+      "word": "sister",
+      "meaning": "a girl or woman with the same parent as you",
+      "japaneseMeaning": "姉、妹、姉妹",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "sister, sisters",
+      "example": "My sister is in the kitchen.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/sister.svg",
+        "alt": "基準となる人を示し、姉、妹、姉妹に当たる家族の位置を強調した関係図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/sister.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "brother",
+        "parent"
+      ]
+    },
+    {
+      "word": "son",
+      "meaning": "a boy or man who is someone's child",
+      "japaneseMeaning": "息子",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "son, sons",
+      "example": "Their son is five years old.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/son.svg",
+        "alt": "基準となる人を示し、息子に当たる家族の位置を強調した関係図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/son.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "grandma",
+        "grandpa"
+      ]
+    },
+    {
+      "word": "daughter",
+      "meaning": "a girl or woman who is someone's child",
+      "japaneseMeaning": "娘",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "daughter, daughters",
+      "example": "Her daughter reads every night.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/daughter.svg",
+        "alt": "基準となる人を示し、娘に当たる家族の位置を強調した関係図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/daughter.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "grandma",
+        "grandpa"
+      ]
+    },
+    {
+      "word": "friend",
+      "meaning": "a person you like and know well",
+      "japaneseMeaning": "友達",
+      "synonyms": "pal",
+      "antonyms": "enemy",
+      "forms": "friend, friends",
+      "example": "My friend sits next to me."
+    },
+    {
+      "word": "man",
+      "meaning": "an adult male person",
+      "japaneseMeaning": "男性、男の人",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "man, men",
+      "example": "The man is a doctor."
+    },
+    {
+      "word": "woman",
+      "meaning": "an adult female person",
+      "japaneseMeaning": "女性、女の人",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "woman, women",
+      "example": "The woman is my teacher."
+    },
+    {
+      "word": "grandma",
+      "meaning": "your mother's or father's mother",
+      "japaneseMeaning": "おばあちゃん",
+      "synonyms": "grandmother",
+      "antonyms": "",
+      "forms": "grandma, grandmas",
+      "example": "My grandma makes good soup.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/grandma.svg",
+        "alt": "基準となる人を示し、おばあちゃんに当たる家族の位置を強調した関係図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/grandma.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "son",
+        "daughter"
+      ]
+    },
+    {
+      "word": "grandpa",
+      "meaning": "your mother's or father's father",
+      "japaneseMeaning": "おじいちゃん",
+      "synonyms": "grandfather",
+      "antonyms": "",
+      "forms": "grandpa, grandpas",
+      "example": "My grandpa walks every morning.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/grandpa.svg",
+        "alt": "基準となる人を示し、おじいちゃんに当たる家族の位置を強調した関係図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/grandpa.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "son",
+        "daughter"
+      ]
+    }
   ]
 }

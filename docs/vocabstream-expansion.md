@@ -1,5 +1,7 @@
 # VocabStream curriculum expansion
 
+Historical report for commit `490669b`. See [the later specialist and image expansion](vocabstream-images-specialists.md) for current counts.
+
 This extends the initial VocabStream update in `3b5cc04` on `codex/vidmatch-curated-catalog`. Deploy the Next.js application and its public files together. No new database migration, environment variable, storage bucket or provider account is needed.
 
 ## Idioms start at Lesson 1

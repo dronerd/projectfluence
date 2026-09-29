@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>箱の断面の内側に置かれた部品を指している図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="67" y="57" width="225" height="131" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><rect x="80" y="69" width="199" height="105" rx="2" fill="#dcecef" stroke="#40565b" stroke-width="2.5"/><rect x="146" y="105" width="62" height="42" rx="3" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><line x1="177" y1="207" x2="177" y2="150" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="177,150 172.0,160.0 182.0,160.0" fill="#40565b"/><text x="177" y="229" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">箱の内側</text>
+</svg>

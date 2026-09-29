@@ -3,15 +3,221 @@
   "title": "Lesson 21",
   "paragraph": "Building and place nouns for everyday life.",
   "words": [
-    { "word": "apartment", "meaning": "rooms where someone lives in a building", "japaneseMeaning": "アパート、マンション", "synonyms": "flat", "antonyms": "house", "forms": "apartment, apartments", "example": "Their apartment has two bedrooms." },
-    { "word": "balcony", "meaning": "a small outside area on an upper floor", "japaneseMeaning": "バルコニー", "synonyms": "", "antonyms": "", "forms": "balcony, balconies", "example": "She drinks tea on the balcony." },
-    { "word": "basement", "meaning": "a room or floor below ground level", "japaneseMeaning": "地下室", "synonyms": "cellar", "antonyms": "", "forms": "basement, basements", "example": "The old boxes are in the basement." },
-    { "word": "bridge", "meaning": "a road or path over water or another road", "japaneseMeaning": "橋", "synonyms": "", "antonyms": "", "forms": "bridge, bridges", "example": "We walked across the bridge." },
-    { "word": "building", "meaning": "a place with walls and a roof", "japaneseMeaning": "建物", "synonyms": "", "antonyms": "", "forms": "building, buildings", "example": "That building is very tall." },
-    { "word": "castle", "meaning": "a large old strong building", "japaneseMeaning": "城", "synonyms": "", "antonyms": "", "forms": "castle, castles", "example": "The castle is on the hill." },
-    { "word": "entrance", "meaning": "a way into a place", "japaneseMeaning": "入口", "synonyms": "door", "antonyms": "exit", "forms": "entrance, entrances", "example": "The entrance is on the left." },
-    { "word": "hospital", "meaning": "a place where sick people get help", "japaneseMeaning": "病院", "synonyms": "", "antonyms": "", "forms": "hospital, hospitals", "example": "My uncle works at the hospital." },
-    { "word": "library", "meaning": "a place where you can read or borrow books", "japaneseMeaning": "図書館", "synonyms": "", "antonyms": "", "forms": "library, libraries", "example": "She studies at the library." },
-    { "word": "park", "meaning": "a public place with grass or trees", "japaneseMeaning": "公園", "synonyms": "", "antonyms": "", "forms": "park, parks", "example": "They walk in the park after lunch." }
+    {
+      "word": "apartment",
+      "meaning": "rooms where someone lives in a building",
+      "japaneseMeaning": "アパート、マンション",
+      "synonyms": "flat",
+      "antonyms": "house",
+      "forms": "apartment, apartments",
+      "example": "Their apartment has two bedrooms.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/apartment.svg",
+        "alt": "複数の住居がある建物の中で、一つの生活空間を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/apartment.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "balcony",
+        "basement"
+      ]
+    },
+    {
+      "word": "balcony",
+      "meaning": "a small outside area on an upper floor",
+      "japaneseMeaning": "バルコニー",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "balcony, balconies",
+      "example": "She drinks tea on the balcony.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/balcony.svg",
+        "alt": "建物の上階から外に張り出す、手すり付きのバルコニー。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/balcony.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "basement",
+        "roof"
+      ]
+    },
+    {
+      "word": "basement",
+      "meaning": "a room or floor below ground level",
+      "japaneseMeaning": "地下室",
+      "synonyms": "cellar",
+      "antonyms": "",
+      "forms": "basement, basements",
+      "example": "The old boxes are in the basement.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/basement.svg",
+        "alt": "地面の線より下にある建物の階を強調した断面図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/basement.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "balcony",
+        "roof"
+      ]
+    },
+    {
+      "word": "bridge",
+      "meaning": "a road or path over water or another road",
+      "japaneseMeaning": "橋",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "bridge, bridges",
+      "example": "We walked across the bridge.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f309.svg",
+        "alt": "水をまたいで架かる橋の景色。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f309.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "tunnel",
+        "castle"
+      ]
+    },
+    {
+      "word": "building",
+      "meaning": "a place with walls and a roof",
+      "japaneseMeaning": "建物",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "building, buildings",
+      "example": "That building is very tall."
+    },
+    {
+      "word": "castle",
+      "meaning": "a large old strong building",
+      "japaneseMeaning": "城",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "castle, castles",
+      "example": "The castle is on the hill.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3f0.svg",
+        "alt": "塔と高い城壁のある城。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3f0.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "school",
+        "store"
+      ]
+    },
+    {
+      "word": "entrance",
+      "meaning": "a way into a place",
+      "japaneseMeaning": "入口",
+      "synonyms": "door",
+      "antonyms": "exit",
+      "forms": "entrance, entrances",
+      "example": "The entrance is on the left.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/entrance.svg",
+        "alt": "建物の内側に向かう矢印で入口を示す図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/entrance.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "exit",
+        "wall"
+      ]
+    },
+    {
+      "word": "hospital",
+      "meaning": "a place where sick people get help",
+      "japaneseMeaning": "病院",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "hospital, hospitals",
+      "example": "My uncle works at the hospital.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3e5.svg",
+        "alt": "医療機関を示す印が付いた病院の建物。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3e5.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "school",
+        "factory"
+      ]
+    },
+    {
+      "word": "library",
+      "meaning": "a place where you can read or borrow books",
+      "japaneseMeaning": "図書館",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "library, libraries",
+      "example": "She studies at the library."
+    },
+    {
+      "word": "park",
+      "meaning": "a public place with grass or trees",
+      "japaneseMeaning": "公園",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "park, parks",
+      "example": "They walk in the park after lunch."
+    }
   ]
 }

@@ -78,6 +78,8 @@
 .vs-vocabulary-image figcaption { color: var(--pf-muted); font-size: 13px; line-height: 1.6; }
 .vs-vocabulary-image summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; justify-content: center; text-decoration: underline; text-underline-offset: 3px; }
 .vs-vocabulary-image figcaption p { margin: 0 0 12px; }
+.vs-image-credit { font-size: 12px; text-align: center; overflow-wrap: anywhere; }
+.vs-image-credit a { display: inline-block; padding-block: 6px; text-decoration: underline; text-underline-offset: 3px; }
 .vs-image-fallback { min-height: 160px; padding: 20px; display: flex; flex-direction: column; justify-content: center; background: var(--pf-surface-subtle); border: 1px solid var(--pf-border); border-radius: 12px; line-height: 1.65; }
 .vs-image-fallback p { margin: 0 0 8px; font-size: 13px; color: var(--pf-muted); }
 .vs-definition { font-size: clamp(19px, 2.5vw, 24px); margin: 8px 0 24px; line-height: 1.65; }

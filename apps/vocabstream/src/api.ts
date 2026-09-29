@@ -10,7 +10,7 @@ export type VocabStreamLessonProgress = {
   updatedAt: string;
 };
 
-export type VocabStreamWeakWord = Pick<LessonWord, "image" | "definitionType" | "usageNote" | "expressionType"> & {
+export type VocabStreamWeakWord = Pick<LessonWord, "image" | "imageRole" | "definitionType" | "usageNote" | "expressionType"> & {
   word: string;
   definition: string;
   example?: string;

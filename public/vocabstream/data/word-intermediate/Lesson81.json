@@ -27,7 +27,25 @@
       "synonyms": "delay, put off",
       "antonyms": "advance, continue",
       "forms": "postpone, postpones, postponing, postponed",
-      "example": "They decided to postpone the meeting because the manager is sick."
+      "example": "They decided to postpone the meeting because the manager is sick.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/postpone.svg",
+        "alt": "月曜の予定を取り消して、水曜へ移したカレンダー。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/postpone.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "translate",
+        "persuade"
+      ]
     },
     {
       "word": "donate",

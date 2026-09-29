@@ -57,11 +57,15 @@ for (const category of (await readdir(dataRoot, { withFileTypes: true })).filter
       if (word.meaningDistractors !== undefined) validateDistractors(word.meaningDistractors, "meaningDistractors");
       if (word.image) {
         const image = word.image;
-        if (!["src", "alt", "source", "sourceUrl", "creator"].every((field) => isText(image[field])) || image.license !== "CC0-1.0" || !Number.isFinite(image.width) || image.width <= 0 || !Number.isFinite(image.height) || image.height <= 0) issue(location, "Image requires provenance, CC0-1.0 license, alternative text, and positive dimensions.");
+        if (!["src", "alt", "source", "sourceUrl", "creator"].every((field) => isText(image[field])) || !["CC0-1.0", "CC-BY-4.0"].includes(image.license) || !Number.isFinite(image.width) || image.width <= 0 || !Number.isFinite(image.height) || image.height <= 0) issue(location, "Image requires provenance, a supported license, alternative text, and positive dimensions.");
+        if (image.license === "CC-BY-4.0" && (!isText(image.credit) || image.licenseUrl !== "https://creativecommons.org/licenses/by/4.0/")) issue(location, "CC BY artwork requires displayed attribution and the license URL.");
         if (typeof image.src !== "string" || !image.src.startsWith("/vocabstream/images/") || image.src.includes("..")) issue(location, "Image source must remain inside the public VocabStream image directory.");
         else { try { await access(path.join(root, "public", image.src)); } catch { issue(location, "Image source does not exist."); } }
       }
       if (word.definitionType && !["text", "image", "image+text"].includes(word.definitionType)) issue(location, "Unsupported definitionType.");
+      if (word.imageRole !== undefined && !["meaning", "supporting"].includes(word.imageRole)) issue(location, "Unsupported imageRole.");
+      if (word.imageRole && !word.image) issue(location, "An image role requires image metadata.");
+      if (word.imageRole === "supporting" && word.definitionType !== "image+text") issue(location, "Supporting diagrams must retain their text definition.");
       if (["image", "image+text"].includes(word.definitionType) && !word.image) issue(location, "Visual definitions require image metadata.");
       entries.push({ category: category.name, lessonNumber: Number(name.match(/\d+/)[0]), position: index + 1, path: relativePath, ...word });
     }

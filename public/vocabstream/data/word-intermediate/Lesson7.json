@@ -54,7 +54,25 @@
       "synonyms": "decrease, lower",
       "antonyms": "increase, raise",
       "forms": "reduce, reduces, reducing, reduced, reduction",
-      "example": "We should reduce food waste at lunch."
+      "example": "We should reduce food waste at lunch.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/reduce.svg",
+        "alt": "容器の水の量を三リットルから一リットルに減らす図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/reduce.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "express",
+        "examine"
+      ]
     },
     {
       "word": "refuse",
@@ -72,7 +90,25 @@
       "synonyms": "take away, clear",
       "antonyms": "add, place",
       "forms": "remove, removes, removing, removed, removal",
-      "example": "Please remove your shoes before entering the room."
+      "example": "Please remove your shoes before entering the room.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/remove.svg",
+        "alt": "箱の中の三角の部品だけを、箱の外へ取り出す図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/remove.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "endure",
+        "survive"
+      ]
     },
     {
       "word": "settle",

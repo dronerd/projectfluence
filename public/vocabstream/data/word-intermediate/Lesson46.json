@@ -9,7 +9,25 @@
       "synonyms": "yearly, once-a-year",
       "antonyms": "daily, weekly",
       "forms": "annual, annually",
-      "example": "The annual festival is held every August."
+      "example": "The annual festival is held every August.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/annual.svg",
+        "alt": "三年分のカレンダーで、毎年七月一日に同じ行事がある。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/annual.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "curious",
+        "polite"
+      ]
     },
     {
       "word": "enthusiastic",

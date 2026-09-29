@@ -90,7 +90,25 @@
       "synonyms": "plan, limit",
       "antonyms": "overspending, waste",
       "forms": "budget, budgets",
-      "example": "We made a budget before planning the school trip."
+      "example": "We made a budget before planning the school trip.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/budget.svg",
+        "alt": "百のお金を家賃五十、食費三十、その他二十に分ける計画。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/budget.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "assistant",
+        "award"
+      ]
     }
   ]
 }

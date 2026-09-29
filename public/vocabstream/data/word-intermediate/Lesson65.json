@@ -36,7 +36,25 @@
       "synonyms": "bags, baggage",
       "antonyms": "empty hands, cargo",
       "forms": "luggage",
-      "example": "Please keep your luggage with you on the train."
+      "example": "Please keep your luggage with you on the train.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/luggage.svg",
+        "alt": "大きさの違う二つの旅行用かばんと、小さな手荷物。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/luggage.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "appointment",
+        "mindset"
+      ]
     },
     {
       "word": "project",

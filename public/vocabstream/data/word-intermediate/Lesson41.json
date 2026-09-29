@@ -18,7 +18,25 @@
       "synonyms": "shrink, reduce",
       "antonyms": "expand, enlarge",
       "forms": "contract, contracts, contracting, contracted",
-      "example": "The metal contracts in cold weather."
+      "example": "The metal contracts in cold weather.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/contract.svg",
+        "alt": "同じ物体の横幅と高さがともに小さくなる、収縮の比較。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/contract.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "expand",
+        "assemble"
+      ]
     },
     {
       "word": "experiment",

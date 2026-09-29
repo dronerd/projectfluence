@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>透明な断面の箱の中に、球と三角の部品が入っている。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="77" y="71" width="204" height="134" rx="2" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><line x1="179.0" y1="71" x2="179.0" y2="205" stroke="#ad8954" stroke-width="3" stroke-linecap="round"/><line x1="77" y1="83" x2="281" y2="83" stroke="#ad8954" stroke-width="2" stroke-linecap="round"/><circle cx="130" cy="138" r="23" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><path d="M170 162 190 120 210 162Z" fill="#89b28c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="180" y="38" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">中に入っているもの</text><line x1="310" y1="104" x2="244" y2="127" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="244,127 255.08841364186702,128.43076305056348 251.797658625571,118.98772691684448" fill="#40565b"/>
+</svg>

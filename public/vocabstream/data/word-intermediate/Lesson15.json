@@ -81,7 +81,25 @@
       "synonyms": "share, ratio",
       "antonyms": "whole, total",
       "forms": "proportion, proportions",
-      "example": "A large proportion of students use the library after school."
+      "example": "A large proportion of students use the library after school.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/proportion.svg",
+        "alt": "円を四等分したうちの一つを色で示し、四分の一と二十五パーセントを並べた図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/proportion.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "expert",
+        "permission"
+      ]
     },
     {
       "word": "permission",

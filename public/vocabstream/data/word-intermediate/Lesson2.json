@@ -9,7 +9,25 @@
       "synonyms": "fix, mend",
       "antonyms": "break, damage",
       "forms": "repair, repairs, repairing, repaired",
-      "example": "My brother can repair a bicycle in one afternoon."
+      "example": "My brother can repair a bicycle in one afternoon.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/repair.svg",
+        "alt": "ひび割れた車輪を直し、使える車輪にする前後の図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/repair.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "remind",
+        "record"
+      ]
     },
     {
       "word": "remind",
@@ -81,7 +99,25 @@
       "synonyms": "choose, pick",
       "antonyms": "reject, refuse",
       "forms": "select, selects, selecting, selected, selection",
-      "example": "You can select one topic for your final report."
+      "example": "You can select one topic for your final report.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/select.svg",
+        "alt": "四つの同じ大きさのカードから、一枚を選んで印を付けた図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/select.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "depend",
+        "prevent"
+      ]
     },
     {
       "word": "serve",

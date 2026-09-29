@@ -3,15 +3,167 @@
   "title": "Lesson 24",
   "paragraph": "Health and safety nouns for home, school, and travel.",
   "words": [
-    { "word": "danger", "meaning": "something that can hurt people", "japaneseMeaning": "危険", "synonyms": "risk", "antonyms": "safety", "forms": "danger, dangers", "example": "Fire is a danger in the kitchen." },
-    { "word": "helmet", "meaning": "a hard hat that protects the head", "japaneseMeaning": "ヘルメット", "synonyms": "hard hat", "antonyms": "", "forms": "helmet, helmets", "example": "Wear a helmet on your bike." },
-    { "word": "goggles", "meaning": "glasses that protect the eyes", "japaneseMeaning": "ゴーグル、保護眼鏡", "synonyms": "safety glasses", "antonyms": "", "forms": "goggles", "example": "Use goggles in the science room." },
-    { "word": "care", "meaning": "help given to keep someone well or safe", "japaneseMeaning": "世話、注意", "synonyms": "help", "antonyms": "neglect", "forms": "care", "example": "The nurse gave good care." },
-    { "word": "medicine", "meaning": "something sick people take to feel better", "japaneseMeaning": "薬", "synonyms": "", "antonyms": "", "forms": "medicine, medicines", "example": "Take this medicine after dinner." },
-    { "word": "bandage", "meaning": "cloth used to cover a cut", "japaneseMeaning": "包帯、ばんそうこう", "synonyms": "", "antonyms": "", "forms": "bandage, bandages", "example": "She put a bandage on her finger." },
-    { "word": "accident", "meaning": "a bad thing that happens by chance", "japaneseMeaning": "事故", "synonyms": "", "antonyms": "", "forms": "accident, accidents", "example": "There was an accident on the road." },
-    { "word": "fire", "meaning": "hot light from burning things", "japaneseMeaning": "火、火事", "synonyms": "", "antonyms": "", "forms": "fire, fires", "example": "The fire was small." },
-    { "word": "alarm", "meaning": "a loud sound that warns people", "japaneseMeaning": "警報、アラーム", "synonyms": "warning", "antonyms": "", "forms": "alarm, alarms", "example": "The alarm rang at seven." },
-    { "word": "exit", "meaning": "a way out of a place", "japaneseMeaning": "出口", "synonyms": "way out", "antonyms": "entrance", "forms": "exit, exits", "example": "The exit is near the stairs." }
+    {
+      "word": "danger",
+      "meaning": "something that can hurt people",
+      "japaneseMeaning": "危険",
+      "synonyms": "risk",
+      "antonyms": "safety",
+      "forms": "danger, dangers",
+      "example": "Fire is a danger in the kitchen."
+    },
+    {
+      "word": "helmet",
+      "meaning": "a hard hat that protects the head",
+      "japaneseMeaning": "ヘルメット",
+      "synonyms": "hard hat",
+      "antonyms": "",
+      "forms": "helmet, helmets",
+      "example": "Wear a helmet on your bike.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/26d1.svg",
+        "alt": "頭を覆って保護する硬いヘルメットの一例。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/26d1.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "goggles",
+        "glove"
+      ]
+    },
+    {
+      "word": "goggles",
+      "meaning": "glasses that protect the eyes",
+      "japaneseMeaning": "ゴーグル、保護眼鏡",
+      "synonyms": "safety glasses",
+      "antonyms": "",
+      "forms": "goggles",
+      "example": "Use goggles in the science room.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f97d.svg",
+        "alt": "目の周りを覆う保護用ゴーグル。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f97d.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "helmet",
+        "scarf"
+      ]
+    },
+    {
+      "word": "care",
+      "meaning": "help given to keep someone well or safe",
+      "japaneseMeaning": "世話、注意",
+      "synonyms": "help",
+      "antonyms": "neglect",
+      "forms": "care",
+      "example": "The nurse gave good care."
+    },
+    {
+      "word": "medicine",
+      "meaning": "something sick people take to feel better",
+      "japaneseMeaning": "薬",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "medicine, medicines",
+      "example": "Take this medicine after dinner."
+    },
+    {
+      "word": "bandage",
+      "meaning": "cloth used to cover a cut",
+      "japaneseMeaning": "包帯、ばんそうこう",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "bandage, bandages",
+      "example": "She put a bandage on her finger."
+    },
+    {
+      "word": "accident",
+      "meaning": "a bad thing that happens by chance",
+      "japaneseMeaning": "事故",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "accident, accidents",
+      "example": "There was an accident on the road."
+    },
+    {
+      "word": "fire",
+      "meaning": "hot light from burning things",
+      "japaneseMeaning": "火、火事",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "fire, fires",
+      "example": "The fire was small.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f525.svg",
+        "alt": "赤と黄色の炎。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f525.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "ice",
+        "water"
+      ]
+    },
+    {
+      "word": "alarm",
+      "meaning": "a loud sound that warns people",
+      "japaneseMeaning": "警報、アラーム",
+      "synonyms": "warning",
+      "antonyms": "",
+      "forms": "alarm, alarms",
+      "example": "The alarm rang at seven."
+    },
+    {
+      "word": "exit",
+      "meaning": "a way out of a place",
+      "japaneseMeaning": "出口",
+      "synonyms": "way out",
+      "antonyms": "entrance",
+      "forms": "exit, exits",
+      "example": "The exit is near the stairs.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/exit.svg",
+        "alt": "建物から外へ向かう矢印で出口を示す図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/exit.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "entrance",
+        "wall"
+      ]
+    }
   ]
 }

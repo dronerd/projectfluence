@@ -3,15 +3,113 @@
   "title": "Lesson 39",
   "paragraph": "This lesson practices useful verbs for home and school.",
   "words": [
-    { "word": "bake", "meaning": "to cook food in an oven", "japaneseMeaning": "焼く", "synonyms": "cook, heat", "antonyms": "freeze, cool", "forms": "bake, bakes, baking, baked, baked", "example": "We bake cookies on Sunday." },
-    { "word": "brush", "meaning": "to clean or make something smooth using a tool with many short hairs", "japaneseMeaning": "磨く／ブラシをかける", "synonyms": "clean, comb", "antonyms": "dirty, mess up", "forms": "brush, brushes, brushing, brushed, brushed", "example": "Brush your teeth after breakfast." },
-    { "word": "applaud", "meaning": "to clap for someone", "japaneseMeaning": "拍手する", "synonyms": "clap, cheer", "antonyms": "boo, be quiet", "forms": "applaud, applauds, applauding, applauded, applauded", "example": "The students applaud after the song." },
-    { "word": "sniff", "meaning": "to pull air in through your nose", "japaneseMeaning": "鼻をすする／においをかぐ", "synonyms": "smell, breathe in", "antonyms": "blow, exhale", "forms": "sniff, sniffs, sniffing, sniffed, sniffed", "example": "Do not sniff loudly in class." },
-    { "word": "cross", "meaning": "to go from one side to the other", "japaneseMeaning": "渡る", "synonyms": "go across, pass", "antonyms": "stay, stop", "forms": "cross, crosses, crossing, crossed, crossed", "example": "Cross the street at the light." },
-    { "word": "knock", "meaning": "to hit a door to ask to enter", "japaneseMeaning": "ノックする", "synonyms": "tap, hit", "antonyms": "enter quietly", "forms": "knock, knocks, knocking, knocked, knocked", "example": "Please knock before you come in." },
-    { "word": "pack", "meaning": "to put things into a bag or box", "japaneseMeaning": "荷造りする／詰める", "synonyms": "put in, load", "antonyms": "unpack, empty", "forms": "pack, packs, packing, packed, packed", "example": "Pack your clothes for the trip." },
-    { "word": "press", "meaning": "to push with your finger or hand", "japaneseMeaning": "押す", "synonyms": "push, touch", "antonyms": "release, pull", "forms": "press, presses, pressing, pressed, pressed", "example": "Press this button to open the door." },
-    { "word": "relax", "meaning": "to rest and become calm", "japaneseMeaning": "リラックスする", "synonyms": "rest, calm down", "antonyms": "worry, work", "forms": "relax, relaxes, relaxing, relaxed, relaxed", "example": "I relax after dinner." },
-    { "word": "ski", "meaning": "to move on snow with long thin boards", "japaneseMeaning": "スキーをする", "synonyms": "snow-sport, slide", "antonyms": "walk, stop", "forms": "ski, skis, skiing, skied, skied", "example": "We ski in the mountains in winter." }
+    {
+      "word": "bake",
+      "meaning": "to cook food in an oven",
+      "japaneseMeaning": "焼く",
+      "synonyms": "cook, heat",
+      "antonyms": "freeze, cool",
+      "forms": "bake, bakes, baking, baked, baked",
+      "example": "We bake cookies on Sunday."
+    },
+    {
+      "word": "brush",
+      "meaning": "to clean or make something smooth using a tool with many short hairs",
+      "japaneseMeaning": "磨く／ブラシをかける",
+      "synonyms": "clean, comb",
+      "antonyms": "dirty, mess up",
+      "forms": "brush, brushes, brushing, brushed, brushed",
+      "example": "Brush your teeth after breakfast."
+    },
+    {
+      "word": "applaud",
+      "meaning": "to clap for someone",
+      "japaneseMeaning": "拍手する",
+      "synonyms": "clap, cheer",
+      "antonyms": "boo, be quiet",
+      "forms": "applaud, applauds, applauding, applauded, applauded",
+      "example": "The students applaud after the song."
+    },
+    {
+      "word": "sniff",
+      "meaning": "to pull air in through your nose",
+      "japaneseMeaning": "鼻をすする／においをかぐ",
+      "synonyms": "smell, breathe in",
+      "antonyms": "blow, exhale",
+      "forms": "sniff, sniffs, sniffing, sniffed, sniffed",
+      "example": "Do not sniff loudly in class."
+    },
+    {
+      "word": "cross",
+      "meaning": "to go from one side to the other",
+      "japaneseMeaning": "渡る",
+      "synonyms": "go across, pass",
+      "antonyms": "stay, stop",
+      "forms": "cross, crosses, crossing, crossed, crossed",
+      "example": "Cross the street at the light."
+    },
+    {
+      "word": "knock",
+      "meaning": "to hit a door to ask to enter",
+      "japaneseMeaning": "ノックする",
+      "synonyms": "tap, hit",
+      "antonyms": "enter quietly",
+      "forms": "knock, knocks, knocking, knocked, knocked",
+      "example": "Please knock before you come in."
+    },
+    {
+      "word": "pack",
+      "meaning": "to put things into a bag or box",
+      "japaneseMeaning": "荷造りする／詰める",
+      "synonyms": "put in, load",
+      "antonyms": "unpack, empty",
+      "forms": "pack, packs, packing, packed, packed",
+      "example": "Pack your clothes for the trip."
+    },
+    {
+      "word": "press",
+      "meaning": "to push with your finger or hand",
+      "japaneseMeaning": "押す",
+      "synonyms": "push, touch",
+      "antonyms": "release, pull",
+      "forms": "press, presses, pressing, pressed, pressed",
+      "example": "Press this button to open the door."
+    },
+    {
+      "word": "relax",
+      "meaning": "to rest and become calm",
+      "japaneseMeaning": "リラックスする",
+      "synonyms": "rest, calm down",
+      "antonyms": "worry, work",
+      "forms": "relax, relaxes, relaxing, relaxed, relaxed",
+      "example": "I relax after dinner."
+    },
+    {
+      "word": "ski",
+      "meaning": "to move on snow with long thin boards",
+      "japaneseMeaning": "スキーをする",
+      "synonyms": "snow-sport, slide",
+      "antonyms": "walk, stop",
+      "forms": "ski, skis, skiing, skied, skied",
+      "example": "We ski in the mountains in winter.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/26f7.svg",
+        "alt": "長い板を両足に付けて雪面を滑る人物。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/26f7.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "swim",
+        "clap"
+      ]
+    }
   ]
 }

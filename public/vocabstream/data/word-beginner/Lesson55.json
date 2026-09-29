@@ -3,15 +3,167 @@
   "title": "Lesson 55",
   "paragraph": "This lesson practices useful verbs for hobbies and free time.",
   "words": [
-    { "word": "dance", "meaning": "to move your body to music", "japaneseMeaning": "踊る", "synonyms": "move, step", "antonyms": "stand still, stop", "forms": "dance, dances, dancing, danced, danced", "example": "They dance at the school festival." },
-    { "word": "sketch", "meaning": "to draw a quick picture", "japaneseMeaning": "スケッチする", "synonyms": "draw, make a picture", "antonyms": "erase, color over", "forms": "sketch, sketches, sketching, sketched, sketched", "example": "I sketch a cat in my notebook." },
-    { "word": "paint", "meaning": "to cover a surface or make a picture using colored liquid", "japaneseMeaning": "絵の具で描く／塗る", "synonyms": "color, brush", "antonyms": "erase, clean", "forms": "paint, paints, painting, painted, painted", "example": "We paint flowers in art class." },
-    { "word": "record", "meaning": "to save sound or video", "japaneseMeaning": "録音する／録画する", "synonyms": "save, film", "antonyms": "erase, delete", "forms": "record, records, recording, recorded, recorded", "example": "I record my voice on my phone." },
-    { "word": "download", "meaning": "to get a file from the internet", "japaneseMeaning": "ダウンロードする", "synonyms": "get, save", "antonyms": "upload, delete", "forms": "download, downloads, downloading, downloaded, downloaded", "example": "Download the song before the trip." },
-    { "word": "upload", "meaning": "to send a file to the internet", "japaneseMeaning": "アップロードする", "synonyms": "send, post", "antonyms": "download, remove", "forms": "upload, uploads, uploading, uploaded, uploaded", "example": "Upload your photo to the class page." },
-    { "word": "chat", "meaning": "to talk in a friendly way", "japaneseMeaning": "おしゃべりする", "synonyms": "talk, speak", "antonyms": "be silent, ignore", "forms": "chat, chats, chatting, chatted, chatted", "example": "I chat with my friend online." },
-    { "word": "jog", "meaning": "to run slowly for exercise", "japaneseMeaning": "ジョギングする", "synonyms": "run slowly, exercise", "antonyms": "stop, rest", "forms": "jog, jogs, jogging, jogged, jogged", "example": "My father jogs in the park." },
-    { "word": "camp", "meaning": "to sleep outside in a tent", "japaneseMeaning": "キャンプする", "synonyms": "stay outside, sleep outdoors", "antonyms": "stay home, leave", "forms": "camp, camps, camping, camped, camped", "example": "We camp near the lake in summer." },
-    { "word": "skate", "meaning": "to move on skates", "japaneseMeaning": "スケートをする", "synonyms": "slide, move on ice", "antonyms": "walk, stop", "forms": "skate, skates, skating, skated, skated", "example": "She skates on the ice rink." }
+    {
+      "word": "dance",
+      "meaning": "to move your body to music",
+      "japaneseMeaning": "踊る",
+      "synonyms": "move, step",
+      "antonyms": "stand still, stop",
+      "forms": "dance, dances, dancing, danced, danced",
+      "example": "They dance at the school festival.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f483.svg",
+        "alt": "体を動かして踊る人物の一例。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f483.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "sleep",
+        "swim"
+      ]
+    },
+    {
+      "word": "sketch",
+      "meaning": "to draw a quick picture",
+      "japaneseMeaning": "スケッチする",
+      "synonyms": "draw, make a picture",
+      "antonyms": "erase, color over",
+      "forms": "sketch, sketches, sketching, sketched, sketched",
+      "example": "I sketch a cat in my notebook."
+    },
+    {
+      "word": "paint",
+      "meaning": "to cover a surface or make a picture using colored liquid",
+      "japaneseMeaning": "絵の具で描く／塗る",
+      "synonyms": "color, brush",
+      "antonyms": "erase, clean",
+      "forms": "paint, paints, painting, painted, painted",
+      "example": "We paint flowers in art class."
+    },
+    {
+      "word": "record",
+      "meaning": "to save sound or video",
+      "japaneseMeaning": "録音する／録画する",
+      "synonyms": "save, film",
+      "antonyms": "erase, delete",
+      "forms": "record, records, recording, recorded, recorded",
+      "example": "I record my voice on my phone."
+    },
+    {
+      "word": "download",
+      "meaning": "to get a file from the internet",
+      "japaneseMeaning": "ダウンロードする",
+      "synonyms": "get, save",
+      "antonyms": "upload, delete",
+      "forms": "download, downloads, downloading, downloaded, downloaded",
+      "example": "Download the song before the trip.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/download.svg",
+        "alt": "ネット上の場所から端末へファイルを移す向きの図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/download.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "upload",
+        "print"
+      ]
+    },
+    {
+      "word": "upload",
+      "meaning": "to send a file to the internet",
+      "japaneseMeaning": "アップロードする",
+      "synonyms": "send, post",
+      "antonyms": "download, remove",
+      "forms": "upload, uploads, uploading, uploaded, uploaded",
+      "example": "Upload your photo to the class page.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/upload.svg",
+        "alt": "端末からネット上の場所へファイルを移す向きの図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/upload.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "download",
+        "scan"
+      ]
+    },
+    {
+      "word": "chat",
+      "meaning": "to talk in a friendly way",
+      "japaneseMeaning": "おしゃべりする",
+      "synonyms": "talk, speak",
+      "antonyms": "be silent, ignore",
+      "forms": "chat, chats, chatting, chatted, chatted",
+      "example": "I chat with my friend online."
+    },
+    {
+      "word": "jog",
+      "meaning": "to run slowly for exercise",
+      "japaneseMeaning": "ジョギングする",
+      "synonyms": "run slowly, exercise",
+      "antonyms": "stop, rest",
+      "forms": "jog, jogs, jogging, jogged, jogged",
+      "example": "My father jogs in the park."
+    },
+    {
+      "word": "camp",
+      "meaning": "to sleep outside in a tent",
+      "japaneseMeaning": "キャンプする",
+      "synonyms": "stay outside, sleep outdoors",
+      "antonyms": "stay home, leave",
+      "forms": "camp, camps, camping, camped, camped",
+      "example": "We camp near the lake in summer.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3d5.svg",
+        "alt": "木々の近くに張られたキャンプ用テント。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3d5.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "swim",
+        "ski"
+      ]
+    },
+    {
+      "word": "skate",
+      "meaning": "to move on skates",
+      "japaneseMeaning": "スケートをする",
+      "synonyms": "slide, move on ice",
+      "antonyms": "walk, stop",
+      "forms": "skate, skates, skating, skated, skated",
+      "example": "She skates on the ice rink."
+    }
   ]
 }

@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-business-lesson-10",
+  "title": "Lesson 10",
+  "paragraph": "物流と業務の管理",
+  "words": [
+    {
+      "word": "supply chain",
+      "meaning": "the connected organizations and processes involved in producing and delivering a product",
+      "japaneseMeaning": "サプライチェーン・供給網",
+      "example": "The company reviewed its supply chain after a material shortage.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "inventory",
+        "warehouse"
+      ]
+    },
+    {
+      "word": "lead time",
+      "meaning": "the time between starting or requesting a process and receiving its result",
+      "japaneseMeaning": "リードタイム・発注などから完了までの時間",
+      "example": "The supplier quoted a lead time of three weeks from order to delivery.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "deadline",
+        "milestone"
+      ],
+      "sentencePractice": {
+        "prompt": "The team measures the three weeks from placing the order to receiving the goods. This elapsed interval is the ____.",
+        "distractors": [
+          "deadline",
+          "milestone"
+        ],
+        "reviewNote": "The interval from order to delivery is lead time; a deadline is a latest completion time and a milestone is a significant project point."
+      }
+    },
+    {
+      "word": "shipment",
+      "meaning": "a quantity of goods sent together from one place to another",
+      "japaneseMeaning": "出荷品・発送された荷物",
+      "example": "The shipment arrived at the warehouse on Tuesday.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "invoice",
+        "warehouse"
+      ]
+    },
+    {
+      "word": "warehouse",
+      "meaning": "a building used to store goods before they are sold or distributed",
+      "japaneseMeaning": "倉庫",
+      "example": "The warehouse keeps finished products ready for delivery.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "supply chain",
+        "shipment"
+      ]
+    },
+    {
+      "word": "reorder point",
+      "meaning": "the inventory level at which a business places a new order to replenish stock",
+      "japaneseMeaning": "発注点・再注文する在庫水準",
+      "example": "The store orders more paper when stock reaches the reorder point.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "break-even point",
+        "credit limit"
+      ],
+      "sentencePractice": {
+        "prompt": "The store places a new order whenever the number of units left reaches a chosen stock level. That trigger level is the ____.",
+        "distractors": [
+          "break-even point",
+          "credit limit"
+        ],
+        "reviewNote": "The stock level triggering replenishment is the reorder point; break-even concerns equal revenue and costs, while a credit limit caps permitted debt."
+      }
+    },
+    {
+      "word": "outsourcing",
+      "meaning": "arranging for another organization to carry out work that could be done internally",
+      "japaneseMeaning": "外部委託",
+      "example": "The company considered outsourcing its payroll processing.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "recruitment",
+        "retention"
+      ]
+    },
+    {
+      "word": "compliance",
+      "meaning": "following the rules, standards, or legal requirements that apply to an activity",
+      "japaneseMeaning": "法令や規則の遵守",
+      "example": "The team checks compliance with the company's data handling rules.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "competition",
+        "retention"
+      ]
+    },
+    {
+      "word": "audit",
+      "meaning": "a formal examination of records or processes to check their accuracy or whether rules are followed",
+      "japaneseMeaning": "監査",
+      "example": "The audit checked whether payments matched the supporting records.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "forecast",
+        "campaign"
+      ]
+    },
+    {
+      "word": "confidentiality agreement",
+      "meaning": "an agreement requiring certain shared information to be kept private",
+      "japaneseMeaning": "秘密保持契約",
+      "example": "The partners signed a confidentiality agreement before sharing the design.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "purchase order",
+        "contingency plan"
+      ]
+    },
+    {
+      "word": "operating cost",
+      "meaning": "an expense involved in running a business's normal activities",
+      "japaneseMeaning": "運営費・営業費用",
+      "example": "Electricity is a regular operating cost for the factory.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "revenue",
+        "asset"
+      ]
+    }
+  ]
+}

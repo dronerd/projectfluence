@@ -23,6 +23,18 @@ test("missing or changed source entries keep historical meaning snapshots withou
   const [word]=hydrateReviewWords([old],catalog);assert.equal(word.historical,true);assert.equal(word.definition,"Old definition");assert.equal(word.example,"Old example");assert.equal(word.image,undefined);
   const questions=buildReviewQuestions([word],catalog);assert.equal(questions.length,1);assert.equal(questions[0].questionType,"meaning");assert.equal(questions[0].prompt,"Old definition");
 });
+
+test("previously saved words acquire current supporting images in review without changing progress identity",()=>{
+  const current:CatalogWord={...catalog[1],definitionType:"image+text",imageRole:"supporting"};
+  const updated=[catalog[0],current,...catalog.slice(2)];
+  const [word]=hydrateReviewWords([snapshot],updated);
+  assert.equal(word.imageRole,"supporting");assert.equal(word.image?.src,current.image?.src);
+  assert.equal(word.id,snapshot.id);assert.equal(word.mistakeCount,snapshot.mistake_count);
+  assert.equal(word.sourceLessonId,snapshot.source_lesson_id);
+  const questions=buildReviewQuestions([word],updated);
+  assert.deepEqual(new Set(questions.map(question=>question.promptMode)),new Set(["text","sentence"]));
+  assert.ok(questions.every(question=>question.image?.src===current.image?.src));
+});
 test("legacy numeric source can resolve while ambiguous source-free words never select an arbitrary matching lesson",()=>{
   assert.equal(hydrateReviewWords([{...snapshot,source_lesson_id:"TOEFL-intermediate-2"}],catalog)[0].historical,false);
   assert.equal(hydrateReviewWords([{...snapshot,source_lesson_id:null,source_lesson_number:null}],catalog)[0].historical,true);

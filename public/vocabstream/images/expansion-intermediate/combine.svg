@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>別々のパンと具材を合わせ、一つのサンドイッチにする図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="24" y="80" width="61" height="15" rx="5" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><rect x="26" y="117" width="57" height="13" rx="5" fill="#89b28c" stroke="#40565b" stroke-width="2.5"/><rect x="25" y="152" width="60" height="14" rx="5" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><line x1="116" y1="123" x2="210" y2="123" stroke="#77aebc" stroke-width="5" stroke-linecap="round"/><polygon points="210,123 200.0,118.0 200.0,128.0" fill="#77aebc"/><rect x="238" y="95" width="91" height="24" rx="5" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><rect x="242" y="122" width="83" height="14" rx="5" fill="#89b28c" stroke="#40565b" stroke-width="2.5"/><rect x="238" y="140" width="91" height="24" rx="5" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><text x="180" y="216" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">別々の材料を一つにする</text>
+</svg>

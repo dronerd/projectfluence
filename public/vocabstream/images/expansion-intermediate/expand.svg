@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>小さかった風船に空気が入り、全体が大きくなる前後の図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<text x="78" y="35" text-anchor="middle" font-size="16" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">前</text><text x="273" y="35" text-anchor="middle" font-size="16" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">後</text><circle cx="80" cy="120" r="25" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><line x1="80" y1="145" x2="68" y2="197" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><line x1="133" y1="120" x2="204" y2="120" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="204,120 194.0,115.0 194.0,125.0" fill="#40565b"/><circle cx="270" cy="120" r="53" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><line x1="270" y1="173" x2="257" y2="210" stroke="#40565b" stroke-width="3" stroke-linecap="round"/>
+</svg>

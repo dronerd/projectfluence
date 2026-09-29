@@ -3,15 +3,233 @@
   "title": "Lesson 9",
   "paragraph": "Place and transport nouns for simple travel.",
   "words": [
-    { "word": "zoo", "meaning": "a place where people can see animals", "japaneseMeaning": "動物園", "synonyms": "", "antonyms": "", "forms": "zoo, zoos", "example": "We saw a lion at the zoo." },
-    {"word": "mountain", "meaning": "a very high hill", "japaneseMeaning": "山", "synonyms": "", "antonyms": "", "forms": "mountain, mountains", "example": "The mountain is covered with snow.", "definitionType": "image+text", "image": {"src": "/vocabstream/images/mountain.svg", "alt": "ふもとに木があり、頂上に雪をかぶった高い山。", "width": 240, "height": 180, "source": "ProjectFluence original SVG illustration", "sourceUrl": "/vocabstream/images/mountain.svg", "creator": "ProjectFluence", "license": "CC0-1.0", "credit": "ProjectFluence · CC0-1.0"}, "meaningDistractors": ["bike", "car"]},
-    { "word": "city", "meaning": "a large town with many people", "japaneseMeaning": "都市", "synonyms": "large town", "antonyms": "", "forms": "city, cities", "example": "Tokyo is a big city." },
-    { "word": "store", "meaning": "a place where people buy things", "japaneseMeaning": "店", "synonyms": "shop", "antonyms": "", "forms": "store, stores", "example": "The store sells shoes." },
-    { "word": "mall", "meaning": "a large building with many shops", "japaneseMeaning": "ショッピングモール", "synonyms": "shopping center", "antonyms": "", "forms": "mall, malls", "example": "We bought shoes at the mall." },
-    { "word": "station", "meaning": "a place where trains or buses stop", "japaneseMeaning": "駅", "synonyms": "", "antonyms": "", "forms": "station, stations", "example": "The station is near my school." },
-    { "word": "taxi", "meaning": "a car you pay to ride in", "japaneseMeaning": "タクシー", "synonyms": "cab", "antonyms": "", "forms": "taxi, taxis", "example": "We took a taxi to the hotel." },
-    {"word": "bike", "meaning": "a bicycle", "japaneseMeaning": "自転車", "synonyms": "bicycle", "antonyms": "", "forms": "bike, bikes", "example": "My bike is red.", "definitionType": "image+text", "image": {"src": "/vocabstream/images/bike.svg", "alt": "二つの車輪、ペダル、サドル、ハンドルがある自転車。", "width": 240, "height": 180, "source": "ProjectFluence original SVG illustration", "sourceUrl": "/vocabstream/images/bike.svg", "creator": "ProjectFluence", "license": "CC0-1.0", "credit": "ProjectFluence · CC0-1.0"}, "meaningDistractors": ["taxi", "mountain"]},
-    {"word": "car", "meaning": "a road vehicle for a few people", "japaneseMeaning": "車", "synonyms": "auto", "antonyms": "", "forms": "car, cars", "example": "My father drives a car.", "definitionType": "image+text", "image": {"src": "/vocabstream/images/car.svg", "alt": "窓、二つのドア、タイヤが見える青い乗用車。", "width": 240, "height": 180, "source": "ProjectFluence original SVG illustration", "sourceUrl": "/vocabstream/images/car.svg", "creator": "ProjectFluence", "license": "CC0-1.0", "credit": "ProjectFluence · CC0-1.0"}, "meaningDistractors": ["bike", "mountain"]},
-    { "word": "home", "meaning": "the place where you live", "japaneseMeaning": "家、家庭", "synonyms": "house", "antonyms": "", "forms": "home, homes", "example": "I go home after school." }
+    {
+      "word": "zoo",
+      "meaning": "a place where people can see animals",
+      "japaneseMeaning": "動物園",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "zoo, zoos",
+      "example": "We saw a lion at the zoo."
+    },
+    {
+      "word": "mountain",
+      "meaning": "a very high hill",
+      "japaneseMeaning": "山",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "mountain, mountains",
+      "example": "The mountain is covered with snow.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/mountain.svg",
+        "alt": "ふもとに木があり、頂上に雪をかぶった高い山。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/mountain.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "bike",
+        "car"
+      ]
+    },
+    {
+      "word": "city",
+      "meaning": "a large town with many people",
+      "japaneseMeaning": "都市",
+      "synonyms": "large town",
+      "antonyms": "",
+      "forms": "city, cities",
+      "example": "Tokyo is a big city.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3d9.svg",
+        "alt": "多くの高層建物が集まる都市の風景。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3d9.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "beach",
+        "mountain"
+      ]
+    },
+    {
+      "word": "store",
+      "meaning": "a place where people buy things",
+      "japaneseMeaning": "店",
+      "synonyms": "shop",
+      "antonyms": "",
+      "forms": "store, stores",
+      "example": "The store sells shoes.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3ea.svg",
+        "alt": "商品を売る小さな店舗の外観。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3ea.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "castle",
+        "hospital"
+      ]
+    },
+    {
+      "word": "mall",
+      "meaning": "a large building with many shops",
+      "japaneseMeaning": "ショッピングモール",
+      "synonyms": "shopping center",
+      "antonyms": "",
+      "forms": "mall, malls",
+      "example": "We bought shoes at the mall."
+    },
+    {
+      "word": "station",
+      "meaning": "a place where trains or buses stop",
+      "japaneseMeaning": "駅",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "station, stations",
+      "example": "The station is near my school.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f689.svg",
+        "alt": "電車と線路、信号で駅を表した図。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f689.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "airport",
+        "hospital"
+      ]
+    },
+    {
+      "word": "taxi",
+      "meaning": "a car you pay to ride in",
+      "japaneseMeaning": "タクシー",
+      "synonyms": "cab",
+      "antonyms": "",
+      "forms": "taxi, taxis",
+      "example": "We took a taxi to the hotel.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f695.svg",
+        "alt": "屋根に営業用の表示がある黄色いタクシー。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f695.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "bike",
+        "ferry"
+      ]
+    },
+    {
+      "word": "bike",
+      "meaning": "a bicycle",
+      "japaneseMeaning": "自転車",
+      "synonyms": "bicycle",
+      "antonyms": "",
+      "forms": "bike, bikes",
+      "example": "My bike is red.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/bike.svg",
+        "alt": "二つの車輪、ペダル、サドル、ハンドルがある自転車。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/bike.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "taxi",
+        "mountain"
+      ]
+    },
+    {
+      "word": "car",
+      "meaning": "a road vehicle for a few people",
+      "japaneseMeaning": "車",
+      "synonyms": "auto",
+      "antonyms": "",
+      "forms": "car, cars",
+      "example": "My father drives a car.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/car.svg",
+        "alt": "窓、二つのドア、タイヤが見える青い乗用車。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/car.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "bike",
+        "mountain"
+      ]
+    },
+    {
+      "word": "home",
+      "meaning": "the place where you live",
+      "japaneseMeaning": "家、家庭",
+      "synonyms": "house",
+      "antonyms": "",
+      "forms": "home, homes",
+      "example": "I go home after school.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3e0.svg",
+        "alt": "窓と扉と屋根のある住まいの一例。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3e0.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "factory",
+        "station"
+      ]
+    }
   ]
 }

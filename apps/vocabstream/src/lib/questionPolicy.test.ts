@@ -38,3 +38,19 @@ test("optional licensed images expose image mode without changing text-only comp
   for(const patch of [{src:"https://tracking.example/image.png"},{src:"/vocabstream/images/../private.png"},{license:"unknown"},{creator:""},{width:0}])assert.equal(validWordImage({...image,...patch}),undefined);
   assert.equal(buildWordQuestions({...target,definitionType:"image",image:{...image,alt:"happy"}},pool,source)[0].promptMode,"text","visual fallback must not reveal the English answer");
 });
+
+test("supporting illustrations keep text questions and accompany both meaning and sentence feedback",()=>{
+  const word:LessonWord={...target,definitionType:"image+text",imageRole:"supporting",image,
+    sentencePractice:{prompt:"She felt ____ because she had won a prize.",distractors:["tired","angry"],reviewNote:"Fixture checks question structure only."}};
+  const questions=buildWordQuestions(word,pool,source);
+  assert.deepEqual(questions.map(question=>question.promptMode),["text","sentence"]);
+  assert.equal(questions[0].prompt,target.meaning);
+  assert.ok(questions.every(question=>question.image?.src===image.src && question.imageRole==="supporting"));
+  assert.equal(questions[0].sourceLessonId,source.lessonId);
+});
+
+test("attribution-required artwork fails closed without a valid license link and credit",()=>{
+  const licensed={...image,license:"CC-BY-4.0",licenseUrl:"https://creativecommons.org/licenses/by/4.0/",credit:"Twemoji by Twitter and contributors",sourceUrl:"https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f34e.svg"};
+  assert.ok(validWordImage(licensed));
+  for(const patch of [{licenseUrl:undefined},{licenseUrl:"javascript:alert(1)"},{credit:""},{sourceUrl:"https://user:password@example.com"},{sourceUrl:"javascript:alert(1)"}])assert.equal(validWordImage({...licensed,...patch}),undefined);
+});

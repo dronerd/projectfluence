@@ -36,7 +36,25 @@
       "synonyms": "part, element",
       "antonyms": "whole, system",
       "forms": "component, components",
-      "example": "Teamwork is an important component of the project."
+      "example": "Teamwork is an important component of the project.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/component.svg",
+        "alt": "時計の内部に組み込む、一枚の歯車を取り出して示す図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/component.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "coincidence",
+        "host"
+      ]
     },
     {
       "word": "identification",
@@ -72,7 +90,25 @@
       "synonyms": "space, length",
       "antonyms": "closeness, nearness",
       "forms": "distance, distances",
-      "example": "The distance from my house to school is two kilometers."
+      "example": "The distance from my house to school is two kilometers.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/distance.svg",
+        "alt": "二軒の家の間の長さを、両矢印と十メートルの表示で示している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/distance.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "schedule",
+        "identification"
+      ]
     },
     {
       "word": "coincidence",

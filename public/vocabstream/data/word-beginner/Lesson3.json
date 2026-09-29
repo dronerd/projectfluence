@@ -10,7 +10,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "juice, juices",
-      "example": "Orange juice is in the glass."
+      "example": "Orange juice is in the glass.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9c3.svg",
+        "alt": "ストローを挿した果物飲料のパック。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9c3.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "coffee",
+        "butter"
+      ]
     },
     {
       "word": "coffee",
@@ -19,7 +37,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "coffee, coffees",
-      "example": "My father drinks coffee every morning."
+      "example": "My father drinks coffee every morning.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/2615.svg",
+        "alt": "黒っぽい飲み物の入った、湯気の立つカップ。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/2615.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "bread",
+        "hat"
+      ]
     },
     {
       "word": "tea",
@@ -28,7 +64,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "tea, teas",
-      "example": "This tea is hot."
+      "example": "This tea is hot.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f375.svg",
+        "alt": "緑色の茶を入れた、持ち手のない茶碗。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f375.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "pizza",
+        "shirt"
+      ]
     },
     {
       "word": "breakfast",

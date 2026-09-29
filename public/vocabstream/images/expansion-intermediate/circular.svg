@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>角のない、まん丸の輪の形。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<circle cx="178" cy="122" r="77" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="178" cy="122" r="63" fill="#f5f8f6" stroke="none" stroke-width="2.5"/><text x="180" y="222" text-anchor="middle" font-size="18" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">丸い形</text>
+</svg>

@@ -3,15 +3,157 @@
   "title": "Lesson 22",
   "paragraph": "Job nouns for talking about people's work.",
   "words": [
-    { "word": "doctor", "meaning": "a person trained to find and treat illnesses", "japaneseMeaning": "医者", "synonyms": "", "antonyms": "", "forms": "doctor, doctors", "example": "The doctor checked my throat.", "meaningDistractors": ["pilot", "farmer"] },
-    { "word": "farmer", "meaning": "a person who grows food or keeps animals", "japaneseMeaning": "農家、農夫", "synonyms": "", "antonyms": "", "forms": "farmer, farmers", "example": "The farmer grows rice." },
-    { "word": "nurse", "meaning": "a person trained to care for sick or injured people", "japaneseMeaning": "看護師", "synonyms": "", "antonyms": "", "forms": "nurse, nurses", "example": "The nurse gave me medicine.", "meaningDistractors": ["driver", "plumber"] },
-    { "word": "driver", "meaning": "a person who drives a car, bus, or taxi", "japaneseMeaning": "運転手", "synonyms": "", "antonyms": "", "forms": "driver, drivers", "example": "The driver stopped the bus." },
-    { "word": "cashier", "meaning": "a person who takes money in a shop", "japaneseMeaning": "レジ係", "synonyms": "clerk", "antonyms": "", "forms": "cashier, cashiers", "example": "The cashier gave me change." },
-    { "word": "plumber", "meaning": "a person who fixes water pipes", "japaneseMeaning": "配管工", "synonyms": "", "antonyms": "", "forms": "plumber, plumbers", "example": "The plumber fixed the sink." },
-    { "word": "electrician", "meaning": "a person who fixes lights and wires", "japaneseMeaning": "電気技師、電気工", "synonyms": "", "antonyms": "", "forms": "electrician, electricians", "example": "The electrician fixed the light." },
-    { "word": "pilot", "meaning": "a person who flies a plane", "japaneseMeaning": "パイロット", "synonyms": "", "antonyms": "", "forms": "pilot, pilots", "example": "The pilot spoke to the passengers." },
-    { "word": "firefighter", "meaning": "a person who stops fires", "japaneseMeaning": "消防士", "synonyms": "", "antonyms": "", "forms": "firefighter, firefighters", "example": "The firefighter saved the house." },
-    { "word": "photographer", "meaning": "a person who takes photos", "japaneseMeaning": "写真家、カメラマン", "synonyms": "", "antonyms": "", "forms": "photographer, photographers", "example": "The photographer took a family photo." }
+    {
+      "word": "doctor",
+      "meaning": "a person trained to find and treat illnesses",
+      "japaneseMeaning": "医者",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "doctor, doctors",
+      "example": "The doctor checked my throat.",
+      "meaningDistractors": [
+        "pilot",
+        "farmer"
+      ]
+    },
+    {
+      "word": "farmer",
+      "meaning": "a person who grows food or keeps animals",
+      "japaneseMeaning": "農家、農夫",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "farmer, farmers",
+      "example": "The farmer grows rice.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9d1-200d-1f33e.svg",
+        "alt": "農作業用の帽子をかぶり、農具を手にした人物。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9d1-200d-1f33e.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "pilot",
+        "firefighter"
+      ]
+    },
+    {
+      "word": "nurse",
+      "meaning": "a person trained to care for sick or injured people",
+      "japaneseMeaning": "看護師",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "nurse, nurses",
+      "example": "The nurse gave me medicine.",
+      "meaningDistractors": [
+        "driver",
+        "plumber"
+      ]
+    },
+    {
+      "word": "driver",
+      "meaning": "a person who drives a car, bus, or taxi",
+      "japaneseMeaning": "運転手",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "driver, drivers",
+      "example": "The driver stopped the bus."
+    },
+    {
+      "word": "cashier",
+      "meaning": "a person who takes money in a shop",
+      "japaneseMeaning": "レジ係",
+      "synonyms": "clerk",
+      "antonyms": "",
+      "forms": "cashier, cashiers",
+      "example": "The cashier gave me change."
+    },
+    {
+      "word": "plumber",
+      "meaning": "a person who fixes water pipes",
+      "japaneseMeaning": "配管工",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "plumber, plumbers",
+      "example": "The plumber fixed the sink."
+    },
+    {
+      "word": "electrician",
+      "meaning": "a person who fixes lights and wires",
+      "japaneseMeaning": "電気技師、電気工",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "electrician, electricians",
+      "example": "The electrician fixed the light."
+    },
+    {
+      "word": "pilot",
+      "meaning": "a person who flies a plane",
+      "japaneseMeaning": "パイロット",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "pilot, pilots",
+      "example": "The pilot spoke to the passengers.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9d1-200d-2708-fe0f.svg",
+        "alt": "航空用の帽子と制服を着たパイロットの表現。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9d1-200d-2708-fe0f.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "farmer",
+        "teacher"
+      ]
+    },
+    {
+      "word": "firefighter",
+      "meaning": "a person who stops fires",
+      "japaneseMeaning": "消防士",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "firefighter, firefighters",
+      "example": "The firefighter saved the house.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9d1-200d-1f692.svg",
+        "alt": "消防用のヘルメットと防護服を着た人物。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9d1-200d-1f692.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "farmer",
+        "pilot"
+      ]
+    },
+    {
+      "word": "photographer",
+      "meaning": "a person who takes photos",
+      "japaneseMeaning": "写真家、カメラマン",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "photographer, photographers",
+      "example": "The photographer took a family photo."
+    }
   ]
 }

@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-academic-lesson-10",
+  "title": "Lesson 10",
+  "paragraph": "研究成果の検討と透明性",
+  "words": [
+    {
+      "word": "systematic review",
+      "meaning": "a review that uses explicit planned methods to find, assess, and combine relevant research on a defined question",
+      "japaneseMeaning": "システマティックレビュー・系統的レビュー",
+      "example": "The systematic review used stated criteria to select studies.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "case study",
+        "pilot study"
+      ]
+    },
+    {
+      "word": "meta-analysis",
+      "meaning": "a statistical analysis that combines comparable numerical results from several studies",
+      "japaneseMeaning": "メタ分析",
+      "example": "The meta-analysis combined effect estimates from the included studies.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "random assignment",
+        "coding"
+      ],
+      "sentencePractice": {
+        "prompt": "The researchers statistically combine comparable numerical results from several separate studies. This analysis is a ____.",
+        "distractors": [
+          "case study",
+          "pilot study"
+        ],
+        "reviewNote": "Combining numerical results across separate studies statistically defines a meta-analysis; a case study investigates a particular case and a pilot study checks planned procedures on a small scale."
+      }
+    },
+    {
+      "word": "research gap",
+      "meaning": "an unanswered question or missing area of knowledge in existing research",
+      "japaneseMeaning": "研究上の未解明点・研究ギャップ",
+      "example": "The literature review identified a research gap concerning older learners.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "confounding variable",
+        "outlier"
+      ]
+    },
+    {
+      "word": "generalizability",
+      "meaning": "the extent to which findings can apply beyond the people or settings directly studied",
+      "japaneseMeaning": "一般化可能性",
+      "example": "The narrow age range limits the generalizability of the findings.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "reliability",
+        "transparency"
+      ]
+    },
+    {
+      "word": "transparency",
+      "meaning": "making research decisions and procedures clear enough for others to understand and evaluate",
+      "japaneseMeaning": "研究の透明性",
+      "example": "Reporting changes to the analysis plan improves transparency.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "anonymity",
+        "generalizability"
+      ]
+    },
+    {
+      "word": "reproducibility",
+      "meaning": "the ability to obtain consistent results by using the same data and analysis procedures again",
+      "japaneseMeaning": "再現可能性",
+      "example": "Sharing the analysis code helped the team check reproducibility.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "random sampling",
+        "anonymity"
+      ],
+      "usageNote": "ここでは同じデータと手順で結果を得直せることです。新たなデータで結果を確かめる replication とは区別しますが、分野により用語法は異なります。"
+    },
+    {
+      "word": "supplementary material",
+      "meaning": "additional files or information accompanying a paper outside its main text",
+      "japaneseMeaning": "補足資料",
+      "example": "The detailed tables are available as supplementary material.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "abstract",
+        "thesis statement"
+      ]
+    },
+    {
+      "word": "correction",
+      "meaning": "a published notice or change that fixes an error in a scholarly work",
+      "japaneseMeaning": "訂正・訂正文",
+      "example": "The journal issued a correction to the mislabeled figure.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "retraction",
+        "submission"
+      ]
+    },
+    {
+      "word": "retraction",
+      "meaning": "a formal notice that a published work is withdrawn from the reliable research record",
+      "japaneseMeaning": "論文の撤回",
+      "example": "The journal published a retraction after serious problems were confirmed.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "correction",
+        "revision request"
+      ],
+      "usageNote": "撤回は必ずしも研究不正があったことを意味しません。",
+      "sentencePractice": {
+        "prompt": "Because of serious problems, the journal formally withdraws the paper from the reliable research record. The published notice is a ____.",
+        "distractors": [
+          "correction",
+          "revision request"
+        ],
+        "reviewNote": "Formal withdrawal identifies a retraction; a correction fixes an error while retaining the work, and a revision request asks for changes rather than withdrawing it."
+      }
+    },
+    {
+      "word": "funding acknowledgement",
+      "meaning": "a statement identifying financial support received for research",
+      "japaneseMeaning": "研究資金への謝辞・資金提供の明示",
+      "example": "The funding acknowledgement names the organization that supported the study.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "conflict of interest",
+        "citation"
+      ]
+    }
+  ]
+}

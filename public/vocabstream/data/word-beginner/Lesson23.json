@@ -3,15 +3,185 @@
   "title": "Lesson 23",
   "paragraph": "Nature and environment nouns for simple everyday talk.",
   "words": [
-    { "word": "air", "meaning": "what people breathe", "japaneseMeaning": "空気", "synonyms": "", "antonyms": "", "forms": "air", "example": "The air is clean today." },
-    { "word": "water", "meaning": "a clear liquid people drink", "japaneseMeaning": "水", "synonyms": "", "antonyms": "", "forms": "water", "example": "Please drink water after running." },
-    { "word": "earth", "meaning": "the world we live on", "japaneseMeaning": "地球、大地", "synonyms": "world", "antonyms": "", "forms": "earth", "example": "The earth goes around the sun." },
-    { "word": "plant", "meaning": "a living thing that grows in soil", "japaneseMeaning": "植物", "synonyms": "", "antonyms": "", "forms": "plant, plants", "example": "This plant needs water." },
-    { "word": "animal", "meaning": "a living thing like a cat, dog, or bird", "japaneseMeaning": "動物", "synonyms": "", "antonyms": "", "forms": "animal, animals", "example": "A rabbit is an animal." },
-    { "word": "trash", "meaning": "things people throw away", "japaneseMeaning": "ごみ", "synonyms": "garbage", "antonyms": "", "forms": "trash", "example": "Put the trash in the bin." },
-    { "word": "plastic", "meaning": "a light material used for bags and bottles", "japaneseMeaning": "プラスチック", "synonyms": "", "antonyms": "", "forms": "plastic, plastics", "example": "This cup is made of plastic." },
-    { "word": "paper", "meaning": "thin material used for writing", "japaneseMeaning": "紙", "synonyms": "", "antonyms": "", "forms": "paper, papers", "example": "Write your name on the paper." },
-    { "word": "bin", "meaning": "a box for trash", "japaneseMeaning": "ごみ箱", "synonyms": "trash can", "antonyms": "", "forms": "bin, bins", "example": "The bin is near the door." },
-    { "word": "beach", "meaning": "land with sand by the sea", "japaneseMeaning": "浜、ビーチ", "synonyms": "", "antonyms": "", "forms": "beach, beaches", "example": "We cleaned the beach on Sunday." }
+    {
+      "word": "air",
+      "meaning": "what people breathe",
+      "japaneseMeaning": "空気",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "air",
+      "example": "The air is clean today."
+    },
+    {
+      "word": "water",
+      "meaning": "a clear liquid people drink",
+      "japaneseMeaning": "水",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "water",
+      "example": "Please drink water after running."
+    },
+    {
+      "word": "earth",
+      "meaning": "the world we live on",
+      "japaneseMeaning": "地球、大地",
+      "synonyms": "world",
+      "antonyms": "",
+      "forms": "earth",
+      "example": "The earth goes around the sun.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f30d.svg",
+        "alt": "大陸と海が見える地球。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f30d.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "cloud",
+        "leaf"
+      ]
+    },
+    {
+      "word": "plant",
+      "meaning": "a living thing that grows in soil",
+      "japaneseMeaning": "植物",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "plant, plants",
+      "example": "This plant needs water.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1fab4.svg",
+        "alt": "鉢の土から葉を伸ばす植物。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1fab4.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "animal",
+        "paper"
+      ]
+    },
+    {
+      "word": "animal",
+      "meaning": "a living thing like a cat, dog, or bird",
+      "japaneseMeaning": "動物",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "animal, animals",
+      "example": "A rabbit is an animal."
+    },
+    {
+      "word": "trash",
+      "meaning": "things people throw away",
+      "japaneseMeaning": "ごみ",
+      "synonyms": "garbage",
+      "antonyms": "",
+      "forms": "trash",
+      "example": "Put the trash in the bin."
+    },
+    {
+      "word": "plastic",
+      "meaning": "a light material used for bags and bottles",
+      "japaneseMeaning": "プラスチック",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "plastic, plastics",
+      "example": "This cup is made of plastic."
+    },
+    {
+      "word": "paper",
+      "meaning": "thin material used for writing",
+      "japaneseMeaning": "紙",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "paper, papers",
+      "example": "Write your name on the paper.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f4c4.svg",
+        "alt": "書くための薄い紙の一枚。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f4c4.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "water",
+        "plastic"
+      ]
+    },
+    {
+      "word": "bin",
+      "meaning": "a box for trash",
+      "japaneseMeaning": "ごみ箱",
+      "synonyms": "trash can",
+      "antonyms": "",
+      "forms": "bin, bins",
+      "example": "The bin is near the door.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f5d1.svg",
+        "alt": "網目のあるごみを入れる容器。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f5d1.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "bottle",
+        "plate"
+      ]
+    },
+    {
+      "word": "beach",
+      "meaning": "land with sand by the sea",
+      "japaneseMeaning": "浜、ビーチ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "beach, beaches",
+      "example": "We cleaned the beach on Sunday.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3d6.svg",
+        "alt": "海辺の砂浜に立つパラソル。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3d6.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "mountain",
+        "city"
+      ]
+    }
   ]
 }

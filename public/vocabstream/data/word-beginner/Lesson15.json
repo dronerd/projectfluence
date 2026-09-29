@@ -3,15 +3,275 @@
   "title": "Lesson 15",
   "paragraph": "Number words from one to ten.",
   "words": [
-    { "word": "one", "meaning": "the number 1", "japaneseMeaning": "1、一つ", "synonyms": "", "antonyms": "", "forms": "one", "example": "I have one pencil." },
-    { "word": "two", "meaning": "the number 2", "japaneseMeaning": "2、二つ", "synonyms": "", "antonyms": "", "forms": "two", "example": "I have two pencils." },
-    { "word": "three", "meaning": "the number 3", "japaneseMeaning": "3、三つ", "synonyms": "", "antonyms": "", "forms": "three", "example": "I have three pencils." },
-    { "word": "four", "meaning": "the number 4", "japaneseMeaning": "4、四つ", "synonyms": "", "antonyms": "", "forms": "four", "example": "I have four pencils." },
-    { "word": "five", "meaning": "the number 5", "japaneseMeaning": "5、五つ", "synonyms": "", "antonyms": "", "forms": "five", "example": "I have five pencils." },
-    { "word": "six", "meaning": "the number 6", "japaneseMeaning": "6、六つ", "synonyms": "", "antonyms": "", "forms": "six", "example": "I have six pencils." },
-    { "word": "seven", "meaning": "the number 7", "japaneseMeaning": "7、七つ", "synonyms": "", "antonyms": "", "forms": "seven", "example": "I have seven pencils." },
-    { "word": "eight", "meaning": "the number 8", "japaneseMeaning": "8、八つ", "synonyms": "", "antonyms": "", "forms": "eight", "example": "I have eight pencils." },
-    { "word": "nine", "meaning": "the number 9", "japaneseMeaning": "9、九つ", "synonyms": "", "antonyms": "", "forms": "nine", "example": "I have nine pencils." },
-    { "word": "ten", "meaning": "the number 10", "japaneseMeaning": "10、十", "synonyms": "", "antonyms": "", "forms": "ten", "example": "I have ten pencils." }
+    {
+      "word": "one",
+      "meaning": "the number 1",
+      "japaneseMeaning": "1、一つ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "one",
+      "example": "I have one pencil.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/one.svg",
+        "alt": "枠の中に丸が1個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/one.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "four",
+        "nine"
+      ]
+    },
+    {
+      "word": "two",
+      "meaning": "the number 2",
+      "japaneseMeaning": "2、二つ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "two",
+      "example": "I have two pencils.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/two.svg",
+        "alt": "枠の中に丸が2個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/two.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "five",
+        "ten"
+      ]
+    },
+    {
+      "word": "three",
+      "meaning": "the number 3",
+      "japaneseMeaning": "3、三つ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "three",
+      "example": "I have three pencils.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/three.svg",
+        "alt": "枠の中に丸が3個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/three.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "six",
+        "eleven"
+      ]
+    },
+    {
+      "word": "four",
+      "meaning": "the number 4",
+      "japaneseMeaning": "4、四つ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "four",
+      "example": "I have four pencils.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/four.svg",
+        "alt": "枠の中に丸が4個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/four.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "seven",
+        "twelve"
+      ]
+    },
+    {
+      "word": "five",
+      "meaning": "the number 5",
+      "japaneseMeaning": "5、五つ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "five",
+      "example": "I have five pencils.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/five.svg",
+        "alt": "枠の中に丸が5個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/five.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "eight",
+        "thirteen"
+      ]
+    },
+    {
+      "word": "six",
+      "meaning": "the number 6",
+      "japaneseMeaning": "6、六つ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "six",
+      "example": "I have six pencils.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/six.svg",
+        "alt": "枠の中に丸が6個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/six.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "nine",
+        "fourteen"
+      ]
+    },
+    {
+      "word": "seven",
+      "meaning": "the number 7",
+      "japaneseMeaning": "7、七つ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "seven",
+      "example": "I have seven pencils.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/seven.svg",
+        "alt": "枠の中に丸が7個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/seven.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "ten",
+        "fifteen"
+      ]
+    },
+    {
+      "word": "eight",
+      "meaning": "the number 8",
+      "japaneseMeaning": "8、八つ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "eight",
+      "example": "I have eight pencils.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/eight.svg",
+        "alt": "枠の中に丸が8個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/eight.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "eleven",
+        "sixteen"
+      ]
+    },
+    {
+      "word": "nine",
+      "meaning": "the number 9",
+      "japaneseMeaning": "9、九つ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "nine",
+      "example": "I have nine pencils.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/nine.svg",
+        "alt": "枠の中に丸が9個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/nine.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "twelve",
+        "seventeen"
+      ]
+    },
+    {
+      "word": "ten",
+      "meaning": "the number 10",
+      "japaneseMeaning": "10、十",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "ten",
+      "example": "I have ten pencils.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/ten.svg",
+        "alt": "枠の中に丸が10個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/ten.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "thirteen",
+        "eighteen"
+      ]
+    }
   ]
 }

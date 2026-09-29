@@ -27,7 +27,25 @@
       "synonyms": "stability, equality",
       "antonyms": "imbalance, disorder",
       "forms": "balance, balances",
-      "example": "Good balance helps you ride a bicycle safely."
+      "example": "Good balance helps you ride a bicycle safely.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/balance.svg",
+        "alt": "左右に同じ重さの物を載せた天びんが、水平につり合っている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/balance.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "resident",
+        "author"
+      ]
     },
     {
       "word": "base",
@@ -36,7 +54,25 @@
       "synonyms": "foundation, center",
       "antonyms": "top, branch",
       "forms": "base, bases",
-      "example": "The lamp has a heavy base, so it does not fall."
+      "example": "The lamp has a heavy base, so it does not fall.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/base.svg",
+        "alt": "建物の一番下で全体を支える土台が、別の色で示されている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/base.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "origin",
+        "symptom"
+      ]
     },
     {
       "word": "origin",

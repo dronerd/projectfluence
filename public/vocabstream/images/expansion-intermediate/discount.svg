@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>二百円の元値が取り消され、百五十円へ値下げされた価格札。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="40" y="60" width="119" height="109" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><text x="100" y="126" text-anchor="middle" font-size="27" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">¥200</text><line x1="61" y1="113" x2="138" y2="130" stroke="#d9887b" stroke-width="4" stroke-linecap="round"/><line x1="174" y1="118" x2="209" y2="118" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="209,118 199.0,113.0 199.0,123.0" fill="#40565b"/><rect x="227" y="60" width="90" height="109" rx="5" fill="#89b28c" stroke="#40565b" stroke-width="2.5"/><text x="272" y="126" text-anchor="middle" font-size="26" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">¥150</text><text x="180" y="214" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">元の価格より 25% 安い</text>
+</svg>

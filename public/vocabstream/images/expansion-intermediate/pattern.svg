@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>丸と三角という同じ並びが、横に三回繰り返される模様。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<circle cx="43" cy="112" r="19" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><path d="M76 135l19-43 20 43Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="134" cy="112" r="19" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><path d="M167 135l19-43 20 43Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="225" cy="112" r="19" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><path d="M258 135l19-43 20 43Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M22 158v15h103v-15" fill="none" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="76" y="202" text-anchor="middle" font-size="16" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">同じ並び</text><line x1="145" y1="179" x2="260" y2="179" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="260,179 250.0,174.0 250.0,184.0" fill="#40565b"/>
+</svg>

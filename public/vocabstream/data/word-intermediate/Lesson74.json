@@ -63,7 +63,25 @@
       "synonyms": "gap, period",
       "antonyms": "continuity, unbroken",
       "forms": "interval, intervals",
-      "example": "Short intervals improved efficiency."
+      "example": "Short intervals improved efficiency.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/interval.svg",
+        "alt": "十時と十時十五分という二つの時刻の間に、十五分の隔たりがある図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/interval.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "material",
+        "reaction"
+      ]
     },
     {
       "word": "officer",

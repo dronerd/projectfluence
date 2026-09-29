@@ -18,7 +18,25 @@
       "synonyms": "enough, adequate",
       "antonyms": "insufficient, lacking",
       "forms": "sufficient, more sufficient, most sufficient",
-      "example": "We have sufficient time to finish the project."
+      "example": "We have sufficient time to finish the project.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/sufficient.svg",
+        "alt": "四人に一つずつ配れるよう、四個のコップが用意されている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/sufficient.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "western",
+        "remote"
+      ]
     },
     {
       "word": "limited",

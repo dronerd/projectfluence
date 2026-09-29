@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>りんご、オレンジ、バナナという異なる種類の果物が並ぶ。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<text x="180" y="35" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">いろいろな種類</text><circle cx="77" cy="115" r="31" fill="#d9887b" stroke="#40565b" stroke-width="2.5"/><path d="M77 84q3-16 15-20" fill="none" stroke="#89b28c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="181" cy="115" r="32" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><path d="M254 93q44 49 62-3 6 74-62 32Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="180" y="199" text-anchor="middle" font-size="16" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">同じ一種類ではない</text>
+</svg>

@@ -10,7 +10,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "school, schools",
-      "example": "Our school is near the station."
+      "example": "Our school is near the station.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3eb.svg",
+        "alt": "校舎と時計のある学校の建物。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3eb.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "hospital",
+        "factory"
+      ]
     },
     {
       "word": "teacher",
@@ -19,7 +37,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "teacher, teachers",
-      "example": "The teacher writes on the board."
+      "example": "The teacher writes on the board.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9d1-200d-1f3eb.svg",
+        "alt": "黒板の前で説明する教師の人物表現。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9d1-200d-1f3eb.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "farmer",
+        "pilot"
+      ]
     },
     {
       "word": "classroom",
@@ -28,7 +64,25 @@
       "synonyms": "class",
       "antonyms": "",
       "forms": "classroom, classrooms",
-      "example": "The classroom has many desks."
+      "example": "The classroom has many desks.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/classroom.svg",
+        "alt": "黒板と、前を向いて並ぶ学習用の机がある教室。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/classroom.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "bedroom",
+        "kitchen"
+      ]
     },
     {
       "word": "pencil",

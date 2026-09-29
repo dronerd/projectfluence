@@ -9,7 +9,25 @@
       "synonyms": "missing, away",
       "antonyms": "present, there",
       "forms": "absent, absence",
-      "example": "Three students were absent from class today."
+      "example": "Three students were absent from class today.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/absent.svg",
+        "alt": "四つの机のうち一つだけに人がおらず、空席になっている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/absent.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "classical",
+        "renowned"
+      ]
     },
     {
       "word": "isolated",
@@ -81,7 +99,25 @@
       "synonyms": "east, oriental",
       "antonyms": "western, west",
       "forms": "eastern",
-      "example": "The eastern entrance is closer to the station."
+      "example": "The eastern entrance is closer to the station.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/eastern.svg",
+        "alt": "方位図の右側、東の方向が太い矢印で示されている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/eastern.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "drowsy",
+        "tedious"
+      ]
     },
     {
       "word": "renowned",

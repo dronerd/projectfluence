@@ -27,7 +27,25 @@
       "synonyms": "degree, amount",
       "antonyms": "extreme, difference",
       "forms": "level, levels",
-      "example": "The water level rose after the heavy rain."
+      "example": "The water level rose after the heavy rain.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/level.svg",
+        "alt": "容器の水面の高さを、横の目盛りで読み取る図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/level.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "cause",
+        "participant"
+      ]
     },
     {
       "word": "source",
@@ -63,7 +81,25 @@
       "synonyms": "maximum, boundary",
       "antonyms": "freedom, minimum",
       "forms": "limit, limits",
-      "example": "There is a speed limit near the school."
+      "example": "There is a speed limit near the school.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/limit.svg",
+        "alt": "四人までの表示と四人の利用者。五人目には入れない印がある。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/limit.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "theme",
+        "feature"
+      ]
     },
     {
       "word": "participant",

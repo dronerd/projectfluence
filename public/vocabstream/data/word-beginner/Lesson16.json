@@ -3,15 +3,275 @@
   "title": "Lesson 16",
   "paragraph": "Number words from eleven to twenty.",
   "words": [
-    { "word": "eleven", "meaning": "the number 11", "japaneseMeaning": "11、十一", "synonyms": "", "antonyms": "", "forms": "eleven", "example": "There are eleven students." },
-    { "word": "twelve", "meaning": "the number 12", "japaneseMeaning": "12、十二", "synonyms": "", "antonyms": "", "forms": "twelve", "example": "The clock says twelve." },
-    { "word": "thirteen", "meaning": "the number 13", "japaneseMeaning": "13、十三", "synonyms": "", "antonyms": "", "forms": "thirteen", "example": "She is thirteen years old." },
-    { "word": "fourteen", "meaning": "the number 14", "japaneseMeaning": "14、十四", "synonyms": "", "antonyms": "", "forms": "fourteen", "example": "Fourteen people came to the party." },
-    { "word": "fifteen", "meaning": "the number 15", "japaneseMeaning": "15、十五", "synonyms": "", "antonyms": "", "forms": "fifteen", "example": "The bus leaves at fifteen minutes past eight." },
-    { "word": "sixteen", "meaning": "the number 16", "japaneseMeaning": "16、十六", "synonyms": "", "antonyms": "", "forms": "sixteen", "example": "I need sixteen cards." },
-    { "word": "seventeen", "meaning": "the number 17", "japaneseMeaning": "17、十七", "synonyms": "", "antonyms": "", "forms": "seventeen", "example": "Seventeen books are on the shelf." },
-    { "word": "eighteen", "meaning": "the number 18", "japaneseMeaning": "18、十八", "synonyms": "", "antonyms": "", "forms": "eighteen", "example": "My brother is eighteen." },
-    { "word": "nineteen", "meaning": "the number 19", "japaneseMeaning": "19、十九", "synonyms": "", "antonyms": "", "forms": "nineteen", "example": "Nineteen students joined the club." },
-    { "word": "twenty", "meaning": "the number 20", "japaneseMeaning": "20、二十", "synonyms": "", "antonyms": "", "forms": "twenty", "example": "The class has twenty desks." }
+    {
+      "word": "eleven",
+      "meaning": "the number 11",
+      "japaneseMeaning": "11、十一",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "eleven",
+      "example": "There are eleven students.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/eleven.svg",
+        "alt": "枠の中に丸が11個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/eleven.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "fourteen",
+        "nineteen"
+      ]
+    },
+    {
+      "word": "twelve",
+      "meaning": "the number 12",
+      "japaneseMeaning": "12、十二",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "twelve",
+      "example": "The clock says twelve.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/twelve.svg",
+        "alt": "枠の中に丸が12個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/twelve.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "fifteen",
+        "twenty"
+      ]
+    },
+    {
+      "word": "thirteen",
+      "meaning": "the number 13",
+      "japaneseMeaning": "13、十三",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "thirteen",
+      "example": "She is thirteen years old.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/thirteen.svg",
+        "alt": "枠の中に丸が13個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/thirteen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "sixteen",
+        "one"
+      ]
+    },
+    {
+      "word": "fourteen",
+      "meaning": "the number 14",
+      "japaneseMeaning": "14、十四",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "fourteen",
+      "example": "Fourteen people came to the party.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/fourteen.svg",
+        "alt": "枠の中に丸が14個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/fourteen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "seventeen",
+        "two"
+      ]
+    },
+    {
+      "word": "fifteen",
+      "meaning": "the number 15",
+      "japaneseMeaning": "15、十五",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "fifteen",
+      "example": "The bus leaves at fifteen minutes past eight.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/fifteen.svg",
+        "alt": "枠の中に丸が15個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/fifteen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "eighteen",
+        "three"
+      ]
+    },
+    {
+      "word": "sixteen",
+      "meaning": "the number 16",
+      "japaneseMeaning": "16、十六",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "sixteen",
+      "example": "I need sixteen cards.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/sixteen.svg",
+        "alt": "枠の中に丸が16個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/sixteen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "nineteen",
+        "four"
+      ]
+    },
+    {
+      "word": "seventeen",
+      "meaning": "the number 17",
+      "japaneseMeaning": "17、十七",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "seventeen",
+      "example": "Seventeen books are on the shelf.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/seventeen.svg",
+        "alt": "枠の中に丸が17個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/seventeen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "twenty",
+        "five"
+      ]
+    },
+    {
+      "word": "eighteen",
+      "meaning": "the number 18",
+      "japaneseMeaning": "18、十八",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "eighteen",
+      "example": "My brother is eighteen.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/eighteen.svg",
+        "alt": "枠の中に丸が18個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/eighteen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "one",
+        "six"
+      ]
+    },
+    {
+      "word": "nineteen",
+      "meaning": "the number 19",
+      "japaneseMeaning": "19、十九",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "nineteen",
+      "example": "Nineteen students joined the club.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/nineteen.svg",
+        "alt": "枠の中に丸が19個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/nineteen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "two",
+        "seven"
+      ]
+    },
+    {
+      "word": "twenty",
+      "meaning": "the number 20",
+      "japaneseMeaning": "20、二十",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "twenty",
+      "example": "The class has twenty desks.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/twenty.svg",
+        "alt": "枠の中に丸が20個ある。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/twenty.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "three",
+        "eight"
+      ]
+    }
   ]
 }

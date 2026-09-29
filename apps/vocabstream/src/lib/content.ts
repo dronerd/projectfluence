@@ -7,7 +7,8 @@ export type WordImage = {
   source: string;
   sourceUrl: string;
   creator: string;
-  license: "CC0-1.0";
+  license: "CC0-1.0" | "CC-BY-4.0";
+  licenseUrl?: string;
   credit?: string;
 };
 
@@ -22,6 +23,8 @@ export type LessonWord = {
   antonyms?: string;
   forms?: string;
   definitionType?: "text" | "image" | "image+text";
+  /** Supporting diagrams explain a sense after an answer; they are not standalone picture questions. */
+  imageRole?: "meaning" | "supporting";
   image?: WordImage;
   meaningDistractors?: [string, string];
   sentencePractice?: SentencePractice;
@@ -40,6 +43,7 @@ export type LearningQuestion = {
   prompt: string;
   promptMode?: QuestionPromptMode;
   definitionType?: LessonWord["definitionType"];
+  imageRole?: LessonWord["imageRole"];
   image?: WordImage;
   choices: string[];
   answerIndex: number;

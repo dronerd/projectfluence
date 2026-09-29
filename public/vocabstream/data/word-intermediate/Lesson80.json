@@ -72,7 +72,25 @@
       "synonyms": "design, style",
       "antonyms": "randomness, disorder",
       "forms": "pattern, patterns",
-      "example": "The shirt has a simple blue pattern."
+      "example": "The shirt has a simple blue pattern.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/pattern.svg",
+        "alt": "丸と三角という同じ並びが、横に三回繰り返される模様。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/pattern.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "charge",
+        "ritual"
+      ]
     },
     {
       "word": "margin",
@@ -81,7 +99,25 @@
       "synonyms": "space, border",
       "antonyms": "center, main text",
       "forms": "margin, margins",
-      "example": "Write your notes in the margin of the page."
+      "example": "Write your notes in the margin of the page.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/margin.svg",
+        "alt": "文章のある紙の左右に残された空白の部分を、色で示している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/margin.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "memory",
+        "obligation"
+      ]
     },
     {
       "word": "ritual",

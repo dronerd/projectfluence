@@ -54,7 +54,25 @@
       "synonyms": "way, path",
       "antonyms": "stop, end",
       "forms": "route, routes",
-      "example": "This bus route goes past the hospital."
+      "example": "This bus route goes past the hospital.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/route.svg",
+        "alt": "二つの地点の間を道路に沿って進む道筋を、青い線で示した地図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/route.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "audience",
+        "conflict"
+      ]
     },
     {
       "word": "audience",
@@ -90,7 +108,25 @@
       "synonyms": "heat level, degree",
       "antonyms": "coldness, coolness",
       "forms": "temperature, temperatures",
-      "example": "The temperature dropped quickly after sunset."
+      "example": "The temperature dropped quickly after sunset.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/temperature.svg",
+        "alt": "液柱の温度計と摂氏二十五度の表示。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/temperature.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "contact",
+        "partner"
+      ]
     }
   ]
 }

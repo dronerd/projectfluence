@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>道を横切る棒が進む道をふさぎ、その手前で矢印が止まっている。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<path d="M95 215 149 37h70l50 178" fill="#dcecef" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><line x1="90" y1="121" x2="265" y2="121" stroke="#d9887b" stroke-width="12" stroke-linecap="round"/><line x1="107" y1="124" x2="107" y2="169" stroke="#b7c6c6" stroke-width="8" stroke-linecap="round"/><line x1="249" y1="124" x2="249" y2="169" stroke="#b7c6c6" stroke-width="8" stroke-linecap="round"/><line x1="183" y1="194" x2="183" y2="145" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="183,145 178.0,155.0 188.0,155.0" fill="#40565b"/><line x1="176" y1="82" x2="192" y2="98" stroke="#d9887b" stroke-width="4" stroke-linecap="round"/><line x1="192" y1="82" x2="176" y2="98" stroke="#d9887b" stroke-width="4" stroke-linecap="round"/>
+</svg>

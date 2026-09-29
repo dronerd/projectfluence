@@ -25,7 +25,7 @@ const courses = [
   ['idioms-beginner', 51], ['idioms-intermediate', 51], ['idioms-advanced', 51], ['idioms-proficiency', 51],
   ['specialized-it', 1], ['specialized-engineering', 1], ['specialized-healthcare', 1],
   ['specialized-business', 1], ['specialized-environment', 1], ['specialized-academic', 1],
-].flatMap(([category, number]) => [[category, number], [category, category.startsWith('idioms-') ? 60 : 8]]);
+].flatMap(([category, number]) => [[category, number], [category, category.startsWith('idioms-') ? 60 : 10]]);
 const results = [];
 const errors = [];
 const unexpectedSaves = [];
@@ -130,7 +130,7 @@ async function completeLesson(page, lesson, name, persistence = 'guest; no datab
 async function verifySignedInCurriculum() {
   const { context, page, fixture } = await makeContext(320, 900, true);
   const expectedPayloadKeys = ['attemptId', 'lessonId', 'genre', 'lessonNumber', 'lessonTitle', 'wordCount', 'meaningScore', 'meaningTotal', 'quizScore', 'quizTotal', 'replayCompleted', 'replayCorrect', 'replayTotal', 'questionAttempts'].sort();
-  const savedLessons = [['idioms-beginner', 51], ['idioms-beginner', 60], ['specialized-it', 8]];
+  const savedLessons = [['idioms-beginner', 51], ['idioms-beginner', 60], ['specialized-it', 10]];
   for (const [category, number] of savedLessons) {
     const lesson = await readLesson(category, number), lessonId = `${category}-lesson-${number}`;
     const before = fixture.writes.length;
@@ -242,12 +242,9 @@ try {
 
   // Decode every local illustration through the browser, then exercise additional
   // animal/household images in actual cards and image questions at each viewport.
-  const pictures = [];
-  for (let number = 1; number <= 100; number++) {
-    const lesson = await readLesson('word-beginner', number);
-    pictures.push(...lesson.words.filter(word => word.image).map(word => word.image.src));
-  }
-  assert.equal(pictures.length, 70);
+  const manifest = JSON.parse(await fs.readFile(new URL('../public/vocabstream/images/manifest.json', import.meta.url), 'utf8'));
+  const pictures = [...new Set(manifest.images.map(item => item.image.src))];
+  assert(pictures.length > 370);
   const artwork = await makeContext();
   await artwork.page.goto(lessonUrl('word-beginner', 8));
   const decoded = await artwork.page.evaluate(async sources => Promise.all(sources.map(src => new Promise(resolve => {
@@ -257,7 +254,7 @@ try {
     image.src = src;
   }))), pictures);
   assert(decoded.every(item => item.loaded), JSON.stringify(decoded.filter(item => !item.loaded)));
-  results.push({ flow: 'all 70 beginner illustrations load and decode', pass: true });
+  results.push({ flow: 'all local vocabulary illustrations load and decode', files: pictures.length, pass: true });
   for (const number of [8, 26, 70]) {
     const lesson = await readLesson('word-beginner', number);
     const pictureIndex = lesson.words.findIndex(word => word.image);
