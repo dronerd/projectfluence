@@ -250,5 +250,50 @@
     "keyboardDisclosure": "passed",
     "expandedProfileOverflow": false,
     "primaryActionVisibleAt320x568": true
+  },
+  "compactBannerFollowUp": {
+    "date": "2026-09-29",
+    "build": "passed",
+    "typecheck": "passed",
+    "lint": "passed",
+    "vocabularyUnitTests": "4/4 passed",
+    "routeMatrix": {
+      "routes": 14,
+      "widths": [
+        320,
+        375,
+        390,
+        430,
+        600,
+        768,
+        1024,
+        1180,
+        1440,
+        1920
+      ],
+      "problems": []
+    },
+    "signedInAndGuestWidths": [
+      320,
+      375,
+      390,
+      430,
+      600,
+      768,
+      899,
+      900,
+      1024,
+      1099,
+      1100,
+      1440,
+      1920
+    ],
+    "runtimeErrors": [],
+    "accountSurfaceHeightPx": 34,
+    "accountVerticalInsetPx": 5,
+    "minimumTapHeightPx": 44,
+    "keyboardChecks": "Skip-link destination, control focus, account menu and dialog Escape restoration passed",
+    "pageEdges": "No main-container outline after skip link or client-side home navigation",
+    "axe": "No violations on home and header in guest and signed-in fixtures at 320, 768, 1440px"
   }
 }

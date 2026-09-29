@@ -42,6 +42,13 @@ Representative rendered previews: [desktop home](previews/home-desktop.png), [32
 - The primary learning action remains visible at 320×568px. The profile disclosure opens and closes by keyboard, and expanded-page Axe checks report no violations at 320, 768, and 1440px.
 - Visually reviewed phone, tablet, and desktop layouts. The fuller profile uses two columns on larger screens and one on phones, and stays collapsed initially. Updated previews: [desktop home](previews/home-desktop.png), [320px home](previews/home-mobile.png), [expanded desktop profile](previews/home-profile-desktop.png), [expanded mobile profile](previews/home-profile-mobile.png).
 
+## Compact banner and page-edge follow-up — 2026-09-29
+
+- Reproduced the long blue page-edge lines by focusing the homepage through the skip link. Page containers now receive focus without a page-length outline; interactive controls retain visible keyboard focus.
+- Account buttons keep 44px tap targets with 34px visible surfaces and a 5px vertical inset. Mobile navigation highlights are 30–32px tall and fit their labels; desktop highlights are 34px tall. The person icon is 20px.
+- Production build, TypeScript, ESLint, and four vocabulary regression tests passed. The complete browser suite passed 14 routes × 10 widths (320–1920px), with no overflow, runtime errors, or Axe findings.
+- Additional signed-in and guest banner checks passed at 13 widths: 320, 375, 390, 430, 600, 768, 899, 900, 1024, 1099, 1100, 1440, and 1920px. Verified skip-link focus, visible control focus, client-side return to home, active/hover highlights, account menu/dialog dismissal, and taps outside the smaller visible surfaces. Signed-in checks use an isolated session fixture and make no live account changes. Reviewed phone, tablet, and desktop screenshots and refreshed the home previews.
+
 ## Running checks
 
 ```sh

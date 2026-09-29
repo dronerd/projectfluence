@@ -25,12 +25,12 @@ export default function AppHeader() {
         {appKeys.map((app) => {
           const item = learningApps[app];
           return <Link key={app} href={item.href} aria-label={`${item.purpose} · ${item.name}`} aria-current={currentApp === app ? "page" : undefined}>
-            <Image className="pf-nav-logo" src={item.image} alt="" width={24} height={24} /><span className="pf-nav-full">{item.purpose}</span><span className="pf-nav-short">{item.short}</span>
+            <span className="pf-nav-label"><Image className="pf-nav-logo" src={item.image} alt="" width={24} height={24} /><span className="pf-nav-full">{item.purpose}</span><span className="pf-nav-short">{item.short}</span></span>
           </Link>;
         })}
         <Link href="/analytics" aria-label="学習の記録" aria-current={pathname.startsWith("/analytics") ? "page" : undefined}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4v16h17M9 15v-4M14 15V7M19 15v-6" /></svg>
-          <span className="pf-nav-full">学習の記録</span><span className="pf-nav-short">記録</span>
+          <span className="pf-nav-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4v16h17M9 15v-4M14 15V7M19 15v-6" /></svg>
+          <span className="pf-nav-full">学習の記録</span><span className="pf-nav-short">記録</span></span>
         </Link>
       </nav>
       <div className="pf-header-account"><AuthButton compact userMenu /></div>

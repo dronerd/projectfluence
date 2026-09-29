@@ -36,6 +36,8 @@ img, svg { flex-shrink: 0; }
 :where(h1,h2,h3,h4,p) { overflow-wrap: anywhere; }
 :where(h1,h2,h3) { text-wrap: balance; }
 :where(a,button,input,textarea,select,summary,[tabindex]):focus-visible { outline: 3px solid var(--pf-focus) !important; outline-offset: 3px; }
+/* The skip-link destination receives focus without outlining the entire page. */
+#main-content:focus-visible { outline: none !important; }
 ::selection { background: #c7e8ff; color: var(--pf-text); }
 .pf-page { width: min(100% - 48px, 1160px); margin: 0 auto; padding: 36px 0 max(56px, env(safe-area-inset-bottom)); }
 .pf-panel { background: var(--pf-surface); border: 1px solid var(--pf-border); border-radius: var(--pf-radius); box-shadow: var(--pf-shadow); }
@@ -59,17 +61,26 @@ img, svg { flex-shrink: 0; }
 .pf-brand img { border-radius: 9px; }
 .pf-current-app { display: none; color: #fff; text-decoration: none; }
 .pf-nav { display: flex; justify-content: center; align-items: center; gap: 6px; }
-.pf-nav a { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 9px 12px; border-radius: 9px; color: #fff; font-size: 13px; font-weight: 650; white-space: nowrap; text-decoration: none; }
+.pf-nav a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 4px; border-radius: 9px; color: #fff; font-size: 13px; font-weight: 650; white-space: nowrap; text-decoration: none; }
+.pf-nav-label { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 5px 8px; border-radius: 8px; transition: background .15s; }
 .pf-current-app .pf-app-brand { color: inherit; }
 .pf-nav-logo { border-radius: 6px; }
-.pf-nav a:hover { background: var(--pf-primary-soft); color: var(--pf-primary-hover); }
-.pf-nav a[aria-current="page"] { background: #fff; color: var(--pf-primary-hover); }
+.pf-nav a:hover, .pf-nav a[aria-current="page"] { color: var(--pf-primary-hover); }
+.pf-nav a:hover .pf-nav-label { background: var(--pf-primary-soft); }
+.pf-nav a[aria-current="page"] .pf-nav-label { background: #fff; }
 .pf-nav svg { width: 22px; height: 22px; }
 .pf-nav-short { display: none; }
 .pf-header-account { justify-self: end; }
-.pf-header-account > button { background: #fff; border-color: transparent; color: var(--pf-primary-hover); }
-.pf-header-account > button:hover:not(:disabled) { background: #e8f4ff; }
+.pf-header-account > button, .pf-header-account > div > button { position: relative; isolation: isolate; background: transparent; border: 0; color: var(--pf-primary-hover); }
+/* Keep the full tap target while insetting the visible account surface. */
+.pf-header-account > button::before, .pf-header-account > div > button::before { content: ""; position: absolute; z-index: -1; inset: 5px 3px; border-radius: 8px; background: #fff; transition: background .15s; }
+.pf-header-account > button:hover:not(:disabled), .pf-header-account > div > button:hover:not(:disabled) { background: transparent; }
+.pf-header-account > button:hover:not(:disabled)::before, .pf-header-account > div > button:hover:not(:disabled)::before, .pf-header-account > div > button[aria-expanded="true"]::before { background: var(--pf-primary-soft); }
+.pf-header-account > div > button { padding: 0; border-radius: 50%; }
+.pf-header-account > div > button::before { inset: 5px; border-radius: 50%; }
+.pf-header-account > div > button svg { width: 20px; height: 20px; }
 .pf-header-branding a:focus-visible, .pf-nav a:focus-visible, .pf-header-account > button:focus-visible, .pf-header-account > div > button:focus-visible { outline-color: #fff !important; }
+.pf-nav a:focus-visible, .pf-header-account > button:focus-visible, .pf-header-account > div > button:focus-visible { outline-offset: -3px; }
 .pf-modal { border: 1px solid var(--pf-border); border-radius: 18px; width: min(440px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 24px; color: var(--pf-text); background: #fff; box-shadow: 0 24px 80px #101b3540; overflow-y: auto; }
 .pf-modal::backdrop { background: rgb(13 22 43 / 48%); }
 .pf-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 26px 0; margin-top: 36px; border-top: 1px solid var(--pf-border); color: var(--pf-muted); font-size: 12px; }
@@ -78,7 +89,7 @@ img, svg { flex-shrink: 0; }
   :root { --pf-header-height: 64px; }
   .pf-header-inner { padding-inline: 20px; gap: 16px; }
   .pf-nav { gap: 2px; }
-  .pf-nav a { padding-inline: 10px; }
+  .pf-nav a { padding-inline: 2px; }
 }
 @media (max-width: 899px) {
   :root { --pf-header-height: 88px; }
@@ -94,7 +105,8 @@ img, svg { flex-shrink: 0; }
   .pf-header-account { grid-column: 2; grid-row: 1; }
   .pf-header-account > button { padding: 8px 12px; font-size: 12px; }
   .pf-nav { grid-column: 1 / -1; grid-row: 2; align-self: stretch; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 4px; padding-bottom: 0; }
-  .pf-nav a { font-size: 12px; padding: 8px 4px; gap: 6px; min-width: 0; }
+  .pf-nav a { font-size: 12px; padding: 0; min-width: 0; }
+  .pf-nav-label { gap: 5px; padding: 4px 6px; }
 }
 @media (max-width: 759px) {
   .pf-header-inner { padding-inline: 16px; }
