@@ -144,5 +144,111 @@
       "progress",
       "vocabulary (including visible focus after next question)"
     ]
+  },
+  "homeProfileFollowUp": {
+    "date": "2026-09-29",
+    "source": "https://yutokuroki.vercel.app/ja",
+    "build": "passed",
+    "typecheck": "passed",
+    "lint": "passed",
+    "widths": [
+      320,
+      375,
+      390,
+      430,
+      600,
+      768,
+      899,
+      900,
+      1024,
+      1180,
+      1440,
+      1920
+    ],
+    "measurements": [
+      {
+        "width": 320,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 358.25
+      },
+      {
+        "width": 375,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 358.25
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 358.25
+      },
+      {
+        "width": 430,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 324.515625
+      },
+      {
+        "width": 600,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 324.515625
+      },
+      {
+        "width": 768,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 398.46875
+      },
+      {
+        "width": 899,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 398.46875
+      },
+      {
+        "width": 900,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 374.46875
+      },
+      {
+        "width": 1024,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 378.59375
+      },
+      {
+        "width": 1180,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 393.828125
+      },
+      {
+        "width": 1440,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 403.46875
+      },
+      {
+        "width": 1920,
+        "overflow": false,
+        "noteBelowCopy": true,
+        "primaryBottom": 403.46875
+      }
+    ],
+    "errors": [],
+    "checks": "closed/open profile layout, keyboard disclosure, intro placement, visible practice CTA, Axe",
+    "expandedProfileAxeWidths": [
+      320,
+      768,
+      1440
+    ],
+    "axeViolations": 0,
+    "keyboardDisclosure": "passed",
+    "expandedProfileOverflow": false,
+    "primaryActionVisibleAt320x568": true
   }
 }

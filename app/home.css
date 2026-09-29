@@ -2,12 +2,15 @@
 .home-intro { display: grid; grid-template-columns: minmax(0,1fr) 310px; gap: 64px; align-items: center; padding: 12px 0 46px; }
 .home-intro h1 { font-size: clamp(29px,3.1vw,43px); line-height: 1.5; letter-spacing: -.055em; font-weight: 750; margin: 14px 0; }
 .home-intro-copy { color: var(--pf-muted); font-size: 16px; line-height: 1.9; }
+.home-account-note { color: var(--pf-muted); font-size: 13px; line-height: 1.7; margin-top: 10px; }
 .home-intro-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 24px; }
 .home-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--pf-primary); font-size: 13px; font-weight: 600; }
 .home-text-link:hover { text-decoration: underline; }
-.home-start-note { border-left: 3px solid var(--pf-primary-border); padding: 8px 0 8px 24px; }
-.home-start-note h2 { font-size: 18px; font-weight: 650; margin: 10px 0; }
-.home-start-note p { font-size: 13px; color: var(--pf-muted); line-height: 1.9; }
+.home-project-intro { border-left: 3px solid var(--pf-primary-border); padding: 8px 0 8px 24px; }
+.home-project-intro h2 { font-size: 18px; font-weight: 700; margin: 0 0 8px; }
+.home-project-intro p { font-size: 13px; color: var(--pf-muted); line-height: 1.75; }
+.home-project-intro .home-project-author { margin-top: 14px; margin-bottom: 3px; font-size: 12px; }
+.home-project-author strong { color: var(--pf-text); font-size: 14px; font-weight: 650; margin-left: 6px; }
 .home-section-heading { display: flex; justify-content: space-between; gap: 16px; align-items: end; margin-bottom: 22px; }
 .home-section-heading h2 { font-size: 23px; font-weight: 700; letter-spacing: -.04em; margin-top: 6px; }
 .home-practice { border-top: 1px solid var(--pf-border); padding-top: 32px; }
@@ -32,9 +35,16 @@
 .home-resource-content .shadow, .home-resource-content .shadow-sm { box-shadow: none; }
 .home-resource-content a { text-underline-offset: 3px; }
 .home-about { margin-top: 24px; }
-.home-about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; padding: 16px 4px; color: var(--pf-muted); font-size: 13px; }
+.home-about-content { padding: 16px 4px; color: var(--pf-muted); font-size: 14px; line-height: 1.85; }
 .home-about-content h2, .home-about-content h3 { color: var(--pf-text); font-size: 17px; font-weight: 650; margin-bottom: 10px; }
 .home-about-content p + p { margin-top: 12px; }
+.home-about-project { max-width: 800px; }
+.home-developer { border-top: 1px solid var(--pf-border); margin-top: 24px; padding-top: 24px; }
+.home-developer-heading { margin-bottom: 12px; }
+.home-developer-heading h2 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 14px; font-size: 22px; margin: 4px 0; }
+.home-developer-heading h2 span { font-size: 13px; font-weight: 500; color: var(--pf-muted); }
+.home-developer-heading > p:last-child { font-size: 13px; }
+.home-profile-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 32px; margin-top: 22px; }
 .home-about-links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; }
 .home-about-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--pf-primary); text-decoration: underline; }
 .home-mobile-break { display: none; }
@@ -45,7 +55,9 @@
   .home-intro h1 { margin: 8px 0; line-height: 1.35; }
   .home-intro-actions { margin-top: 14px; }
   .home-intro-copy { font-size: 14px; }
-  .home-start-note { display: none; }
+  .home-project-intro { margin-top: 20px; padding: 0 0 0 12px; }
+  .home-project-intro h2 { font-size: 16px; margin-bottom: 4px; }
+  .home-project-intro .home-project-author { margin-top: 8px; }
   .home-practice { padding-top: 18px; }
   .home-practice-grid { grid-template-columns: 1fr; gap: 10px; }
   .home-practice-card { padding: 16px; }
@@ -58,6 +70,8 @@
   .home-guide { margin-top: 24px; }
   .home-resource summary, .home-about summary { padding-block: 12px; min-height: 48px; }
   .home-resource-content { padding: 4px 4px 24px; }
-  .home-about-content { grid-template-columns: 1fr; gap: 24px; }
+  .home-about-content { padding-top: 12px; }
+  .home-developer { margin-top: 20px; padding-top: 20px; }
+  .home-profile-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 18px; }
 }
 @media (max-width: 420px) { .home-mobile-break { display: inline; } .home-intro h1 { font-size: 27px; } .home-intro-actions { gap: 8px 16px; } }

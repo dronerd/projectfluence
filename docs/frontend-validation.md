@@ -35,6 +35,13 @@ Representative rendered previews: [desktop home](previews/home-desktop.png), [32
 - Speaking, video, and progress workflows passed with deterministic fixtures; the speaking composer remains reachable at 320×568px and in phone landscape. Optional video skill filters retain their selected values when closed and reopened.
 - Preview images were refreshed from the final production build. Existing physical-device and live-service limitations below still apply.
 
+## Home introduction and developer profile — 2026-09-29
+
+- Replaced the beginner note with a short Project Fluence/developer introduction, and moved guest/login guidance beneath the learning introduction. Expanded the bottom profile using relevant language-learning, AI research, and international experience from the [developer's profile](https://yutokuroki.vercel.app/ja).
+- Production build, TypeScript, and ESLint pass. Targeted production-browser checks passed at 320, 375, 390, 430, 600, 768, 899, 900, 1024, 1180, 1440, and 1920px, with the profile both closed and expanded: no horizontal overflow or runtime errors, and correct placement of the guest guidance.
+- The primary learning action remains visible at 320×568px. The profile disclosure opens and closes by keyboard, and expanded-page Axe checks report no violations at 320, 768, and 1440px.
+- Visually reviewed phone, tablet, and desktop layouts. The fuller profile uses two columns on larger screens and one on phones, and stays collapsed initially. Updated previews: [desktop home](previews/home-desktop.png), [320px home](previews/home-mobile.png), [expanded desktop profile](previews/home-profile-desktop.png), [expanded mobile profile](previews/home-profile-mobile.png).
+
 ## Running checks
 
 ```sh
