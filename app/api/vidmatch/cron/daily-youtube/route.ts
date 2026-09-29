@@ -4,6 +4,9 @@ import {
   type SearchYoutubeVideosInput,
 } from "@/apps/vidmatch/src/services/youtubeVideoService";
 
+import { apiError } from "@/app/api/_lib/http";
+import { secureTokenMatches } from "@/app/api/_lib/supabaseAuth";
+
 export const runtime = "nodejs";
 
 const DAILY_SEARCHES: SearchYoutubeVideosInput[] = [
@@ -69,23 +72,20 @@ export async function GET(request: NextRequest) {
   const authError = validateCronSecret(request);
   if (authError) return authError;
 
-  const search = getDailySearch();
-  const result = await searchAndSaveYoutubeVideos(search);
-
-  return NextResponse.json({
-    ok: true,
-    search,
-    result,
-  });
+  try {
+    const search = getDailySearch();
+    const result = await searchAndSaveYoutubeVideos(search);
+    return NextResponse.json({ ok: true, search, result });
+  } catch (error) { return apiError(error, "vidmatch.cron"); }
 }
 
 function validateCronSecret(request: NextRequest) {
   const cronSecret = process.env.CRON_SECRET;
   if (!cronSecret) {
-    return NextResponse.json({ error: "Missing CRON_SECRET on the server." }, { status: 500 });
+    return NextResponse.json({ error: "Scheduled ingestion is not configured." }, { status: 500 });
   }
 
-  if (request.headers.get("authorization") !== `Bearer ${cronSecret}`) {
+  if (!secureTokenMatches(request, cronSecret)) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 

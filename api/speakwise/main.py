@@ -1,6 +1,8 @@
 from functools import lru_cache
-from io import BytesIO
 import os
+import asyncio
+from contextlib import asynccontextmanager
+import time
 import json
 import logging
 from pathlib import Path
@@ -9,16 +11,37 @@ import secrets
 from typing import Any
 
 from dotenv import load_dotenv
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, Response, StreamingResponse
-from openai import OpenAI
+from openai import AsyncOpenAI, APITimeoutError, BadRequestError, RateLimitError
+import httpx
+from contracts import ChatRequest, FeedbackRequest, VoiceRequest
+from security import auth_client, authorize_request, install_request_guards, request_id
 
 load_dotenv(Path(__file__).with_name(".env"))
 load_dotenv()
 
-app = FastAPI(title="SpeakWise API", version="1.0.0")
+@asynccontextmanager
+async def lifespan(app):
+    yield
+    if get_openai_client.cache_info().currsize:
+        await get_openai_client().close()
+        get_openai_client.cache_clear()
+    if auth_client.cache_info().currsize:
+        await auth_client().aclose()
+        auth_client.cache_clear()
+
+
+app = FastAPI(title="SpeakWise API", version="1.1.0", lifespan=lifespan)
+install_request_guards(app)
 logger = logging.getLogger("speakwise")
+logger.setLevel(logging.INFO)
+if not logger.handlers:
+    handler = logging.StreamHandler()
+    handler.setFormatter(logging.Formatter("%(message)s"))
+    logger.addHandler(handler)
+logger.propagate = False
 
 LEVEL_POSITIVE_FALLBACK_PROMPTS = {
     "A1": [
@@ -75,9 +98,10 @@ def _cors_origins() -> list[str]:
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_cors_origins(),
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_credentials=False,
+    allow_methods=["GET", "HEAD", "POST", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type"],
+    expose_headers=["X-Request-ID", "Server-Timing", "Retry-After"],
 )
 
 LESSON_MODE_PROMPTS = {
@@ -155,11 +179,11 @@ LESSON_MODE_PROMPTS = {
 
 
 @lru_cache(maxsize=1)
-def get_openai_client() -> OpenAI:
+def get_openai_client() -> AsyncOpenAI:
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise RuntimeError("OPENAI_API_KEY is not configured")
-    return OpenAI(api_key=api_key)
+    return AsyncOpenAI(api_key=api_key, timeout=httpx.Timeout(30, connect=5, pool=5), max_retries=0)
 
 
 def as_string_list(value: Any) -> list[str]:
@@ -228,15 +252,16 @@ Teaching rules:
 - In conversation mode, avoid correcting every tiny issue unless it blocks communication.
 - Near the end, transition toward a wrap-up instead of starting a large new task.
 - If the learner asks for another mode, smoothly switch or offer mode buttons in text form.
+- When voice mode is on, prefer 2-4 brief sentences under 120 words; avoid markdown tables and long lists.
 - Keep responses concise and interactive. End with a next action for the learner unless the lesson is ending.
 """
 
 
-def normalize_history(value: Any) -> list[dict[str, str]]:
+def normalize_history(value: Any, limit: int = 16) -> list[dict[str, str]]:
     if not isinstance(value, list):
         return []
     messages: list[dict[str, str]] = []
-    for item in value[-16:]:
+    for item in value[-limit:]:
         if not isinstance(item, dict):
             continue
         role = "assistant" if item.get("role") == "assistant" else "user"
@@ -302,51 +327,66 @@ Teaching style:
 - If the user asks for only a question, JSON, or another strict format, return only that format."""
 
 
-def chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
-    completion = get_openai_client().chat.completions.create(
-        model=os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini"),
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": message},
-        ],
-        temperature=0.7,
-        max_tokens=max_tokens,
-    )
-    return completion.choices[0].message.content or ""
+async def complete(messages, max_tokens, temperature=0.7, response_format=None) -> str:
+    """Collect a streamed text reply while measuring actual provider TTFT.
+
+    Text remains one JSON response; sentence-level speech is intentionally not
+    synthesized independently because it can introduce gaps/prosody changes.
+    """
+    started = time.monotonic()
+    first_ms = None
+    options = {"response_format": response_format} if response_format else {}
+    async with asyncio.timeout(45):
+        stream = await get_openai_client().chat.completions.create(
+            model=os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini"), messages=messages,
+            temperature=temperature, max_tokens=max_tokens, stream=True, **options,
+        )
+        parts = []
+        try:
+            async for chunk in stream:
+                content = chunk.choices[0].delta.content if chunk.choices else None
+                if content:
+                    if first_ms is None:
+                        first_ms = round((time.monotonic() - started) * 1000, 1)
+                    parts.append(content)
+        finally:
+            await stream.close()
+    logger.info(json.dumps({"event": "llm_complete", "request_id": request_id.get(), "first_token_ms": first_ms,
+        "total_ms": round((time.monotonic() - started) * 1000, 1)}))
+    result = "".join(parts).strip()
+    if not result:
+        raise RuntimeError("Empty provider response")
+    return result
 
 
-def agent_chat_completion(system_prompt: str, req: dict[str, Any], max_tokens: int) -> str:
-    messages: list[dict[str, str]] = [{"role": "system", "content": system_prompt}]
+async def chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
+    return await complete([{"role": "system", "content": system_prompt},
+        {"role": "user", "content": message}], max_tokens)
+
+
+async def agent_chat_completion(system_prompt: str, req: dict[str, Any], max_tokens: int) -> str:
+    messages = [{"role": "system", "content": system_prompt}]
     messages.extend(normalize_history(req.get("history")))
     messages.append({"role": "user", "content": str(req.get("message") or "").strip()})
-    completion = get_openai_client().chat.completions.create(
-        model=os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini"),
-        messages=messages,
-        temperature=0.65,
-        max_tokens=max_tokens,
-    )
-    return completion.choices[0].message.content or ""
+    return await complete(messages, max_tokens, temperature=0.65)
 
 
-def json_chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
+async def json_chat_completion(system_prompt: str, message: str, max_tokens: int) -> str:
+    messages = [{"role": "system", "content": system_prompt}, {"role": "user", "content": message}]
     try:
-        completion = get_openai_client().chat.completions.create(
-            model=os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini"),
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": message},
-            ],
-            temperature=0.45,
-            max_tokens=max_tokens,
-            response_format={"type": "json_object"},
-        )
-        return completion.choices[0].message.content or ""
-    except Exception as exc:
-        # Some deployed model/SDK combinations reject response_format even
-        # though the plain chat call works. Feedback uses the plain path, so
-        # retry that path while keeping strict JSON instructions in messages.
-        logger.warning("JSON response_format request failed; retrying without response_format: %s", exc)
-        return chat_completion(system_prompt, message, max_tokens)
+        return await complete(messages, max_tokens, temperature=0.45, response_format={"type": "json_object"})
+    except BadRequestError as exc:
+        # Only a deterministic unsupported-format error warrants a second call.
+        if exc.param != "response_format":
+            raise
+        logger.warning(json.dumps({"event": "json_format_unsupported"}))
+        return await chat_completion(system_prompt, message, max_tokens)
+
+
+def provider_error(exc: Exception, stage: str) -> JSONResponse:
+    status = 504 if isinstance(exc, (TimeoutError, APITimeoutError)) else 503 if isinstance(exc, RateLimitError) else 502
+    logger.warning(json.dumps({"event": "provider_failed", "request_id": request_id.get(), "stage": stage, "type": type(exc).__name__}))
+    return JSONResponse({"error": "The AI service is temporarily unavailable. Please try again.", "code": "provider_unavailable"}, status_code=status)
 
 
 @app.api_route("/health", methods=["GET", "HEAD"])
@@ -354,8 +394,9 @@ def health() -> Response:
     return Response(status_code=200)
 
 
-@app.post("/api/chat")
-async def chat(req: dict[str, Any]) -> JSONResponse:
+@app.post("/api/chat", dependencies=[Depends(authorize_request)])
+async def chat(payload: ChatRequest) -> JSONResponse:
+    req = payload.model_dump()
     mode = str(req.get("mode") or "speaking")
     if mode == "warmup":
         return JSONResponse({"status": "ok", "mode": "warmup"})
@@ -369,15 +410,13 @@ async def chat(req: dict[str, Any]) -> JSONResponse:
 
     try:
         if mode == "agent":
-            reply = agent_chat_completion(build_agent_system_prompt(req), req, max_tokens=850)
+            reply = await agent_chat_completion(build_agent_system_prompt(req), req, max_tokens=850)
         else:
             max_tokens = 700 if mode == "lesson" else 500
-            reply = chat_completion(build_chat_system_prompt(req), message, max_tokens=max_tokens)
+            reply = await chat_completion(build_chat_system_prompt(req), message, max_tokens=max_tokens)
         return JSONResponse({"reply": reply, "mode": mode})
-    except RuntimeError as exc:
-        return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
-        return JSONResponse({"error": "OpenAI chat request failed", "details": str(exc)}, status_code=500)
+        return provider_error(exc, "generation")
 
 
 SUMMARY_JSON_SCHEMA = """{
@@ -399,9 +438,10 @@ SUMMARY_JSON_SCHEMA = """{
 }"""
 
 
-@app.post("/api/lesson-summary")
-async def lesson_summary(req: dict[str, Any]) -> JSONResponse:
-    history = normalize_history(req.get("history"))
+@app.post("/api/lesson-summary", dependencies=[Depends(authorize_request)])
+async def lesson_summary(payload: ChatRequest) -> JSONResponse:
+    req = payload.model_dump()
+    history = normalize_history(req.get("history"), limit=100)
     if not history:
         return JSONResponse({"error": "history is required"}, status_code=400)
 
@@ -430,25 +470,25 @@ Rules:
 """
 
     try:
-        raw = json_chat_completion(
+        raw = await json_chat_completion(
             system_prompt="You produce strict JSON lesson records for an English-learning app. Return only JSON.",
             message=prompt,
             max_tokens=1300,
         )
-        parsed = parse_json_object(raw) or {}
+        parsed = parse_json_object(raw)
+        if parsed is None:
+            raise RuntimeError("Invalid summary response")
         summary = normalize_lesson_summary(parsed)
-        farewell = "Great work today. I saved the main points so next time we can build on them."
+        farewell = "Great work today. Here are the main points to review next time."
         return JSONResponse({"summary": summary, "farewell": farewell})
-    except RuntimeError as exc:
-        return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
-        return JSONResponse({"error": "Lesson summary generation failed", "details": str(exc)}, status_code=500)
+        return provider_error(exc, "generation")
 
 
 def normalize_string_list(value: Any, fallback: list[str] | None = None) -> list[str]:
     if not isinstance(value, list):
         return fallback or []
-    return [str(item).strip() for item in value if str(item).strip()][:8]
+    return [str(item).strip()[:500] for item in value if str(item).strip()][:8]
 
 
 def normalize_lesson_summary(raw: dict[str, Any]) -> dict[str, Any]:
@@ -460,7 +500,7 @@ def normalize_lesson_summary(raw: dict[str, Any]) -> dict[str, Any]:
                 continue
             mistake_type = str(mistake.get("type") or "expression").strip() or "expression"
             normalized_mistakes.append({
-                "type": mistake_type,
+                "type": mistake_type[:80],
                 "pattern": str(mistake.get("pattern") or mistake.get("explanation") or mistake_type).strip()[:240],
                 "original": str(mistake.get("original") or "").strip()[:400],
                 "correction": str(mistake.get("correction") or "").strip()[:400],
@@ -477,26 +517,49 @@ def normalize_lesson_summary(raw: dict[str, Any]) -> dict[str, Any]:
         "mistakes": normalized_mistakes,
     }
 
-@app.post("/api/voice")
-async def voice(req: dict[str, Any]):
-    text = str(req.get("text") or "").strip()
-    voice_name = str(req.get("voice") or "alloy")
-    if not text:
-        return JSONResponse({"error": "text is required"}, status_code=400)
-
+@app.post("/api/voice", dependencies=[Depends(authorize_request)])
+async def voice(payload: VoiceRequest, request: Request):
+    started = time.monotonic()
+    context = None
+    entered = False
     try:
-        response = get_openai_client().audio.speech.create(
+        context = get_openai_client().audio.speech.with_streaming_response.create(
             model=os.getenv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts"),
-            voice=voice_name,
-            input=text,
+            voice=payload.voice, input=payload.text, response_format="mp3",
         )
+        # Enter/read before sending HTTP 200 so initial provider errors remain JSON.
+        async with asyncio.timeout(30):
+            response = await context.__aenter__()
+            entered = True
+            iterator = response.iter_bytes(chunk_size=4096).__aiter__()
+            first = await anext(iterator)
+    except BaseException as exc:
+        if context is not None and entered:
+            await context.__aexit__(type(exc), exc, exc.__traceback__)
+        if not isinstance(exc, Exception):
+            raise
+        return provider_error(exc, "tts")
+    first_ms = round((time.monotonic() - started) * 1000, 1)
+    logger.info(json.dumps({"event": "tts_first_byte", "request_id": request.state.request_id, "first_byte_ms": first_ms}))
 
-        audio_bytes = response.read() if hasattr(response, "read") else bytes(response)
-        return StreamingResponse(BytesIO(audio_bytes), media_type="audio/mpeg")
-    except RuntimeError as exc:
-        return JSONResponse({"error": str(exc)}, status_code=500)
-    except Exception as exc:
-        return JSONResponse({"error": "OpenAI voice request failed", "details": str(exc)}, status_code=500)
+    async def audio_chunks():
+        try:
+            yield first
+            async with asyncio.timeout(60):
+                async for chunk in iterator:
+                    yield chunk
+        except asyncio.CancelledError:
+            logger.info(json.dumps({"event": "tts_disconnected", "request_id": request.state.request_id}))
+            raise
+        except Exception as exc:
+            logger.warning(json.dumps({"event": "tts_stream_failed", "request_id": request.state.request_id, "type": type(exc).__name__}))
+            raise
+        finally:
+            await context.__aexit__(None, None, None)
+            logger.info(json.dumps({"event": "tts_closed", "request_id": request.state.request_id,
+                "total_ms": round((time.monotonic() - started) * 1000, 1)}))
+
+    return StreamingResponse(audio_chunks(), media_type="audio/mpeg", headers={"X-Accel-Buffering": "no"})
 
 # function for building feedback prompt, to be used in the /api/feedback endpoint. 
 def build_feedback_prompt(question: str, user_answer: str, level: str, tests: str, skills: str, practice_mode: str) -> str:
@@ -687,8 +750,8 @@ Rules:
 """
 
 
-def generate_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
-    improved_text = json_chat_completion(
+async def generate_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
+    improved_text = await json_chat_completion(
         system_prompt=(
             "You are a careful English rewriting assistant. Return only valid JSON. "
             "Do not include markdown or text outside the JSON object.\n\n"
@@ -733,12 +796,12 @@ Keep the student's intended meaning, but make the answer clearer, more natural, 
 """
 
 
-def generate_simple_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
-    improved_text = chat_completion(
+async def generate_simple_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
+    improved_text = (await chat_completion(
         system_prompt="You rewrite learner English. Return only the improved answer text.",
         message=build_simple_improved_version_prompt(question, user_answer, level, practice_mode),
         max_tokens=500,
-    ).strip()
+    )).strip()
 
     if not improved_text:
         return None
@@ -752,8 +815,9 @@ def generate_simple_improved_version(question: str, user_answer: str, level: str
     })
 
 
-@app.post("/api/feedback")
-async def feedback(req: dict[str, Any]) -> JSONResponse:
+@app.post("/api/feedback", dependencies=[Depends(authorize_request)])
+async def feedback(payload: FeedbackRequest) -> JSONResponse:
+    req = payload.model_dump()
     question = str(req.get("question") or "").strip()
     user_answer = str(req.get("userAnswer") or "").strip()
     level = str(req.get("level") or "A1")
@@ -766,7 +830,7 @@ async def feedback(req: dict[str, Any]) -> JSONResponse:
 
     try:
         prompt = build_feedback_prompt(question, user_answer, level, tests, skills, practice_mode)
-        feedback_text = chat_completion(
+        feedback_text = await chat_completion(
             system_prompt="You are a JSON provider. Return only valid JSON.",
             message=prompt,
             max_tokens=1400
@@ -778,14 +842,13 @@ async def feedback(req: dict[str, Any]) -> JSONResponse:
             level,
         )
         return JSONResponse({"feedback": feedback_json})
-    except RuntimeError as exc:
-        return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
-        return JSONResponse({"error": "Feedback generation failed", "details": str(exc)}, status_code=500)
+        return provider_error(exc, "generation")
 
 
-@app.post("/api/improved-version")
-async def improved_version(req: dict[str, Any]) -> JSONResponse:
+@app.post("/api/improved-version", dependencies=[Depends(authorize_request)])
+async def improved_version(payload: FeedbackRequest) -> JSONResponse:
+    req = payload.model_dump()
     question = str(req.get("question") or "").strip()
     user_answer = str(req.get("userAnswer") or "").strip()
     level = str(req.get("level") or "A1")
@@ -795,19 +858,13 @@ async def improved_version(req: dict[str, Any]) -> JSONResponse:
         return JSONResponse({"error": "question and userAnswer are required"}, status_code=400)
 
     try:
-        improved = None
-        try:
-            improved = generate_improved_version(question, user_answer, level, practice_mode)
-        except Exception as structured_exc:
-            logger.warning("Structured improved-version generation failed: %s", structured_exc)
+        improved = await generate_improved_version(question, user_answer, level, practice_mode)
 
         if not improved or not improved.get("segments"):
-            improved = generate_simple_improved_version(question, user_answer, level, practice_mode)
+            improved = await generate_simple_improved_version(question, user_answer, level, practice_mode)
 
         if not improved or not improved.get("segments"):
             return JSONResponse({"error": "Improved version generation failed"}, status_code=500)
         return JSONResponse({"improvedVersion": improved})
-    except RuntimeError as exc:
-        return JSONResponse({"error": str(exc)}, status_code=500)
     except Exception as exc:
-        return JSONResponse({"error": "Improved version generation failed", "details": str(exc)}, status_code=500)
+        return provider_error(exc, "generation")

@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { apiGetVocabStreamReview, type VocabStreamReviewQuestion, type VocabStreamWeakWord } from "../api";
 import { useAuth } from "../AuthContext";
 
 export function useReviewData() {
-  const { token, loading: authLoading } = useAuth();
+  const { token, user, loading: authLoading } = useAuth();
+  const latestToken = useRef(token);
+  latestToken.current = token;
+  const userId = user?.id;
   const [data, setData] = useState<{ weakWords: VocabStreamWeakWord[]; questions: VocabStreamReviewQuestion[] }>({ weakWords: [], questions: [] });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -12,10 +15,12 @@ export function useReviewData() {
     let cancelled = false;
     setError(false);
     if (authLoading) return;
-    if (!token) { setLoading(false); setData({ weakWords: [], questions: [] }); return; }
+    const accessToken = latestToken.current;
+    if (!userId || !accessToken) { setLoading(false); setData({ weakWords: [], questions: [] }); return; }
     setLoading(true);
-    apiGetVocabStreamReview(token).then((result) => { if (!cancelled) setData(result); }).catch(() => { if (!cancelled) setError(true); }).finally(() => { if (!cancelled) setLoading(false); });
+    setData({ weakWords: [], questions: [] });
+    apiGetVocabStreamReview(accessToken).then((result) => { if (!cancelled) setData(result); }).catch(() => { if (!cancelled) setError(true); }).finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
-  }, [token, authLoading, retry]);
+  }, [userId, authLoading, retry]);
   return { ...data, loading: loading || authLoading, error, refresh: () => setRetry((value) => value + 1), signedIn: Boolean(token) };
 }

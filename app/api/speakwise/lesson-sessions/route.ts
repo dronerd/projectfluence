@@ -1,92 +1,33 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAuthenticatedUser, getRequiredEnv } from "@/app/api/_lib/supabaseAuth";
+import { getAuthenticatedUser } from "@/app/api/_lib/supabaseAuth";
+import { apiError, ApiError, isPlainObject, readJsonBody } from "@/app/api/_lib/http";
+import { supabaseRest } from "@/app/api/_lib/supabaseRest";
+import { parseLessonFields } from "../validation";
 
 export const runtime = "nodejs";
 
-type SessionBody = {
-  mode?: unknown;
-  lessonMode?: unknown;
-  level?: unknown;
-  plannedDurationMinutes?: unknown;
-  selectedTopics?: unknown;
-  selectedComponents?: unknown;
-};
-
 export async function POST(request: NextRequest) {
-  const body = (await request.json().catch(() => null)) as SessionBody | null;
-  const parsed = parseSessionBody(body);
-  if (parsed instanceof NextResponse) return parsed;
-
   try {
-    const authUser = await getAuthenticatedUser(request);
-    if (!authUser) {
-      return NextResponse.json({ error: "Login is required to save SpeakWise session analytics." }, { status: 401 });
-    }
-
-    const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
-    const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
-    const response = await fetch(`${supabaseUrl}/rest/v1/speakwise_lesson_sessions`, {
-      method: "POST",
-      headers: {
-        apikey: serviceRoleKey,
-        Authorization: `Bearer ${serviceRoleKey}`,
-        "Content-Type": "application/json",
-        Prefer: "return=representation",
-      },
-      body: JSON.stringify({
-        user_id: authUser.id,
-        mode: parsed.mode,
-        lesson_mode: parsed.lessonMode,
-        level: parsed.level,
-        planned_duration_minutes: parsed.plannedDurationMinutes,
-        selected_topics: parsed.selectedTopics,
-        selected_components: parsed.selectedComponents,
-      }),
+    const user = await getAuthenticatedUser(request);
+    if (!user) throw new ApiError(401, "Login is required to save SpeakWise session analytics.", "LOGIN_REQUIRED");
+    const body = await readJsonBody(request, 12_000);
+    if (!isPlainObject(body)) throw new ApiError(400, "Request body must be a JSON object.", "INVALID_SESSION");
+    const fields = parseLessonFields(body);
+    const sessionId = body.sessionId ?? crypto.randomUUID();
+    if (typeof sessionId !== "string" || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(sessionId)) throw new ApiError(400, "The lesson session ID is invalid.", "INVALID_SESSION_ID");
+    let rows = await supabaseRest<Array<{ id: string }>>("speakwise_lesson_sessions?select=id&on_conflict=id", {
+      method: "POST", headers: { Prefer: "resolution=ignore-duplicates,return=representation" },
+      body: JSON.stringify({ id: sessionId, user_id: user.id, mode: fields.mode, lesson_mode: fields.lessonMode,
+        level: fields.level, planned_duration_minutes: fields.durationMinutes,
+        selected_topics: fields.topics, selected_components: [fields.lessonMode] }),
     });
-
-    if (!response.ok) {
-      const error = (await response.json().catch(() => null)) as { message?: string } | null;
-      throw new Error(error?.message ?? `Supabase session insert failed with status ${response.status}`);
+    if (!rows[0]?.id) {
+      const params = new URLSearchParams({ select: "id", id: `eq.${sessionId}`, user_id: `eq.${user.id}`, limit: "1" });
+      rows = await supabaseRest<Array<{ id: string }>>(`speakwise_lesson_sessions?${params}`);
+      if (!rows[0]?.id) throw new ApiError(403, "You cannot access this lesson session.", "FORBIDDEN");
     }
-
-    const rows = (await response.json().catch(() => [])) as Array<{ id?: string }>;
-    return NextResponse.json({ ok: true, session: rows[0] ?? null });
+    return NextResponse.json({ ok: true, session: rows[0] });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "SpeakWise session analytics save failed";
-    const status = message === "Invalid Supabase session." ? 401 : 500;
-    return NextResponse.json({ error: message }, { status });
+    return apiError(error, "speakwise.sessions.create");
   }
-}
-
-function parseSessionBody(body: SessionBody | null) {
-  if (!body || typeof body !== "object") {
-    return NextResponse.json({ error: "Request body must be a JSON object." }, { status: 400 });
-  }
-
-  const mode = body.mode === "writing" ? "writing" : "speaking";
-  const level = readAllowedString(body.level, ["A1", "A2", "B1", "B2", "C1", "C2"]) || "B2";
-  const plannedDurationMinutes = Math.max(0, Math.min(240, Math.round(Number(body.plannedDurationMinutes) || 0)));
-
-  return {
-    mode,
-    lessonMode: typeof body.lessonMode === "string" && body.lessonMode.trim()
-      ? body.lessonMode.trim()
-      : mode === "writing"
-        ? "writing_feedback"
-        : "speaking_practice",
-    level,
-    plannedDurationMinutes,
-    selectedTopics: stringArray(body.selectedTopics),
-    selectedComponents: stringArray(body.selectedComponents),
-  };
-}
-
-function readAllowedString(value: unknown, allowedValues: readonly string[]) {
-  return typeof value === "string" && allowedValues.includes(value) ? value : "";
-}
-
-function stringArray(value: unknown) {
-  return Array.isArray(value)
-    ? value.filter((item): item is string => typeof item === "string" && item.trim().length > 0).map((item) => item.trim())
-    : [];
 }

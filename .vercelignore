@@ -1,0 +1,3 @@
+# SpeakWise FastAPI is deployed separately on Render.
+# Preserve the Next.js route handlers under app/api/.
+/api/speakwise/

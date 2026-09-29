@@ -1,138 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import {
-  saveVocabStreamProgress,
-  type SaveVocabStreamProgressInput,
-  type VocabStreamQuestionAttemptInput,
-} from "@/apps/vocabstream/src/services/progressService";
+import { saveVocabStreamProgress } from "@/apps/vocabstream/src/services/progressService";
+import { parseVocabStreamProgress, ProgressValidationError } from "@/apps/vocabstream/src/lib/progressContract";
 import { getAuthenticatedUser } from "@/app/api/_lib/supabaseAuth";
+import { ApiError, apiError, readJsonBody } from "@/app/api/_lib/http";
 
 export const runtime = "nodejs";
 
-type RequestBody = Partial<SaveVocabStreamProgressInput>;
-
-const QUESTION_TYPES = ["meaning", "quiz"] as const;
-
 export async function POST(request: NextRequest) {
-  const body = (await request.json().catch(() => null)) as RequestBody | null;
-  const parsedBody = parseBody(body);
-  if (parsedBody instanceof NextResponse) return parsedBody;
-
   try {
     const authUser = await getAuthenticatedUser(request);
-    const result = await saveVocabStreamProgress({
-      ...parsedBody,
-      userId: authUser?.id,
-      userEmail: authUser?.email,
-      userUsername: readString(authUser?.user_metadata?.username) || parsedBody.userUsername,
-      userDisplayName:
-        readString(authUser?.user_metadata?.display_name) ||
-        readString(authUser?.user_metadata?.full_name) ||
-        readString(authUser?.user_metadata?.name),
-    });
-    return NextResponse.json({ ok: true, lessonAttemptId: result.lessonAttempt.id });
+    if (!authUser) throw new ApiError(401, "Sign in to save your learning progress.", "AUTH_REQUIRED");
+    const input = parseVocabStreamProgress(await readJsonBody(request, 512_000));
+    const result = await saveVocabStreamProgress(authUser.id, input);
+    return NextResponse.json({ ok: true, lessonAttemptId: result.lessonAttempt.id }, { headers: { "Cache-Control": "no-store" } });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Progress tracking failed";
-    const status = message === "Invalid Supabase session." ? 401 : 500;
-    return NextResponse.json({ error: message }, { status });
+    return apiError(error instanceof ProgressValidationError ? new ApiError(400, error.message, "INVALID_PROGRESS") : error, "vocabstream.progress");
   }
-}
-
-function parseBody(body: RequestBody | null): SaveVocabStreamProgressInput | NextResponse {
-  if (!body || typeof body !== "object") {
-    return NextResponse.json({ error: "Request body must be a JSON object." }, { status: 400 });
-  }
-
-  if (!isNonEmptyString(body.lessonId)) {
-    return NextResponse.json({ error: "lessonId is required." }, { status: 400 });
-  }
-
-  if (!isNonEmptyString(body.genre)) {
-    return NextResponse.json({ error: "genre is required." }, { status: 400 });
-  }
-
-  if (!Array.isArray(body.questionAttempts)) {
-    return NextResponse.json({ error: "questionAttempts must be an array." }, { status: 400 });
-  }
-
-  const questionAttempts: VocabStreamQuestionAttemptInput[] = [];
-  for (const attempt of body.questionAttempts) {
-    const parsedAttempt = parseQuestionAttempt(attempt);
-    if (!parsedAttempt) {
-      return NextResponse.json({ error: "questionAttempts contains an invalid attempt." }, { status: 400 });
-    }
-    questionAttempts.push(parsedAttempt);
-  }
-
-  return {
-    anonymousUserId: optionalString(body.anonymousUserId),
-    userUsername: optionalString(body.userUsername),
-    lessonId: body.lessonId.trim(),
-    genre: body.genre.trim(),
-    lessonNumber: optionalNumber(body.lessonNumber),
-    lessonTitle: optionalString(body.lessonTitle),
-    wordCount: requiredNumber(body.wordCount),
-    meaningScore: requiredNumber(body.meaningScore),
-    meaningTotal: requiredNumber(body.meaningTotal),
-    quizScore: requiredNumber(body.quizScore),
-    quizTotal: requiredNumber(body.quizTotal),
-    replayCompleted: Boolean(body.replayCompleted),
-    replayCorrect: optionalNumber(body.replayCorrect) ?? 0,
-    replayTotal: optionalNumber(body.replayTotal) ?? 0,
-    questionAttempts,
-  };
-}
-
-function parseQuestionAttempt(value: unknown): VocabStreamQuestionAttemptInput | null {
-  if (!value || typeof value !== "object") return null;
-  const attempt = value as Partial<VocabStreamQuestionAttemptInput>;
-
-  if (!isOneOf(attempt.questionType, QUESTION_TYPES)) return null;
-  if (!isNonEmptyString(attempt.word)) return null;
-  if (!isNonEmptyString(attempt.correctAnswer)) return null;
-  if (!isNonEmptyString(attempt.selectedAnswer)) return null;
-  if (typeof attempt.isCorrect !== "boolean") return null;
-
-  return {
-    questionType: attempt.questionType,
-    word: attempt.word.trim(),
-    prompt: optionalString(attempt.prompt),
-    correctAnswer: attempt.correctAnswer.trim(),
-    selectedAnswer: attempt.selectedAnswer.trim(),
-    isCorrect: attempt.isCorrect,
-    isReplay: Boolean(attempt.isReplay),
-    attemptOrder: requiredNumber(attempt.attemptOrder),
-    choices: Array.isArray(attempt.choices) ? attempt.choices.filter(isNonEmptyString).map((choice) => choice.trim()) : [],
-    answeredAt: optionalString(attempt.answeredAt),
-    sourceCategory: optionalString(attempt.sourceCategory),
-    sourceLessonId: optionalString(attempt.sourceLessonId),
-    sourceLessonNumber: optionalNumber(attempt.sourceLessonNumber) ?? null,
-    definition: optionalString(attempt.definition),
-    example: optionalString(attempt.example),
-    explanation: optionalString(attempt.explanation),
-  };
-}
-
-function isNonEmptyString(value: unknown): value is string {
-  return typeof value === "string" && value.trim().length > 0;
-}
-
-function optionalString(value: unknown) {
-  return isNonEmptyString(value) ? value.trim() : undefined;
-}
-
-function optionalNumber(value: unknown) {
-  const numberValue = typeof value === "number" ? value : Number(value);
-  return Number.isFinite(numberValue) ? numberValue : undefined;
-}
-
-function requiredNumber(value: unknown) {
-  return optionalNumber(value) ?? 0;
-}
-
-function isOneOf<T extends string>(value: unknown, allowedValues: readonly T[]): value is T {
-  return typeof value === "string" && allowedValues.includes(value as T);
-}
-
-function readString(value: unknown) {
-  return typeof value === "string" && value.trim() ? value.trim() : undefined;
 }

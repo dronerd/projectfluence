@@ -5,6 +5,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import AppHeader from "@/app/components/AppHeader";
 import AppBrand from "@/app/components/AppBrand";
 import AuthButton from "@/app/components/AuthButton";
+import { requestSignal } from "@/lib/browserRequest";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
 type AnalyticsSummary = {
@@ -36,7 +37,7 @@ export default function AnalyticsPage() {
       setAccessToken(token);
       setAuthReady(true);
     };
-    void supabase.auth.getSession().then(({ data }) => applySession(data.session?.access_token ?? null));
+    void supabase.auth.getSession().then(({ data }) => applySession(data.session?.access_token ?? null)).catch(() => applySession(null));
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => applySession(session?.access_token ?? null));
     return () => { active = false; subscription.unsubscribe(); };
   }, [supabase]);
@@ -46,16 +47,17 @@ export default function AnalyticsPage() {
     setError("");
     if (!accessToken) { setLoading(false); return; }
     const controller = new AbortController();
+    const deadline = requestSignal(25_000, [controller.signal]);
     setLoading(true);
-    void fetch("/api/analytics/summary", { headers: { Authorization: `Bearer ${accessToken}` }, signal: controller.signal })
+    void fetch("/api/analytics/summary", { headers: { Authorization: `Bearer ${accessToken}` }, signal: deadline.signal })
       .then(async (response) => {
         const payload = await response.json();
         if (!response.ok || payload.error) throw new Error("Records unavailable");
         if (!controller.signal.aborted) setSummary(payload);
       }).catch(() => {
         if (!controller.signal.aborted) setError("学習の記録を読み込めませんでした。通信状況を確認して、もう一度お試しください。");
-      }).finally(() => { if (!controller.signal.aborted) setLoading(false); });
-    return () => controller.abort();
+      }).finally(() => { deadline.dispose(); if (!controller.signal.aborted) setLoading(false); });
+    return () => { controller.abort(); deadline.dispose(); };
   }, [accessToken, retry]);
 
   const hasActivity = summary && (summary.vocabstream.completedLessons > 0 || summary.vidmatch.savedVideos > 0 || summary.speakwise.lessonSessions > 0);

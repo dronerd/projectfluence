@@ -5,8 +5,8 @@ import { chromium, AxeBuilder, baseUrl, screenshotPath } from './browser-tools.m
   const context = await browser.newContext();
   const page = await context.newPage();
   let state='results';
-  const video={ video_id:'test1',title:'Build confidence in everyday English — a useful conversation for your next trip',channel_name:'English Practice',youtube_url:'https://www.youtube.com/watch?v=test1',thumbnail_url:null,duration:'PT12M30S',level:'B1',skills:['listening','conversation'],topics:['travel'],accent:'American',transcript_available:true,description:'Listen to a friendly conversation and practice useful phrases for everyday situations. '.repeat(4),tags:[],quality_score:80};
-  await page.route('**/api/vidmatch/recommend?**',route=>route.fulfill({status:state==='error'?500:200,contentType:'application/json',body:JSON.stringify(state==='error'?{error:'test'}:{videos:state==='empty'?[]:[video,{...video,video_id:'test2'}]})}));
+  const video={ video_id:'fixture0001',title:'Build confidence in everyday English — a useful conversation for your next trip',channel_name:'English Practice',youtube_url:'https://www.youtube.com/watch?v=fixture0001',thumbnail_url:null,duration:'PT12M30S',level:'B1',skills:['listening','conversation'],topics:['travel'],accent:'American',transcript_available:true,description:'Listen to a friendly conversation and practice useful phrases for everyday situations. '.repeat(4),tags:[],quality_score:80};
+  await page.route('**/api/vidmatch/recommend?**',route=>route.fulfill({status:state==='error'?500:200,contentType:'application/json',body:JSON.stringify(state==='error'?{error:'test'}:{videos:state==='empty'?[]:[video,{...video,video_id:'fixture0002'}]})}));
   await page.goto(baseUrl + '/vidmatch');
   await page.getByRole('button',{name:'動画を探す',exact:true}).click();
   await page.getByRole('status').filter({hasText:'2件'}).waitFor();

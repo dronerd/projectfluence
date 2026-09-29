@@ -1,96 +1,34 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAuthenticatedUser, getRequiredEnv } from "@/app/api/_lib/supabaseAuth";
+import { getAuthenticatedUser } from "@/app/api/_lib/supabaseAuth";
+import { apiError, ApiError, isPlainObject, readJsonBody } from "@/app/api/_lib/http";
+import { supabaseRest } from "@/app/api/_lib/supabaseRest";
 
 export const runtime = "nodejs";
 
-type SettingsBody = {
-  settings?: unknown;
-};
-
-type SettingsRow = {
-  settings: unknown;
-  updated_at: string;
-};
-
 export async function GET(request: NextRequest) {
   try {
-    const authUser = await getAuthenticatedUser(request);
-    if (!authUser) return NextResponse.json({ settings: null });
-
-    const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
-    const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
-    const params = new URLSearchParams({
-      select: "settings,updated_at",
-      user_id: `eq.${authUser.id}`,
-      limit: "1",
-    });
-
-    const response = await fetch(`${supabaseUrl}/rest/v1/speakwise_lesson_settings?${params}`, {
-      headers: {
-        apikey: serviceRoleKey,
-        Authorization: `Bearer ${serviceRoleKey}`,
-      },
-    });
-
-    if (!response.ok) {
-      const error = (await response.json().catch(() => null)) as { message?: string } | null;
-      throw new Error(error?.message ?? `Supabase settings read failed with status ${response.status}`);
-    }
-
-    const rows = (await response.json()) as SettingsRow[];
-    return NextResponse.json({
-      settings: rows[0]?.settings ?? null,
-      updatedAt: rows[0]?.updated_at ?? null,
-    });
+    const user = await getAuthenticatedUser(request);
+    if (!user) return NextResponse.json({ settings: null });
+    const params = new URLSearchParams({ select: "settings,updated_at", user_id: `eq.${user.id}`, limit: "1" });
+    const rows = await supabaseRest<Array<{ settings: unknown; updated_at: string }>>(`speakwise_lesson_settings?${params}`);
+    return NextResponse.json({ settings: rows[0]?.settings ?? null, updatedAt: rows[0]?.updated_at ?? null });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "SpeakWise settings lookup failed";
-    const status = message === "Invalid Supabase session." ? 401 : 500;
-    return NextResponse.json({ error: message }, { status });
+    return apiError(error, "speakwise.settings.read");
   }
 }
 
 export async function PUT(request: NextRequest) {
-  const body = (await request.json().catch(() => null)) as SettingsBody | null;
-  if (!body || !isPlainObject(body.settings)) {
-    return NextResponse.json({ error: "settings must be a JSON object." }, { status: 400 });
-  }
-
   try {
-    const authUser = await getAuthenticatedUser(request);
-    if (!authUser) {
-      return NextResponse.json({ error: "Login is required to save SpeakWise settings." }, { status: 401 });
-    }
-
-    const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
-    const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
-    const response = await fetch(`${supabaseUrl}/rest/v1/speakwise_lesson_settings?on_conflict=user_id`, {
-      method: "POST",
-      headers: {
-        apikey: serviceRoleKey,
-        Authorization: `Bearer ${serviceRoleKey}`,
-        "Content-Type": "application/json",
-        Prefer: "resolution=merge-duplicates,return=representation",
-      },
-      body: JSON.stringify({
-        user_id: authUser.id,
-        settings: body.settings,
-        updated_at: new Date().toISOString(),
-      }),
+    const user = await getAuthenticatedUser(request);
+    if (!user) throw new ApiError(401, "Login is required to save SpeakWise settings.", "LOGIN_REQUIRED");
+    const body = await readJsonBody(request, 40_000);
+    if (!isPlainObject(body) || !isPlainObject(body.settings)) throw new ApiError(400, "settings must be a JSON object.", "INVALID_SETTINGS");
+    await supabaseRest("speakwise_lesson_settings?on_conflict=user_id", {
+      method: "POST", headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
+      body: JSON.stringify({ user_id: user.id, settings: body.settings }),
     });
-
-    if (!response.ok) {
-      const error = (await response.json().catch(() => null)) as { message?: string } | null;
-      throw new Error(error?.message ?? `Supabase settings upsert failed with status ${response.status}`);
-    }
-
     return NextResponse.json({ ok: true });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "SpeakWise settings save failed";
-    const status = message === "Invalid Supabase session." ? 401 : 500;
-    return NextResponse.json({ error: message }, { status });
+    return apiError(error, "speakwise.settings.write");
   }
-}
-
-function isPlainObject(value: unknown): value is Record<string, unknown> {
-  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
 }

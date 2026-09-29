@@ -1,18 +1,75 @@
+# Apply Supabase migrations and configure Auth before enabling application traffic.
+# Automatic deployment is deliberately off while schema/configuration changes are coordinated.
 services:
   - type: web
     name: speakwise-backend
-    env: python
+    runtime: python
     region: singapore
     rootDir: api/speakwise
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    autoDeploy: true
+    buildCommand: python -m pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    numInstances: 1
+    autoDeployTrigger: off
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.11
       - key: OPENAI_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SPEAKWISE_CORS_ORIGINS
         sync: false
       - key: OPENAI_CHAT_MODEL
         value: gpt-4o-mini
       - key: OPENAI_TTS_MODEL
         value: gpt-4o-mini-tts
+  - type: web
+    name: projectfluence-web
+    runtime: node
+    region: singapore
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm run start -- --hostname 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeployTrigger: off
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
+      - key: NEXT_PUBLIC_SPEAKWISE_API_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: VIDMATCH_INGEST_TOKEN
+        generateValue: true
+      - key: CRON_SECRET
+        generateValue: true
+  - type: cron
+    name: projectfluence-daily-youtube
+    runtime: node
+    region: singapore
+    schedule: "0 20 * * *"
+    buildCommand: node --version
+    startCommand: node scripts/run-vidmatch-cron.mjs
+    autoDeployTrigger: off
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: PROJECTFLUENCE_URL
+        sync: false
+      - key: CRON_SECRET
+        fromService:
+          type: web
+          name: projectfluence-web
+          envVarKey: CRON_SECRET

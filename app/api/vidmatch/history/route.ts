@@ -1,140 +1,53 @@
+import { supabaseServiceHeaders } from "@/app/api/_lib/supabaseAuth";
 import { NextRequest, NextResponse } from "next/server";
 import { getAuthenticatedUser, getRequiredEnv } from "@/app/api/_lib/supabaseAuth";
+import { ApiError, apiError, fetchWithTimeout, readJsonBody } from "@/app/api/_lib/http";
+import { isYoutubeVideoId } from "@/apps/vidmatch/src/services/videoContract";
 
 export const runtime = "nodejs";
-
-type HistoryVideoPayload = {
-  video_id?: unknown;
-  title?: unknown;
-  channel_name?: unknown;
-  youtube_url?: unknown;
-  thumbnail_url?: unknown;
-  duration?: unknown;
-  level?: unknown;
-  skills?: unknown;
-  topics?: unknown;
-  accent?: unknown;
-  quality_score?: unknown;
-};
 
 export async function GET(request: NextRequest) {
   try {
     const authUser = await getAuthenticatedUser(request);
-    if (!authUser) return NextResponse.json({ history: [] });
-
+    if (!authUser) throw new ApiError(401, "Login is required to read video history.", "unauthorized");
+    const limit = Number(request.nextUrl.searchParams.get("limit") ?? 100);
+    if (!Number.isInteger(limit) || limit < 1 || limit > 100) throw new ApiError(400, "limit must be an integer from 1 to 100.", "invalid_request");
     const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
     const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
     const params = new URLSearchParams({
-      select:
-        "video_id,title,channel_name,youtube_url,thumbnail_url,duration,level,skills,topics,accent,quality_score,click_count,last_clicked_at,created_at",
-      user_id: `eq.${authUser.id}`,
-      order: "last_clicked_at.desc",
-      limit: request.nextUrl.searchParams.get("limit") || "100",
+      select: "video_id,title,channel_name,youtube_url,thumbnail_url,duration,level,skills,topics,accent,quality_score,click_count,last_clicked_at,created_at",
+      user_id: `eq.${authUser.id}`, order: "last_clicked_at.desc", limit: String(limit),
     });
-
-    const response = await fetch(`${supabaseUrl}/rest/v1/vidmatch_video_view_history?${params}`, {
-      headers: {
-        apikey: serviceRoleKey,
-        Authorization: `Bearer ${serviceRoleKey}`,
-      },
+    const response = await fetchWithTimeout(`${supabaseUrl}/rest/v1/vidmatch_video_view_history?${params}`, {
+      headers: { ...supabaseServiceHeaders(serviceRoleKey) },
     });
-
-    if (!response.ok) {
-      const error = (await response.json().catch(() => null)) as { message?: string } | null;
-      throw new Error(error?.message ?? `Supabase history read failed with status ${response.status}`);
-    }
-
-    return NextResponse.json({ history: await response.json() });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : "VidMatch history lookup failed";
-    const status = message === "Invalid Supabase session." ? 401 : 500;
-    return NextResponse.json({ error: message }, { status });
-  }
+    if (!response.ok) throw new ApiError(503, "Video history is temporarily unavailable.", "database_unavailable");
+    return NextResponse.json({ history: await response.json() }, { headers: { "Cache-Control": "private, no-store" } });
+  } catch (error) { return apiError(error, "vidmatch.history.read"); }
 }
 
 export async function POST(request: NextRequest) {
-  const body = (await request.json().catch(() => null)) as HistoryVideoPayload | null;
-  const parsed = parseVideoPayload(body);
-  if (parsed instanceof NextResponse) return parsed;
-
   try {
     const authUser = await getAuthenticatedUser(request);
-    if (!authUser) {
-      return NextResponse.json({ error: "Login is required to save VidMatch history." }, { status: 401 });
+    if (!authUser) throw new ApiError(401, "Login is required to save video history.", "unauthorized");
+    const body = await readJsonBody(request, 16_384);
+    if (!body || typeof body !== "object" || !("video_id" in body) || !isYoutubeVideoId(body.video_id)) {
+      throw new ApiError(400, "A valid video_id is required.", "invalid_request");
     }
-
     const supabaseUrl = getRequiredEnv("SUPABASE_URL").replace(/\/$/, "");
     const serviceRoleKey = getRequiredEnv("SUPABASE_SERVICE_ROLE_KEY");
-    const payload = {
-      ...parsed,
-      user_id: authUser.id,
-      last_clicked_at: new Date().toISOString(),
-    };
-
-    const response = await fetch(
-      `${supabaseUrl}/rest/v1/vidmatch_video_view_history?on_conflict=user_id,video_id`,
-      {
-        method: "POST",
-        headers: {
-          apikey: serviceRoleKey,
-          Authorization: `Bearer ${serviceRoleKey}`,
-          "Content-Type": "application/json",
-          Prefer: "resolution=merge-duplicates,return=representation",
-        },
-        body: JSON.stringify(payload),
-      },
-    );
-
+    // The database reads catalog metadata and increments the view count atomically.
+    // Client-provided titles, URLs, user IDs, and counts are deliberately ignored.
+    const response = await fetchWithTimeout(`${supabaseUrl}/rest/v1/rpc/record_vidmatch_video_view`, {
+      method: "POST",
+      headers: { ...supabaseServiceHeaders(serviceRoleKey), "Content-Type": "application/json" },
+      body: JSON.stringify({ p_user_id: authUser.id, p_video_id: body.video_id }),
+    });
     if (!response.ok) {
-      const error = (await response.json().catch(() => null)) as { message?: string } | null;
-      throw new Error(error?.message ?? `Supabase history upsert failed with status ${response.status}`);
+      const failure = await response.json().catch(() => null) as { code?: string } | null;
+      if (failure?.code === "22023") throw new ApiError(404, "This video is no longer in the catalog.", "video_not_found");
+      throw new ApiError(503, "Video history could not be saved.", "database_unavailable");
     }
-
-    return NextResponse.json({ ok: true, history: await response.json() });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : "VidMatch history save failed";
-    const status = message === "Invalid Supabase session." ? 401 : 500;
-    return NextResponse.json({ error: message }, { status });
-  }
-}
-
-function parseVideoPayload(body: HistoryVideoPayload | null) {
-  if (!body || typeof body !== "object") {
-    return NextResponse.json({ error: "Request body must be a JSON object." }, { status: 400 });
-  }
-
-  if (!isNonEmptyString(body.video_id) || !isNonEmptyString(body.title) || !isNonEmptyString(body.youtube_url)) {
-    return NextResponse.json({ error: "video_id, title, and youtube_url are required." }, { status: 400 });
-  }
-
-  return {
-    video_id: body.video_id.trim(),
-    title: body.title.trim(),
-    channel_name: isNonEmptyString(body.channel_name) ? body.channel_name.trim() : "Unknown channel",
-    youtube_url: body.youtube_url.trim(),
-    thumbnail_url: optionalString(body.thumbnail_url),
-    duration: optionalString(body.duration),
-    level: optionalString(body.level),
-    skills: stringArray(body.skills),
-    topics: stringArray(body.topics),
-    accent: optionalString(body.accent),
-    quality_score: optionalNumber(body.quality_score) ?? 0,
-  };
-}
-
-function isNonEmptyString(value: unknown): value is string {
-  return typeof value === "string" && value.trim().length > 0;
-}
-
-function optionalString(value: unknown) {
-  return isNonEmptyString(value) ? value.trim() : null;
-}
-
-function optionalNumber(value: unknown) {
-  const numberValue = typeof value === "number" ? value : Number(value);
-  return Number.isFinite(numberValue) ? numberValue : undefined;
-}
-
-function stringArray(value: unknown) {
-  return Array.isArray(value) ? value.filter(isNonEmptyString).map((item) => item.trim()) : [];
+    return NextResponse.json({ ok: true }, { headers: { "Cache-Control": "private, no-store" } });
+  } catch (error) { return apiError(error, "vidmatch.history.save"); }
 }

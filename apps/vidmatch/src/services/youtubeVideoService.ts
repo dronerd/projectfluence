@@ -1,37 +1,10 @@
+import { supabaseServiceHeaders } from "@/app/api/_lib/supabaseAuth";
 import "server-only";
 
-export type VidMatchLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
-
-export type VidMatchSkill =
-  | "listening"
-  | "vocabulary"
-  | "pronunciation"
-  | "grammar"
-  | "conversation";
-
-export type VidMatchTopic = string;
-
-export type VidMatchVideo = {
-  video_id: string;
-  title: string;
-  channel_name: string;
-  youtube_url: string;
-  thumbnail_url: string | null;
-  duration: string | null;
-  level: VidMatchLevel;
-  skills: VidMatchSkill[];
-  topics: VidMatchTopic[];
-  accent: string | null;
-  transcript_available: boolean;
-  description: string | null;
-  tags: string[];
-  quality_score: number;
-  source: string;
-  source_video_id: string;
-  speaker_name: string | null;
-  source_url: string;
-  created_at?: string;
-};
+import { fetchWithTimeout as fetch } from "@/app/api/_lib/http";
+import { getRequiredEnv } from "@/app/api/_lib/supabaseAuth";
+import { isYoutubeVideoId, overlapFilter, parseVideoRows, type VidMatchVideo, type VidMatchLevel, type VidMatchSkill, type VidMatchTopic } from "./videoContract";
+export type { VidMatchVideo, VidMatchLevel, VidMatchSkill, VidMatchTopic } from "./videoContract";
 
 export type SearchYoutubeVideosInput = {
   query: string;
@@ -82,7 +55,9 @@ type YoutubeVideoItem = {
   contentDetails?: {
     duration?: string;
     caption?: string;
+    contentRating?: { ytRating?: string };
   };
+  status?: { privacyStatus?: string; uploadStatus?: string; embeddable?: boolean };
   statistics?: {
     viewCount?: string;
     likeCount?: string;
@@ -139,14 +114,14 @@ export async function searchYoutubeVideos(input: SearchYoutubeVideosInput): Prom
 
   const detailsParams = new URLSearchParams({
     key: apiKey,
-    part: "snippet,contentDetails,statistics",
+    part: "snippet,contentDetails,statistics,status",
     id: videoIds.join(","),
   });
 
   const detailsData = await fetchJson<YoutubeVideosResponse>(`${YOUTUBE_VIDEOS_URL}?${detailsParams}`);
 
   return (
-    detailsData.items?.map((item) =>
+    detailsData.items?.filter((item) => isYoutubeVideoId(item.id) && item.status?.privacyStatus === "public" && item.status?.uploadStatus === "processed" && item.contentDetails?.contentRating?.ytRating !== "ytAgeRestricted").map((item) =>
       normalizeYoutubeVideo(item, {
         level: input.level ?? inferLevel(input.query),
         skills: input.skills?.length ? input.skills : inferSkills(input.query),
@@ -164,8 +139,7 @@ export async function saveVideosToSupabase(videos: VidMatchVideo[]): Promise<Vid
   const response = await fetch(`${supabaseUrl}/rest/v1/vidmatch_videos?on_conflict=video_id`, {
     method: "POST",
     headers: {
-      apikey: serviceRoleKey,
-      Authorization: `Bearer ${serviceRoleKey}`,
+      ...supabaseServiceHeaders(serviceRoleKey),
       "Content-Type": "application/json",
       Prefer: "resolution=merge-duplicates,return=representation",
     },
@@ -193,7 +167,7 @@ export async function getRecommendedVideos(input: RecommendVideosInput): Promise
     select:
       "video_id,title,channel_name,youtube_url,thumbnail_url,duration,level,skills,topics,accent,transcript_available,description,tags,quality_score,source,source_video_id,speaker_name,source_url,created_at",
     order: "quality_score.desc,created_at.desc",
-    limit: "100",
+    limit: String(limit),
   });
 
   if (input.level) {
@@ -204,10 +178,14 @@ export async function getRecommendedVideos(input: RecommendVideosInput): Promise
     params.set("transcript_available", `eq.${input.transcriptAvailable}`);
   }
 
+  // Filter in PostgreSQL before LIMIT; client filtering lost matches below the first 100 rows.
+  if (input.skills?.length) params.set("skills", overlapFilter(input.skills));
+  if (input.topics?.length) params.set("topics", overlapFilter(input.topics));
+  if (input.accent) params.set("accent", `eq.${input.accent}`);
+
   const response = await fetch(`${supabaseUrl}/rest/v1/vidmatch_videos?${params}`, {
     headers: {
-      apikey: serviceRoleKey,
-      Authorization: `Bearer ${serviceRoleKey}`,
+      ...supabaseServiceHeaders(serviceRoleKey),
       "Content-Type": "application/json",
     },
     cache: "no-store",
@@ -218,12 +196,7 @@ export async function getRecommendedVideos(input: RecommendVideosInput): Promise
     throw new Error(error?.message ?? `Supabase recommendation query failed with status ${response.status}`);
   }
 
-  const videos = (await response.json()) as VidMatchVideo[];
-  return videos
-    .filter((video) => matchesArrayFilter(video.skills, input.skills))
-    .filter((video) => matchesArrayFilter(video.topics, input.topics))
-    .filter((video) => matchesAccent(video.accent, input.accent))
-    .slice(0, limit);
+  return parseVideoRows(await response.json());
 }
 
 async function getSimilarVideos(videoId: string, limitInput?: number): Promise<VidMatchVideo[]> {
@@ -241,8 +214,7 @@ async function getSimilarVideos(videoId: string, limitInput?: number): Promise<V
 
   const sourceResponse = await fetch(`${supabaseUrl}/rest/v1/vidmatch_videos?${sourceParams}`, {
     headers: {
-      apikey: serviceRoleKey,
-      Authorization: `Bearer ${serviceRoleKey}`,
+      ...supabaseServiceHeaders(serviceRoleKey),
       "Content-Type": "application/json",
     },
     cache: "no-store",
@@ -253,7 +225,7 @@ async function getSimilarVideos(videoId: string, limitInput?: number): Promise<V
     throw new Error(error?.message ?? `Supabase source video query failed with status ${sourceResponse.status}`);
   }
 
-  const sourceVideos = (await sourceResponse.json()) as VidMatchVideo[];
+  const sourceVideos = parseVideoRows(await sourceResponse.json());
   const sourceVideo = sourceVideos[0];
   if (!sourceVideo) return [];
 
@@ -265,8 +237,7 @@ async function getSimilarVideos(videoId: string, limitInput?: number): Promise<V
 
   const candidateResponse = await fetch(`${supabaseUrl}/rest/v1/vidmatch_videos?${candidateParams}`, {
     headers: {
-      apikey: serviceRoleKey,
-      Authorization: `Bearer ${serviceRoleKey}`,
+      ...supabaseServiceHeaders(serviceRoleKey),
       "Content-Type": "application/json",
     },
     cache: "no-store",
@@ -277,7 +248,7 @@ async function getSimilarVideos(videoId: string, limitInput?: number): Promise<V
     throw new Error(error?.message ?? `Supabase similar video query failed with status ${candidateResponse.status}`);
   }
 
-  const candidates = (await candidateResponse.json()) as VidMatchVideo[];
+  const candidates = parseVideoRows(await candidateResponse.json());
   return candidates
     .filter((video) => video.video_id !== sourceVideo.video_id)
     .map((video) => ({ video, similarityScore: scoreSimilarity(sourceVideo, video) }))
@@ -293,9 +264,9 @@ function normalizeYoutubeVideo(
 ): VidMatchVideo {
   const snippet = item.snippet;
   const thumbnailUrl =
-    snippet?.thumbnails?.maxres?.url ??
     snippet?.thumbnails?.high?.url ??
     snippet?.thumbnails?.medium?.url ??
+    snippet?.thumbnails?.maxres?.url ??
     snippet?.thumbnails?.default?.url ??
     null;
 
@@ -356,8 +327,8 @@ function inferLevel(query: string): VidMatchLevel {
   const lowerQuery = query.toLowerCase();
   if (lowerQuery.includes("beginner") || lowerQuery.includes("a1")) return "A1";
   if (lowerQuery.includes("elementary") || lowerQuery.includes("a2")) return "A2";
-  if (lowerQuery.includes("intermediate") || lowerQuery.includes("b1")) return "B1";
-  if (lowerQuery.includes("upper intermediate") || lowerQuery.includes("b2")) return "B2";
+  if (lowerQuery.includes("upper intermediate") || /\bb2\b/.test(lowerQuery)) return "B2";
+  if (lowerQuery.includes("intermediate") || /\bb1\b/.test(lowerQuery)) return "B1";
   if (lowerQuery.includes("proficiency") || lowerQuery.includes("c2")) return "C2";
   if (lowerQuery.includes("advanced") || lowerQuery.includes("c1")) return "C1";
   return "B1";
@@ -396,16 +367,6 @@ function inferAccent(text: string) {
   return null;
 }
 
-function matchesArrayFilter(values: string[], selectedValues?: string[]) {
-  if (!selectedValues?.length) return true;
-  return selectedValues.some((selectedValue) => values.includes(selectedValue));
-}
-
-function matchesAccent(videoAccent: string | null, selectedAccent?: string) {
-  if (!selectedAccent) return true;
-  return videoAccent?.toLowerCase() === selectedAccent.toLowerCase();
-}
-
 function scoreSimilarity(sourceVideo: VidMatchVideo, candidate: VidMatchVideo) {
   const skillOverlap = countOverlap(sourceVideo.skills, candidate.skills);
   const topicOverlap = countOverlap(sourceVideo.topics, candidate.topics);
@@ -430,20 +391,11 @@ function countOverlap(leftValues: string[], rightValues: string[]) {
 }
 
 async function fetchJson<T>(url: string): Promise<T> {
-  const response = await fetch(url, { next: { revalidate: 3600 } });
+  const response = await fetch(url);
 
   if (!response.ok) {
     throw new Error(`YouTube API request failed with status ${response.status}`);
   }
 
   return response.json() as Promise<T>;
-}
-
-function getRequiredEnv(name: string) {
-  const value = process.env[name];
-  if (!value) {
-    throw new Error(`Missing required environment variable: ${name}`);
-  }
-
-  return value;
 }
