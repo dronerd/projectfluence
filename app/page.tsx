@@ -6,9 +6,9 @@ import LearningResources from "./components/LearningResources";
 import "./home.css";
 
 const practices = [
-  { app: "vocabstream" as const, label: "単語を学ぶ", text: "英語の定義と例文で理解し、クイズで確かめる。自分のペースで語彙を増やしましょう。", detail: "レベル別の単語・イディオム", action: "単語のレッスンへ", number: "01" },
-  { app: "speakwise" as const, label: "会話を練習する", text: "身近な話題から試験対策まで。AIと話して、伝わる表現とフィードバックを学びましょう。", detail: "会話・ライティング・試験対策", action: "会話の練習へ", number: "02" },
-  { app: "vidmatch" as const, label: "動画で英語に触れる", text: "レベルや興味に合う動画を見つける。好きなテーマを、英語で楽しみましょう。", detail: "レベルとテーマで動画を検索", action: "動画を探す", number: "03" },
+  { app: "vocabstream" as const, label: "単語を学ぶ", text: "英語の定義と例文で学び、クイズで確認。", action: "単語のレッスンへ", number: "01" },
+  { app: "speakwise" as const, label: "会話を練習する", text: "AIとの会話・ライティング練習とフィードバック。", action: "会話の練習へ", number: "02" },
+  { app: "vidmatch" as const, label: "動画で英語に触れる", text: "レベルや興味に合う英語の動画を探す。", action: "動画を探す", number: "03" },
 ];
 export default function HomePage() {
   return <>
@@ -16,28 +16,25 @@ export default function HomePage() {
     <main id="main-content" tabIndex={-1} className="pf-page home-page">
       <section className="home-intro" aria-labelledby="home-title">
         <div>
-          <p className="pf-eyebrow">あなたの未来に、英語の力を</p>
           <h1 id="home-title">今日の一歩を、<br className="home-mobile-break" />英語の自信に。</h1>
-          <p className="home-intro-copy">単語を学ぶ。会話で使う。動画で出会う。<br />今のあなたに合う練習から始めましょう。</p>
+          <p className="home-intro-copy">単語・会話・動画から、練習を選びましょう。</p>
           <div className="home-intro-actions"><Link className="pf-button" href="/vocabstream">学習を始める <span aria-hidden="true">→</span></Link><Link className="home-text-link" href="/analytics">学習の記録を見る <span aria-hidden="true">↗</span></Link></div>
         </div>
         <aside className="home-start-note">
-          <span className="home-note-label">はじめての方へ</span>
-          <h2>ひとつのレッスンから。</h2>
-          <p>迷ったら、単語学習から始めてみましょう。知っている表現が増えると、聞く・話す練習も取り組みやすくなります。</p>
-          <span className="home-note-foot">登録せずに練習できます。<br />ログインすると学習の記録を保存できます。</span>
+          <h2>はじめての方へ</h2>
+          <p>登録せずに練習できます。ログインすると学習の記録を保存できます。</p>
         </aside>
       </section>
       <section id="apps" aria-labelledby="practice-title" className="home-practice">
-        <div className="home-section-heading"><div><p className="pf-eyebrow">LEARN · PRACTICE · DISCOVER</p><h2 id="practice-title">今日は何を練習しますか？</h2></div><span>あなたのペースで、少しずつ。</span></div>
+        <div className="home-section-heading"><h2 id="practice-title">今日は何を練習しますか？</h2></div>
         <div className="home-practice-grid">{practices.map((practice) => <article className="home-practice-card pf-panel" key={practice.app}>
           <div className="home-card-top"><AppBrand app={practice.app} /><span className="home-card-number">{practice.number}</span></div>
           <h3>{practice.label}</h3><p className="home-card-copy">{practice.text}</p>
-          <p className="home-card-detail">{practice.detail}</p><Link className="pf-button-secondary" href={learningApps[practice.app].href}>{practice.action}<span aria-hidden="true">→</span></Link>
+          <Link className="pf-button-secondary" href={learningApps[practice.app].href}>{practice.action}<span aria-hidden="true">→</span></Link>
         </article>)}</div>
       </section>
       <section className="home-guide" aria-labelledby="guide-title">
-        <div className="home-section-heading"><div><p className="pf-eyebrow">LEARNING GUIDE</p><h2 id="guide-title">学び方のヒント</h2></div><p>英語学習の経験をもとにしたコラムと実践ツール。</p></div>
+        <div className="home-section-heading"><h2 id="guide-title">学び方のヒント</h2></div>
         <LearningResources />
       </section>
       <section className="home-about" aria-labelledby="about-title">

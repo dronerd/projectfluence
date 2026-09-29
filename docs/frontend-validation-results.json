@@ -59,5 +59,90 @@
       "speaking (isolated API configuration)"
     ],
     "headerMinWhiteTextContrast": 4.67
+  },
+  "compactFollowUp": {
+    "responsive": {
+      "routes": 14,
+      "widths": [
+        320,
+        375,
+        390,
+        430,
+        600,
+        768,
+        1024,
+        1180,
+        1440,
+        1920
+      ],
+      "problems": []
+    },
+    "primaryActionPositions": {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "vocabularyLesson": {
+        "before": [
+          1084,
+          1128
+        ],
+        "after": [
+          422,
+          466
+        ]
+      },
+      "speakingSetup": {
+        "before": [
+          566,
+          610
+        ],
+        "after": [
+          384,
+          428
+        ]
+      },
+      "videoSearch": {
+        "before": [
+          840,
+          888
+        ],
+        "after": [
+          457,
+          501
+        ]
+      },
+      "vocabularyNextWord": {
+        "before": [
+          931,
+          975
+        ],
+        "after": [
+          514,
+          558
+        ]
+      }
+    },
+    "documentHeightsAt390px": {
+      "home": {
+        "before": 2114,
+        "after": 1449
+      },
+      "lessonList": {
+        "before": 2412,
+        "after": 1416
+      }
+    },
+    "headerHeights": {
+      "below900": 88,
+      "900to1099": 64,
+      "1100andAbove": 72
+    },
+    "fixtureChecks": [
+      "speaking",
+      "video",
+      "progress",
+      "vocabulary (including visible focus after next question)"
+    ]
   }
 }

@@ -28,7 +28,21 @@ const lesson = JSON.parse(fs.readFileSync(new URL('../public/vocabstream/data/wo
   assert(word,`Unknown prompt ${prompt}`);
   await page.locator('.vs-choice').getByText(word.word,{exact:true}).click();
   if(i===0){await page.screenshot({path:screenshotPath('vocab-answer-320.png'),fullPage:true});console.log('question axe', (await new AxeBuilder({page}).analyze()).violations.map(v=>v.id));}
+  if(i===0){
+   await page.setViewportSize({width:320,height:568});
+   await page.getByText('意味・例文を確認',{exact:true}).click();
+   await page.evaluate(()=>window.scrollTo({top:document.documentElement.scrollHeight,behavior:'instant'}));
+  }
   await page.getByRole('button',{name:i===19?'結果を見る':i===9?'次の練習へ':'次の問題へ',exact:true}).click();
+  if(i<19){
+   await page.waitForFunction(()=>{
+    const prompt=document.querySelector('.vs-question-title');
+    const header=document.querySelector('.pf-header');
+    if(!prompt||!header)return false;
+    const rect=prompt.getBoundingClientRect();
+    return document.activeElement===prompt&&rect.top>=header.getBoundingClientRect().bottom&&rect.bottom<=innerHeight;
+   });
+  }
  }
  await page.getByRole('heading',{name:'すべて正解です！'}).waitFor();
  assert.equal(await page.locator('.vs-result-score strong').textContent(),'100%');

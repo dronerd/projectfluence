@@ -533,12 +533,11 @@ export default function AIChat() {
       <div className={`sw-shell ${lessonViewStarted ? "lesson-started" : "pre-lesson"} ${optionsOpen ? "options-open" : "options-closed"}`}>
         <aside id="sw-settings" className="sw-panel" ref={settingsRef} tabIndex={-1} aria-labelledby="sw-settings-title">
           <div className="sw-panel-head">
-            <div><AppBrand app="speakwise" compact className="sw-setup-brand" /><h1 id="sw-settings-title">今日の英語レッスン</h1><p className="sw-description">短い会話から、一歩ずつ。</p></div>
+            <div><AppBrand app="speakwise" compact className="sw-setup-brand" /><h1 id="sw-settings-title">今日の英語レッスン</h1></div>
             {lessonViewStarted && <button type="button" className="sw-panel-close" onClick={closeSettings}>会話に戻る</button>}
           </div>
           {!settingsLoaded && <p className="sw-note" role="status">前回の設定を読み込んでいます…</p>}
           {error && !lessonViewStarted && <p className="sw-alert" role="alert">{error}</p>}
-          {!lessonActive && !lessonEnded && <p className="sw-note">レベルと練習内容を選べば、すぐに始められます。</p>}
           <fieldset className="sw-settings-fields" disabled={setupDisabled}>
             <div className="sw-section">
               <label className="sw-label" htmlFor="sw-mode">練習内容</label>
@@ -564,13 +563,12 @@ export default function AIChat() {
             </div>}
           </fieldset>
           <div className="sw-start-area">
-            {lessonActive ? <><p className="sw-note">レッスン中は、音声の設定を変更できます。</p><button className="pf-button pf-button-secondary sw-wide" disabled={isSending || isEnding} onClick={() => void endLesson()}>終了して振り返る</button></>
+            {lessonActive ? <><p className="sw-note">レッスン中は音声設定のみ変更できます。</p><button className="pf-button pf-button-secondary sw-wide" disabled={isSending || isEnding} onClick={() => void endLesson()}>終了して振り返る</button></>
               : lessonEnded ? <button className="pf-button sw-wide" disabled={isEnding} onClick={prepareNextLesson}>次のレッスンを準備</button>
               : <button className="pf-button sw-wide" disabled={isSending || isEnding || !settingsLoaded} onClick={() => void startLesson()}>{isSending ? "レッスンを準備しています…" : "レッスンを始める"}</button>}
-            <p className="sw-start-hint">文字入力でも音声入力でも練習できます</p>
           </div>
           <details className="sw-details">
-            <summary>トピック・レッスンの進め方<span>{topics.length ? `${topics.length}件選択` : "任意"}</span></summary>
+            <summary>トピック・進め方<span>{topics.length ? `${topics.length}件選択` : "任意"}</span></summary>
             <fieldset className="sw-settings-fields" disabled={setupDisabled}>
               <legend className="sw-label">話してみたいトピック</legend>
               <div className="sw-topics">{TOPICS.map((topic) => <button type="button" key={topic} className={`sw-topic ${settings.selectedTopics.includes(topic) ? "active" : ""}`} aria-pressed={settings.selectedTopics.includes(topic)} onClick={() => toggleTopic(topic)}>{TOPIC_LABELS[topic] || topic}</button>)}</div>
@@ -594,20 +592,19 @@ export default function AIChat() {
 
         <section className="sw-chat" aria-label="英語レッスン">
           <header className="sw-chat-head">
-            <div className="sw-chat-heading"><p className="pf-eyebrow">ENGLISH PRACTICE</p><h2>{selectedMode.labelJa}</h2><p>{lessonEnded ? "今日の練習、お疲れさまでした。" : lessonActive ? "間違いを気にせず、あなたの言葉で話してみましょう。" : "あなたのペースで、英語を使う時間を。"}</p></div>
+            <div className="sw-chat-heading"><h2>{selectedMode.labelJa}</h2><div className="sw-status"><span>{settings.level} · {LEVEL_LABELS[settings.level]}</span><span>{lessonActive ? `残り ${formatTime(remainingSeconds)}` : lessonEnded ? `${formatTime(elapsedSeconds)} 練習` : `${settings.durationMinutes}分のレッスン`}</span></div></div>
             <div className="sw-chat-controls"><button type="button" ref={settingsToggleRef} className="sw-chat-menu" onClick={showSettings} aria-controls="sw-settings" aria-expanded={optionsOpen}>設定</button>
               {lessonActive && <button type="button" className="sw-end" disabled={isSending || isEnding} onClick={() => void endLesson()}>終了する</button>}
             </div>
           </header>
-          <div className="sw-status"><span>{settings.level} · {LEVEL_LABELS[settings.level]}</span><span>{lessonActive ? `残り ${formatTime(remainingSeconds)}` : lessonEnded ? `${formatTime(elapsedSeconds)} 練習` : `${settings.durationMinutes}分のレッスン`}</span>{lessonActive && <span className="sw-live-status">練習中</span>}</div>
           {lessonActive && <div className="sw-progress" role="progressbar" aria-label="レッスンの経過時間" aria-valuenow={Math.min(elapsedSeconds, totalSeconds)} aria-valuemin={0} aria-valuemax={totalSeconds} aria-valuetext={`${settings.durationMinutes}分中、${Math.floor(elapsedSeconds / 60)}分経過`}><div style={{ width: `${Math.min(100, elapsedSeconds / totalSeconds * 100)}%` }} /></div>}
           <div className="sw-messages" role="log" aria-label="AIとの会話" aria-live="polite" aria-relevant="additions text">
-            {!chatLog.length && !isSending && <div className="sw-empty"><div className="sw-empty-mark" aria-hidden="true">Aa</div><h3>まずは、ひとことから。</h3><p>レベルに合った質問に、英語で答えてみましょう。AIが会話を進めながら、表現を一緒に磨きます。</p><ol><li>練習内容と時間を選ぶ</li><li>文字や音声で答える</li><li>振り返りを次の練習へ</li></ol><span className="sw-note">設定から「レッスンを始める」を選んでください。</span></div>}
-            {chatLog.map((entry, index) => <article key={`${entry.sender}-${index}`} className={`sw-msg ${entry.sender}`}><span className="sw-sender">{entry.sender === "assistant" ? "SpeakWiseAI" : "あなた"}</span><p lang="en">{entry.text}</p>{entry.sender === "assistant" && <button type="button" className="sw-voice-button" disabled={voiceLoading} onClick={() => void playVoice(entry.text)} aria-label={`AIの${index + 1}番目のメッセージを音声で再生`}>{voiceLoading ? "音声を準備中…" : "音声で聞く"}</button>}</article>)}
+            {!chatLog.length && !isSending && <div className="sw-empty"><h3>文字でも音声でも練習できます</h3><p>「レッスンを始める」を選ぶと、AIから最初の質問が届きます。</p></div>}
+            {chatLog.map((entry, index) => <article key={`${entry.sender}-${index}`} className={`sw-msg ${entry.sender}`}><div className="sw-message-head"><span className="sw-sender">{entry.sender === "assistant" ? "SpeakWiseAI" : "あなた"}</span>{entry.sender === "assistant" && <button type="button" className="sw-voice-button" disabled={voiceLoading} onClick={() => void playVoice(entry.text)} aria-label={`AIの${index + 1}番目のメッセージを音声で再生`}>{voiceLoading ? "音声を準備中…" : "音声で聞く"}</button>}</div><p lang="en">{entry.text}</p></article>)}
             {isSending && <div className="sw-msg assistant" role="status"><span className="sw-sender">SpeakWiseAI</span><p>{lessonActive ? "返答を考えています…" : "レッスンを準備しています…"}</p></div>}
             {isEnding && <div className="sw-note" role="status">今日の振り返りをまとめています…</div>}
             {error && lessonViewStarted && <div className="sw-alert" role="alert"><p>{error}</p>{retryText && lessonActive && <button type="button" className="sw-text-link" disabled={isSending} onClick={() => void sendMessage(true)}>もう一度送信</button>}{lessonEnded && !summary && <button type="button" className="sw-text-link" disabled={isEnding} onClick={() => void endLesson()}>振り返りを再作成</button>}</div>}
-            {summary && <section className="sw-summary" aria-labelledby="sw-summary-title"><p className="pf-eyebrow">LESSON COMPLETE</p><h2 id="sw-summary-title">{summary.title || "今日の振り返り"}</h2><p className="sw-note">{summarySaved ? "学習履歴に保存しました。次のレッスンにも活かせます。" : accessToken ? "今回の振り返りです。" : "今回の振り返りです。ログインすると、今後のレッスンを学習履歴に保存できます。"}</p>{[
+            {summary && <section className="sw-summary" aria-labelledby="sw-summary-title"><h2 id="sw-summary-title">{summary.title || "今日の振り返り"}</h2>{(summarySaved || !accessToken) && <p className="sw-note">{summarySaved ? "学習履歴に保存しました。" : "ログインすると、今後のレッスンを学習履歴に保存できます。"}</p>}{[
               { label: "練習したこと", items: summary.covered }, { label: "できたこと", items: summary.strengths },
               { label: "次に伸ばしたいこと", items: summary.weaknesses }, { label: "次の練習のヒント", items: summary.recommendations },
               { label: "覚えておきたい表現", items: summary.usefulVocabulary },
@@ -615,8 +612,8 @@ export default function AIChat() {
             <div ref={chatEndRef} />
           </div>
           {notice && lessonViewStarted && <div className="sw-notice" role="status"><span>{notice}</span><button type="button" onClick={() => setNotice("")} aria-label="お知らせを閉じる">×</button></div>}
-          {lessonEnded ? <div className="sw-completion-actions"><p>{summary ? "今日の表現を、次の会話でも使ってみましょう。" : "短い練習も、次の一歩につながります。"}</p><button type="button" className="pf-button" disabled={isEnding} onClick={prepareNextLesson}>次のレッスンを準備</button></div>
-            : lessonViewStarted ? <div className="sw-composer-area"><div className="sw-composer"><button type="button" className={`sw-icon ${isListening ? "active" : ""}`} disabled={!lessonActive || isSending || isEnding} onClick={toggleListening} aria-label={isListening ? "音声入力を停止" : "音声で入力"} aria-pressed={isListening}>{isListening ? "停止" : "音声"}</button><label className="sw-sr-only" htmlFor="sw-message">英語の回答</label><textarea id="sw-message" ref={inputRef} className="sw-textarea" value={input} disabled={!lessonActive || isEnding} onChange={(event) => setInput(event.target.value)} placeholder="英語で入力…" onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); void sendMessage(); } }} /><button type="button" className="sw-send" disabled={!lessonActive || !input.trim() || isSending || isEnding} onClick={() => void sendMessage()}>送信</button></div><p className="sw-composer-hint">{isListening ? "聞き取り中です。話し終えたら「停止」を選んでください。" : "Enterで送信 · Shift + Enterで改行"}</p></div> : null}
+          {lessonEnded ? <div className="sw-completion-actions"><button type="button" className="pf-button" disabled={isEnding} onClick={prepareNextLesson}>次のレッスンを準備</button></div>
+            : lessonViewStarted ? <div className="sw-composer-area"><div className="sw-composer"><button type="button" className={`sw-icon ${isListening ? "active" : ""}`} disabled={!lessonActive || isSending || isEnding} onClick={toggleListening} aria-label={isListening ? "音声入力を停止" : "音声で入力"} aria-pressed={isListening}>{isListening ? "停止" : "音声"}</button><label className="sw-sr-only" htmlFor="sw-message">英語の回答</label><textarea id="sw-message" ref={inputRef} className="sw-textarea" value={input} disabled={!lessonActive || isEnding} onChange={(event) => setInput(event.target.value)} placeholder="英語で入力…" onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); void sendMessage(); } }} /><button type="button" className="sw-send" disabled={!lessonActive || !input.trim() || isSending || isEnding} onClick={() => void sendMessage()}>送信</button></div><p className={`sw-composer-hint${isListening ? " is-listening" : ""}`}>{isListening ? "聞き取り中です。話し終えたら「停止」を選んでください。" : "Enterで送信 · Shift + Enterで改行"}</p></div> : null}
         </section>
       </div>
       {notice && !lessonViewStarted && <div className="sw-setup-notice" role="status">{notice}</div>}

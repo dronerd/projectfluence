@@ -25,6 +25,16 @@ Representative rendered previews: [desktop home](previews/home-desktop.png), [32
 - Navigation label follow-up: medium/large navigation now shows 単語学習, 会話練習, and 動画学習. Production build/type/lint checks pass; verified the labels and overflow at 10 widths from 320 to 1920px, including 599/600px and 1099/1100px boundaries. Header Axe checks pass.
 - The preview images below reflect this blue theme. Existing service/device limitations still apply.
 
+## Compact-screen follow-up — 2026-09-29
+
+- Removed the requested filler copy and tightened headers, setup forms, lesson panels, cards, feedback, and mobile content spacing. Header height is 88px below 900px, 64px at 900–1099px, and 72px on larger screens; navigation and primary controls retain 44px touch height.
+- On a 320×568px viewport, the first vocabulary lesson’s Start button moved from y1084–1128 to y422–466; conversation Start moved from y566–610 to y384–428; video Search moved from y840–888 to y457–501. The first vocabulary word’s Next button is also visible at y514–558.
+- At 390px, home document height decreased from 2114px to 1449px and the 20-item lesson list from 2412px to 1416px. Learning text is not clipped to force these reductions.
+- The final production route suite passed 14 routes × 10 widths (320–1920px), with no horizontal overflow, Axe findings, runtime errors, or shared dialog/resource regressions. Additional header boundary checks at 599/600, 899/900/901, and 1099/1100px passed.
+- Production build, TypeScript, ESLint, and all four vocabulary unit tests pass. The updated vocabulary browser regression verifies that advancing after scrolling through details restores the new prompt’s visible keyboard focus; scoring, replay, and next-lesson state still pass. Long word and definition samples remain readable at 320px.
+- Speaking, video, and progress workflows passed with deterministic fixtures; the speaking composer remains reachable at 320×568px and in phone landscape. Optional video skill filters retain their selected values when closed and reopened.
+- Preview images were refreshed from the final production build. Existing physical-device and live-service limitations below still apply.
+
 ## Running checks
 
 ```sh

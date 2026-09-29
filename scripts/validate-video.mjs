@@ -24,7 +24,7 @@ import { chromium, AxeBuilder, baseUrl, screenshotPath } from './browser-tools.m
   await page.getByText('トピック・アクセントなど',{exact:false}).click(); await page.getByLabel('その他のトピック',{exact:true}).fill(Array.from({length:11},(_,i)=>`topic${i}`).join(','));
   if(!await page.getByRole('button',{name:'動画を探す',exact:true}).isDisabled()) throw new Error('Topic limit not enforced');
   await page.goto(baseUrl + '/vidmatch/history'); await page.getByRole('heading',{name:'気になる動画を、また見返そう'}).waitFor();
-  await page.goto(baseUrl + '/analytics'); await page.getByRole('heading',{name:'あなたの学びを、ひとつの記録に。'}).waitFor();
+  await page.goto(baseUrl + '/analytics'); await page.getByRole('heading',{name:'ログインして学習の記録を確認'}).waitFor();
   const analyticsAxe=await new AxeBuilder({page}).analyze();
   console.log(JSON.stringify({overflow,videoAxe:axe.violations.map(x=>({id:x.id,description:x.description,nodes:x.nodes.map(n=>n.target)})),analyticsAxe:analyticsAxe.violations.map(x=>({id:x.id,nodes:x.nodes.map(n=>n.target)})),functional:'Results, no matches, request failure, retry, topic limits, history sign-in, analytics sign-in passed'},null,2));
   assert.equal(overflow.every(item=>item.scroll===item.client), true, "Horizontal overflow");

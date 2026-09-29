@@ -18,7 +18,7 @@ import fs from 'node:fs';
  const empty={vocabstream:{completedLessons:0,lowScoreLessons:0,averageAccuracy:0,byGenre:{},latestActivityAt:null},vidmatch:{savedVideos:0,totalClicks:0,byLevel:{},latestActivityAt:null},speakwise:{lessonSessions:0,totalMinutes:0,byMode:{},byLevel:{},latestActivityAt:null}};
  await page.route('**/api/analytics/summary',r=>r.fulfill({status:mode==='error'?500:200,contentType:'application/json',body:JSON.stringify(mode==='error'?{error:'fixture'}:mode==='empty'?empty:summary)}));
  await page.goto(baseUrl + '/analytics');
- await page.getByRole('heading',{name:'復習で、ことばを自分のものに。'}).waitFor();
+ await page.getByRole('heading',{name:'復習におすすめ: 2レッスン'}).waitFor();
  const checks=[];
  for(const width of [320,375,430,768,1024,1180,1440,1920]){
   await page.setViewportSize({width,height:900});await page.evaluate(()=>window.scrollTo(0,0));await page.waitForTimeout(300);
@@ -26,11 +26,11 @@ import fs from 'node:fs';
   if(width===375||width===1440)await page.screenshot({path:screenshotPath(`analytics-${width}.png`),fullPage:true});
  }
  const axe=await new AxeBuilder({page}).analyze();
- mode='empty';await page.reload();await page.getByRole('heading',{name:'最初のレッスンから始めましょう。'}).waitFor();
+ mode='empty';await page.reload();await page.getByRole('heading',{name:'最初のレッスンを始める'}).waitFor();
  if(await page.getByText('0%',{exact:true}).count())throw new Error('Empty accuracy shown as 0%');
  mode='error';await page.reload();await page.getByRole('heading',{name:'記録を読み込めませんでした'}).waitFor();
  if(await page.locator('.progress-primary-stat').count())throw new Error('Error displays misleading stats');
- mode='populated';await page.getByRole('button',{name:'もう一度試す'}).click();await page.getByRole('heading',{name:'復習で、ことばを自分のものに。'}).waitFor();
+ mode='populated';await page.getByRole('button',{name:'もう一度試す'}).click();await page.getByRole('heading',{name:'復習におすすめ: 2レッスン'}).waitFor();
  let restore='error',writes=0;
  await page.route('**/api/vidmatch/settings',r=>{if(r.request().method()==='PUT'){writes++;return r.fulfill({status:200,contentType:'application/json',body:'{"ok":true}'});}return r.fulfill({status:restore==='error'?500:200,contentType:'application/json',body:JSON.stringify(restore==='error'?{error:'fixture'}:{settings:{selectedLevel:'A2',selectedSkills:['vocabulary'],selectedTopics:[],customTopics:'',selectedAccent:'',captionOnly:false}})});});
  await page.goto(baseUrl + '/vidmatch');await page.getByRole('button',{name:'条件を再読み込み'}).waitFor();

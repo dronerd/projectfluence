@@ -65,13 +65,13 @@ export default function AnalyticsPage() {
     <style>{styles}</style>
     <AppHeader />
     <main id="main-content" className="pf-page progress-main">
-      <div className="progress-heading"><div><p className="pf-eyebrow">YOUR LEARNING</p><h1>学習の記録</h1><p>少しずつ積み重ねた学びを、ここで振り返りましょう。</p></div>{latestActivity && <p className="progress-latest">最近の学習<br /><strong>{formatDate(latestActivity)}</strong></p>}</div>
+      <div className="progress-heading"><h1>学習の記録</h1>{latestActivity && <p className="progress-latest">最近の学習<br /><strong>{formatDate(latestActivity)}</strong></p>}</div>
 
       {!authReady || loading || (accessToken && !summary && !error) ? <div className="progress-loading" role="status"><p>学習の記録を読み込んでいます…</p><div className="progress-grid" aria-hidden="true">{[0, 1, 2].map((item) => <div className="pf-panel progress-skeleton" key={item}><span /><span /><span /></div>)}</div></div> : !accessToken ? (
-        <section className="pf-panel progress-welcome"><span className="progress-mark" aria-hidden="true">↗</span><h2>あなたの学びを、ひとつの記録に。</h2><p>ログインすると、単語の正答率や動画の履歴、会話レッスンの記録をまとめて確認できます。</p><div className="progress-welcome-actions"><AuthButton /><Link href="/vocabstream" className="pf-button-secondary">まずは単語を学ぶ</Link></div><p className="progress-note">ログイン後に保存された学習が表示されます。</p></section>
+        <section className="pf-panel progress-welcome"><h2>ログインして学習の記録を確認</h2><p>単語の正答率、動画の履歴、会話レッスンの記録を確認できます。</p><div className="progress-welcome-actions"><AuthButton /><Link href="/vocabstream" className="pf-button-secondary">まずは単語を学ぶ</Link></div><p className="progress-note">ログイン後に保存された学習が表示されます。</p></section>
       ) : error ? <section className="pf-panel progress-welcome" role="alert"><h2>記録を読み込めませんでした</h2><p>{error}</p><button className="pf-button" onClick={() => setRetry((value) => value + 1)}>もう一度試す</button></section> : summary && (
         <>
-          <section className="progress-next" aria-labelledby="progress-next-title"><div><span className="pf-eyebrow">NEXT STEP</span><h2 id="progress-next-title">{!hasActivity ? "最初のレッスンから始めましょう。" : summary.vocabstream.lowScoreLessons ? "復習で、ことばを自分のものに。" : "今日も、自分のペースで。"}</h2><p>{!hasActivity ? "短い練習から始めれば、ここに学びの記録が増えていきます。" : summary.vocabstream.lowScoreLessons ? `復習におすすめの単語レッスンが${summary.vocabstream.lowScoreLessons}件あります。気になる単語をもう一度確かめましょう。` : "単語を覚える、英語を聞く、会話する。今の気分に合う練習を選びましょう。"}</p></div><Link href={summary.vocabstream.lowScoreLessons ? "/vocabstream/review" : "/vocabstream"} className="pf-button">{summary.vocabstream.lowScoreLessons ? "単語を復習する" : "単語を学ぶ"}<span aria-hidden="true">→</span></Link></section>
+          <section className="progress-next" aria-labelledby="progress-next-title"><h2 id="progress-next-title">{summary.vocabstream.lowScoreLessons ? <><span className="progress-next-label">復習におすすめ:</span>{" "}<span className="progress-next-count">{summary.vocabstream.lowScoreLessons}レッスン</span></> : !hasActivity ? "最初のレッスンを始める" : "学習を続ける"}</h2><Link href={summary.vocabstream.lowScoreLessons ? "/vocabstream/review" : "/vocabstream"} className="pf-button" aria-label={summary.vocabstream.lowScoreLessons ? "単語を復習する" : undefined}>{summary.vocabstream.lowScoreLessons ? "復習する" : "単語を学ぶ"}<span aria-hidden="true">→</span></Link></section>
 
           <section className="progress-grid" aria-label="学習方法ごとの記録">
             <AnalyticsPanel app="vocabstream" title="単語を学ぶ" href="/vocabstream" action="単語の学習へ">
@@ -134,10 +134,10 @@ const styles = `
 .progress-heading p:not(.pf-eyebrow) { margin:0; color:var(--pf-muted); font-size:14px; line-height:1.8; }
 .progress-latest { text-align:right; flex-shrink:0; font-size:12px !important; }
 .progress-latest strong { color:var(--pf-text); font-weight:550; }
-.progress-next { display:flex; align-items:center; justify-content:space-between; gap:24px; background:var(--pf-primary-soft); border:1px solid var(--pf-primary-border); border-radius:var(--pf-radius); padding:24px 28px; margin-bottom:28px; }
-.progress-next h2 { margin:6px 0 7px; font-size:20px; font-weight:650; line-height:1.6; }
-.progress-next p { margin:0; max-width:640px; color:var(--pf-muted); font-size:13px; line-height:1.8; }
+.progress-next { display:flex; align-items:center; justify-content:space-between; gap:20px; background:var(--pf-primary-soft); border:1px solid var(--pf-primary-border); border-radius:var(--pf-radius); padding:16px 20px; margin-bottom:24px; }
+.progress-next h2 { margin:0; font-size:18px; font-weight:650; line-height:1.5; }
 .progress-next > a { flex-shrink:0; }
+.progress-next-label, .progress-next-count { display:inline-block; white-space:nowrap; }
 .progress-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; align-items:stretch; }
 .progress-panel { min-width:0; padding:24px; display:flex; flex-direction:column; }
 .progress-panel-heading { padding-bottom:18px; border-bottom:1px solid var(--pf-border); }
@@ -171,12 +171,50 @@ const styles = `
 .progress-welcome h2 { font-size:24px; line-height:1.6; font-weight:650; margin:0; letter-spacing:-.03em; }
 .progress-welcome > p { margin:0; max-width:480px; color:var(--pf-muted); font-size:14px; line-height:1.9; }
 .progress-welcome > p.progress-note { font-size:11px; }
-.progress-mark { display:grid; place-items:center; width:56px; height:56px; border-radius:50%; color:var(--pf-primary); background:var(--pf-primary-soft); font-size:25px; }
 .progress-welcome-actions { display:flex; justify-content:center; flex-wrap:wrap; align-items:center; gap:12px; margin:8px 0; }
 .progress-loading > p { color:var(--pf-muted); font-size:14px; margin-bottom:20px; }
 .progress-skeleton { min-height:300px; padding:24px; }
 .progress-skeleton span { display:block; height:18px; background:var(--pf-primary-soft); border-radius:4px; margin-bottom:22px; }
 .progress-skeleton span:nth-child(2) { height:70px; width:50%; }
 @media(max-width:1100px) { .progress-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .progress-panel:last-child { grid-column:1 / -1; } }
-@media(max-width:759px) { .progress-heading { align-items:flex-start; margin-bottom:24px; } .progress-heading h1 { font-size:28px; } .progress-latest { display:none; } .progress-next { padding:22px; align-items:flex-start; flex-direction:column; gap:18px; } .progress-next h2 { font-size:19px; } .progress-next > a { align-self:stretch; } .progress-grid { grid-template-columns:1fr; } .progress-panel:last-child { grid-column:auto; } .progress-panel { padding:22px; } .progress-welcome { padding:36px 24px; } .progress-welcome h2 { font-size:21px; } .progress-welcome-actions { flex-direction:column; width:100%; } .progress-welcome-actions > * { width:100%; } }
+@media(max-width:899px) {
+  .progress-main { padding-top:16px; padding-bottom:32px; }
+  .progress-heading { gap:12px; margin-bottom:16px; }
+  .progress-heading h1 { font-size:24px; line-height:1.3; margin:0; }
+  .progress-next { padding:14px 16px; gap:12px; margin-bottom:16px; }
+  .progress-next h2 { font-size:16px; }
+  .progress-grid { gap:14px; }
+  .progress-panel { padding:16px; }
+  .progress-panel-heading { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; padding-bottom:12px; }
+  .progress-panel-heading h2 { font-size:16px; margin:0; }
+  .progress-app-brand { margin:0; }
+  .progress-primary-stat { margin:14px 0 10px; gap:8px; }
+  .progress-primary-stat strong { font-size:34px; }
+  .progress-stat-line { padding:8px 0; }
+  .progress-bars { margin-top:14px; }
+  .progress-bars h3 { margin-bottom:8px; }
+  .progress-bars ul { gap:10px; }
+  .progress-bar-label { margin-bottom:5px; }
+  .progress-empty-note { margin:10px 0 14px; line-height:1.7; }
+  .progress-note { margin-top:10px; line-height:1.7; }
+  .progress-last-activity { padding-top:14px; }
+  .progress-panel-link { margin-top:12px; }
+  .progress-level-details { margin-top:8px; }
+  .progress-welcome { padding:24px; gap:12px; }
+  .progress-welcome h2 { font-size:20px; }
+  .progress-welcome > p { font-size:13px; line-height:1.7; }
+  .progress-welcome-actions { margin:4px 0; gap:10px; }
+}
+@media(max-width:759px) {
+  .progress-latest { display:none; }
+  .progress-next { display:grid; grid-template-columns:minmax(0,1fr) auto; padding:12px 14px; gap:10px; }
+  .progress-next h2 { font-size:15px; }
+  .progress-next > a { padding:10px 12px; font-size:12px; }
+  .progress-grid { grid-template-columns:1fr; }
+  .progress-panel:last-child { grid-column:auto; }
+  .progress-welcome { padding:22px 18px; }
+  .progress-welcome h2 { font-size:18px; }
+  .progress-welcome-actions { flex-direction:column; width:100%; }
+  .progress-welcome-actions > * { width:100%; }
+}
 `;

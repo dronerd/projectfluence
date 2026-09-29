@@ -6,13 +6,10 @@
 .home-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--pf-primary); font-size: 13px; font-weight: 600; }
 .home-text-link:hover { text-decoration: underline; }
 .home-start-note { border-left: 3px solid var(--pf-primary-border); padding: 8px 0 8px 24px; }
-.home-note-label { color: var(--pf-primary); font-size: 12px; font-weight: 700; }
 .home-start-note h2 { font-size: 18px; font-weight: 650; margin: 10px 0; }
 .home-start-note p { font-size: 13px; color: var(--pf-muted); line-height: 1.9; }
-.home-note-foot { display: block; margin-top: 16px; font-size: 12px; color: var(--pf-muted); }
 .home-section-heading { display: flex; justify-content: space-between; gap: 16px; align-items: end; margin-bottom: 22px; }
 .home-section-heading h2 { font-size: 23px; font-weight: 700; letter-spacing: -.04em; margin-top: 6px; }
-.home-section-heading > span, .home-section-heading > p { font-size: 13px; color: var(--pf-muted); }
 .home-practice { border-top: 1px solid var(--pf-border); padding-top: 32px; }
 .home-practice-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
 .home-practice-card { padding: 25px; display: flex; flex-direction: column; }
@@ -20,8 +17,7 @@
 .home-card-number { color: var(--pf-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
 .home-practice-card h3 { font-size: 20px; font-weight: 700; letter-spacing: -.04em; margin: 4px 0 12px; }
 .home-card-copy { font-size: 14px; color: var(--pf-muted); line-height: 1.9; flex: 1; }
-.home-card-detail { font-size: 12px; color: var(--pf-muted); margin: 24px 0 14px; }
-.home-practice-card .pf-button-secondary { justify-content: space-between; }
+.home-practice-card .pf-button-secondary { justify-content: space-between; margin-top: 20px; }
 .home-guide { margin-top: 46px; }
 .home-resource { border-top: 1px solid var(--pf-border); }
 .home-resource:last-child { border-bottom: 1px solid var(--pf-border); }
@@ -44,22 +40,24 @@
 .home-mobile-break { display: none; }
 @media (max-width: 1000px) { .home-intro { gap: 32px; grid-template-columns: minmax(0,1fr) 260px; } .home-practice-card { padding: 20px; } .home-practice-grid { gap: 14px; } .home-practice-card h3 { font-size: 18px; } }
 @media (max-width: 759px) {
-  .home-page { padding-top: 24px; }
-  .home-intro { display: block; padding-bottom: 28px; }
-  .home-intro h1 { margin: 12px 0; }
+  .home-page { padding-top: 16px; }
+  .home-intro { display: block; padding: 0 0 20px; }
+  .home-intro h1 { margin: 8px 0; line-height: 1.35; }
+  .home-intro-actions { margin-top: 14px; }
   .home-intro-copy { font-size: 14px; }
   .home-start-note { display: none; }
-  .home-practice-grid { grid-template-columns: 1fr; gap: 14px; }
-  .home-practice-card { padding: 20px; }
-  .home-card-top { margin-bottom: 16px; }
-  .home-practice-card h3 { margin: 2px 0 12px; }
-  .home-card-detail { margin-top: 16px; }
-  .home-section-heading { display: block; margin-bottom: 18px; }
-  .home-section-heading h2 { font-size: 21px; }
-  .home-section-heading > span { display: none; }
-  .home-section-heading > p { margin-top: 8px; }
-  .home-guide { margin-top: 32px; }
+  .home-practice { padding-top: 18px; }
+  .home-practice-grid { grid-template-columns: 1fr; gap: 10px; }
+  .home-practice-card { padding: 16px; }
+  .home-card-top { margin-bottom: 10px; }
+  .home-practice-card h3 { margin: 0 0 6px; }
+  .home-card-copy { line-height: 1.65; }
+  .home-practice-card .pf-button-secondary { margin-top: 12px; }
+  .home-section-heading { display: block; margin-bottom: 12px; }
+  .home-section-heading h2 { font-size: 19px; margin: 0; }
+  .home-guide { margin-top: 24px; }
+  .home-resource summary, .home-about summary { padding-block: 12px; min-height: 48px; }
   .home-resource-content { padding: 4px 4px 24px; }
   .home-about-content { grid-template-columns: 1fr; gap: 24px; }
 }
-@media (max-width: 420px) { .home-mobile-break { display: inline; } .home-intro h1 { font-size: 30px; } .home-intro-actions { gap: 8px 16px; } }
+@media (max-width: 420px) { .home-mobile-break { display: inline; } .home-intro h1 { font-size: 27px; } .home-intro-actions { gap: 8px 16px; } }

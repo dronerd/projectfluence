@@ -234,10 +234,9 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
     {recommendationLoading ? <LoadingVideos /> : recommendationError ? (
       <div className="vm-state" role="alert"><h3>動画を読み込めませんでした</h3><p>{recommendationError}</p><button className="pf-button-secondary" onClick={isSimilar ? searchSimilar : search}>もう一度試す</button></div>
     ) : recommendations.length ? <><p className="vm-result-count" role="status">{recommendations.length}件の動画が見つかりました</p>{renderVideos(recommendations)}</> : (
-      <div className="vm-state" role="status">
-        <span className="vm-state-symbol" aria-hidden="true">▷</span>
-        <h3>{hasSearched ? "条件に合う動画が見つかりませんでした" : "興味のある動画から、英語にふれよう"}</h3>
-        <p>{isSimilar ? "ほかの動画を選ぶか、条件を変えて探してみましょう。" : hasSearched ? "トピックやアクセントの指定を減らすと、見つかりやすくなります。" : "レベルと伸ばしたいスキルを選び、「動画を探す」を押してください。"}</p>
+      <div className={`vm-state${hasSearched ? "" : " vm-state-intro"}`} role="status">
+        {hasSearched && <h3>条件に合う動画が見つかりませんでした</h3>}
+        <p>{isSimilar ? "ほかの動画を選ぶか、条件を変えて探してみましょう。" : hasSearched ? "トピックやアクセントの指定を減らすと、見つかりやすくなります。" : "条件を選んで「動画を探す」を押してください。"}</p>
         {isSimilar && <Link href="/vidmatch" className="pf-button-secondary">条件を選んで探す</Link>}
         {!isSimilar && hasSearched && <button className="pf-button-secondary" onClick={() => { updateSettings({ selectedTopics: [], customTopics: "", selectedAccent: "", captionOnly: false }); }}>追加の条件をクリア</button>}
       </div>
@@ -249,7 +248,9 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
     <AppHeader />
     <main id="main-content" className="pf-page vm-main">
       <div className="vm-page-heading">
-        <div><AppBrand app="vidmatch" compact /><h1>{isHistory ? "動画の履歴" : isSimilar ? "次に見たい動画" : "あなたに合う英語の動画を。"}</h1><p>{isHistory ? "YouTubeで開いた動画を、いつでも見返せます。" : isSimilar ? "レベルやテーマが近い動画で、興味を広げましょう。" : "今のレベルと興味に合わせて、聞く練習を始めましょう。"}</p></div>
+        <AppBrand app="vidmatch" compact />
+        <h1>{isHistory ? "動画の履歴" : isSimilar ? "似ている動画" : "英語の動画を探す"}</h1>
+        {(isHistory || isSimilar) && <p>{isHistory ? "YouTubeで開いた動画の記録です。" : "レベルやテーマが近い動画です。"}</p>}
         <Link href={isHistory || isSimilar ? "/vidmatch" : "/vidmatch/history"} className="pf-button-secondary">{isHistory || isSimilar ? "動画を探す" : "動画の履歴"}<span aria-hidden="true"> →</span></Link>
       </div>
       {trackingError && <p className="vm-notice" role="status">{trackingError}</p>}
@@ -265,11 +266,10 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
       ) : (
         <div className="vm-workspace">
           <form className="vm-preferences pf-panel" onSubmit={(event) => { event.preventDefault(); search(); }}>
-            <div className="vm-filter-heading"><h2>動画の条件</h2><span>まずはレベルから</span></div>
             <fieldset disabled={!authReady || settingsLoading} className="vm-fieldset">
               <legend className="sr-only">動画の検索条件</legend>
-              <div className="vm-control"><h3 id="vm-level-label">英語レベル</h3><div className="vm-levels" role="group" aria-labelledby="vm-level-label">{LEVELS.map((level, index) => <button key={level} type="button" className="vm-choice" aria-pressed={settings.selectedLevel === level} onClick={() => updateSettings({ selectedLevel: level })}><strong>{level}</strong><span>{LEVEL_LABELS[index]}</span></button>)}</div></div>
-              <div className="vm-control"><h3 id="vm-skill-label">伸ばしたいスキル <span>複数選択可</span></h3><div className="vm-chips" role="group" aria-labelledby="vm-skill-label">{SKILLS.map((skill) => <button key={skill} type="button" className="vm-choice" aria-pressed={settings.selectedSkills.includes(skill)} onClick={() => toggle("selectedSkills", skill)}>{LABELS[skill]}</button>)}</div></div>
+              <div className="vm-control"><h2 id="vm-level-label">英語レベル</h2><div className="vm-levels" role="group" aria-labelledby="vm-level-label">{LEVELS.map((level, index) => <button key={level} type="button" className="vm-choice" aria-pressed={settings.selectedLevel === level} onClick={() => updateSettings({ selectedLevel: level })}><strong>{level}</strong><span>{LEVEL_LABELS[index]}</span></button>)}</div></div>
+              <details className="vm-skill-filters"><summary><span>伸ばしたいスキル</span><span className="vm-skill-summary">{settings.selectedSkills.length === 1 ? LABELS[settings.selectedSkills[0]] : settings.selectedSkills.length ? `${settings.selectedSkills.length}つ選択中` : "指定なし"}</span></summary><div className="vm-control"><h3 id="vm-skill-label">スキルを選ぶ <span>複数選択可</span></h3><div className="vm-chips" role="group" aria-labelledby="vm-skill-label">{SKILLS.map((skill) => <button key={skill} type="button" className="vm-choice" aria-pressed={settings.selectedSkills.includes(skill)} onClick={() => toggle("selectedSkills", skill)}>{LABELS[skill]}</button>)}</div></div></details>
               <details className="vm-extra-filters"><summary>トピック・アクセントなど{(topics.length > 0 || settings.selectedAccent || settings.captionOnly) && <span className="vm-filter-dot" aria-label="追加条件を選択中" />}</summary>
                 <div className="vm-control"><h3 id="vm-topic-label">好きなトピック</h3><div className="vm-chips" role="group" aria-labelledby="vm-topic-label">{TOPICS.map((topic) => <button key={topic} type="button" className="vm-choice" aria-pressed={settings.selectedTopics.includes(topic)} onClick={() => toggle("selectedTopics", topic)}>{LABELS[topic]}</button>)}</div><label className="vm-input-label" htmlFor="vm-custom-topics">その他のトピック</label><input id="vm-custom-topics" value={settings.customTopics} onChange={(event) => updateSettings({ customTopics: event.target.value })} maxLength={240} placeholder="例: music, cooking" aria-describedby={topicError ? "vm-topic-error vm-topic-hint" : "vm-topic-hint"} aria-invalid={!!topicError} /><p id="vm-topic-hint" className="vm-help">英語で入力し、複数ある場合はカンマで区切ってください。</p>{topicError && <p id="vm-topic-error" className="vm-error" role="alert">{topicError}</p>}</div>
                 <div className="vm-control"><label className="vm-input-label" htmlFor="vm-accent">アクセント</label><select id="vm-accent" value={settings.selectedAccent} onChange={(event) => updateSettings({ selectedAccent: event.target.value })}><option value="">指定なし</option>{ACCENTS.map((accent) => <option key={accent} value={accent}>{LABELS[accent]}</option>)}</select></div>
@@ -278,11 +278,11 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
               <button type="submit" className="pf-button vm-search" disabled={recommendationLoading || !!topicError}>{recommendationLoading ? "動画を検索中…" : "動画を探す"}<span aria-hidden="true"> →</span></button>
             </fieldset>
             <div className="vm-save-status" aria-live="polite">
-              {!authReady || settingsLoading ? <p>保存した条件を読み込んでいます…</p> : settingsError ? <><p className="vm-error">{settingsError}</p>{settingsRestored ? <button type="button" className="vm-text-link" onClick={() => setSettingsSaveRetry((value) => value + 1)}>保存を再試行</button> : <button type="button" className="vm-text-link" onClick={() => setSettingsRetry((value) => value + 1)}>条件を再読み込み</button>}</> : <p>{accessToken ? settingsStatus || "検索条件は自動保存されます。" : "ログインすると検索条件と動画の履歴が残ります。"}</p>}
+              {!authReady || settingsLoading ? <p>保存した条件を読み込んでいます…</p> : settingsError ? <><p className="vm-error">{settingsError}</p>{settingsRestored ? <button type="button" className="vm-text-link" onClick={() => setSettingsSaveRetry((value) => value + 1)}>保存を再試行</button> : <button type="button" className="vm-text-link" onClick={() => setSettingsRetry((value) => value + 1)}>条件を再読み込み</button>}</> : <p>{accessToken ? settingsStatus || "検索条件は自動保存されます。" : "ログインすると条件と履歴を保存できます。"}</p>}
             </div>
           </form>
           <section className="vm-results" ref={resultsRef} aria-labelledby="vm-results-title" aria-busy={recommendationLoading}>
-            <div className="vm-results-heading"><h2 id="vm-results-title">おすすめ動画</h2><p>気になる動画を1本選んで、気軽に聞いてみましょう。</p></div>
+            <div className="vm-results-heading"><h2 id="vm-results-title">おすすめ動画</h2></div>
             {results}
           </section>
         </div>
@@ -317,19 +317,19 @@ function formatDuration(value: string | null) {
 const styles = `
 .vm-shell { min-height:100vh; background:var(--pf-bg); color:var(--pf-text); }
 .vm-main { padding-top:34px; padding-bottom:64px; }
-.vm-page-heading { display:flex; justify-content:space-between; align-items:center; gap:20px; margin-bottom:28px; }
-.vm-page-heading h1 { font-size:clamp(24px,3vw,32px); line-height:1.4; letter-spacing:-.035em; font-weight:750; margin:7px 0 9px; }
-.vm-page-heading p:not(.pf-eyebrow) { color:var(--pf-muted); line-height:1.8; margin:0; font-size:14px; }
-.vm-page-heading > a { flex-shrink:0; }
+.vm-page-heading { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:8px 20px; margin-bottom:24px; }
+.vm-page-heading > .pf-app-brand { grid-column:1; grid-row:1; }
+.vm-page-heading h1 { font-size:clamp(24px,3vw,32px); line-height:1.4; letter-spacing:-.035em; font-weight:750; margin:0; grid-column:1; }
+.vm-page-heading p { grid-column:1; color:var(--pf-muted); line-height:1.6; margin:0; font-size:14px; }
+.vm-page-heading > a { grid-column:2; grid-row:1 / span 3; }
 .vm-workspace { display:grid; grid-template-columns:304px minmax(0,1fr); gap:28px; align-items:start; }
 .vm-preferences { padding:22px; min-width:0; }
-.vm-filter-heading { display:flex; align-items:center; justify-content:space-between; gap:8px; }
-.vm-filter-heading h2, .vm-results-heading h2 { margin:0; font-size:18px; font-weight:700; }
-.vm-filter-heading > span { color:var(--pf-muted); font-size:11px; }
+.vm-results-heading h2 { margin:0; font-size:18px; font-weight:700; }
 .vm-fieldset { border:0; padding:0; margin:0; min-width:0; }
 .vm-fieldset:disabled { opacity:.6; }
 .vm-control { margin-top:22px; }
-.vm-control h3 { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 10px; font-size:13px; font-weight:650; }
+.vm-fieldset > .vm-control:first-of-type { margin-top:0; }
+.vm-control h2, .vm-control h3 { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 10px; font-size:13px; font-weight:650; }
 .vm-control h3 > span { font-size:11px; color:var(--pf-muted); font-weight:400; }
 .vm-levels { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; }
 .vm-choice { min-height:44px; border:1px solid var(--pf-border); background:var(--pf-surface); color:var(--pf-text); border-radius:9px; padding:8px 10px; font-size:13px; font-weight:500; line-height:1.4; transition:background .15s,border-color .15s; }
@@ -339,7 +339,11 @@ const styles = `
 .vm-levels .vm-choice strong { font-size:15px; font-weight:700; }
 .vm-levels .vm-choice span { font-size:10px; }
 .vm-chips { display:flex; flex-wrap:wrap; gap:7px; }
-.vm-extra-filters { border-top:1px solid var(--pf-border); border-bottom:1px solid var(--pf-border); margin-top:22px; padding:0; }
+.vm-skill-filters { margin-top:16px; }
+.vm-skill-filters summary { min-height:44px; padding:11px 0; font-size:13px; font-weight:600; cursor:pointer; }
+.vm-skill-summary { float:right; color:var(--pf-muted); font-size:11px; font-weight:400; margin-left:6px; }
+.vm-skill-filters .vm-control { margin-top:8px; }
+.vm-extra-filters { border-top:1px solid var(--pf-border); border-bottom:1px solid var(--pf-border); margin-top:8px; padding:0; }
 .vm-extra-filters summary { min-height:48px; padding:15px 0; font-size:13px; cursor:pointer; font-weight:600; }
 .vm-extra-filters[open] { padding-bottom:14px; }
 .vm-extra-filters[open] .vm-control:first-of-type { margin-top:4px; }
@@ -355,7 +359,6 @@ const styles = `
 .vm-error { color:#b42318; font-size:12px; line-height:1.7; }
 .vm-results { min-width:0; scroll-margin-top:calc(var(--pf-header-height) + 20px); }
 .vm-results-heading { padding:2px 0 16px; border-bottom:1px solid var(--pf-border); }
-.vm-results-heading p { margin:8px 0 0; color:var(--pf-muted); line-height:1.7; font-size:13px; }
 .vm-result-count { color:var(--pf-muted); margin:18px 0; font-size:12px; }
 .vm-video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
 .vm-history .vm-video-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
@@ -379,7 +382,7 @@ const styles = `
 .vm-state { padding:52px 24px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:14px; background:var(--pf-surface); border:1px solid var(--pf-border); border-radius:var(--pf-radius); margin-top:20px; }
 .vm-state h2, .vm-state h3 { margin:0; font-size:18px; line-height:1.7; font-weight:650; }
 .vm-state p { max-width:390px; color:var(--pf-muted); margin:0; font-size:13px; line-height:1.9; }
-.vm-state-symbol { width:54px; height:54px; border-radius:50%; background:var(--pf-primary-soft); color:var(--pf-primary); display:grid; place-items:center; font-size:28px; margin-bottom:5px; }
+.vm-state.vm-state-intro { padding:16px 0; margin:0; border:0; background:transparent; text-align:left; align-items:flex-start; }
 .vm-loading > p { font-size:13px; color:var(--pf-muted); margin:18px 0; }
 .vm-skeleton { background:var(--pf-surface); border:1px solid var(--pf-border); border-radius:12px; overflow:hidden; padding-bottom:22px; }
 .vm-skeleton div { aspect-ratio:16/9; background:var(--pf-primary-soft); }
@@ -388,6 +391,51 @@ const styles = `
 .vm-notice { border:1px solid #ead7af; background:#fffbeb; padding:12px 16px; border-radius:10px; font-size:13px; line-height:1.7; }
 @media(min-width:1100px) { .vm-preferences { position:sticky; top:calc(var(--pf-header-height) + 24px); } }
 @media(max-width:1000px) { .vm-workspace { grid-template-columns:280px minmax(0,1fr); gap:20px; } .vm-video-grid { grid-template-columns:1fr; } .vm-history .vm-video-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media(max-width:899px) { .vm-workspace { grid-template-columns:1fr; gap:28px; } .vm-preferences { padding:20px; } .vm-levels { grid-template-columns:repeat(6,minmax(0,1fr)); } .vm-video-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .vm-preferences .vm-fieldset { display:block; } .vm-search { min-height:48px; } }
-@media(max-width:599px) { .vm-main { padding-top:24px; padding-bottom:40px; } .vm-page-heading { align-items:flex-start; flex-direction:column; gap:14px; margin-bottom:22px; } .vm-page-heading h1 { font-size:25px; } .vm-page-heading p:not(.pf-eyebrow) { font-size:13px; } .vm-page-heading > a { min-height:44px; } .vm-preferences { padding:18px; } .vm-levels { grid-template-columns:repeat(3,minmax(0,1fr)); } .vm-video-grid, .vm-history .vm-video-grid { grid-template-columns:1fr; gap:18px; } .vm-state { padding:36px 20px; } .vm-state h2, .vm-state h3 { font-size:16px; } .vm-video-body h3 { font-size:16px; } .vm-video-actions { justify-content:space-between; } .vm-video-actions > a { font-size:13px; } }
+@media(max-width:899px) {
+  .vm-main { padding-top:16px; padding-bottom:32px; }
+  .vm-page-heading { margin-bottom:16px; gap:6px 12px; }
+  .vm-page-heading h1 { font-size:24px; line-height:1.3; }
+  .vm-workspace { grid-template-columns:1fr; gap:18px; }
+  .vm-preferences { padding:16px; }
+  .vm-results-heading h2 { font-size:16px; }
+  .vm-control { margin-top:14px; }
+  .vm-control h2, .vm-control h3 { margin-bottom:8px; }
+  .vm-levels { grid-template-columns:repeat(6,minmax(0,1fr)); gap:6px; }
+  .vm-levels .vm-choice { padding:4px 8px; gap:1px; min-height:44px; }
+  .vm-choice { min-width:44px; }
+  .vm-chips { gap:6px; }
+  .vm-skill-filters { margin-top:10px; }
+  .vm-extra-filters { margin-top:4px; }
+  .vm-extra-filters summary { min-height:44px; padding:11px 0; }
+  .vm-extra-filters[open] { padding-bottom:8px; }
+  .vm-caption { min-height:44px; margin-top:8px; }
+  .vm-input-label { margin-top:12px; }
+  .vm-search { min-height:44px; margin-top:12px; }
+  .vm-save-status { margin-top:8px; line-height:1.6; }
+  .vm-results-heading { padding-bottom:8px; }
+  .vm-result-count { margin:10px 0; }
+  .vm-video-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+  .vm-state { padding:24px 16px; gap:10px; margin-top:12px; }
+  .vm-state p { line-height:1.7; }
+  .vm-loading > p { margin:10px 0; }
+}
+@media(max-width:599px) {
+  .vm-page-heading h1 { grid-column:1 / -1; font-size:22px; }
+  .vm-page-heading p { grid-column:1 / -1; font-size:12px; }
+  .vm-page-heading > a { grid-row:1; min-height:44px; padding:8px 12px; font-size:12px; }
+  .vm-preferences { padding:14px; }
+  .vm-levels { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .vm-video-grid, .vm-history .vm-video-grid { grid-template-columns:1fr; gap:12px; }
+  .vm-video-card { display:grid; grid-template-columns:104px minmax(0,1fr); gap:8px 12px; padding:12px; }
+  .vm-thumbnail { grid-column:1; grid-row:1 / span 2; align-self:start; border-radius:6px; }
+  .vm-duration { right:4px; bottom:4px; padding:1px 4px; font-size:10px; }
+  .vm-video-body { display:contents; }
+  .vm-channel { grid-column:2; grid-row:1; line-height:1.5; }
+  .vm-video-body h3 { grid-column:2; grid-row:2; font-size:14px; line-height:1.5; }
+  .vm-tags, .vm-description, .vm-opened, .vm-video-actions { grid-column:1 / -1; }
+  .vm-video-actions { justify-content:space-between; padding-top:2px; gap:6px; }
+  .vm-video-actions > a { font-size:12px; }
+  .vm-state h2, .vm-state h3 { font-size:16px; }
+}
+@media(max-width:359px) { .vm-video-card { grid-template-columns:88px minmax(0,1fr); gap:8px 10px; } }
 `;
