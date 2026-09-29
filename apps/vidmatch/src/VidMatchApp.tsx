@@ -1,14 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import AppHeader from "@/app/components/AppHeader";
 import AuthButton from "@/app/components/AuthButton";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
-
-type Props = {
-  pathname: string;
-};
 
 type VidMatchVideo = {
   video_id: string;
@@ -26,14 +22,8 @@ type VidMatchVideo = {
   tags: string[];
   quality_score: number;
 };
-
-type VidMatchHistoryItem = VidMatchVideo & {
-  click_count?: number;
-  last_clicked_at: string;
-  created_at: string;
-};
-
-type VidMatchSettings = {
+type HistoryVideo = VidMatchVideo & { last_clicked_at: string; created_at: string; click_count?: number };
+type Settings = {
   selectedLevel: string;
   selectedSkills: string[];
   selectedTopics: string[];
@@ -41,1370 +31,362 @@ type VidMatchSettings = {
   selectedAccent: string;
   captionOnly: boolean;
 };
-
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const LEVEL_LABELS = ["入門", "初級", "中級", "中上級", "上級", "熟練"];
 const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversation"];
 const TOPICS = ["travel", "daily life", "school"];
 const ACCENTS = ["American", "British", "Australian", "Canadian"];
-const DEFAULT_SETTINGS: VidMatchSettings = {
-  selectedLevel: "B1",
-  selectedSkills: ["listening"],
-  selectedTopics: [],
-  customTopics: "",
-  selectedAccent: "",
-  captionOnly: false,
+const LABELS: Record<string, string> = {
+  listening: "リスニング", vocabulary: "語彙", pronunciation: "発音", grammar: "文法", conversation: "会話",
+  travel: "旅行", "daily life": "日常生活", school: "学校・留学",
+  American: "アメリカ英語", British: "イギリス英語", Australian: "オーストラリア英語", Canadian: "カナダ英語",
 };
-
-const SKILL_LABELS: Record<string, string> = {
-  listening: "リスニング",
-  vocabulary: "語彙",
-  pronunciation: "発音",
-  grammar: "文法",
-  conversation: "会話",
+const DEFAULT_SETTINGS: Settings = {
+  selectedLevel: "B1", selectedSkills: ["listening"], selectedTopics: [], customTopics: "", selectedAccent: "", captionOnly: false,
 };
-
-const TOPIC_LABELS: Record<string, string> = {
-  travel: "旅行",
-  "daily life": "日常生活",
-  school: "学校・留学",
-};
-
-const ACCENT_LABELS: Record<string, string> = {
-  American: "アメリカ英語",
-  British: "イギリス英語",
-  Australian: "オーストラリア英語",
-  Canadian: "カナダ英語",
-};
-
-function readStringArray(value: unknown) {
-  return Array.isArray(value)
-    ? value.filter((item): item is string => typeof item === "string" && item.trim().length > 0).map((item) => item.trim())
-    : [];
+function stringArray(value: unknown) {
+  return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string" && !!item.trim()).map((item) => item.trim()) : [];
 }
-
-function sanitizeSettings(value: unknown): VidMatchSettings | null {
+function sanitizeSettings(value: unknown): Settings | null {
   if (!value || typeof value !== "object" || Array.isArray(value)) return null;
-  const raw = value as Partial<VidMatchSettings>;
-  const selectedLevel = typeof raw.selectedLevel === "string" && LEVELS.includes(raw.selectedLevel)
-    ? raw.selectedLevel
-    : DEFAULT_SETTINGS.selectedLevel;
-  const selectedSkills = readStringArray(raw.selectedSkills).filter((skill) => SKILLS.includes(skill));
-  const selectedTopics = readStringArray(raw.selectedTopics).filter((topic) => TOPICS.includes(topic));
-  const selectedAccent = typeof raw.selectedAccent === "string" && ACCENTS.includes(raw.selectedAccent)
-    ? raw.selectedAccent
-    : "";
-
+  const raw = value as Partial<Settings>;
   return {
-    selectedLevel,
-    selectedSkills: selectedSkills.length ? selectedSkills : DEFAULT_SETTINGS.selectedSkills,
-    selectedTopics,
+    selectedLevel: typeof raw.selectedLevel === "string" && LEVELS.includes(raw.selectedLevel) ? raw.selectedLevel : "B1",
+    selectedSkills: stringArray(raw.selectedSkills).filter((skill) => SKILLS.includes(skill)),
+    selectedTopics: stringArray(raw.selectedTopics).filter((topic) => TOPICS.includes(topic)),
     customTopics: typeof raw.customTopics === "string" ? raw.customTopics.slice(0, 240) : "",
-    selectedAccent,
+    selectedAccent: typeof raw.selectedAccent === "string" && ACCENTS.includes(raw.selectedAccent) ? raw.selectedAccent : "",
     captionOnly: Boolean(raw.captionOnly),
   };
 }
+function decodeId(value: string) {
+  try { return decodeURIComponent(value); } catch { return value; }
+}
 
-export default function VidMatchApp({ pathname }: Props) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedLevel, setSelectedLevel] = useState(DEFAULT_SETTINGS.selectedLevel);
-  const [selectedSkills, setSelectedSkills] = useState<string[]>(DEFAULT_SETTINGS.selectedSkills);
-  const [selectedTopics, setSelectedTopics] = useState<string[]>(DEFAULT_SETTINGS.selectedTopics);
-  const [customTopics, setCustomTopics] = useState(DEFAULT_SETTINGS.customTopics);
-  const [selectedAccent, setSelectedAccent] = useState(DEFAULT_SETTINGS.selectedAccent);
-  const [captionOnly, setCaptionOnly] = useState(DEFAULT_SETTINGS.captionOnly);
+export default function VidMatchApp({ pathname }: { pathname: string }) {
+  const supabase = useMemo(() => getSupabaseBrowserClient(), []);
+  const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
+  const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [authReady, setAuthReady] = useState(!supabase);
+  const [settingsLoading, setSettingsLoading] = useState(false);
+  const [settingsRestored, setSettingsRestored] = useState(false);
+  const [settingsError, setSettingsError] = useState("");
+  const [settingsStatus, setSettingsStatus] = useState("");
+  const [settingsRetry, setSettingsRetry] = useState(0);
+  const [settingsSaveRetry, setSettingsSaveRetry] = useState(0);
+  const settingsDirty = useRef(false);
   const [recommendations, setRecommendations] = useState<VidMatchVideo[]>([]);
   const [recommendationError, setRecommendationError] = useState("");
   const [recommendationLoading, setRecommendationLoading] = useState(false);
-  const [similarSourceVideoId, setSimilarSourceVideoId] = useState("");
-  const [history, setHistory] = useState<VidMatchHistoryItem[]>([]);
+  const [hasSearched, setHasSearched] = useState(false);
+  const [history, setHistory] = useState<HistoryVideo[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
   const [historyError, setHistoryError] = useState("");
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [settingsLoaded, setSettingsLoaded] = useState(false);
-  const [settingsLoading, setSettingsLoading] = useState(false);
-  const [settingsError, setSettingsError] = useState("");
-  const supabase = useMemo(() => getSupabaseBrowserClient(), []);
-
-  const scrollToTop = useCallback(() => {
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, []);
-
-  const isHistoryRoute = pathname === "/history";
-  const isSimilarRoute = pathname.startsWith("/similar/");
-  const similarVideoId = isSimilarRoute ? decodeURIComponent(pathname.replace("/similar/", "")) : "";
-  const isNestedRoute = pathname !== "/" && !isHistoryRoute && !isSimilarRoute;
-
-  const toggleValue = (value: string, values: string[], setValues: React.Dispatch<React.SetStateAction<string[]>>) => {
-    setValues(values.includes(value) ? values.filter((item) => item !== value) : [...values, value]);
-  };
-
-  const getTopicsForRequest = () => {
-    const typedTopics = customTopics
-      .split(",")
-      .map((topic) => topic.trim())
-      .filter(Boolean);
-
-    return Array.from(new Set([...selectedTopics, ...typedTopics]));
-  };
-
-  const applySettings = useCallback((settings: VidMatchSettings) => {
-    setSelectedLevel(settings.selectedLevel);
-    setSelectedSkills(settings.selectedSkills);
-    setSelectedTopics(settings.selectedTopics);
-    setCustomTopics(settings.customTopics);
-    setSelectedAccent(settings.selectedAccent);
-    setCaptionOnly(settings.captionOnly);
-  }, []);
-
-  const currentSettings = useMemo<VidMatchSettings>(() => ({
-    selectedLevel,
-    selectedSkills,
-    selectedTopics,
-    customTopics,
-    selectedAccent,
-    captionOnly,
-  }), [captionOnly, customTopics, selectedAccent, selectedLevel, selectedSkills, selectedTopics]);
-
-  const fetchRecommendations = async () => {
-    setRecommendationLoading(true);
-    setRecommendationError("");
-    setSimilarSourceVideoId("");
-
-    const params = new URLSearchParams({
-      level: selectedLevel,
-      limit: "6",
-    });
-
-    selectedSkills.forEach((skill) => params.append("skills", skill));
-    getTopicsForRequest().forEach((topic) => params.append("topics", topic));
-    if (selectedAccent) params.set("accent", selectedAccent);
-    if (captionOnly) params.set("transcript_available", "true");
-
-    try {
-      const response = await fetch(`/api/vidmatch/recommend?${params}`);
-      const data = await response.json();
-
-      if (!response.ok || data.error) {
-        throw new Error(data.error || "Recommendation request failed");
-      }
-
-      setRecommendations(data.videos ?? []);
-    } catch (error) {
-      console.error(error);
-      setRecommendationError("推薦を取得できませんでした。少し時間をおいて再試行してください。");
-      setRecommendations([]);
-    } finally {
-      setRecommendationLoading(false);
-    }
-  };
-
-  const fetchSimilarRecommendations = useCallback(async (videoId: string) => {
-    setRecommendationLoading(true);
-    setRecommendationError("");
-    setSimilarSourceVideoId(videoId);
-
-    const params = new URLSearchParams({
-      similar_to: videoId,
-      limit: "6",
-    });
-
-    try {
-      const response = await fetch(`/api/vidmatch/recommend?${params}`);
-      const data = await response.json();
-
-      if (!response.ok || data.error) {
-        throw new Error(data.error || "Similar recommendation request failed");
-      }
-
-      setRecommendations(data.videos ?? []);
-    } catch (error) {
-      console.error(error);
-      setRecommendationError("似たビデオを取得できませんでした。少し時間をおいて再試行してください。");
-      setRecommendations([]);
-    } finally {
-      setRecommendationLoading(false);
-    }
-  }, []);
+  const [historyRetry, setHistoryRetry] = useState(0);
+  const [trackingError, setTrackingError] = useState("");
+  const requestNumber = useRef(0);
+  const resultsRef = useRef<HTMLElement>(null);
+  const isHistory = pathname === "/history";
+  const isSimilar = pathname.startsWith("/similar/");
+  const similarId = isSimilar ? decodeId(pathname.slice("/similar/".length)) : "";
+  const topics = useMemo(() => Array.from(new Set([
+    ...settings.selectedTopics, ...settings.customTopics.split(/[,、]/).map((topic) => topic.trim()).filter(Boolean),
+  ])), [settings.selectedTopics, settings.customTopics]);
+  const topicError = topics.length > 10 ? "トピックは10個以内で入力してください。" : topics.some((topic) => topic.length > 80) ? "各トピックは80文字以内で入力してください。" : "";
 
   useEffect(() => {
-    if (!supabase) {
-      setSettingsLoaded(true);
-      return;
-    }
-
-    let mounted = true;
-    supabase.auth.getSession().then(({ data }) => {
-      if (!mounted) return;
-      const token = data.session?.access_token ?? null;
+    if (!supabase) return;
+    let active = true;
+    const applySession = (token: string | null) => {
+      if (!active) return;
       setAccessToken(token);
-      setSettingsLoaded(!token);
-    });
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      const token = session?.access_token ?? null;
-      setAccessToken(token);
-      setSettingsLoaded(!token);
-      if (!token) {
-        setSettingsLoading(false);
-        setSettingsError("");
-      }
-    });
-
-    return () => {
-      mounted = false;
-      subscription.unsubscribe();
+      setAuthReady(true);
     };
+    void supabase.auth.getSession().then(({ data }) => applySession(data.session?.access_token ?? null));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => applySession(session?.access_token ?? null));
+    return () => { active = false; subscription.unsubscribe(); };
   }, [supabase]);
 
   useEffect(() => {
-    if (!accessToken) return;
-
-    let cancelled = false;
-    setSettingsLoading(true);
-    setSettingsLoaded(false);
+    settingsDirty.current = false;
+    setSettingsRestored(false);
     setSettingsError("");
-
-    fetch("/api/vidmatch/settings", {
-      headers: { Authorization: `Bearer ${accessToken}` },
-    })
+    setSettingsStatus("");
+    if (!accessToken) { setSettingsLoading(false); return; }
+    const controller = new AbortController();
+    setSettingsLoading(true);
+    void fetch("/api/vidmatch/settings", { headers: { Authorization: `Bearer ${accessToken}` }, signal: controller.signal })
       .then(async (response) => {
         const data = await response.json();
-        if (!response.ok || data.error) {
-          throw new Error(data.error || "Settings request failed");
-        }
-        return sanitizeSettings(data.settings);
+        if (!response.ok || data.error) throw new Error("Settings unavailable");
+        if (controller.signal.aborted) return;
+        const restored = sanitizeSettings(data.settings);
+        if (restored) setSettings(restored);
+        setSettingsRestored(true);
       })
-      .then((storedSettings) => {
-        if (!cancelled && storedSettings) applySettings(storedSettings);
+      .catch(() => {
+        if (!controller.signal.aborted) setSettingsError("保存した条件を読み込めませんでした。検索はできますが、条件の自動保存は一時停止しています。");
       })
-      .catch((error) => {
-        console.warn("VidMatch settings load failed", error);
-        if (!cancelled) setSettingsError("保存済みの条件を読み込めませんでした。");
-      })
-      .finally(() => {
-        if (!cancelled) {
-          setSettingsLoading(false);
-          setSettingsLoaded(true);
-        }
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [accessToken, applySettings]);
+      .finally(() => { if (!controller.signal.aborted) setSettingsLoading(false); });
+    return () => controller.abort();
+  }, [accessToken, settingsRetry]);
 
   useEffect(() => {
-    if (!settingsLoaded || !accessToken) return;
-
+    if (!accessToken || !settingsRestored || !settingsDirty.current || topicError) return;
+    const controller = new AbortController();
     const timer = window.setTimeout(() => {
-      fetch("/api/vidmatch/settings", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`,
-        },
-        body: JSON.stringify({ settings: currentSettings }),
-      })
-        .then(async (response) => {
-          if (!response.ok) {
-            const data = await response.json().catch(() => null) as { error?: string } | null;
-            throw new Error(data?.error || "Settings save failed");
-          }
-          setSettingsError("");
-        })
-        .catch((error) => {
-          console.warn("VidMatch settings save failed", error);
-          setSettingsError("条件を保存できませんでした。");
-        });
+      setSettingsStatus("条件を保存中…");
+      void fetch("/api/vidmatch/settings", {
+        method: "PUT", headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
+        body: JSON.stringify({ settings }), signal: controller.signal,
+      }).then((response) => {
+        if (!response.ok) throw new Error("Save failed");
+        if (!controller.signal.aborted) { setSettingsError(""); setSettingsStatus("条件を保存しました"); }
+      }).catch(() => {
+        if (!controller.signal.aborted) { setSettingsStatus(""); setSettingsError("条件を保存できませんでした。検索はそのまま続けられます。"); }
+      });
     }, 600);
+    return () => { window.clearTimeout(timer); controller.abort(); };
+  }, [accessToken, settings, settingsRestored, settingsSaveRetry, topicError]);
 
-    return () => window.clearTimeout(timer);
-  }, [accessToken, currentSettings, settingsLoaded]);
-
-  const getAccessToken = useCallback(async () => accessToken, [accessToken]);
-
-  const fetchHistory = useCallback(async () => {
-    setHistoryLoading(true);
-    setHistoryError("");
-
-    try {
-      const accessToken = await getAccessToken();
-      if (!accessToken) {
-        setHistory([]);
-        setHistoryError("ログインすると動画の視聴履歴を確認できます。");
-        return;
-      }
-
-      const response = await fetch("/api/vidmatch/history", {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
-      const data = await response.json();
-
-      if (!response.ok || data.error) {
-        throw new Error(data.error || "History request failed");
-      }
-
-      setHistory(data.history ?? []);
-    } catch (error) {
-      console.error(error);
-      setHistoryError("視聴履歴を取得できませんでした。少し時間をおいて再試行してください。");
-      setHistory([]);
-    } finally {
-      setHistoryLoading(false);
-    }
-  }, [getAccessToken]);
-
-  useEffect(() => {
-    if (isHistoryRoute) {
-      fetchHistory();
-    }
-  }, [fetchHistory, isHistoryRoute]);
-
-  useEffect(() => {
-    if (isSimilarRoute && similarVideoId) {
-      fetchSimilarRecommendations(similarVideoId);
-    }
-  }, [fetchSimilarRecommendations, isSimilarRoute, similarVideoId]);
-
-  const recordVideoClick = async (video: VidMatchVideo) => {
-    try {
-      const accessToken = await getAccessToken();
-      if (!accessToken) return;
-
-      await fetch("/api/vidmatch/history", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`,
-        },
-        body: JSON.stringify(video),
-      });
-    } catch (error) {
-      console.warn("VidMatch history tracking failed", error);
-    }
+  const updateSettings = (patch: Partial<Settings>) => {
+    settingsDirty.current = true;
+    setSettingsStatus("");
+    setSettings((current) => ({ ...current, ...patch }));
+  };
+  const toggle = (key: "selectedSkills" | "selectedTopics", value: string) => {
+    updateSettings({ [key]: settings[key].includes(value) ? settings[key].filter((item) => item !== value) : [...settings[key], value] });
   };
 
-  return (
-    <div className="vidmatch-shell">
-      <style>{`
-        .vidmatch-shell {
-          min-height: 100vh;
-          background: #e5e5e5;
-          color: #10203b;
-          overflow-x: hidden;
-        }
-
-        .app-header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          z-index: 1000;
-          background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%);
-          backdrop-filter: blur(18px);
-          padding: 6px 0;
-          border-bottom: 1px solid rgba(158, 180, 210, 0.16);
-          width: 100%;
-          box-sizing: border-box;
-          overflow: visible;
-          box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
-        }
-
-        .app-header-inner {
-          position: relative;
-          width: 100%;
-          max-width: 1280px;
-          margin: 0 auto;
-          padding: 0 18px;
-          display: grid;
-          grid-template-columns: auto 1fr auto;
-          align-items: center;
-          gap: 14px;
-          min-height: 52px;
-          box-sizing: border-box;
-        }
-
-        .header-left,
-        .header-right {
-          position: relative;
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          z-index: 3;
-        }
-
-        .header-right {
-          justify-self: end;
-        }
-
-        .header-center {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 2;
-          width: min(48%, 560px);
-          text-align: center;
-        }
-
-        .header-pill,
-        .header-icon-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          min-height: 38px;
-          padding: 0 10px;
-          border-radius: 999px;
-          text-decoration: none;
-          font-weight: 700;
-          border: 1px solid rgba(158, 180, 210, 0.16);
-          box-shadow: 0 12px 28px rgba(3, 8, 20, 0.18);
-          transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
-        }
-
-        .header-pill:hover,
-        .header-pill:focus,
-        .header-icon-btn:hover,
-        .header-icon-btn:focus {
-          transform: translateY(-2px);
-          box-shadow: 0 16px 32px rgba(3, 8, 20, 0.24);
-          border-color: rgba(158, 180, 210, 0.28);
-          outline: none;
-        }
-
-        .project-pill {
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(235, 242, 251, 0.92));
-          color: #0b1730;
-        }
-
-        .vocab-pill,
-        .header-icon-btn {
-          background: rgba(17, 31, 61, 0.72);
-          color: #edf4ff;
-        }
-
-        .vocab-title-link {
-          display: inline-flex;
-          flex-direction: column;
-          gap: 3px;
-          text-decoration: none;
-          color: #f7fbff;
-        }
-
-        .vocab-overline {
-          font-size: 10px;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          color: white;
-        }
-
-        .vocab-title {
-          margin: 0;
-          font-weight: 800;
-          color: #f7fbff;
-          font-size: clamp(18px, 2.6vw, 26px);
-          line-height: 1.05;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-
-        .brand-icon {
-          width: 34px;
-          height: 34px;
-          border-radius: 10px;
-          object-fit: cover;
-          display: block;
-          box-shadow: 0 8px 18px rgba(3, 8, 20, 0.18);
-        }
-
-        .vocab-pill img {
-          width: 32px;
-          height: 32px;
-          border-radius: 9px;
-          object-fit: cover;
-          flex-shrink: 0;
-        }
-
-        .header-menu-button {
-          color: white;
-          border: 0;
-          background: transparent;
-          cursor: pointer;
-          font-size: 30px;
-          line-height: 1;
-          padding: 0;
-        }
-
-        .vidmatch-main {
-          width: 100%;
-          max-width: 1180px;
-          margin: 0 auto;
-          padding: 86px 18px 44px;
-          box-sizing: border-box;
-        }
-
-        .vidmatch-workspace {
-          display: grid;
-          grid-template-columns: 340px minmax(0, 1fr);
-          gap: 18px;
-          align-items: start;
-        }
-
-        .vidmatch-panel,
-        .vidmatch-section {
-          background: #ffffff;
-          border: 1px solid #d6e0ea;
-          border-radius: 8px;
-          box-shadow: 0 16px 38px rgba(22, 38, 60, 0.11);
-        }
-
-        .vidmatch-panel {
-          padding: 18px;
-          position: sticky;
-          top: 86px;
-        }
-
-        .vidmatch-brand {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          margin-bottom: 14px;
-        }
-
-        .vidmatch-logo-large {
-          width: 44px;
-          height: 44px;
-          border-radius: 8px;
-          object-fit: cover;
-          flex: 0 0 auto;
-        }
-
-        .vidmatch-brand h2 {
-          margin: 0;
-          color: #12213a;
-          font-size: 22px;
-          line-height: 1;
-          font-weight: 900;
-        }
-
-        .vidmatch-brand p {
-          margin: 4px 0 0;
-          color: #64748b;
-          font-size: 13px;
-          line-height: 1.35;
-        }
-
-        .vidmatch-section {
-          padding: 18px;
-        }
-
-        .vidmatch-section h2 {
-          margin: 0;
-          color: #12213a;
-          font-size: 21px;
-          font-weight: 900;
-        }
-
-        .vidmatch-section-subtitle {
-          margin: 5px 0 0;
-          color: #64748b;
-          font-size: 13px;
-          line-height: 1.5;
-        }
-
-        .vidmatch-control-section {
-          border-top: 1px solid #e2e8f0;
-          padding-top: 14px;
-          margin-top: 14px;
-        }
-
-        .settings-status {
-          margin: 12px 0 0;
-          color: #475569;
-          font-size: 12px;
-          font-weight: 750;
-          line-height: 1.5;
-        }
-
-        .settings-status.is-error {
-          color: #b42318;
-        }
-
-        .preference-label {
-          display: block;
-          color: #475569;
-          font-size: 12px;
-          font-weight: 800;
-          margin-bottom: 8px;
-          text-transform: uppercase;
-          letter-spacing: 0.04em;
-        }
-
-        .chip-row {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 8px;
-        }
-
-        .chip-row.levels {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .choice-chip,
-        .recommend-button,
-        .history-button,
-        .youtube-link {
-          border: 1px solid #d1d5db;
-          border-radius: 8px;
-          min-height: 38px;
-          padding: 8px 10px;
-          font-weight: 750;
-          cursor: pointer;
-          box-shadow: none;
-          transition: transform 140ms cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 140ms ease,
-            border-color 140ms ease, background 140ms ease, color 140ms ease;
-        }
-
-        .choice-chip {
-          background: #ffffff;
-          color: #162033;
-        }
-
-        .choice-chip:hover,
-        .choice-chip:focus {
-          transform: translateY(-1px);
-          border-color: #b8c4d6;
-          box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
-          outline: none;
-        }
-
-        .choice-chip.is-selected {
-          background: #195a8a;
-          border-color: #195a8a;
-          box-shadow: none;
-          color: #ffffff;
-        }
-
-        .choice-chip.is-selected:hover,
-        .choice-chip.is-selected:focus {
-          border-color: transparent;
-          box-shadow: 0 8px 18px rgba(25, 90, 138, 0.18);
-        }
-
-        .caption-toggle {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 10px;
-          width: 100%;
-          color: #334155;
-          font-size: 14px;
-          font-weight: 700;
-          cursor: pointer;
-        }
-
-        .caption-toggle input {
-          width: 18px;
-          height: 18px;
-          accent-color: #195a8a;
-        }
-
-        .custom-topic-input {
-          width: 100%;
-          min-height: 40px;
-          border: 1px solid #cbd5e1;
-          border-radius: 8px;
-          padding: 0 10px;
-          color: #10203b;
-          background: #ffffff;
-          font: inherit;
-          font-size: 14px;
-          box-sizing: border-box;
-          margin-top: 8px;
-        }
-
-        .custom-topic-input:focus {
-          border-color: #195a8a;
-          box-shadow: 0 0 0 3px rgba(25, 90, 138, 0.14);
-          outline: none;
-        }
-
-        .recommend-actions {
-          display: grid;
-          gap: 8px;
-        }
-
-        .recommend-button {
-          width: 100%;
-          background: #1b7f79;
-          border-color: #1b7f79;
-          box-shadow: none;
-          color: #ffffff;
-        }
-
-        .history-button {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 38px;
-          background: #ffffff;
-          color: #195a8a;
-          text-decoration: none;
-        }
-
-        .sidebar-history-button {
-          width: 100%;
-          box-sizing: border-box;
-        }
-
-        .recommend-button:hover,
-        .recommend-button:focus,
-        .history-button:hover,
-        .history-button:focus,
-        .youtube-link:hover,
-        .youtube-link:focus {
-          transform: translateY(-1px);
-          box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-          outline: none;
-        }
-
-        .recommend-button:disabled {
-          cursor: wait;
-          opacity: 0.72;
-          transform: none;
-          box-shadow: none;
-        }
-
-        .recommend-error,
-        .empty-recommendations {
-          color: #b42318;
-          font-weight: 800;
-        }
-
-        .empty-recommendations {
-          color: #475569;
-        }
-
-        .recommendation-grid {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 16px;
-          margin-top: 18px;
-        }
-
-        .recommendation-card {
-          min-width: 0;
-          overflow: hidden;
-          border: 1px solid #d6e0ea;
-          border-radius: 8px;
-          background: #ffffff;
-          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-        }
-
-        .history-header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 14px;
-          flex-wrap: wrap;
-          margin-bottom: 18px;
-        }
-
-        .history-date {
-          color: #64748b;
-          font-size: 14px;
-          font-weight: 800;
-        }
-
-        .recommendation-thumb {
-          display: block;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-          object-fit: cover;
-          background: #d7e0ec;
-        }
-
-        .recommendation-body {
-          display: grid;
-          gap: 10px;
-          padding: 14px;
-        }
-
-        .recommendation-title {
-          margin: 0;
-          color: #10203b;
-          font-size: 16px;
-          line-height: 1.35;
-          font-weight: 900;
-        }
-
-        .recommendation-meta,
-        .recommendation-description {
-          margin: 0;
-          color: #475569;
-          line-height: 1.6;
-        }
-
-        .recommendation-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-        }
-
-        .recommendation-actions {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-          align-items: center;
-        }
-
-        .recommendation-tag {
-          border-radius: 999px;
-          background: #edf4f8;
-          color: #195a8a;
-          font-size: 12px;
-          font-weight: 800;
-          padding: 5px 9px;
-        }
-
-        .youtube-link {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: fit-content;
-          min-height: 40px;
-          background: #195a8a;
-          border-color: #195a8a;
-          box-shadow: none;
-          color: #ffffff;
-          text-decoration: none;
-        }
-
-        .vidmatch-section p {
-          margin: 0;
-          color: #334155;
-          line-height: 1.75;
-          overflow-wrap: anywhere;
-        }
-
-        .vidmatch-notice {
-          margin-top: 16px;
-          color: #173a71;
-          font-weight: 800;
-        }
-
-        @media (max-width: 820px) {
-          .app-header-inner {
-            grid-template-columns: auto 1fr auto;
-            padding: 0 14px;
-            min-height: 52px;
-          }
-
-          .header-center {
-            position: absolute;
-            transform: translate(-50%, -50%);
-            width: min(46%, 360px);
-            text-align: center;
-            padding-left: 0;
-          }
-
-          .header-right {
-            justify-self: end;
-          }
-
-          .project-pill span,
-          .vocab-pill span,
-          .header-icon-btn span {
-            display: none;
-          }
-
-          .vidmatch-main {
-            padding-top: 86px;
-          }
-
-          .vidmatch-workspace {
-            grid-template-columns: 1fr;
-          }
-
-          .vidmatch-panel {
-            position: static;
-          }
-
-          .recommendation-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-
-        @media (max-width: 560px) {
-          .app-header-inner {
-            gap: 10px;
-            min-height: 52px;
-          }
-
-          .header-left,
-          .header-right {
-            gap: 8px;
-          }
-
-          .vocab-pill {
-            padding: 0 8px;
-          }
-
-          .vidmatch-main {
-            padding-left: 12px;
-            padding-right: 12px;
-          }
-
-          .vidmatch-main {
-            padding-left: 8px;
-            padding-right: 8px;
-          }
-
-          .chip-row {
-            grid-template-columns: 1fr;
-          }
-
-          .chip-row.levels {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-          }
-        }
-      `}</style>
-
-      <header className="app-header" role="banner">
-        <div className="app-header-inner">
-          <div className="header-left">
-            <a href="/" className="header-pill project-pill" aria-label="Project Fluence landing page">
-              <img src="/images/logo.png" alt="Project Fluence" className="brand-icon" />
-              <span>Project Fluence</span>
-            </a>
-          </div>
-
-          <div className="header-center">
-            <Link href="/vidmatch" className="vocab-title-link" onClick={scrollToTop}>
-              <span className="vocab-overline">動画推薦アプリ</span>
-              <h1 className="vocab-title">VidMatch</h1>
-            </Link>
-          </div>
-
-          <div className="header-right">
-            <div className="hidden sm:flex items-center gap-2">
-              <AuthButton compact variant="banner" userMenu />
-              <AuthButton compact variant="banner" initialMode="sign-up" />
+  const loadRecommendations = useCallback(async (params: URLSearchParams, scroll = false) => {
+    const currentRequest = ++requestNumber.current;
+    setRecommendationLoading(true);
+    setRecommendationError("");
+    setHasSearched(true);
+    try {
+      const response = await fetch(`/api/vidmatch/recommend?${params}`);
+      const data = await response.json();
+      if (!response.ok || data.error) throw new Error("Recommendations unavailable");
+      if (currentRequest === requestNumber.current) setRecommendations(data.videos ?? []);
+    } catch {
+      if (currentRequest === requestNumber.current) {
+        setRecommendations([]);
+        setRecommendationError("動画を読み込めませんでした。通信状況を確認して、もう一度お試しください。");
+      }
+    } finally {
+      if (currentRequest === requestNumber.current) {
+        setRecommendationLoading(false);
+        if (scroll && window.innerWidth < 900) window.requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }));
+      }
+    }
+  }, []);
+
+  const search = () => {
+    if (topicError) return;
+    const params = new URLSearchParams({ level: settings.selectedLevel, limit: "6" });
+    settings.selectedSkills.forEach((skill) => params.append("skills", skill));
+    topics.forEach((topic) => params.append("topics", topic));
+    if (settings.selectedAccent) params.set("accent", settings.selectedAccent);
+    if (settings.captionOnly) params.set("transcript_available", "true");
+    void loadRecommendations(params, true);
+  };
+  const searchSimilar = useCallback(() => {
+    if (similarId) void loadRecommendations(new URLSearchParams({ similar_to: similarId, limit: "6" }));
+  }, [loadRecommendations, similarId]);
+  const invalidateRequests = useCallback(() => { requestNumber.current += 1; }, []);
+  useEffect(() => {
+    if (isSimilar) searchSimilar();
+    else { invalidateRequests(); setRecommendations([]); setRecommendationLoading(false); setRecommendationError(""); setHasSearched(false); }
+    return invalidateRequests;
+  }, [isSimilar, searchSimilar, invalidateRequests]);
+
+  useEffect(() => {
+    if (!isHistory || !authReady) return;
+    setHistory([]);
+    setHistoryError("");
+    if (!accessToken) { setHistoryLoading(false); return; }
+    const controller = new AbortController();
+    setHistoryLoading(true);
+    void fetch("/api/vidmatch/history", { headers: { Authorization: `Bearer ${accessToken}` }, signal: controller.signal })
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok || data.error) throw new Error("History unavailable");
+        if (!controller.signal.aborted) setHistory(data.history ?? []);
+      }).catch(() => { if (!controller.signal.aborted) setHistoryError("動画の履歴を読み込めませんでした。もう一度お試しください。"); })
+      .finally(() => { if (!controller.signal.aborted) setHistoryLoading(false); });
+    return () => controller.abort();
+  }, [accessToken, authReady, isHistory, historyRetry]);
+
+  const recordVideoClick = async (video: VidMatchVideo) => {
+    if (!accessToken) return;
+    setTrackingError("");
+    try {
+      const response = await fetch("/api/vidmatch/history", {
+        method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` }, body: JSON.stringify(video),
+      });
+      if (!response.ok) throw new Error("History save failed");
+    } catch { setTrackingError("動画は開きましたが、履歴を保存できませんでした。"); }
+  };
+  const renderVideos = (videos: VidMatchVideo[]) => <div className="vm-video-grid">{videos.map((video) => <VideoCard key={video.video_id} video={video} onOpen={recordVideoClick} openedAt={"last_clicked_at" in video ? String(video.last_clicked_at) : undefined} />)}</div>;
+
+  const results = <>
+    {recommendationLoading ? <LoadingVideos /> : recommendationError ? (
+      <div className="vm-state" role="alert"><h3>動画を読み込めませんでした</h3><p>{recommendationError}</p><button className="pf-button-secondary" onClick={isSimilar ? searchSimilar : search}>もう一度試す</button></div>
+    ) : recommendations.length ? <><p className="vm-result-count" role="status">{recommendations.length}件の動画が見つかりました</p>{renderVideos(recommendations)}</> : (
+      <div className="vm-state" role="status">
+        <span className="vm-state-symbol" aria-hidden="true">▷</span>
+        <h3>{hasSearched ? "条件に合う動画が見つかりませんでした" : "興味のある動画から、英語にふれよう"}</h3>
+        <p>{isSimilar ? "ほかの動画を選ぶか、条件を変えて探してみましょう。" : hasSearched ? "トピックやアクセントの指定を減らすと、見つかりやすくなります。" : "レベルと伸ばしたいスキルを選び、「動画を探す」を押してください。"}</p>
+        {isSimilar && <Link href="/vidmatch" className="pf-button-secondary">条件を選んで探す</Link>}
+        {!isSimilar && hasSearched && <button className="pf-button-secondary" onClick={() => { updateSettings({ selectedTopics: [], customTopics: "", selectedAccent: "", captionOnly: false }); }}>追加の条件をクリア</button>}
+      </div>
+    )}
+  </>;
+
+  return <div className="vm-shell">
+    <style>{styles}</style>
+    <AppHeader />
+    <main id="main-content" className="pf-page vm-main">
+      <div className="vm-page-heading">
+        <div><p className="pf-eyebrow">VidMatch · 動画で学ぶ</p><h1>{isHistory ? "動画の履歴" : isSimilar ? "次に見たい動画" : "あなたに合う英語の動画を。"}</h1><p>{isHistory ? "YouTubeで開いた動画を、いつでも見返せます。" : isSimilar ? "レベルやテーマが近い動画で、興味を広げましょう。" : "今のレベルと興味に合わせて、聞く練習を始めましょう。"}</p></div>
+        <Link href={isHistory || isSimilar ? "/vidmatch" : "/vidmatch/history"} className="pf-button-secondary">{isHistory || isSimilar ? "動画を探す" : "動画の履歴"}<span aria-hidden="true"> →</span></Link>
+      </div>
+      {trackingError && <p className="vm-notice" role="status">{trackingError}</p>}
+      {isHistory ? (
+        <section className="vm-history" aria-label="動画の履歴">
+          {history.length > 0 && <h2 className="sr-only">これまでに開いた動画</h2>}
+          {!authReady || historyLoading ? <LoadingVideos /> : !accessToken ? <div className="vm-state pf-panel"><h2>気になる動画を、また見返そう</h2><p>ログインすると、YouTubeで開いた動画の履歴が残ります。</p><AuthButton /><Link href="/vidmatch" className="vm-text-link">ログインせずに動画を探す →</Link></div> : historyError ? <div className="vm-state pf-panel" role="alert"><h2>履歴を読み込めませんでした</h2><p>{historyError}</p><button className="pf-button-secondary" onClick={() => setHistoryRetry((value) => value + 1)}>もう一度試す</button></div> : history.length ? renderVideos(history) : <div className="vm-state pf-panel"><h2>最初の動画を見つけましょう</h2><p>動画の「YouTubeで見る」を押すと、ここに履歴が表示されます。</p><Link href="/vidmatch" className="pf-button">動画を探す</Link></div>}
+        </section>
+      ) : isSimilar ? (
+        <section className="vm-results" ref={resultsRef} aria-label="似ている動画" aria-busy={recommendationLoading}>
+          <Link href="/vidmatch/history" className="vm-text-link">← 動画の履歴に戻る</Link><h2 className="sr-only">似ている動画の検索結果</h2>{results}
+        </section>
+      ) : (
+        <div className="vm-workspace">
+          <form className="vm-preferences pf-panel" onSubmit={(event) => { event.preventDefault(); search(); }}>
+            <div className="vm-filter-heading"><h2>動画の条件</h2><span>まずはレベルから</span></div>
+            <fieldset disabled={!authReady || settingsLoading} className="vm-fieldset">
+              <legend className="sr-only">動画の検索条件</legend>
+              <div className="vm-control"><h3 id="vm-level-label">英語レベル</h3><div className="vm-levels" role="group" aria-labelledby="vm-level-label">{LEVELS.map((level, index) => <button key={level} type="button" className="vm-choice" aria-pressed={settings.selectedLevel === level} onClick={() => updateSettings({ selectedLevel: level })}><strong>{level}</strong><span>{LEVEL_LABELS[index]}</span></button>)}</div></div>
+              <div className="vm-control"><h3 id="vm-skill-label">伸ばしたいスキル <span>複数選択可</span></h3><div className="vm-chips" role="group" aria-labelledby="vm-skill-label">{SKILLS.map((skill) => <button key={skill} type="button" className="vm-choice" aria-pressed={settings.selectedSkills.includes(skill)} onClick={() => toggle("selectedSkills", skill)}>{LABELS[skill]}</button>)}</div></div>
+              <details className="vm-extra-filters"><summary>トピック・アクセントなど{(topics.length > 0 || settings.selectedAccent || settings.captionOnly) && <span className="vm-filter-dot" aria-label="追加条件を選択中" />}</summary>
+                <div className="vm-control"><h3 id="vm-topic-label">好きなトピック</h3><div className="vm-chips" role="group" aria-labelledby="vm-topic-label">{TOPICS.map((topic) => <button key={topic} type="button" className="vm-choice" aria-pressed={settings.selectedTopics.includes(topic)} onClick={() => toggle("selectedTopics", topic)}>{LABELS[topic]}</button>)}</div><label className="vm-input-label" htmlFor="vm-custom-topics">その他のトピック</label><input id="vm-custom-topics" value={settings.customTopics} onChange={(event) => updateSettings({ customTopics: event.target.value })} maxLength={240} placeholder="例: music, cooking" aria-describedby={topicError ? "vm-topic-error vm-topic-hint" : "vm-topic-hint"} aria-invalid={!!topicError} /><p id="vm-topic-hint" className="vm-help">英語で入力し、複数ある場合はカンマで区切ってください。</p>{topicError && <p id="vm-topic-error" className="vm-error" role="alert">{topicError}</p>}</div>
+                <div className="vm-control"><label className="vm-input-label" htmlFor="vm-accent">アクセント</label><select id="vm-accent" value={settings.selectedAccent} onChange={(event) => updateSettings({ selectedAccent: event.target.value })}><option value="">指定なし</option>{ACCENTS.map((accent) => <option key={accent} value={accent}>{LABELS[accent]}</option>)}</select></div>
+                <label className="vm-caption"><input type="checkbox" checked={settings.captionOnly} onChange={(event) => updateSettings({ captionOnly: event.target.checked })} /><span>字幕・文字起こしのある動画のみ</span></label>
+              </details>
+              <button type="submit" className="pf-button vm-search" disabled={recommendationLoading || !!topicError}>{recommendationLoading ? "動画を検索中…" : "動画を探す"}<span aria-hidden="true"> →</span></button>
+            </fieldset>
+            <div className="vm-save-status" aria-live="polite">
+              {!authReady || settingsLoading ? <p>保存した条件を読み込んでいます…</p> : settingsError ? <><p className="vm-error">{settingsError}</p>{settingsRestored ? <button type="button" className="vm-text-link" onClick={() => setSettingsSaveRetry((value) => value + 1)}>保存を再試行</button> : <button type="button" className="vm-text-link" onClick={() => setSettingsRetry((value) => value + 1)}>条件を再読み込み</button>}</> : <p>{accessToken ? settingsStatus || "検索条件は自動保存されます。" : "ログインすると検索条件と動画の履歴が残ります。"}</p>}
             </div>
-            <button
-              type="button"
-              onClick={() => setMenuOpen(true)}
-              className="header-menu-button"
-              aria-label="Open menu"
-            >
-              ☰
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {menuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-40" style={{ zIndex: 1100 }}>
-          <div className="absolute right-0 top-0 h-full w-64 overflow-y-auto bg-white p-6 shadow-lg">
-            <button onClick={() => setMenuOpen(false)} className="text-xl mb-6" aria-label="Close menu">
-              ✕
-            </button>
-
-            <nav className="flex flex-col gap-4 text-lg text-gray-950">
-              <div className="border-b border-gray-200 pb-4 sm:hidden">
-                <div className="flex flex-col gap-3">
-                  <AuthButton userMenu inlineUserMenu authenticatedOnly />
-                  <AuthButton hideWhenAuthenticated />
-                  <AuthButton initialMode="sign-up" />
-                </div>
-              </div>
-
-              <div>
-                <a href="/#apps" onClick={() => setMenuOpen(false)}>
-                  英語学習アプリ
-                </a>
-                <div className="flex flex-col gap-2 mt-2 ml-4 text-base text-gray-600">
-                  <a href="/vocabstream" onClick={() => setMenuOpen(false)}>
-                    ・VocabStream
-                  </a>
-                  <a href="/vidmatch" onClick={() => setMenuOpen(false)}>
-                    ・VidMatch
-                  </a>
-                  <a href="/speakwise" onClick={() => setMenuOpen(false)}>
-                    ・SpeakWiseAI
-                  </a>
-                </div>
-              </div>
-
-              <a href="/#notes" onClick={() => setMenuOpen(false)}>
-                最近のnote記事
-              </a>
-              <a href="/#english-motivation" onClick={() => setMenuOpen(false)}>
-                英語を学ぶモチベーション
-              </a>
-              <a href="/#method" onClick={() => setMenuOpen(false)}>
-                効果的な英語学習方法
-              </a>
-              <a href="/#prompts" onClick={() => setMenuOpen(false)}>
-                AIプロンプト集
-              </a>
-            </nav>
-          </div>
+          </form>
+          <section className="vm-results" ref={resultsRef} aria-labelledby="vm-results-title" aria-busy={recommendationLoading}>
+            <div className="vm-results-heading"><h2 id="vm-results-title">おすすめ動画</h2><p>気になる動画を1本選んで、気軽に聞いてみましょう。</p></div>
+            {results}
+          </section>
         </div>
       )}
-
-      <main className="vidmatch-main">
-        {isHistoryRoute ? (
-          <section className="vidmatch-section" aria-labelledby="vidmatch-history-title">
-            <div className="history-header">
-              <h2 id="vidmatch-history-title">動画の視聴履歴</h2>
-              <Link href="/vidmatch" className="history-button">
-                動画を探す
-              </Link>
-            </div>
-
-            {historyError && <p className="recommend-error">{historyError}</p>}
-            {historyLoading && <p className="empty-recommendations">視聴履歴を読み込んでいます...</p>}
-
-            {!historyLoading && history.length > 0 && (
-              <div className="recommendation-grid" aria-live="polite">
-                {history.map((video) => (
-                  <article key={video.video_id} className="recommendation-card">
-                    {video.thumbnail_url && (
-                      <img src={video.thumbnail_url} alt="" className="recommendation-thumb" loading="lazy" />
-                    )}
-                    <div className="recommendation-body">
-                      <h3 className="recommendation-title">{video.title}</h3>
-                      <p className="recommendation-meta">
-                        {video.channel_name} / {video.level || "level未設定"} / score{" "}
-                        {Math.round(Number(video.quality_score))}
-                      </p>
-                      <p className="history-date">
-                        最終クリック: {formatDateTime(video.last_clicked_at)}
-                      </p>
-                      <div className="recommendation-tags">
-                        {[...(video.skills ?? []), ...(video.topics ?? [])].slice(0, 6).map((tag) => (
-                          <span key={`${video.video_id}-${tag}`} className="recommendation-tag">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="recommendation-actions">
-                        <a
-                          className="youtube-link"
-                          href={video.youtube_url}
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={() => void recordVideoClick(video)}
-                        >
-                          YouTubeで見る
-                        </a>
-                        <Link
-                          href={`/vidmatch/similar/${encodeURIComponent(video.video_id)}`}
-                          className="history-button"
-                        >
-                          似たビデオを探す
-                        </Link>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            )}
-
-            {!historyLoading && !historyError && history.length === 0 && (
-              <p className="empty-recommendations">
-                まだ視聴履歴がありません。おすすめ動画から「YouTubeで見る」を押すとここに表示されます。
-              </p>
-            )}
-          </section>
-        ) : isSimilarRoute ? (
-          <section className="vidmatch-section" aria-labelledby="vidmatch-similar-title">
-            <div className="history-header">
-              <div>
-                <h2 id="vidmatch-similar-title">似たビデオ</h2>
-                <p className="vidmatch-section-subtitle">
-                  視聴履歴の動画とレベル、スキル、トピック、タグが近い動画をデータベースから表示します。
-                </p>
-              </div>
-              <div className="recommendation-actions">
-                <Link href="/vidmatch/history" className="history-button">
-                  視聴履歴に戻る
-                </Link>
-                <Link href="/vidmatch" className="history-button">
-                  動画を探す
-                </Link>
-              </div>
-            </div>
-
-            {recommendationError && <p className="recommend-error">{recommendationError}</p>}
-            {recommendationLoading && <p className="empty-recommendations">似たビデオを検索しています...</p>}
-
-            {!recommendationLoading && recommendations.length > 0 && (
-              <div className="recommendation-grid" aria-live="polite">
-                {recommendations.map((video) => (
-                  <article key={video.video_id} className="recommendation-card">
-                    {video.thumbnail_url && (
-                      <img src={video.thumbnail_url} alt="" className="recommendation-thumb" loading="lazy" />
-                    )}
-                    <div className="recommendation-body">
-                      <h3 className="recommendation-title">{video.title}</h3>
-                      <p className="recommendation-meta">
-                        {video.channel_name} / {video.level} / score {Math.round(Number(video.quality_score))}
-                      </p>
-                      <div className="recommendation-tags">
-                        {[...video.skills, ...video.topics].slice(0, 6).map((tag) => (
-                          <span key={`${video.video_id}-${tag}`} className="recommendation-tag">
-                            {SKILL_LABELS[tag] || TOPIC_LABELS[tag] || tag}
-                          </span>
-                        ))}
-                      </div>
-                      {video.description && (
-                        <p className="recommendation-description">
-                          {video.description.length > 150 ? `${video.description.slice(0, 150)}...` : video.description}
-                        </p>
-                      )}
-                      <div className="recommendation-actions">
-                        <a
-                          className="youtube-link"
-                          href={video.youtube_url}
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={() => void recordVideoClick(video)}
-                        >
-                          YouTubeで見る
-                        </a>
-                        <Link
-                          href={`/vidmatch/similar/${encodeURIComponent(video.video_id)}`}
-                          className="history-button"
-                        >
-                          似たビデオを探す
-                        </Link>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            )}
-
-            {!recommendationLoading && !recommendationError && recommendations.length === 0 && (
-              <p className="empty-recommendations">
-                {similarSourceVideoId ? "この動画に似たビデオはまだ見つかりませんでした。" : "視聴履歴から動画を選んでください。"}
-              </p>
-            )}
-          </section>
-        ) : (
-          <div className="vidmatch-workspace">
-            <aside className="vidmatch-panel" aria-label="動画検索条件">
-              <div className="vidmatch-brand">
-                <Image
-                  src="/images/videofinder.png"
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="vidmatch-logo-large"
-                />
-                <div>
-                  <h2>VidMatch</h2>
-                  <p>今の英語レベルに合う動画を探す</p>
-                </div>
-              </div>
-              {settingsLoading && (
-                <p className="settings-status" aria-live="polite">保存済みの条件を読み込み中...</p>
-              )}
-              {!settingsLoading && settingsError && (
-                <p className="settings-status is-error" aria-live="polite">{settingsError}</p>
-              )}
-              {!settingsLoading && !settingsError && !accessToken && (
-                <p className="settings-status">ログインすると検索条件が自動保存されます。</p>
-              )}
-
-              <div className="vidmatch-control-section">
-                <Link href="/vidmatch/history" className="history-button sidebar-history-button">
-                  視聴履歴を見る
-                </Link>
-              </div>
-
-              <div className="vidmatch-control-section">
-                <span className="preference-label">英語レベル</span>
-                <div className="chip-row levels" role="group" aria-label="英語レベルを選択">
-                  {LEVELS.map((level) => (
-                    <button
-                      key={level}
-                      type="button"
-                      className={`choice-chip ${selectedLevel === level ? "is-selected" : ""}`}
-                      onClick={() => setSelectedLevel(level)}
-                    >
-                      {level}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="vidmatch-control-section">
-                <span className="preference-label">伸ばしたいスキル</span>
-                <div className="chip-row" role="group" aria-label="伸ばしたいスキルを選択">
-                  {SKILLS.map((skill) => (
-                    <button
-                      key={skill}
-                      type="button"
-                      className={`choice-chip ${selectedSkills.includes(skill) ? "is-selected" : ""}`}
-                      onClick={() => toggleValue(skill, selectedSkills, setSelectedSkills)}
-                    >
-                      {SKILL_LABELS[skill] || skill}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="vidmatch-control-section">
-                <span className="preference-label">トピック</span>
-                <div className="chip-row" role="group" aria-label="トピックを選択">
-                  {TOPICS.map((topic) => (
-                    <button
-                      key={topic}
-                      type="button"
-                      className={`choice-chip ${selectedTopics.includes(topic) ? "is-selected" : ""}`}
-                      onClick={() => toggleValue(topic, selectedTopics, setSelectedTopics)}
-                    >
-                      {TOPIC_LABELS[topic] || topic}
-                    </button>
-                  ))}
-                </div>
-                <input
-                  type="text"
-                  className="custom-topic-input"
-                  value={customTopics}
-                  onChange={(event) => setCustomTopics(event.target.value)}
-                  placeholder="その他のトピックを入力"
-                  aria-label="その他のトピック"
-                />
-              </div>
-
-              <div className="vidmatch-control-section">
-                <span className="preference-label">アクセント</span>
-                <div className="chip-row" role="group" aria-label="アクセントを選択">
-                  <button
-                    type="button"
-                    className={`choice-chip ${selectedAccent === "" ? "is-selected" : ""}`}
-                    onClick={() => setSelectedAccent("")}
-                  >
-                    指定なし
-                  </button>
-                  {ACCENTS.map((accent) => (
-                    <button
-                      key={accent}
-                      type="button"
-                      className={`choice-chip ${selectedAccent === accent ? "is-selected" : ""}`}
-                      onClick={() => setSelectedAccent(accent)}
-                    >
-                      {ACCENT_LABELS[accent] || accent}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="vidmatch-control-section">
-                <label className="caption-toggle">
-                  <span>字幕・文字起こしあり</span>
-                  <input
-                    type="checkbox"
-                    checked={captionOnly}
-                    onChange={(event) => setCaptionOnly(event.target.checked)}
-                  />
-                </label>
-              </div>
-
-              <div className="vidmatch-control-section">
-                <div className="recommend-actions">
-                  <button
-                    type="button"
-                    className="recommend-button"
-                    onClick={fetchRecommendations}
-                    disabled={recommendationLoading}
-                  >
-                    {recommendationLoading ? "検索中..." : "おすすめ動画を表示"}
-                  </button>
-                </div>
-                {recommendationError && <p className="recommend-error" style={{ marginTop: 10 }}>{recommendationError}</p>}
-              </div>
-            </aside>
-
-            <section className="vidmatch-section" aria-labelledby="vidmatch-recommend-title">
-              <div className="history-header">
-                <div>
-                  <h2 id="vidmatch-recommend-title">おすすめ動画</h2>
-                  <p className="vidmatch-section-subtitle">
-                    レベル、スキル、トピックに合わせて英語インプット用のYouTube動画を表示します。
-                  </p>
-                </div>
-                {isNestedRoute && (
-                  <p className="vidmatch-notice">
-                    このページは現在ホームに集約されています。
-                  </p>
-                )}
-              </div>
-
-              {recommendations.length > 0 ? (
-                <div className="recommendation-grid" aria-live="polite">
-                  {recommendations.map((video) => (
-                    <article key={video.video_id} className="recommendation-card">
-                      {video.thumbnail_url && (
-                        <img src={video.thumbnail_url} alt="" className="recommendation-thumb" loading="lazy" />
-                      )}
-                      <div className="recommendation-body">
-                        <h3 className="recommendation-title">{video.title}</h3>
-                        <p className="recommendation-meta">
-                          {video.channel_name} / {video.level} / score {Math.round(Number(video.quality_score))}
-                        </p>
-                        <div className="recommendation-tags">
-                          {[...video.skills, ...video.topics].slice(0, 6).map((tag) => (
-                            <span key={`${video.video_id}-${tag}`} className="recommendation-tag">
-                              {SKILL_LABELS[tag] || TOPIC_LABELS[tag] || tag}
-                            </span>
-                          ))}
-                        </div>
-                        {video.description && (
-                          <p className="recommendation-description">
-                            {video.description.length > 150 ? `${video.description.slice(0, 150)}...` : video.description}
-                          </p>
-                        )}
-                        <a
-                          className="youtube-link"
-                          href={video.youtube_url}
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={() => void recordVideoClick(video)}
-                        >
-                          YouTubeで見る
-                        </a>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              ) : (
-                <p className="empty-recommendations" style={{ marginTop: 16 }}>
-                  左の条件を選んで「おすすめ動画を表示」を押してください。
-                </p>
-              )}
-            </section>
-          </div>
-        )}
-      </main>
-    </div>
-  );
+    </main>
+  </div>;
 }
 
-function formatDateTime(value: string) {
+function VideoCard({ video, openedAt, onOpen }: { video: VidMatchVideo; openedAt?: string; onOpen: (video: VidMatchVideo) => Promise<void> }) {
+  const duration = formatDuration(video.duration);
+  const tags = Array.from(new Set([...(video.skills ?? []), ...(video.topics ?? [])])).slice(0, 3);
+  return <article className="vm-video-card">
+    <div className="vm-thumbnail">{video.thumbnail_url ? <img src={video.thumbnail_url} alt="" loading="lazy" /> : <span aria-hidden="true">▷</span>}{duration && <span className="vm-duration">{duration}</span>}</div>
+    <div className="vm-video-body"><p className="vm-channel">{video.channel_name}</p><h3>{video.title}</h3><div className="vm-tags">{video.level && <span className="vm-level-tag">{video.level}</span>}{tags.map((tag) => <span key={tag}>{LABELS[tag] || tag}</span>)}{video.transcript_available && <span>字幕あり</span>}</div>{video.description && <p className="vm-description">{video.description}</p>}{openedAt && <p className="vm-opened">前回開いた日: {formatDate(openedAt)}</p>}<div className="vm-video-actions"><a href={video.youtube_url} target="_blank" rel="noopener noreferrer" className="pf-button-secondary" onClick={() => void onOpen(video)} aria-label={`${video.title}をYouTubeで見る（新しいタブ）`}>YouTubeで見る <span aria-hidden="true">↗</span></a><Link href={`/vidmatch/similar/${encodeURIComponent(video.video_id)}`} className="vm-text-link" aria-label={`${video.title}に似た動画を探す`}>似た動画</Link></div></div>
+  </article>;
+}
+function LoadingVideos() {
+  return <div role="status" className="vm-loading"><p>動画を読み込んでいます…</p><div className="vm-video-grid" aria-hidden="true">{[0, 1, 2, 3].map((item) => <div className="vm-skeleton" key={item}><div /><span /><span /></div>)}</div></div>;
+}
+function formatDate(value: string) {
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "";
-  return new Intl.DateTimeFormat("ja-JP", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(date);
+  return Number.isNaN(date.getTime()) ? "—" : new Intl.DateTimeFormat("ja-JP", { dateStyle: "medium" }).format(date);
 }
+function formatDuration(value: string | null) {
+  if (!value) return "";
+  const match = value.match(/^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/);
+  if (!match) return "";
+  const hours = Number(match[1] || 0), minutes = Number(match[2] || 0), seconds = Number(match[3] || 0);
+  return hours ? `${hours}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}` : `${minutes}:${String(seconds).padStart(2, "0")}`;
+}
+
+const styles = `
+.vm-shell { min-height:100vh; background:var(--pf-bg); color:var(--pf-text); }
+.vm-main { padding-top:34px; padding-bottom:64px; }
+.vm-page-heading { display:flex; justify-content:space-between; align-items:center; gap:20px; margin-bottom:28px; }
+.vm-page-heading h1 { font-size:clamp(24px,3vw,32px); line-height:1.4; letter-spacing:-.035em; font-weight:750; margin:7px 0 9px; }
+.vm-page-heading p:not(.pf-eyebrow) { color:var(--pf-muted); line-height:1.8; margin:0; font-size:14px; }
+.vm-page-heading > a { flex-shrink:0; }
+.vm-workspace { display:grid; grid-template-columns:304px minmax(0,1fr); gap:28px; align-items:start; }
+.vm-preferences { padding:22px; min-width:0; }
+.vm-filter-heading { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.vm-filter-heading h2, .vm-results-heading h2 { margin:0; font-size:18px; font-weight:700; }
+.vm-filter-heading > span { color:var(--pf-muted); font-size:11px; }
+.vm-fieldset { border:0; padding:0; margin:0; min-width:0; }
+.vm-fieldset:disabled { opacity:.6; }
+.vm-control { margin-top:22px; }
+.vm-control h3 { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 10px; font-size:13px; font-weight:650; }
+.vm-control h3 > span { font-size:11px; color:var(--pf-muted); font-weight:400; }
+.vm-levels { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; }
+.vm-choice { min-height:44px; border:1px solid var(--pf-border); background:var(--pf-surface); color:var(--pf-text); border-radius:9px; padding:8px 10px; font-size:13px; font-weight:500; line-height:1.4; transition:background .15s,border-color .15s; }
+.vm-choice:hover { background:#f2f1ff; border-color:#b5b0e4; }
+.vm-choice[aria-pressed="true"] { border-color:var(--pf-primary); background:#eeecff; color:#3730a3; box-shadow:inset 0 0 0 1px var(--pf-primary); }
+.vm-levels .vm-choice { display:grid; gap:3px; text-align:center; }
+.vm-levels .vm-choice strong { font-size:15px; font-weight:700; }
+.vm-levels .vm-choice span { font-size:10px; }
+.vm-chips { display:flex; flex-wrap:wrap; gap:7px; }
+.vm-extra-filters { border-top:1px solid var(--pf-border); border-bottom:1px solid var(--pf-border); margin-top:22px; padding:0; }
+.vm-extra-filters summary { min-height:48px; padding:15px 0; font-size:13px; cursor:pointer; font-weight:600; }
+.vm-extra-filters[open] { padding-bottom:14px; }
+.vm-extra-filters[open] .vm-control:first-of-type { margin-top:4px; }
+.vm-filter-dot { display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--pf-primary); margin-left:8px; }
+.vm-input-label { display:block; font-size:13px; font-weight:600; margin:16px 0 7px; }
+.vm-preferences input[type="text"], .vm-preferences input:not([type]), .vm-preferences select { width:100%; min-height:46px; padding:10px 11px; border:1px solid #c9d0df; border-radius:8px; background:white; color:var(--pf-text); font-size:16px; }
+.vm-help { color:var(--pf-muted); font-size:11px; line-height:1.7; margin:7px 0 0; }
+.vm-caption { display:flex; align-items:center; gap:10px; min-height:48px; font-size:12px; line-height:1.7; margin-top:14px; cursor:pointer; }
+.vm-caption input { width:18px; height:18px; flex-shrink:0; accent-color:var(--pf-primary); }
+.vm-search { width:100%; margin-top:18px; display:flex; justify-content:space-between; }
+.vm-save-status { margin-top:12px; color:var(--pf-muted); font-size:11px; line-height:1.8; }
+.vm-save-status p { margin:0; }
+.vm-error { color:#b42318; font-size:12px; line-height:1.7; }
+.vm-results { min-width:0; scroll-margin-top:calc(var(--pf-header-height) + 20px); }
+.vm-results-heading { padding:2px 0 16px; border-bottom:1px solid var(--pf-border); }
+.vm-results-heading p { margin:8px 0 0; color:var(--pf-muted); line-height:1.7; font-size:13px; }
+.vm-result-count { color:var(--pf-muted); margin:18px 0; font-size:12px; }
+.vm-video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.vm-history .vm-video-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.vm-video-card { min-width:0; display:flex; flex-direction:column; overflow:hidden; border:1px solid var(--pf-border); border-radius:12px; background:var(--pf-surface); }
+.vm-thumbnail { position:relative; aspect-ratio:16/9; background:#e9edf5; display:grid; place-items:center; overflow:hidden; }
+.vm-thumbnail > img { display:block; width:100%; height:100%; object-fit:cover; }
+.vm-thumbnail > span:not(.vm-duration) { font-size:34px; color:#8894ac; }
+.vm-duration { position:absolute; right:10px; bottom:9px; background:#18243be8; color:white; border-radius:4px; padding:3px 6px; font-size:11px; font-weight:600; }
+.vm-video-body { padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; min-width:0; }
+.vm-channel { margin:0; font-size:11px; color:var(--pf-muted); overflow-wrap:anywhere; }
+.vm-video-body h3 { margin:0; font-size:15px; line-height:1.6; font-weight:650; overflow-wrap:anywhere; }
+.vm-tags { display:flex; flex-wrap:wrap; gap:5px; }
+.vm-tags span { padding:3px 7px; font-size:10px; line-height:1.6; color:#546179; border-radius:5px; background:#f1f3f8; overflow-wrap:anywhere; }
+.vm-tags .vm-level-tag { color:#4338ca; background:#eeecff; font-weight:700; }
+.vm-description { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:anywhere; color:var(--pf-muted); font-size:12px; line-height:1.7; margin:0; }
+.vm-opened { font-size:11px; color:var(--pf-muted); margin:0; }
+.vm-video-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; padding-top:5px; margin-top:auto; }
+.vm-video-actions > a { font-size:12px; }
+.vm-text-link { display:inline-flex; min-height:44px; align-items:center; color:var(--pf-primary); text-decoration:none; font-weight:600; font-size:13px; background:none; border:0; padding:4px 0; }
+.vm-text-link:hover { text-decoration:underline; }
+.vm-state { padding:52px 24px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:14px; background:var(--pf-surface); border:1px solid var(--pf-border); border-radius:var(--pf-radius); margin-top:20px; }
+.vm-state h2, .vm-state h3 { margin:0; font-size:18px; line-height:1.7; font-weight:650; }
+.vm-state p { max-width:390px; color:var(--pf-muted); margin:0; font-size:13px; line-height:1.9; }
+.vm-state-symbol { width:54px; height:54px; border-radius:50%; background:#eeecff; color:var(--pf-primary); display:grid; place-items:center; font-size:28px; margin-bottom:5px; }
+.vm-loading > p { font-size:13px; color:var(--pf-muted); margin:18px 0; }
+.vm-skeleton { background:white; border:1px solid var(--pf-border); border-radius:12px; overflow:hidden; padding-bottom:22px; }
+.vm-skeleton div { aspect-ratio:16/9; background:#e9edf5; }
+.vm-skeleton span { display:block; height:12px; border-radius:3px; margin:18px 16px 0; background:#edf0f6; }
+.vm-skeleton span:last-child { width:60%; margin-top:10px; }
+.vm-notice { border:1px solid #ead7af; background:#fffbeb; padding:12px 16px; border-radius:10px; font-size:13px; line-height:1.7; }
+@media(min-width:1100px) { .vm-preferences { position:sticky; top:calc(var(--pf-header-height) + 24px); } }
+@media(max-width:1000px) { .vm-workspace { grid-template-columns:280px minmax(0,1fr); gap:20px; } .vm-video-grid { grid-template-columns:1fr; } .vm-history .vm-video-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:899px) { .vm-workspace { grid-template-columns:1fr; gap:28px; } .vm-preferences { padding:20px; } .vm-levels { grid-template-columns:repeat(6,minmax(0,1fr)); } .vm-video-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .vm-preferences .vm-fieldset { display:block; } .vm-search { min-height:48px; } }
+@media(max-width:599px) { .vm-main { padding-top:24px; padding-bottom:40px; } .vm-page-heading { align-items:flex-start; flex-direction:column; gap:14px; margin-bottom:22px; } .vm-page-heading h1 { font-size:25px; } .vm-page-heading p:not(.pf-eyebrow) { font-size:13px; } .vm-page-heading > a { min-height:44px; } .vm-preferences { padding:18px; } .vm-levels { grid-template-columns:repeat(3,minmax(0,1fr)); } .vm-video-grid, .vm-history .vm-video-grid { grid-template-columns:1fr; gap:18px; } .vm-state { padding:36px 20px; } .vm-state h2, .vm-state h3 { font-size:16px; } .vm-video-body h3 { font-size:16px; } .vm-video-actions { justify-content:space-between; } .vm-video-actions > a { font-size:13px; } }
+`;

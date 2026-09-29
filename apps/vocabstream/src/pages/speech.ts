@@ -1,77 +1,48 @@
-// src/utils/speech.ts
+let preferredVoice: SpeechSynthesisVoice | null = null;
+let activeUtterance: SpeechSynthesisUtterance | null = null;
 
-let englishVoice: SpeechSynthesisVoice | null = null;
-let voicesLoaded = false;
-
-/**
- * Initialize voices and pick the best English voice available.
- * Handles Safari/iOS timing issues.
- */
-function initVoices() {
-  const voices = window.speechSynthesis.getVoices();
-  if (!voices.length) return; // voices not yet loaded
-
-  // Try to pick the most natural English voice available
-  englishVoice =
-    voices.find(v => v.name.includes("Samantha")) || // iOS / macOS US female
-    voices.find(v => v.name.includes("Daniel")) ||   // iOS UK male
-    voices.find(v => v.lang === "en-US") ||
-    voices.find(v => v.lang.startsWith("en")) ||
-    null;
-
-  voicesLoaded = true;
+function availableVoices() {
+  return typeof window !== "undefined" && "speechSynthesis" in window ? window.speechSynthesis.getVoices() : [];
 }
 
-if (typeof window !== "undefined") {
-  // Initialize immediately (for Chrome, desktop)
-  initVoices();
-  // And listen for delayed loading (iOS Safari)
-  window.speechSynthesis.onvoiceschanged = initVoices;
-}
-
-/**
- * Speaks text in English with high-quality voice selection.
- * Automatically retries if voices aren’t loaded yet.
- */
+/** Use the browser's default voice while installed voices are still loading. */
 export function speakEnglish(text: string) {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   try {
-    if (typeof window === "undefined" || !(window as any).speechSynthesis) return;
-
-    // If voices are not ready, wait a bit and try again
-    if (!voicesLoaded) {
-      setTimeout(() => speakEnglish(text), 300);
-      window.speechSynthesis.getVoices(); // trigger load
-      return;
-    }
-
-    const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = "en-US";
-    utter.rate = 1.0;
-    utter.pitch = 1.0;
-
-    if (englishVoice) utter.voice = englishVoice;
-
-    (window as any).speechSynthesis.cancel();
-    (window as any).speechSynthesis.speak(utter);
-  } catch (e) {
-    console.error("Speech synthesis failed:", e);
-  }
+    const voices = availableVoices();
+    const voice = preferredVoice ?? voices.find((item) => item.name.includes("Samantha")) ?? voices.find((item) => item.lang === "en-US") ?? voices.find((item) => item.lang.startsWith("en"));
+    window.speechSynthesis.cancel();
+    activeUtterance = new SpeechSynthesisUtterance(text);
+    activeUtterance.lang = "en-US";
+    activeUtterance.rate = 1;
+    if (voice) activeUtterance.voice = voice;
+    activeUtterance.onend = () => { activeUtterance = null; };
+    activeUtterance.onerror = () => { activeUtterance = null; };
+    window.speechSynthesis.speak(activeUtterance);
+  } catch { activeUtterance = null; }
 }
+export function setEnglishVoiceByName(name: string) { preferredVoice = availableVoices().find((voice) => voice.name === name) ?? null; }
+export function getEnglishVoices(): SpeechSynthesisVoice[] { return availableVoices().filter((voice) => voice.lang.startsWith("en")); }
 
-/**
- * Optional: manually set a specific voice by name (if you want user customization)
- */
-export function setEnglishVoiceByName(name: string) {
-  const voices = window.speechSynthesis.getVoices();
-  const match = voices.find(v => v.name === name);
-  if (match) englishVoice = match;
-}
-
-/**
- * Optional: get all available English voices (for making a dropdown)
- */
-export function getEnglishVoices(): SpeechSynthesisVoice[] {
-  return window.speechSynthesis
-    .getVoices()
-    .filter(v => v.lang.startsWith("en"));
+let feedbackContext: AudioContext | null = null;
+/** A brief answer cue, started only by the learner's answer click. */
+export function playAnswerSound(correct: boolean) {
+  if (typeof window === "undefined") return;
+  const Audio = window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+  if (!Audio) return;
+  try {
+    feedbackContext ??= new Audio();
+    const context = feedbackContext;
+    const play = () => {
+      const start = context.currentTime;
+      const gain = context.createGain();
+      gain.gain.setValueAtTime(0.045, start);
+      gain.gain.exponentialRampToValueAtTime(0.001, start + .18);
+      gain.connect(context.destination);
+      const frequencies = correct ? [660, 880] : [440];
+      frequencies.forEach((frequency) => { const oscillator = context.createOscillator(); oscillator.frequency.value = frequency; oscillator.connect(gain); oscillator.start(start); oscillator.stop(start + .2); });
+    };
+    if (context.state === "suspended") void context.resume().then(play).catch(() => undefined);
+    else play();
+  } catch { /* Visual feedback remains available when audio is unavailable. */ }
 }

@@ -30,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body>
+        <a className="pf-skip" href="#main-content">本文へスキップ</a>
         {children}
         <Analytics />
       </body>

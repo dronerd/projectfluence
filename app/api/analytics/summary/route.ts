@@ -93,7 +93,7 @@ async function readSupabaseRows<T>(path: string): Promise<T[]> {
   if (!response.ok) {
     const error = (await response.json().catch(() => null)) as { message?: string } | null;
     console.warn(error?.message ?? `Supabase analytics read failed with status ${response.status}`);
-    return [];
+    throw new Error("Learning records are temporarily unavailable. Please try again.");
   }
 
   return response.json() as Promise<T[]>;

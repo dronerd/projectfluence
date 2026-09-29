@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-29",
+  "browser": "Google Chrome (Playwright)",
+  "build": "passed (including sitemap generation)",
+  "typecheck": "passed",
+  "lint": "passed, zero warnings",
+  "unitTests": {
+    "vocabulary": 4
+  },
+  "responsive": {
+    "routes": 14,
+    "widths": [
+      320,
+      375,
+      390,
+      430,
+      600,
+      768,
+      1024,
+      1180,
+      1440,
+      1920
+    ],
+    "problems": []
+  },
+  "networkDependentWorkflows": "Validated with deterministic browser fixtures; no live cloud writes or AI requests",
+  "additionalLocalChecks": {
+    "transcriptFoundation": {
+      "passed": 8,
+      "scope": "Pre-existing uncommitted transcript work; excluded from this frontend commit"
+    }
+  }
+}

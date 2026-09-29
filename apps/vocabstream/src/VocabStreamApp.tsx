@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import "./vocabstream.css";
 import { AuthProvider } from "./AuthContext";
 import Header from "./components/Header";
 import LearnGenres from "./pages/LearnGenres";
@@ -82,75 +83,9 @@ export default function VocabStreamApp({ pathname }: Props) {
   return (
     <RouterCompatProvider pathname={pathname} params={params}>
       <AuthProvider>
-        <style>{`
-          :root {
-            --vs-bg: #081225;
-            --vs-bg-soft: #13233f;
-            --vs-panel: rgba(247, 250, 252, 0.96);
-            --vs-panel-strong: #ffffff;
-            --vs-border: rgba(125, 151, 191, 0.22);
-            --vs-text: #dbe7f5;
-            --vs-text-dark: #0f1d35;
-            --vs-muted: #6c7c93;
-            --vs-primary: #5e9df6;
-            --vs-primary-strong: #2f6fda;
-            --vs-shadow: 0 20px 55px rgba(4, 10, 24, 0.34);
-          }
-
-          html, body, #__next {
-            background: #e5e7eb;
-            color: var(--vs-text);
-          }
-
-          body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: Inter, Arial, sans-serif;
-          }
-
-          .vocabstream-shell {
-            min-height: 100vh;
-            background: #e5e7eb;
-            color: var(--vs-text);
-          }
-
-          .vocabstream-content {
-            padding: 96px 16px 104px;
-            min-height: 100vh;
-          }
-
-          .vocabstream-shell a {
-            color: inherit;
-          }
-
-          .vocabstream-shell main.p-6.max-w-3xl.mx-auto {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 104px 20px 120px !important;
-          }
-
-          .vocabstream-shell main.p-6.max-w-3xl.mx-auto > section,
-          .vocabstream-shell main.p-6.max-w-3xl.mx-auto > div.mt-8 {
-            background: linear-gradient(180deg, rgba(250, 252, 255, 0.98), rgba(237, 243, 250, 0.96));
-            color: var(--vs-text-dark);
-            border: 1px solid var(--vs-border);
-            border-radius: 24px;
-            box-shadow: var(--vs-shadow);
-            padding: 24px;
-          }
-
-          .vocabstream-shell .vocab-placeholder-card {
-            background: linear-gradient(180deg, rgba(250, 252, 255, 0.98), rgba(237, 243, 250, 0.96));
-            color: var(--vs-text-dark);
-            border: 1px solid var(--vs-border);
-            border-radius: 24px;
-            box-shadow: var(--vs-shadow);
-            padding: 24px;
-          }
-        `}</style>
         <Header currentPath={pathname} isLoginPage={false} />
         <div className="vocabstream-shell">
-          <div className="vocabstream-content">{element}</div>
+          <main id="main-content" className="vocabstream-content">{element}</main>
         </div>
       </AuthProvider>
     </RouterCompatProvider>

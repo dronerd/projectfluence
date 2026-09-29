@@ -181,6 +181,15 @@ npm run start     # start the production server
 npm run postbuild # generate sitemap
 ```
 
+## Frontend quality checks
+
+The shared navigation and design tokens live in `app/components/AppHeader.tsx` and `app/globals.css`. Learning surfaces remain in `apps/*`; scoped styles and shared learning components keep their workflows cohesive.
+
+- [Frontend audit, route map, and refinement priorities](docs/frontend-refinement.md)
+- [Responsive and workflow validation, with reproducible commands](docs/frontend-validation.md)
+
+Run `npm run lint`, `npm run typecheck`, `npm run test:frontend`, and `npm run build`. Browser validation also covers the learning workflows and widths from 320 to 1920 px.
+
 ## Deployment
 
 - The Next.js platform is deployed on Vercel.

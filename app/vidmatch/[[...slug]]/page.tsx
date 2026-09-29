@@ -1,16 +1,10 @@
-"use client";
-
-import { use } from "react";
+import type { Metadata } from "next";
 import VidMatchApp from "@/apps/vidmatch/src/VidMatchApp";
 
-type Props = {
-  params: Promise<{
-    slug?: string[];
-  }>;
-};
+export const metadata: Metadata = { title: "動画で学ぶ · VidMatch | Project Fluence" };
+type Props = { params: Promise<{ slug?: string[] }> };
 
-export default function VidMatchPage({ params }: Props) {
-  const resolvedParams = use(params);
-  const pathname = resolvedParams.slug?.length ? `/${resolvedParams.slug.join("/")}` : "/";
-  return <VidMatchApp pathname={pathname} />;
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  return <VidMatchApp pathname={slug?.length ? `/${slug.join("/")}` : "/"} />;
 }

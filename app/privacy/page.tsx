@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import AppHeader from "@/app/components/AppHeader";
 
 export default function PrivacyPage() {
   return (
-    <main className="p-6 max-w-3xl mx-auto">
+    <>
+    <AppHeader />
+    <main id="main-content" tabIndex={-1} className="pf-page !max-w-3xl">
       <h1 className="text-2xl font-bold mb-4">Privacy Policy / プライバシーポリシー</h1>
 
       {/* 英語版 */}
@@ -46,6 +49,6 @@ export default function PrivacyPage() {
           ← Back to Home / ホームに戻る
         </Link>
       </div>
-    </main>
+    </main></>
   );
 }

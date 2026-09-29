@@ -1,16 +1,10 @@
-"use client";
-
-import { use } from "react";
+import type { Metadata } from "next";
 import VocabStreamApp from "@/apps/vocabstream/src/VocabStreamApp";
 
-type Props = {
-  params: Promise<{
-    slug?: string[];
-  }>;
-};
+export const metadata: Metadata = { title: "単語を学ぶ · VocabStream | Project Fluence" };
+type Props = { params: Promise<{ slug?: string[] }> };
 
-export default function VocabStreamPage({ params }: Props) {
-  const resolvedParams = use(params);
-  const pathname = resolvedParams.slug?.length ? `/${resolvedParams.slug.join("/")}` : "/";
-  return <VocabStreamApp pathname={pathname} />;
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  return <VocabStreamApp pathname={slug?.length ? `/${slug.join("/")}` : "/"} />;
 }

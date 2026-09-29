@@ -1,0 +1,70 @@
+.home-page { padding-top: 44px; }
+.home-intro { display: grid; grid-template-columns: minmax(0,1fr) 310px; gap: 64px; align-items: center; padding: 12px 0 46px; }
+.home-intro h1 { font-size: clamp(29px,3.1vw,43px); line-height: 1.5; letter-spacing: -.055em; font-weight: 750; margin: 14px 0; }
+.home-intro-copy { color: var(--pf-muted); font-size: 16px; line-height: 1.9; }
+.home-intro-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 24px; }
+.home-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--pf-primary); font-size: 13px; font-weight: 600; }
+.home-text-link:hover { text-decoration: underline; }
+.home-start-note { border-left: 3px solid #bcb4ed; padding: 8px 0 8px 24px; }
+.home-note-label { color: var(--pf-primary); font-size: 12px; font-weight: 700; }
+.home-start-note h2 { font-size: 18px; font-weight: 650; margin: 10px 0; }
+.home-start-note p { font-size: 13px; color: var(--pf-muted); line-height: 1.9; }
+.home-note-foot { display: block; margin-top: 16px; font-size: 12px; color: var(--pf-muted); }
+.home-section-heading { display: flex; justify-content: space-between; gap: 16px; align-items: end; margin-bottom: 22px; }
+.home-section-heading h2 { font-size: 23px; font-weight: 700; letter-spacing: -.04em; margin-top: 6px; }
+.home-section-heading > span, .home-section-heading > p { font-size: 13px; color: var(--pf-muted); }
+.home-practice { border-top: 1px solid var(--pf-border); padding-top: 32px; }
+.home-practice-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.home-practice-card { padding: 25px; display: flex; flex-direction: column; }
+.home-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.home-card-top img { border-radius: 12px; }
+.home-card-top span { color: #737d92; font-size: 12px; font-variant-numeric: tabular-nums; }
+.home-app-name { font-size: 12px; color: var(--pf-muted); font-weight: 600; }
+.home-practice-card h3 { font-size: 20px; font-weight: 700; letter-spacing: -.04em; margin: 4px 0 12px; }
+.home-card-copy { font-size: 14px; color: var(--pf-muted); line-height: 1.9; flex: 1; }
+.home-card-detail { font-size: 12px; color: var(--pf-muted); margin: 24px 0 14px; }
+.home-practice-card .pf-button-secondary { justify-content: space-between; }
+.home-guide { margin-top: 46px; }
+.home-resource { border-top: 1px solid var(--pf-border); }
+.home-resource:last-child { border-bottom: 1px solid var(--pf-border); }
+.home-resource summary, .home-about summary { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 20px 4px; font-size: 15px; font-weight: 650; list-style: none; }
+.home-resource summary::-webkit-details-marker, .home-about summary::-webkit-details-marker { display: none; }
+.home-resource summary span, .home-about summary span { color: var(--pf-muted); font-size: 18px; }
+.home-resource details[open] > summary span, .home-about details[open] > summary span { transform: rotate(45deg); }
+.home-resource-content { padding: 12px 20px 28px; max-width: 920px; margin: auto; }
+.home-resource-content > h2, .home-resource-content > h3 { font-size: 20px; }
+.home-resource-content p { line-height: 1.9; }
+.home-resource-content pre { font-family: inherit; line-height: 1.8; }
+.home-resource-content .shadow, .home-resource-content .shadow-sm { box-shadow: none; }
+.home-resource-content a { text-underline-offset: 3px; }
+.home-about { margin-top: 24px; }
+.home-about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; padding: 16px 4px; color: var(--pf-muted); font-size: 13px; }
+.home-about-content h2, .home-about-content h3 { color: var(--pf-text); font-size: 17px; font-weight: 650; margin-bottom: 10px; }
+.home-about-content p + p { margin-top: 12px; }
+.home-about-links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; }
+.home-about-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--pf-primary); text-decoration: underline; }
+.home-mobile-break { display: none; }
+@media (max-width: 1000px) { .home-intro { gap: 32px; grid-template-columns: minmax(0,1fr) 260px; } .home-practice-card { padding: 20px; } .home-practice-grid { gap: 14px; } .home-practice-card h3 { font-size: 18px; } }
+@media (max-width: 759px) {
+  .home-page { padding-top: 24px; }
+  .home-intro { display: block; padding-bottom: 28px; }
+  .home-intro h1 { margin: 12px 0; }
+  .home-intro-copy { font-size: 14px; }
+  .home-start-note { display: none; }
+  .home-practice-grid { grid-template-columns: 1fr; gap: 14px; }
+  .home-practice-card { display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 0 16px; padding: 20px; }
+  .home-card-top { grid-column: 1; grid-row: 1 / 3; align-items: start; margin: 0; }
+  .home-card-top span { display: none; }
+  .home-app-name, .home-practice-card h3 { grid-column: 2; }
+  .home-practice-card h3 { margin: 2px 0 12px; }
+  .home-card-copy, .home-card-detail, .home-practice-card > a { grid-column: 1 / -1; }
+  .home-card-detail { margin-top: 16px; }
+  .home-section-heading { display: block; margin-bottom: 18px; }
+  .home-section-heading h2 { font-size: 21px; }
+  .home-section-heading > span { display: none; }
+  .home-section-heading > p { margin-top: 8px; }
+  .home-guide { margin-top: 32px; }
+  .home-resource-content { padding: 4px 4px 24px; }
+  .home-about-content { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 420px) { .home-mobile-break { display: inline; } .home-intro h1 { font-size: 30px; } .home-intro-actions { gap: 8px 16px; } }

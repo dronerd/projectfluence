@@ -1,381 +1,54 @@
-import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useParams } from "../lib/router-compat";
 import { apiGetVocabStreamLessonProgress, type VocabStreamLessonProgress } from "../api";
 import { useAuth } from "../AuthContext";
-
-type Lesson = {
-  id: string;
-  title: string;
-};
-
-const STATIC_GENRE_TITLES: Record<string, string> = {
-  "word-beginner": "初級 (CEFR A1~A2)",
-  "word-intermediate": "中級 (CEFR B1)",
-  "word-advanced": "上級 (CEFR B2)",
-  "word-proficiency": "熟達 (CEFR C1~C2)",
-  "idioms-beginner": "初級 (CEFR A1~A2)",
-  "idioms-intermediate": "中級 (CEFR B1)",
-  "idioms-advanced": "上級 (CEFR B2)",
-  "idioms-proficiency": "熟達 (CEFR C1~C2)",
-  "computer-science": "コンピューターサイエンス・テクノロジー",
-  "medicine": "医学・健康",
-  "economics-business": "ビジネス・経済",
-  "environment": "環境科学・サステナビリティ",
-  "law": "法律",
-  "politics": "政治",
-  "engineering": "工学",
-};
-
-function makeLessons(genreId: string, count: number): Lesson[] {
-  const arr: Lesson[] = [];
-  for (let i = 1; i <= count; i++) arr.push({ id: `${genreId}-lesson-${i}`, title: `Lesson ${i}` });
-  return arr;
-}
-
-const LESSON_COUNT_BY_GENRE: Record<string, number> = {
-  "word-beginner": 64,
-  "word-intermediate": 96,
-  "word-advanced": 100,
-  "word-proficiency": 100,
-  "idioms-beginner": 50,
-  "idioms-intermediate": 50,
-  "idioms-advanced": 50,
-  "idioms-proficiency": 50,
-  "computer-science": 71,
-  "medicine": 71,
-  "economics-business": 71,
-  "environment": 71,
-  "law": 71,
-  "politics": 71,
-  "engineering": 71,
-};
+import { getCourse, courseLabel } from "../lib/catalog";
 
 export default function LessonList() {
-  const { genreId } = useParams<{ genreId: string }>();
-  const [lessons, setLessons] = useState<Lesson[]>([]);
-  const [genreTitle, setGenreTitle] = useState<string>("");
-  const [lessonProgress, setLessonProgress] = useState<Record<string, VocabStreamLessonProgress>>({});
-  const [progressLoading, setProgressLoading] = useState(false);
-  const nav = useNavigate();
-  const { token, user } = useAuth();
-
+  const { genreId = "" } = useParams<{ genreId: string }>();
+  const course = getCourse(genreId);
+  const { token, loading: authLoading } = useAuth();
+  const [progress, setProgress] = useState<Record<string, VocabStreamLessonProgress>>({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [retry, setRetry] = useState(0);
+  const [selectedPage, setSelectedPage] = useState<number | null>(null);
+  const listHeading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    if (!genreId) return;
-    setGenreTitle(STATIC_GENRE_TITLES[genreId] || genreId);
-    const count = LESSON_COUNT_BY_GENRE[genreId] ?? 10;
-    setLessons(makeLessons(genreId, count));
-  }, [genreId]);
-
-  useEffect(() => {
-    if (!genreId || !token || !user) {
-      setLessonProgress({});
-      setProgressLoading(false);
-      return;
-    }
-
     let cancelled = false;
-    setProgressLoading(true);
-    apiGetVocabStreamLessonProgress(genreId, token)
-      .then((progress) => {
-        if (cancelled) return;
-        setLessonProgress(
-          Object.fromEntries(progress.map((item) => [item.lessonId, item])),
-        );
-      })
-      .catch((error) => {
-        console.warn("VocabStream lesson progress lookup failed", error);
-        if (!cancelled) setLessonProgress({});
-      })
-      .finally(() => {
-        if (!cancelled) setProgressLoading(false);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [genreId, token, user]);
-
-  if (!genreId)
-    return (
-      <div className="page-root">
-        <h2 className="page-title">学習分野が指定されていません</h2>
-        <button className="back-btn" onClick={() => nav("/learn")}>← 戻る</button>
-        <style>{styles}</style>
-      </div>
-    );
-
-  return (
-    <div className="page-root">
-      <h2 className="page-title">{genreTitle} - レッスン一覧</h2>
-      <button className="back-btn" onClick={() => nav("/learn")}>← 戻る</button>
-
-      <div className="lessons-grid">
-        {lessons.map((l) => {
-          const progress = lessonProgress[l.id];
-          const isCompleted = Boolean(progress && progress.totalPossible > 0);
-          const isLowScore = isCompleted && progress.percentScore < 60;
-          const statusClass = isLowScore ? "is-low-score" : isCompleted ? "is-completed" : "";
-
-          return (
-            <article
-              key={l.id}
-              className={`lesson-card ${statusClass}`}
-              onClick={() => nav(`/lesson/${l.id}`)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === "Enter" && nav(`/lesson/${l.id}`)}
-            >
-              <div className="lesson-content">
-                <div className="lesson-title">{l.title}</div>
-                {isCompleted && (
-                  <div className="lesson-meta">
-                    正答率 {Math.round(progress.percentScore)}%
-                  </div>
-                )}
-              </div>
-
-              <button
-                className="start-btn"
-                onClick={(ev) => {
-                  ev.stopPropagation();
-                  nav(`/lesson/${l.id}`);
-                }}
-              >
-                {isCompleted ? "復習" : "開始"}
-              </button>
-            </article>
-          );
-        })}
-      </div>
-
-      {progressLoading && <p className="progress-note">学習履歴を読み込んでいます...</p>}
-
-      <style>{styles}</style>
-    </div>
-  );
-}
-
-const styles = `
-/* Global box sizing and reset to avoid overflow due to element sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Ensure full background coverage and prevent horizontal scroll */
-html, body, #root {
-  margin: 0;
-  padding: 0;
-  background: #e5e5e5;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-/* Page layout */
-:root{
-  --card-gap: 10px;
-  --card-radius: 10px;
-  --card-padding: 12px;
-  --blue-900: #173a71;
-  --blue-700: #2b65b1;
-  --blue-500: #6b93d6;
-  --cyan-400: #73c9dc;
-}
-
-.page-root {
-  padding: 20px 16px 32px;
-  font-family: Inter, Arial, sans-serif;
-  background: #e5e5e5;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-/* Title */
-.page-title {
-  font-size: 28px;
-  margin: 0 auto 10px;
-  color: var(--blue-900);
-  text-align: center;
-  font-weight: 900;
-  line-height: 1.25;
-  max-width: 920px;
-}
-
-/* Back button */
-.back-btn {
-  display: block;
-  margin: 0 auto 18px auto;
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: 1px solid rgba(43, 101, 177, 0.22);
-  background: linear-gradient(135deg, #f4f8ff 0%, #d3e5fb 100%);
-  color: #12366d;
-  font-weight: 800;
-  font-size: 15px;
-  cursor: pointer;
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.1);
-  transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
-}
-.back-btn:hover {
-  transform: translateY(-2px);
-  filter: saturate(1.03);
-  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.14);
-}
-
-
-/* Grid - use flex-start to avoid uneven spacing rounding issues that can cause overflow */
-.lessons-grid {
-  display: grid;
-  gap: var(--card-gap);
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  max-width: 1100px;
-}
-
-/* Lesson Card */
-.lesson-card {
-  background: linear-gradient(135deg, #f4f8ff 0%, #d3e5fb 100%);
-  border: 1px solid #d1d5db;
-  border-radius: 18px;
-  padding: var(--card-padding);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
-  cursor: pointer;
-  min-width: 100px;
-  min-height: 118px;
-  position: relative;
-  overflow: hidden;
-}
-
-.lesson-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--blue-700), var(--cyan-400));
-}
-
-.lesson-card:nth-child(4n + 2) {
-  background: linear-gradient(135deg, #e9f2ff 0%, #bfd8f8 100%);
-}
-
-.lesson-card:nth-child(4n + 3) {
-  background: linear-gradient(135deg, #eff7ff 0%, #cde1f6 100%);
-}
-
-.lesson-card:nth-child(4n) {
-  background: linear-gradient(135deg, #edf6ff 0%, #c5e2f5 100%);
-}
-
-.lesson-card.is-completed {
-  background: linear-gradient(135deg, #ecfdf5 0%, #bbf7d0 100%);
-  border-color: rgba(22, 163, 74, 0.42);
-}
-
-.lesson-card.is-completed::before {
-  background: linear-gradient(90deg, #15803d, #22c55e);
-}
-
-.lesson-card.is-low-score {
-  background: linear-gradient(135deg, #fffbeb 0%, #fde68a 100%);
-  border-color: rgba(202, 138, 4, 0.48);
-}
-
-.lesson-card.is-low-score::before {
-  background: linear-gradient(90deg, #ca8a04, #facc15);
-}
-
-/* Hover */
-.lesson-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(43, 101, 177, 0.46);
-  box-shadow: 0 18px 36px rgba(0,0,0,0.12);
-}
-
-.lesson-content { padding: 0; }
-.lesson-title {
-  font-size: 18px;
-  font-weight: 900;
-  margin: 8px 0 14px;
-  color: #102a56;
-  letter-spacing: 0;
-}
-.lesson-meta {
-  font-size: 14px;
-  color: #475569;
-  font-weight: 800;
-}
-
-.progress-note {
-  margin: 18px auto 0;
-  max-width: 1100px;
-  color: #475569;
-  font-weight: 800;
-  text-align: center;
-}
-
-/* Start Button inside card */
-.start-btn {
-  width: 100%;
-  border: none;
-  background: linear-gradient(135deg, #2760a8 0%, #5687cc 70%, #42a8c4 100%);
-  padding: 10px 0;
-  font-size: 15px;
-  font-weight: 800;
-  color: #ffffff;
-  cursor: pointer;
-  border-radius: 999px;
-  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.18);
-  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
-}
-.start-btn:hover {
-  filter: brightness(1.04);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.22);
-}
-
-/* Responsive tweaks */
-@media (min-width: 1200px) {
-  :root { --card-gap: 10px; --card-padding: 14px; }
-  .lesson-card { min-height: 122px; }
-}
-
-@media (min-width: 900px) and (max-width: 1199px) {
-  .lesson-card { min-height: 120px; }
-}
-
-/* Mobile adjustments */
-@media (max-width: 520px) {
-  .page-root {
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 12px;
+    setProgress({}); setError(false); setSelectedPage(null);
+    if (!token || !genreId) { setLoading(false); return; }
+    setLoading(true);
+    apiGetVocabStreamLessonProgress(genreId, token).then((items) => {
+      if (!cancelled) setProgress(Object.fromEntries(items.map((item) => [item.lessonId, item])));
+    }).catch(() => { if (!cancelled) setError(true); }).finally(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
+  }, [genreId, token, retry]);
+  if (!course) return <div className="vs-page"><div className="vs-state"><h1>レッスンを選びましょう</h1><p>この分野のレッスンは、まだ公開されていません。</p><Link to="/learn" className="pf-button">レベルを選ぶ</Link></div></div>;
+  const lessons = Array.from({ length: course.lessons }, (_, i) => ({ number: i + 1, id: `${genreId}-lesson-${i + 1}` }));
+  const completed = lessons.filter((lesson) => progress[lesson.id]?.totalPossible > 0).length;
+  const nextLesson = lessons.find((lesson) => !progress[lesson.id]?.totalPossible) ?? lessons[0];
+  const loadingProgress = loading || authLoading;
+  const pageSize = 20;
+  const pageCount = Math.ceil(lessons.length / pageSize);
+  const pageNumber = Math.min(selectedPage ?? Math.floor((nextLesson.number - 1) / pageSize), pageCount - 1);
+  const visibleLessons = lessons.slice(pageNumber * pageSize, (pageNumber + 1) * pageSize);
+  function changePage(value: number) {
+    setSelectedPage(value);
+    requestAnimationFrame(() => { listHeading.current?.focus({ preventScroll: true }); listHeading.current?.scrollIntoView({ block: "start" }); });
   }
-  .page-title { font-size: 22px; }
-  .back-btn { margin-bottom: 14px; }
-  .lessons-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .lesson-card {
-    padding: 10px;
-    min-height: 108px;
-  }
-  .lesson-title { font-size: 14px; }
-  .lesson-meta { font-size: 12px; }
-  .start-btn { font-size: 13px; padding: 10px 0; }
+  return <div className="vs-page">
+    <Link className="vs-back" to="/learn">← レベルを選ぶ</Link>
+    <header className="vs-page-heading"><p className="pf-eyebrow">{genreId.startsWith("idioms-") ? "IDIOM PRACTICE" : "VOCABULARY PRACTICE"}</p><h1>{courseLabel(genreId)}</h1><p>{course.description}。1つのレッスンから、気軽に始めましょう。</p></header>
+    <section className="vs-start-strip" aria-labelledby="vs-next-title"><div><h2 id="vs-next-title">{loadingProgress ? "学習記録を確認しています" : completed === course.lessons ? "もう一度、理解を確かめましょう" : completed ? `次は Lesson ${nextLesson.number}` : "Lesson 1 から始めましょう"}</h2><p>{loadingProgress ? "レッスンは下の一覧から選べます。" : token ? `${completed} / ${course.lessons} レッスンを学習済み` : "ログインすると、学習記録を保存して続きから学べます。"}</p>{token && !loadingProgress && <progress className="vs-progress" max={course.lessons} value={completed} aria-label="学習済みのレッスン" />}</div><Link className="pf-button" to={`/lesson/${nextLesson.id}`}>{completed ? "学習を続ける" : "学習を始める"}<span aria-hidden="true">→</span></Link></section>
+    {error && <div className="vs-notice" role="alert">学習記録を読み込めませんでした。レッスンはそのまま学べます。<button className="vs-text-button" onClick={() => setRetry((value) => value + 1)}>再読み込み</button></div>}
+    <section className="vs-section" aria-labelledby="vs-lesson-list"><div className="vs-section-heading"><h2 id="vs-lesson-list" ref={listHeading} tabIndex={-1}>レッスン一覧</h2><span className="vs-muted" aria-live="polite">{pageNumber * pageSize + 1}–{Math.min((pageNumber + 1) * pageSize, lessons.length)} / {course.lessons}</span></div>
+      <div className="vs-pagination-select"><label htmlFor="vs-lesson-group">レッスンの範囲</label><select id="vs-lesson-group" value={pageNumber} onChange={(event) => changePage(Number(event.target.value))}>{Array.from({ length: pageCount }, (_, index) => <option value={index} key={index}>Lesson {index * pageSize + 1}–{Math.min((index + 1) * pageSize, lessons.length)}</option>)}</select></div>
+      <div className="vs-lesson-grid">{visibleLessons.map((lesson) => {
+        const result = progress[lesson.id]; const done = Boolean(result?.totalPossible);
+        return <Link key={lesson.id} className={`vs-lesson-card${done ? " is-completed" : ""}`} to={`/lesson/${lesson.id}`}><span className="vs-lesson-number">Lesson {lesson.number}</span><span className="vs-lesson-status">{done ? `学習済み · 正答率 ${Math.round(result.percentScore)}%` : "単語を学ぶ・クイズで確認"}</span><span className="vs-lesson-action">{done ? "もう一度学ぶ" : "始める"}<span aria-hidden="true">→</span></span></Link>;
+      })}</div>
+      <nav className="vs-pagination" aria-label="レッスン一覧のページ"><button className="pf-button-secondary" disabled={pageNumber === 0} onClick={() => changePage(pageNumber - 1)}>← 前の20件</button><span className="vs-muted">{pageNumber + 1} / {pageCount}</span><button className="pf-button-secondary" disabled={pageNumber + 1 === pageCount} onClick={() => changePage(pageNumber + 1)}>次の20件 →</button></nav>
+    </section>
+  </div>;
 }
-
-/* Touch devices: disable hover effects */
-@media (hover: none) {
-  .lesson-card:hover { transform: none; }
-}
-`;

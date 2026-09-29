@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { createPortal } from "react-dom";
+import React, { useCallback, useEffect, useMemo, useState, useId, useRef } from "react";
+import Modal from "./Modal";
 import { useRouter } from "next/navigation";
 import type { User } from "@supabase/supabase-js";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
@@ -25,7 +25,6 @@ let passwordRecoveryClaimed = false;
 export default function AuthButton({
   compact = false,
   hideWhenAuthenticated = false,
-  variant = "gradient",
   initialMode = "sign-in",
   onAuthenticated,
   logoutRedirectTo,
@@ -34,6 +33,9 @@ export default function AuthButton({
   authenticatedOnly = false,
 }: AuthButtonProps) {
   const router = useRouter();
+  const titleId = useId();
+  const messageId = useId();
+  const accountRef = useRef<HTMLDivElement>(null);
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
   const [user, setUser] = useState<User | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -53,7 +55,7 @@ export default function AuthButton({
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const signupSucceeded = mode === "sign-up" && message === "登録されました。";
+  const signupSucceeded = mode === "sign-up" && message === "アカウントを作成しました。";
 
   const openPasswordUpdateForm = useCallback((initialMessage = "新しいパスワードを設定してください。") => {
     setMode("sign-in");
@@ -75,31 +77,33 @@ export default function AuthButton({
   useEffect(() => {
     if (!supabase) return;
 
+    // The dedicated reset page owns recovery there; the header must not open a second form.
+    const isDedicatedResetPage = window.location.pathname.replace(/\/$/, "") === "/auth/reset-password";
     const isPasswordRecoveryUrl =
       typeof window !== "undefined" &&
       (window.location.hash.includes("type=recovery") || window.location.search.includes("type=recovery"));
 
-    if (isPasswordRecoveryUrl && !passwordRecoveryClaimed) {
+    if (!isDedicatedResetPage && isPasswordRecoveryUrl && !passwordRecoveryClaimed) {
       passwordRecoveryClaimed = true;
       openPasswordUpdateForm();
     }
 
-    supabase.auth.getUser().then(({ data }) => {
-      setUser(data.user ?? null);
-    });
+    supabase.auth.getSession().then(({ data }) => {
+      setUser(data.session?.user ?? null);
+    }).catch(() => setUser(null));
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((event, session) => {
       setUser(session?.user ?? null);
-      if (event === "PASSWORD_RECOVERY" && !passwordRecoveryClaimed) {
+      if (event === "PASSWORD_RECOVERY" && !isDedicatedResetPage && !passwordRecoveryClaimed) {
         passwordRecoveryClaimed = true;
         openPasswordUpdateForm();
         return;
       }
-      if (session?.user) {
+      if (session?.user && !passwordUpdateOpen) {
         if (mode === "sign-up") {
-          setMessage("登録されました。");
+          setMessage("アカウントを作成しました。");
           setEmail("");
           setPassword("");
           setConfirmPassword("");
@@ -111,14 +115,30 @@ export default function AuthButton({
     });
 
     return () => subscription.unsubscribe();
-  }, [mode, onAuthenticated, openPasswordUpdateForm, supabase]);
+  }, [mode, onAuthenticated, openPasswordUpdateForm, passwordUpdateOpen, supabase]);
+
+  useEffect(() => {
+    if (!accountMenuOpen) return;
+    function dismiss(event: PointerEvent) {
+      if (!accountRef.current?.contains(event.target as Node)) setAccountMenuOpen(false);
+    }
+    function escape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setAccountMenuOpen(false);
+        accountRef.current?.querySelector("button")?.focus();
+      }
+    }
+    document.addEventListener("pointerdown", dismiss);
+    document.addEventListener("keydown", escape);
+    return () => { document.removeEventListener("pointerdown", dismiss); document.removeEventListener("keydown", escape); };
+  }, [accountMenuOpen]);
 
   async function handleEmailAuth(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setMessage("");
 
     if (!supabase) {
-      setMessage("Supabase public environment variables are not configured.");
+      setMessage("現在ログインを利用できません。時間をおいて再度お試しください。");
       return;
     }
 
@@ -155,7 +175,7 @@ export default function AuthButton({
         }
         setMessage(
           response.data.session
-            ? "登録されました。"
+            ? "アカウントを作成しました。"
             : "確認メールを送信しました。メール内のリンクを開いてからログインしてください。",
         );
       } else {
@@ -178,21 +198,26 @@ export default function AuthButton({
     setMessage("");
 
     if (!supabase) {
-      setMessage("Supabase public environment variables are not configured.");
+      setMessage("現在ログインを利用できません。時間をおいて再度お試しください。");
       return;
     }
 
     setLoading(true);
+    try {
     const { error } = await supabase.auth.resetPasswordForEmail(resetEmail.trim(), {
       redirectTo: getPasswordResetRedirectUrl(),
     });
 
     if (error) {
-      setMessage(error.message);
+      setMessage(formatAuthError(error, "sign-in"));
     } else {
       setMessage("パスワード再設定用のメールを送信しました。");
     }
-    setLoading(false);
+    } catch (error) {
+      setMessage(formatAuthError(error, "sign-in"));
+    } finally {
+      setLoading(false);
+    }
   }
 
   async function handlePasswordUpdate(event: React.FormEvent<HTMLFormElement>) {
@@ -200,7 +225,7 @@ export default function AuthButton({
     setMessage("");
 
     if (!supabase) {
-      setMessage("Supabase public environment variables are not configured.");
+      setMessage("現在ログインを利用できません。時間をおいて再度お試しください。");
       return;
     }
 
@@ -215,6 +240,7 @@ export default function AuthButton({
     }
 
     setLoading(true);
+    try {
     const { error } = await supabase.auth.updateUser({ password: newPassword });
 
     if (error) {
@@ -227,18 +253,23 @@ export default function AuthButton({
       setMessage("");
       passwordRecoveryClaimed = false;
     }
-    setLoading(false);
+    } catch (error) {
+      setMessage(formatAuthError(error, "sign-in"));
+    } finally {
+      setLoading(false);
+    }
   }
 
   async function handleGoogleAuth() {
     setMessage("");
 
     if (!supabase) {
-      setMessage("Supabase public environment variables are not configured.");
+      setMessage("現在ログインを利用できません。時間をおいて再度お試しください。");
       return;
     }
 
     setLoading(true);
+    try {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
@@ -247,16 +278,23 @@ export default function AuthButton({
     });
 
     if (error) {
-      setMessage(error.message);
+      setMessage(formatAuthError(error, "sign-in"));
+      setLoading(false);
+    }
+    } catch (error) {
+      setMessage(formatAuthError(error, "sign-in"));
+    } finally {
       setLoading(false);
     }
   }
 
   async function handleLogout() {
-    if (!supabase) return;
+    if (!supabase || loading) return;
+    setLoading(true);
+    try {
     const { error } = await supabase.auth.signOut();
     if (error) {
-      setMessage(error.message);
+      setMessage(formatAuthError(error, "sign-in"));
       return;
     }
 
@@ -280,6 +318,11 @@ export default function AuthButton({
     if (logoutRedirectTo) {
       router.replace(logoutRedirectTo);
       router.refresh();
+    }
+    } catch (error) {
+      setMessage(formatAuthError(error, "sign-in"));
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -305,33 +348,25 @@ export default function AuthButton({
   const label = user ? "ログアウト" : initialMode === "sign-up" ? "新規登録" : "ログイン";
   const accountLabel = getUserDisplayLabel(user);
   const accountEmail = user?.email || accountLabel;
-  const buttonClass =
-    variant === "banner"
-      ? "rounded-full border border-white/70 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-white/15"
-      : compact
-        ? "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110"
-        : "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-sm font-bold text-white shadow-md transition hover:brightness-110";
-  const accountButtonClass =
-    variant === "banner"
-      ? "rounded-full border border-white/70 p-2 text-white shadow-sm transition hover:bg-white/15"
-      : "rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 p-2 text-white shadow-md transition hover:brightness-110";
+  const buttonClass = `${initialMode === "sign-up" ? "pf-button" : "pf-button-secondary"} ${compact ? "px-3" : ""}`;
+  const accountButtonClass = "pf-button-secondary rounded-full p-2";
   const authModal =
     modalOpen && typeof document !== "undefined"
-      ? createPortal(
-          <div className="fixed inset-0 z-[70] flex items-start justify-center overflow-y-auto bg-black/50 px-4 py-6 sm:items-center">
-            <div className="my-auto max-h-[calc(100vh-3rem)] w-full max-w-md overflow-y-auto rounded-2xl bg-white p-6 text-gray-950 shadow-2xl">
+      ? (
+          <Modal open={modalOpen} onClose={() => setModalOpen(false)} labelledBy={titleId}>
+            <div>
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-950">Project Fluence</h2>
-                  <p className="mt-1 text-sm text-gray-600">ログインすると学習進捗がアカウントに保存されます。</p>
+                  <h2 id={titleId} className="text-xl font-bold text-gray-950">{passwordUpdateOpen ? "パスワードを再設定" : resetPasswordOpen ? "パスワードをお忘れですか？" : "学習の記録を残そう"}</h2>
+                  <p className="mt-1 text-sm text-gray-600">ログインすると、学習の記録を保存できます。</p>
                 </div>
                 <button
                   type="button"
                   onClick={() => setModalOpen(false)}
-                  className="rounded-full px-3 py-1 text-xl leading-none text-gray-600 hover:bg-gray-100"
-                  aria-label="Close login"
+                  className="shrink-0 rounded-lg px-3 text-xl leading-none text-gray-600 hover:bg-gray-100"
+                  aria-label="閉じる"
                 >
-                  x
+                  ×
                 </button>
               </div>
 
@@ -371,7 +406,7 @@ export default function AuthButton({
               )}
 
               {passwordUpdateOpen ? (
-                <form onSubmit={handlePasswordUpdate} className="mt-5 space-y-3">
+                <form aria-describedby={message ? messageId : undefined} aria-busy={loading} onSubmit={handlePasswordUpdate} className="mt-5 space-y-3">
                   <label className="block text-sm font-semibold text-gray-700">
                     新しいパスワード
                     <span className="relative mt-1 block">
@@ -412,13 +447,13 @@ export default function AuthButton({
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
+                    className="pf-button w-full"
                   >
                     {loading ? "更新中..." : "パスワードを更新"}
                   </button>
                 </form>
               ) : resetPasswordOpen ? (
-                <form onSubmit={handlePasswordReset} className="mt-5 space-y-3">
+                <form aria-describedby={message ? messageId : undefined} aria-busy={loading} onSubmit={handlePasswordReset} className="mt-5 space-y-3">
                   <label className="block text-sm font-semibold text-gray-700">
                     メールアドレス
                     <input
@@ -433,7 +468,7 @@ export default function AuthButton({
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
+                    className="pf-button w-full"
                   >
                     {loading ? "送信中..." : "再設定メールを送信"}
                   </button>
@@ -450,7 +485,7 @@ export default function AuthButton({
                 </form>
               ) : (
                 <>
-                  <form onSubmit={handleEmailAuth} className="mt-5 space-y-3">
+                  <form aria-describedby={message ? messageId : undefined} aria-busy={loading} onSubmit={handleEmailAuth} className="mt-5 space-y-3">
                     <label className="block text-sm font-semibold text-gray-700">
                       メールアドレス
                       <input
@@ -506,7 +541,7 @@ export default function AuthButton({
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
+                      className="pf-button w-full"
                     >
                       {loading ? "処理中..." : mode === "sign-up" ? "登録" : "ログイン"}
                     </button>
@@ -535,26 +570,25 @@ export default function AuthButton({
                     type="button"
                     onClick={handleGoogleAuth}
                     disabled={loading}
-                    className="w-full rounded-full border border-gray-300 px-4 py-3 font-bold text-gray-800 shadow-sm transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-70"
+                    className="pf-button-secondary w-full"
                   >
                     {mode === "sign-up" ? "Googleで登録" : "Googleでログイン"}
                   </button>
                 </>
               )}
 
-              {message && <p className="mt-4 rounded-lg bg-amber-50 p-3 text-sm text-amber-900">{message}</p>}
+              {message && <p id={messageId} role="status" className={`mt-4 rounded-lg p-3 text-sm ${signupSucceeded || message.includes("送信しました") ? "bg-emerald-50 text-emerald-900" : "bg-amber-50 text-amber-900"}`}>{message}</p>}
               {signupSucceeded && (
                 <button
                   type="button"
                   onClick={handleStartUsingApp}
-                  className="mt-3 w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md transition hover:brightness-110"
+                  className="pf-button mt-3 w-full"
                 >
                   アプリを使い始める
                 </button>
               )}
             </div>
-          </div>,
-          document.body,
+          </Modal>
         )
       : null;
 
@@ -581,11 +615,12 @@ export default function AuthButton({
           href="/analytics"
           className="block w-full rounded-lg px-1 py-2 text-left text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
         >
-          学習分析
+          学習の記録
         </a>
         <button
           type="button"
           onClick={handleLogout}
+          disabled={loading}
           className="mt-1 w-full rounded-lg px-1 py-2 text-left text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
         >
           ログアウト
@@ -596,43 +631,41 @@ export default function AuthButton({
 
   if (user && userMenu && !modalOpen) {
     return (
-      <div className="relative">
+      <div className="relative" ref={accountRef} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setAccountMenuOpen(false); }}>
         <button
           type="button"
           onClick={() => setAccountMenuOpen((open) => !open)}
-          className={`${accountButtonClass} flex h-10 w-10 items-center justify-center`}
-          aria-label="Open account menu"
+          className={`${accountButtonClass} flex h-11 w-11 items-center justify-center`}
+          aria-label="アカウント"
           aria-expanded={accountMenuOpen}
-          aria-haspopup="menu"
         >
           <AccountIcon />
         </button>
 
         {accountMenuOpen && (
           <div
-            role="menu"
-            className="absolute right-0 z-[80] mt-2 w-64 rounded-xl border border-gray-200 bg-white p-2 text-gray-900 shadow-xl"
+            className="absolute right-0 z-[80] mt-2 w-64 max-w-[calc(100vw-32px)] rounded-xl border border-gray-200 bg-white p-2 text-gray-900 shadow-xl"
           >
             <div className="border-b border-gray-100 px-3 py-3">
               <div className="text-xs font-semibold uppercase text-gray-500">Email</div>
               <div className="mt-1 truncate text-sm font-bold text-gray-900">{accountEmail}</div>
             </div>
             <a
-              role="menuitem"
               href="/analytics"
               onClick={() => setAccountMenuOpen(false)}
               className="mt-1 block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
             >
-              学習分析
+              学習の記録
             </a>
             <button
               type="button"
-              role="menuitem"
               onClick={handleLogout}
+          disabled={loading}
               className="mt-1 w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
             >
               ログアウト
             </button>
+            {message && <p role="status" className="px-3 py-2 text-sm text-amber-900">{message}</p>}
           </div>
         )}
       </div>
@@ -693,7 +726,7 @@ function formatAuthError(error: unknown, mode: AuthMode) {
     return "メールアドレスまたはパスワードが正しくありません。";
   }
 
-  return message;
+  return "手続きを完了できませんでした。接続を確認して、もう一度お試しください。";
 }
 
 function getAuthRedirectUrl() {
@@ -731,6 +764,7 @@ function PasswordVisibilityButton({
       onClick={onClick}
       className="absolute inset-y-0 right-0 flex w-11 items-center justify-center rounded-r-lg text-gray-500 transition hover:bg-gray-100 hover:text-gray-800"
       aria-label={visible ? "パスワードを隠す" : "パスワードを表示"}
+      aria-pressed={visible}
     >
       {visible ? (
         <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">

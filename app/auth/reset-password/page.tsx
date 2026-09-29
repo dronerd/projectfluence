@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import AppHeader from "@/app/components/AppHeader";
 import React, { useMemo, useState } from "react";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
@@ -19,7 +20,7 @@ export default function ResetPasswordPage() {
     setMessage("");
 
     if (!supabase) {
-      setMessage("Supabase public environment variables are not configured.");
+      setMessage("現在パスワードを再設定できません。時間をおいて再度お試しください。");
       return;
     }
 
@@ -34,14 +35,14 @@ export default function ResetPasswordPage() {
     }
 
     setLoading(true);
+    try {
     const { error } = await supabase.auth.updateUser({ password: newPassword });
-    setLoading(false);
 
     if (error) {
       setMessage(
         error.message.toLowerCase().includes("session")
           ? "再設定リンクの有効期限が切れている可能性があります。もう一度パスワード再設定メールを送信してください。"
-          : error.message,
+          : "パスワードを更新できませんでした。もう一度お試しください。",
       );
       return;
     }
@@ -52,15 +53,22 @@ export default function ResetPasswordPage() {
     setShowConfirmPassword(false);
     setSuccess(true);
     setMessage("パスワードを更新しました。");
+    } catch {
+      setMessage("接続を確認して、もう一度お試しください。");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-neutral-100 px-4 py-12">
-      <div className="w-full max-w-md rounded-2xl bg-white p-6 text-gray-950 shadow-xl">
+    <>
+    <AppHeader />
+    <main id="main-content" tabIndex={-1} className="flex min-h-[calc(100dvh-var(--pf-header-height))] items-start justify-center px-4 py-10 sm:py-16">
+      <div className="pf-panel w-full max-w-md p-6">
         <h1 className="text-2xl font-bold">パスワード再設定</h1>
         <p className="mt-2 text-sm text-gray-600">新しいパスワードを設定してください。</p>
 
-        <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+        <form aria-describedby={message ? "reset-message" : undefined} aria-busy={loading} onSubmit={handleSubmit} className="mt-6 space-y-4">
           <label className="block text-sm font-semibold text-gray-700">
             新しいパスワード
             <span className="relative mt-1 block">
@@ -109,14 +117,14 @@ export default function ResetPasswordPage() {
           <button
             type="submit"
             disabled={loading || success}
-            className="w-full rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 font-bold text-white shadow-md disabled:cursor-not-allowed disabled:opacity-70"
+            className="pf-button w-full"
           >
             {loading ? "更新中..." : "パスワードを更新"}
           </button>
         </form>
 
         {message && (
-          <p className={`mt-4 rounded-lg p-3 text-sm ${success ? "bg-emerald-50 text-emerald-900" : "bg-amber-50 text-amber-900"}`}>
+          <p id="reset-message" role="status" className={`mt-4 rounded-lg p-3 text-sm ${success ? "bg-emerald-50 text-emerald-900" : "bg-amber-50 text-amber-900"}`}>
             {message}
           </p>
         )}
@@ -124,13 +132,14 @@ export default function ResetPasswordPage() {
         {success && (
           <Link
             href="/"
-            className="mt-4 inline-flex w-full justify-center rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-3 text-sm font-bold text-white shadow-md transition hover:brightness-110"
+            className="pf-button mt-4 w-full"
           >
             ホームに戻る
           </Link>
         )}
+        {!success && <Link className="mt-5 inline-flex min-h-11 items-center text-sm text-indigo-700" href="/">← ホームに戻る</Link>}
       </div>
-    </main>
+    </main></>
   );
 }
 
@@ -147,6 +156,7 @@ function PasswordVisibilityButton({
       onClick={onClick}
       className="absolute inset-y-0 right-0 flex w-11 items-center justify-center rounded-r-lg text-gray-500 transition hover:bg-gray-100 hover:text-gray-800 disabled:pointer-events-none disabled:opacity-50"
       aria-label={visible ? "パスワードを隠す" : "パスワードを表示"}
+      aria-pressed={visible}
     >
       {visible ? (
         <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">

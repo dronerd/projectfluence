@@ -86,12 +86,12 @@ export type VocabStreamReviewQuestion = {
   sourceLessonNumber?: number | null;
 };
 
-async function tryFetchJson(path: string): Promise<any | null> {
+async function tryFetchJson(path: string): Promise<Record<string, unknown> | null> {
   try {
     const r = await fetch(path);
     if (!r.ok) return null;
     return await r.json();
-  } catch (e) {
+  } catch {
     return null;
   }
 }
@@ -270,7 +270,7 @@ export async function apiLessonQuiz(lessonId: string) {
   try {
     const questions = generateQuizFromLesson(lesson);
     return { lesson_id: lessonId, questions };
-  } catch (e) {
+  } catch {
     return { lesson_id: lessonId, questions: [] };
   }
 }
@@ -291,11 +291,12 @@ type PoolItem = { word: string; example: string };
 /* ------------------------
    Client-side quiz generator
    ------------------------*/
-function generateQuizFromLesson(lesson: any): QuizQuestion[] {
-  const words = Array.isArray(lesson?.words) ? lesson.words : [];
+function generateQuizFromLesson(lesson: unknown): QuizQuestion[] {
+  const source = lesson && typeof lesson === "object" ? lesson as Record<string, unknown> : {};
+  const words: unknown[] = Array.isArray(source.words) ? source.words : [];
   const pool: PoolItem[] = words
-    .filter((w: any): w is { word: string; example?: string } => !!w && typeof w.word === "string")
-    .map((w: any) => ({ word: w.word, example: w.example || "" }));
+    .filter((word): word is { word: string; example?: unknown } => Boolean(word && typeof word === "object" && "word" in word && typeof word.word === "string"))
+    .map((word) => ({ word: word.word, example: typeof word.example === "string" ? word.example : "" }));
 
   if (pool.length < 3) throw new Error("not enough words for quiz");
 

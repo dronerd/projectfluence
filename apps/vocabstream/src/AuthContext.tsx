@@ -12,6 +12,7 @@ type User = {
 
 type AuthContextType = {
   token: string | null;
+  loading: boolean;
   user: User;
   setToken: (t: string | null) => void;
   logout: () => Promise<void>;
@@ -20,6 +21,7 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [loading, setLoading] = useState(true);
   const [token, setTokenState] = useState<string | null>(null);
   const [user, setUser] = useState<User>(null);
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
@@ -28,19 +30,22 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (!supabase) {
       setTokenState(null);
       setUser(null);
+      setLoading(false);
       return;
     }
 
     supabase.auth.getSession().then(({ data }) => {
       setTokenState(data.session?.access_token ?? null);
       setUser(toVocabStreamUser(data.session?.user ?? null));
-    });
+      setLoading(false);
+    }).catch(() => { setTokenState(null); setUser(null); setLoading(false); });
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setTokenState(session?.access_token ?? null);
       setUser(toVocabStreamUser(session?.user ?? null));
+      setLoading(false);
     });
 
     return () => subscription.unsubscribe();
@@ -59,7 +64,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }
 
   return (
-    <AuthContext.Provider value={{ token, user, setToken, logout }}>
+    <AuthContext.Provider value={{ token, user, loading, setToken, logout }}>
       {children}
     </AuthContext.Provider>
   );
