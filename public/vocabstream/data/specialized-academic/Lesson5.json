@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-academic-lesson-5",
+  "title": "Lesson 5",
+  "paragraph": "研究デザインと情報収集",
+  "words": [
+    {
+      "word": "qualitative research",
+      "meaning": "research that explores meanings, experiences, or processes using information such as words or observations",
+      "japaneseMeaning": "質的研究",
+      "example": "The project uses qualitative research to explore students' experiences.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "quantitative research",
+        "random assignment"
+      ]
+    },
+    {
+      "word": "quantitative research",
+      "meaning": "research that uses numerical measurements and analysis to investigate questions",
+      "japaneseMeaning": "量的研究",
+      "example": "Quantitative research helped compare scores across the classes.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "qualitative research",
+        "peer review"
+      ]
+    },
+    {
+      "word": "survey",
+      "meaning": "a study that gathers information from a group of people, often by asking questions",
+      "japaneseMeaning": "調査・サーベイ",
+      "example": "The survey asked students about their study routines.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "questionnaire",
+        "literature review"
+      ],
+      "usageNote": "ここでは調査の活動全体を指します。questionnaire は情報収集に使う質問票という道具です。"
+    },
+    {
+      "word": "questionnaire",
+      "meaning": "a set of written questions used to collect information from respondents",
+      "japaneseMeaning": "質問票・アンケート用紙",
+      "example": "The questionnaire includes ten questions about travel habits.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "survey",
+        "interview"
+      ],
+      "usageNote": "質問票という道具を指します。survey は調査の活動全体を指すことがあります。"
+    },
+    {
+      "word": "interview",
+      "meaning": "a conversation in which a researcher asks a participant questions to gather information",
+      "japaneseMeaning": "インタビュー調査",
+      "example": "Each interview lasted about thirty minutes.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "questionnaire",
+        "observation"
+      ]
+    },
+    {
+      "word": "observation",
+      "meaning": "systematic watching and recording of behavior or events for a study",
+      "japaneseMeaning": "観察",
+      "example": "Classroom observation showed how students used the materials.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "interview",
+        "random assignment"
+      ]
+    },
+    {
+      "word": "case study",
+      "meaning": "a detailed investigation of a particular person, group, event, or setting",
+      "japaneseMeaning": "事例研究",
+      "example": "The case study examines one school's language programme.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "pilot study",
+        "replication"
+      ]
+    },
+    {
+      "word": "random sampling",
+      "meaning": "selecting members of a population through a chance-based procedure",
+      "japaneseMeaning": "無作為抽出",
+      "example": "Random sampling reduced the influence of personal choice on selection.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "random assignment",
+        "observation"
+      ],
+      "sentencePractice": {
+        "prompt": "A chance-based procedure selects people from the population to take part in the study. This selection is ____.",
+        "distractors": [
+          "random assignment",
+          "observation"
+        ],
+        "reviewNote": "Choosing participants from a population is sampling; random assignment places already selected participants into groups and observation records behavior."
+      }
+    },
+    {
+      "word": "random assignment",
+      "meaning": "placing study participants into groups using a chance-based procedure",
+      "japaneseMeaning": "無作為割り付け",
+      "example": "Random assignment determined which training each participant received.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "random sampling",
+        "survey"
+      ],
+      "sentencePractice": {
+        "prompt": "After recruitment, a chance-based procedure places participants into the treatment or comparison group. This is ____.",
+        "distractors": [
+          "random sampling",
+          "observation"
+        ],
+        "reviewNote": "Allocating recruited participants between groups is random assignment; population selection and watching behavior are different processes."
+      }
+    },
+    {
+      "word": "longitudinal study",
+      "meaning": "research that follows the same people or units across multiple points in time",
+      "japaneseMeaning": "縦断研究",
+      "example": "The longitudinal study followed students for three years.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "literature review",
+        "pilot study"
+      ]
+    }
+  ]
+}

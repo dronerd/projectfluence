@@ -1,0 +1,144 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-60",
+  "title": "Lesson 10",
+  "paragraph": "複雑な状況を評価する",
+  "words": [
+    {
+      "word": "in the cold light of day",
+      "meaning": "after strong feelings have passed and you can judge a situation calmly",
+      "japaneseMeaning": "感情が落ち着いて冷静に考えると",
+      "example": "In the cold light of day, the argument seemed less important.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "at the outset",
+        "in no uncertain terms"
+      ]
+    },
+    {
+      "word": "a far cry from",
+      "meaning": "very different from something else",
+      "japaneseMeaning": "～とは大きく違うもの",
+      "example": "The quiet workshop was a far cry from her previous crowded office.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a means to an end",
+        "a hard act to follow"
+      ]
+    },
+    {
+      "word": "a mixed bag",
+      "meaning": "a group or collection containing both good and disappointing things",
+      "japaneseMeaning": "良いものと物足りないものが混じったもの",
+      "example": "The trial results were a mixed bag: accuracy improved, but speed fell.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a foregone conclusion",
+        "a vested interest"
+      ]
+    },
+    {
+      "word": "be that as it may",
+      "meaning": "used to accept a point while saying it does not change your main argument",
+      "japaneseMeaning": "それはそうとしても",
+      "example": "The changes may be expensive. Be that as it may, the safety problems still need attention.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "by the same token",
+        "on the grounds that"
+      ],
+      "usageNote": "直前の内容をいったん認めても、これから述べる主張は変わらないことを示します。やや改まった表現です。"
+    },
+    {
+      "word": "on the face of it",
+      "meaning": "according to the first impression, before closer examination",
+      "japaneseMeaning": "一見したところでは",
+      "example": "On the face of it, the offer seems generous, but we should check the conditions.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "all things considered",
+        "in retrospect"
+      ],
+      "sentencePractice": {
+        "prompt": "____, the offer looks cheap; that is only my first impression, and I have not read the detailed conditions yet.",
+        "distractors": [
+          "After careful analysis",
+          "With the benefit of hindsight"
+        ],
+        "reviewNote": "The speaker explicitly has only an initial impression. Detailed analysis and hindsight both depend on information the speaker says they do not yet have."
+      }
+    },
+    {
+      "word": "go against the grain",
+      "meaning": "to conflict with someone's natural feelings or usual way of behaving",
+      "japaneseMeaning": "自分の気質や信条に反する",
+      "example": "Keeping quiet about an unfair rule would go against the grain for her.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "find common ground",
+        "come to terms with"
+      ]
+    },
+    {
+      "word": "have a bearing on",
+      "meaning": "to be relevant to or affect a situation or decision",
+      "japaneseMeaning": "～に関係や影響がある",
+      "example": "The maintenance costs will have a bearing on our final choice.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "take issue with",
+        "lose sight of"
+      ]
+    },
+    {
+      "word": "take a back seat",
+      "meaning": "to let someone else have the main role or more attention",
+      "japaneseMeaning": "一歩引いて主導を他に任せる",
+      "example": "After training her replacement, she was happy to take a back seat.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "stand your ground",
+        "take issue with"
+      ]
+    },
+    {
+      "word": "a hard act to follow",
+      "meaning": "someone or something so successful that matching it will be difficult",
+      "japaneseMeaning": "後に続く者が匹敵するのは難しい優れた人や成果",
+      "example": "Her excellent presentation was a hard act to follow.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a mixed bag",
+        "a false dichotomy"
+      ]
+    },
+    {
+      "word": "come full circle",
+      "meaning": "to return to an earlier position or idea after a series of changes",
+      "japaneseMeaning": "さまざまな変化を経て元の状態や考えに戻る",
+      "example": "After trying several designs, we came full circle and chose the original layout.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "move the goalposts",
+        "lose sight of"
+      ],
+      "sentencePractice": {
+        "prompt": "After abandoning our original design and testing several alternatives, we choose that same original design again. In doing so, we ____.",
+        "distractors": [
+          "break new ground",
+          "move further away"
+        ],
+        "reviewNote": "Returning to the starting design after intervening changes completes the circle. Breaking new ground creates something new; moving away does not return."
+      }
+    }
+  ]
+}

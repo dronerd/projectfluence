@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>首に巻くための、フリンジが付いた赤い長いマフラー。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#df7771" d="M86 39q35-16 66 0l-8 25-14 14 27 70-31 11-30-87-22-14Z"/><path fill="#e99a89" d="m94 69 28 8-29 75-31-12Z"/><path d="m64 139-5 12m13-9-5 12m13-9-5 12m13-9-5 12m44-1 5 12m4-15 5 12m4-15 5 12m4-15 5 12"/><path d="M83 47q28 12 59-1"/></g>
+</svg>

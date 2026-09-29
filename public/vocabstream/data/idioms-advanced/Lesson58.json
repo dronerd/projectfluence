@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-advanced-lesson-58",
+  "title": "Lesson 8",
+  "paragraph": "問題への対応と立て直し",
+  "words": [
+    {
+      "word": "fall through",
+      "meaning": "to fail to happen after being planned or agreed",
+      "japaneseMeaning": "計画などが実現せず流れる",
+      "example": "The purchase may fall through if the loan is refused.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "turn out",
+        "stand out"
+      ],
+      "sentencePractice": {
+        "prompt": "The sale was almost agreed, but without the buyer’s loan it will ____ and never be completed.",
+        "distractors": [
+          "go ahead",
+          "come into effect"
+        ],
+        "reviewNote": "Failure to complete the planned sale means it falls through. Going ahead or coming into effect indicates that it proceeds."
+      }
+    },
+    {
+      "word": "hit a snag",
+      "meaning": "to meet an unexpected problem that slows progress",
+      "japaneseMeaning": "思わぬ障害にぶつかる",
+      "example": "We hit a snag when the replacement part did not fit.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "get back on track",
+        "make a difference"
+      ]
+    },
+    {
+      "word": "get back on track",
+      "meaning": "to return to the planned course after a delay or problem",
+      "japaneseMeaning": "計画どおりの状態に戻る",
+      "example": "A revised schedule helped the project get back on track.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "hit a snag",
+        "go through"
+      ]
+    },
+    {
+      "word": "turn things around",
+      "meaning": "to change an unsuccessful situation into a successful one",
+      "japaneseMeaning": "悪い状況を好転させる",
+      "example": "Better service helped the small shop turn things around.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "sweep something under the carpet",
+        "cut corners"
+      ]
+    },
+    {
+      "word": "nip something in the bud",
+      "meaning": "to stop a problem at an early stage before it grows",
+      "japaneseMeaning": "問題の芽を早めに摘む",
+      "example": "A quick conversation helped us nip the disagreement in the bud.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "sweep something under the carpet",
+        "let the cat out of the bag"
+      ],
+      "usageNote": "something を the problem などに置き換えます。悪化する前に対処することが要点です。"
+    },
+    {
+      "word": "sweep something under the carpet",
+      "meaning": "to hide or ignore a problem instead of dealing with it",
+      "japaneseMeaning": "問題を隠して見て見ぬふりをする",
+      "example": "The manager tried to sweep the accounting error under the carpet.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "nip something in the bud",
+        "bring up"
+      ],
+      "usageNote": "実際の掃除ではなく、問題を隠す比喩です。under the rug という形も使います。"
+    },
+    {
+      "word": "a wake-up call",
+      "meaning": "an event that makes someone realize that action or change is needed",
+      "japaneseMeaning": "行動や変化の必要性に気付かせる出来事",
+      "example": "The failed safety test was a wake-up call for the factory.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a blessing in disguise",
+        "a rule of thumb"
+      ]
+    },
+    {
+      "word": "a blessing in disguise",
+      "meaning": "something that seems bad at first but later brings a good result",
+      "japaneseMeaning": "不幸に見えて後に幸いとなること",
+      "example": "Missing that job was a blessing in disguise: I found work much closer to home.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a wake-up call",
+        "a last resort"
+      ]
+    },
+    {
+      "word": "back to square one",
+      "meaning": "having to start again because an earlier attempt failed",
+      "japaneseMeaning": "振り出しに戻って",
+      "example": "The design failed the test, and we were back to square one.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "on the same page",
+        "up in the air"
+      ],
+      "sentencePractice": {
+        "prompt": "Our only design has failed every test, so we must discard it and start the entire project again. We are ____.",
+        "distractors": [
+          "nearing the finish line",
+          "ahead of schedule"
+        ],
+        "reviewNote": "Discarding the only design and restarting puts the team at the starting point, not near completion or ahead of its timetable."
+      }
+    },
+    {
+      "word": "up in the air",
+      "meaning": "not yet decided or settled",
+      "japaneseMeaning": "まだ未定で",
+      "example": "The date is still up in the air because the venue has not replied.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "back to square one",
+        "on purpose"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-engineering-lesson-5",
+  "title": "Lesson 5",
+  "paragraph": "機械を構成する部品",
+  "words": [
+    {
+      "word": "shaft",
+      "meaning": "a long machine part that rotates to transmit movement or power",
+      "japaneseMeaning": "軸・シャフト",
+      "example": "The motor turns the shaft connected to the fan.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "valve",
+        "seal"
+      ]
+    },
+    {
+      "word": "bearing",
+      "meaning": "a part that supports a moving shaft or other part while reducing friction",
+      "japaneseMeaning": "軸受け",
+      "example": "The worn bearing made the wheel difficult to turn.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "gear",
+        "spring"
+      ]
+    },
+    {
+      "word": "gear",
+      "meaning": "a toothed wheel that transfers movement by engaging with another toothed part",
+      "japaneseMeaning": "歯車",
+      "example": "The smaller gear turns faster than the larger one.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "pulley",
+        "valve"
+      ],
+      "sentencePractice": {
+        "prompt": "The two wheels have teeth that fit together to pass on rotation. Each toothed wheel is a ____.",
+        "distractors": [
+          "pulley",
+          "valve"
+        ],
+        "reviewNote": "Interlocking teeth identify a gear; a pulley carries a belt or rope and a valve regulates fluid passage."
+      }
+    },
+    {
+      "word": "pulley",
+      "meaning": "a wheel over which a belt or rope passes to transfer force or change direction",
+      "japaneseMeaning": "滑車・プーリー",
+      "example": "The rope runs over a pulley above the load.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "gear",
+        "bearing"
+      ]
+    },
+    {
+      "word": "belt",
+      "meaning": "a flexible band used to transfer movement between rotating wheels",
+      "japaneseMeaning": "ベルト",
+      "example": "The belt connects the motor to the cooling fan.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "shaft",
+        "spring"
+      ],
+      "usageNote": "ここでは機械の動力伝達用ベルトの意味です。"
+    },
+    {
+      "word": "spring",
+      "meaning": "an elastic part that changes shape under force and tends to return when the force is removed",
+      "japaneseMeaning": "ばね",
+      "example": "The spring pushes the button back into position.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "seal",
+        "gear"
+      ]
+    },
+    {
+      "word": "valve",
+      "meaning": "a device that opens, closes, or adjusts a passage for liquid or gas",
+      "japaneseMeaning": "弁・バルブ",
+      "example": "The valve controls the flow of water into the tank.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "pump",
+        "bearing"
+      ],
+      "sentencePractice": {
+        "prompt": "To regulate water flow, the device changes how far a passage is open. The device is a ____.",
+        "distractors": [
+          "pump",
+          "bearing"
+        ],
+        "reviewNote": "Opening or restricting a fluid passage identifies a valve; a pump supplies pressure and a bearing supports movement."
+      }
+    },
+    {
+      "word": "pump",
+      "meaning": "a machine that moves liquid or gas by creating a pressure difference",
+      "japaneseMeaning": "ポンプ",
+      "example": "The pump moves water from the lower tank to the upper one.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "valve",
+        "spring"
+      ]
+    },
+    {
+      "word": "seal",
+      "meaning": "a part or material used to stop liquid or gas from passing through a gap",
+      "japaneseMeaning": "シール・密封部材",
+      "example": "A damaged seal allowed oil to leak from the housing.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "shaft",
+        "gear"
+      ]
+    },
+    {
+      "word": "fastener",
+      "meaning": "a component used to hold separate parts together",
+      "japaneseMeaning": "締結部品",
+      "example": "Choose a fastener that fits the hole and the required load.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "bearing",
+        "pump"
+      ]
+    }
+  ]
+}

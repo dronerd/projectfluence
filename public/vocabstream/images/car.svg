@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>窓、二つのドア、タイヤが見える青い乗用車。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#78adbd" d="M31 105 52 94 76 59h76l34 35 22 12v32H29Z"/><path fill="#d9edf0" d="m66 93 19-25h58l25 25Z"/><path d="M117 69v26m0 2v37m-28-27h12m29 0h12"/><circle cx="69" cy="137" r="21" fill="#526569"/><circle cx="173" cy="137" r="21" fill="#526569"/><circle cx="69" cy="137" r="10" fill="#c5d6d7"/><circle cx="173" cy="137" r="10" fill="#c5d6d7"/><path stroke="#f8e1a4" stroke-width="8" d="M196 106h9"/><path stroke="#e5998b" stroke-width="7" d="M31 106h8"/></g>
+</svg>

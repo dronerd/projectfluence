@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-it-lesson-8",
+  "title": "Lesson 8",
+  "paragraph": "サービスの運用と品質",
+  "words": [
+    {
+      "word": "outage",
+      "meaning": "a period when a system or service is not working or cannot be reached",
+      "japaneseMeaning": "サービス停止",
+      "example": "The outage prevented users from opening their saved files.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "migration",
+        "rollback"
+      ]
+    },
+    {
+      "word": "availability",
+      "meaning": "the extent to which a service is working and accessible when needed",
+      "japaneseMeaning": "可用性",
+      "example": "The team measures availability throughout the month.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "latency",
+        "compatibility"
+      ]
+    },
+    {
+      "word": "scalability",
+      "meaning": "the ability of a system to handle more work as resources or demand increase",
+      "japaneseMeaning": "拡張性",
+      "example": "The load test helps us assess the service's scalability.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "privacy",
+        "compatibility"
+      ]
+    },
+    {
+      "word": "compatibility",
+      "meaning": "the ability of different devices or programs to work together correctly",
+      "japaneseMeaning": "互換性",
+      "example": "We tested compatibility with several browsers.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "availability",
+        "throughput"
+      ]
+    },
+    {
+      "word": "synchronization",
+      "meaning": "the process of keeping copies of data consistent across devices or systems",
+      "japaneseMeaning": "同期",
+      "example": "Synchronization keeps the calendar the same on both devices.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "migration",
+        "encryption"
+      ]
+    },
+    {
+      "word": "migration",
+      "meaning": "the process of moving data or software to a different system or environment",
+      "japaneseMeaning": "移行",
+      "example": "The database migration moved the records to a new server.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "synchronization",
+        "monitoring"
+      ]
+    },
+    {
+      "word": "rollback",
+      "meaning": "a return to an earlier software version or system state",
+      "japaneseMeaning": "ロールバック・切り戻し",
+      "example": "The team prepared a rollback in case the release failed.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "migration",
+        "monitoring"
+      ],
+      "sentencePractice": {
+        "prompt": "After the release failed, the team returned to the previous working version. This action was a ____.",
+        "distractors": [
+          "migration",
+          "security breach"
+        ],
+        "reviewNote": "Returning to an earlier version is a rollback; moving to another environment and unauthorized access do not describe the action."
+      }
+    },
+    {
+      "word": "throughput",
+      "meaning": "the amount of work or data a system actually processes in a given time",
+      "japaneseMeaning": "処理量・スループット",
+      "example": "The test measured throughput in requests per second.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "latency",
+        "availability"
+      ],
+      "usageNote": "処理の速さを表す量です。latency は一つの処理にかかる待ち時間です。",
+      "sentencePractice": {
+        "prompt": "The server successfully handles five hundred requests each second. This processing rate is its ____.",
+        "distractors": [
+          "latency",
+          "availability"
+        ],
+        "reviewNote": "Completed work per unit time is throughput; delay per request and service accessibility are different measurements."
+      }
+    },
+    {
+      "word": "bottleneck",
+      "meaning": "a part of a system that limits the speed or capacity of the whole system",
+      "japaneseMeaning": "ボトルネック",
+      "example": "The slow database query became a bottleneck during busy periods.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "outage",
+        "rollback"
+      ]
+    },
+    {
+      "word": "monitoring",
+      "meaning": "the ongoing checking of a system's condition or behavior",
+      "japaneseMeaning": "監視・モニタリング",
+      "example": "Monitoring alerted the team when response times increased.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "migration",
+        "authorization"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-57",
+  "title": "Lesson 7",
+  "paragraph": "公平さ・責任・利害",
+  "words": [
+    {
+      "word": "a conflict of interest",
+      "meaning": "a situation in which personal interests could interfere with a professional duty",
+      "japaneseMeaning": "個人の利益と職務上の責任が衝突する状況",
+      "example": "Reviewing a contract awarded to your own business creates a conflict of interest.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "a grey area",
+        "a level playing field"
+      ]
+    },
+    {
+      "word": "a grey area",
+      "meaning": "a situation in which the rules or boundaries are unclear",
+      "japaneseMeaning": "判断基準が曖昧な領域",
+      "example": "The policy leaves a grey area around the use of personal devices.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a vested interest",
+        "a conflict of interest"
+      ],
+      "usageNote": "アメリカ英語では gray area という綴りも使います。"
+    },
+    {
+      "word": "a fine line",
+      "meaning": "a very small difference between two things that may be hard to separate",
+      "japaneseMeaning": "二つを隔てる微妙な境界",
+      "example": "There is a fine line between offering advice and taking control.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a level playing field",
+        "a window of opportunity"
+      ]
+    },
+    {
+      "word": "cross a line",
+      "meaning": "to behave in a way that goes beyond what is considered acceptable",
+      "japaneseMeaning": "許容される一線を越える",
+      "example": "Criticizing an idea is fair, but personal insults cross a line.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "strike a balance",
+        "find common ground"
+      ]
+    },
+    {
+      "word": "a level playing field",
+      "meaning": "a situation in which everyone has a fair opportunity to compete",
+      "japaneseMeaning": "公平に競争できる条件",
+      "example": "Transparent entry rules help create a level playing field for small suppliers.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a conflict of interest",
+        "an uphill battle"
+      ],
+      "sentencePractice": {
+        "prompt": "Every applicant faces the same transparent rules, with no special advantage for established firms. The aim is ____.",
+        "distractors": [
+          "a vested interest",
+          "a conflict of interest"
+        ],
+        "reviewNote": "Equal competitive opportunity defines the target. A vested interest is a personal stake; a conflict of interest concerns competing duties and private interests."
+      }
+    },
+    {
+      "word": "a vested interest",
+      "meaning": "a strong personal reason to support something because you benefit from it",
+      "japaneseMeaning": "利益を得られるために持つ強い個人的利害",
+      "example": "Owners of the building have a vested interest in the proposed rent increase.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "a grey area",
+        "a fine line"
+      ]
+    },
+    {
+      "word": "turn a blind eye",
+      "meaning": "to deliberately ignore something wrong or undesirable",
+      "japaneseMeaning": "悪いことを意図的に見て見ぬふりをする",
+      "example": "Supervisors should not turn a blind eye to repeated safety violations.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "hold someone accountable",
+        "stand your ground"
+      ],
+      "usageNote": "ここでは不正などを知りながら無視する意味。問題に気付かなかった場合とは区別します。"
+    },
+    {
+      "word": "pay lip service to",
+      "meaning": "to say that you support something without acting as if you do",
+      "japaneseMeaning": "行動を伴わず口先だけで賛同する",
+      "example": "It is not enough to pay lip service to accessibility while leaving barriers in place.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "follow through",
+        "take issue with"
+      ],
+      "sentencePractice": {
+        "prompt": "Managers praise accessibility but refuse to remove even simple barriers. They merely ____ inclusion instead of acting on their stated support.",
+        "distractors": [
+          "take action on",
+          "make provision for"
+        ],
+        "reviewNote": "The contrast explicitly separates verbal support from action. Taking action and making practical provision both go beyond words."
+      }
+    },
+    {
+      "word": "hold someone accountable",
+      "meaning": "to require someone to explain or accept responsibility for their actions",
+      "japaneseMeaning": "行動について説明や責任を求める",
+      "example": "Clear records make it possible to hold someone accountable for how funds were used.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "turn a blind eye",
+        "concede a point"
+      ]
+    },
+    {
+      "word": "put your money where your mouth is",
+      "meaning": "to support what you say with real action, especially financial support",
+      "japaneseMeaning": "言ったことを行動や資金で示す",
+      "example": "If you believe in the community project, put your money where your mouth is and help fund it.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "pay lip service to",
+        "pass the buck"
+      ]
+    }
+  ]
+}

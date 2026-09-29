@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-it-lesson-6",
+  "title": "Lesson 6",
+  "paragraph": "ウェブと通信の仕組み",
+  "words": [
+    {
+      "word": "domain name",
+      "meaning": "a readable internet name used to identify a website or another service",
+      "japaneseMeaning": "ドメイン名",
+      "example": "Check the domain name before entering your password.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "IP address",
+        "certificate"
+      ]
+    },
+    {
+      "word": "IP address",
+      "meaning": "a numeric address used to identify a network interface and route internet traffic",
+      "japaneseMeaning": "IPアドレス",
+      "example": "The administrator checked the printer's IP address.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "domain name",
+        "cookie"
+      ],
+      "usageNote": "IP は Internet Protocol の略。通常は文字ごとに読みます。"
+    },
+    {
+      "word": "router",
+      "meaning": "a device that directs data between different networks",
+      "japaneseMeaning": "ルーター",
+      "example": "The router connects the office network to the internet.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "certificate",
+        "cookie"
+      ]
+    },
+    {
+      "word": "connection",
+      "meaning": "a link that allows devices or programs to exchange data",
+      "japaneseMeaning": "接続",
+      "example": "The application checks the connection before sending the file.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "session",
+        "certificate"
+      ]
+    },
+    {
+      "word": "request",
+      "meaning": "a message asking a system to provide information or perform an action",
+      "japaneseMeaning": "リクエスト・要求",
+      "example": "The browser sends a request for the next page.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "response",
+        "cookie"
+      ],
+      "sentencePractice": {
+        "prompt": "The browser sends a message asking the server for a page. This message is a ____.",
+        "distractors": [
+          "response",
+          "certificate"
+        ],
+        "reviewNote": "The message asking for information is a request; a response is the reply and a certificate binds an identity to a key."
+      }
+    },
+    {
+      "word": "response",
+      "meaning": "a reply that a system sends after receiving a request",
+      "japaneseMeaning": "レスポンス・応答",
+      "example": "The server response includes the requested information.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "request",
+        "certificate"
+      ]
+    },
+    {
+      "word": "protocol",
+      "meaning": "an agreed set of rules for exchanging data between systems",
+      "japaneseMeaning": "通信プロトコル",
+      "example": "Both devices must support the same protocol.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "domain name",
+        "session"
+      ]
+    },
+    {
+      "word": "certificate",
+      "meaning": "an electronic document that links an identity to a public key",
+      "japaneseMeaning": "電子証明書",
+      "example": "The browser checks the website's certificate during a secure connection.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "cookie",
+        "request"
+      ],
+      "usageNote": "ここではデジタル証明書の意味。講座の修了証とは異なります。"
+    },
+    {
+      "word": "cookie",
+      "meaning": "a small piece of website data stored by a browser and sent back with relevant requests",
+      "japaneseMeaning": "クッキー",
+      "example": "This cookie remembers the language you selected.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "certificate",
+        "protocol"
+      ],
+      "sentencePractice": {
+        "prompt": "The browser remembers the site's language choice in a small piece of data called a ____.",
+        "distractors": [
+          "certificate",
+          "protocol"
+        ],
+        "reviewNote": "A browser-stored website data item is a cookie; identity documents and communication rules do not serve this role."
+      }
+    },
+    {
+      "word": "session",
+      "meaning": "a period of related interactions between a user and a service",
+      "japaneseMeaning": "セッション",
+      "example": "Your session ends after a long period without activity.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "request",
+        "IP address"
+      ]
+    }
+  ]
+}

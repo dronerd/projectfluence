@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>丸い持ち手とギザギザの先がある、小さな金色の鍵。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#dfbc69" d="M100 93q-34 21-53-5-18-30 10-47 32-19 47 13 5 10 2 20l78 56-14 20-18-12 8-10-16-12-8 10-17-12 8-10Z"/><circle cx="74" cy="65" r="13" fill="#f5f8f6"/><path stroke="#f8e4a6" d="m112 91 52 37"/></g>
+</svg>

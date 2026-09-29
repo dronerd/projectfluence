@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>背びれ、長い口先、横に広がる尾びれがあるイルカ。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#88b9c7" d="M64 119C77 72 108 34 146 40c22 2 38 17 35 31l23 4q14 3 5 9l-31 5c-23 26-64 30-103 44Z"/><path fill="#88b9c7" d="M64 119 31 107q1 20 26 30l-1 20q24-5 28-26m20-77 5-28q18 5 17 20m11 47-20 39q27-7 32-27"/><path fill="#d4e8e9" stroke="none" d="M90 115q46-4 74-29 12-1 18-3-21 30-92 37Z"/><circle cx="168" cy="66" r="3" fill="#40565b"/><path d="m179 82 26-1"/><path stroke="#a6cdd7" d="M97 153q13-8 26 0t26 0m13-5q13-8 26 0t26 0"/></g>
+</svg>

@@ -36,24 +36,8 @@
         "hat"
       ]
     },
-    {
-      "word": "pants",
-      "meaning": "clothing for the legs",
-      "japaneseMeaning": "ズボン",
-      "synonyms": "trousers",
-      "antonyms": "",
-      "forms": "pants",
-      "example": "These pants are black."
-    },
-    {
-      "word": "skirt",
-      "meaning": "clothing that hangs from the waist",
-      "japaneseMeaning": "スカート",
-      "synonyms": "",
-      "antonyms": "",
-      "forms": "skirt, skirts",
-      "example": "Her skirt is long."
-    },
+    {"word": "pants", "meaning": "clothing for the legs", "japaneseMeaning": "ズボン", "synonyms": "trousers", "antonyms": "", "forms": "pants", "example": "These pants are black.", "definitionType": "image+text", "image": {"src": "/vocabstream/images/pants.svg", "alt": "腰から両足を別々に包む、ベージュ色の長いズボン。", "width": 240, "height": 180, "source": "ProjectFluence original SVG illustration", "sourceUrl": "/vocabstream/images/pants.svg", "creator": "ProjectFluence", "license": "CC0-1.0", "credit": "ProjectFluence · CC0-1.0"}, "meaningDistractors": ["shirt", "hat"]},
+    {"word": "skirt", "meaning": "clothing that hangs from the waist", "japaneseMeaning": "スカート", "synonyms": "", "antonyms": "", "forms": "skirt, skirts", "example": "Her skirt is long.", "definitionType": "image+text", "image": {"src": "/vocabstream/images/skirt.svg", "alt": "ウエストから下に広がる、青いスカート。", "width": 240, "height": 180, "source": "ProjectFluence original SVG illustration", "sourceUrl": "/vocabstream/images/skirt.svg", "creator": "ProjectFluence", "license": "CC0-1.0", "credit": "ProjectFluence · CC0-1.0"}, "meaningDistractors": ["shoes", "scarf"]},
     {
       "word": "shoes",
       "meaning": "things worn on the feet",
@@ -171,15 +155,7 @@
       "forms": "jeans",
       "example": "These jeans are too long."
     },
-    {
-      "word": "scarf",
-      "meaning": "cloth worn around the neck",
-      "japaneseMeaning": "スカーフ、マフラー",
-      "synonyms": "",
-      "antonyms": "",
-      "forms": "scarf, scarves",
-      "example": "She wears a scarf in winter."
-    },
+    {"word": "scarf", "meaning": "cloth worn around the neck", "japaneseMeaning": "スカーフ、マフラー", "synonyms": "", "antonyms": "", "forms": "scarf, scarves", "example": "She wears a scarf in winter.", "definitionType": "image+text", "image": {"src": "/vocabstream/images/scarf.svg", "alt": "首に巻くための、フリンジが付いた赤い長いマフラー。", "width": 240, "height": 180, "source": "ProjectFluence original SVG illustration", "sourceUrl": "/vocabstream/images/scarf.svg", "creator": "ProjectFluence", "license": "CC0-1.0", "credit": "ProjectFluence · CC0-1.0"}, "meaningDistractors": ["socks", "pants"]},
     {
       "word": "sweater",
       "meaning": "warm clothing for the top of the body",

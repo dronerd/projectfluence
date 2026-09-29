@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-business-lesson-7",
+  "title": "Lesson 7",
+  "paragraph": "プロジェクトと業務管理",
+  "words": [
+    {
+      "word": "milestone",
+      "meaning": "an important point or achievement used to track a project's progress",
+      "japaneseMeaning": "重要な節目・マイルストーン",
+      "example": "Completing the first trial is a major milestone.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "deadline",
+        "constraint"
+      ]
+    },
+    {
+      "word": "scope",
+      "meaning": "the agreed range of work and outcomes included in a project",
+      "japaneseMeaning": "業務範囲・スコープ",
+      "example": "The team agreed on the scope before estimating the cost.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "schedule",
+        "capacity"
+      ]
+    },
+    {
+      "word": "schedule",
+      "meaning": "a plan showing when tasks or events will happen",
+      "japaneseMeaning": "工程表・日程計画",
+      "example": "The schedule shows when each stage should begin.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "scope",
+        "inventory"
+      ]
+    },
+    {
+      "word": "constraint",
+      "meaning": "a limit or condition that restricts what a project can do",
+      "japaneseMeaning": "制約条件",
+      "example": "The small budget is an important constraint.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "milestone",
+        "deliverable"
+      ]
+    },
+    {
+      "word": "dependency",
+      "meaning": "a relationship in which one task relies on another task or resource",
+      "japaneseMeaning": "依存関係",
+      "example": "The schedule shows a dependency between design approval and production.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "milestone",
+        "capacity"
+      ]
+    },
+    {
+      "word": "contingency plan",
+      "meaning": "a prepared alternative course of action for a possible problem",
+      "japaneseMeaning": "不測の事態に備えた計画",
+      "example": "The team prepared a contingency plan for delivery delays.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "agenda",
+        "income statement"
+      ],
+      "sentencePractice": {
+        "prompt": "The team prepares an alternative way to deliver the order if the main supplier fails. This is a ____.",
+        "distractors": [
+          "purchase order",
+          "balance sheet"
+        ],
+        "reviewNote": "An alternative course prepared for a possible problem is a contingency plan; an order and a financial position statement do not serve that purpose."
+      }
+    },
+    {
+      "word": "bottleneck",
+      "meaning": "a stage or resource that limits the flow or speed of an entire process",
+      "japaneseMeaning": "ボトルネック・作業の詰まり",
+      "example": "The single packing machine became a bottleneck.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "milestone",
+        "inventory"
+      ]
+    },
+    {
+      "word": "capacity",
+      "meaning": "the maximum amount of work or output a system can handle under stated conditions",
+      "japaneseMeaning": "処理能力・生産能力",
+      "example": "The factory is operating close to full capacity.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "productivity",
+        "workload"
+      ]
+    },
+    {
+      "word": "inventory",
+      "meaning": "the goods and materials a business holds for sale or use",
+      "japaneseMeaning": "在庫",
+      "example": "The warehouse checks inventory at the end of each week.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "liability",
+        "payroll"
+      ],
+      "sentencePractice": {
+        "prompt": "The warehouse record lists the goods and materials the business currently holds. It records the ____.",
+        "distractors": [
+          "payroll",
+          "schedule"
+        ],
+        "reviewNote": "Goods and materials held by the business are inventory; wage records and timing plans are different records."
+      }
+    },
+    {
+      "word": "quality assurance",
+      "meaning": "planned activities that give confidence a process will meet quality requirements",
+      "japaneseMeaning": "品質保証",
+      "example": "Quality assurance includes documented procedures and regular process reviews.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "procurement",
+        "distribution"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # VocabStream curriculum and compatibility audit
 
+This document records the initial implementation at commit `3b5cc04`. For subsequent lesson numbering, content expansion and current validation, see [the expansion report](vocabstream-expansion.md).
+
 ## Scope and architecture
 
 This update extends `codex/vidmatch-curated-catalog`. It does not merge into main, apply hosted migrations, or modify live learner records. It is safe to prepare before deployment; the existing branch's Supabase setup is still required for authenticated progress.

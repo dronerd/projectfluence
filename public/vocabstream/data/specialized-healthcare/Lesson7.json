@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-7",
+  "title": "Lesson 7",
+  "paragraph": "処置と日常のケア",
+  "words": [
+    {
+      "word": "surgery",
+      "meaning": "treatment that involves an operation on the body",
+      "japaneseMeaning": "手術・外科治療",
+      "example": "The team discussed the possible benefits and risks of surgery.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "screening",
+        "rehabilitation"
+      ]
+    },
+    {
+      "word": "anaesthetic",
+      "meaning": "a medicine used to prevent sensation, especially pain, during a procedure",
+      "japaneseMeaning": "麻酔薬",
+      "example": "The clinician explained which anaesthetic would be used.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "dressing",
+        "suture"
+      ],
+      "usageNote": "米国英語では anesthetic と綴ります。",
+      "sentencePractice": {
+        "prompt": "Before the procedure, a clinician gives a medicine to prevent pain and sensation in the area. The medicine is an ____.",
+        "distractors": [
+          "allergy",
+          "appointment"
+        ],
+        "reviewNote": "A medicine that prevents sensation is an anaesthetic; an allergy is an immune reaction and an appointment is an arranged meeting. All three options fit after an."
+      }
+    },
+    {
+      "word": "injection",
+      "meaning": "the delivery of a substance into the body using a needle",
+      "japaneseMeaning": "注射",
+      "example": "The nurse explained the purpose of the injection.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "biopsy",
+        "examination"
+      ]
+    },
+    {
+      "word": "dressing",
+      "meaning": "a protective covering placed directly over a wound",
+      "japaneseMeaning": "創傷被覆材・傷の保護材",
+      "example": "The nurse checked the dressing during the visit.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "suture",
+        "fracture"
+      ]
+    },
+    {
+      "word": "bandage",
+      "meaning": "a strip or piece of material used to wrap, support, or protect a body part",
+      "japaneseMeaning": "包帯",
+      "example": "The bandage helped hold the covering in place.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "suture",
+        "anaesthetic"
+      ]
+    },
+    {
+      "word": "suture",
+      "meaning": "a stitch used to hold the edges of a wound or surgical opening together",
+      "japaneseMeaning": "縫合糸・縫合の一針",
+      "example": "The clinician checked each suture around the wound.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "bandage",
+        "dressing"
+      ]
+    },
+    {
+      "word": "wound",
+      "meaning": "an injury in which the skin or surface tissue is cut or broken",
+      "japaneseMeaning": "傷・創傷",
+      "example": "The nurse recorded the size and appearance of the wound.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "dressing",
+        "biopsy"
+      ]
+    },
+    {
+      "word": "fracture",
+      "meaning": "a crack or break in a bone",
+      "japaneseMeaning": "骨折",
+      "example": "The X-ray showed a fracture near the wrist.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "allergy",
+        "inflammation"
+      ],
+      "sentencePractice": {
+        "prompt": "The image shows a crack through part of the bone. The term for this break is ____.",
+        "distractors": [
+          "inflammation",
+          "infection"
+        ],
+        "reviewNote": "A break or crack in bone is a fracture; inflammation describes a tissue response and infection involves harmful organisms, neither names the break."
+      }
+    },
+    {
+      "word": "pain relief",
+      "meaning": "care or treatment that reduces pain",
+      "japaneseMeaning": "痛みの緩和",
+      "example": "The patient discussed pain relief with the care team.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "screening",
+        "infection control"
+      ]
+    },
+    {
+      "word": "infection control",
+      "meaning": "practices intended to prevent infections from spreading in healthcare settings",
+      "japaneseMeaning": "感染対策",
+      "example": "All staff receive training in infection control.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "pain relief",
+        "rehabilitation"
+      ]
+    }
+  ]
+}

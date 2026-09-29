@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-56",
+  "title": "Lesson 6",
+  "paragraph": "人とのつながりと気持ち",
+  "words": [
+    {
+      "word": "hang out",
+      "meaning": "to spend relaxed time with other people without a particular plan",
+      "japaneseMeaning": "気軽に一緒に過ごす",
+      "example": "We hang out at the park after class.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "show up",
+        "fall out"
+      ]
+    },
+    {
+      "word": "show up",
+      "meaning": "to arrive at a place where someone expects you",
+      "japaneseMeaning": "姿を見せる、現れる",
+      "example": "Only six people showed up for the early practice.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "hang out",
+        "cheer up"
+      ],
+      "sentencePractice": {
+        "prompt": "Everyone is expected at nine, but only two people actually ____; the others never arrive.",
+        "distractors": [
+          "stay away",
+          "turn back"
+        ],
+        "reviewNote": "The contrast is between arriving and not arriving. Staying away means not attending; turning back means reversing direction before arrival."
+      },
+      "usageNote": "ここでは予定された場所に現れる意味。例文の showed up は過去形です。"
+    },
+    {
+      "word": "count on",
+      "meaning": "to trust someone to help you or do what they promised",
+      "japaneseMeaning": "～を頼りにする",
+      "example": "You can count on me to bring the equipment.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "be fed up with",
+        "apologize for"
+      ]
+    },
+    {
+      "word": "get in touch with",
+      "meaning": "to contact someone by calling, writing, or another method",
+      "japaneseMeaning": "～に連絡を取る",
+      "example": "Please get in touch with the office about your booking.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "get along with",
+        "have a crush on"
+      ]
+    },
+    {
+      "word": "fall out",
+      "meaning": "to argue and stop being friendly with someone",
+      "japaneseMeaning": "仲たがいする",
+      "example": "They fell out over money but later became friends again.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "make up",
+        "cheer up"
+      ],
+      "sentencePractice": {
+        "prompt": "They stop speaking to each other after an angry argument. When friends ____ like this, the friendship may need time to recover.",
+        "distractors": [
+          "make up",
+          "get along"
+        ],
+        "reviewNote": "Ending friendly relations after an argument is falling out. Making up restores friendship; getting along describes friendly relations."
+      }
+    },
+    {
+      "word": "apologize for",
+      "meaning": "to say sorry for something you did",
+      "japaneseMeaning": "～について謝る",
+      "example": "I called to apologize for arriving late.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "count on",
+        "be proud of"
+      ]
+    },
+    {
+      "word": "have a chat",
+      "meaning": "to have a friendly, informal conversation",
+      "japaneseMeaning": "気軽におしゃべりする",
+      "example": "Let's have a chat after the meeting.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "keep a promise",
+        "take notes"
+      ]
+    },
+    {
+      "word": "ask someone out",
+      "meaning": "to invite someone to go on a date",
+      "japaneseMeaning": "誰かをデートに誘う",
+      "example": "It can be difficult to ask someone out when you feel shy.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "look after",
+        "let down"
+      ]
+    },
+    {
+      "word": "have a crush on",
+      "meaning": "to have strong romantic feelings for someone, often without telling them",
+      "japaneseMeaning": "～に恋心を抱いている",
+      "example": "I used to have a crush on a classmate.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "be fed up with",
+        "get in touch with"
+      ],
+      "usageNote": "会話で使う表現。相手に気持ちを伝えているとは限りません。"
+    },
+    {
+      "word": "be fed up with",
+      "meaning": "to feel annoyed because something unpleasant has continued too long",
+      "japaneseMeaning": "～にうんざりしている",
+      "example": "You must be fed up with all this noise.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "have a crush on",
+        "be proud of"
+      ]
+    }
+  ]
+}

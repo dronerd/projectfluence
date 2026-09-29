@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-56",
+  "title": "Lesson 6",
+  "paragraph": "議論の筋道を見極める",
+  "words": [
+    {
+      "word": "move the goalposts",
+      "meaning": "to change the requirements unfairly after someone has begun trying to meet them",
+      "japaneseMeaning": "途中で不当に条件を変える",
+      "example": "It is unfair to move the goalposts after applicants have completed the assessment.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "draw a distinction",
+        "concede a point"
+      ],
+      "sentencePractice": {
+        "prompt": "After I met every agreed requirement, the assessor unfairly added new ones. Changing the conditions after the fact is to ____.",
+        "distractors": [
+          "honor the agreement",
+          "apply the original rules"
+        ],
+        "reviewNote": "The required conditions are being changed retrospectively, not honored or applied in their original form."
+      }
+    },
+    {
+      "word": "shift the burden of proof",
+      "meaning": "to make another person responsible for providing evidence for or against a claim",
+      "japaneseMeaning": "立証の責任を相手に移す",
+      "example": "Asking critics to disprove an unsupported claim can shift the burden of proof.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "qualify a claim",
+        "bear out"
+      ]
+    },
+    {
+      "word": "a false dichotomy",
+      "meaning": "a presentation of only two choices when other possibilities exist",
+      "japaneseMeaning": "実際には他の可能性があるのに二択にすること",
+      "example": "Calling the options total freedom or total control creates a false dichotomy.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "a straw man",
+        "a moot point"
+      ]
+    },
+    {
+      "word": "a straw man",
+      "meaning": "a distorted or weaker version of an argument that is easier to attack",
+      "japaneseMeaning": "攻撃しやすいように歪めた相手の主張",
+      "example": "Treating a request for shorter meetings as opposition to teamwork is a straw man.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a false dichotomy",
+        "a red herring"
+      ],
+      "sentencePractice": {
+        "prompt": "I asked for shorter meetings. Calling that a demand to ban all teamwork distorts my position into ____ that is easier to attack.",
+        "distractors": [
+          "a faithful summary",
+          "a direct quotation"
+        ],
+        "reviewNote": "The original position has been exaggerated and misrepresented. Neither an accurate summary nor an exact quotation would make that change."
+      }
+    },
+    {
+      "word": "play devil's advocate",
+      "meaning": "to argue for a view you may not believe in order to test another argument",
+      "japaneseMeaning": "議論を検証するためあえて反対側に立つ",
+      "example": "Let me play devil's advocate: what if the demand never grows?",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "concede a point",
+        "reach a consensus"
+      ],
+      "usageNote": "実際の信念と同じ意見を述べているとは限りません。議論を試す役割を指します。"
+    },
+    {
+      "word": "a moot point",
+      "meaning": "a question that no longer matters to the practical outcome",
+      "japaneseMeaning": "今となっては実際の結果に影響しない論点",
+      "example": "Whether the room was large enough became a moot point when the event was cancelled.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "a sticking point",
+        "a false dichotomy"
+      ],
+      "usageNote": "ここでは「もはや実際の意味を持たない論点」の用法。moot は「議論の余地がある」という意味でも使われ、地域や文脈で解釈が異なります。"
+    },
+    {
+      "word": "split hairs",
+      "meaning": "to argue about differences so small that they do not matter in the situation",
+      "japaneseMeaning": "重要でない細かな違いにこだわる",
+      "example": "We agree on the substance; let's not split hairs over that one word.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "concede a point",
+        "move the goalposts"
+      ]
+    },
+    {
+      "word": "a red herring",
+      "meaning": "information introduced into a discussion that distracts from its real issue",
+      "japaneseMeaning": "本題から注意をそらす情報や話題",
+      "example": "The candidate's favorite sport was a red herring in the debate about transport funding.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a straw man",
+        "a vested interest"
+      ]
+    },
+    {
+      "word": "argue in good faith",
+      "meaning": "to discuss a disagreement honestly rather than trying to deceive others",
+      "japaneseMeaning": "相手を欺かず誠実に議論する",
+      "example": "People can disagree strongly and still argue in good faith.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "move the goalposts",
+        "pay lip service to"
+      ]
+    },
+    {
+      "word": "poke holes in",
+      "meaning": "to find and point out weaknesses in an idea or argument",
+      "japaneseMeaning": "考えや議論の弱点を指摘する",
+      "example": "A careful reviewer should poke holes in the proposal before we rely on it.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "bear out",
+        "bring to fruition"
+      ]
+    }
+  ]
+}

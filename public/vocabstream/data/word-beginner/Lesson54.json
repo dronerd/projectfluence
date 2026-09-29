@@ -12,6 +12,6 @@
     { "word": "song", "meaning": "music with words", "japaneseMeaning": "歌", "synonyms": "music, tune", "antonyms": "", "forms": "song, songs", "example": "This song is easy to sing." },
     { "word": "music", "meaning": "sounds that people sing or play", "japaneseMeaning": "音楽", "synonyms": "song, tune", "antonyms": "", "forms": "music", "example": "We listen to music after school." },
     { "word": "photo", "meaning": "a picture made with a camera", "japaneseMeaning": "写真", "synonyms": "picture, image", "antonyms": "", "forms": "photo, photos", "example": "Take a photo of the flowers." },
-    { "word": "camera", "meaning": "a thing used to take photos", "japaneseMeaning": "カメラ", "synonyms": "", "antonyms": "", "forms": "camera, cameras", "example": "This camera is easy to use." }
+    {"word": "camera", "meaning": "a thing used to take photos", "japaneseMeaning": "カメラ", "synonyms": "", "antonyms": "", "forms": "camera, cameras", "example": "This camera is easy to use.", "definitionType": "image+text", "image": {"src": "/vocabstream/images/camera.svg", "alt": "丸いレンズとシャッターボタンがある、写真を撮るカメラ。", "width": 240, "height": 180, "source": "ProjectFluence original SVG illustration", "sourceUrl": "/vocabstream/images/camera.svg", "creator": "ProjectFluence", "license": "CC0-1.0", "credit": "ProjectFluence · CC0-1.0"}, "meaningDistractors": ["book", "pencil"]}
   ]
 }

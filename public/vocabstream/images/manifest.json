@@ -483,6 +483,646 @@
         "license": "CC0-1.0",
         "credit": "ProjectFluence · CC0-1.0"
       }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 4,
+      "word": "pants",
+      "image": {
+        "src": "/vocabstream/images/pants.svg",
+        "alt": "腰から両足を別々に包む、ベージュ色の長いズボン。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pants.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 4,
+      "word": "skirt",
+      "image": {
+        "src": "/vocabstream/images/skirt.svg",
+        "alt": "ウエストから下に広がる、青いスカート。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/skirt.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 4,
+      "word": "scarf",
+      "image": {
+        "src": "/vocabstream/images/scarf.svg",
+        "alt": "首に巻くための、フリンジが付いた赤い長いマフラー。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/scarf.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "cat",
+      "image": {
+        "src": "/vocabstream/images/cat.svg",
+        "alt": "とがった耳とひげ、丸く曲がったしっぽを持つ、座った猫。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/cat.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "rabbit",
+      "image": {
+        "src": "/vocabstream/images/rabbit.svg",
+        "alt": "長い二本の耳と短い丸いしっぽがある、白いうさぎ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/rabbit.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "mouse",
+      "image": {
+        "src": "/vocabstream/images/mouse.svg",
+        "alt": "大きな丸い耳、とがった鼻、細く長いしっぽがある小さなねずみ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/mouse.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "cow",
+      "image": {
+        "src": "/vocabstream/images/cow.svg",
+        "alt": "白黒の模様、角、乳房がある牛。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/cow.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "pig",
+      "image": {
+        "src": "/vocabstream/images/pig.svg",
+        "alt": "丸い体、平たい鼻、くるりと巻いたしっぽのあるピンク色の豚。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pig.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "sheep",
+      "image": {
+        "src": "/vocabstream/images/sheep.svg",
+        "alt": "ふわふわした白い羊毛と、黒っぽい顔と足がある羊。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/sheep.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "goat",
+      "image": {
+        "src": "/vocabstream/images/goat.svg",
+        "alt": "後ろに曲がる二本の角、細いひげ、短い毛を持つヤギ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/goat.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "duck",
+      "image": {
+        "src": "/vocabstream/images/duck.svg",
+        "alt": "平たいオレンジ色のくちばしと水かきのある、白いアヒル。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/duck.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "lion",
+      "image": {
+        "src": "/vocabstream/images/lion.svg",
+        "alt": "顔のまわりに茶色いたてがみがある、金色のライオン。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/lion.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 8,
+      "word": "tiger",
+      "image": {
+        "src": "/vocabstream/images/tiger.svg",
+        "alt": "オレンジ色の毛に黒い縞があるトラ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/tiger.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 9,
+      "word": "mountain",
+      "image": {
+        "src": "/vocabstream/images/mountain.svg",
+        "alt": "ふもとに木があり、頂上に雪をかぶった高い山。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/mountain.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 9,
+      "word": "bike",
+      "image": {
+        "src": "/vocabstream/images/bike.svg",
+        "alt": "二つの車輪、ペダル、サドル、ハンドルがある自転車。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/bike.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 9,
+      "word": "car",
+      "image": {
+        "src": "/vocabstream/images/car.svg",
+        "alt": "窓、二つのドア、タイヤが見える青い乗用車。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/car.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 26,
+      "word": "wallet",
+      "image": {
+        "src": "/vocabstream/images/wallet.svg",
+        "alt": "カードと紙幣を入れる、小さな茶色い二つ折りの財布。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/wallet.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 26,
+      "word": "key",
+      "image": {
+        "src": "/vocabstream/images/key.svg",
+        "alt": "丸い持ち手とギザギザの先がある、小さな金色の鍵。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/key.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 26,
+      "word": "towel",
+      "image": {
+        "src": "/vocabstream/images/towel.svg",
+        "alt": "棒に掛けられた、端に織り模様がある青いタオル。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/towel.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 26,
+      "word": "soap",
+      "image": {
+        "src": "/vocabstream/images/soap.svg",
+        "alt": "せっけん皿の上に置かれた、泡の付いた固形せっけん。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/soap.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 26,
+      "word": "umbrella",
+      "image": {
+        "src": "/vocabstream/images/umbrella.svg",
+        "alt": "丸く開いた青い傘と、曲がった持ち手。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/umbrella.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 30,
+      "word": "suitcase",
+      "image": {
+        "src": "/vocabstream/images/suitcase.svg",
+        "alt": "伸ばした持ち手と小さな車輪がある、旅行用のスーツケース。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/suitcase.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 42,
+      "word": "oven",
+      "image": {
+        "src": "/vocabstream/images/oven.svg",
+        "alt": "温度つまみと、庫内の棚が見えるガラス扉を持つオーブン。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/oven.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 42,
+      "word": "bowl",
+      "image": {
+        "src": "/vocabstream/images/bowl.svg",
+        "alt": "深く丸い形の青いボウル。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/bowl.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 42,
+      "word": "fork",
+      "image": {
+        "src": "/vocabstream/images/fork.svg",
+        "alt": "先が四本に分かれ、長い柄がある金属のフォーク。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/fork.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 42,
+      "word": "ladle",
+      "image": {
+        "src": "/vocabstream/images/ladle.svg",
+        "alt": "汁をすくうための深い丸い部分と、長い柄があるお玉。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/ladle.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 42,
+      "word": "pan",
+      "image": {
+        "src": "/vocabstream/images/pan.svg",
+        "alt": "浅く丸い黒い調理部分と、長い柄があるフライパン。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pan.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 54,
+      "word": "camera",
+      "image": {
+        "src": "/vocabstream/images/camera.svg",
+        "alt": "丸いレンズとシャッターボタンがある、写真を撮るカメラ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/camera.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 62,
+      "word": "cloud",
+      "image": {
+        "src": "/vocabstream/images/cloud.svg",
+        "alt": "青い空に浮かぶ、ふくらみのある白い雲。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/cloud.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 62,
+      "word": "ice",
+      "image": {
+        "src": "/vocabstream/images/ice.svg",
+        "alt": "少し溶けた水の上にある、透明な青い四角い氷。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/ice.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 62,
+      "word": "leaf",
+      "image": {
+        "src": "/vocabstream/images/leaf.svg",
+        "alt": "中央から細い葉脈が広がる、一枚の緑の葉。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/leaf.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 70,
+      "word": "turtle",
+      "image": {
+        "src": "/vocabstream/images/turtle.svg",
+        "alt": "六角形の模様がある硬い甲羅と、短い足を持つカメ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/turtle.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 70,
+      "word": "frog",
+      "image": {
+        "src": "/vocabstream/images/frog.svg",
+        "alt": "大きな目と長い後ろ足がある、緑色のカエル。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/frog.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 70,
+      "word": "snake",
+      "image": {
+        "src": "/vocabstream/images/snake.svg",
+        "alt": "足がなく、細長い体をくねらせている緑色のヘビ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/snake.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 70,
+      "word": "panda",
+      "image": {
+        "src": "/vocabstream/images/panda.svg",
+        "alt": "白い体に黒い耳、目のまわり、足があるパンダ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/panda.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 70,
+      "word": "dolphin",
+      "image": {
+        "src": "/vocabstream/images/dolphin.svg",
+        "alt": "背びれ、長い口先、横に広がる尾びれがあるイルカ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/dolphin.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 74,
+      "word": "ferry",
+      "image": {
+        "src": "/vocabstream/images/ferry.svg",
+        "alt": "車と乗客を運ぶための甲板がある、水上のフェリー。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/ferry.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 78,
+      "word": "glove",
+      "image": {
+        "src": "/vocabstream/images/glove.svg",
+        "alt": "五本の指を別々に包む、片手用の手袋。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/glove.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 86,
+      "word": "keyboard",
+      "image": {
+        "src": "/vocabstream/images/keyboard.svg",
+        "alt": "文字入力に使う、たくさんのキーと長いスペースキーが並ぶキーボード。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/keyboard.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
+    },
+    {
+      "category": "word-beginner",
+      "lessonNumber": 98,
+      "word": "ambulance",
+      "image": {
+        "src": "/vocabstream/images/ambulance.svg",
+        "alt": "緊急用のライトと青い医療マークが付いた、患者を運ぶ救急車。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/ambulance.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      }
     }
   ]
 }

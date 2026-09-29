@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>少し溶けた水の上にある、透明な青い四角い氷。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="121" cy="149" rx="79" ry="14" fill="#d6edf0" stroke="#a8ced9"/><path fill="#badde5" d="m56 79 52-17 31 24-9 59-52 6-25-25Z"/><path fill="#e3f3f3" d="m56 79 52-17 31 24-53 18Z"/><path d="m86 104-8 47m8-47 53-18"/><path fill="#b2d8e5" d="m127 49 42-9 26 23-8 57-43 10-20-24Z"/><path fill="#e9f5f3" d="m127 49 42-9 26 23-45 12Z"/><path d="m150 75-6 55m6-55 45-12"/><path stroke="#f9fcfa" stroke-width="5" d="m66 106-3 16m93-35-2 22"/></g>
+</svg>

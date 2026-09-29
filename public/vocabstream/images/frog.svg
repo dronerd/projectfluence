@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>大きな目と長い後ろ足がある、緑色のカエル。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="120" cy="117" rx="42" ry="35" fill="#91ba79"/><path fill="#91ba79" d="M89 113q-35-27-47 7-8 24 37 29l10-14-24-9m86-13q35-27 47 7 8 24-37 29l-10-14 24-9"/><circle cx="95" cy="65" r="21" fill="#91ba79"/><circle cx="146" cy="65" r="21" fill="#91ba79"/><ellipse cx="120" cy="87" rx="50" ry="29" fill="#a7ca87"/><circle cx="95" cy="62" r="11" fill="#f7f8e7"/><circle cx="146" cy="62" r="11" fill="#f7f8e7"/><circle cx="98" cy="63" r="4" fill="#40565b"/><circle cx="143" cy="63" r="4" fill="#40565b"/><path d="M96 90q24 20 48 0m-41 31-7 31-14 2m55-33 7 31 14 2"/><ellipse cx="120" cy="118" rx="20" ry="13" fill="#c5d9a1" stroke="none"/></g>
+</svg>

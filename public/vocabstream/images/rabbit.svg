@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>長い二本の耳と短い丸いしっぽがある、白いうさぎ。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="169" cy="129" r="17" fill="#fff"/><ellipse cx="126" cy="121" rx="43" ry="33" fill="#eef1ed"/><ellipse cx="90" cy="43" rx="12" ry="30" fill="#eef1ed" transform="rotate(-12 90 43)"/><ellipse cx="116" cy="42" rx="12" ry="31" fill="#eef1ed" transform="rotate(10 116 42)"/><path stroke="#e5b4b0" stroke-width="7" d="m87 25 5 31m26-33-4 33"/><ellipse cx="101" cy="87" rx="31" ry="29" fill="#eef1ed"/><ellipse cx="115" cy="148" rx="28" ry="10" fill="#fff"/><circle cx="89" cy="84" r="2" fill="#40565b"/><circle cx="113" cy="84" r="2" fill="#40565b"/><path fill="#df9492" d="m97 92 8 0-4 5Z"/><path d="M101 97v7m-20-9-14-3m55 3 14-3"/></g>
+</svg>

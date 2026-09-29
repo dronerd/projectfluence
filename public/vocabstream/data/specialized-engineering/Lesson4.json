@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-engineering-lesson-4",
+  "title": "Lesson 4",
+  "paragraph": "図面と寸法",
+  "words": [
+    {
+      "word": "dimension",
+      "meaning": "a measurement of an object's size in a particular direction",
+      "japaneseMeaning": "寸法",
+      "example": "Check each dimension before cutting the sheet.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "angle",
+        "drawing"
+      ]
+    },
+    {
+      "word": "diameter",
+      "meaning": "the distance across a circle through its centre",
+      "japaneseMeaning": "直径",
+      "example": "The pipe has a diameter of twenty millimetres.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "radius",
+        "thickness"
+      ],
+      "sentencePractice": {
+        "prompt": "A line runs across a circle through its centre from one edge to the other. Its length is the ____.",
+        "distractors": [
+          "radius",
+          "thickness"
+        ],
+        "reviewNote": "The complete centre-crossing width is the diameter; a radius reaches only one edge and thickness is a layer measurement."
+      }
+    },
+    {
+      "word": "radius",
+      "meaning": "the distance from the centre of a circle to its edge",
+      "japaneseMeaning": "半径",
+      "example": "The drawing specifies a radius of five centimetres.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "diameter",
+        "angle"
+      ]
+    },
+    {
+      "word": "length",
+      "meaning": "the distance from one end of something to the other",
+      "japaneseMeaning": "長さ",
+      "example": "Measure the length of the cable before installation.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "angle",
+        "scale"
+      ]
+    },
+    {
+      "word": "thickness",
+      "meaning": "the distance between the opposite surfaces of a sheet, wall, or layer",
+      "japaneseMeaning": "厚さ",
+      "example": "The coating has a uniform thickness.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "radius",
+        "length"
+      ]
+    },
+    {
+      "word": "angle",
+      "meaning": "the amount of turn between two lines or surfaces that meet",
+      "japaneseMeaning": "角度",
+      "example": "Set the blade at an angle of forty-five degrees.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "diameter",
+        "clearance"
+      ]
+    },
+    {
+      "word": "scale",
+      "meaning": "the ratio between distances on a drawing and the corresponding real distances",
+      "japaneseMeaning": "縮尺",
+      "example": "The drawing uses a scale of one to fifty.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "dimension",
+        "angle"
+      ],
+      "usageNote": "ここでは製図の縮尺の意味。計量器という意味もあります。"
+    },
+    {
+      "word": "drawing",
+      "meaning": "a technical picture showing the shape, dimensions, or arrangement of a design",
+      "japaneseMeaning": "図面",
+      "example": "The technician followed the drawing when positioning the holes.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "dimension",
+        "clearance"
+      ]
+    },
+    {
+      "word": "cross section",
+      "meaning": "a view showing what an object would look like if cut through at a chosen position",
+      "japaneseMeaning": "断面図",
+      "example": "The cross section shows the hollow space inside the pipe.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "scale",
+        "tolerance"
+      ]
+    },
+    {
+      "word": "clearance",
+      "meaning": "the space left between parts to allow movement or avoid contact",
+      "japaneseMeaning": "隙間・クリアランス",
+      "example": "Leave enough clearance for the door to open fully.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "thickness",
+        "diameter"
+      ],
+      "sentencePractice": {
+        "prompt": "The parts must move without touching, so the design leaves a small gap between them. That gap is the ____.",
+        "distractors": [
+          "thickness",
+          "diameter"
+        ],
+        "reviewNote": "The intended gap between parts is clearance; the other measurements describe the material or circular shape itself."
+      }
+    }
+  ]
+}

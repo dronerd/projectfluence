@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-environment-lesson-5",
+  "title": "Lesson 5",
+  "paragraph": "生物と生態系の関係",
+  "words": [
+    {
+      "word": "native species",
+      "meaning": "a species that occurs naturally in a particular region rather than having been introduced there",
+      "japaneseMeaning": "在来種",
+      "example": "The planting plan includes native species from the region.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "invasive species",
+        "endangered species"
+      ]
+    },
+    {
+      "word": "endangered species",
+      "meaning": "a species facing a high risk of extinction",
+      "japaneseMeaning": "絶滅危惧種",
+      "example": "The survey monitors an endangered species of bird.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "native species",
+        "invasive species"
+      ]
+    },
+    {
+      "word": "extinction",
+      "meaning": "the complete disappearance of a species when none of its members remain alive",
+      "japaneseMeaning": "絶滅",
+      "example": "Habitat protection can help prevent extinction.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "migration",
+        "pollination"
+      ]
+    },
+    {
+      "word": "predator",
+      "meaning": "an animal that hunts and eats other animals",
+      "japaneseMeaning": "捕食者",
+      "example": "The owl is a predator that hunts at night.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "prey",
+        "decomposer"
+      ],
+      "sentencePractice": {
+        "prompt": "The owl hunts and eats small animals. In this feeding relationship, the owl is the ____.",
+        "distractors": [
+          "prey",
+          "decomposer"
+        ],
+        "reviewNote": "The hunting animal is the predator; prey is the hunted animal and a decomposer breaks down dead material."
+      }
+    },
+    {
+      "word": "prey",
+      "meaning": "an animal hunted and eaten by another animal",
+      "japaneseMeaning": "被食者・獲物",
+      "example": "The small fish became prey for the larger fish.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "predator",
+        "decomposer"
+      ]
+    },
+    {
+      "word": "decomposer",
+      "meaning": "an organism that breaks down dead material and releases nutrients",
+      "japaneseMeaning": "分解者",
+      "example": "A decomposer helps return nutrients to the soil.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "predator",
+        "prey"
+      ]
+    },
+    {
+      "word": "nutrient",
+      "meaning": "a substance that an organism needs to grow and carry out life processes",
+      "japaneseMeaning": "栄養素",
+      "example": "The study measured the amount of each nutrient in the soil.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "pollutant",
+        "sediment"
+      ]
+    },
+    {
+      "word": "photosynthesis",
+      "meaning": "the process by which plants and some other organisms use light energy to make sugars",
+      "japaneseMeaning": "光合成",
+      "example": "The leaves use sunlight during photosynthesis.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "pollination",
+        "migration"
+      ],
+      "sentencePractice": {
+        "prompt": "The leaves use light energy to produce sugars. This process is called ____.",
+        "distractors": [
+          "pollination",
+          "migration"
+        ],
+        "reviewNote": "Using light to produce sugars identifies photosynthesis; moving pollen and seasonal animal movement are different processes."
+      }
+    },
+    {
+      "word": "migration",
+      "meaning": "the regular movement of animals between regions, often with the seasons",
+      "japaneseMeaning": "渡り・移動",
+      "example": "The island is an important stop during bird migration.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "extinction",
+        "pollination"
+      ]
+    },
+    {
+      "word": "breeding season",
+      "meaning": "the part of the year when animals mate and produce young",
+      "japaneseMeaning": "繁殖期",
+      "example": "Visitors avoid the nesting area during the breeding season.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "food chain",
+        "life cycle"
+      ]
+    }
+  ]
+}

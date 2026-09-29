@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>五本の指を別々に包む、片手用の手袋。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#b591b4" d="M83 137 58 96q-6-12 4-17 8-5 16 7l9 12-6-55q-1-15 10-15 11 0 12 14l4 38-1-52q0-16 11-16t12 15l1 53 4-48q1-14 12-13t10 15l-3 51 7-34q3-13 13-10t8 16l-9 64-17 26v17H86Z"/><path fill="#94779b" d="M82 134h75v26H82Z"/><path stroke="#dec7dd" d="M95 140v14m13-14v14m13-14v14m13-14v14m13-14v14"/></g>
+</svg>

@@ -1,0 +1,144 @@
+{
+  "lesson_id": "idioms-beginner-lesson-56",
+  "title": "Lesson 6",
+  "paragraph": "食事と買い物のやりとり",
+  "words": [
+    {
+      "word": "have lunch",
+      "meaning": "to eat your meal in the middle of the day",
+      "japaneseMeaning": "昼食を食べる",
+      "example": "We have lunch at twelve on school days.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "have breakfast",
+        "go to bed"
+      ],
+      "sentencePractice": {
+        "prompt": "I eat my midday meal at one. That is when I ____.",
+        "distractors": [
+          "have breakfast",
+          "go to bed"
+        ],
+        "reviewNote": "The explicit midday meal identifies lunch. Breakfast is the first morning meal; going to bed is not eating."
+      }
+    },
+    {
+      "word": "set the table",
+      "meaning": "to put plates, glasses, and other things on a table before a meal",
+      "japaneseMeaning": "食事の食器を並べる",
+      "example": "Please set the table while I cook.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "clear the table",
+        "do the shopping"
+      ],
+      "sentencePractice": {
+        "prompt": "Before the meal, please ____ by putting a plate and a fork in front of every chair.",
+        "distractors": [
+          "clear the table",
+          "do the shopping"
+        ],
+        "reviewNote": "Placing plates and forks before eating sets the table. Clearing removes them; shopping means buying supplies."
+      }
+    },
+    {
+      "word": "clear the table",
+      "meaning": "to take plates and other things off a table after a meal",
+      "japaneseMeaning": "食後に食器を下げる",
+      "example": "We clear the table together after dinner.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "set the table",
+        "make the bed"
+      ]
+    },
+    {
+      "word": "do the shopping",
+      "meaning": "to buy the food and other things you need",
+      "japaneseMeaning": "日用品などの買い物をする",
+      "example": "I do the shopping on Saturday mornings.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "wash up",
+        "take a shower"
+      ]
+    },
+    {
+      "word": "keep the change",
+      "meaning": "to keep the money that would normally be given back after a payment",
+      "japaneseMeaning": "お釣りを取っておく",
+      "example": "The coffee is four euros. Here are five; keep the change.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "pay for",
+        "try on"
+      ]
+    },
+    {
+      "word": "anything else",
+      "meaning": "used to ask whether someone wants something more",
+      "japaneseMeaning": "ほかに何かありますか",
+      "example": "You have ordered a tea. Would you like anything else?",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "how much",
+        "see you later"
+      ]
+    },
+    {
+      "word": "no thanks",
+      "meaning": "used to say politely that you do not want something",
+      "japaneseMeaning": "いいえ、結構です",
+      "example": "Would you like more rice? No thanks, I've had enough.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "of course",
+        "thank you"
+      ]
+    },
+    {
+      "word": "be full",
+      "meaning": "to have eaten enough and not want more food",
+      "japaneseMeaning": "お腹がいっぱいである",
+      "example": "After such a big lunch, you must be full.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "get dressed",
+        "get ready"
+      ]
+    },
+    {
+      "word": "help yourself",
+      "meaning": "to take some of the food or drink that someone is offering",
+      "japaneseMeaning": "食べ物や飲み物を自由に取る",
+      "example": "There is bread on the table. Please help yourself.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "take care",
+        "get dressed"
+      ]
+    },
+    {
+      "word": "eat in",
+      "meaning": "to eat your food inside the place where you bought it",
+      "japaneseMeaning": "店内で食べる",
+      "example": "I'd like a sandwich to eat in, please.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "take away",
+        "clean up"
+      ],
+      "usageNote": "ここでは、買った店の中で食べる意味。店外に持ち帰る take away と対比します。"
+    }
+  ]
+}

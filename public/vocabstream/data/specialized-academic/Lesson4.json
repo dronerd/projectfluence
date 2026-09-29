@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-academic-lesson-4",
+  "title": "Lesson 4",
+  "paragraph": "研究の計画と倫理",
+  "words": [
+    {
+      "word": "objective",
+      "meaning": "a specific aim that a study or project intends to achieve",
+      "japaneseMeaning": "研究目標・目的",
+      "example": "The main objective is to compare the two teaching methods.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "limitation",
+        "hypothesis"
+      ],
+      "sentencePractice": {
+        "prompt": "The study aims to compare two teaching methods. This specific aim is its ____.",
+        "distractors": [
+          "limitation",
+          "hypothesis"
+        ],
+        "reviewNote": "The intended aim is an objective; a restriction and a testable proposed explanation are different research concepts."
+      }
+    },
+    {
+      "word": "scope",
+      "meaning": "the boundaries of the topics, people, or questions a study covers",
+      "japaneseMeaning": "研究の範囲",
+      "example": "The scope excludes students outside the selected age group.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "objective",
+        "rationale"
+      ]
+    },
+    {
+      "word": "rationale",
+      "meaning": "the reasoning that explains why a study or decision is needed or appropriate",
+      "japaneseMeaning": "研究の根拠・理由付け",
+      "example": "The introduction gives the rationale for choosing this topic.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "hypothesis",
+        "conclusion"
+      ]
+    },
+    {
+      "word": "framework",
+      "meaning": "a connected structure of concepts used to organize a study or explanation",
+      "japaneseMeaning": "理論的枠組み",
+      "example": "The framework links the main concepts in the study.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "sample",
+        "abstract"
+      ]
+    },
+    {
+      "word": "research proposal",
+      "meaning": "a document describing a planned study and explaining how and why it will be done",
+      "japaneseMeaning": "研究計画書",
+      "example": "She submitted a research proposal before collecting data.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "manuscript",
+        "reference list"
+      ]
+    },
+    {
+      "word": "pilot study",
+      "meaning": "a small preliminary study used to check whether methods or procedures are workable",
+      "japaneseMeaning": "予備研究・パイロット研究",
+      "example": "The pilot study revealed that some questions were unclear.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "replication",
+        "literature review"
+      ],
+      "sentencePractice": {
+        "prompt": "Before the full project, the researchers run a small preliminary version to check the procedures. This is a ____.",
+        "distractors": [
+          "literature review",
+          "replication"
+        ],
+        "reviewNote": "A preliminary check of planned procedures is a pilot study; reviewing earlier work or repeating a study to check findings serves a different stated purpose."
+      }
+    },
+    {
+      "word": "feasibility",
+      "meaning": "whether a planned study can reasonably be carried out with available time and resources",
+      "japaneseMeaning": "実施可能性",
+      "example": "The team assessed feasibility before recruiting participants.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "validity",
+        "reliability"
+      ]
+    },
+    {
+      "word": "ethics approval",
+      "meaning": "formal permission from a review body to conduct research after considering ethical requirements",
+      "japaneseMeaning": "研究倫理の承認",
+      "example": "The researchers obtained ethics approval before recruiting participants.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "informed consent",
+        "peer review"
+      ]
+    },
+    {
+      "word": "informed consent",
+      "meaning": "a person's voluntary agreement to participate after receiving and understanding relevant information",
+      "japaneseMeaning": "十分な説明に基づく同意",
+      "example": "The information sheet supported the process of informed consent.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "ethics approval",
+        "anonymity"
+      ]
+    },
+    {
+      "word": "anonymity",
+      "meaning": "a condition in which a person's identity is not known or linked to their information",
+      "japaneseMeaning": "匿名性",
+      "example": "The survey was designed to protect participants' anonymity.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "informed consent",
+        "reliability"
+      ]
+    }
+  ]
+}

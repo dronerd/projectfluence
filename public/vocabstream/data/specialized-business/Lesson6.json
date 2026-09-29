@@ -1,0 +1,146 @@
+{
+  "lesson_id": "specialized-business-lesson-6",
+  "title": "Lesson 6",
+  "paragraph": "採用とチーム運営",
+  "words": [
+    {
+      "word": "recruitment",
+      "meaning": "the process of finding and selecting people for jobs",
+      "japaneseMeaning": "採用活動",
+      "example": "Recruitment begins after the new position is approved.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "retention",
+        "delegation"
+      ]
+    },
+    {
+      "word": "vacancy",
+      "meaning": "a job or position that is available because nobody currently holds it",
+      "japaneseMeaning": "欠員・空きポスト",
+      "example": "The company advertised a vacancy in the support team.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "appraisal",
+        "promotion"
+      ],
+      "sentencePractice": {
+        "prompt": "The support role has no employee in it, and the company is advertising for someone to fill it. There is a ____.",
+        "distractors": [
+          "promotion",
+          "milestone"
+        ],
+        "reviewNote": "An unfilled job available to applicants is a vacancy; a higher job assignment and a project checkpoint are different concepts."
+      }
+    },
+    {
+      "word": "applicant",
+      "meaning": "a person who formally asks to be considered for a job or opportunity",
+      "japaneseMeaning": "応募者",
+      "example": "Each applicant completed a short interview.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "customer",
+        "supplier"
+      ]
+    },
+    {
+      "word": "onboarding",
+      "meaning": "the process of helping a new employee learn their role and workplace",
+      "japaneseMeaning": "入社時の受け入れ・導入支援",
+      "example": "The onboarding programme introduces new staff to the team.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "recruitment",
+        "appraisal"
+      ],
+      "usageNote": "ここでは新入社員の受け入れを指します。新しい顧客の利用開始にも使います。"
+    },
+    {
+      "word": "probation",
+      "meaning": "an initial period during which an employer assesses a new employee's suitability",
+      "japaneseMeaning": "試用期間",
+      "example": "The manager discussed progress halfway through probation.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "promotion",
+        "turnover"
+      ]
+    },
+    {
+      "word": "appraisal",
+      "meaning": "a planned review of an employee's performance and development",
+      "japaneseMeaning": "人事評価・業績面談",
+      "example": "Her appraisal included goals for the coming year.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "onboarding",
+        "recruitment"
+      ]
+    },
+    {
+      "word": "promotion",
+      "meaning": "a move to a job with higher responsibility or status",
+      "japaneseMeaning": "昇進",
+      "example": "He received a promotion to team leader.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "delegation",
+        "retention"
+      ],
+      "usageNote": "ここでは職位の昇進です。販売促進という別の意味もあります。"
+    },
+    {
+      "word": "delegation",
+      "meaning": "giving another person responsibility and authority to carry out a task",
+      "japaneseMeaning": "業務や権限の委任",
+      "example": "Effective delegation gives team members clear responsibilities.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "promotion",
+        "recruitment"
+      ],
+      "sentencePractice": {
+        "prompt": "The manager gives a colleague responsibility and authority to organize the event. This is an example of ____.",
+        "distractors": [
+          "promotion",
+          "recruitment"
+        ],
+        "reviewNote": "Assigning responsibility and authority for a task is delegation; it does not necessarily change a job level or hire a new employee."
+      }
+    },
+    {
+      "word": "workload",
+      "meaning": "the amount of work assigned to a person or team",
+      "japaneseMeaning": "仕事量・業務負荷",
+      "example": "The manager adjusted the workload when two people were away.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "payroll",
+        "vacancy"
+      ]
+    },
+    {
+      "word": "turnover",
+      "meaning": "the rate at which employees leave an organization and are replaced",
+      "japaneseMeaning": "従業員の離職・入れ替わり",
+      "example": "The company studied employee turnover in its first year.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "retention",
+        "recruitment"
+      ],
+      "usageNote": "ここでは従業員の入れ替わりです。英国英語では売上高の意味もあります。"
+    }
+  ]
+}

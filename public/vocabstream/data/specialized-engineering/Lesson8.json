@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-engineering-lesson-8",
+  "title": "Lesson 8",
+  "paragraph": "エネルギーと設備保護",
+  "words": [
+    {
+      "word": "motor",
+      "meaning": "a machine that converts electrical energy into mechanical movement",
+      "japaneseMeaning": "モーター・電動機",
+      "example": "The motor drives the conveyor belt.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "generator",
+        "transformer"
+      ],
+      "usageNote": "ここでは電動モーターの意味です。"
+    },
+    {
+      "word": "generator",
+      "meaning": "a machine that converts mechanical movement into electrical energy",
+      "japaneseMeaning": "発電機",
+      "example": "The turbine turns a generator to produce electricity.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "motor",
+        "transformer"
+      ],
+      "sentencePractice": {
+        "prompt": "The machine takes rotation from a turbine and produces electrical energy. It is a ____.",
+        "distractors": [
+          "motor",
+          "transformer"
+        ],
+        "reviewNote": "Mechanical-to-electrical conversion identifies a generator; a motor reverses that conversion and a transformer transfers electrical energy."
+      }
+    },
+    {
+      "word": "battery",
+      "meaning": "a device that stores chemical energy and can supply it as electrical energy",
+      "japaneseMeaning": "電池",
+      "example": "The battery powers the sensor when the main supply is off.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "generator",
+        "transformer"
+      ]
+    },
+    {
+      "word": "transformer",
+      "meaning": "an electrical device that transfers energy between circuits and commonly changes alternating voltage",
+      "japaneseMeaning": "変圧器",
+      "example": "The transformer reduces the voltage for the control circuit.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "motor",
+        "generator"
+      ]
+    },
+    {
+      "word": "fuse",
+      "meaning": "a protective device with a part that melts to break a circuit when current is too high",
+      "japaneseMeaning": "ヒューズ",
+      "example": "The technician replaced the damaged fuse after finding the fault.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "battery",
+        "transformer"
+      ],
+      "sentencePractice": {
+        "prompt": "Excessive current melts a thin internal part and breaks the circuit. The protective device is a ____.",
+        "distractors": [
+          "battery",
+          "transformer"
+        ],
+        "reviewNote": "A deliberately melting protective element identifies a fuse; energy storage and voltage transformation do not describe it."
+      }
+    },
+    {
+      "word": "circuit breaker",
+      "meaning": "a resettable protective switch that interrupts a circuit when a fault is detected",
+      "japaneseMeaning": "回路遮断器",
+      "example": "The circuit breaker opened when the current became too high.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "generator",
+        "transformer"
+      ]
+    },
+    {
+      "word": "heat transfer",
+      "meaning": "the movement of thermal energy from a warmer place or object to a cooler one",
+      "japaneseMeaning": "熱伝達・熱移動",
+      "example": "The model describes heat transfer through the wall.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "lubrication",
+        "vibration"
+      ]
+    },
+    {
+      "word": "insulation",
+      "meaning": "material or a system used to reduce the transfer of heat, electricity, or sound",
+      "japaneseMeaning": "断熱・絶縁",
+      "example": "The insulation around the wire prevents electrical contact with the metal case.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "lubrication",
+        "cooling"
+      ]
+    },
+    {
+      "word": "cooling",
+      "meaning": "the removal of heat to lower or control temperature",
+      "japaneseMeaning": "冷却",
+      "example": "The machine needs cooling during continuous operation.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "lubrication",
+        "calibration"
+      ]
+    },
+    {
+      "word": "lubrication",
+      "meaning": "the use of a substance such as oil to reduce friction between moving surfaces",
+      "japaneseMeaning": "潤滑",
+      "example": "Regular lubrication helps the mechanism move smoothly.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "cooling",
+        "insulation"
+      ]
+    }
+  ]
+}

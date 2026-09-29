@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-beginner-lesson-59",
+  "title": "Lesson 9",
+  "paragraph": "道順と身近な時間表現",
+  "words": [
+    {
+      "word": "wait for",
+      "meaning": "to stay until someone arrives or something happens",
+      "japaneseMeaning": "～を待つ",
+      "example": "Please wait for me outside the shop.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "look for",
+        "pay for"
+      ]
+    },
+    {
+      "word": "cross the street",
+      "meaning": "to go from one side of a road to the other",
+      "japaneseMeaning": "道路を渡る",
+      "example": "Hold my hand when we cross the street.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "go straight",
+        "turn left"
+      ],
+      "sentencePractice": {
+        "prompt": "The shop is on the opposite side of this road. Use the crossing to ____ and reach it.",
+        "distractors": [
+          "walk along the street",
+          "turn the corner"
+        ],
+        "reviewNote": "A crossing takes a pedestrian from one road side to the other. Walking along the road or around a corner does not cross this road."
+      }
+    },
+    {
+      "word": "at the corner",
+      "meaning": "at the place where two streets meet",
+      "japaneseMeaning": "角で、角に",
+      "example": "There is a small bakery at the corner.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "in the morning",
+        "on foot"
+      ]
+    },
+    {
+      "word": "across from",
+      "meaning": "on the opposite side from someone or something",
+      "japaneseMeaning": "～の向かいに",
+      "example": "The library is across from the park.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "next to",
+        "in front of"
+      ],
+      "usageNote": "間に道などを挟んで向かい側にある位置。next to（隣）とは区別します。"
+    },
+    {
+      "word": "on the way",
+      "meaning": "during a journey to a place",
+      "japaneseMeaning": "行く途中で",
+      "example": "We bought some bread on the way home.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "at school",
+        "every day"
+      ]
+    },
+    {
+      "word": "far from",
+      "meaning": "a long distance away from a place",
+      "japaneseMeaning": "～から遠くに",
+      "example": "Our house is far from the station.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "next to",
+        "across from"
+      ],
+      "usageNote": "ここでは物理的な距離が遠い意味です。"
+    },
+    {
+      "word": "at night",
+      "meaning": "during the time when it is dark outside",
+      "japaneseMeaning": "夜に",
+      "example": "You can see many stars at night.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "after school",
+        "once a week"
+      ]
+    },
+    {
+      "word": "in the morning",
+      "meaning": "during the first part of the day before noon",
+      "japaneseMeaning": "朝に、午前中に",
+      "example": "I water the plants in the morning.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "at night",
+        "after school"
+      ]
+    },
+    {
+      "word": "once a week",
+      "meaning": "one time in every seven days",
+      "japaneseMeaning": "週に一回",
+      "example": "We have an art lesson once a week.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "every day",
+        "for the first time"
+      ],
+      "sentencePractice": {
+        "prompt": "My only swimming lesson each week is on Monday, so I have a swimming lesson ____.",
+        "distractors": [
+          "every day",
+          "twice a week"
+        ],
+        "reviewNote": "There is explicitly only one lesson in each seven-day period. Neither seven daily lessons nor two weekly lessons matches that count."
+      }
+    },
+    {
+      "word": "for the first time",
+      "meaning": "on an occasion when you have never done something before",
+      "japaneseMeaning": "初めて",
+      "example": "I rode a horse for the first time yesterday.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "every day",
+        "once a week"
+      ]
+    }
+  ]
+}

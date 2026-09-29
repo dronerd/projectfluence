@@ -1,0 +1,144 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-58",
+  "title": "Lesson 8",
+  "paragraph": "暮らしとお金のやりくり",
+  "words": [
+    {
+      "word": "save up",
+      "meaning": "to keep money over time so you can buy something later",
+      "japaneseMeaning": "お金をこつこつ貯める",
+      "example": "I'm trying to save up for a new bicycle.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "pay back",
+        "split the bill"
+      ]
+    },
+    {
+      "word": "pay back",
+      "meaning": "to return money that you borrowed from someone",
+      "japaneseMeaning": "借りたお金を返す",
+      "example": "I will pay back the money on Friday.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "save up",
+        "take out"
+      ],
+      "sentencePractice": {
+        "prompt": "I owe you twenty pounds. Tomorrow I will ____ the money I borrowed, so I will not owe you anything.",
+        "distractors": [
+          "save up",
+          "take out"
+        ],
+        "reviewNote": "Only returning borrowed money cancels this debt. Saving money or withdrawing it does not by itself repay the lender."
+      }
+    },
+    {
+      "word": "split the bill",
+      "meaning": "to divide the cost of a meal or service between people",
+      "japaneseMeaning": "代金を分けて支払う",
+      "example": "We decided to split the bill equally after dinner.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "pay back",
+        "save up"
+      ],
+      "sentencePractice": {
+        "prompt": "There are four of us, and our meals cost the same. Let’s ____ so that each person pays one quarter of the total.",
+        "distractors": [
+          "save up",
+          "eat out"
+        ],
+        "reviewNote": "The clue specifies dividing one charge into four equal payments. Saving money or dining at a restaurant does not specify how the bill is divided."
+      }
+    },
+    {
+      "word": "try out",
+      "meaning": "to test something by using it to see whether it works well",
+      "japaneseMeaning": "試しに使ってみる",
+      "example": "You can try out the new keyboard before you buy it.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "throw away",
+        "put away"
+      ]
+    },
+    {
+      "word": "shop around",
+      "meaning": "to compare prices or products in different places before buying",
+      "japaneseMeaning": "いくつかの店で比較する",
+      "example": "Shop around before choosing your phone plan.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "eat out",
+        "move in"
+      ]
+    },
+    {
+      "word": "on sale",
+      "meaning": "available at a lower price than usual",
+      "japaneseMeaning": "値下げして売られている",
+      "example": "These boots are on sale this weekend: twenty percent off.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "under the weather",
+        "in a good mood"
+      ],
+      "usageNote": "ここでは「特売・値下げ中」の意味。for sale は値下げの有無にかかわらず「売りに出ている」。on sale が単に発売中を指す文脈もあります。"
+    },
+    {
+      "word": "make room for",
+      "meaning": "to create enough space for someone or something",
+      "japaneseMeaning": "～のための場所を空ける",
+      "example": "Move those boxes to make room for another chair.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "look after",
+        "run out of"
+      ]
+    },
+    {
+      "word": "move in",
+      "meaning": "to begin living in a new home",
+      "japaneseMeaning": "入居する",
+      "example": "We can move in as soon as the repairs are finished.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "move out",
+        "set off"
+      ]
+    },
+    {
+      "word": "move out",
+      "meaning": "to leave a home because you will live somewhere else",
+      "japaneseMeaning": "引っ越して出ていく",
+      "example": "The tenants will move out at the end of the month.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "move in",
+        "come over"
+      ]
+    },
+    {
+      "word": "throw a party",
+      "meaning": "to organize a party for other people",
+      "japaneseMeaning": "パーティーを開く",
+      "example": "We want to throw a party for our friend's birthday.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "take turns",
+        "make room for"
+      ]
+    }
+  ]
+}

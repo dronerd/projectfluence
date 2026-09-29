@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>丸い体、平たい鼻、くるりと巻いたしっぽのあるピンク色の豚。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#d88f9a" stroke-width="5" d="M178 100q22-13 24 3t-15 9q-9-7 3-13"/><path fill="#e9a6ac" d="M87 119h20v34H87Zm61 0h20v34h-20Z"/><ellipse cx="127" cy="108" rx="57" ry="37" fill="#e9a6ac"/><path fill="#e9a6ac" d="m61 76 3-37 25 24m16 0 24-24-2 41"/><ellipse cx="92" cy="91" rx="35" ry="34" fill="#efb8ba"/><ellipse cx="86" cy="103" rx="22" ry="15" fill="#da909d"/><circle cx="78" cy="102" r="3" fill="#40565b"/><circle cx="94" cy="102" r="3" fill="#40565b"/><path d="M74 79v2m33-2v2m-20 69h20m41 0h20"/></g>
+</svg>

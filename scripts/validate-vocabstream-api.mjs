@@ -18,6 +18,10 @@ const imageLesson=await lesson('word-beginner',1),imageWord=imageLesson.words.fi
 const idiomLesson=await lesson('idioms-beginner',51),idiomWord=idiomLesson.words.find(word=>word.sentencePractice);
 const specialistLesson=await lesson('specialized-it',1),specialistWord=specialistLesson.words[0];
 assert.ok(imageWord&&idiomWord&&specialistWord);
+const addedImage=(await lesson('word-beginner',8)).words.find(word=>word.image);
+const addedIdiom=(await lesson('idioms-beginner',60)).words.find(word=>word.sentencePractice);
+const addedSpecialist=(await lesson('specialized-it',8)).words.find(word=>word.sentencePractice);
+assert.ok(addedImage&&addedIdiom&&addedSpecialist,'expanded curriculum must be present');
 const repeated=new Map();
 for(const file of (await readdir(new URL('word-beginner/',root))).filter(name=>/^Lesson\d+\.json$/.test(name)).sort()){
   const data=JSON.parse(await readFile(new URL(`word-beginner/${file}`,root),'utf8'));
@@ -28,6 +32,7 @@ assert.ok(repeatedEntries,'fixture requires a real repeated headword with differ
 const repeatedWord=repeatedEntries[0];
 const row=(word,category,number,id)=>({id,word:word.word,definition:'Outdated stored definition',example:'Outdated stored example',explanation:'Outdated stored explanation',source_category:category,source_lesson_id:`${category}-lesson-${number}`,source_lesson_number:number,mistake_count:7,last_mistaken_at:'2026-09-29T00:00:00Z'});
 const rows=[row(imageWord,'word-beginner',1,'image-row'),row(idiomWord,'idioms-beginner',51,'new-idiom-row'),row(specialistWord,'specialized-it',1,'specialist-row'),row(repeatedWord,'word-beginner',repeatedWord.number,'repeated-word-row'),
+  row(addedImage,'word-beginner',8,'added-image-row'),row(addedIdiom,'idioms-beginner',60,'added-idiom-row'),row(addedSpecialist,'specialized-it',8,'added-specialist-row'),
   {...row({word:'historical-fixture-word'},'word-beginner',999,'historical-row'),definition:'Historical saved meaning',example:'Historical saved study example'}];
 const requests=[],writes=[];
 let fixtureError;
@@ -70,12 +75,15 @@ try{
   let review;
   await check('actual review route hydrates exact packaged sources and preserves historical fallback',async()=>{
     const response=await call('/api/vocabstream/review');assert.equal(response.status,200,JSON.stringify(response.body));review=response.body;
-    for(const [id,current]of [['image-row',imageWord],['new-idiom-row',idiomWord],['specialist-row',specialistWord],['repeated-word-row',repeatedWord]]){
+    for(const [id,current]of [['image-row',imageWord],['new-idiom-row',idiomWord],['specialist-row',specialistWord],['repeated-word-row',repeatedWord],['added-image-row',addedImage],['added-idiom-row',addedIdiom],['added-specialist-row',addedSpecialist]]){
       const stored=review.weakWords.find(word=>word.id===id);assert.ok(stored,id);assert.equal(stored.definition,current.meaning);assert.equal(stored.example,current.example);assert.equal(stored.mistakeCount,7);assert.equal(stored.historical,false);
     }
     const imageQuestion=review.questions.find(question=>question.word===imageWord.word&&question.questionType==='meaning');
     assert.equal(imageQuestion.promptMode,'image');assert.equal(imageQuestion.image.src,imageWord.image.src);
     assert.ok(review.questions.some(question=>question.word===idiomWord.word&&question.promptMode==='sentence'));
+    assert.ok(review.questions.some(question=>question.word===addedImage.word&&question.promptMode==='image'));
+    assert.ok(review.questions.some(question=>question.word===addedIdiom.word&&question.promptMode==='sentence'&&question.sourceLessonNumber===60));
+    assert.ok(review.questions.some(question=>question.word===addedSpecialist.word&&question.promptMode==='sentence'&&question.sourceLessonNumber===8));
     const historical=review.questions.filter(question=>question.word==='historical-fixture-word');
     assert.equal(historical.length,1);assert.equal(historical[0].prompt,'Historical saved meaning');assert.equal(historical[0].questionType,'meaning');assert.equal(historical[0].image,undefined);
   });

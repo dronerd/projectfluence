@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-advanced-lesson-59",
+  "title": "Lesson 9",
+  "paragraph": "費用・成果・お金の判断",
+  "words": [
+    {
+      "word": "break even",
+      "meaning": "to have income equal to costs, with no profit or loss",
+      "japaneseMeaning": "収支がとんとんになる",
+      "example": "The café needs more customers just to break even.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "foot the bill",
+        "pay off"
+      ],
+      "sentencePractice": {
+        "prompt": "The café earns exactly enough to cover every cost, with no profit and no loss. At this level of sales, it can only ____.",
+        "distractors": [
+          "make a profit",
+          "run at a loss"
+        ],
+        "reviewNote": "Income exactly equals costs. A profit requires income above costs; a loss requires costs above income."
+      }
+    },
+    {
+      "word": "make ends meet",
+      "meaning": "to have enough money to pay for basic living costs",
+      "japaneseMeaning": "必要な生活費を何とか賄う",
+      "example": "With higher rent, it is harder for the family to make ends meet.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "live beyond your means",
+        "foot the bill"
+      ]
+    },
+    {
+      "word": "cost an arm and a leg",
+      "meaning": "to cost a very large amount of money",
+      "japaneseMeaning": "非常に高くつく",
+      "example": "Repairs to that old car can cost an arm and a leg.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "break even",
+        "pay off"
+      ]
+    },
+    {
+      "word": "pay off",
+      "meaning": "to produce a good result after effort or time",
+      "japaneseMeaning": "努力などが実を結ぶ",
+      "example": "All those hours of practice finally paid off at the concert.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "cut corners",
+        "take over"
+      ],
+      "usageNote": "ここでは努力がよい結果につながる意味。借金を完済する pay off a debt とは区別します。"
+    },
+    {
+      "word": "cut corners",
+      "meaning": "to skip proper steps in order to save time, effort, or money",
+      "japaneseMeaning": "手間や費用を惜しんで必要な工程を省く",
+      "example": "We cannot cut corners when checking the safety of the equipment.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "go the extra mile",
+        "foot the bill"
+      ]
+    },
+    {
+      "word": "a rip-off",
+      "meaning": "something that is unfairly expensive for what you receive",
+      "japaneseMeaning": "値段に見合わない品やサービス、ぼったくり",
+      "example": "Ten pounds for a tiny bottle of water felt like a rip-off.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a trade-off",
+        "a rule of thumb"
+      ],
+      "usageNote": "くだけた表現。ここでは価格が不当に高いという意味で、模倣品を指す用法とは区別します。"
+    },
+    {
+      "word": "get your money's worth",
+      "meaning": "to receive enough value or enjoyment for the amount you paid",
+      "japaneseMeaning": "払った金額に見合う価値を得る",
+      "example": "Use the museum pass several times to get your money's worth.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "live beyond your means",
+        "cut corners"
+      ]
+    },
+    {
+      "word": "live beyond your means",
+      "meaning": "to spend more money than you can afford",
+      "japaneseMeaning": "収入や資力を超えた生活をする",
+      "example": "Borrowing for everyday luxuries can lead you to live beyond your means.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "make ends meet",
+        "get your money's worth"
+      ]
+    },
+    {
+      "word": "on a tight budget",
+      "meaning": "with only a small amount of money available to spend",
+      "japaneseMeaning": "限られた予算で",
+      "example": "We planned the wedding on a tight budget.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "under pressure",
+        "out of the blue"
+      ]
+    },
+    {
+      "word": "foot the bill",
+      "meaning": "to pay the whole cost of something",
+      "japaneseMeaning": "費用を全額負担する",
+      "example": "The company agreed to foot the bill for the repairs.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "cut corners",
+        "break even"
+      ],
+      "sentencePractice": {
+        "prompt": "The company will pay the entire repair cost; no employee will contribute. The company will ____.",
+        "distractors": [
+          "share the cost",
+          "pass on the cost"
+        ],
+        "reviewNote": "Paying everything is footing the bill. Sharing divides the cost; passing it on transfers payment to another person."
+      }
+    }
+  ]
+}

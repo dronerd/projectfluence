@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>とがった耳とひげ、丸く曲がったしっぽを持つ、座った猫。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#d19b60" stroke-width="17" d="M144 142q51 8 44-36-3-13-13-6"/><ellipse cx="116" cy="115" rx="37" ry="39" fill="#e8b97e"/><path fill="#e8b97e" d="M79 77V37l26 16h26l23-16v42q-5 25-37 25-31 0-38-27Z"/><path fill="#edb0a1" stroke="none" d="m86 49 12 10-12 7m51-7 10-10v17"/><path d="M100 77v2m34-2v2m-17 15v-7m-17 49v17m34-17v17M90 87l-20-4m20 12-20 2m75-10 20-4m-20 12 20 2"/><path fill="#d4787d" d="m112 85 10 0-5 6Z"/></g>
+</svg>

@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-4",
+  "title": "Lesson 4",
+  "paragraph": "診療を支える場所と職種",
+  "words": [
+    {
+      "word": "clinic",
+      "meaning": "a place where people receive healthcare, often without staying overnight",
+      "japaneseMeaning": "クリニック・診療所",
+      "example": "The clinic offers appointments in the evening.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "ward",
+        "pharmacy"
+      ]
+    },
+    {
+      "word": "ward",
+      "meaning": "a hospital area where patients stay while receiving care",
+      "japaneseMeaning": "病棟",
+      "example": "Visitors checked the ward number at reception.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "pharmacy",
+        "laboratory"
+      ]
+    },
+    {
+      "word": "pharmacy",
+      "meaning": "a place where medicines are prepared or supplied by qualified staff",
+      "japaneseMeaning": "薬局",
+      "example": "The patient collected the prescribed medicine from the pharmacy.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "ward",
+        "laboratory"
+      ]
+    },
+    {
+      "word": "emergency department",
+      "meaning": "the part of a hospital that provides urgent assessment and treatment",
+      "japaneseMeaning": "救急外来・救急部門",
+      "example": "The ambulance arrived at the emergency department.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "pharmacy",
+        "waiting list"
+      ]
+    },
+    {
+      "word": "surgeon",
+      "meaning": "a doctor trained to perform operations",
+      "japaneseMeaning": "外科医",
+      "example": "The surgeon explained what the operation would involve.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "pharmacist",
+        "dietitian"
+      ]
+    },
+    {
+      "word": "pharmacist",
+      "meaning": "a healthcare professional trained to prepare, supply, and advise on medicines",
+      "japaneseMeaning": "薬剤師",
+      "example": "The pharmacist answered a question about the medicine label.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "surgeon",
+        "physiotherapist"
+      ],
+      "sentencePractice": {
+        "prompt": "This professional's main work at the pharmacy is dispensing medicines and explaining how to use them. The professional is a ____.",
+        "distractors": [
+          "surgeon",
+          "physiotherapist"
+        ],
+        "reviewNote": "Dispensing medicines as the main professional role at a pharmacy identifies a pharmacist; surgeons perform operations and physiotherapists support movement."
+      }
+    },
+    {
+      "word": "physiotherapist",
+      "meaning": "a healthcare professional who helps improve movement and physical function",
+      "japaneseMeaning": "理学療法士",
+      "example": "The physiotherapist assessed how the patient walked.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "pharmacist",
+        "dietitian"
+      ]
+    },
+    {
+      "word": "dietitian",
+      "meaning": "a qualified professional who assesses nutrition needs and advises on food and diet",
+      "japaneseMeaning": "管理栄養士などの栄養専門職",
+      "example": "The dietitian discussed the patient's nutritional needs.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "surgeon",
+        "interpreter"
+      ],
+      "usageNote": "資格の制度や名称は国によって異なります。"
+    },
+    {
+      "word": "receptionist",
+      "meaning": "a staff member who welcomes visitors and handles appointments or enquiries",
+      "japaneseMeaning": "受付担当者",
+      "example": "The receptionist confirmed the time of the next visit.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "surgeon",
+        "pharmacist"
+      ]
+    },
+    {
+      "word": "interpreter",
+      "meaning": "a person who translates spoken or signed communication between languages",
+      "japaneseMeaning": "通訳者",
+      "example": "An interpreter helped the patient discuss the care options.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "dietitian",
+        "physiotherapist"
+      ],
+      "sentencePractice": {
+        "prompt": "During the appointment, one professional translates the conversation between Japanese and English. This person is an ____.",
+        "distractors": [
+          "inpatient",
+          "outpatient"
+        ],
+        "reviewNote": "Translating the conversation identifies an interpreter; the other choices describe patients. All three options fit after an."
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-it-lesson-7",
+  "title": "Lesson 7",
+  "paragraph": "安全なアクセスと情報保護",
+  "words": [
+    {
+      "word": "firewall",
+      "meaning": "a system that allows or blocks network traffic according to security rules",
+      "japaneseMeaning": "ファイアウォール",
+      "example": "The firewall blocks connections from unapproved sources.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "malware",
+        "audit trail"
+      ],
+      "sentencePractice": {
+        "prompt": "A security system blocks or allows network traffic according to rules. This system is a ____.",
+        "distractors": [
+          "recovery code",
+          "certificate"
+        ],
+        "reviewNote": "Rule-based filtering of network traffic identifies a firewall, not a recovery credential or digital identity document."
+      }
+    },
+    {
+      "word": "malware",
+      "meaning": "software designed to damage systems, steal information, or perform other harmful actions",
+      "japaneseMeaning": "悪意のあるソフトウェア",
+      "example": "The security tool detected malware in the downloaded file.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "firewall",
+        "recovery code"
+      ]
+    },
+    {
+      "word": "phishing",
+      "meaning": "an attempt to trick people into revealing information or taking unsafe actions by pretending to be trustworthy",
+      "japaneseMeaning": "フィッシング",
+      "example": "The training showed how to recognize a phishing email.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "encryption",
+        "monitoring"
+      ],
+      "sentencePractice": {
+        "prompt": "The email pretends to be from a trusted bank and tricks the reader into revealing a password. This is ____.",
+        "distractors": [
+          "encryption",
+          "monitoring"
+        ],
+        "reviewNote": "Deceptive impersonation to obtain information is phishing; encoding data and observing system behavior do not describe the attack."
+      }
+    },
+    {
+      "word": "access control",
+      "meaning": "the rules and mechanisms that restrict who can use particular resources",
+      "japaneseMeaning": "アクセス制御",
+      "example": "Access control prevents visitors from editing staff records.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "audit trail",
+        "malware"
+      ]
+    },
+    {
+      "word": "authorization",
+      "meaning": "the decision or permission that determines which actions a user may perform",
+      "japaneseMeaning": "認可",
+      "example": "Successful sign-in does not provide authorization to delete other users' files.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "authentication",
+        "encryption"
+      ],
+      "usageNote": "authentication は本人確認、authorization は許可される操作の判断です。"
+    },
+    {
+      "word": "security breach",
+      "meaning": "an event in which someone gains unauthorized access to a system or protected information",
+      "japaneseMeaning": "セキュリティ侵害",
+      "example": "The company investigated the security breach before restoring access.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "recovery code",
+        "firewall"
+      ]
+    },
+    {
+      "word": "audit trail",
+      "meaning": "a sequence of records showing who performed actions and when",
+      "japaneseMeaning": "監査証跡",
+      "example": "The audit trail shows who changed the account permissions.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "security breach",
+        "password"
+      ]
+    },
+    {
+      "word": "privacy",
+      "meaning": "the protection of personal information and control over how it is used",
+      "japaneseMeaning": "プライバシー",
+      "example": "The privacy settings let users choose who can see their profile.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "latency",
+        "availability"
+      ]
+    },
+    {
+      "word": "recovery code",
+      "meaning": "a saved code that helps a user regain access when the usual sign-in method is unavailable",
+      "japaneseMeaning": "復旧用コード",
+      "example": "She used a recovery code after losing access to her authenticator.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "audit trail",
+        "certificate"
+      ]
+    },
+    {
+      "word": "two-factor authentication",
+      "meaning": "identity checking that requires two different kinds of proof",
+      "japaneseMeaning": "二要素認証",
+      "example": "The service supports two-factor authentication using a password and a security key.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "access control",
+        "encryption"
+      ],
+      "usageNote": "パスワードを二つ使うことではなく、異なる種類の認証要素を組み合わせます。"
+    }
+  ]
+}

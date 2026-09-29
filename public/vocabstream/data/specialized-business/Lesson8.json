@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-business-lesson-8",
+  "title": "Lesson 8",
+  "paragraph": "経済と国際取引",
+  "words": [
+    {
+      "word": "inflation",
+      "meaning": "a sustained increase in the general level of prices",
+      "japaneseMeaning": "インフレーション・物価上昇",
+      "example": "The report compares inflation across several years.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "recession",
+        "economic growth"
+      ]
+    },
+    {
+      "word": "interest rate",
+      "meaning": "the percentage used to calculate the cost of borrowing or the return on lending over time",
+      "japaneseMeaning": "金利",
+      "example": "The agreement states the annual interest rate.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "exchange rate",
+        "market share"
+      ]
+    },
+    {
+      "word": "exchange rate",
+      "meaning": "the value of one currency expressed in another currency",
+      "japaneseMeaning": "為替レート",
+      "example": "The exchange rate changed before the company paid the overseas supplier.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "interest rate",
+        "return on investment"
+      ],
+      "sentencePractice": {
+        "prompt": "The company checks how many euros it can receive for one dollar. It is checking the ____.",
+        "distractors": [
+          "interest rate",
+          "market share"
+        ],
+        "reviewNote": "The conversion value between currencies is the exchange rate; borrowing cost and a share of sales measure different things."
+      }
+    },
+    {
+      "word": "recession",
+      "meaning": "a period of significant decline in economic activity across an economy",
+      "japaneseMeaning": "景気後退",
+      "example": "Many businesses reduced production during the recession.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "inflation",
+        "economic growth"
+      ]
+    },
+    {
+      "word": "economic growth",
+      "meaning": "an increase in the amount of goods and services an economy produces over time",
+      "japaneseMeaning": "経済成長",
+      "example": "The report discusses factors that support economic growth.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "inflation",
+        "recession"
+      ]
+    },
+    {
+      "word": "export",
+      "meaning": "a good or service sold to buyers in another country",
+      "japaneseMeaning": "輸出品・輸出サービス",
+      "example": "Coffee is an important export for the region.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "import",
+        "subsidy"
+      ],
+      "usageNote": "ここでは名詞です。動詞では「輸出する」という意味になります。"
+    },
+    {
+      "word": "import",
+      "meaning": "a good or service bought from another country",
+      "japaneseMeaning": "輸入品・輸入サービス",
+      "example": "The shop sells local products alongside imports.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "export",
+        "tariff"
+      ],
+      "usageNote": "ここでは名詞です。動詞では「輸入する」という意味になります。"
+    },
+    {
+      "word": "tariff",
+      "meaning": "a tax charged on goods crossing a national border, especially imports",
+      "japaneseMeaning": "関税",
+      "example": "The tariff increased the cost of the imported parts.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "subsidy",
+        "deposit"
+      ],
+      "sentencePractice": {
+        "prompt": "A charge is collected on goods when they are imported across the border. This tax is a ____.",
+        "distractors": [
+          "subsidy",
+          "deposit"
+        ],
+        "reviewNote": "A border tax on goods is a tariff; a subsidy provides support and a deposit is an advance or security payment."
+      }
+    },
+    {
+      "word": "subsidy",
+      "meaning": "financial support provided, often by government, to reduce costs or encourage an activity",
+      "japaneseMeaning": "補助金",
+      "example": "The project received a subsidy for staff training.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "tariff",
+        "refund"
+      ]
+    },
+    {
+      "word": "purchasing power",
+      "meaning": "the amount of goods and services a sum of money can buy",
+      "japaneseMeaning": "購買力",
+      "example": "Rising prices reduced the purchasing power of the same salary.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "market share",
+        "productivity"
+      ]
+    }
+  ]
+}

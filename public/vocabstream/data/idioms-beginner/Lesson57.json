@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-beginner-lesson-57",
+  "title": "Lesson 7",
+  "paragraph": "短い会話と丁寧な応答",
+  "words": [
+    {
+      "word": "nice to meet you",
+      "meaning": "used to greet someone you are meeting for the first time",
+      "japaneseMeaning": "初めまして",
+      "example": "Hello, I'm Hana. Nice to meet you.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "see you later",
+        "good luck"
+      ]
+    },
+    {
+      "word": "you're welcome",
+      "meaning": "used to reply politely when someone thanks you",
+      "japaneseMeaning": "どういたしまして",
+      "example": "Thanks for your help! You're welcome.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "excuse me",
+        "nice to meet you"
+      ],
+      "sentencePractice": {
+        "prompt": "Your neighbor says, \"Thank you for carrying my bag.\" You want to reply that no thanks are needed, so you say, \"____.\"",
+        "distractors": [
+          "good luck",
+          "nice to meet you"
+        ],
+        "reviewNote": "The purpose is acknowledging thanks. Good luck wishes future success; nice to meet you greets a new acquaintance."
+      }
+    },
+    {
+      "word": "no problem",
+      "meaning": "used to say that a request is easy to accept",
+      "japaneseMeaning": "大丈夫ですよ、構いませんよ",
+      "example": "Can you open the window? No problem.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "no thanks",
+        "what's wrong"
+      ],
+      "usageNote": "ここでは依頼を快く引き受ける返答。お礼や謝罪への返答として使うこともあります。"
+    },
+    {
+      "word": "I'm sorry",
+      "meaning": "used to say that you feel bad about something you did wrong",
+      "japaneseMeaning": "ごめんなさい",
+      "example": "I'm sorry I broke your cup.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "good luck",
+        "you're welcome"
+      ],
+      "usageNote": "ここでは自分のしたことを謝る意味。相手の不幸への同情を示す場合もあります。"
+    },
+    {
+      "word": "say that again",
+      "meaning": "to repeat the words you have just said",
+      "japaneseMeaning": "もう一度同じことを言う",
+      "example": "Could you say that again? I didn't hear the number.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "speak slowly",
+        "take a message"
+      ]
+    },
+    {
+      "word": "speak slowly",
+      "meaning": "to talk at a low speed so people can follow your words",
+      "japaneseMeaning": "ゆっくり話す",
+      "example": "Please speak slowly; I'm learning English.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "say that again",
+        "read aloud"
+      ]
+    },
+    {
+      "word": "take a message",
+      "meaning": "to write down information for someone who cannot answer a call",
+      "japaneseMeaning": "伝言を預かる",
+      "example": "My father is out. Can I take a message?",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "give me a call",
+        "ask a question"
+      ],
+      "sentencePractice": {
+        "prompt": "Dad cannot answer the phone. I can ____: write down what you want to tell him so he can read it later.",
+        "distractors": [
+          "make a call",
+          "answer a question"
+        ],
+        "reviewNote": "Writing a caller’s information for an absent person is taking a message. Making a call initiates contact; answering a question supplies an answer rather than recording this message."
+      }
+    },
+    {
+      "word": "give me a call",
+      "meaning": "to telephone me",
+      "japaneseMeaning": "私に電話をかける",
+      "example": "Give me a call when you arrive.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "take a message",
+        "turn the page"
+      ]
+    },
+    {
+      "word": "what's wrong",
+      "meaning": "used to ask what the problem is",
+      "japaneseMeaning": "どうしたの、何が問題ですか",
+      "example": "You look upset. What's wrong?",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "how much",
+        "anything else"
+      ]
+    },
+    {
+      "word": "good luck",
+      "meaning": "used to wish someone success",
+      "japaneseMeaning": "頑張って、幸運を祈ります",
+      "example": "Good luck with your test tomorrow!",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "I'm sorry",
+        "nice to meet you"
+      ]
+    }
+  ]
+}

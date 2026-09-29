@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-advanced-lesson-57",
+  "title": "Lesson 7",
+  "paragraph": "判断と理解の落とし穴",
+  "words": [
+    {
+      "word": "jump to conclusions",
+      "meaning": "to decide that something is true before considering enough information",
+      "japaneseMeaning": "十分に考えず結論を出す",
+      "example": "Don't jump to conclusions before you hear her explanation.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "keep an open mind",
+        "sit on the fence"
+      ],
+      "sentencePractice": {
+        "prompt": "We have not checked the facts. Do not ____ by deciding already that one employee is to blame.",
+        "distractors": [
+          "keep an open mind",
+          "reserve judgment"
+        ],
+        "reviewNote": "Assigning blame before checking evidence is premature. Keeping an open mind or reserving judgment avoids that early conclusion."
+      }
+    },
+    {
+      "word": "miss the point",
+      "meaning": "to fail to understand the main idea or purpose",
+      "japaneseMeaning": "要点を理解し損ねる",
+      "example": "If you focus only on the price, you miss the point of the proposal.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "hit the nail on the head",
+        "read the room"
+      ]
+    },
+    {
+      "word": "get the wrong end of the stick",
+      "meaning": "to misunderstand what someone means",
+      "japaneseMeaning": "話の意味を取り違える",
+      "example": "You may get the wrong end of the stick if you read only the last message.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "put two and two together",
+        "keep an open mind"
+      ],
+      "usageNote": "主に会話で使う、相手の意図を取り違える表現です。"
+    },
+    {
+      "word": "put two and two together",
+      "meaning": "to work out what has happened by connecting pieces of information",
+      "japaneseMeaning": "手掛かりを結び付けて事情を察する",
+      "example": "I saw the packed boxes and put two and two together: they were moving.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "jump to conclusions",
+        "miss the point"
+      ]
+    },
+    {
+      "word": "a rule of thumb",
+      "meaning": "a practical guide based on experience rather than an exact calculation",
+      "japaneseMeaning": "経験に基づく大まかな目安",
+      "example": "As a rule of thumb, leave extra time when you travel during rush hour.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a last resort",
+        "a wake-up call"
+      ]
+    },
+    {
+      "word": "take something with a pinch of salt",
+      "meaning": "to avoid fully believing a statement because it may not be accurate",
+      "japaneseMeaning": "話をうのみにせず受け止める",
+      "example": "I take those online rumors with a pinch of salt until a reliable source confirms them.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "give someone the benefit of the doubt",
+        "let the cat out of the bag"
+      ],
+      "usageNote": "アメリカ英語では with a grain of salt も一般的です。something は the claim などに置き換えます。"
+    },
+    {
+      "word": "sit on the fence",
+      "meaning": "to avoid choosing between opposing sides or opinions",
+      "japaneseMeaning": "どちらにも決めず態度を保留する",
+      "example": "The committee needs a decision; we cannot sit on the fence forever.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "jump to conclusions",
+        "take over"
+      ],
+      "sentencePractice": {
+        "prompt": "Asked to support either side, I refuse to choose and continue to ____.",
+        "distractors": [
+          "take a side",
+          "make up my mind"
+        ],
+        "reviewNote": "Refusing to choose defines remaining undecided between sides. Taking a side or deciding is the opposite response."
+      }
+    },
+    {
+      "word": "read the room",
+      "meaning": "to notice other people's feelings so you can respond appropriately",
+      "japaneseMeaning": "その場の人々の気持ちや空気を読む",
+      "example": "A good host can read the room and change the topic when guests feel uncomfortable.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "miss the point",
+        "break even"
+      ]
+    },
+    {
+      "word": "keep an open mind",
+      "meaning": "to remain willing to consider ideas you have not yet accepted",
+      "japaneseMeaning": "先入観を持たず検討する姿勢を保つ",
+      "example": "Keep an open mind when you listen to the other group's proposal.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "jump to conclusions",
+        "hold a grudge"
+      ]
+    },
+    {
+      "word": "give someone the benefit of the doubt",
+      "meaning": "to judge someone fairly by accepting that they may be honest when the facts are uncertain",
+      "japaneseMeaning": "証拠がはっきりしないとき相手を善意に解釈する",
+      "example": "I try to give someone the benefit of the doubt before assuming that a mistake was deliberate.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "hold a grudge",
+        "pull someone's leg"
+      ]
+    }
+  ]
+}

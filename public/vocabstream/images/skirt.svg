@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>ウエストから下に広がる、青いスカート。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#79aebe" d="M89 35h62l43 115H46Z"/><path fill="#588995" d="M89 27h62v18H89Z"/><path stroke="#b8d8df" d="m93 57-20 81m74-81 20 81m-47-81v81"/></g>
+</svg>

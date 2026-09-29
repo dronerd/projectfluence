@@ -1,6 +1,6 @@
 # VocabStream original illustrations
 
-These 30 SVG illustrations were created for ProjectFluence as original geometric artwork. No third-party artwork, downloaded photographs, fonts, brands, or raster-generation output were used. Creator: **ProjectFluence**.
+These 70 SVG illustrations were created for ProjectFluence as original geometric artwork. No third-party artwork, downloaded photographs, fonts, brands, or raster-generation output were used. Creator: **ProjectFluence**.
 
 To the extent copyright or related rights exist in these illustrations, ProjectFluence dedicates them to the public domain under **CC0 1.0 Universal**: https://creativecommons.org/publicdomain/zero/1.0/ . Legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en . This dedication applies to the SVG illustrations in this directory, not the rest of the application.
 

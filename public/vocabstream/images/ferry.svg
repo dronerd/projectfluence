@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>車と乗客を運ぶための甲板がある、水上のフェリー。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#6e9eaf" d="M30 115h179l-23 34H61Z"/><path fill="#f5eed8" d="M72 64h104v51H63V88h9Z"/><path fill="#e4af77" d="M58 105 68 94h25l11 11v10H56Z"/><circle cx="66" cy="114" r="6" fill="#546b70"/><circle cx="94" cy="114" r="6" fill="#546b70"/><path fill="#d9e9e9" d="M81 74h20v15H81Zm30 0h20v15h-20Zm30 0h20v15h-20Z"/><path d="M73 54h104m-49 0V34h27v20M32 106v12m176-12v12m-49-12v12m-27-12v12"/><path stroke="#aacfd9" d="M27 154q15-8 30 0t30 0 30 0 30 0 30 0 30 0"/></g>
+</svg>

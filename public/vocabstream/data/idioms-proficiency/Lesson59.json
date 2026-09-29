@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-59",
+  "title": "Lesson 9",
+  "paragraph": "戦略・リスク・機会",
+  "words": [
+    {
+      "word": "a means to an end",
+      "meaning": "something used mainly as a way to achieve another goal",
+      "japaneseMeaning": "別の目的を達成するための手段",
+      "example": "For her, the temporary job was a means to an end: saving enough to study.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "a foregone conclusion",
+        "an unintended consequence"
+      ]
+    },
+    {
+      "word": "take stock of",
+      "meaning": "to carefully assess a situation or your resources before deciding what to do",
+      "japaneseMeaning": "状況や資源を把握して評価する",
+      "example": "Before choosing a new direction, we need to take stock of our skills and resources.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "raise the stakes",
+        "shift the burden of proof"
+      ],
+      "usageNote": "ここでは何かを始める前に現状を把握・評価する意味。of の後ろに状況や資源などを置きます。"
+    },
+    {
+      "word": "play the long game",
+      "meaning": "to act with a distant goal in mind rather than seek an immediate gain",
+      "japaneseMeaning": "目先の利益より長期的な成果を狙う",
+      "example": "The organization chose to play the long game by investing in training.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "pass the buck",
+        "move the goalposts"
+      ]
+    },
+    {
+      "word": "hedge your bets",
+      "meaning": "to reduce the chance of losing by preparing more than one option",
+      "japaneseMeaning": "複数の選択肢を用意してリスクを分散する",
+      "example": "Applying to several programs can help you hedge your bets.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "put all your eggs in one basket",
+        "raise the stakes"
+      ],
+      "sentencePractice": {
+        "prompt": "Rather than depend on one uncertain application, you apply to several independent programs to reduce the risk of having no option. You ____.",
+        "distractors": [
+          "put all your eggs in one basket",
+          "raise the stakes"
+        ],
+        "reviewNote": "Preparing several options spreads risk. Depending on one option concentrates risk; raising the stakes increases what can be gained or lost."
+      }
+    },
+    {
+      "word": "put all your eggs in one basket",
+      "meaning": "to risk everything on a single plan or opportunity",
+      "japaneseMeaning": "一つの計画や機会にすべてを賭ける",
+      "example": "Relying on one customer means you put all your eggs in one basket.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "hedge your bets",
+        "take stock of"
+      ]
+    },
+    {
+      "word": "a window of opportunity",
+      "meaning": "a limited period during which a useful action is possible",
+      "japaneseMeaning": "行動を起こせる限られた好機",
+      "example": "The temporary grant creates a window of opportunity to renovate the hall.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a sticking point",
+        "a foregone conclusion"
+      ],
+      "sentencePractice": {
+        "prompt": "The grant can fund the repairs, but applications close on Friday. These next few days offer ____ that will then disappear.",
+        "distractors": [
+          "an unlimited guarantee",
+          "a permanent arrangement"
+        ],
+        "reviewNote": "A beneficial chance with a near deadline is time-limited. Unlimited guarantees and permanent arrangements do not expire on that deadline."
+      }
+    },
+    {
+      "word": "gain ground",
+      "meaning": "to become more widely accepted or supported",
+      "japaneseMeaning": "支持や賛同が広がる",
+      "example": "The proposal for flexible hours is gaining ground among staff.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "come under fire",
+        "fall through the cracks"
+      ],
+      "usageNote": "ここでは考えや提案への支持が広がる意味。競争や戦闘で前進する用法とは区別します。"
+    },
+    {
+      "word": "raise the stakes",
+      "meaning": "to increase the possible gains, losses, or importance of a situation",
+      "japaneseMeaning": "成否の重大さや賭けるものを大きくする",
+      "example": "Promising a full refund will raise the stakes for the delivery team.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "hedge your bets",
+        "take stock of"
+      ]
+    },
+    {
+      "word": "the writing on the wall",
+      "meaning": "clear warning signs that failure or serious trouble is approaching",
+      "japaneseMeaning": "失敗や悪化が近いことを示す明白な兆候",
+      "example": "After three major clients left, the owners could see the writing on the wall.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a window of opportunity",
+        "the bigger picture"
+      ]
+    },
+    {
+      "word": "throw good money after bad",
+      "meaning": "to spend more money on something that has already failed or is unlikely to succeed",
+      "japaneseMeaning": "見込みのないものにさらにお金をつぎ込む",
+      "example": "Paying for another repair to that unsafe machine may be throwing good money after bad.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "hedge your bets",
+        "bring to fruition"
+      ]
+    }
+  ]
+}

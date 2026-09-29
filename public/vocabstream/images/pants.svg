@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>腰から両足を別々に包む、ベージュ色の長いズボン。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#c7ae82" d="M89 18h62l6 140h-29l-8-93-8 93H83Z"/><path d="M89 35h62M120 18v47M91 42q15 2 12 20m47-20q-15 2-12 20"/><circle cx="120" cy="27" r="2" fill="#40565b"/><path stroke="#e5cfaa" d="m97 83-2 63m48-63 2 63"/></g>
+</svg>

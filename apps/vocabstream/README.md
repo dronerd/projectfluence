@@ -5,8 +5,8 @@ VocabStream runs inside the root Next.js application. Static lesson JSON in `pub
 ## Curriculum and stable identity
 
 - Word courses retain their original 100 lessons each, ordered entries, spelling and level labels: beginner A1–A2, intermediate B1, advanced B2, proficiency C1–C2.
-- Genuine expression courses use the existing `idioms-*` categories and **new lessons 51–55**, 50 expressions per level. Old lessons 1–50 were repeated placeholder vocabulary. They remain reachable through “以前のレッスン・学習記録を見る”; their URLs and history are preserved.
-- Specialist courses have three ten-word lessons each: `specialized-it`, `specialized-engineering`, `specialized-healthcare`, `specialized-business`, `specialized-environment`, `specialized-academic`.
+- Genuine expression courses display **Lessons 1–10**, 100 expressions per level. Their unchanged internal lesson addresses are 51–60 in the existing `idioms-*` categories. `displayLessonNumber` and `lessonLabel` keep user-facing numbering separate from persisted identity. Previous lessons 1–50 were repeated placeholder vocabulary; they remain reachable through “以前のレッスン・学習記録を見る” and are labeled “以前の Lesson N” to distinguish their history.
+- Specialist courses have eight ten-word lessons each (80 terms per field): `specialized-it`, `specialized-engineering`, `specialized-healthcare`, `specialized-business`, `specialized-environment`, `specialized-academic`.
 - Persisted lesson identity is `<course>-lesson-<N>`, **not** the legacy JSON `lesson_id`. Mistake identity is user + source category + lowercased word. Do not rename words, shift lesson positions, or repurpose old lesson numbers.
 - `scripts/vocabstream-baseline.json` freezes all 600 original files' IDs and ordered word strings. Append new lessons; do not regenerate this baseline to make a compatibility failure disappear.
 
@@ -30,7 +30,7 @@ The example above demonstrates the shape only; it is not publishable content. Fo
 
 Unreviewed examples remain on study cards and available for browser speech synthesis. They are **not automatically converted to scored gaps**. This prevents random same-lesson distractors, partial-word blanks and invented gaps. Meaning questions use explicit pairs when supplied; the older fallback excludes duplicate labels, identical meanings and listed synonyms. It cannot recognize every semantic relationship, so new content should include reviewed explicit pairs.
 
-Images are selective: use them for an unmistakable concrete sense, not abstract relationships or ambiguous scenes. `image+text` combines local artwork with a short definition. Image questions show the illustration first, with Japanese accessible descriptions and a text fallback. See [image attribution](../../public/vocabstream/images/ATTRIBUTION.md) and `manifest.json`. Optional image data must include dimensions, source, source URL, creator and license. The current renderer accepts local `/vocabstream/images/` assets; external image services are unnecessary.
+The beginner course contains 70 illustrated entries, covering food, everyday objects, clothing, animals, vehicles and nature. Images are selective: use them for an unmistakable concrete sense, not abstract relationships or ambiguous scenes. `image+text` combines local artwork with a short definition. Image questions show the illustration first, with Japanese accessible descriptions and a text fallback. See [image attribution](../../public/vocabstream/images/ATTRIBUTION.md) and `manifest.json`. Optional image data must include dimensions, source, source URL, creator and license. The current renderer accepts local `/vocabstream/images/` assets; external image services are unnecessary.
 
 ## Quality checks
 
@@ -64,4 +64,4 @@ This curriculum update needs **no new database migration, image bucket, secret, 
 
 For a new environment, complete the branch's existing [production deployment guide](../../docs/production-deployment.md), including its Supabase migration sequence and authentication URLs. Do not run the old application `schema.sql` as a replacement for the root migrations. Keep `SUPABASE_SERVICE_ROLE_KEY` server-only. Nothing in this update applies hosted migrations or changes existing learner records.
 
-See [the curriculum audit](../../docs/vocabstream-curriculum-audit.md) for the findings, actual validation and remaining editorial limits.
+See [the expansion report](../../docs/vocabstream-expansion.md) for current counts and validation, and [the initial curriculum audit](../../docs/vocabstream-curriculum-audit.md) for the original findings and progress-compatibility design.

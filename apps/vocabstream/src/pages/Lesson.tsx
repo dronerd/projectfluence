@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "../lib/router-compat";
 import { apiSubmitVocabStreamProgress, type VocabStreamReviewQuestion, type VocabStreamProgressPayload } from "../api";
 import { useAuth } from "../AuthContext";
-import { courseLabel, getCourse } from "../lib/catalog";
+import { courseLabel, getCourse, lessonLabel } from "../lib/catalog";
 import { createAttempt, makeLessonQuestions, summarizeAttempts, type LearningAttempt, type LessonData } from "../lib/learning";
 import PracticeQuestion, { focusLearningHeading, WordDetails } from "../components/PracticeQuestion";
 import { validWordImage } from "../lib/questionPolicy";
@@ -50,6 +50,7 @@ export default function Lesson() {
   const [genre, rawNumber] = lessonId.split("-lesson-");
   const lessonNumber = Number(rawNumber);
   const course = getCourse(genre);
+  const lessonTitle = course?.firstLesson ? lessonLabel(genre, lessonNumber) : lesson?.title ?? lessonLabel(genre, lessonNumber);
   const listPath = course ? `/learn/${genre}` : "/learn";
 
   useEffect(() => {
@@ -89,7 +90,7 @@ export default function Lesson() {
       while (savedAttemptCount.current < attempts.length) {
         if (!pendingSave.current) pendingSave.current = {
           count: attempts.length,
-          payload: { attemptId: crypto.randomUUID(), lessonId, genre, lessonNumber, lessonTitle: lesson.title ?? `Lesson ${lessonNumber}`, wordCount: lesson.words.length, meaningScore: summary.meaningScore, meaningTotal: summary.meaningTotal, quizScore: summary.quizScore, quizTotal: summary.quizTotal, replayCompleted, replayCorrect: replayCompleted ? replayCorrect : 0, replayTotal: replayCompleted ? replayQuestions.length : 0, questionAttempts: attempts.slice(savedAttemptCount.current) },
+          payload: { attemptId: crypto.randomUUID(), lessonId, genre, lessonNumber, lessonTitle, wordCount: lesson.words.length, meaningScore: summary.meaningScore, meaningTotal: summary.meaningTotal, quizScore: summary.quizScore, quizTotal: summary.quizTotal, replayCompleted, replayCorrect: replayCompleted ? replayCorrect : 0, replayTotal: replayCompleted ? replayQuestions.length : 0, questionAttempts: attempts.slice(savedAttemptCount.current) },
         };
         const pending = pendingSave.current;
         await apiSubmitVocabStreamProgress(pending.payload, token);
@@ -100,7 +101,7 @@ export default function Lesson() {
       setSaveState("saved");
     } catch { if (version === lessonVersion.current) setSaveState("error"); }
     finally { if (version === lessonVersion.current) saveInFlight.current = false; }
-  }, [user?.id, lesson, attempts, lessonId, genre, lessonNumber, summary.meaningScore, summary.meaningTotal, summary.quizScore, summary.quizTotal, replayCompleted, replayCorrect, replayQuestions.length, token]);
+  }, [user?.id, lesson, attempts, lessonId, genre, lessonNumber, lessonTitle, summary.meaningScore, summary.meaningTotal, summary.quizScore, summary.quizTotal, replayCompleted, replayCorrect, replayQuestions.length, token]);
   useEffect(() => { if (phase === "results") void saveProgress(); }, [phase, saveProgress]);
 
   const activeQuestions = phase === "replay" ? replayQuestions : questions;
@@ -133,8 +134,8 @@ export default function Lesson() {
   const stageLabels = ["単語を学ぶ", ...(summary.meaningTotal ? ["意味を選ぶ"] : []), ...(summary.quizTotal ? ["例文で確認"] : [])];
   const stage = phase === "cards" || phase === "intro" ? 0 : question?.questionType === "meaning" || !summary.meaningTotal ? 1 : 2;
   return <div className="vs-page vs-practice">
-    {course?.firstLesson && lessonNumber < course.firstLesson && <div className="vs-notice">以前のレッスンです。学習記録はそのまま残っています。新しい熟語レッスンは Lesson {course.firstLesson} から学べます。<Link className="vs-text-button" to={`/lesson/${genre}-lesson-${course.firstLesson}`}>新しい熟語レッスンへ</Link></div>}
-    <header className="vs-practice-heading"><Link className="vs-back" to={listPath}>← 一覧</Link><h1 ref={pageHeading} tabIndex={-1}>{phase === "results" ? "レッスン完了" : phase === "replay" ? "間違いを復習" : `Lesson ${lessonNumber}`}</h1><p className="vs-practice-context">{courseLabel(genre)}</p></header>
+    {course?.firstLesson && lessonNumber < course.firstLesson && <div className="vs-notice">以前のレッスンです。学習記録はそのまま残っています。新しい熟語レッスンは Lesson 1 から学べます。<Link className="vs-text-button" to={`/lesson/${genre}-lesson-${course.firstLesson}`}>新しい熟語レッスンへ</Link></div>}
+    <header className="vs-practice-heading"><Link className="vs-back" to={listPath}>← 一覧</Link><h1 ref={pageHeading} tabIndex={-1}>{phase === "results" ? "レッスン完了" : phase === "replay" ? "間違いを復習" : lessonLabel(genre, lessonNumber)}</h1><p className="vs-practice-context">{courseLabel(genre)}</p></header>
     {phase !== "results" && phase !== "replay" && <ol className="vs-stage-nav" aria-label="レッスンの流れ">{stageLabels.map((label, i) => <li key={label}><button aria-current={stage === i ? "step" : undefined} disabled={i === 2} onClick={() => i === 0 ? setPhase("cards") : beginPractice()}>{i + 1}. {label}</button></li>)}</ol>}
     <section className="vs-practice-panel">
       {phase === "intro" && <>{!summary.quizTotal && <p className="vs-muted">例文は単語カードで確認できます。</p>}<div className="vs-practice-topline"><span>今日の単語</span><span>{lesson.words.length} 語</span></div><div className="vs-word-list">{lesson.words.map((item, i) => <span lang="en" key={`${item.word}-${i}`}>{item.word}</span>)}</div><div className="vs-actions"><button className="pf-button" onClick={() => setPhase("cards")}>単語を学び始める <span aria-hidden="true">→</span></button>{questions.length > 0 && <button className="pf-button-secondary" onClick={() => beginPractice()}>クイズから始める</button>}</div></>}
