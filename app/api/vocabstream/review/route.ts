@@ -3,6 +3,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { getAuthenticatedUser } from "@/app/api/_lib/supabaseAuth";
 import { getVocabStreamReview } from "@/apps/vocabstream/src/services/reviewService";
 
+import { apiError } from "@/app/api/_lib/http";
+
 export const runtime = "nodejs";
 
 export async function GET(request: NextRequest) {
@@ -15,8 +17,6 @@ export async function GET(request: NextRequest) {
     const review = await getVocabStreamReview(authUser.id);
     return NextResponse.json(review);
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Review lookup failed";
-    const status = message === "Invalid Supabase session." ? 401 : 500;
-    return NextResponse.json({ error: message }, { status });
+    return apiError(error, "vocabstream.review");
   }
 }

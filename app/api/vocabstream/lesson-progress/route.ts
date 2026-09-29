@@ -1,5 +1,8 @@
+import { supabaseServiceHeaders } from "@/app/api/_lib/supabaseAuth";
 import { NextRequest, NextResponse } from "next/server";
 import { getAuthenticatedUser, getRequiredEnv } from "@/app/api/_lib/supabaseAuth";
+
+import { apiError, fetchWithTimeout } from "@/app/api/_lib/http";
 
 export const runtime = "nodejs";
 
@@ -18,7 +21,7 @@ export async function GET(request: NextRequest) {
     }
 
     const genre = request.nextUrl.searchParams.get("genre")?.trim();
-    if (!genre) {
+    if (!genre || genre.length > 100) {
       return NextResponse.json({ error: "genre is required." }, { status: 400 });
     }
 
@@ -29,12 +32,12 @@ export async function GET(request: NextRequest) {
       user_id: `eq.${authUser.id}`,
       genre: `eq.${genre}`,
       order: "updated_at.desc",
+      limit: "1000",
     });
 
-    const response = await fetch(`${supabaseUrl}/rest/v1/vocabstream_user_lesson_progress?${params}`, {
+    const response = await fetchWithTimeout(`${supabaseUrl}/rest/v1/vocabstream_user_lesson_progress?${params}`, {
       headers: {
-        apikey: serviceRoleKey,
-        Authorization: `Bearer ${serviceRoleKey}`,
+        ...supabaseServiceHeaders(serviceRoleKey),
       },
     });
 
@@ -53,8 +56,6 @@ export async function GET(request: NextRequest) {
       })),
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Progress lookup failed";
-    const status = message === "Invalid Supabase session." ? 401 : 500;
-    return NextResponse.json({ error: message }, { status });
+    return apiError(error, "vocabstream.lesson-progress");
   }
 }

@@ -5,24 +5,22 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import AppHeader from "@/app/components/AppHeader";
 import AppBrand from "@/app/components/AppBrand";
 import AuthButton from "@/app/components/AuthButton";
+import { requestSignal } from "@/lib/browserRequest";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
-type VidMatchVideo = {
-  video_id: string;
-  title: string;
-  channel_name: string;
-  youtube_url: string;
-  thumbnail_url: string | null;
-  duration: string | null;
-  level: string;
-  skills: string[];
-  topics: string[];
-  accent: string | null;
-  transcript_available: boolean;
-  description: string | null;
-  tags: string[];
-  quality_score: number;
-};
+import { parseVideoRows, thumbnailSources, youtubeWatchUrl, type VidMatchVideo } from "./services/videoContract";
+
+// Bound waits on mobile/network interruptions; never retry learner writes automatically.
+async function browserFetch(input: RequestInfo | URL, init: RequestInit = {}): Promise<Response> {
+  const deadline = requestSignal(15_000, init.signal ? [init.signal] : []);
+  try {
+    const response = await fetch(input, { ...init, signal: deadline.signal, cache: "no-store" });
+    // These bounded metadata responses are buffered so the deadline covers JSON delivery too.
+    const body = await response.arrayBuffer();
+    return new Response([204, 205, 304].includes(response.status) ? null : body, { status: response.status, statusText: response.statusText, headers: response.headers });
+  } finally { deadline.dispose(); }
+}
+
 type HistoryVideo = VidMatchVideo & { last_clicked_at: string; created_at: string; click_count?: number };
 type Settings = {
   selectedLevel: string;
@@ -68,6 +66,10 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
   const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
   const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [userId, setUserId] = useState<string | null>(null);
+  const tokenRef = useRef<string | null>(null);
+  const settingsSaveQueue = useRef<Promise<void>>(Promise.resolve());
+  const recommendationRequest = useRef<AbortController | null>(null);
   const [authReady, setAuthReady] = useState(!supabase);
   const [settingsLoading, setSettingsLoading] = useState(false);
   const [settingsRestored, setSettingsRestored] = useState(false);
@@ -98,13 +100,15 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
   useEffect(() => {
     if (!supabase) return;
     let active = true;
-    const applySession = (token: string | null) => {
+    const applySession = (token: string | null, id: string | null) => {
       if (!active) return;
+      tokenRef.current = token;
       setAccessToken(token);
+      setUserId(id);
       setAuthReady(true);
     };
-    void supabase.auth.getSession().then(({ data }) => applySession(data.session?.access_token ?? null));
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => applySession(session?.access_token ?? null));
+    void supabase.auth.getSession().then(({ data }) => applySession(data.session?.access_token ?? null, data.session?.user.id ?? null)).catch(() => { if (active) setAuthReady(true); });
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => applySession(session?.access_token ?? null, session?.user.id ?? null));
     return () => { active = false; subscription.unsubscribe(); };
   }, [supabase]);
 
@@ -113,10 +117,11 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
     setSettingsRestored(false);
     setSettingsError("");
     setSettingsStatus("");
-    if (!accessToken) { setSettingsLoading(false); return; }
+    setSettings(DEFAULT_SETTINGS);
+    if (!userId || !tokenRef.current) { setSettingsLoading(false); return; }
     const controller = new AbortController();
     setSettingsLoading(true);
-    void fetch("/api/vidmatch/settings", { headers: { Authorization: `Bearer ${accessToken}` }, signal: controller.signal })
+    void browserFetch("/api/vidmatch/settings", { headers: { Authorization: `Bearer ${tokenRef.current}` }, signal: controller.signal })
       .then(async (response) => {
         const data = await response.json();
         if (!response.ok || data.error) throw new Error("Settings unavailable");
@@ -130,24 +135,29 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
       })
       .finally(() => { if (!controller.signal.aborted) setSettingsLoading(false); });
     return () => controller.abort();
-  }, [accessToken, settingsRetry]);
+  }, [userId, settingsRetry]);
 
   useEffect(() => {
     if (!accessToken || !settingsRestored || !settingsDirty.current || topicError) return;
-    const controller = new AbortController();
+    let active = true;
     const timer = window.setTimeout(() => {
       setSettingsStatus("条件を保存中…");
-      void fetch("/api/vidmatch/settings", {
-        method: "PUT", headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
-        body: JSON.stringify({ settings }), signal: controller.signal,
-      }).then((response) => {
-        if (!response.ok) throw new Error("Save failed");
-        if (!controller.signal.aborted) { setSettingsError(""); setSettingsStatus("条件を保存しました"); }
-      }).catch(() => {
-        if (!controller.signal.aborted) { setSettingsStatus(""); setSettingsError("条件を保存できませんでした。検索はそのまま続けられます。"); }
+      // Serialize in-flight saves so ordinary slow responses cannot reorder choices.
+      settingsSaveQueue.current = settingsSaveQueue.current.catch(() => {}).then(async () => {
+        if (!active) return;
+        try {
+          const response = await browserFetch("/api/vidmatch/settings", {
+            method: "PUT", headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
+            body: JSON.stringify({ settings }),
+          });
+          if (!response.ok) throw new Error("Save failed");
+          if (active) { settingsDirty.current = false; setSettingsError(""); setSettingsStatus("条件を保存しました"); }
+        } catch {
+          if (active) { setSettingsStatus(""); setSettingsError("条件を保存できませんでした。検索はそのまま続けられます。"); }
+        }
       });
     }, 600);
-    return () => { window.clearTimeout(timer); controller.abort(); };
+    return () => { active = false; window.clearTimeout(timer); };
   }, [accessToken, settings, settingsRestored, settingsSaveRetry, topicError]);
 
   const updateSettings = (patch: Partial<Settings>) => {
@@ -161,14 +171,17 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
 
   const loadRecommendations = useCallback(async (params: URLSearchParams, scroll = false) => {
     const currentRequest = ++requestNumber.current;
+    recommendationRequest.current?.abort();
+    const controller = new AbortController();
+    recommendationRequest.current = controller;
     setRecommendationLoading(true);
     setRecommendationError("");
     setHasSearched(true);
     try {
-      const response = await fetch(`/api/vidmatch/recommend?${params}`);
+      const response = await browserFetch(`/api/vidmatch/recommend?${params}`, { signal: controller.signal });
       const data = await response.json();
       if (!response.ok || data.error) throw new Error("Recommendations unavailable");
-      if (currentRequest === requestNumber.current) setRecommendations(data.videos ?? []);
+      if (currentRequest === requestNumber.current) setRecommendations(parseVideoRows(data.videos));
     } catch {
       if (currentRequest === requestNumber.current) {
         setRecommendations([]);
@@ -194,7 +207,7 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
   const searchSimilar = useCallback(() => {
     if (similarId) void loadRecommendations(new URLSearchParams({ similar_to: similarId, limit: "6" }));
   }, [loadRecommendations, similarId]);
-  const invalidateRequests = useCallback(() => { requestNumber.current += 1; }, []);
+  const invalidateRequests = useCallback(() => { requestNumber.current += 1; recommendationRequest.current?.abort(); }, []);
   useEffect(() => {
     if (isSimilar) searchSimilar();
     else { invalidateRequests(); setRecommendations([]); setRecommendationLoading(false); setRecommendationError(""); setHasSearched(false); }
@@ -208,11 +221,11 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
     if (!accessToken) { setHistoryLoading(false); return; }
     const controller = new AbortController();
     setHistoryLoading(true);
-    void fetch("/api/vidmatch/history", { headers: { Authorization: `Bearer ${accessToken}` }, signal: controller.signal })
+    void browserFetch("/api/vidmatch/history", { headers: { Authorization: `Bearer ${accessToken}` }, signal: controller.signal })
       .then(async (response) => {
         const data = await response.json();
         if (!response.ok || data.error) throw new Error("History unavailable");
-        if (!controller.signal.aborted) setHistory(data.history ?? []);
+        if (!controller.signal.aborted) setHistory(parseVideoRows(data.history) as HistoryVideo[]);
       }).catch(() => { if (!controller.signal.aborted) setHistoryError("動画の履歴を読み込めませんでした。もう一度お試しください。"); })
       .finally(() => { if (!controller.signal.aborted) setHistoryLoading(false); });
     return () => controller.abort();
@@ -222,8 +235,8 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
     if (!accessToken) return;
     setTrackingError("");
     try {
-      const response = await fetch("/api/vidmatch/history", {
-        method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` }, body: JSON.stringify(video),
+      const response = await browserFetch("/api/vidmatch/history", {
+        method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` }, body: JSON.stringify({ video_id: video.video_id }), keepalive: true,
       });
       if (!response.ok) throw new Error("History save failed");
     } catch { setTrackingError("動画は開きましたが、履歴を保存できませんでした。"); }
@@ -293,10 +306,22 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
 
 function VideoCard({ video, openedAt, onOpen }: { video: VidMatchVideo; openedAt?: string; onOpen: (video: VidMatchVideo) => Promise<void> }) {
   const duration = formatDuration(video.duration);
+  const watchUrl = youtubeWatchUrl(video.video_id);
+  const sources = useMemo(() => thumbnailSources(video.video_id, video.thumbnail_url), [video.video_id, video.thumbnail_url]);
+  const [sourceIndex, setSourceIndex] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  useEffect(() => { setSourceIndex(0); setImageLoaded(false); }, [sources]);
+  const thumbnail = sources[sourceIndex];
   const tags = Array.from(new Set([...(video.skills ?? []), ...(video.topics ?? [])])).slice(0, 3);
   return <article className="vm-video-card">
-    <div className="vm-thumbnail">{video.thumbnail_url ? <img src={video.thumbnail_url} alt="" loading="lazy" /> : <span aria-hidden="true">▷</span>}{duration && <span className="vm-duration">{duration}</span>}</div>
-    <div className="vm-video-body"><p className="vm-channel">{video.channel_name}</p><h3>{video.title}</h3><div className="vm-tags">{video.level && <span className="vm-level-tag">{video.level}</span>}{tags.map((tag) => <span key={tag}>{LABELS[tag] || tag}</span>)}{video.transcript_available && <span>字幕あり</span>}</div>{video.description && <p className="vm-description">{video.description}</p>}{openedAt && <p className="vm-opened">前回開いた日: {formatDate(openedAt)}</p>}<div className="vm-video-actions"><a href={video.youtube_url} target="_blank" rel="noopener noreferrer" className="pf-button-secondary" onClick={() => void onOpen(video)} aria-label={`${video.title}をYouTubeで見る（新しいタブ）`}>YouTubeで見る <span aria-hidden="true">↗</span></a><Link href={`/vidmatch/similar/${encodeURIComponent(video.video_id)}`} className="vm-text-link" aria-label={`${video.title}に似た動画を探す`}>似た動画</Link></div></div>
+    <div className="vm-thumbnail" aria-busy={!!thumbnail && !imageLoaded}>
+      {thumbnail ? <img src={thumbnail} alt="" width={480} height={360} loading="lazy" decoding="async" onLoad={() => setImageLoaded(true)} onError={() => {
+        console.warn(JSON.stringify({ event: "vidmatch_media_failure", stage: "thumbnail", videoId: video.video_id, attempt: sourceIndex + 1 }));
+        setImageLoaded(false); setSourceIndex((index) => index + 1);
+      }} /> : <span className="vm-thumbnail-fallback">画像を読み込めませんでした<button type="button" className="vm-text-link" onClick={() => { setSourceIndex(0); setImageLoaded(false); }}>画像を再読み込み</button></span>}
+      {duration && <span className="vm-duration">{duration}</span>}
+    </div>
+    <div className="vm-video-body"><p className="vm-channel">{video.channel_name}</p><h3>{video.title}</h3><div className="vm-tags">{video.level && <span className="vm-level-tag">{video.level}</span>}{tags.map((tag) => <span key={tag}>{LABELS[tag] || tag}</span>)}{video.transcript_available && <span>字幕あり</span>}</div>{video.description && <p className="vm-description">{video.description}</p>}{openedAt && <p className="vm-opened">前回開いた日: {formatDate(openedAt)}</p>}<div className="vm-video-actions"><a href={watchUrl ?? undefined} aria-disabled={!watchUrl} target="_blank" rel="noopener noreferrer" className="pf-button-secondary" onClick={(event) => { if (!watchUrl) { event.preventDefault(); return; } void onOpen(video); }} aria-label={`${video.title}をYouTubeで見る（新しいタブ）`}>YouTubeで見る <span aria-hidden="true">↗</span></a><Link href={`/vidmatch/similar/${encodeURIComponent(video.video_id)}`} className="vm-text-link" aria-label={`${video.title}に似た動画を探す`}>似た動画</Link></div></div>
   </article>;
 }
 function LoadingVideos() {
@@ -366,6 +391,8 @@ const styles = `
 .vm-thumbnail { position:relative; aspect-ratio:16/9; background:var(--pf-primary-soft); display:grid; place-items:center; overflow:hidden; }
 .vm-thumbnail > img { display:block; width:100%; height:100%; object-fit:cover; }
 .vm-thumbnail > span:not(.vm-duration) { font-size:34px; color:var(--pf-accent); }
+.vm-thumbnail > .vm-thumbnail-fallback { font-size:11px; padding:8px; text-align:center; }
+.vm-thumbnail-fallback button { font-size:11px; display:block; margin:auto; }
 .vm-duration { position:absolute; right:10px; bottom:9px; background:var(--pf-text); color:var(--pf-surface); border-radius:4px; padding:3px 6px; font-size:11px; font-weight:600; }
 .vm-video-body { padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; min-width:0; }
 .vm-channel { margin:0; font-size:11px; color:var(--pf-muted); overflow-wrap:anywhere; }
@@ -428,7 +455,9 @@ const styles = `
   .vm-video-grid, .vm-history .vm-video-grid { grid-template-columns:1fr; gap:12px; }
   .vm-video-card { display:grid; grid-template-columns:104px minmax(0,1fr); gap:8px 12px; padding:12px; }
   .vm-thumbnail { grid-column:1; grid-row:1 / span 2; align-self:start; border-radius:6px; }
-  .vm-duration { right:4px; bottom:4px; padding:1px 4px; font-size:10px; }
+  .vm-thumbnail > .vm-thumbnail-fallback { font-size:11px; padding:8px; text-align:center; }
+.vm-thumbnail-fallback button { font-size:11px; display:block; margin:auto; }
+.vm-duration { right:4px; bottom:4px; padding:1px 4px; font-size:10px; }
   .vm-video-body { display:contents; }
   .vm-channel { grid-column:2; grid-row:1; line-height:1.5; }
   .vm-video-body h3 { grid-column:2; grid-row:2; font-size:14px; line-height:1.5; }

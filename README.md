@@ -85,7 +85,7 @@ The Next.js app acts as a host shell. Each product under `apps/*` owns its local
 
 - **Frontend:** Next.js 15, React 18, TypeScript, Tailwind CSS, deployed on Vercel.
 - **Backend:** FastAPI, Uvicorn, Python, and the OpenAI API, deployed on Render.
-- **Data:** Supabase PostgreSQL for VidMatch recommendation data, plus a static JSON lesson corpus for VocabStream.
+- **Data:** Supabase Auth/PostgreSQL for profiles, progress, mistakes, SpeakWise sessions/memory and VidMatch catalog/history, plus the static JSON VocabStream corpus.
 - **AI:** OpenAI chat completions for tutoring flows and OpenAI text-to-speech for generated audio.
 - **External APIs:** YouTube Data API for VidMatch ingestion.
 - **Platform Ops:** Vercel Analytics, `next-sitemap`, Vercel cron, Render health checks, and Supabase row-level security.
@@ -127,7 +127,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-The SpeakWise frontend defaults to `http://127.0.0.1:8000`. Override it from the Next.js environment with:
+Set the SpeakWise service URL explicitly in the Next.js environment (the browser uses it at build time):
 
 ```bash
 NEXT_PUBLIC_SPEAKWISE_API_URL=http://127.0.0.1:8000
@@ -147,11 +147,7 @@ For local setup details, use the app-specific docs in `api/speakwise/README.md` 
 
 ## VidMatch Data Setup
 
-Create the Supabase table by running:
-
-```sql
--- apps/vidmatch/supabase/schema.sql
-```
+Apply the root `supabase/migrations` chain as described in [the Supabase guide](supabase/README.md). The per-app SQL files are historical snapshots, not the production migration entry point.
 
 Ingestion runs through a protected Next.js server route. The route accepts a YouTube search query plus metadata such as CEFR level, target skills, topics, accent, result count, and minimum quality score. It then stores normalized, scored videos in Supabase.
 
@@ -192,9 +188,10 @@ Run `npm run lint`, `npm run typecheck`, `npm run test:frontend`, and `npm run b
 
 ## Deployment
 
-- The Next.js platform is deployed on Vercel.
-- `vercel.json` schedules `/api/vidmatch/cron/daily-youtube` at `20:00 UTC` each day.
-- The SpeakWise FastAPI service is configured for Render through `render.yaml`.
+- Follow [the production deployment guide](docs/production-deployment.md) for exact Render services, environment ownership, Supabase migrations/Auth, deployment order, and smoke tests.
+- `render.yaml` supports Next.js + FastAPI + the daily ingestion cron on Render. The existing Vercel frontend + Render FastAPI topology is also documented. Run only one scheduler.
+- Apply the canonical [root Supabase migration chain](supabase/README.md) before deploying the updated API. Per-app SQL files are historical snapshots.
+- Review [the backend audit and validation evidence](docs/backend-audit.md) for architecture, fixes, and limits of local verification.
 
 ## License
 

@@ -1,47 +1,6 @@
-// src/api.ts (TypeScript - 型注釈を追加したバージョン)
-
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/api";
-
-export type VocabStreamQuestionAttempt = {
-  questionType: "meaning" | "quiz";
-  word: string;
-  prompt?: string;
-  correctAnswer: string;
-  selectedAnswer: string;
-  isCorrect: boolean;
-  isReplay?: boolean;
-  attemptOrder: number;
-  choices?: string[];
-  answeredAt?: string;
-  sourceCategory?: string;
-  sourceLessonId?: string;
-  sourceLessonNumber?: number | null;
-  definition?: string;
-  example?: string;
-  explanation?: string;
-  japaneseMeaning?: string;
-  synonyms?: string;
-  antonyms?: string;
-  forms?: string;
-};
-
-export type VocabStreamProgressPayload = {
-  anonymousUserId?: string;
-  userUsername?: string;
-  lessonId: string;
-  genre: string;
-  lessonNumber?: number | null;
-  lessonTitle?: string | null;
-  wordCount: number;
-  meaningScore: number;
-  meaningTotal: number;
-  quizScore: number;
-  quizTotal: number;
-  replayCompleted?: boolean;
-  replayCorrect?: number;
-  replayTotal?: number;
-  questionAttempts: VocabStreamQuestionAttempt[];
-};
+import { requestSignal } from "@/lib/browserRequest";
+import type { VocabStreamProgressPayload } from "./lib/progressContract";
+export type { VocabStreamProgressPayload, VocabStreamQuestionAttempt } from "./lib/progressContract";
 
 export type VocabStreamLessonProgress = {
   lessonId: string;
@@ -86,262 +45,68 @@ export type VocabStreamReviewQuestion = {
   sourceLessonNumber?: number | null;
 };
 
-async function tryFetchJson(path: string): Promise<Record<string, unknown> | null> {
-  try {
-    const r = await fetch(path);
-    if (!r.ok) return null;
-    return await r.json();
-  } catch {
-    return null;
-  }
-}
-
-/* static genres (unchanged) */
-const STATIC_GENRES = [
-  { id: "word-beginner", title: "初級 (CEFR A1~A2)" },
-  { id: "word-intermediate", title: "中級 (CEFR B1)" },
-  { id: "word-advanced", title: "上級 (CEFR B2)" },
-  { id: "word-proficiency", title: "熟達 (CEFR C1~C2)" },
-  { id: "idioms-beginner", title: "初級 (CEFR A1~A2)" },
-  { id: "idioms-intermediate", title: "中級 (CEFR B1)" },
-  { id: "idioms-advanced", title: "上級 (CEFR B2)" },
-  { id: "idioms-proficiency", title: "熟達 (CEFR C1~C2)" },
-  { id: "computer-science", title: "コンピューターサイエンス・テクノロジー" },
-  { id: "medicine", title: "医学・健康" },
-  { id: "economics-business", title: "ビジネス・経済" },
-  { id: "environment", title: "環境科学・サステナビリティ" },
-  { id: "law", title: "法律" },
-  { id: "politics", title: "政治" },
-  { id: "engineering", title: "工学" },
-];
-
-/* ------------------------
-   Auth
-   ------------------------*/
-export async function apiLogin(username: string, password: string) {
-  const res = await fetch(`${API_BASE}/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password }),
-  });
-  if (!res.ok) throw new Error("Login failed");
-  return res.json();
-}
-
-export async function apiMe(token: string) {
-  const res = await fetch(`${API_BASE}/me?token=${encodeURIComponent(token)}`);
-  if (!res.ok) throw new Error("unauthorized");
-  return res.json();
-}
-
 export async function apiSubmitVocabStreamProgress(payload: VocabStreamProgressPayload, accessToken?: string | null) {
-  const res = await fetch("/api/vocabstream/progress", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
-    },
-    body: JSON.stringify(payload),
-  });
+  const deadline = requestSignal(20_000);
+  try {
+    const res = await fetch("/api/vocabstream/progress", {
+      method: "POST",
+      signal: deadline.signal,
+      headers: {
+        "Content-Type": "application/json",
+        ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
+      },
+      body: JSON.stringify(payload),
+    });
 
-  if (!res.ok) {
-    const error = await res.json().catch(() => null);
-    throw new Error(error?.error || "Failed to save VocabStream progress");
-  }
+    if (!res.ok) {
+      const error = await res.json().catch(() => null);
+      throw new Error(error?.error || "Failed to save VocabStream progress");
+    }
 
-  return res.json();
+    return await res.json();
+  } finally { deadline.dispose(); }
 }
 
 export async function apiGetVocabStreamLessonProgress(genre: string, accessToken?: string | null) {
   if (!accessToken) return [] as VocabStreamLessonProgress[];
 
-  const params = new URLSearchParams({ genre });
-  const res = await fetch(`/api/vocabstream/lesson-progress?${params}`, {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
-  });
+  const deadline = requestSignal(20_000);
+  try {
+    const params = new URLSearchParams({ genre });
+    const res = await fetch(`/api/vocabstream/lesson-progress?${params}`, {
+      signal: deadline.signal,
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
 
-  if (!res.ok) {
-    const error = await res.json().catch(() => null);
-    throw new Error(error?.error || "Failed to load VocabStream lesson progress");
-  }
+    if (!res.ok) {
+      const error = await res.json().catch(() => null);
+      throw new Error(error?.error || "Failed to load VocabStream lesson progress");
+    }
 
-  const data = (await res.json()) as { progress?: VocabStreamLessonProgress[] };
-  return data.progress ?? [];
+    const data = (await res.json()) as { progress?: VocabStreamLessonProgress[] };
+    return data.progress ?? [];
+  } finally { deadline.dispose(); }
 }
 
 export async function apiGetVocabStreamReview(accessToken?: string | null) {
   if (!accessToken) return { weakWords: [] as VocabStreamWeakWord[], questions: [] as VocabStreamReviewQuestion[] };
 
-  const res = await fetch("/api/vocabstream/review", {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
-  });
-
-  if (!res.ok) {
-    const error = await res.json().catch(() => null);
-    throw new Error(error?.error || "Failed to load VocabStream review");
-  }
-
-  return res.json() as Promise<{ weakWords: VocabStreamWeakWord[]; questions: VocabStreamReviewQuestion[] }>;
-}
-
-/* ------------------------
-   Genres
-   ------------------------*/
-export async function apiGenres() {
-  const backend = await tryFetchJson(`${API_BASE}/genres`);
-  if (backend && backend.genres) return backend;
-  return { genres: STATIC_GENRES };
-}
-
-/* ------------------------
-   Lessons list for a genre
-   ------------------------*/
-export async function apiLessons(genreId: string) {
-  const backend = await tryFetchJson(`${API_BASE}/lessons/${encodeURIComponent(genreId)}`);
-  if (backend && backend.lessons) return backend;
-
-  const lessons: { id: string; title: string; progress?: number }[] = [];
-  let consecutiveMisses = 0;
-  const MAX_TRIES = 200;
-
-  for (let i = 1; i <= MAX_TRIES; i++) {
-    const candidates = [
-      `/vocabstream/data/${genreId}/Lesson${i}.json`,
-      `/vocabstream/data/${genreId}/lesson${i}.json`,
-      `/vocabstream/data/${genreId}/Lesson${parseInt(String(i), 10)}.json`,
-      `/vocabstream/data/${genreId}/lesson${parseInt(String(i), 10)}.json`,
-    ];
-
-    let found = false;
-    for (const p of candidates) {
-      const json = await tryFetchJson(p);
-      if (json) {
-        lessons.push({ id: `${genreId}-lesson-${i}`, title: `Lesson ${i}`, progress: 0 });
-        found = true;
-        consecutiveMisses = 0;
-        break;
-      }
-    }
-
-    if (!found) consecutiveMisses++;
-
-    if (consecutiveMisses >= 3 && i >= 6) break;
-  }
-
-  return { lessons };
-}
-
-/* ------------------------
-   Lesson detail
-   ------------------------*/
-export async function apiLessonDetail(lessonId: string) {
-  const backend = await tryFetchJson(`${API_BASE}/lesson/${encodeURIComponent(lessonId)}`);
-  if (backend && (backend.words || backend.raw || backend.title)) return backend;
-
-  if (!lessonId.includes("-lesson-")) return { words: [] };
-  const [genreFolder, numStr] = lessonId.split("-lesson-");
-  const candidates = [
-    `/vocabstream/data/${genreFolder}/Lesson${numStr}.json`,
-    `/vocabstream/data/${genreFolder}/lesson${numStr}.json`,
-    `/vocabstream/data/${genreFolder}/Lesson${parseInt(numStr, 10)}.json`,
-    `/vocabstream/data/${genreFolder}/lesson${parseInt(numStr, 10)}.json`,
-  ];
-
-  for (const p of candidates) {
-    const json = await tryFetchJson(p);
-    if (json) return json;
-  }
-
-  return { words: [] };
-}
-
-/* ------------------------
-   Lesson quiz (try backend, else generate client-side)
-   ------------------------*/
-export async function apiLessonQuiz(lessonId: string) {
-  const backend = await tryFetchJson(`${API_BASE}/lesson/${encodeURIComponent(lessonId)}/quiz`);
-  if (backend && backend.questions) return backend;
-
-  const lesson = await apiLessonDetail(lessonId);
+  const deadline = requestSignal(20_000);
   try {
-    const questions = generateQuizFromLesson(lesson);
-    return { lesson_id: lessonId, questions };
-  } catch {
-    return { lesson_id: lessonId, questions: [] };
-  }
-}
-
-/* ------------------------
-   Types for quiz generator
-   ------------------------*/
-type QuizQuestion = {
-  word: string;
-  sentence: string;
-  blank_sentence: string;
-  choices: string[];
-  answer_index: number;
-};
-
-type PoolItem = { word: string; example: string };
-
-/* ------------------------
-   Client-side quiz generator
-   ------------------------*/
-function generateQuizFromLesson(lesson: unknown): QuizQuestion[] {
-  const source = lesson && typeof lesson === "object" ? lesson as Record<string, unknown> : {};
-  const words: unknown[] = Array.isArray(source.words) ? source.words : [];
-  const pool: PoolItem[] = words
-    .filter((word): word is { word: string; example?: unknown } => Boolean(word && typeof word === "object" && "word" in word && typeof word.word === "string"))
-    .map((word) => ({ word: word.word, example: typeof word.example === "string" ? word.example : "" }));
-
-  if (pool.length < 3) throw new Error("not enough words for quiz");
-
-  function sample<T>(arr: T[], k: number): T[] {
-    const copy = arr.slice();
-    for (let i = copy.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [copy[i], copy[j]] = [copy[j], copy[i]];
-    }
-    return copy.slice(0, k);
-  }
-
-  const questions: QuizQuestion[] = [];
-
-  for (const item of pool) {
-    const correct = item.word;
-    const otherWords: string[] = pool.map((p: PoolItem) => p.word).filter((w: string) => w !== correct);
-    const distractors = sample(otherWords, Math.min(2, otherWords.length));
-    const choices = [...distractors, correct];
-    const shuffled = sample(choices, choices.length);
-    const answer_index = shuffled.indexOf(correct);
-
-    let blank_sentence = item.example || "";
-    if (blank_sentence) {
-      const re = new RegExp(correct.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i");
-      if (re.test(blank_sentence)) {
-        blank_sentence = blank_sentence.replace(re, "____");
-      } else {
-        const cap = correct.charAt(0).toUpperCase() + correct.slice(1);
-        const re2 = new RegExp(cap.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i");
-        if (re2.test(blank_sentence)) blank_sentence = blank_sentence.replace(re2, "____");
-        else blank_sentence = "____ " + blank_sentence;
-      }
-    } else {
-      blank_sentence = "____";
-    }
-
-    questions.push({
-      word: correct,
-      sentence: item.example || "",
-      blank_sentence,
-      choices: shuffled,
-      answer_index,
+    const res = await fetch("/api/vocabstream/review", {
+      signal: deadline.signal,
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
     });
-  }
 
-  return questions;
+    if (!res.ok) {
+      const error = await res.json().catch(() => null);
+      throw new Error(error?.error || "Failed to load VocabStream review");
+    }
+
+    return await res.json() as { weakWords: VocabStreamWeakWord[]; questions: VocabStreamReviewQuestion[] };
+  } finally { deadline.dispose(); }
 }

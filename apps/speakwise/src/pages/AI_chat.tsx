@@ -1,6 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 import AppBrand from "@/app/components/AppBrand";
+import AuthButton from "@/app/components/AuthButton";
+import { playVoiceResponse } from "../lib/voicePlayback";
+import { boundedConversationHistory, makePromptMemory } from "../lib/promptMemory";
+import { requestSignal } from "@/lib/browserRequest";
 
 type CEFRLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 type LessonMode =
@@ -200,6 +204,9 @@ export default function AIChat() {
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [authReady, setAuthReady] = useState(!supabase);
   const [settingsLoaded, setSettingsLoaded] = useState(false);
+  const [settingsHydrated, setSettingsHydrated] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null);
+  const currentSessionIdRef = useRef<string | null>(null);
   const [settings, setSettings] = useState<SpeakWiseSettings>(DEFAULT_SETTINGS);
   const [memory, setMemory] = useState<LearnerMemory | null>(null);
   const [chatLog, setChatLog] = useState<ChatEntry[]>([]);
@@ -212,7 +219,7 @@ export default function AIChat() {
   const [summary, setSummary] = useState<LessonSummary | null>(null);
   const [lessonEnded, setLessonEnded] = useState(false);
   const [optionsOpen, setOptionsOpen] = useState(true);
-  const [sessionId, setSessionId] = useState<string | null>(null);
+  const sessionPromiseRef = useRef<Promise<string | null> | null>(null);
   const [isListening, setIsListening] = useState(false);
   const [voiceLoading, setVoiceLoading] = useState(false);
   const [error, setError] = useState("");
@@ -229,6 +236,14 @@ export default function AIChat() {
   const settingsRef = useRef<HTMLElement | null>(null);
   const settingsToggleRef = useRef<HTMLButtonElement | null>(null);
   const voiceRequestRef = useRef(0);
+  const voiceAbortRef = useRef<AbortController | null>(null);
+  const requestsRef = useRef(new Set<AbortController>());
+  const turnStartedRef = useRef<number | null>(null);
+  const recognitionStartedRef = useRef<number | null>(null);
+  const preparedVoiceRef = useRef<{ text: string; voice: string } | null>(null);
+  const operationRef = useRef(false);
+  const savedSettingsRef = useRef("");
+  const settingsSaveQueueRef = useRef(Promise.resolve());
 
   const topics = useMemo(
     () => [...settings.selectedTopics, settings.customTopic.trim()].filter(Boolean),
@@ -244,10 +259,11 @@ export default function AIChat() {
     if (!supabase) return;
     let mounted = true;
     supabase.auth.getSession().then(({ data }) => {
-      if (mounted) { setAccessToken(data.session?.access_token ?? null); setAuthReady(true); }
+      if (mounted) { setAccessToken(data.session?.access_token ?? null); setUserId(data.session?.user.id ?? null); setAuthReady(true); }
     }).catch(() => { if (mounted) setAuthReady(true); });
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setAccessToken(session?.access_token ?? null);
+      setUserId(session?.user.id ?? null);
       setAuthReady(true);
     });
     return () => { mounted = false; subscription.unsubscribe(); };
@@ -255,38 +271,76 @@ export default function AIChat() {
 
   useEffect(() => {
     if (!authReady) return;
-    if (!accessToken) { setSettingsLoaded(true); setMemory(null); return; }
     let cancelled = false;
+    const loadController = new AbortController();
+    const deadline = requestSignal(15000, [loadController.signal]);
+    savedSettingsRef.current = "";
+    setSettingsHydrated(false);
     setSettingsLoaded(false);
-    Promise.all([
-      fetch("/api/speakwise/lesson-settings", { headers: { Authorization: `Bearer ${accessToken}` } })
-        .then(async (response) => { if (!response.ok) throw new Error(); return response.json(); })
-        .then((data) => sanitizeSettings(data.settings)),
-      fetch("/api/speakwise/learner-memory", { headers: { Authorization: `Bearer ${accessToken}` } })
-        .then(async (response) => { if (!response.ok) throw new Error(); return response.json(); }),
-    ]).then(([storedSettings, storedMemory]) => {
+    setMemory(null);
+    setSettings(DEFAULT_SETTINGS);
+    // A sign-out/account switch must not leave the previous learner's chat active.
+    requestsRef.current.forEach((controller) => controller.abort());
+    voiceAbortRef.current?.abort(); voiceRequestRef.current += 1;
+    audioRef.current?.pause();
+    const oldRecognition = recognitionRef.current; recognitionRef.current = null; oldRecognition?.stop();
+    preparedVoiceRef.current = null;
+    if (audioUrlRef.current) { URL.revokeObjectURL(audioUrlRef.current); audioUrlRef.current = null; }
+    setChatLog([]); setSummary(null); setSummarySaved(false); setLessonActive(false);
+    setLessonStartedAt(null); setLessonEnded(false); setInput(""); setError("");
+    setVoiceLoading(false); setIsListening(false); setOptionsOpen(true);
+    if (!userId || !supabase) { deadline.dispose(); setSettingsLoaded(true); return; }
+    // Reload only when identity changes, not on every access-token refresh.
+    void supabase.auth.getSession().then(async ({ data }) => {
+      const token = data.session?.access_token;
+      if (!token) throw new Error("Missing session");
+      const results = await Promise.allSettled([
+        fetch("/api/speakwise/lesson-settings", { headers: { Authorization: `Bearer ${token}` }, signal: deadline.signal })
+          .then(async (response) => { if (!response.ok) throw new Error(); return response.json(); })
+          .then((data) => sanitizeSettings(data.settings)),
+        fetch("/api/speakwise/learner-memory", { headers: { Authorization: `Bearer ${token}` }, signal: deadline.signal })
+          .then(async (response) => { if (!response.ok) throw new Error(); return response.json(); }),
+      ]);
       if (cancelled) return;
-      if (storedSettings) setSettings(storedSettings);
-      if (storedMemory && !storedMemory.error) setMemory(storedMemory);
+      const [storedSettings, storedMemory] = results;
+      if (storedSettings.status === "fulfilled") {
+        if (storedSettings.value) setSettings(storedSettings.value);
+        savedSettingsRef.current = JSON.stringify(storedSettings.value ?? DEFAULT_SETTINGS);
+        setSettingsHydrated(true);
+      } else setNotice("前回の設定を読み込めませんでした。保存済み設定を守るため、この画面の変更は保存されません。");
+      if (storedMemory.status === "fulfilled") setMemory(storedMemory.value);
+      else setNotice("学習履歴を読み込めませんでした。現在の設定で練習できます。");
     }).catch(() => {
-      if (!cancelled) setNotice("前回の設定を読み込めませんでした。現在の設定で練習できます。");
-    }).finally(() => { if (!cancelled) setSettingsLoaded(true); });
-    return () => { cancelled = true; };
-  }, [accessToken, authReady]);
+      if (!cancelled) setNotice("前回の設定を読み込めませんでした。接続を確認してください。");
+    }).finally(() => { deadline.dispose(); if (!cancelled) setSettingsLoaded(true); });
+    return () => { cancelled = true; loadController.abort(); deadline.dispose(); };
+  }, [userId, authReady, supabase]);
 
   useEffect(() => {
-    if (!settingsLoaded || !accessToken) return;
+    if (!settingsLoaded || !settingsHydrated || !accessToken) return;
+    const snapshot = JSON.stringify(settings);
+    if (savedSettingsRef.current === snapshot) return;
+    let cancelled = false;
     const timer = window.setTimeout(() => {
-      fetch("/api/speakwise/lesson-settings", {
-        method: "PUT",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
-        body: JSON.stringify({ settings }),
-      }).then((response) => {
-        if (!response.ok) setNotice("設定を保存できませんでした。この画面では引き続き練習できます。");
-      }).catch(() => setNotice("設定を保存できませんでした。接続を確認してください。"));
+      // Serialize writes so a slower old preference cannot overwrite a newer one.
+      settingsSaveQueueRef.current = settingsSaveQueueRef.current.then(async () => {
+        if (cancelled) return;
+        const deadline = requestSignal(15000);
+        try {
+          const response = await fetch("/api/speakwise/lesson-settings", {
+            method: "PUT", signal: deadline.signal,
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
+            body: JSON.stringify({ settings }),
+          });
+          if (!response.ok) throw new Error("Settings save failed");
+          if (!cancelled) savedSettingsRef.current = snapshot;
+        } catch {
+          if (!cancelled) setNotice("設定を保存できませんでした。この画面では引き続き練習できます。");
+        } finally { deadline.dispose(); }
+      });
     }, 600);
-    return () => window.clearTimeout(timer);
-  }, [accessToken, settings, settingsLoaded]);
+    return () => { cancelled = true; window.clearTimeout(timer); };
+  }, [accessToken, settings, settingsLoaded, settingsHydrated]);
 
   useEffect(() => {
     if (!lessonStartedAt || !lessonActive) return;
@@ -306,9 +360,11 @@ export default function AIChat() {
   }, [chatLog, isSending, summary, error]);
 
   useEffect(() => () => {
-    recognitionRef.current?.stop();
+    const oldRecognition = recognitionRef.current; recognitionRef.current = null; oldRecognition?.stop();
     audioRef.current?.pause();
     voiceRequestRef.current += 1;
+    voiceAbortRef.current?.abort();
+    requestsRef.current.forEach((controller) => controller.abort());
     if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
   }, []);
 
@@ -331,21 +387,47 @@ export default function AIChat() {
     requestAnimationFrame(() => settingsToggleRef.current?.focus());
   }
 
+  async function authenticatedFetch(url: string, init: RequestInit, controller: AbortController) {
+    // getSession refreshes an expiring token; never attach a stale state snapshot.
+    const session = supabase ? (await supabase.auth.getSession()).data.session : null;
+    if (!session?.access_token) throw new Error("SpeakWiseを利用するには、ログインしてください。");
+    return fetch(url, { ...init, signal: controller.signal,
+      headers: { ...init.headers, Authorization: `Bearer ${session.access_token}` } });
+  }
+
+  async function authenticatedJson<T>(url: string, init: RequestInit) {
+    const controller = new AbortController();
+    requestsRef.current.add(controller);
+    const timer = setTimeout(() => controller.abort(), 60000);
+    try {
+      const response = await authenticatedFetch(url, init, controller);
+      // Keep the deadline and unmount cancellation until the body has finished.
+      const data = await response.json() as T;
+      return { response, data };
+    } finally { clearTimeout(timer); requestsRef.current.delete(controller); }
+  }
+
+  function requestError(status: number, fallback: string) {
+    if (status === 401) return "ログインの有効期限が切れました。もう一度ログインしてください。";
+    if (status === 429) return "リクエストが混み合っています。少し待ってから、もう一度お試しください。";
+    return fallback;
+  }
+
   async function callAgent(userText: string, phase: "start" | "continue" = "continue", mode = selectedMode.id, history = chatLog) {
     if (!SPEAKWISE_API_URL) throw new Error("レッスンに接続できません。しばらくしてから、もう一度お試しください。");
-    const res = await fetch(`${SPEAKWISE_API_URL}/api/chat`, {
+    const { response: res, data } = await authenticatedJson<{ reply?: string; error?: string }>(`${SPEAKWISE_API_URL}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         mode: "agent", lessonMode: mode, level: settings.level, topics,
         durationMinutes: settings.durationMinutes, elapsedSeconds: phase === "start" ? 0 : elapsedSeconds,
         phase, message: userText,
-        history: history.slice(-12).map((entry) => ({ role: entry.sender, content: entry.text })),
-        learnerMemory: memory, pdfContext: settings.pdfContext, voiceEnabled: settings.voiceEnabled,
+        history: boundedConversationHistory(history.slice(-12).map((entry) => ({ role: entry.sender, content: entry.text })), 48000),
+        learnerMemory: makePromptMemory(memory), pdfContext: settings.pdfContext, voiceEnabled: settings.voiceEnabled,
       }),
     });
-    const data = await res.json();
-    if (!res.ok || data.error || !String(data.reply || "").trim()) throw new Error("返答を取得できませんでした。");
+    if (!res.ok || data.error || typeof data.reply !== "string" || !data.reply.trim()) throw new Error(requestError(res.status, "返答を取得できませんでした。"));
+    console.info("speakwise_timing", { stage: "reply_received", elapsedMs: turnStartedRef.current ? Math.round(performance.now() - turnStartedRef.current) : null, requestId: res.headers.get("x-request-id") });
     return String(data.reply).trim();
   }
 
@@ -355,7 +437,8 @@ export default function AIChat() {
   }
 
   async function startLesson(modeOverride?: LessonMode) {
-    if (setupDisabled || !settingsLoaded) return;
+    if (setupDisabled || !settingsLoaded || operationRef.current) return;
+    if (!accessToken) { setError("SpeakWiseを利用するには、ログインしてください。"); return; }
     const nextMode = modeOverride || selectedMode.id;
     if (nextMode === "pdf_reading" && !settings.pdfContext.trim()) {
       setError("読解で使いたい英文を貼り付けるか、テキストファイルを選んでください。");
@@ -364,84 +447,91 @@ export default function AIChat() {
     stopMedia();
     autoEndedRef.current = false;
     setSummary(null); setSummarySaved(false); setLessonEnded(false); setError(""); setRetryText(null);
-    setOptionsOpen(false); setElapsedSeconds(0); setChatLog([]); setInput(""); setSessionId(null);
+    setOptionsOpen(false); setElapsedSeconds(0); setChatLog([]); setInput(""); sessionPromiseRef.current = null; currentSessionIdRef.current = crypto.randomUUID();
     updateSettings({ lessonMode: nextMode });
     const label = LESSON_MODES.find((item) => item.id === nextMode)?.label || "English practice";
     const startText = settings.directStart
       ? `Start the lesson naturally. The selected mode is ${label}. Open with a short greeting, then give the first task.`
       : `Greet me naturally with "How are you today?", then begin ${label} step by step.`;
-    setIsSending(true);
+    setIsSending(true); operationRef.current = true; turnStartedRef.current = performance.now();
     try {
       const reply = await callAgent(startText, "start", nextMode, []);
       setLessonStartedAt(Date.now()); setLessonActive(true);
       appendAssistant(reply);
-      void recordSessionStart(nextMode);
+      sessionPromiseRef.current = recordSessionStart(nextMode);
       requestAnimationFrame(() => inputRef.current?.focus());
-    } catch {
-      setError("レッスンを開始できませんでした。接続を確認して、もう一度お試しください。");
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "レッスンを開始できませんでした。接続を確認して、もう一度お試しください。");
       setLessonActive(false); setLessonStartedAt(null); setOptionsOpen(true);
-    } finally { setIsSending(false); }
+    } finally { setIsSending(false); operationRef.current = false; }
   }
 
   async function recordSessionStart(lessonMode: LessonMode) {
-    if (!accessToken) return;
+    if (!accessToken) return null;
     try {
-      const response = await fetch("/api/speakwise/lesson-sessions", {
+      const { response, data } = await authenticatedJson<{ session?: { id?: string } }>("/api/speakwise/lesson-sessions", {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
-        body: JSON.stringify({ mode: lessonMode === "writing_feedback" ? "writing" : "speaking", lessonMode,
+        body: JSON.stringify({ sessionId: currentSessionIdRef.current, mode: lessonMode === "writing_feedback" ? "writing" : "speaking", lessonMode,
           level: settings.level, plannedDurationMinutes: settings.durationMinutes, selectedTopics: topics, selectedComponents: [lessonMode] }),
       });
-      const data = await response.json();
-      if (response.ok && data?.session?.id) setSessionId(data.session.id);
-    } catch { /* Practice remains available when history is temporarily unavailable. */ }
+      if (response.ok && typeof data?.session?.id === "string") return data.session.id as string;
+    } catch { /* Conversation remains usable; the summary save reports the failure. */ }
+    setNotice("学習履歴の準備に失敗しました。会話は続けられますが、保存時にもう一度接続を確認します。");
+    return null;
   }
 
   async function sendMessage(retry = false) {
     const text = (retry ? retryText : input)?.trim();
-    if (!text || !lessonActive || isSending || isEnding) return;
-    recognitionRef.current?.stop();
+    if (!text || !lessonActive || isSending || isEnding || operationRef.current) return;
+    stopMedia();
+    operationRef.current = true; turnStartedRef.current = performance.now();
     setInput(""); setError(""); setRetryText(null);
     if (!retry) setChatLog((prev) => [...prev, { sender: "user", text }]);
     setIsSending(true);
     try {
       const history = retry ? chatLog.slice(0, -1) : chatLog;
       appendAssistant(await callAgent(text, "continue", selectedMode.id, history));
-    } catch {
-      setError("返答を取得できませんでした。回答は残っています。もう一度送信できます。");
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "返答を取得できませんでした。回答は残っています。もう一度送信できます。");
       setRetryText(text);
-    } finally { setIsSending(false); requestAnimationFrame(() => inputRef.current?.focus()); }
+    } finally { operationRef.current = false; setIsSending(false); requestAnimationFrame(() => inputRef.current?.focus()); }
   }
 
   async function endLesson() {
-    if (isEnding || isSending || !chatLog.length) return;
+    if (isEnding || isSending || !chatLog.length || operationRef.current) return;
+    operationRef.current = true;
     stopMedia(); setError(""); setRetryText(null); setIsEnding(true); setLessonActive(false); setLessonEnded(true);
     try {
-      const res = await fetch(`${SPEAKWISE_API_URL}/api/lesson-summary`, {
+      const { response: res, data } = await authenticatedJson<{ error?: string; summary?: LessonSummary }>(`${SPEAKWISE_API_URL}/api/lesson-summary`, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ lessonMode: selectedMode.id, level: settings.level, topics,
           durationMinutes: settings.durationMinutes, elapsedSeconds,
-          history: chatLog.map((entry) => ({ role: entry.sender, content: entry.text })), learnerMemory: memory }),
+          history: boundedConversationHistory(chatLog.map((entry) => ({ role: entry.sender, content: entry.text }))) }),
       });
-      const data = await res.json();
       if (!res.ok || data.error || !data.summary) throw new Error();
       const nextSummary = data.summary as LessonSummary;
       setSummary(nextSummary);
       setSummarySaved(await persistSummary(nextSummary));
     } catch {
       setError("レッスンは終了しました。振り返りを作成できませんでしたが、会話はこの画面に残っています。");
-    } finally { setIsEnding(false); }
+    } finally { setIsEnding(false); operationRef.current = false; }
   }
 
   async function persistSummary(nextSummary: LessonSummary) {
     if (!accessToken) return false;
     try {
-      const response = await fetch("/api/speakwise/learner-memory", {
+      let sessionId = await sessionPromiseRef.current;
+      if (!sessionId) {
+        sessionPromiseRef.current = recordSessionStart(selectedMode.id);
+        sessionId = await sessionPromiseRef.current;
+      }
+      if (!sessionId) throw new Error("Session could not be saved");
+      const { response, data } = await authenticatedJson<{ error?: string; memory?: LearnerMemory }>("/api/speakwise/learner-memory", {
         method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
         body: JSON.stringify({ sessionId, lessonMode: selectedMode.id, level: settings.level,
           durationMinutes: settings.durationMinutes, elapsedSeconds, topics, summary: nextSummary }),
       });
-      const data = await response.json();
       if (!response.ok || data.error) throw new Error();
       setMemory(data.memory ?? memory);
       return true;
@@ -452,32 +542,63 @@ export default function AIChat() {
   }
 
   function stopMedia() {
-    recognitionRef.current?.stop(); recognitionRef.current = null; setIsListening(false);
-    audioRef.current?.pause(); voiceRequestRef.current += 1; setVoiceLoading(false);
+    const oldRecognition = recognitionRef.current; recognitionRef.current = null; oldRecognition?.stop(); setIsListening(false);
+    audioRef.current?.pause(); voiceAbortRef.current?.abort(); voiceRequestRef.current += 1; setVoiceLoading(false);
+    preparedVoiceRef.current = null;
     if (audioUrlRef.current) { URL.revokeObjectURL(audioUrlRef.current); audioUrlRef.current = null; }
   }
 
   async function playVoice(text: string) {
-    if (!text.trim() || voiceLoading) return;
+    if (!text.trim()) return;
     if (!SPEAKWISE_API_URL) { setNotice("音声を再生できません。しばらくしてから、もう一度お試しください。"); return; }
+    if (preparedVoiceRef.current?.text === text && preparedVoiceRef.current.voice === settings.selectedVoice && audioRef.current) {
+      try { await audioRef.current.play(); setNotice(""); }
+      catch { setNotice("音声を再生できませんでした。もう一度お試しください。"); }
+      return;
+    }
+    stopMedia();
     const requestId = ++voiceRequestRef.current;
+    const controller = new AbortController(); voiceAbortRef.current = controller;
+    const timer = setTimeout(() => controller.abort(), 90000);
+    const started = performance.now();
     setVoiceLoading(true);
+    const audio = new Audio(); audioRef.current = audio;
+    audio.preload = "auto";
+    audio.onplaying = () => {
+      if (requestId !== voiceRequestRef.current) return;
+      console.info("speakwise_timing", { stage: "audio_playing", ttsToPlaybackMs: Math.round(performance.now() - started), turnToPlaybackMs: turnStartedRef.current ? Math.round(performance.now() - turnStartedRef.current) : null });
+    };
     try {
-      audioRef.current?.pause();
-      if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
-      const res = await fetch(`${SPEAKWISE_API_URL}/api/voice`, {
+      const res = await authenticatedFetch(`${SPEAKWISE_API_URL}/api/voice`, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text, voice: settings.selectedVoice }),
+      }, controller);
+      if (!res.ok) throw new Error(requestError(res.status, "音声を再生できませんでした。もう一度お試しください。"));
+      await playVoiceResponse(res, audio, controller.signal, (url) => {
+        if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
+        audioUrlRef.current = url;
+      }, () => setNotice("音声の準備ができました。返答の読み上げボタンを押して再生してください。"), () => {
+        console.info("speakwise_timing", { stage: "audio_first_byte", elapsedMs: Math.round(performance.now() - started), requestId: res.headers.get("x-request-id") });
       });
-      if (!res.ok) throw new Error();
-      const blob = await res.blob();
       if (requestId !== voiceRequestRef.current) return;
-      const url = URL.createObjectURL(blob); audioUrlRef.current = url;
-      const audio = new Audio(url); audioRef.current = audio;
-      audio.onended = () => { URL.revokeObjectURL(url); if (audioUrlRef.current === url) audioUrlRef.current = null; };
-      await audio.play();
-    } catch { setNotice("音声を再生できませんでした。もう一度お試しください。"); }
-    finally { if (requestId === voiceRequestRef.current) setVoiceLoading(false); }
+      preparedVoiceRef.current = { text, voice: settings.selectedVoice };
+audio.onerror = () => {
+      if (requestId === voiceRequestRef.current) {
+        setNotice("音声の読み込みに失敗しました。読み上げボタンで再試行できます。");
+        preparedVoiceRef.current = null;
+        controller.abort();
+      }
+    };
+      audio.onended = () => {
+        if (requestId !== voiceRequestRef.current || audioRef.current !== audio) return;
+        preparedVoiceRef.current = null;
+        if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
+        audioUrlRef.current = null;
+      };
+    } catch (error) {
+      if (!controller.signal.aborted && requestId === voiceRequestRef.current) setNotice(error instanceof Error ? error.message : "音声を再生できませんでした。もう一度お試しください。");
+      else if (requestId === voiceRequestRef.current && performance.now() - started >= 89000) setNotice("音声の読み込みに時間がかかっています。読み上げボタンで再試行できます。");
+    } finally { clearTimeout(timer); if (requestId === voiceRequestRef.current) setVoiceLoading(false); }
   }
 
   function toggleListening() {
@@ -489,21 +610,26 @@ export default function AIChat() {
     };
     const SpeechRecognition = speechWindow.SpeechRecognition || speechWindow.webkitSpeechRecognition;
     if (!SpeechRecognition) { setNotice("このブラウザは音声入力に対応していません。下の欄に英文を入力して練習できます。"); return; }
+    stopMedia();
     const recognition = new SpeechRecognition();
+    recognitionStartedRef.current = performance.now();
     recognition.lang = "en-US"; recognition.interimResults = true; recognition.continuous = true;
-    recognition.onstart = () => setIsListening(true);
-    recognition.onend = () => { setIsListening(false); recognitionRef.current = null; };
+    recognition.onstart = () => { if (recognitionRef.current === recognition) setIsListening(true); };
+    recognition.onend = () => { if (recognitionRef.current !== recognition) return; setIsListening(false); recognitionRef.current = null; };
     recognition.onerror = (event) => {
+      if (recognitionRef.current !== recognition) return;
       setIsListening(false); recognitionRef.current = null;
       if (event.error !== "aborted") setNotice(event.error === "not-allowed"
         ? "マイクを使うには、ブラウザでマイクの使用を許可してください。文字入力でも練習できます。"
         : "音声を聞き取れませんでした。もう一度話すか、文字で入力してください。");
     };
     recognition.onresult = (event) => {
+      if (recognitionRef.current !== recognition) return;
       let finalText = "";
       for (let i = event.resultIndex; i < event.results.length; i += 1) {
         if (event.results[i].isFinal) finalText += `${event.results[i][0].transcript} `;
       }
+      if (finalText.trim()) console.info("speakwise_timing", { stage: "recognition_final", captureMs: recognitionStartedRef.current ? Math.round(performance.now() - recognitionStartedRef.current) : null });
       if (finalText.trim()) setInput((prev) => [prev, finalText.trim()].filter(Boolean).join(" "));
     };
     recognitionRef.current = recognition;
@@ -512,6 +638,7 @@ export default function AIChat() {
 
   async function handleTextFile(file: File | null) {
     if (!file) return;
+    if (file.size > 256 * 1024) { setError("256KB以下のテキストファイルを選んでください。"); return; }
     if (file.type === "text/plain" || file.name.toLowerCase().endsWith(".txt")) {
       try { updateSettings({ pdfContext: (await file.text()).slice(0, 8000) }); }
       catch { setError("ファイルを読み込めませんでした。英文を直接貼り付けてください。"); }
@@ -536,6 +663,7 @@ export default function AIChat() {
             <div><AppBrand app="speakwise" compact className="sw-setup-brand" /><h1 id="sw-settings-title">今日の英語レッスン</h1></div>
             {lessonViewStarted && <button type="button" className="sw-panel-close" onClick={closeSettings}>会話に戻る</button>}
           </div>
+          {authReady && !accessToken && <div><p className="sw-note">SpeakWiseを利用するには、ログインしてください。</p><AuthButton compact hideWhenAuthenticated /></div>}
           {!settingsLoaded && <p className="sw-note" role="status">前回の設定を読み込んでいます…</p>}
           {error && !lessonViewStarted && <p className="sw-alert" role="alert">{error}</p>}
           <fieldset className="sw-settings-fields" disabled={setupDisabled}>
@@ -573,13 +701,13 @@ export default function AIChat() {
               <legend className="sw-label">話してみたいトピック</legend>
               <div className="sw-topics">{TOPICS.map((topic) => <button type="button" key={topic} className={`sw-topic ${settings.selectedTopics.includes(topic) ? "active" : ""}`} aria-pressed={settings.selectedTopics.includes(topic)} onClick={() => toggleTopic(topic)}>{TOPIC_LABELS[topic] || topic}</button>)}</div>
               <label className="sw-label sw-file-label" htmlFor="sw-custom-topic">その他のトピック</label>
-              <input id="sw-custom-topic" className="sw-input" value={settings.customTopic} onChange={(event) => updateSettings({ customTopic: event.target.value })} placeholder="例：次の海外旅行" />
+              <input id="sw-custom-topic" className="sw-input" value={settings.customTopic} maxLength={240} onChange={(event) => updateSettings({ customTopic: event.target.value })} placeholder="例：次の海外旅行" />
               <label className="sw-toggle"><input type="checkbox" checked={settings.directStart} onChange={(event) => updateSettings({ directStart: event.target.checked })} /><span>あいさつを短くして、練習から始める</span></label>
             </fieldset>
           </details>
           <details className="sw-details">
             <summary>音声の設定<span>{settings.voiceEnabled ? "自動再生オン" : "自動再生オフ"}</span></summary>
-            <label className="sw-toggle"><input type="checkbox" checked={settings.voiceEnabled} onChange={(event) => updateSettings({ voiceEnabled: event.target.checked })} /><span>AIの返答を自動で読み上げる</span></label>
+            <label className="sw-toggle"><input type="checkbox" checked={settings.voiceEnabled} onChange={(event) => updateSettings({ voiceEnabled: event.target.checked })} /><span>AIの返答を自動で読み上げる（AI生成音声）</span></label>
             <label className="sw-label sw-file-label" htmlFor="sw-voice">読み上げの声</label>
             <select id="sw-voice" className="sw-select" value={settings.selectedVoice} onChange={(event) => updateSettings({ selectedVoice: event.target.value })}>{VOICES.map((voice) => <option key={voice} value={voice}>{voice.charAt(0).toUpperCase() + voice.slice(1)}</option>)}</select>
           </details>
@@ -612,8 +740,8 @@ export default function AIChat() {
             <div ref={chatEndRef} />
           </div>
           {notice && lessonViewStarted && <div className="sw-notice" role="status"><span>{notice}</span><button type="button" onClick={() => setNotice("")} aria-label="お知らせを閉じる">×</button></div>}
-          {lessonEnded ? <div className="sw-completion-actions"><button type="button" className="pf-button" disabled={isEnding} onClick={prepareNextLesson}>次のレッスンを準備</button></div>
-            : lessonViewStarted ? <div className="sw-composer-area"><div className="sw-composer"><button type="button" className={`sw-icon ${isListening ? "active" : ""}`} disabled={!lessonActive || isSending || isEnding} onClick={toggleListening} aria-label={isListening ? "音声入力を停止" : "音声で入力"} aria-pressed={isListening}>{isListening ? "停止" : "音声"}</button><label className="sw-sr-only" htmlFor="sw-message">英語の回答</label><textarea id="sw-message" ref={inputRef} className="sw-textarea" value={input} disabled={!lessonActive || isEnding} onChange={(event) => setInput(event.target.value)} placeholder="英語で入力…" onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); void sendMessage(); } }} /><button type="button" className="sw-send" disabled={!lessonActive || !input.trim() || isSending || isEnding} onClick={() => void sendMessage()}>送信</button></div><p className={`sw-composer-hint${isListening ? " is-listening" : ""}`}>{isListening ? "聞き取り中です。話し終えたら「停止」を選んでください。" : "Enterで送信 · Shift + Enterで改行"}</p></div> : null}
+          {lessonEnded ? <div className="sw-completion-actions"><button type="button" className="pf-button" disabled={isEnding} onClick={prepareNextLesson}>次のレッスンを準備</button>{summary && !summarySaved && accessToken && <button type="button" className="pf-button pf-button-secondary" disabled={isEnding} onClick={() => { setIsEnding(true); void persistSummary(summary).then(setSummarySaved).finally(() => setIsEnding(false)); }}>振り返りの保存を再試行</button>}</div>
+            : lessonViewStarted ? <div className="sw-composer-area"><div className="sw-composer"><button type="button" className={`sw-icon ${isListening ? "active" : ""}`} disabled={!lessonActive || isSending || isEnding} onClick={toggleListening} aria-label={isListening ? "音声入力を停止" : "音声で入力"} aria-pressed={isListening}>{isListening ? "停止" : "音声"}</button><label className="sw-sr-only" htmlFor="sw-message">英語の回答</label><textarea id="sw-message" ref={inputRef} className="sw-textarea" value={input} maxLength={8000} disabled={!lessonActive || isEnding} onChange={(event) => setInput(event.target.value)} placeholder="英語で入力…" onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); void sendMessage(); } }} /><button type="button" className="sw-send" disabled={!lessonActive || !input.trim() || isSending || isEnding} onClick={() => void sendMessage()}>送信</button></div><p className={`sw-composer-hint${isListening ? " is-listening" : ""}`}>{isListening ? "聞き取り中です。話し終えたら「停止」を選んでください。" : "Enterで送信 · Shift + Enterで改行"}</p></div> : null}
         </section>
       </div>
       {notice && !lessonViewStarted && <div className="sw-setup-notice" role="status">{notice}</div>}

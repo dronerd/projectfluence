@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "../lib/router-compat";
-import { apiSubmitVocabStreamProgress, type VocabStreamReviewQuestion } from "../api";
+import { apiSubmitVocabStreamProgress, type VocabStreamReviewQuestion, type VocabStreamProgressPayload } from "../api";
 import { useAuth } from "../AuthContext";
 import { courseLabel, getCourse } from "../lib/catalog";
-import { anonymousUserId, createAttempt, makeLessonQuestions, summarizeAttempts, type LearningAttempt, type LessonData } from "../lib/learning";
+import { createAttempt, makeLessonQuestions, summarizeAttempts, type LearningAttempt, type LessonData } from "../lib/learning";
 import PracticeQuestion, { focusLearningHeading, WordDetails } from "../components/PracticeQuestion";
 import { playAnswerSound, speakEnglish } from "./speech";
 
@@ -32,8 +32,19 @@ export default function Lesson() {
   const pageHeading = useRef<HTMLHeadingElement>(null);
   const wordHeading = useRef<HTMLHeadingElement>(null);
   const savedAttemptCount = useRef(0);
+  const pendingSave = useRef<{ payload: VocabStreamProgressPayload; count: number } | null>(null);
   const saveInFlight = useRef(false);
   const lessonVersion = useRef(0);
+  const previousUserId = useRef(user?.id);
+  const learningOwner = useRef(user?.id);
+  useEffect(() => {
+    // Clear a signed-in learner's page state on logout/account switch; guest sign-in can save the current lesson.
+    if (previousUserId.current && previousUserId.current !== user?.id) {
+      lessonVersion.current += 1;
+      setRetryLoad((value) => value + 1);
+    }
+    previousUserId.current = user?.id;
+  }, [user?.id]);
   const [genre, rawNumber] = lessonId.split("-lesson-");
   const lessonNumber = Number(rawNumber);
   const course = getCourse(genre);
@@ -43,7 +54,7 @@ export default function Lesson() {
     const version = ++lessonVersion.current;
     const controller = new AbortController();
     setLoading(true); setLoadError(false); setLesson(null); setPhase("intro"); setCardIndex(0); setQuestionIndex(0); setQuestions([]); setAttempts([]); setReplayQuestions([]); setReplayCompleted(false); setSelected(null); setSaveState("idle");
-    savedAttemptCount.current = 0; saveInFlight.current = false; answerLocked.current = false;
+    savedAttemptCount.current = 0; pendingSave.current = null; saveInFlight.current = false; answerLocked.current = false;
     async function load() {
       if (!course || !Number.isInteger(lessonNumber) || lessonNumber < 1 || lessonNumber > course.lessons) throw new Error("Unavailable lesson");
       const response = await fetch(`/vocabstream/data/${genre}/Lesson${lessonNumber}.json`, { signal: controller.signal });
@@ -51,6 +62,7 @@ export default function Lesson() {
       const data = await response.json() as LessonData;
       if (!Array.isArray(data.words) || !data.words.length) throw new Error("Empty lesson");
       if (version !== lessonVersion.current) return;
+      learningOwner.current = previousUserId.current;
       setLesson(data); setQuestions(makeLessonQuestions(data, lessonId));
     }
     load().catch(() => { if (!controller.signal.aborted) setLoadError(true); }).finally(() => { if (!controller.signal.aborted) setLoading(false); });
@@ -65,17 +77,28 @@ export default function Lesson() {
   const replayAttempts = attempts.slice(replayStart).filter((attempt) => attempt.isReplay);
   const replayCorrect = replayAttempts.filter((attempt) => attempt.isCorrect).length;
   const saveProgress = useCallback(async () => {
-    if (!lesson || attempts.length === 0 || saveInFlight.current || savedAttemptCount.current === attempts.length) return;
+    if (learningOwner.current && learningOwner.current !== user?.id) return;
+    if (!token || !lesson || attempts.length === 0 || saveInFlight.current || savedAttemptCount.current === attempts.length) return;
+    learningOwner.current = user?.id;
     saveInFlight.current = true; setSaveState("saving");
     const version = lessonVersion.current;
-    const unsaved = attempts.slice(savedAttemptCount.current);
     try {
-      await apiSubmitVocabStreamProgress({ anonymousUserId: anonymousUserId(), userUsername: user?.username, lessonId, genre, lessonNumber, lessonTitle: lesson.title ?? `Lesson ${lessonNumber}`, wordCount: lesson.words.length, meaningScore: summary.meaningScore, meaningTotal: summary.meaningTotal, quizScore: summary.quizScore, quizTotal: summary.quizTotal, replayCompleted, replayCorrect: replayCompleted ? replayCorrect : 0, replayTotal: replayCompleted ? replayQuestions.length : 0, questionAttempts: unsaved }, token);
-      if (version !== lessonVersion.current) return;
-      savedAttemptCount.current = attempts.length; setSaveState("saved");
+      // Keep the exact payload and UUID if a request committed but its response was lost.
+      while (savedAttemptCount.current < attempts.length) {
+        if (!pendingSave.current) pendingSave.current = {
+          count: attempts.length,
+          payload: { attemptId: crypto.randomUUID(), lessonId, genre, lessonNumber, lessonTitle: lesson.title ?? `Lesson ${lessonNumber}`, wordCount: lesson.words.length, meaningScore: summary.meaningScore, meaningTotal: summary.meaningTotal, quizScore: summary.quizScore, quizTotal: summary.quizTotal, replayCompleted, replayCorrect: replayCompleted ? replayCorrect : 0, replayTotal: replayCompleted ? replayQuestions.length : 0, questionAttempts: attempts.slice(savedAttemptCount.current) },
+        };
+        const pending = pendingSave.current;
+        await apiSubmitVocabStreamProgress(pending.payload, token);
+        if (version !== lessonVersion.current) return;
+        savedAttemptCount.current = pending.count;
+        pendingSave.current = null;
+      }
+      setSaveState("saved");
     } catch { if (version === lessonVersion.current) setSaveState("error"); }
     finally { if (version === lessonVersion.current) saveInFlight.current = false; }
-  }, [lesson, attempts, user?.username, lessonId, genre, lessonNumber, summary.meaningScore, summary.meaningTotal, summary.quizScore, summary.quizTotal, replayCompleted, replayCorrect, replayQuestions.length, token]);
+  }, [user?.id, lesson, attempts, lessonId, genre, lessonNumber, summary.meaningScore, summary.meaningTotal, summary.quizScore, summary.quizTotal, replayCompleted, replayCorrect, replayQuestions.length, token]);
   useEffect(() => { if (phase === "results") void saveProgress(); }, [phase, saveProgress]);
 
   const activeQuestions = phase === "replay" ? replayQuestions : questions;

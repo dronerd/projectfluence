@@ -3,12 +3,17 @@ import { Link } from "../lib/router-compat";
 import { apiSubmitVocabStreamProgress } from "../api";
 import { useAuth } from "../AuthContext";
 import { useReviewData } from "../lib/useReviewData";
-import { anonymousUserId, createAttempt, summarizeAttempts, type LearningAttempt } from "../lib/learning";
+import { createAttempt, summarizeAttempts, type LearningAttempt } from "../lib/learning";
 import PracticeQuestion, { focusLearningHeading, WordDetails } from "../components/PracticeQuestion";
 import ReviewState from "../components/ReviewState";
 
 export default function ReviewLesson() {
-  const { token, user } = useAuth();
+  const { user } = useAuth();
+  return <ReviewSession key={user?.id ?? "signed-out"} />;
+}
+
+function ReviewSession() {
+  const { token } = useAuth();
   const { questions, loading, signedIn, error, refresh } = useReviewData();
   const [started, setStarted] = useState(false);
   const [index, setIndex] = useState(0);
@@ -20,6 +25,9 @@ export default function ReviewLesson() {
   const pageHeading = useRef<HTMLHeadingElement>(null);
   const saving = useRef(false);
   const saved = useRef(false);
+  const attemptId = useRef<string | null>(null);
+  const saveVersion = useRef(0);
+  useEffect(() => () => { saveVersion.current += 1; }, []);
   const finished = started && questions.length > 0 && index >= questions.length;
   useEffect(() => { if (finished) focusLearningHeading(pageHeading.current); }, [finished]);
   const summary = summarizeAttempts(questions, attempts);
@@ -27,10 +35,12 @@ export default function ReviewLesson() {
   useEffect(() => {
     if (!finished || !token || saved.current || saving.current) return;
     saving.current = true; setSaveState("saving");
-    apiSubmitVocabStreamProgress({ anonymousUserId: anonymousUserId(), userUsername: user?.username, lessonId: "vocabstream-review", genre: "review", lessonNumber: null, lessonTitle: "復習", wordCount: new Set(questions.map((q) => q.word.toLowerCase())).size, meaningScore: summary.meaningScore, meaningTotal: summary.meaningTotal, quizScore: summary.quizScore, quizTotal: summary.quizTotal, replayCompleted: false, replayCorrect: 0, replayTotal: 0, questionAttempts: attempts }, token).then(() => { saved.current = true; setSaveState("saved"); }).catch(() => setSaveState("error")).finally(() => { saving.current = false; });
-  }, [finished, token, user?.username, questions, attempts, summary.meaningScore, summary.meaningTotal, summary.quizScore, summary.quizTotal, retrySave]);
+    attemptId.current ??= crypto.randomUUID();
+    const version = saveVersion.current;
+    apiSubmitVocabStreamProgress({ attemptId: attemptId.current, lessonId: "vocabstream-review", genre: "review", lessonNumber: null, lessonTitle: "復習", wordCount: new Set(questions.map((q) => q.word.toLowerCase())).size, meaningScore: summary.meaningScore, meaningTotal: summary.meaningTotal, quizScore: summary.quizScore, quizTotal: summary.quizTotal, replayCompleted: false, replayCorrect: 0, replayTotal: 0, questionAttempts: attempts }, token).then(() => { if (version === saveVersion.current) { saved.current = true; setSaveState("saved"); } }).catch(() => { if (version === saveVersion.current) setSaveState("error"); }).finally(() => { if (version === saveVersion.current) saving.current = false; });
+  }, [finished, token, questions, attempts, summary.meaningScore, summary.meaningTotal, summary.quizScore, summary.quizTotal, retrySave]);
   function choose(choice: number) { if (locked.current) return; locked.current = true; setSelected(choice); setAttempts((previous) => [...previous, createAttempt(questions[index], choice, previous.length + 1)]); }
-  function restart() { setStarted(false); setIndex(0); setSelected(null); setAttempts([]); setSaveState("idle"); saved.current = false; locked.current = false; refresh(); }
+  function restart() { saveVersion.current += 1; setStarted(false); setIndex(0); setSelected(null); setAttempts([]); setSaveState("idle"); saved.current = false; attemptId.current = null; locked.current = false; refresh(); }
   return <div className="vs-page vs-practice">
     <Link className="vs-back" to="/learn">← レッスン一覧</Link>
     <header className="vs-page-heading"><p className="pf-eyebrow">PERSONAL REVIEW</p><h1 ref={pageHeading} tabIndex={-1}>{finished ? "復習完了" : "単語を復習"}</h1></header>

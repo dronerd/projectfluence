@@ -1,9 +1,11 @@
+import { supabaseServiceHeaders } from "@/app/api/_lib/supabaseAuth";
 import "server-only";
 
 import { promises as fs } from "fs";
 import path from "path";
 
 import { getRequiredEnv } from "@/app/api/_lib/supabaseAuth";
+import { ApiError, fetchWithTimeout } from "@/app/api/_lib/http";
 
 export type VocabStreamWeakWordRow = {
   word: string;
@@ -78,11 +80,10 @@ type WordCatalogItem = {
   sourceLessonNumber?: number | null;
 };
 
-let wordCatalogCache: WordCatalogItem[] | null = null;
+let wordCatalogPromise: Promise<WordCatalogItem[]> | null = null;
 
 export async function getVocabStreamReview(userId: string) {
-  const weakWords = await readWeakWords(userId);
-  const catalog = await loadWordCatalog();
+  const [weakWords, catalog] = await Promise.all([readWeakWords(userId), loadWordCatalog()]);
   const catalogBySourceWord = new Map(
     catalog.map((item) => [makeSourceWordKey(item.sourceCategory, item.word), item]),
   );
@@ -118,32 +119,35 @@ async function readWeakWords(userId: string) {
     select: "word,definition,example,explanation,source_category,source_lesson_id,source_lesson_number,mistake_count,last_mistaken_at",
     user_id: `eq.${userId}`,
     order: "mistake_count.desc,last_mistaken_at.desc",
+    limit: "500",
   });
 
-  const response = await fetch(`${supabaseUrl}/rest/v1/vocabstream_user_mistakes?${params}`, {
+  const response = await fetchWithTimeout(`${supabaseUrl}/rest/v1/vocabstream_user_mistakes?${params}`, {
     headers: {
-      apikey: serviceRoleKey,
-      Authorization: `Bearer ${serviceRoleKey}`,
+      ...supabaseServiceHeaders(serviceRoleKey),
     },
   });
 
   if (!response.ok) {
-    const error = (await response.json().catch(() => null)) as { message?: string } | null;
-    throw new Error(error?.message ?? `Supabase mistake lookup failed with status ${response.status}`);
+    throw new ApiError(503, "Review words are temporarily unavailable. Please try again.", "REVIEW_UNAVAILABLE");
   }
 
   return (await response.json()) as VocabStreamWeakWordRow[];
 }
 
-async function loadWordCatalog() {
-  if (wordCatalogCache) return wordCatalogCache;
+function loadWordCatalog() {
+  // Share cold-start work between concurrent requests. A failed read remains retryable.
+  wordCatalogPromise ??= readWordCatalog().catch((error) => { wordCatalogPromise = null; throw error; });
+  return wordCatalogPromise;
+}
+
+async function readWordCatalog() {
 
   const root = path.join(process.cwd(), "public", "vocabstream", "data");
   const categories = await fs.readdir(root, { withFileTypes: true });
   const catalog: WordCatalogItem[] = [];
 
-  for (const category of categories) {
-    if (!category.isDirectory()) continue;
+  await Promise.all(categories.filter((category) => category.isDirectory()).map(async (category) => {
     const categoryPath = path.join(root, category.name);
     const files = await fs.readdir(categoryPath);
     for (const file of files) {
@@ -169,9 +173,8 @@ async function loadWordCatalog() {
         });
       }
     }
-  }
+  }));
 
-  wordCatalogCache = catalog;
   return catalog;
 }
 

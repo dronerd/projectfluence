@@ -4,6 +4,10 @@ import {
   type SearchYoutubeVideosInput,
 } from "@/apps/vidmatch/src/services/youtubeVideoService";
 
+import { apiError, readJsonBody } from "@/app/api/_lib/http";
+import { secureTokenMatches } from "@/app/api/_lib/supabaseAuth";
+import { ACCENTS } from "@/apps/vidmatch/src/services/videoContract";
+
 export const runtime = "nodejs";
 
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
@@ -17,23 +21,22 @@ export async function POST(request: NextRequest) {
   const authError = validateIngestToken(request);
   if (authError) return authError;
 
-  const body = (await request.json().catch(() => null)) as RequestBody | null;
-  const parsedBody = parseBody(body);
-  if (parsedBody instanceof NextResponse) return parsedBody;
-
-  const result = await searchAndSaveYoutubeVideos(parsedBody);
-
-  return NextResponse.json(result);
+  try {
+    const body = await readJsonBody(request, 8192) as RequestBody | null;
+    const parsedBody = parseBody(body);
+    if (parsedBody instanceof NextResponse) return parsedBody;
+    const result = await searchAndSaveYoutubeVideos(parsedBody);
+    return NextResponse.json(result);
+  } catch (error) { return apiError(error, "vidmatch.ingest"); }
 }
 
 function validateIngestToken(request: NextRequest) {
   const ingestToken = process.env.VIDMATCH_INGEST_TOKEN;
   if (!ingestToken) {
-    return NextResponse.json({ error: "Missing VIDMATCH_INGEST_TOKEN on the server." }, { status: 500 });
+    return NextResponse.json({ error: "Video ingestion is not configured." }, { status: 500 });
   }
 
-  const authorization = request.headers.get("authorization");
-  if (authorization !== `Bearer ${ingestToken}`) {
+  if (!secureTokenMatches(request, ingestToken)) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
@@ -45,14 +48,18 @@ function parseBody(body: RequestBody | null): SearchYoutubeVideosInput | NextRes
     return NextResponse.json({ error: "Request body must include a non-empty query." }, { status: 400 });
   }
 
-  if (body.level && !isOneOf(body.level, LEVELS)) {
+  if (body.level !== undefined && !isOneOf(body.level, LEVELS)) {
     return NextResponse.json({ error: "level must be one of A1, A2, B1, B2, C1, C2." }, { status: 400 });
   }
 
-  if (body.skills && !isValidArray(body.skills, SKILLS)) {
+  if (body.skills !== undefined && !isValidArray(body.skills, SKILLS)) {
     return NextResponse.json({ error: "skills contains an unsupported value." }, { status: 400 });
   }
 
+  if (body.query.length > 300) return NextResponse.json({ error: "query must be 300 characters or fewer." }, { status: 400 });
+  if (body.accent !== undefined && (typeof body.accent !== "string" || !ACCENTS.includes(body.accent as typeof ACCENTS[number]))) return NextResponse.json({ error: "Unsupported accent." }, { status: 400 });
+  if (body.maxResults !== undefined && (!Number.isInteger(body.maxResults) || body.maxResults < 1 || body.maxResults > 25)) return NextResponse.json({ error: "maxResults must be an integer from 1 to 25." }, { status: 400 });
+  if (body.minQualityScore !== undefined && (typeof body.minQualityScore !== "number" || !Number.isFinite(body.minQualityScore) || body.minQualityScore < 0 || body.minQualityScore > 100)) return NextResponse.json({ error: "minQualityScore must be a number from 0 to 100." }, { status: 400 });
   const topics = parseTopics(body.topics);
   if (topics instanceof NextResponse) {
     return topics;
@@ -95,7 +102,7 @@ function parseTopics(values: unknown): string[] | undefined | NextResponse {
 }
 
 function isValidArray<T extends string>(values: unknown, allowedValues: readonly T[]): values is T[] {
-  return Array.isArray(values) && values.every((value) => isOneOf(value, allowedValues));
+  return Array.isArray(values) && values.length <= allowedValues.length && values.every((value) => isOneOf(value, allowedValues));
 }
 
 function isOneOf<T extends string>(value: unknown, allowedValues: readonly T[]): value is T {

@@ -1,0 +1,38 @@
+# Local development configuration. Hosted Auth URLs must be configured for the production origin.
+project_id = "projectfluence"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 17
+
+[db.migrations]
+enabled = true
+
+[db.seed]
+enabled = false
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/", "http://localhost:3000/auth/reset-password", "http://127.0.0.1:3000/", "http://127.0.0.1:3000/auth/reset-password"]
+jwt_expiry = 3600
+enable_signup = true
+enable_anonymous_sign_ins = false
+
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = true
+secure_password_change = true
+
+[storage]
+enabled = true
+# No application buckets: YouTube hosts VidMatch video; speech audio is streamed by FastAPI.

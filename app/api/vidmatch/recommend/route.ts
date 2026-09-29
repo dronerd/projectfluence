@@ -6,6 +6,9 @@ import {
   type VidMatchSkill,
 } from "@/apps/vidmatch/src/services/youtubeVideoService";
 
+import { apiError } from "@/app/api/_lib/http";
+import { ACCENTS, isYoutubeVideoId } from "@/apps/vidmatch/src/services/videoContract";
+
 export const runtime = "nodejs";
 
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
@@ -21,8 +24,7 @@ export async function GET(request: NextRequest) {
     const videos = await getRecommendedVideos(input);
     return NextResponse.json({ videos });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Recommendation request failed";
-    return NextResponse.json({ error: message }, { status: 500 });
+    return apiError(error, "vidmatch.recommend");
   }
 }
 
@@ -47,17 +49,19 @@ function parseRecommendationInput(searchParams: URLSearchParams): RecommendVideo
     return topics;
   }
 
-  if (similarToVideoId && similarToVideoId.length > 128) {
-    return NextResponse.json({ error: "similar_to is too long." }, { status: 400 });
-  }
+  if (similarToVideoId && !isYoutubeVideoId(similarToVideoId)) return NextResponse.json({ error: "similar_to must be a YouTube video ID." }, { status: 400 });
+  if (!Number.isInteger(limit) || limit < 1 || limit > 12) return NextResponse.json({ error: "limit must be an integer from 1 to 12." }, { status: 400 });
+  if (skills.length > SKILLS.length) return NextResponse.json({ error: "Too many skills." }, { status: 400 });
+  if (accent && !ACCENTS.includes(accent as typeof ACCENTS[number])) return NextResponse.json({ error: "Unsupported accent." }, { status: 400 });
+  if (transcriptAvailable !== null && transcriptAvailable !== "true" && transcriptAvailable !== "false") return NextResponse.json({ error: "transcript_available must be true or false." }, { status: 400 });
 
   return {
     level: level ? (level as VidMatchLevel) : undefined,
     skills: skills as VidMatchSkill[],
     topics,
     accent,
-    transcriptAvailable: transcriptAvailable === "true" ? true : undefined,
-    limit: Number.isFinite(limit) ? limit : 6,
+    transcriptAvailable: transcriptAvailable === null ? undefined : transcriptAvailable === "true",
+    limit,
     similarToVideoId,
   };
 }
@@ -65,7 +69,7 @@ function parseRecommendationInput(searchParams: URLSearchParams): RecommendVideo
 function parseTopics(values: string[]): string[] | NextResponse {
   const topics = values.map((value) => value.trim()).filter(Boolean);
 
-  if (topics.length > MAX_TOPIC_COUNT) {
+  if (values.length > MAX_TOPIC_COUNT) {
     return NextResponse.json({ error: `topics must include ${MAX_TOPIC_COUNT} or fewer values.` }, { status: 400 });
   }
 
