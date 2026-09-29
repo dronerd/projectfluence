@@ -29,5 +29,35 @@
       "passed": 8,
       "scope": "Pre-existing uncommitted transcript work; excluded from this frontend commit"
     }
+  },
+  "brandingFollowUp": {
+    "theme": "Original light-blue identity and blue-to-cyan banner",
+    "canonicalBrands": [
+      "VocabStream",
+      "SpeakWiseAI",
+      "VidMatch"
+    ],
+    "responsive": {
+      "routes": 14,
+      "widths": [
+        320,
+        375,
+        390,
+        430,
+        600,
+        768,
+        1024,
+        1180,
+        1440,
+        1920
+      ],
+      "problems": []
+    },
+    "fixtureSuites": [
+      "progress",
+      "video",
+      "speaking (isolated API configuration)"
+    ],
+    "headerMinWhiteTextContrast": 4.67
   }
 }

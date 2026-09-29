@@ -80,7 +80,7 @@ export default function ResetPasswordPage() {
                 minLength={6}
                 autoComplete="new-password"
                 disabled={success}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 disabled:bg-gray-100"
+                className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200 disabled:bg-gray-100"
               />
               {!success && (
                 <PasswordVisibilityButton
@@ -103,7 +103,7 @@ export default function ResetPasswordPage() {
                 minLength={6}
                 autoComplete="new-password"
                 disabled={success}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 disabled:bg-gray-100"
+                className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200 disabled:bg-gray-100"
               />
               {!success && (
                 <PasswordVisibilityButton
@@ -137,7 +137,7 @@ export default function ResetPasswordPage() {
             ホームに戻る
           </Link>
         )}
-        {!success && <Link className="mt-5 inline-flex min-h-11 items-center text-sm text-indigo-700" href="/">← ホームに戻る</Link>}
+        {!success && <Link className="mt-5 inline-flex min-h-11 items-center text-sm text-sky-700" href="/">← ホームに戻る</Link>}
       </div>
     </main></>
   );

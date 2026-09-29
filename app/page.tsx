@@ -1,13 +1,14 @@
 import Link from "next/link";
-import Image from "next/image";
+import AppBrand from "./components/AppBrand";
+import { learningApps } from "./lib/brands";
 import AppHeader from "./components/AppHeader";
 import LearningResources from "./components/LearningResources";
 import "./home.css";
 
 const practices = [
-  { name: "VocabStream", label: "単語を学ぶ", text: "英語の定義と例文で理解し、クイズで確かめる。自分のペースで語彙を増やしましょう。", detail: "レベル別の単語・イディオム", href: "/vocabstream", image: "/images/vocabstream.png", action: "単語のレッスンへ", number: "01" },
-  { name: "SpeakWiseAI", label: "会話を練習する", text: "身近な話題から試験対策まで。AIと話して、伝わる表現とフィードバックを学びましょう。", detail: "会話・ライティング・試験対策", href: "/speakwise", image: "/images/speakwise.png", action: "会話の練習へ", number: "02" },
-  { name: "VidMatch", label: "動画で英語に触れる", text: "レベルや興味に合う動画を見つける。好きなテーマを、英語で楽しみましょう。", detail: "レベルとテーマで動画を検索", href: "/vidmatch", image: "/images/videofinder.png", action: "動画を探す", number: "03" },
+  { app: "vocabstream" as const, label: "単語を学ぶ", text: "英語の定義と例文で理解し、クイズで確かめる。自分のペースで語彙を増やしましょう。", detail: "レベル別の単語・イディオム", action: "単語のレッスンへ", number: "01" },
+  { app: "speakwise" as const, label: "会話を練習する", text: "身近な話題から試験対策まで。AIと話して、伝わる表現とフィードバックを学びましょう。", detail: "会話・ライティング・試験対策", action: "会話の練習へ", number: "02" },
+  { app: "vidmatch" as const, label: "動画で英語に触れる", text: "レベルや興味に合う動画を見つける。好きなテーマを、英語で楽しみましょう。", detail: "レベルとテーマで動画を検索", action: "動画を探す", number: "03" },
 ];
 export default function HomePage() {
   return <>
@@ -29,10 +30,10 @@ export default function HomePage() {
       </section>
       <section id="apps" aria-labelledby="practice-title" className="home-practice">
         <div className="home-section-heading"><div><p className="pf-eyebrow">LEARN · PRACTICE · DISCOVER</p><h2 id="practice-title">今日は何を練習しますか？</h2></div><span>あなたのペースで、少しずつ。</span></div>
-        <div className="home-practice-grid">{practices.map((practice) => <article className="home-practice-card pf-panel" key={practice.name}>
-          <div className="home-card-top"><Image src={practice.image} alt="" width={48} height={48} /><span>{practice.number}</span></div>
-          <p className="home-app-name">{practice.name}</p><h3>{practice.label}</h3><p className="home-card-copy">{practice.text}</p>
-          <p className="home-card-detail">{practice.detail}</p><Link className="pf-button-secondary" href={practice.href}>{practice.action}<span aria-hidden="true">→</span></Link>
+        <div className="home-practice-grid">{practices.map((practice) => <article className="home-practice-card pf-panel" key={practice.app}>
+          <div className="home-card-top"><AppBrand app={practice.app} /><span className="home-card-number">{practice.number}</span></div>
+          <h3>{practice.label}</h3><p className="home-card-copy">{practice.text}</p>
+          <p className="home-card-detail">{practice.detail}</p><Link className="pf-button-secondary" href={learningApps[practice.app].href}>{practice.action}<span aria-hidden="true">→</span></Link>
         </article>)}</div>
       </section>
       <section className="home-guide" aria-labelledby="guide-title">

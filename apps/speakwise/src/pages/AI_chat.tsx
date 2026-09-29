@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
+import AppBrand from "@/app/components/AppBrand";
 
 type CEFRLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 type LessonMode =
@@ -532,7 +533,7 @@ export default function AIChat() {
       <div className={`sw-shell ${lessonViewStarted ? "lesson-started" : "pre-lesson"} ${optionsOpen ? "options-open" : "options-closed"}`}>
         <aside id="sw-settings" className="sw-panel" ref={settingsRef} tabIndex={-1} aria-labelledby="sw-settings-title">
           <div className="sw-panel-head">
-            <div><p className="pf-eyebrow">SPEAKWISE AI</p><h1 id="sw-settings-title">今日の英語レッスン</h1><p className="sw-description">短い会話から、一歩ずつ。</p></div>
+            <div><AppBrand app="speakwise" compact className="sw-setup-brand" /><h1 id="sw-settings-title">今日の英語レッスン</h1><p className="sw-description">短い会話から、一歩ずつ。</p></div>
             {lessonViewStarted && <button type="button" className="sw-panel-close" onClick={closeSettings}>会話に戻る</button>}
           </div>
           {!settingsLoaded && <p className="sw-note" role="status">前回の設定を読み込んでいます…</p>}
@@ -602,8 +603,8 @@ export default function AIChat() {
           {lessonActive && <div className="sw-progress" role="progressbar" aria-label="レッスンの経過時間" aria-valuenow={Math.min(elapsedSeconds, totalSeconds)} aria-valuemin={0} aria-valuemax={totalSeconds} aria-valuetext={`${settings.durationMinutes}分中、${Math.floor(elapsedSeconds / 60)}分経過`}><div style={{ width: `${Math.min(100, elapsedSeconds / totalSeconds * 100)}%` }} /></div>}
           <div className="sw-messages" role="log" aria-label="AIとの会話" aria-live="polite" aria-relevant="additions text">
             {!chatLog.length && !isSending && <div className="sw-empty"><div className="sw-empty-mark" aria-hidden="true">Aa</div><h3>まずは、ひとことから。</h3><p>レベルに合った質問に、英語で答えてみましょう。AIが会話を進めながら、表現を一緒に磨きます。</p><ol><li>練習内容と時間を選ぶ</li><li>文字や音声で答える</li><li>振り返りを次の練習へ</li></ol><span className="sw-note">設定から「レッスンを始める」を選んでください。</span></div>}
-            {chatLog.map((entry, index) => <article key={`${entry.sender}-${index}`} className={`sw-msg ${entry.sender}`}><span className="sw-sender">{entry.sender === "assistant" ? "SpeakWise AI" : "あなた"}</span><p lang="en">{entry.text}</p>{entry.sender === "assistant" && <button type="button" className="sw-voice-button" disabled={voiceLoading} onClick={() => void playVoice(entry.text)} aria-label={`AIの${index + 1}番目のメッセージを音声で再生`}>{voiceLoading ? "音声を準備中…" : "音声で聞く"}</button>}</article>)}
-            {isSending && <div className="sw-msg assistant" role="status"><span className="sw-sender">SpeakWise AI</span><p>{lessonActive ? "返答を考えています…" : "レッスンを準備しています…"}</p></div>}
+            {chatLog.map((entry, index) => <article key={`${entry.sender}-${index}`} className={`sw-msg ${entry.sender}`}><span className="sw-sender">{entry.sender === "assistant" ? "SpeakWiseAI" : "あなた"}</span><p lang="en">{entry.text}</p>{entry.sender === "assistant" && <button type="button" className="sw-voice-button" disabled={voiceLoading} onClick={() => void playVoice(entry.text)} aria-label={`AIの${index + 1}番目のメッセージを音声で再生`}>{voiceLoading ? "音声を準備中…" : "音声で聞く"}</button>}</article>)}
+            {isSending && <div className="sw-msg assistant" role="status"><span className="sw-sender">SpeakWiseAI</span><p>{lessonActive ? "返答を考えています…" : "レッスンを準備しています…"}</p></div>}
             {isEnding && <div className="sw-note" role="status">今日の振り返りをまとめています…</div>}
             {error && lessonViewStarted && <div className="sw-alert" role="alert"><p>{error}</p>{retryText && lessonActive && <button type="button" className="sw-text-link" disabled={isSending} onClick={() => void sendMessage(true)}>もう一度送信</button>}{lessonEnded && !summary && <button type="button" className="sw-text-link" disabled={isEnding} onClick={() => void endLesson()}>振り返りを再作成</button>}</div>}
             {summary && <section className="sw-summary" aria-labelledby="sw-summary-title"><p className="pf-eyebrow">LESSON COMPLETE</p><h2 id="sw-summary-title">{summary.title || "今日の振り返り"}</h2><p className="sw-note">{summarySaved ? "学習履歴に保存しました。次のレッスンにも活かせます。" : accessToken ? "今回の振り返りです。" : "今回の振り返りです。ログインすると、今後のレッスンを学習履歴に保存できます。"}</p>{[

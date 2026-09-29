@@ -15,6 +15,15 @@ See [the audit and route map](frontend-refinement.md) for the initial findings a
 
 Representative rendered previews: [desktop home](previews/home-desktop.png), [320px home](previews/home-mobile.png), [tablet lesson](previews/lesson-tablet.png), [320px speaking setup](previews/speaking-mobile.png).
 
+## Blue branding follow-up — 2026-09-29
+
+- Restored the shared light-blue palette, blue-to-cyan banner, and original product logos with canonical names.
+- Production build, TypeScript, ESLint, and all four vocabulary regression tests pass.
+- Rechecked 14 routes at 320–1920px: no horizontal overflow or Axe findings. Visually inspected home, vocabulary, lesson, speaking, video, and progress at narrow phone, tablet, and desktop sizes, including populated progress data.
+- Progress, video, and isolated speaking fixture suites pass with the new branding. The active speaking composer remains visible at widths 320–1920px, including a 320×568px viewport. Header labels and logo sizing adapt at 600px and 1100px; full accessible destination names are retained.
+- Banner endpoint contrast with white text is at least 4.67:1. Navigation hover uses a light-blue surface with dark-blue text; account-menu focus retains a blue ring on its white surface.
+- The preview images below reflect this blue theme. Existing service/device limitations still apply.
+
 ## Running checks
 
 ```sh

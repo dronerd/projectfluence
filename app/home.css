@@ -5,7 +5,7 @@
 .home-intro-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 24px; }
 .home-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--pf-primary); font-size: 13px; font-weight: 600; }
 .home-text-link:hover { text-decoration: underline; }
-.home-start-note { border-left: 3px solid #bcb4ed; padding: 8px 0 8px 24px; }
+.home-start-note { border-left: 3px solid var(--pf-primary-border); padding: 8px 0 8px 24px; }
 .home-note-label { color: var(--pf-primary); font-size: 12px; font-weight: 700; }
 .home-start-note h2 { font-size: 18px; font-weight: 650; margin: 10px 0; }
 .home-start-note p { font-size: 13px; color: var(--pf-muted); line-height: 1.9; }
@@ -17,9 +17,7 @@
 .home-practice-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
 .home-practice-card { padding: 25px; display: flex; flex-direction: column; }
 .home-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.home-card-top img { border-radius: 12px; }
-.home-card-top span { color: #737d92; font-size: 12px; font-variant-numeric: tabular-nums; }
-.home-app-name { font-size: 12px; color: var(--pf-muted); font-weight: 600; }
+.home-card-number { color: var(--pf-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
 .home-practice-card h3 { font-size: 20px; font-weight: 700; letter-spacing: -.04em; margin: 4px 0 12px; }
 .home-card-copy { font-size: 14px; color: var(--pf-muted); line-height: 1.9; flex: 1; }
 .home-card-detail { font-size: 12px; color: var(--pf-muted); margin: 24px 0 14px; }
@@ -52,12 +50,9 @@
   .home-intro-copy { font-size: 14px; }
   .home-start-note { display: none; }
   .home-practice-grid { grid-template-columns: 1fr; gap: 14px; }
-  .home-practice-card { display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 0 16px; padding: 20px; }
-  .home-card-top { grid-column: 1; grid-row: 1 / 3; align-items: start; margin: 0; }
-  .home-card-top span { display: none; }
-  .home-app-name, .home-practice-card h3 { grid-column: 2; }
+  .home-practice-card { padding: 20px; }
+  .home-card-top { margin-bottom: 16px; }
   .home-practice-card h3 { margin: 2px 0 12px; }
-  .home-card-copy, .home-card-detail, .home-practice-card > a { grid-column: 1 / -1; }
   .home-card-detail { margin-top: 16px; }
   .home-section-heading { display: block; margin-bottom: 18px; }
   .home-section-heading h2 { font-size: 21px; }

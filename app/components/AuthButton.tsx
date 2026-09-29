@@ -417,7 +417,7 @@ export default function AuthButton({
                         required
                         minLength={6}
                         autoComplete="new-password"
-                        className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                        className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
                       />
                       <PasswordVisibilityButton
                         visible={showNewPassword}
@@ -436,7 +436,7 @@ export default function AuthButton({
                         required
                         minLength={6}
                         autoComplete="new-password"
-                        className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                        className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
                       />
                       <PasswordVisibilityButton
                         visible={showConfirmNewPassword}
@@ -462,7 +462,7 @@ export default function AuthButton({
                       onChange={(event) => setResetEmail(event.target.value)}
                       required
                       autoComplete="email"
-                      className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                      className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
                     />
                   </label>
                   <button
@@ -494,7 +494,7 @@ export default function AuthButton({
                         onChange={(event) => setEmail(event.target.value)}
                         required
                         autoComplete="email"
-                        className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                        className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-base outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
                       />
                     </label>
                     <label className="block text-sm font-semibold text-gray-700">
@@ -507,7 +507,7 @@ export default function AuthButton({
                           required
                           minLength={6}
                           autoComplete={mode === "sign-up" ? "new-password" : "current-password"}
-                          className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                          className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
                         />
                         <PasswordVisibilityButton
                           visible={showPassword}
@@ -529,7 +529,7 @@ export default function AuthButton({
                             required
                             minLength={6}
                             autoComplete="new-password"
-                            className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                            className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-11 text-base outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
                           />
                           <PasswordVisibilityButton
                             visible={showConfirmPassword}
@@ -554,7 +554,7 @@ export default function AuthButton({
                         setResetPasswordOpen(true);
                         setMessage("");
                       }}
-                      className="mt-3 text-sm font-semibold text-indigo-700 underline-offset-4 hover:underline"
+                      className="mt-3 text-sm font-semibold text-sky-700 underline-offset-4 hover:underline"
                     >
                       パスワードを忘れた場合
                     </button>

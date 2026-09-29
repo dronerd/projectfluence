@@ -33,7 +33,7 @@ Backend routes, schemas, transcript foundation work and future IR plans were ins
 - Distinguish analytics signed-out/loading/failure/empty states; refresh on auth change.
 
 ### P1 — hierarchy and responsive workflows
-- Shared restrained indigo/white shell with persistent learn/speak/listen/progress destinations.
+- Shared light-blue/white shell with a blue-to-cyan gradient banner and persistent learn/speak/listen/progress destinations.
 - Bring learning actions above editorial content on home, retain all resources.
 - Make vocabulary lesson continuation explicit; reduce inactive curriculum prominence.
 - Compact speaking setup and expose start/end/settings consistently.
@@ -42,7 +42,7 @@ Backend routes, schemas, transcript foundation work and future IR plans were ins
 
 ### P2 — consistent visual system
 - Shared surface, spacing, type, border, radius, button, input and focus tokens.
-- Preserve logo and indigo identity while removing excessive gradients/shadows.
+- Preserve the original blue identity and product logos; use the brand gradient in the shared banner, with restrained surfaces and shadows elsewhere.
 - Use intentional phone/tablet grids, readable maximum widths and safe area spacing.
 - Consistent feedback, selected, disabled and reduced-motion behavior.
 
@@ -69,3 +69,9 @@ Use real local vocabulary data. Browser fixtures may cover network-dependent sta
 - Root loading/error/404 states and route metadata complete the common shell. The sitemap postbuild source path was corrected; public learning entry points are included.
 
 Final validation results and reproduction steps are recorded in [frontend-validation.md](frontend-validation.md). Existing user changes to transcript services/schema/plans were preserved.
+
+## Branding refinement — 2026-09-29
+
+The original blue identity is now explicit in shared tokens: light-blue backgrounds, white surfaces, blue actions, borders, focus rings, selected states, chat bubbles, and progress indicators. The sticky banner uses a readable blue-to-cyan gradient. Semantic success/error colors remain distinct.
+
+`app/lib/brands.ts` owns the exact VocabStream, SpeakWiseAI, and VidMatch names, original logo paths, destinations, and purpose labels. `AppBrand` is reused by the header, home cards, learning pages, and progress panels. At 1100px and above, all product names and logos appear in one header row. Smaller widths use two rows, keeping the active app name visible at the top; below 600px the navigation combines each logo with a short Japanese purpose label. Navigation links retain full accessible names at every width.

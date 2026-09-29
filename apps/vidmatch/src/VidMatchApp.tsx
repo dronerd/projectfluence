@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import AppHeader from "@/app/components/AppHeader";
+import AppBrand from "@/app/components/AppBrand";
 import AuthButton from "@/app/components/AuthButton";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
@@ -248,7 +249,7 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
     <AppHeader />
     <main id="main-content" className="pf-page vm-main">
       <div className="vm-page-heading">
-        <div><p className="pf-eyebrow">VidMatch · 動画で学ぶ</p><h1>{isHistory ? "動画の履歴" : isSimilar ? "次に見たい動画" : "あなたに合う英語の動画を。"}</h1><p>{isHistory ? "YouTubeで開いた動画を、いつでも見返せます。" : isSimilar ? "レベルやテーマが近い動画で、興味を広げましょう。" : "今のレベルと興味に合わせて、聞く練習を始めましょう。"}</p></div>
+        <div><AppBrand app="vidmatch" compact /><h1>{isHistory ? "動画の履歴" : isSimilar ? "次に見たい動画" : "あなたに合う英語の動画を。"}</h1><p>{isHistory ? "YouTubeで開いた動画を、いつでも見返せます。" : isSimilar ? "レベルやテーマが近い動画で、興味を広げましょう。" : "今のレベルと興味に合わせて、聞く練習を始めましょう。"}</p></div>
         <Link href={isHistory || isSimilar ? "/vidmatch" : "/vidmatch/history"} className="pf-button-secondary">{isHistory || isSimilar ? "動画を探す" : "動画の履歴"}<span aria-hidden="true"> →</span></Link>
       </div>
       {trackingError && <p className="vm-notice" role="status">{trackingError}</p>}
@@ -332,8 +333,8 @@ const styles = `
 .vm-control h3 > span { font-size:11px; color:var(--pf-muted); font-weight:400; }
 .vm-levels { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; }
 .vm-choice { min-height:44px; border:1px solid var(--pf-border); background:var(--pf-surface); color:var(--pf-text); border-radius:9px; padding:8px 10px; font-size:13px; font-weight:500; line-height:1.4; transition:background .15s,border-color .15s; }
-.vm-choice:hover { background:#f2f1ff; border-color:#b5b0e4; }
-.vm-choice[aria-pressed="true"] { border-color:var(--pf-primary); background:#eeecff; color:#3730a3; box-shadow:inset 0 0 0 1px var(--pf-primary); }
+.vm-choice:hover { background:var(--pf-primary-soft); border-color:var(--pf-primary-border); }
+.vm-choice[aria-pressed="true"] { border-color:var(--pf-primary); background:var(--pf-primary-soft); color:var(--pf-primary-hover); box-shadow:inset 0 0 0 1px var(--pf-primary); }
 .vm-levels .vm-choice { display:grid; gap:3px; text-align:center; }
 .vm-levels .vm-choice strong { font-size:15px; font-weight:700; }
 .vm-levels .vm-choice span { font-size:10px; }
@@ -344,7 +345,7 @@ const styles = `
 .vm-extra-filters[open] .vm-control:first-of-type { margin-top:4px; }
 .vm-filter-dot { display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--pf-primary); margin-left:8px; }
 .vm-input-label { display:block; font-size:13px; font-weight:600; margin:16px 0 7px; }
-.vm-preferences input[type="text"], .vm-preferences input:not([type]), .vm-preferences select { width:100%; min-height:46px; padding:10px 11px; border:1px solid #c9d0df; border-radius:8px; background:white; color:var(--pf-text); font-size:16px; }
+.vm-preferences input[type="text"], .vm-preferences input:not([type]), .vm-preferences select { width:100%; min-height:46px; padding:10px 11px; border:1px solid var(--pf-border); border-radius:8px; background:var(--pf-surface); color:var(--pf-text); font-size:16px; }
 .vm-help { color:var(--pf-muted); font-size:11px; line-height:1.7; margin:7px 0 0; }
 .vm-caption { display:flex; align-items:center; gap:10px; min-height:48px; font-size:12px; line-height:1.7; margin-top:14px; cursor:pointer; }
 .vm-caption input { width:18px; height:18px; flex-shrink:0; accent-color:var(--pf-primary); }
@@ -359,16 +360,16 @@ const styles = `
 .vm-video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
 .vm-history .vm-video-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .vm-video-card { min-width:0; display:flex; flex-direction:column; overflow:hidden; border:1px solid var(--pf-border); border-radius:12px; background:var(--pf-surface); }
-.vm-thumbnail { position:relative; aspect-ratio:16/9; background:#e9edf5; display:grid; place-items:center; overflow:hidden; }
+.vm-thumbnail { position:relative; aspect-ratio:16/9; background:var(--pf-primary-soft); display:grid; place-items:center; overflow:hidden; }
 .vm-thumbnail > img { display:block; width:100%; height:100%; object-fit:cover; }
-.vm-thumbnail > span:not(.vm-duration) { font-size:34px; color:#8894ac; }
-.vm-duration { position:absolute; right:10px; bottom:9px; background:#18243be8; color:white; border-radius:4px; padding:3px 6px; font-size:11px; font-weight:600; }
+.vm-thumbnail > span:not(.vm-duration) { font-size:34px; color:var(--pf-accent); }
+.vm-duration { position:absolute; right:10px; bottom:9px; background:var(--pf-text); color:var(--pf-surface); border-radius:4px; padding:3px 6px; font-size:11px; font-weight:600; }
 .vm-video-body { padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; min-width:0; }
 .vm-channel { margin:0; font-size:11px; color:var(--pf-muted); overflow-wrap:anywhere; }
 .vm-video-body h3 { margin:0; font-size:15px; line-height:1.6; font-weight:650; overflow-wrap:anywhere; }
 .vm-tags { display:flex; flex-wrap:wrap; gap:5px; }
-.vm-tags span { padding:3px 7px; font-size:10px; line-height:1.6; color:#546179; border-radius:5px; background:#f1f3f8; overflow-wrap:anywhere; }
-.vm-tags .vm-level-tag { color:#4338ca; background:#eeecff; font-weight:700; }
+.vm-tags span { padding:3px 7px; font-size:10px; line-height:1.6; color:var(--pf-muted); border-radius:5px; background:var(--pf-surface-subtle); overflow-wrap:anywhere; }
+.vm-tags .vm-level-tag { color:var(--pf-primary); background:var(--pf-primary-soft); font-weight:700; }
 .vm-description { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:anywhere; color:var(--pf-muted); font-size:12px; line-height:1.7; margin:0; }
 .vm-opened { font-size:11px; color:var(--pf-muted); margin:0; }
 .vm-video-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; padding-top:5px; margin-top:auto; }
@@ -378,11 +379,11 @@ const styles = `
 .vm-state { padding:52px 24px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:14px; background:var(--pf-surface); border:1px solid var(--pf-border); border-radius:var(--pf-radius); margin-top:20px; }
 .vm-state h2, .vm-state h3 { margin:0; font-size:18px; line-height:1.7; font-weight:650; }
 .vm-state p { max-width:390px; color:var(--pf-muted); margin:0; font-size:13px; line-height:1.9; }
-.vm-state-symbol { width:54px; height:54px; border-radius:50%; background:#eeecff; color:var(--pf-primary); display:grid; place-items:center; font-size:28px; margin-bottom:5px; }
+.vm-state-symbol { width:54px; height:54px; border-radius:50%; background:var(--pf-primary-soft); color:var(--pf-primary); display:grid; place-items:center; font-size:28px; margin-bottom:5px; }
 .vm-loading > p { font-size:13px; color:var(--pf-muted); margin:18px 0; }
-.vm-skeleton { background:white; border:1px solid var(--pf-border); border-radius:12px; overflow:hidden; padding-bottom:22px; }
-.vm-skeleton div { aspect-ratio:16/9; background:#e9edf5; }
-.vm-skeleton span { display:block; height:12px; border-radius:3px; margin:18px 16px 0; background:#edf0f6; }
+.vm-skeleton { background:var(--pf-surface); border:1px solid var(--pf-border); border-radius:12px; overflow:hidden; padding-bottom:22px; }
+.vm-skeleton div { aspect-ratio:16/9; background:var(--pf-primary-soft); }
+.vm-skeleton span { display:block; height:12px; border-radius:3px; margin:18px 16px 0; background:var(--pf-border); }
 .vm-skeleton span:last-child { width:60%; margin-top:10px; }
 .vm-notice { border:1px solid #ead7af; background:#fffbeb; padding:12px 16px; border-radius:10px; font-size:13px; line-height:1.7; }
 @media(min-width:1100px) { .vm-preferences { position:sticky; top:calc(var(--pf-header-height) + 24px); } }
