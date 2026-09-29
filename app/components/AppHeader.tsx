@@ -24,8 +24,8 @@ export default function AppHeader() {
       <nav className="pf-nav" aria-label="メインナビゲーション">
         {appKeys.map((app) => {
           const item = learningApps[app];
-          return <Link key={app} href={item.href} aria-label={`${item.name} · ${item.purpose}`} aria-current={currentApp === app ? "page" : undefined}>
-            <AppBrand app={app} compact /><span className="pf-nav-short">{item.short}</span>
+          return <Link key={app} href={item.href} aria-label={`${item.purpose} · ${item.name}`} aria-current={currentApp === app ? "page" : undefined}>
+            <Image className="pf-nav-logo" src={item.image} alt="" width={24} height={24} /><span className="pf-nav-full">{item.purpose}</span><span className="pf-nav-short">{item.short}</span>
           </Link>;
         })}
         <Link href="/analytics" aria-label="学習の記録" aria-current={pathname.startsWith("/analytics") ? "page" : undefined}>

@@ -60,7 +60,8 @@ img, svg { flex-shrink: 0; }
 .pf-current-app { display: none; color: #fff; text-decoration: none; }
 .pf-nav { display: flex; justify-content: center; align-items: center; gap: 6px; }
 .pf-nav a { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 9px 12px; border-radius: 9px; color: #fff; font-size: 13px; font-weight: 650; white-space: nowrap; text-decoration: none; }
-.pf-nav .pf-app-brand, .pf-current-app .pf-app-brand { color: inherit; }
+.pf-current-app .pf-app-brand { color: inherit; }
+.pf-nav-logo { border-radius: 6px; }
 .pf-nav a:hover { background: var(--pf-primary-soft); color: var(--pf-primary-hover); }
 .pf-nav a[aria-current="page"] { background: #fff; color: var(--pf-primary-hover); }
 .pf-nav svg { width: 22px; height: 22px; }
@@ -92,9 +93,9 @@ img, svg { flex-shrink: 0; }
   .pf-page { width: calc(100% - 32px); padding-top: 24px; }
 }
 @media (max-width: 599px) {
-  .pf-nav .pf-app-brand-name, .pf-nav-full { display: none; }
+  .pf-nav-full { display: none; }
   .pf-nav-short { display: inline; }
-  .pf-nav .pf-app-brand img, .pf-nav svg { width: 22px; height: 22px; }
+  .pf-nav-logo, .pf-nav svg { width: 22px; height: 22px; }
 }
 @media (max-width: 370px) {
   .pf-header-inner { padding-inline: 12px; }

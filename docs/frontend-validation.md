@@ -22,6 +22,7 @@ Representative rendered previews: [desktop home](previews/home-desktop.png), [32
 - Rechecked 14 routes at 320–1920px: no horizontal overflow or Axe findings. Visually inspected home, vocabulary, lesson, speaking, video, and progress at narrow phone, tablet, and desktop sizes, including populated progress data.
 - Progress, video, and isolated speaking fixture suites pass with the new branding. The active speaking composer remains visible at widths 320–1920px, including a 320×568px viewport. Header labels and logo sizing adapt at 600px and 1100px; full accessible destination names are retained.
 - Banner endpoint contrast with white text is at least 4.67:1. Navigation hover uses a light-blue surface with dark-blue text; account-menu focus retains a blue ring on its white surface.
+- Navigation label follow-up: medium/large navigation now shows 単語学習, 会話練習, and 動画学習. Production build/type/lint checks pass; verified the labels and overflow at 10 widths from 320 to 1920px, including 599/600px and 1099/1100px boundaries. Header Axe checks pass.
 - The preview images below reflect this blue theme. Existing service/device limitations still apply.
 
 ## Running checks
