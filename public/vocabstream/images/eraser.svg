@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>鉛筆の線を消す、紙の帯が巻かれた白い消しゴム。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#f5ece0" d="m52 66 105-26 34 24-105 29Z"/><path fill="#e5dace" d="m52 66 34 27v53l-34-28Z"/><path fill="#fff8ed" d="m86 93 105-29v54L86 146Z"/><path fill="#80abc6" d="m77 60 65-16 35 24-66 18Z"/><path fill="#91b8cc" d="m111 86 66-18v54l-66 18Z"/><path fill="#60899e" d="m77 60 34 26v54l-34-28Z"/><path stroke="#a7a29a" stroke-width="3" d="m166 145 8-3m9-10 7 2m-35 17 6 0"/></g>
+</svg>

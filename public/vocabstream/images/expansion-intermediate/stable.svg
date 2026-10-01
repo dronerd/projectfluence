@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>時間が進んでも、測定値が同じ高さを保つ水平な折れ線。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<line x1="51" y1="188" x2="323" y2="188" stroke="#b7c6c6" stroke-width="3" stroke-linecap="round"/><line x1="51" y1="188" x2="51" y2="44" stroke="#b7c6c6" stroke-width="3" stroke-linecap="round"/><circle cx="75" cy="112" r="4" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="117" cy="112" r="4" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="159" cy="112" r="4" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="201" cy="112" r="4" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="243" cy="112" r="4" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="285" cy="112" r="4" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><line x1="75" y1="112" x2="285" y2="112" stroke="#77aebc" stroke-width="4" stroke-linecap="round"/><text x="180" y="225" text-anchor="middle" font-size="15" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">時間がたっても大きく変わらない</text>
+</svg>

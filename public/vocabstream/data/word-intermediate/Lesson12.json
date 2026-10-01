@@ -18,7 +18,25 @@
       "synonyms": "time, span",
       "antonyms": "moment, instant",
       "forms": "period, periods",
-      "example": "The rainy period usually lasts for several weeks."
+      "example": "The rainy period usually lasts for several weeks.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/period.svg",
+        "alt": "月曜から木曜までの区間を、時間の線上で帯として示した図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/period.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "crew",
+        "reward"
+      ]
     },
     {
       "word": "pressure",
@@ -54,7 +72,25 @@
       "synonyms": "part, division",
       "antonyms": "whole, total",
       "forms": "section, sections",
-      "example": "Read the first section of the article for homework."
+      "example": "Read the first section of the article for homework.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/section.svg",
+        "alt": "三つに分かれた大きな長方形の、中央の一部分を強調している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/section.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "stress",
+        "crew"
+      ]
     },
     {
       "word": "series",
@@ -63,7 +99,25 @@
       "synonyms": "sequence, set",
       "antonyms": "single item",
       "forms": "series",
-      "example": "The library has a series of books about science."
+      "example": "The library has a series of books about science.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/series.svg",
+        "alt": "一巻、二巻、三巻と続く、同じ形の本のまとまり。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/series.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "loan",
+        "stress"
+      ]
     },
     {
       "word": "stress",

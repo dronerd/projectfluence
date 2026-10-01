@@ -9,7 +9,25 @@
       "synonyms": "document, proof",
       "antonyms": "failure, refusal",
       "forms": "certificate, certificates",
-      "example": "She received a certificate after the training course."
+      "example": "She received a certificate after the training course.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/certificate.svg",
+        "alt": "修了したことを記した公式の紙に、証明の印とリボンが付いている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/certificate.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "engine",
+        "platform"
+      ]
     },
     {
       "word": "emergency",

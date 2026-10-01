@@ -3,15 +3,167 @@
   "title": "Lesson 32",
   "paragraph": "This lesson practices useful adjectives for people and things.",
   "words": [
-    { "word": "kind", "meaning": "nice and helpful to others", "japaneseMeaning": "親切な", "synonyms": "nice, helpful", "antonyms": "mean, unkind", "forms": "kind, kinder, kindest", "example": "My neighbor is kind to everyone." },
-    { "word": "busy", "meaning": "having many things to do", "japaneseMeaning": "忙しい", "synonyms": "active, full", "antonyms": "free, quiet", "forms": "busy, busier, busiest", "example": "My mother is busy on Monday morning." },
-    { "word": "free", "meaning": "not busy or costing no money", "japaneseMeaning": "暇な／無料の", "synonyms": "available, no-cost", "antonyms": "busy, expensive", "forms": "free, freer, freest", "example": "Are you free after school?" },
-    { "word": "strong", "meaning": "having a lot of power", "japaneseMeaning": "強い", "synonyms": "powerful, hard", "antonyms": "weak, soft", "forms": "strong, stronger, strongest", "example": "He is strong enough to carry the box." },
-    { "word": "weak", "meaning": "not strong", "japaneseMeaning": "弱い", "synonyms": "not strong, soft", "antonyms": "strong, powerful", "forms": "weak, weaker, weakest", "example": "I feel weak when I am sick." },
-    { "word": "clear", "meaning": "easy to see or understand", "japaneseMeaning": "はっきりした／明確な", "synonyms": "easy, plain", "antonyms": "unclear, difficult", "forms": "clear, clearer, clearest", "example": "Your answer is clear." },
-    { "word": "dark", "meaning": "with little or no light", "japaneseMeaning": "暗い", "synonyms": "dim, black", "antonyms": "bright, light", "forms": "dark, darker, darkest", "example": "The room is dark at night." },
-    { "word": "bright", "meaning": "full of light", "japaneseMeaning": "明るい", "synonyms": "light, shiny", "antonyms": "dark, dim", "forms": "bright, brighter, brightest", "example": "This lamp is bright." },
-    { "word": "heavy", "meaning": "hard to lift", "japaneseMeaning": "重い", "synonyms": "weighty, big", "antonyms": "light, easy", "forms": "heavy, heavier, heaviest", "example": "This box is heavy." },
-    { "word": "light", "meaning": "not heavy", "japaneseMeaning": "軽い", "synonyms": "not heavy, easy to carry", "antonyms": "heavy, weighty", "forms": "light, lighter, lightest", "example": "My new bag is light." }
+    {
+      "word": "kind",
+      "meaning": "nice and helpful to others",
+      "japaneseMeaning": "親切な",
+      "synonyms": "nice, helpful",
+      "antonyms": "mean, unkind",
+      "forms": "kind, kinder, kindest",
+      "example": "My neighbor is kind to everyone."
+    },
+    {
+      "word": "busy",
+      "meaning": "having many things to do",
+      "japaneseMeaning": "忙しい",
+      "synonyms": "active, full",
+      "antonyms": "free, quiet",
+      "forms": "busy, busier, busiest",
+      "example": "My mother is busy on Monday morning."
+    },
+    {
+      "word": "free",
+      "meaning": "not busy or costing no money",
+      "japaneseMeaning": "暇な／無料の",
+      "synonyms": "available, no-cost",
+      "antonyms": "busy, expensive",
+      "forms": "free, freer, freest",
+      "example": "Are you free after school?"
+    },
+    {
+      "word": "strong",
+      "meaning": "having a lot of power",
+      "japaneseMeaning": "強い",
+      "synonyms": "powerful, hard",
+      "antonyms": "weak, soft",
+      "forms": "strong, stronger, strongest",
+      "example": "He is strong enough to carry the box."
+    },
+    {
+      "word": "weak",
+      "meaning": "not strong",
+      "japaneseMeaning": "弱い",
+      "synonyms": "not strong, soft",
+      "antonyms": "strong, powerful",
+      "forms": "weak, weaker, weakest",
+      "example": "I feel weak when I am sick."
+    },
+    {
+      "word": "clear",
+      "meaning": "easy to see or understand",
+      "japaneseMeaning": "はっきりした／明確な",
+      "synonyms": "easy, plain",
+      "antonyms": "unclear, difficult",
+      "forms": "clear, clearer, clearest",
+      "example": "Your answer is clear."
+    },
+    {
+      "word": "dark",
+      "meaning": "with little or no light",
+      "japaneseMeaning": "暗い",
+      "synonyms": "dim, black",
+      "antonyms": "bright, light",
+      "forms": "dark, darker, darkest",
+      "example": "The room is dark at night.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/dark.svg",
+        "alt": "室内の照明が消えて暗くなっている例。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/dark.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "bright",
+        "heavy"
+      ]
+    },
+    {
+      "word": "bright",
+      "meaning": "full of light",
+      "japaneseMeaning": "明るい",
+      "synonyms": "light, shiny",
+      "antonyms": "dark, dim",
+      "forms": "bright, brighter, brightest",
+      "example": "This lamp is bright.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/bright.svg",
+        "alt": "室内の照明が点いて明るくなっている例。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/bright.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "dark",
+        "heavy"
+      ]
+    },
+    {
+      "word": "heavy",
+      "meaning": "hard to lift",
+      "japaneseMeaning": "重い",
+      "synonyms": "weighty, big",
+      "antonyms": "light, easy",
+      "forms": "heavy, heavier, heaviest",
+      "example": "This box is heavy.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/heavy.svg",
+        "alt": "天びんで二十キログラムと一キログラムの荷物を比べ、重い方を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/heavy.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "light",
+        "bright"
+      ]
+    },
+    {
+      "word": "light",
+      "meaning": "not heavy",
+      "japaneseMeaning": "軽い",
+      "synonyms": "not heavy, easy to carry",
+      "antonyms": "heavy, weighty",
+      "forms": "light, lighter, lightest",
+      "example": "My new bag is light.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/light.svg",
+        "alt": "天びんで二十キログラムと一キログラムの荷物を比べ、軽い方を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/light.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "heavy",
+        "dark"
+      ]
+    }
   ]
 }

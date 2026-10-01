@@ -31,10 +31,10 @@
     },
     {
       "word": "characterize",
-      "meaning": "to describe the main quality of someone or something",
+      "meaning": "to be a typical or distinguishing feature of someone or something",
       "japaneseMeaning": "特徴づける",
-      "synonyms": "describe, define",
-      "antonyms": "misrepresent, confuse",
+      "synonyms": "distinguish, mark",
+      "antonyms": "",
       "forms": "characterize, characterizes, characterizing, characterized",
       "example": "High energy costs characterize the current economy."
     },
@@ -45,7 +45,7 @@
       "synonyms": "pursue, follow",
       "antonyms": "avoid, ignore",
       "forms": "chase, chases, chasing, chased",
-      "example": "Reporters chase the story after the mayor resigns."
+      "example": "The dog tried to chase a squirrel across the park."
     },
     {
       "word": "compete",

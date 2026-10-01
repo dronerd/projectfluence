@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>小さなカードを、機械の細い差し込み口へ入れる図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="39" y="65" width="84" height="56" rx="4" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><line x1="144" y1="104" x2="223" y2="137" stroke="#77aebc" stroke-width="5" stroke-linecap="round"/><polygon points="223,137 215.6999130992483,128.53189919512803 211.8454672156514,137.75920903767818" fill="#77aebc"/><rect x="237" y="62" width="86" height="145" rx="5" fill="#dcecef" stroke="#40565b" stroke-width="2.5"/><rect x="247" y="118" width="64" height="11" rx="2" fill="#40565b" stroke="#40565b" stroke-width="2.5"/><text x="180" y="227" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">差し込み口の中へ</text>
+</svg>

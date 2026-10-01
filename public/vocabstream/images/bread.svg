@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>茶色い皮のある一斤のパンと、切り分けた一枚。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#bf8555" d="M48 129V77c-10-21 10-44 34-41h54c31-1 49 28 39 49v44Z"/><path fill="#efd1a0" d="M82 144V94c-14-26 8-48 36-47 26-1 48 21 34 47v50Z"/><path fill="#fff0cf" stroke="#c89b66" d="M93 133V92c-11-17 3-32 25-32 21 0 34 15 24 32v41Z"/><path stroke="#97613e" d="m63 52 7 17m17-26 8 14"/></g>
+</svg>

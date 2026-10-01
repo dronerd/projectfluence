@@ -33,7 +33,12 @@
         "japaneseMeaning": "宇宙の、広大な",
         "synonyms": "universal, celestial",
         "antonyms": "earthly, mundane",
-        "example": "They discussed cosmic events and their significance."
+        "example": "They discussed cosmic events and their significance.",
+        "duplicateOf": {
+          "category": "word-proficiency",
+          "lessonNumber": 86,
+          "word": "cosmic"
+        }
       },
       {
         "word": "interstellar",
@@ -73,7 +78,12 @@
         "japaneseMeaning": "普遍的な、全体的な",
         "synonyms": "global, general",
         "antonyms": "specific, limited",
-        "example": "Love is a universal emotion."
+        "example": "Love is a universal emotion.",
+        "duplicateOf": {
+          "category": "word-proficiency",
+          "lessonNumber": 86,
+          "word": "universal"
+        }
       },
       {
         "word": "transcendent",

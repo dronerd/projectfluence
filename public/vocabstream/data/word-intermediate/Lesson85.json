@@ -45,7 +45,25 @@
       "synonyms": "delicate, weak",
       "antonyms": "strong, tough",
       "forms": "fragile, more fragile, most fragile",
-      "example": "Please carry the fragile glasses carefully."
+      "example": "Please carry the fragile glasses carefully.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/fragile.svg",
+        "alt": "薄いガラスのコップに細いひびが入り、割れやすさを示している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/fragile.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "civil",
+        "modern"
+      ]
     },
     {
       "word": "civil",

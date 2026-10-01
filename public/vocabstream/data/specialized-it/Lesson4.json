@@ -1,0 +1,146 @@
+{
+  "lesson_id": "specialized-it-lesson-4",
+  "title": "Lesson 4",
+  "paragraph": "アカウントと日常の操作",
+  "words": [
+    {
+      "word": "account",
+      "meaning": "a record that gives a person access to a digital service and stores their information",
+      "japaneseMeaning": "アカウント",
+      "example": "Create an account before saving your work online.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "attachment",
+        "router"
+      ]
+    },
+    {
+      "word": "username",
+      "meaning": "the name used to identify a person when they sign in to a system",
+      "japaneseMeaning": "ユーザー名",
+      "example": "Your username appears beside the comments you post.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "password",
+        "notification"
+      ]
+    },
+    {
+      "word": "password",
+      "meaning": "a secret set of characters used to help prove who a user is",
+      "japaneseMeaning": "パスワード",
+      "example": "Choose a different password for this account.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "username",
+        "attachment"
+      ],
+      "sentencePractice": {
+        "prompt": "To help prove her identity, she typed a secret string of characters into the sign-in form. That string was her ____.",
+        "distractors": [
+          "username",
+          "notification"
+        ],
+        "reviewNote": "A secret sign-in string is a password; a username identifies the account and a notification reports an event."
+      }
+    },
+    {
+      "word": "login",
+      "meaning": "the act of entering a system using an account",
+      "japaneseMeaning": "ログイン",
+      "example": "The app asks for a code during login.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "logout",
+        "download"
+      ],
+      "usageNote": "名詞は login、動詞は log in と分けて書きます。"
+    },
+    {
+      "word": "logout",
+      "meaning": "the act of ending access to a system through an account",
+      "japaneseMeaning": "ログアウト",
+      "example": "Logout closes your active session on this device.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "login",
+        "download"
+      ],
+      "usageNote": "名詞は logout、動詞は log out と分けて書きます。"
+    },
+    {
+      "word": "profile",
+      "meaning": "a collection of information about a user shown or stored by a service",
+      "japaneseMeaning": "プロフィール",
+      "example": "You can add a short introduction to your profile.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "notification",
+        "password"
+      ]
+    },
+    {
+      "word": "setting",
+      "meaning": "an option that controls how a device or program behaves",
+      "japaneseMeaning": "設定項目",
+      "example": "This setting controls the size of the text.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "attachment",
+        "username"
+      ]
+    },
+    {
+      "word": "notification",
+      "meaning": "a message from a device or program that tells a user about an event",
+      "japaneseMeaning": "通知",
+      "example": "A notification appears when the upload finishes.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "profile",
+        "setting"
+      ]
+    },
+    {
+      "word": "attachment",
+      "meaning": "a file sent together with an email or another message",
+      "japaneseMeaning": "添付ファイル",
+      "example": "Please open the attachment to read the meeting notes.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "password",
+        "notification"
+      ],
+      "sentencePractice": {
+        "prompt": "The email included a separate PDF file. She opened the ____ to read the report.",
+        "distractors": [
+          "notification",
+          "setting"
+        ],
+        "reviewNote": "A separate file accompanying an email is an attachment; messages about events and configuration options are not that file."
+      }
+    },
+    {
+      "word": "download",
+      "meaning": "the act of copying data from a remote system to your own device",
+      "japaneseMeaning": "ダウンロード",
+      "example": "The download stopped when the connection failed.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "login",
+        "logout"
+      ],
+      "usageNote": "ここでは名詞の意味。動詞としても使えます。"
+    }
+  ]
+}

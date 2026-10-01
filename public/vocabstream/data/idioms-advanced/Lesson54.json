@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-advanced-lesson-54",
+  "title": "Lesson 4",
+  "paragraph": "変化と対応",
+  "words": [
+    {
+      "word": "cut back on",
+      "meaning": "to reduce an activity or amount, often to save resources",
+      "japaneseMeaning": "節約のためなどに減らす",
+      "example": "The company plans to cut back on business travel.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "end up",
+        "go through"
+      ]
+    },
+    {
+      "word": "stand out",
+      "meaning": "to be clearly noticeable because you are different",
+      "japaneseMeaning": "目立つ",
+      "example": "Her clear examples made the presentation stand out.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "come across",
+        "turn out"
+      ],
+      "sentencePractice": {
+        "prompt": "Every folder is grey except this bright red one. The red colour makes it ____ from the rest.",
+        "distractors": [
+          "break down",
+          "take off"
+        ],
+        "reviewNote": "A contrasting colour makes the folder noticeable among the others, not broken or moving into the air."
+      }
+    },
+    {
+      "word": "keep up with",
+      "meaning": "to stay at the same pace or level as something changing",
+      "japaneseMeaning": "変化や進度についていく",
+      "example": "It is hard to keep up with every software update.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "look into",
+        "make a difference"
+      ]
+    },
+    {
+      "word": "end up",
+      "meaning": "to finally reach a situation, often without planning to",
+      "japaneseMeaning": "結局～になる",
+      "example": "If we miss the last bus, we may end up walking home.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "go through",
+        "step by step"
+      ]
+    },
+    {
+      "word": "come across",
+      "meaning": "to find or meet something by chance",
+      "japaneseMeaning": "偶然見つける・出会う",
+      "example": "I sometimes come across useful books in that shop.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "turn out",
+        "cut back on"
+      ]
+    },
+    {
+      "word": "look into",
+      "meaning": "to investigate a question or problem",
+      "japaneseMeaning": "調査する",
+      "example": "The council will look into the noise complaints.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "make a difference",
+        "stand out"
+      ]
+    },
+    {
+      "word": "go through",
+      "meaning": "to experience a difficult period or situation",
+      "japaneseMeaning": "つらい時期などを経験する",
+      "example": "Many people go through stress when they move home.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "step by step",
+        "keep up with"
+      ]
+    },
+    {
+      "word": "turn out",
+      "meaning": "to prove to be a certain way in the end",
+      "japaneseMeaning": "結果的に～と分かる",
+      "example": "The repair may turn out to be less expensive than we thought.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "cut back on",
+        "look into"
+      ]
+    },
+    {
+      "word": "make a difference",
+      "meaning": "to have an important effect on a situation",
+      "japaneseMeaning": "違いを生む・役に立つ",
+      "example": "Even a small donation can make a difference.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "stand out",
+        "come across"
+      ]
+    },
+    {
+      "word": "step by step",
+      "meaning": "gradually, completing one stage before the next",
+      "japaneseMeaning": "段階を追って",
+      "example": "The guide explains the process step by step.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "keep up with",
+        "look into"
+      ]
+    }
+  ]
+}

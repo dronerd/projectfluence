@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>汁をすくうための深い丸い部分と、長い柄があるお玉。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#bed1d6" d="M125 21q17-7 25 1l-30 88-16-5Z"/><ellipse cx="102" cy="123" rx="43" ry="29" fill="#8faeb6"/><path fill="#d6e6e8" d="M59 117q0 40 43 42 43-2 43-42-14 18-43 18-29 0-43-18Z"/><ellipse cx="102" cy="116" rx="43" ry="21" fill="#b8d4dc"/><path stroke="#e8f4f4" d="m133 34-19 54"/></g>
+</svg>

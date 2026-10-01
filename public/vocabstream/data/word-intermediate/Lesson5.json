@@ -54,7 +54,25 @@
       "synonyms": "change, exchange",
       "antonyms": "keep, leave",
       "forms": "replace, replaces, replacing, replaced, replacement",
-      "example": "We need to replace the broken light in the kitchen."
+      "example": "We need to replace the broken light in the kitchen.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/replace.svg",
+        "alt": "使えなくなった古い電池を、新しい電池に取り替える図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/replace.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "mention",
+        "confirm"
+      ]
     },
     {
       "word": "affect",
@@ -67,12 +85,30 @@
     },
     {
       "word": "increase",
-      "meaning": "to become larger in number, amount, or degree",
+      "meaning": "to become larger, or make something larger, in number, amount, or degree",
       "japaneseMeaning": "増える、増やす",
       "synonyms": "grow, rise",
       "antonyms": "decrease, reduce",
       "forms": "increase, increases, increasing, increased",
-      "example": "The shop will increase the price next month."
+      "example": "The shop will increase the price next month.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/increase.svg",
+        "alt": "硬貨の枚数が二枚から五枚へ増える比較。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/increase.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "recommend",
+        "treat"
+      ]
     },
     {
       "word": "treat",
@@ -90,7 +126,25 @@
       "synonyms": "divide, split",
       "antonyms": "join, mix",
       "forms": "separate, separates, separating, separated, separation",
-      "example": "We separate paper from plastic before recycling."
+      "example": "We separate paper from plastic before recycling.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/separate.svg",
+        "alt": "くっついていた二つの積み木を、離れた位置へ動かす図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/separate.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "produce",
+        "affect"
+      ]
     }
   ]
 }

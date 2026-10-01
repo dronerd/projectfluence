@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-academic-lesson-7",
+  "title": "Lesson 7",
+  "paragraph": "論文の構成と推敲",
+  "words": [
+    {
+      "word": "thesis statement",
+      "meaning": "a sentence that expresses the main claim of an essay or paper",
+      "japaneseMeaning": "中心的主張を示す文",
+      "example": "The thesis statement appears near the end of the introduction.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "topic sentence",
+        "quotation"
+      ]
+    },
+    {
+      "word": "topic sentence",
+      "meaning": "a sentence that states the main idea of a paragraph",
+      "japaneseMeaning": "段落の主題文",
+      "example": "The topic sentence helps readers follow the paragraph.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "thesis statement",
+        "citation"
+      ]
+    },
+    {
+      "word": "outline",
+      "meaning": "a plan showing the main sections and ideas of a piece of writing",
+      "japaneseMeaning": "構成案・アウトライン",
+      "example": "She prepared an outline before writing the first draft.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "abstract",
+        "reference list"
+      ]
+    },
+    {
+      "word": "draft",
+      "meaning": "a version of a piece of writing that is still being developed",
+      "japaneseMeaning": "下書き・草稿",
+      "example": "The supervisor commented on the first draft.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "outline",
+        "citation"
+      ]
+    },
+    {
+      "word": "revision",
+      "meaning": "the process of changing writing to improve its content, structure, or wording",
+      "japaneseMeaning": "推敲・改訂",
+      "example": "Revision made the explanation shorter and clearer.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "submission",
+        "quotation"
+      ]
+    },
+    {
+      "word": "coherence",
+      "meaning": "the quality of ideas fitting together clearly and logically",
+      "japaneseMeaning": "一貫性・論理的なつながり",
+      "example": "The teacher suggested changes to improve coherence between paragraphs.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "citation",
+        "anonymity"
+      ]
+    },
+    {
+      "word": "transition",
+      "meaning": "a word, phrase, or passage that helps connect ideas or sections",
+      "japaneseMeaning": "つなぎ表現・論理の移行",
+      "example": "The transition shows how the second paragraph relates to the first.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "quotation",
+        "thesis statement"
+      ]
+    },
+    {
+      "word": "quotation",
+      "meaning": "words copied exactly from a source and identified as that source's wording",
+      "japaneseMeaning": "直接引用",
+      "example": "The quotation is followed by a citation to the original text.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "paraphrase",
+        "annotation"
+      ],
+      "sentencePractice": {
+        "prompt": "The essay repeats the source's exact words and clearly marks them as copied. This passage is a ____.",
+        "distractors": [
+          "paraphrase",
+          "transition"
+        ],
+        "reviewNote": "Marked verbatim wording is a quotation; a paraphrase changes wording and a transition connects ideas."
+      }
+    },
+    {
+      "word": "annotation",
+      "meaning": "a short note added to a text to explain, question, or comment on it",
+      "japaneseMeaning": "注釈・書き込み",
+      "example": "Her annotation points out a missing source.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "quotation",
+        "abstract"
+      ]
+    },
+    {
+      "word": "appendix",
+      "meaning": "a section placed after the main text for supporting material",
+      "japaneseMeaning": "付録",
+      "example": "The full questionnaire appears in the appendix.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "abstract",
+        "thesis statement"
+      ],
+      "sentencePractice": {
+        "prompt": "The supporting questionnaire is placed in a separate section after the main text. This section is the ____.",
+        "distractors": [
+          "abstract",
+          "thesis statement"
+        ],
+        "reviewNote": "Supplementary material after the main text belongs in an appendix; an abstract summarizes the work and a thesis statement states its claim."
+      }
+    }
+  ]
+}

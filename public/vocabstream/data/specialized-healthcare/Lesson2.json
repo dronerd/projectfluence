@@ -1,0 +1,152 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-2",
+  "title": "Lesson 2",
+  "paragraph": "診療とケア",
+  "words": [
+    {
+      "word": "patient",
+      "meaning": "a person receiving healthcare",
+      "japaneseMeaning": "患者",
+      "example": "The patient asked the nurse to explain the procedure.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "consultation",
+        "confidentiality"
+      ]
+    },
+    {
+      "word": "appointment",
+      "meaning": "an arranged time to meet a healthcare professional",
+      "japaneseMeaning": "診察などの予約",
+      "example": "Her next appointment is on Tuesday morning.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "medical history",
+        "discharge"
+      ]
+    },
+    {
+      "word": "referral",
+      "meaning": "a request for a patient to receive care from another professional or service",
+      "japaneseMeaning": "紹介・紹介状",
+      "example": "The clinic sent a referral to the specialist.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "consent",
+        "follow-up"
+      ],
+      "sentencePractice": {
+        "prompt": "The general clinic asks a specialist service to see the patient. This request is a ____.",
+        "distractors": [
+          "discharge",
+          "specimen"
+        ],
+        "reviewNote": "A request to another service differs from releasing a patient or collecting a sample."
+      }
+    },
+    {
+      "word": "consultation",
+      "meaning": "a meeting with a healthcare professional to discuss a health concern",
+      "japaneseMeaning": "診察・相談",
+      "example": "The consultation included time for the patient's questions.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "confidentiality",
+        "caregiver"
+      ]
+    },
+    {
+      "word": "medical history",
+      "meaning": "a record of a person's past health conditions and care",
+      "japaneseMeaning": "病歴",
+      "example": "The doctor reviewed the medical history before the examination.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "discharge",
+        "patient"
+      ],
+      "sentencePractice": {
+        "prompt": "The clinician reviewed the record of the patient's past illnesses and care. This record is the ____.",
+        "distractors": [
+          "blood pressure",
+          "side effect"
+        ],
+        "reviewNote": "A record of previous health and care is distinct from a current measurement or treatment effect."
+      }
+    },
+    {
+      "word": "consent",
+      "meaning": "permission given after receiving and understanding relevant information",
+      "japaneseMeaning": "同意",
+      "example": "The clinician asked for consent before starting the examination.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "follow-up",
+        "appointment"
+      ]
+    },
+    {
+      "word": "confidentiality",
+      "meaning": "the duty to keep personal information private",
+      "japaneseMeaning": "守秘義務",
+      "example": "Staff receive training on patient confidentiality.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "caregiver",
+        "referral"
+      ],
+      "sentencePractice": {
+        "prompt": "Staff must keep the patient's personal information private. This duty is called ____.",
+        "distractors": [
+          "mobility",
+          "hydration"
+        ],
+        "reviewNote": "The prompt defines an information-privacy duty, not physical movement or water balance."
+      }
+    },
+    {
+      "word": "discharge",
+      "meaning": "the formal release of a patient from a hospital or service",
+      "japaneseMeaning": "退院・診療の終了",
+      "example": "The nurse explained the care plan before discharge.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "patient",
+        "consultation"
+      ]
+    },
+    {
+      "word": "follow-up",
+      "meaning": "a later visit or check to review a patient's condition",
+      "japaneseMeaning": "経過観察・再診",
+      "example": "A follow-up was arranged to review the test results.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "usageNote": "名詞・形容詞は follow-up、動詞は follow up とつづります。",
+      "meaningDistractors": [
+        "consent",
+        "medical history"
+      ]
+    },
+    {
+      "word": "caregiver",
+      "meaning": "a person who helps someone with health or daily living needs",
+      "japaneseMeaning": "介護者・世話をする人",
+      "example": "The caregiver joined the discussion with the patient's agreement.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "referral",
+        "consent"
+      ]
+    }
+  ]
+}

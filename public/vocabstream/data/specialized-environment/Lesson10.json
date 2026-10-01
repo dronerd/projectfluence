@@ -1,0 +1,146 @@
+{
+  "lesson_id": "specialized-environment-lesson-10",
+  "title": "Lesson 10",
+  "paragraph": "気候と環境への責任",
+  "words": [
+    {
+      "word": "global warming",
+      "meaning": "the long-term rise in the average temperature of Earth's surface",
+      "japaneseMeaning": "地球温暖化",
+      "example": "The lesson explains the connection between greenhouse gases and global warming.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "heatwave",
+        "sea level"
+      ]
+    },
+    {
+      "word": "heatwave",
+      "meaning": "a period of unusually hot weather for a particular place and time of year",
+      "japaneseMeaning": "熱波",
+      "example": "The city opened cooler public spaces during the heatwave.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "drought",
+        "global warming"
+      ],
+      "sentencePractice": {
+        "prompt": "The town experiences several days that are unusually hot for that place and season. The term for this local weather event is ____.",
+        "distractors": [
+          "global warming",
+          "drought"
+        ],
+        "reviewNote": "A period of exceptional local heat is a heatwave; global warming is a long-term global temperature trend and drought is a prolonged water shortage, which is not stated here."
+      }
+    },
+    {
+      "word": "carbon dioxide",
+      "meaning": "a gas whose molecules contain one carbon atom and two oxygen atoms, released by processes such as burning and respiration",
+      "japaneseMeaning": "二酸化炭素",
+      "example": "The monitor records changes in carbon dioxide concentration.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "methane",
+        "particulate matter"
+      ]
+    },
+    {
+      "word": "methane",
+      "meaning": "a gas whose molecules contain one carbon atom and four hydrogen atoms, and the main component of natural gas",
+      "japaneseMeaning": "メタン",
+      "example": "The study measured methane released from the wetland.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "carbon dioxide",
+        "particulate matter"
+      ]
+    },
+    {
+      "word": "carbon sink",
+      "meaning": "a system that absorbs more carbon than it releases over a given period",
+      "japaneseMeaning": "炭素吸収源",
+      "example": "The forest acted as a carbon sink during the study period.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "carbon footprint",
+        "fossil fuel"
+      ]
+    },
+    {
+      "word": "carbon capture",
+      "meaning": "using technology to separate and collect carbon dioxide from industrial gases or the air",
+      "japaneseMeaning": "二酸化炭素の回収",
+      "example": "The project studies carbon capture at an industrial site.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "carbon offset",
+        "energy efficiency"
+      ],
+      "usageNote": "回収した二酸化炭素がどのように利用・貯留されるかは別の段階です。"
+    },
+    {
+      "word": "net zero",
+      "meaning": "a balance between greenhouse gases released to the atmosphere and those removed over a stated period",
+      "japaneseMeaning": "ネットゼロ・排出と除去の均衡",
+      "example": "The plan explains how the organization aims to reach net zero.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "carbon footprint",
+        "energy efficiency"
+      ],
+      "usageNote": "排出が全くないという意味ではありません。対象のガスや期間、範囲も確認します。"
+    },
+    {
+      "word": "carbon offset",
+      "meaning": "an emission reduction or removal elsewhere used to compensate for emissions from an activity",
+      "japaneseMeaning": "カーボンオフセット",
+      "example": "The report explains which emissions the carbon offset is intended to compensate for.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "carbon footprint",
+        "energy demand"
+      ],
+      "usageNote": "相殺の効果は、削減・除去の追加性や持続性などによって異なります。"
+    },
+    {
+      "word": "environmental justice",
+      "meaning": "fair treatment and meaningful participation in decisions about environmental benefits and harms",
+      "japaneseMeaning": "環境正義・環境面の公正",
+      "example": "Residents called for environmental justice in decisions about the new waste facility.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "environmental impact",
+        "carbon capture"
+      ]
+    },
+    {
+      "word": "greenwashing",
+      "meaning": "giving a misleading impression that an organization, product, or activity is environmentally responsible",
+      "japaneseMeaning": "グリーンウォッシング・環境配慮を装う宣伝",
+      "example": "The article explains how unsupported environmental claims can become greenwashing.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "conservation",
+        "monitoring"
+      ],
+      "sentencePractice": {
+        "prompt": "A company uses unsupported claims to make its product appear environmentally responsible. This misleading presentation is called ____.",
+        "distractors": [
+          "conservation",
+          "monitoring"
+        ],
+        "reviewNote": "Misleading environmental marketing is greenwashing; conservation protects nature and monitoring repeatedly checks conditions."
+      }
+    }
+  ]
+}

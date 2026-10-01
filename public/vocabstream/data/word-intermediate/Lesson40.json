@@ -18,7 +18,25 @@
       "synonyms": "available, free",
       "antonyms": "occupied, full",
       "forms": "vacant, vacancy",
-      "example": "There were no vacant seats on the train."
+      "example": "There were no vacant seats on the train.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/vacant.svg",
+        "alt": "ベッドのある部屋に人がおらず、空室の札が掛かっている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/vacant.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "aggressive",
+        "strict"
+      ]
     },
     {
       "word": "impossible",

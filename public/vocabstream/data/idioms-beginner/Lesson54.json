@@ -1,0 +1,136 @@
+{
+  "lesson_id": "idioms-beginner-lesson-54",
+  "title": "Lesson 4",
+  "paragraph": "買い物と食事",
+  "words": [
+    {
+      "word": "how much",
+      "meaning": "used to ask the price of something",
+      "japaneseMeaning": "いくら",
+      "example": "How much is this notebook?",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "look for",
+        "a piece of"
+      ]
+    },
+    {
+      "word": "try on",
+      "meaning": "to put on clothes to check their size or appearance",
+      "japaneseMeaning": "試着する",
+      "example": "Can I try on this jacket?",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "ask for",
+        "out of stock"
+      ]
+    },
+    {
+      "word": "pay for",
+      "meaning": "to give money to buy something",
+      "japaneseMeaning": "～の代金を払う",
+      "example": "I will pay for the tickets.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "a cup of",
+        "for sale"
+      ]
+    },
+    {
+      "word": "look for",
+      "meaning": "to try to find something",
+      "japaneseMeaning": "～を探す",
+      "example": "Please help me look for my keys.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "a piece of",
+        "take away"
+      ]
+    },
+    {
+      "word": "ask for",
+      "meaning": "to say that you want someone to give you something",
+      "japaneseMeaning": "～を求める",
+      "example": "You can ask for a menu at the counter.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "out of stock",
+        "how much"
+      ]
+    },
+    {
+      "word": "a cup of",
+      "meaning": "an amount of a drink in one cup",
+      "japaneseMeaning": "カップ1杯の",
+      "example": "Would you like a cup of tea?",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "for sale",
+        "try on"
+      ]
+    },
+    {
+      "word": "a piece of",
+      "meaning": "one part cut or taken from something",
+      "japaneseMeaning": "1切れの・1つの",
+      "example": "She gave me a piece of cake.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "take away",
+        "pay for"
+      ]
+    },
+    {
+      "word": "out of stock",
+      "meaning": "not available to buy in a shop at this time",
+      "japaneseMeaning": "在庫切れで",
+      "example": "The blue bag is out of stock.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "how much",
+        "look for"
+      ],
+      "sentencePractice": {
+        "prompt": "The shop has sold every blue bag. Blue bags are ____ until the next delivery.",
+        "distractors": [
+          "for sale",
+          "on time"
+        ],
+        "reviewNote": "There are no blue bags left to sell; the next delivery ends this state."
+      }
+    },
+    {
+      "word": "for sale",
+      "meaning": "available for people to buy",
+      "japaneseMeaning": "売りに出されて",
+      "example": "This bicycle is for sale.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "try on",
+        "ask for"
+      ]
+    },
+    {
+      "word": "take away",
+      "meaning": "to buy prepared food and eat it somewhere else",
+      "japaneseMeaning": "食べ物を持ち帰る",
+      "example": "I'd like a sandwich to take away, please.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "usageNote": "食べ物を持ち帰る意味では主にイギリス英語。アメリカ英語では to go がよく使われます。",
+      "meaningDistractors": [
+        "pay for",
+        "a cup of"
+      ]
+    }
+  ]
+}

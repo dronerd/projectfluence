@@ -7,28 +7,82 @@
       "word": "juice",
       "meaning": "a drink made from fruit",
       "japaneseMeaning": "ジュース",
-      "synonyms": "drink",
+      "synonyms": "",
       "antonyms": "",
       "forms": "juice, juices",
-      "example": "Orange juice is in the glass."
+      "example": "Orange juice is in the glass.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9c3.svg",
+        "alt": "ストローを挿した果物飲料のパック。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9c3.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "coffee",
+        "butter"
+      ]
     },
     {
       "word": "coffee",
       "meaning": "a dark drink made from coffee beans",
       "japaneseMeaning": "コーヒー",
-      "synonyms": "drink",
+      "synonyms": "",
       "antonyms": "",
       "forms": "coffee, coffees",
-      "example": "My father drinks coffee every morning."
+      "example": "My father drinks coffee every morning.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/2615.svg",
+        "alt": "黒っぽい飲み物の入った、湯気の立つカップ。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/2615.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "bread",
+        "hat"
+      ]
     },
     {
       "word": "tea",
       "meaning": "a drink made with hot water and leaves",
       "japaneseMeaning": "お茶",
-      "synonyms": "drink",
+      "synonyms": "",
       "antonyms": "",
       "forms": "tea, teas",
-      "example": "This tea is hot."
+      "example": "This tea is hot.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f375.svg",
+        "alt": "緑色の茶を入れた、持ち手のない茶碗。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f375.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "pizza",
+        "shirt"
+      ]
     },
     {
       "word": "breakfast",
@@ -64,7 +118,31 @@
       "synonyms": "dish",
       "antonyms": "",
       "forms": "plate, plates",
-      "example": "The plate is on the table."
+      "example": "The plate is on the table.",
+      "sentencePractice": {
+        "prompt": "I put my dinner on a flat round dish called a ____.",
+        "distractors": [
+          "bottle",
+          "knife"
+        ],
+        "reviewNote": "The flat dish for a meal excludes a liquid container and a cutting tool."
+      },
+      "image": {
+        "src": "/vocabstream/images/plate.svg",
+        "alt": "食べ物をのせる、平らで丸い青い皿。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/plate.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "bottle",
+        "knife"
+      ]
     },
     {
       "word": "spoon",
@@ -73,7 +151,31 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "spoon, spoons",
-      "example": "Use a spoon for the soup."
+      "example": "Use a spoon for the soup.",
+      "sentencePractice": {
+        "prompt": "I used a ____ to lift the soup from the bowl to my mouth.",
+        "distractors": [
+          "knife",
+          "plate"
+        ],
+        "reviewNote": "The utensil must hold a small amount of liquid; the two alternatives do not."
+      },
+      "image": {
+        "src": "/vocabstream/images/spoon.svg",
+        "alt": "丸くくぼんだ先と長い柄がある、金属のスプーン。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/spoon.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "knife",
+        "plate"
+      ]
     },
     {
       "word": "knife",
@@ -82,16 +184,64 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "knife, knives",
-      "example": "The knife is next to the plate."
+      "example": "The knife is next to the plate.",
+      "sentencePractice": {
+        "prompt": "I used the sharp edge of a ____ to cut the bread into slices.",
+        "distractors": [
+          "spoon",
+          "bottle"
+        ],
+        "reviewNote": "A sharp cutting edge identifies knife; neither distractor is a cutting utensil."
+      },
+      "image": {
+        "src": "/vocabstream/images/knife.svg",
+        "alt": "食べ物を切る銀色の刃と、茶色い持ち手があるナイフ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/knife.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "spoon",
+        "bottle"
+      ]
     },
     {
       "word": "bottle",
-      "meaning": "a tall thing that holds a drink",
+      "meaning": "a container with a narrow neck for holding liquids",
       "japaneseMeaning": "瓶、ボトル",
       "synonyms": "",
       "antonyms": "",
       "forms": "bottle, bottles",
-      "example": "This bottle has water in it."
+      "example": "This bottle has water in it.",
+      "sentencePractice": {
+        "prompt": "There is water in this ____. It has a small opening at the top and a lid.",
+        "distractors": [
+          "plate",
+          "spoon"
+        ],
+        "reviewNote": "A water container with a small opening and lid is a bottle, not a plate or spoon."
+      },
+      "image": {
+        "src": "/vocabstream/images/bottle.svg",
+        "alt": "細い口とふたがある、透明な飲み物のボトル。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/bottle.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "plate",
+        "spoon"
+      ]
     }
   ]
 }

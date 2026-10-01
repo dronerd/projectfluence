@@ -3,15 +3,132 @@
   "title": "Lesson 53",
   "paragraph": "This lesson practices useful adverbs for time.",
   "words": [
-    { "word": "currently", "meaning": "at this time", "japaneseMeaning": "現在", "synonyms": "now, at present", "antonyms": "formerly, later", "forms": "currently", "example": "I am currently studying English." },
-    { "word": "then", "meaning": "at that time or after that", "japaneseMeaning": "その時／それから", "synonyms": "next, after that", "antonyms": "now, before", "forms": "then", "example": "Finish lunch, then wash your plate." },
-    { "word": "before", "meaning": "earlier than something", "japaneseMeaning": "以前に／前に", "synonyms": "earlier, first", "antonyms": "after, later", "forms": "before", "example": "I brush my teeth before bed." },
-    { "word": "after", "meaning": "later than something", "japaneseMeaning": "後で／後に", "synonyms": "later, next", "antonyms": "before, earlier", "forms": "after", "example": "We play soccer after school." },
-    { "word": "presently", "meaning": "at this time or soon", "japaneseMeaning": "現在／まもなく", "synonyms": "now, soon", "antonyms": "formerly, later", "forms": "presently", "example": "She is presently at school." },
-    { "word": "yesterday", "meaning": "on the day before today", "japaneseMeaning": "昨日", "synonyms": "the day before, last day", "antonyms": "today, tomorrow", "forms": "yesterday", "example": "Yesterday I visited my grandmother." },
-    { "word": "tomorrow", "meaning": "on the day after today", "japaneseMeaning": "明日", "synonyms": "the next day, soon", "antonyms": "yesterday, today", "forms": "tomorrow", "example": "Tomorrow we will go shopping." },
-    { "word": "tonight", "meaning": "during this night", "japaneseMeaning": "今夜", "synonyms": "this night, evening", "antonyms": "this morning", "forms": "tonight", "example": "I will call you tonight." },
-    { "word": "recently", "meaning": "not long ago", "japaneseMeaning": "最近", "synonyms": "lately, not long ago", "antonyms": "long ago, before", "forms": "recently", "example": "I recently started a new book." },
-    { "word": "later", "meaning": "after this time", "japaneseMeaning": "後で", "synonyms": "after, soon", "antonyms": "now, before", "forms": "later", "example": "I will clean my room later." }
+    {
+      "word": "currently",
+      "meaning": "at this time",
+      "japaneseMeaning": "現在",
+      "synonyms": "now, at present",
+      "antonyms": "formerly, later",
+      "forms": "currently",
+      "example": "I am currently studying English."
+    },
+    {
+      "word": "then",
+      "meaning": "at that time or after that",
+      "japaneseMeaning": "その時／それから",
+      "synonyms": "next, after that",
+      "antonyms": "now, before",
+      "forms": "then",
+      "example": "Finish lunch, then wash your plate."
+    },
+    {
+      "word": "before",
+      "meaning": "earlier than something",
+      "japaneseMeaning": "以前に／前に",
+      "synonyms": "earlier, first",
+      "antonyms": "after, later",
+      "forms": "before",
+      "example": "I brush my teeth before bed."
+    },
+    {
+      "word": "after",
+      "meaning": "later than something",
+      "japaneseMeaning": "後で／後に",
+      "synonyms": "later, next",
+      "antonyms": "before, earlier",
+      "forms": "after",
+      "example": "We play soccer after school."
+    },
+    {
+      "word": "presently",
+      "meaning": "at this time or soon",
+      "japaneseMeaning": "現在／まもなく",
+      "synonyms": "now, soon",
+      "antonyms": "formerly, later",
+      "forms": "presently",
+      "example": "She is presently at school.",
+      "usageNote": "現在や近い未来を表す、やや改まった語です。日常会話では now や soon がよく使われます。"
+    },
+    {
+      "word": "yesterday",
+      "meaning": "on the day before today",
+      "japaneseMeaning": "昨日",
+      "synonyms": "the day before, last day",
+      "antonyms": "today, tomorrow",
+      "forms": "yesterday",
+      "example": "Yesterday I visited my grandmother.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/yesterday.svg",
+        "alt": "今日を十五日とした例で、前日の十四日を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/yesterday.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "today",
+        "tomorrow"
+      ]
+    },
+    {
+      "word": "tomorrow",
+      "meaning": "on the day after today",
+      "japaneseMeaning": "明日",
+      "synonyms": "the next day, soon",
+      "antonyms": "yesterday, today",
+      "forms": "tomorrow",
+      "example": "Tomorrow we will go shopping.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/tomorrow.svg",
+        "alt": "今日を十五日とした例で、翌日の十六日を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/tomorrow.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "yesterday",
+        "today"
+      ]
+    },
+    {
+      "word": "tonight",
+      "meaning": "during this night",
+      "japaneseMeaning": "今夜",
+      "synonyms": "this night, evening",
+      "antonyms": "this morning",
+      "forms": "tonight",
+      "example": "I will call you tonight."
+    },
+    {
+      "word": "recently",
+      "meaning": "not long ago",
+      "japaneseMeaning": "最近",
+      "synonyms": "lately, not long ago",
+      "antonyms": "long ago, before",
+      "forms": "recently",
+      "example": "I recently started a new book."
+    },
+    {
+      "word": "later",
+      "meaning": "after this time",
+      "japaneseMeaning": "後で",
+      "synonyms": "after, soon",
+      "antonyms": "now, before",
+      "forms": "later",
+      "example": "I will clean my room later."
+    }
   ]
 }

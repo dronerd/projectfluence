@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>丸くくぼんだ先と長い柄がある、金属のスプーン。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#c0d5dc" d="M107 82c-16-6-24-20-21-38 2-19 16-28 34-28s32 9 34 28c3 18-5 32-21 38l6 64c1 14-7 20-19 20s-20-6-19-20Z"/><ellipse cx="120" cy="49" rx="20" ry="24" fill="#e8f2f5" stroke="#9db8c3" stroke-width="3"/><path stroke="#edf6f8" d="m116 97-3 47"/></g>
+</svg>

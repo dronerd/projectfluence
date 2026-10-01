@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>近い位置に集まった七個の球を囲み、離れた二個の球と区別している。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<circle cx="142" cy="76" r="13" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="169" cy="87" r="13" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="128" cy="105" r="13" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="158" cy="115" r="13" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="188" cy="109" r="13" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="142" cy="142" r="13" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="175" cy="141" r="13" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="50" cy="187" r="9" fill="#b7c6c6" stroke="#40565b" stroke-width="2.5"/><circle cx="299" cy="55" r="9" fill="#b7c6c6" stroke="#40565b" stroke-width="2.5"/><path d="M102 58q84-43 115 43t-83 75q-54-23-32-118" fill="none" stroke="#d9b76c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><text x="180" y="221" text-anchor="middle" font-size="16" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">近くに集まった小さな群れ</text>
+</svg>

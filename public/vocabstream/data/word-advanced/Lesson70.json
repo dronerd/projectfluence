@@ -10,7 +10,7 @@
       {"word": "assumption", "meaning": "something taken for granted", "japaneseMeaning": "仮定", "synonyms": "presumption, supposition", "antonyms": "certainty, proof", "example": "The plan was based on the assumption that resources were sufficient."},
       {"word": "deduction", "meaning": "reasoning from general to specific", "japaneseMeaning": "演繹", "synonyms": "inference, reasoning", "antonyms": "induction, guess", "example": "Detectives use deduction to solve crimes."},
       {"word": "justification", "meaning": "proof or reasoning for an action", "japaneseMeaning": "正当化", "synonyms": "defense, explanation", "antonyms": "condemnation, blame", "example": "The lawyer provided justification for his client."},
-      {"word": "inference", "meaning": "conclusion drawn from evidence", "japaneseMeaning": "推論", "synonyms": "deduction, reasoning", "antonyms": "guess, assumption", "example": "From the clues, she made an inference."},
+      {"word": "inference", "meaning": "conclusion drawn from evidence", "japaneseMeaning": "推論", "synonyms": "deduction, reasoning", "antonyms": "guess, assumption", "example": "From the clues, she made an inference.", "duplicateOf": {"category": "word-advanced", "lessonNumber": 69, "word": "inference"}},
       {"word": "objectivity", "meaning": "impartiality, lack of bias", "japaneseMeaning": "客観性", "synonyms": "impartiality, neutrality", "antonyms": "subjectivity, bias", "example": "Objectivity is crucial in journalism."},
       {"word": "argument", "meaning": "reasoning in support of a claim", "japaneseMeaning": "議論", "synonyms": "reasoning, debate", "antonyms": "agreement, surrender", "example": "The debate featured strong arguments from both sides."}
     ]

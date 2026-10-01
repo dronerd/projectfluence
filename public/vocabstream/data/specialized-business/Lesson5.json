@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-business-lesson-5",
+  "title": "Lesson 5",
+  "paragraph": "販売とマーケティング",
+  "words": [
+    {
+      "word": "target audience",
+      "meaning": "the group of people a message or product is mainly intended to reach",
+      "japaneseMeaning": "主な対象者・ターゲット層",
+      "example": "The campaign uses language suited to its target audience.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "supplier",
+        "stakeholder"
+      ]
+    },
+    {
+      "word": "segment",
+      "meaning": "a group within a market whose members share relevant characteristics",
+      "japaneseMeaning": "市場の区分・セグメント",
+      "example": "The company developed a service for the student segment.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "brand",
+        "campaign"
+      ]
+    },
+    {
+      "word": "brand",
+      "meaning": "the name, identity, and associations that distinguish a product or business",
+      "japaneseMeaning": "ブランド",
+      "example": "Customers associate the brand with reliable service.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "campaign",
+        "segment"
+      ]
+    },
+    {
+      "word": "campaign",
+      "meaning": "a planned series of activities intended to achieve a particular promotional goal",
+      "japaneseMeaning": "キャンペーン",
+      "example": "The campaign introduces the new service through email and posters.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "brand",
+        "distribution"
+      ]
+    },
+    {
+      "word": "lead",
+      "meaning": "a person or organization identified as a possible future customer",
+      "japaneseMeaning": "見込み客",
+      "example": "The sales team contacted each lead after the exhibition.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "supplier",
+        "applicant"
+      ],
+      "usageNote": "営業では見込み客を指します。ここでは名詞です。",
+      "sentencePractice": {
+        "prompt": "A person has shown interest in buying but has not yet become a customer. The sales team records that person as a ____.",
+        "distractors": [
+          "customer",
+          "supplier"
+        ],
+        "reviewNote": "An identified potential buyer who is not yet a customer is a lead; a customer already buys goods or services, while a supplier provides them."
+      }
+    },
+    {
+      "word": "conversion",
+      "meaning": "a desired action taken by a potential customer, such as signing up or purchasing",
+      "japaneseMeaning": "コンバージョン・成果となる行動",
+      "example": "The team counts a completed registration as a conversion.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "campaign",
+        "feedback"
+      ]
+    },
+    {
+      "word": "distribution",
+      "meaning": "the process of getting products to the places where customers can obtain them",
+      "japaneseMeaning": "流通・配送",
+      "example": "The company improved distribution by opening a regional warehouse.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "pricing",
+        "recruitment"
+      ]
+    },
+    {
+      "word": "launch",
+      "meaning": "the introduction of a new product or service to the market",
+      "japaneseMeaning": "発売・サービス開始",
+      "example": "The product launch is planned for next month.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "refund",
+        "appraisal"
+      ]
+    },
+    {
+      "word": "pricing",
+      "meaning": "the process or policy of deciding how much to charge",
+      "japaneseMeaning": "価格設定",
+      "example": "The team reviewed its pricing after material costs increased.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "distribution",
+        "retention"
+      ],
+      "sentencePractice": {
+        "prompt": "The team decides whether to charge twenty or twenty-five pounds for the service. They are discussing ____.",
+        "distractors": [
+          "distribution",
+          "recruitment"
+        ],
+        "reviewNote": "Choosing the amount to charge is pricing; moving products and hiring staff do not describe the decision."
+      }
+    },
+    {
+      "word": "feedback",
+      "meaning": "comments or information about performance used to understand or improve it",
+      "japaneseMeaning": "意見・フィードバック",
+      "example": "Customer feedback helped us improve the booking form.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "forecast",
+        "proposal"
+      ]
+    }
+  ]
+}

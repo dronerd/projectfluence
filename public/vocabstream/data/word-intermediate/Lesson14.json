@@ -63,7 +63,25 @@
       "synonyms": "round, curved",
       "antonyms": "straight, square",
       "forms": "circular, circularly",
-      "example": "The walking route around the lake is circular."
+      "example": "The walking route around the lake is circular.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/circular.svg",
+        "alt": "角のない、まん丸の輪の形。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/circular.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "medical",
+        "mental"
+      ]
     },
     {
       "word": "critical",
@@ -81,7 +99,25 @@
       "synonyms": "upright, standing",
       "antonyms": "horizontal, flat",
       "forms": "vertical, vertically",
-      "example": "The graph uses a vertical line to show temperature."
+      "example": "The graph uses a vertical line to show temperature.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/vertical.svg",
+        "alt": "水平な地面に対して直角に、まっすぐ上下へ伸びる線。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/vertical.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "negative",
+        "medical"
+      ]
     },
     {
       "word": "durable",

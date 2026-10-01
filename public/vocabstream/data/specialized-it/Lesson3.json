@@ -1,0 +1,152 @@
+{
+  "lesson_id": "specialized-it-lesson-3",
+  "title": "Lesson 3",
+  "paragraph": "セキュリティと運用",
+  "words": [
+    {
+      "word": "authentication",
+      "meaning": "the process of checking that a user is who they claim to be",
+      "japaneseMeaning": "認証",
+      "example": "The app uses authentication to check who is signing in.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "vulnerability",
+        "bandwidth"
+      ],
+      "sentencePractice": {
+        "prompt": "Before allowing sign-in, the system checks that the user is who they claim to be. This process is ____.",
+        "distractors": [
+          "encryption",
+          "deployment"
+        ],
+        "reviewNote": "Checking identity is distinct from encoding data or making software available."
+      }
+    },
+    {
+      "word": "permission",
+      "meaning": "a rule that allows a user or program to perform an action",
+      "japaneseMeaning": "アクセス権限",
+      "example": "You need permission to edit this shared file.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "deployment",
+        "cache"
+      ]
+    },
+    {
+      "word": "encryption",
+      "meaning": "the process of changing data so it can be read only with the correct key",
+      "japaneseMeaning": "暗号化",
+      "example": "Encryption protects the file if someone copies it without permission.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "latency",
+        "API"
+      ]
+    },
+    {
+      "word": "vulnerability",
+      "meaning": "a weakness in a system that could be used to cause harm",
+      "japaneseMeaning": "脆弱性",
+      "example": "The update fixes a security vulnerability.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "bandwidth",
+        "log"
+      ]
+    },
+    {
+      "word": "deployment",
+      "meaning": "the process of making software available in the environment where it will run",
+      "japaneseMeaning": "デプロイ・配備",
+      "example": "Deployment begins after the automated checks pass.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "cache",
+        "authentication"
+      ]
+    },
+    {
+      "word": "latency",
+      "meaning": "the delay between starting an action and receiving a response",
+      "japaneseMeaning": "遅延",
+      "example": "High latency makes video calls difficult.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "API",
+        "permission"
+      ],
+      "sentencePractice": {
+        "prompt": "The user clicks, then waits two seconds before a response arrives. That delay is called ____.",
+        "distractors": [
+          "bandwidth",
+          "storage"
+        ],
+        "reviewNote": "Elapsed response delay is not data capacity per time or space for saved data."
+      }
+    },
+    {
+      "word": "bandwidth",
+      "meaning": "the amount of data a connection can carry in a given time",
+      "japaneseMeaning": "帯域幅",
+      "example": "Several video calls can use most of the available bandwidth.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "log",
+        "encryption"
+      ]
+    },
+    {
+      "word": "cache",
+      "meaning": "a temporary store of data kept so it can be accessed faster",
+      "japaneseMeaning": "キャッシュ",
+      "example": "The browser cache can reduce loading time.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "authentication",
+        "vulnerability"
+      ],
+      "sentencePractice": {
+        "prompt": "The browser keeps a temporary copy so the same image loads faster next time. It stores this copy in a ____.",
+        "distractors": [
+          "log",
+          "network"
+        ],
+        "reviewNote": "A reusable temporary data store is different from an event record or connected devices."
+      }
+    },
+    {
+      "word": "API",
+      "meaning": "a defined way for one program to request information or actions from another",
+      "japaneseMeaning": "API・プログラム間の接続仕様",
+      "example": "The app uses an API to request the weather forecast.",
+      "definitionType": "text",
+      "domain": "it",
+      "usageNote": "Application Programming Interface の略。通常は文字ごとに A・P・I と読みます。",
+      "meaningDistractors": [
+        "permission",
+        "deployment"
+      ]
+    },
+    {
+      "word": "log",
+      "meaning": "a record of events produced by a computer system",
+      "japaneseMeaning": "ログ",
+      "example": "Check the log to see when the request failed.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "encryption",
+        "latency"
+      ]
+    }
+  ]
+}

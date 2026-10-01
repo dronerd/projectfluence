@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-academic-lesson-8",
+  "title": "Lesson 8",
+  "paragraph": "研究成果の発信",
+  "words": [
+    {
+      "word": "manuscript",
+      "meaning": "a written work prepared for publication but not yet published in its final form",
+      "japaneseMeaning": "投稿原稿",
+      "example": "The team prepared the manuscript for submission to a journal.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "poster",
+        "reference list"
+      ]
+    },
+    {
+      "word": "journal",
+      "meaning": "a regularly published collection of scholarly articles in a field",
+      "japaneseMeaning": "学術雑誌",
+      "example": "The article appeared in a journal about language learning.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "conference",
+        "manuscript"
+      ]
+    },
+    {
+      "word": "conference",
+      "meaning": "an organized event where people share and discuss work in a field",
+      "japaneseMeaning": "学会・研究会",
+      "example": "She presented the study at an international conference.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "journal",
+        "submission"
+      ]
+    },
+    {
+      "word": "presentation",
+      "meaning": "a talk or display used to explain work to an audience",
+      "japaneseMeaning": "発表・プレゼンテーション",
+      "example": "The presentation included time for questions.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "manuscript",
+        "annotation"
+      ]
+    },
+    {
+      "word": "poster",
+      "meaning": "a large visual display that summarizes a study for discussion at an event",
+      "japaneseMeaning": "研究ポスター",
+      "example": "The poster combines short explanations with clear figures.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "manuscript",
+        "abstract"
+      ]
+    },
+    {
+      "word": "submission",
+      "meaning": "the act of sending work to a journal, event, or institution for consideration",
+      "japaneseMeaning": "投稿・提出",
+      "example": "The team checked the figures before submission.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "peer review",
+        "revision"
+      ]
+    },
+    {
+      "word": "reviewer",
+      "meaning": "a person who evaluates submitted work and gives comments or recommendations",
+      "japaneseMeaning": "査読者・審査者",
+      "example": "The reviewer asked for more detail about participant selection.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "participant",
+        "sample"
+      ],
+      "sentencePractice": {
+        "prompt": "After a paper is submitted, a person evaluates it and sends comments recommending improvements. That person is the ____.",
+        "distractors": [
+          "participant",
+          "sample"
+        ],
+        "reviewNote": "Evaluating submitted work is the reviewer's role; a participant takes part in research and a sample is the selected set studied."
+      }
+    },
+    {
+      "word": "revision request",
+      "meaning": "a message asking an author to make changes to submitted work",
+      "japaneseMeaning": "修正依頼",
+      "example": "The editor sent a revision request after receiving the reviews.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "ethics approval",
+        "informed consent"
+      ]
+    },
+    {
+      "word": "open access",
+      "meaning": "availability of scholarly work online without a payment barrier for readers",
+      "japaneseMeaning": "オープンアクセス",
+      "example": "The university supports open access to published research.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "peer review",
+        "plagiarism"
+      ],
+      "usageNote": "読者が無料で読めることと、著作権上どのように再利用できるかは別に確認します。",
+      "sentencePractice": {
+        "prompt": "Readers can obtain the research article online without paying to read it. This availability is called ____.",
+        "distractors": [
+          "peer review",
+          "informed consent"
+        ],
+        "reviewNote": "Removing the reader payment barrier identifies open access; expert evaluation and participant agreement describe different processes."
+      }
+    },
+    {
+      "word": "conflict of interest",
+      "meaning": "a situation in which another interest could improperly influence professional judgment",
+      "japaneseMeaning": "利益相反",
+      "example": "The authors declared a potential conflict of interest.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "counterargument",
+        "limitation"
+      ]
+    }
+  ]
+}

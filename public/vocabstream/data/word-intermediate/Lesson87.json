@@ -54,7 +54,25 @@
       "synonyms": "build, put together",
       "antonyms": "take apart, separate",
       "forms": "assemble, assembles, assembling, assembled",
-      "example": "We assembled the shelves in the classroom."
+      "example": "We assembled the shelves in the classroom.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/assemble.svg",
+        "alt": "ばらばらの板と脚の部品を組み合わせ、一脚の椅子にする図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/assemble.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "explore",
+        "suppose"
+      ]
     },
     {
       "word": "update",

@@ -3,15 +3,219 @@
   "title": "Lesson 86",
   "paragraph": "This lesson practices useful nouns for phones and computers.",
   "words": [
-    { "word": "charger", "meaning": "a thing used to give power to a phone or computer", "japaneseMeaning": "充電器", "synonyms": "power cable, plug", "antonyms": "none", "forms": "charger, chargers", "example": "My charger is in my bag." },
-    { "word": "battery", "meaning": "the part that gives power to a phone or machine", "japaneseMeaning": "電池／バッテリー", "synonyms": "power part, cell", "antonyms": "none", "forms": "battery, batteries", "example": "The battery is almost empty." },
-    { "word": "screen", "meaning": "the part of a phone or computer that shows pictures and words", "japaneseMeaning": "画面", "synonyms": "display, monitor", "antonyms": "keyboard", "forms": "screen, screens", "example": "The screen is too bright." },
-    { "word": "keyboard", "meaning": "a board with keys for typing", "japaneseMeaning": "キーボード", "synonyms": "typing board, keys", "antonyms": "screen", "forms": "keyboard, keyboards", "example": "This keyboard is small." },
-    { "word": "printer", "meaning": "a machine that puts words or pictures on paper", "japaneseMeaning": "プリンター", "synonyms": "printing machine, machine", "antonyms": "scanner", "forms": "printer, printers", "example": "The printer has no paper." },
-    { "word": "website", "meaning": "a place on the internet with pages and information", "japaneseMeaning": "ウェブサイト", "synonyms": "site, web page", "antonyms": "paper book", "forms": "website, websites", "example": "This website helps me study English." },
-    { "word": "password", "meaning": "secret letters or numbers used to open an account", "japaneseMeaning": "パスワード", "synonyms": "secret word, code", "antonyms": "public word", "forms": "password, passwords", "example": "Do not tell anyone your password." },
-    { "word": "file", "meaning": "information saved on a computer", "japaneseMeaning": "ファイル", "synonyms": "document, data", "antonyms": "folder", "forms": "file, files", "example": "Save the file before you close it." },
-    { "word": "folder", "meaning": "a place for keeping files on a computer", "japaneseMeaning": "フォルダー", "synonyms": "file holder, place", "antonyms": "file", "forms": "folder, folders", "example": "Put the photo in this folder." },
-    { "word": "icon", "meaning": "a small picture on a phone or computer", "japaneseMeaning": "アイコン", "synonyms": "small picture, symbol", "antonyms": "text", "forms": "icon, icons", "example": "Click the green icon." }
+    {
+      "word": "charger",
+      "meaning": "a thing used to give power to a phone or computer",
+      "japaneseMeaning": "充電器",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "charger, chargers",
+      "example": "My charger is in my bag.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/charger.svg",
+        "alt": "コンセント用の差し込みとケーブルでスマートフォンにつながる充電器。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/charger.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "battery",
+        "printer"
+      ]
+    },
+    {
+      "word": "battery",
+      "meaning": "the part that gives power to a phone or machine",
+      "japaneseMeaning": "電池／バッテリー",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "battery, batteries",
+      "example": "The battery is almost empty.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f50b.svg",
+        "alt": "電気を蓄えて機器に供給する電池。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f50b.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "printer",
+        "screen"
+      ]
+    },
+    {
+      "word": "screen",
+      "meaning": "the part of a phone or computer that shows pictures and words",
+      "japaneseMeaning": "画面",
+      "synonyms": "display, monitor",
+      "antonyms": "",
+      "forms": "screen, screens",
+      "example": "The screen is too bright.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/screen.svg",
+        "alt": "ノートパソコンの文字や画像が表示される面を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/screen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "keyboard",
+        "battery"
+      ]
+    },
+    {
+      "word": "keyboard",
+      "meaning": "a board with keys for typing",
+      "japaneseMeaning": "キーボード",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "keyboard, keyboards",
+      "example": "This keyboard is small.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/keyboard.svg",
+        "alt": "文字入力に使う、たくさんのキーと長いスペースキーが並ぶキーボード。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/keyboard.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "printer",
+        "battery"
+      ]
+    },
+    {
+      "word": "printer",
+      "meaning": "a machine that puts words or pictures on paper",
+      "japaneseMeaning": "プリンター",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "printer, printers",
+      "example": "The printer has no paper.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f5a8.svg",
+        "alt": "紙を送り出すプリンター。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f5a8.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "battery",
+        "keyboard"
+      ]
+    },
+    {
+      "word": "website",
+      "meaning": "a place on the internet with pages and information",
+      "japaneseMeaning": "ウェブサイト",
+      "synonyms": "site",
+      "antonyms": "",
+      "forms": "website, websites",
+      "example": "This website helps me study English."
+    },
+    {
+      "word": "password",
+      "meaning": "secret letters or numbers used to open an account",
+      "japaneseMeaning": "パスワード",
+      "synonyms": "secret word, code",
+      "antonyms": "",
+      "forms": "password, passwords",
+      "example": "Do not tell anyone your password."
+    },
+    {
+      "word": "file",
+      "meaning": "information saved on a computer",
+      "japaneseMeaning": "ファイル",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "file, files",
+      "example": "Save the file before you close it.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/file.svg",
+        "alt": "コンピューターの画面の中に保存された文書ファイルを示す図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/file.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "folder",
+        "printer"
+      ]
+    },
+    {
+      "word": "folder",
+      "meaning": "a place for keeping files on a computer",
+      "japaneseMeaning": "フォルダー",
+      "synonyms": "directory",
+      "antonyms": "",
+      "forms": "folder, folders",
+      "example": "Put the photo in this folder.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f4c1.svg",
+        "alt": "コンピューターのファイル整理に使うフォルダーの図記号。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f4c1.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "password",
+        "printer"
+      ]
+    },
+    {
+      "word": "icon",
+      "meaning": "a small picture on a phone or computer",
+      "japaneseMeaning": "アイコン",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "icon, icons",
+      "example": "Click the green icon."
+    }
   ]
 }

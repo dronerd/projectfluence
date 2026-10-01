@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>青い空に浮かぶ、ふくらみのある白い雲。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><rect x="28" y="27" width="184" height="127" rx="18" fill="#c8e3e8" stroke="none"/><path fill="#fffdf0" d="M67 125q-27 0-27-26 0-24 25-27 5-28 35-23 18-27 45-6 24-2 30 24 29-1 29 28 0 30-28 30Z"/><path stroke="#e0e8e2" d="M65 110q7 8 23 5m79-31q15 3 17 17"/></g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>紫色のぶどうの房と、房から離れた一粒。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M104 49q12-13 9-27"/><path fill="#74ad72" d="M110 43q27-24 40-9-12 24-40 9Z"/><g fill="#9b78bc"><circle cx="88" cy="65" r="20"/><circle cx="118" cy="64" r="21"/><circle cx="74" cy="89" r="20"/><circle cx="105" cy="90" r="21"/><circle cx="136" cy="89" r="20"/><circle cx="89" cy="117" r="20"/><circle cx="120" cy="116" r="20"/><circle cx="105" cy="143" r="19"/><circle cx="181" cy="135" r="21"/></g><path stroke="#d7c2e8" d="m177 124 6-2"/></g>
+</svg>

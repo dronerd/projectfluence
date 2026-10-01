@@ -2,12 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   getRecommendedVideos,
   type RecommendVideosInput,
-  type VidMatchLevel,
-  type VidMatchSkill,
-} from "@/apps/vidmatch/src/services/youtubeVideoService";
+} from "@/apps/vidmatch/src/services/recommendationService";
 
 import { apiError } from "@/app/api/_lib/http";
-import { ACCENTS, isYoutubeVideoId } from "@/apps/vidmatch/src/services/videoContract";
+import { ACCENTS, isYoutubeVideoId, type VidMatchLevel, type VidMatchSkill } from "@/apps/vidmatch/src/services/videoContract";
+import { normalizeTopics } from "@/apps/vidmatch/src/services/videoTaxonomy";
 
 export const runtime = "nodejs";
 
@@ -21,8 +20,7 @@ export async function GET(request: NextRequest) {
   if (input instanceof NextResponse) return input;
 
   try {
-    const videos = await getRecommendedVideos(input);
-    return NextResponse.json({ videos });
+    return NextResponse.json(await getRecommendedVideos(input));
   } catch (error) {
     return apiError(error, "vidmatch.recommend");
   }
@@ -36,6 +34,8 @@ function parseRecommendationInput(searchParams: URLSearchParams): RecommendVideo
   const transcriptAvailable = searchParams.get("transcript_available");
   const limit = Number(searchParams.get("limit") ?? 6);
   const similarToVideoId = searchParams.get("similar_to")?.trim() || undefined;
+  const cursor = searchParams.get("cursor") || undefined;
+  if (cursor && cursor.length > 3000) return NextResponse.json({ error: "Invalid recommendation cursor." }, { status: 400 });
 
   if (level && !isOneOf(level, LEVELS)) {
     return NextResponse.json({ error: "level must be one of A1, A2, B1, B2, C1, C2." }, { status: 400 });
@@ -58,11 +58,12 @@ function parseRecommendationInput(searchParams: URLSearchParams): RecommendVideo
   return {
     level: level ? (level as VidMatchLevel) : undefined,
     skills: skills as VidMatchSkill[],
-    topics,
+    topics: normalizeTopics(topics),
     accent,
     transcriptAvailable: transcriptAvailable === null ? undefined : transcriptAvailable === "true",
     limit,
     similarToVideoId,
+    cursor,
   };
 }
 

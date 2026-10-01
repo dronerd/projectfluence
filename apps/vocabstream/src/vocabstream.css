@@ -73,6 +73,15 @@
 .vs-learning-steps strong { font-size: 14px; display: block; }
 .vs-learning-steps p { color: var(--pf-muted); font-size: 13px; margin: 4px 0 0; }
 .vs-word-title { font-size: clamp(30px, 5vw, 44px) !important; overflow-wrap: anywhere; margin: 22px 0 12px !important; }
+.vs-vocabulary-image { max-width: 280px; margin: 16px auto; }
+.vs-vocabulary-image img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; border-radius: 16px; background: #f5f8f6; }
+.vs-vocabulary-image figcaption { color: var(--pf-muted); font-size: 13px; line-height: 1.6; }
+.vs-vocabulary-image summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; justify-content: center; text-decoration: underline; text-underline-offset: 3px; }
+.vs-vocabulary-image figcaption p { margin: 0 0 12px; }
+.vs-image-credit { font-size: 12px; text-align: center; overflow-wrap: anywhere; }
+.vs-image-credit a { display: inline-block; padding-block: 6px; text-decoration: underline; text-underline-offset: 3px; }
+.vs-image-fallback { min-height: 160px; padding: 20px; display: flex; flex-direction: column; justify-content: center; background: var(--pf-surface-subtle); border: 1px solid var(--pf-border); border-radius: 12px; line-height: 1.65; }
+.vs-image-fallback p { margin: 0 0 8px; font-size: 13px; color: var(--pf-muted); }
 .vs-definition { font-size: clamp(19px, 2.5vw, 24px); margin: 8px 0 24px; line-height: 1.65; }
 .vs-example { padding: 18px 20px; background: var(--pf-surface-subtle); border-left: 3px solid var(--pf-accent); border-radius: 0 8px 8px 0; font-size: 17px; margin: 20px 0; line-height: 1.7; overflow-wrap: anywhere; }
 .vs-details { margin-top: 22px; border-top: 1px solid var(--pf-border); padding-top: 6px; }
@@ -236,6 +245,7 @@
   .vs-word-heading .vs-word-title { font-size: 30px !important; }
   .vs-word-heading .pf-button-secondary { padding: 9px 10px; font-size: 14px; }
   .vs-definition { font-size: 19px; }
+  .vs-vocabulary-image { max-width: 216px; margin: 10px auto; }
   .vs-example { padding: 10px 12px; font-size: 16px; }
   .vs-page .vs-question-title { margin: 10px 0 14px; font-size: 20px; }
   .vs-choice { min-height: 44px; padding: 8px 10px; }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>六角形の模様がある硬い甲羅と、短い足を持つカメ。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#9bbb7c" d="m57 123-16 14 5 10 24-13m75-11 19 16-5 11-23-15m-68-47-14-9-8 11 16 12m-16 17-15-2 13-10"/><ellipse cx="180" cy="101" rx="29" ry="21" fill="#a7c989"/><circle cx="191" cy="95" r="3" fill="#40565b"/><path d="m192 108 12-1"/><ellipse cx="106" cy="108" rx="61" ry="40" fill="#7fa278"/><path fill="#acc28c" d="m87 83 33 0 16 24-16 24H87l-17-24Z"/><path d="m87 83-9-10m42 10 9-12m7 36h29m-45 24 9 12m-42-12-10 12m-7-36H46"/></g>
+</svg>

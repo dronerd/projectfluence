@@ -1,0 +1,136 @@
+{
+  "lesson_id": "specialized-engineering-lesson-1",
+  "title": "Lesson 1",
+  "paragraph": "力と構造",
+  "words": [
+    {
+      "word": "load",
+      "meaning": "a force that a structure or machine must support",
+      "japaneseMeaning": "荷重",
+      "example": "The bridge must support the load of heavy vehicles.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "torque",
+        "stability"
+      ]
+    },
+    {
+      "word": "stress",
+      "meaning": "force carried through a material per unit area",
+      "japaneseMeaning": "応力",
+      "example": "The calculation shows the stress near the joint.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "usageNote": "ここでは材料内部の「応力」。日常語の「精神的ストレス」とは区別します。",
+      "meaningDistractors": [
+        "friction",
+        "compression"
+      ]
+    },
+    {
+      "word": "strain",
+      "meaning": "the change in a material's size or shape compared with its original size or shape",
+      "japaneseMeaning": "ひずみ",
+      "example": "The sensor measures strain as the bar stretches.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "pressure",
+        "vibration"
+      ]
+    },
+    {
+      "word": "torque",
+      "meaning": "the turning effect of a force around an axis",
+      "japaneseMeaning": "トルク",
+      "example": "Use the specified torque when tightening the bolt.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "tension",
+        "stability"
+      ],
+      "sentencePractice": {
+        "prompt": "The force turns the bolt around its axis. The turning effect of that force is ____.",
+        "distractors": [
+          "pressure",
+          "tension"
+        ],
+        "reviewNote": "The defining measurement is turning around an axis, not force per area or pulling along a member."
+      }
+    },
+    {
+      "word": "friction",
+      "meaning": "a force that opposes movement between surfaces in contact",
+      "japaneseMeaning": "摩擦",
+      "example": "Oil reduces friction between the moving parts.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "compression",
+        "load"
+      ]
+    },
+    {
+      "word": "pressure",
+      "meaning": "force acting on a surface divided by the area of that surface",
+      "japaneseMeaning": "圧力",
+      "example": "The gauge shows the pressure inside the pipe.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "vibration",
+        "torque"
+      ]
+    },
+    {
+      "word": "tension",
+      "meaning": "a pulling force carried by a stretched object",
+      "japaneseMeaning": "張力",
+      "example": "The cable remains under tension during the test.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "stability",
+        "strain"
+      ]
+    },
+    {
+      "word": "compression",
+      "meaning": "a force or process that pushes material together",
+      "japaneseMeaning": "圧縮",
+      "example": "Concrete performs well under compression.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "load",
+        "torque"
+      ]
+    },
+    {
+      "word": "vibration",
+      "meaning": "repeated movement back and forth around a position",
+      "japaneseMeaning": "振動",
+      "example": "The loose part causes vibration when the motor runs.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "stress",
+        "friction"
+      ]
+    },
+    {
+      "word": "stability",
+      "meaning": "the ability to remain in position or return to balance after a disturbance",
+      "japaneseMeaning": "安定性",
+      "example": "A wider base improves the stability of the platform.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "strain",
+        "pressure"
+      ]
+    }
+  ]
+}

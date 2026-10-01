@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-it-lesson-5",
+  "title": "Lesson 5",
+  "paragraph": "ソフトウェア開発の道具",
+  "words": [
+    {
+      "word": "algorithm",
+      "meaning": "a set of steps for solving a problem or performing a task",
+      "japaneseMeaning": "アルゴリズム",
+      "example": "The algorithm sorts the names into alphabetical order.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "repository",
+        "bug"
+      ],
+      "sentencePractice": {
+        "prompt": "The program follows a defined series of steps to sort names. Those steps form an ____.",
+        "distractors": [
+          "error",
+          "update"
+        ],
+        "reviewNote": "A problem-solving procedure is an algorithm; a failure and a software release are different concepts. All choices fit after an."
+      }
+    },
+    {
+      "word": "source code",
+      "meaning": "the instructions for a program written in a programming language",
+      "japaneseMeaning": "ソースコード",
+      "example": "The developer checked the source code to understand the calculation.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "documentation",
+        "bug"
+      ]
+    },
+    {
+      "word": "bug",
+      "meaning": "a fault in software that can make it behave incorrectly",
+      "japaneseMeaning": "バグ",
+      "example": "We found a bug that caused the page to freeze.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "library",
+        "algorithm"
+      ]
+    },
+    {
+      "word": "patch",
+      "meaning": "a targeted change to software that fixes a problem",
+      "japaneseMeaning": "修正パッチ",
+      "example": "The patch fixes the printing problem.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "repository",
+        "documentation"
+      ]
+    },
+    {
+      "word": "update",
+      "meaning": "a newer release or change that improves or replaces existing software",
+      "japaneseMeaning": "更新・アップデート",
+      "example": "The update adds support for a new file format.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "bug",
+        "dependency"
+      ]
+    },
+    {
+      "word": "library",
+      "meaning": "a collection of reusable code that programs can call",
+      "japaneseMeaning": "ライブラリー",
+      "example": "The program uses a library to draw charts.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "repository",
+        "bug"
+      ]
+    },
+    {
+      "word": "dependency",
+      "meaning": "another program or package that software needs in order to work",
+      "japaneseMeaning": "依存ソフトウェア・依存関係",
+      "example": "Install this dependency before running the application.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "patch",
+        "documentation"
+      ]
+    },
+    {
+      "word": "repository",
+      "meaning": "a managed place for storing project files and their change history",
+      "japaneseMeaning": "リポジトリー",
+      "example": "The team keeps its source code in a shared repository.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "algorithm",
+        "dependency"
+      ],
+      "sentencePractice": {
+        "prompt": "The team stores project files together with their change history in a shared ____.",
+        "distractors": [
+          "library",
+          "framework"
+        ],
+        "reviewNote": "Storage of project files and version history identifies a repository; reusable code and application structure do not name that store."
+      }
+    },
+    {
+      "word": "documentation",
+      "meaning": "written information explaining how software works or how to use it",
+      "japaneseMeaning": "ドキュメント・技術文書",
+      "example": "The documentation includes a complete installation example.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "source code",
+        "library"
+      ]
+    },
+    {
+      "word": "framework",
+      "meaning": "a reusable structure and set of tools for building applications",
+      "japaneseMeaning": "フレームワーク",
+      "example": "This framework provides a common structure for web applications.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "repository",
+        "patch"
+      ]
+    }
+  ]
+}

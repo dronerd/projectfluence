@@ -36,7 +36,25 @@
       "synonyms": "lab, science room",
       "antonyms": "classroom, office",
       "forms": "laboratory, laboratories",
-      "example": "Students wear glasses in the laboratory."
+      "example": "Students wear glasses in the laboratory.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/laboratory.svg",
+        "alt": "実験用の机にフラスコ、試験管、顕微鏡が並ぶ理科の実験室。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/laboratory.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "account",
+        "culture"
+      ]
     },
     {
       "word": "position",
@@ -81,7 +99,25 @@
       "synonyms": "coast, edge",
       "antonyms": "inland, center",
       "forms": "shoreline, shorelines",
-      "example": "Volunteers cleaned trash along the shoreline."
+      "example": "Volunteers cleaned trash along the shoreline.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/shoreline.svg",
+        "alt": "陸と海が接する曲がった境目だけを、赤い線で強調している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/shoreline.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "software",
+        "account"
+      ]
     },
     {
       "word": "sequence",
@@ -90,7 +126,25 @@
       "synonyms": "order, series",
       "antonyms": "disorder, mix",
       "forms": "sequence, sequences",
-      "example": "Put the events in the correct sequence."
+      "example": "Put the events in the correct sequence.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/sequence.svg",
+        "alt": "土を入れ、種をまき、水をやる三つの作業を順番に並べた図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/sequence.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "field",
+        "assistance"
+      ]
     }
   ]
 }

@@ -63,7 +63,25 @@
       "synonyms": "lengthen, expand",
       "antonyms": "shorten, reduce",
       "forms": "extend, extends, extending, extended",
-      "example": "They will extend the deadline by one week."
+      "example": "They will extend the deadline by one week.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/extend.svg",
+        "alt": "引き出し式の棒を外へ引き、全体を長くする前後の図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/extend.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "praise",
+        "assign"
+      ]
     },
     {
       "word": "perform",

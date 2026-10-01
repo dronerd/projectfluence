@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-advanced-lesson-56",
+  "title": "Lesson 6",
+  "paragraph": "仕事の引き継ぎと協力",
+  "words": [
+    {
+      "word": "touch base",
+      "meaning": "to contact someone briefly to exchange news or check progress",
+      "japaneseMeaning": "短く連絡を取り状況を確認する",
+      "example": "Let's touch base on Friday to see how the preparations are going.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "wrap up",
+        "step down"
+      ]
+    },
+    {
+      "word": "wrap up",
+      "meaning": "to bring an activity or discussion to an end",
+      "japaneseMeaning": "活動や話し合いを締めくくる",
+      "example": "We should wrap up the meeting before lunch.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "take over",
+        "draw up"
+      ]
+    },
+    {
+      "word": "draw up",
+      "meaning": "to prepare a formal document or detailed plan",
+      "japaneseMeaning": "正式な文書や計画を作成する",
+      "example": "The lawyer will draw up the agreement this week.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "turn down",
+        "wrap up"
+      ],
+      "sentencePractice": {
+        "prompt": "The terms have been agreed, but no written contract exists. A lawyer will ____ a contract that records those terms.",
+        "distractors": [
+          "tear up",
+          "turn down"
+        ],
+        "reviewNote": "Creating the missing formal document requires drawing it up. Tearing up destroys an existing document; turning down refuses it."
+      }
+    },
+    {
+      "word": "run something by someone",
+      "meaning": "to tell someone an idea in order to hear their opinion",
+      "japaneseMeaning": "案などを人に話して意見を聞く",
+      "example": "I will run the proposed schedule by Maya before sharing it with the team.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "fill in for",
+        "talk someone into"
+      ],
+      "usageNote": "something と someone は内容や人名に置き換えます。例: run the idea by Maya。"
+    },
+    {
+      "word": "take over",
+      "meaning": "to begin controlling something or doing a job that someone else was doing",
+      "japaneseMeaning": "引き継ぐ、管理を引き受ける",
+      "example": "Who will take over the project when Lina leaves?",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "step down",
+        "turn down"
+      ]
+    },
+    {
+      "word": "step down",
+      "meaning": "to leave an important official position",
+      "japaneseMeaning": "役職を辞任する",
+      "example": "The chair plans to step down after ten years.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "take over",
+        "stand out"
+      ],
+      "sentencePractice": {
+        "prompt": "After leading the organization for ten years, she has decided to ____ and let a new chair replace her.",
+        "distractors": [
+          "take over",
+          "stay on"
+        ],
+        "reviewNote": "Allowing a new chair to replace her means leaving her position. Taking over begins leadership; staying on continues it."
+      }
+    },
+    {
+      "word": "fill in for",
+      "meaning": "to do someone's job temporarily while they are absent",
+      "japaneseMeaning": "～の代わりを一時的に務める",
+      "example": "Can you fill in for our receptionist on Monday?",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "keep track of",
+        "talk someone out of"
+      ]
+    },
+    {
+      "word": "be snowed under",
+      "meaning": "to have so much work that it is difficult to manage",
+      "japaneseMeaning": "仕事に追われて手が回らない",
+      "example": "The accounts team must be snowed under at the end of the year.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "on the same page",
+        "on a tight budget"
+      ],
+      "usageNote": "主に会話で、仕事量の多さを強調する比喩です。be snowed under with work の形も使います。"
+    },
+    {
+      "word": "go the extra mile",
+      "meaning": "to make more effort than is normally expected",
+      "japaneseMeaning": "期待以上の努力をする",
+      "example": "Our guide went the extra mile by finding an accessible route for us.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "cut corners",
+        "call it a day"
+      ]
+    },
+    {
+      "word": "call it a day",
+      "meaning": "to stop working on something for the rest of the day",
+      "japaneseMeaning": "その日の仕事を切り上げる",
+      "example": "We have finished the urgent repairs, so let's call it a day.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "go the extra mile",
+        "jump to conclusions"
+      ]
+    }
+  ]
+}

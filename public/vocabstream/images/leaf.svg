@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>中央から細い葉脈が広がる、一枚の緑の葉。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#8bb37b" d="M62 129Q31 59 184 29q5 124-97 117Z"/><path d="m56 158 109-108m-67 68-19-35m-1 56-19-28m63-16-13-38m-5 65 43 3m-20-27 39-3m-17-20 28-6"/></g>
+</svg>

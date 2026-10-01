@@ -3,15 +3,229 @@
   "title": "Lesson 26",
   "paragraph": "This lesson practices useful nouns for daily life.",
   "words": [
-    { "word": "wallet", "meaning": "a small case for money and cards", "japaneseMeaning": "財布", "synonyms": "purse, case", "antonyms": "none", "forms": "wallet, wallets", "example": "I keep my bus card in my wallet." },
-    { "word": "ticket", "meaning": "a small paper or card that lets you enter or ride", "japaneseMeaning": "チケット／切符", "synonyms": "pass, card", "antonyms": "none", "forms": "ticket, tickets", "example": "Please show your ticket at the gate." },
-    { "word": "key", "meaning": "a small metal thing used to open a lock", "japaneseMeaning": "鍵", "synonyms": "lock opener, key card", "antonyms": "lock", "forms": "key, keys", "example": "I cannot find my house key." },
-    { "word": "bottle", "meaning": "a container for drinks or liquid", "japaneseMeaning": "瓶／ボトル", "synonyms": "container, flask", "antonyms": "none", "forms": "bottle, bottles", "example": "She carries a water bottle to school." },
-    { "word": "towel", "meaning": "a cloth used to dry your body or hands", "japaneseMeaning": "タオル", "synonyms": "cloth, hand towel", "antonyms": "none", "forms": "towel, towels", "example": "Use this towel after you wash your hands." },
-    { "word": "soap", "meaning": "something used with water to clean your hands or body", "japaneseMeaning": "石けん", "synonyms": "cleaner, wash", "antonyms": "dirt", "forms": "soap, soaps", "example": "Wash your hands with soap." },
-    { "word": "medicine", "meaning": "something you take when you are sick", "japaneseMeaning": "薬", "synonyms": "drug, pill", "antonyms": "poison", "forms": "medicine, medicines", "example": "Take this medicine after breakfast." },
-    { "word": "map", "meaning": "a picture that shows places and roads", "japaneseMeaning": "地図", "synonyms": "plan, guide", "antonyms": "none", "forms": "map, maps", "example": "We use a map to find the hotel." },
-    { "word": "calendar", "meaning": "a chart that shows days, weeks, and months", "japaneseMeaning": "カレンダー", "synonyms": "date chart, schedule", "antonyms": "none", "forms": "calendar, calendars", "example": "Mark the test day on your calendar." },
-    { "word": "umbrella", "meaning": "something you hold over your head when it rains", "japaneseMeaning": "傘", "synonyms": "rain cover, parasol", "antonyms": "none", "forms": "umbrella, umbrellas", "example": "Bring an umbrella because it may rain." }
+    {
+      "word": "wallet",
+      "meaning": "a small case for money and cards",
+      "japaneseMeaning": "財布",
+      "synonyms": "billfold",
+      "antonyms": "",
+      "forms": "wallet, wallets",
+      "example": "I keep my bus card in my wallet.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/wallet.svg",
+        "alt": "カードと紙幣を入れる、小さな茶色い二つ折りの財布。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/wallet.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "umbrella",
+        "towel"
+      ]
+    },
+    {
+      "word": "ticket",
+      "meaning": "a small paper or card that lets you enter or ride",
+      "japaneseMeaning": "チケット／切符",
+      "synonyms": "pass",
+      "antonyms": "",
+      "forms": "ticket, tickets",
+      "example": "Please show your ticket at the gate.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f39f.svg",
+        "alt": "会場などへの入場に使う切り取り線付きの券。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f39f.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "receipt",
+        "map"
+      ]
+    },
+    {
+      "word": "key",
+      "meaning": "a small metal thing used to open a lock",
+      "japaneseMeaning": "鍵",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "key, keys",
+      "example": "I cannot find my house key.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/key.svg",
+        "alt": "丸い持ち手とギザギザの先がある、小さな金色の鍵。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/key.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "soap",
+        "bottle"
+      ]
+    },
+    {
+      "word": "bottle",
+      "meaning": "a container for drinks or liquid",
+      "japaneseMeaning": "瓶／ボトル",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "bottle, bottles",
+      "example": "She carries a water bottle to school."
+    },
+    {
+      "word": "towel",
+      "meaning": "a cloth used to dry your body or hands",
+      "japaneseMeaning": "タオル",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "towel, towels",
+      "example": "Use this towel after you wash your hands.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/towel.svg",
+        "alt": "棒に掛けられた、端に織り模様がある青いタオル。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/towel.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "key",
+        "umbrella"
+      ]
+    },
+    {
+      "word": "soap",
+      "meaning": "something used with water to clean your hands or body",
+      "japaneseMeaning": "石けん",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "soap, soaps",
+      "example": "Wash your hands with soap.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/soap.svg",
+        "alt": "せっけん皿の上に置かれた、泡の付いた固形せっけん。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/soap.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "wallet",
+        "key"
+      ]
+    },
+    {
+      "word": "medicine",
+      "meaning": "something you take when you are sick",
+      "japaneseMeaning": "薬",
+      "synonyms": "medication",
+      "antonyms": "",
+      "forms": "medicine, medicines",
+      "example": "Take this medicine after breakfast."
+    },
+    {
+      "word": "map",
+      "meaning": "a picture that shows places and roads",
+      "japaneseMeaning": "地図",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "map, maps",
+      "example": "We use a map to find the hotel.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f5fa.svg",
+        "alt": "陸地や場所を描いた、折り畳みの地図。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f5fa.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "calendar",
+        "ticket"
+      ]
+    },
+    {
+      "word": "calendar",
+      "meaning": "a chart that shows days, weeks, and months",
+      "japaneseMeaning": "カレンダー",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "calendar, calendars",
+      "example": "Mark the test day on your calendar.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f4c5.svg",
+        "alt": "日付を示す紙を束ねたカレンダー。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f4c5.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "map",
+        "receipt"
+      ]
+    },
+    {
+      "word": "umbrella",
+      "meaning": "something you hold over your head when it rains",
+      "japaneseMeaning": "傘",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "umbrella, umbrellas",
+      "example": "Bring an umbrella because it may rain.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/umbrella.svg",
+        "alt": "丸く開いた青い傘と、曲がった持ち手。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/umbrella.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "towel",
+        "bottle"
+      ]
+    }
   ]
 }

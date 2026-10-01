@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-it-lesson-9",
+  "title": "Lesson 9",
+  "paragraph": "データの種類と扱い方",
+  "words": [
+    {
+      "word": "data type",
+      "meaning": "a category that determines what kind of value a program can store or use",
+      "japaneseMeaning": "データ型",
+      "example": "The data type tells the program whether to expect text or a number.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "loop",
+        "protocol"
+      ]
+    },
+    {
+      "word": "string",
+      "meaning": "a sequence of characters used to represent text in a program",
+      "japaneseMeaning": "文字列",
+      "example": "The form stores the postal code as a string.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "integer",
+        "boolean"
+      ]
+    },
+    {
+      "word": "integer",
+      "meaning": "a whole number with no fractional part, including zero and negative whole numbers",
+      "japaneseMeaning": "整数",
+      "example": "The program expects an integer for the number of items.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "string",
+        "boolean"
+      ]
+    },
+    {
+      "word": "boolean",
+      "meaning": "a value or data type with only two possible states, true and false",
+      "japaneseMeaning": "真偽値・ブール型",
+      "example": "This boolean shows whether the user has accepted the terms.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "string",
+        "integer"
+      ],
+      "usageNote": "通常は Boolean と大文字で書くこともあります。ここでは true または false を表す値です。",
+      "sentencePractice": {
+        "prompt": "This program value can be true or false and has no other possible state. Its data type is ____.",
+        "distractors": [
+          "string",
+          "integer"
+        ],
+        "reviewNote": "The two-state true/false type is boolean; a string contains text and an integer is a whole number. All options are type names in this context."
+      }
+    },
+    {
+      "word": "array",
+      "meaning": "an ordered collection of values that a program can access by position",
+      "japaneseMeaning": "配列",
+      "example": "The array contains the names in the order they were entered.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "query",
+        "boolean"
+      ]
+    },
+    {
+      "word": "object",
+      "meaning": "a data structure that groups information into named properties",
+      "japaneseMeaning": "オブジェクト",
+      "example": "The object stores a product's name, price, and description.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "integer",
+        "boolean"
+      ],
+      "usageNote": "ここでは JavaScript などで使う、名前付きの属性をまとめたデータの意味です。"
+    },
+    {
+      "word": "query",
+      "meaning": "a command asking a database to find, return, or change information",
+      "japaneseMeaning": "クエリー・データベースへの問い合わせ",
+      "example": "The query returns orders placed during the last week.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "field",
+        "validation"
+      ],
+      "sentencePractice": {
+        "prompt": "The developer sends the database a command to return orders from last week. This command is a ____.",
+        "distractors": [
+          "field",
+          "record"
+        ],
+        "reviewNote": "A database command requesting selected information is a query; a field is an individual data item and a record groups related data."
+      }
+    },
+    {
+      "word": "record",
+      "meaning": "a collection of related data items describing one person, object, or event in a database",
+      "japaneseMeaning": "レコード",
+      "example": "Each record contains information about one customer.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "field",
+        "query"
+      ]
+    },
+    {
+      "word": "field",
+      "meaning": "one named data item within a record, such as a date or an address",
+      "japaneseMeaning": "フィールド・データ項目",
+      "example": "The email field is empty in this record.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "record",
+        "array"
+      ]
+    },
+    {
+      "word": "validation",
+      "meaning": "checking that input data follows required rules before it is used",
+      "japaneseMeaning": "入力内容の検証",
+      "example": "Validation rejects dates that do not exist.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "encryption",
+        "deployment"
+      ]
+    }
+  ]
+}

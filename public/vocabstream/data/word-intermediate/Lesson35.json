@@ -45,7 +45,25 @@
       "synonyms": "delivery, goods",
       "antonyms": "return, storage",
       "forms": "shipment, shipments",
-      "example": "The shipment arrived two days later than expected."
+      "example": "The shipment arrived two days later than expected.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/shipment.svg",
+        "alt": "複数の荷物が配送用トラックに積まれて、送り出される図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/shipment.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "intention",
+        "decision"
+      ]
     },
     {
       "word": "role",

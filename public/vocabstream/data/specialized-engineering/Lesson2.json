@@ -1,0 +1,136 @@
+{
+  "lesson_id": "specialized-engineering-lesson-2",
+  "title": "Lesson 2",
+  "paragraph": "電気と制御",
+  "words": [
+    {
+      "word": "circuit",
+      "meaning": "a connected path through which electric current can flow",
+      "japaneseMeaning": "回路",
+      "example": "The switch opens the circuit and stops the current.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "resistance",
+        "signal"
+      ]
+    },
+    {
+      "word": "voltage",
+      "meaning": "the electrical potential difference that can drive current between two points",
+      "japaneseMeaning": "電圧",
+      "example": "Check the voltage before connecting the device.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "sensor",
+        "calibration"
+      ]
+    },
+    {
+      "word": "current",
+      "meaning": "the rate at which electric charge flows",
+      "japaneseMeaning": "電流",
+      "example": "Too much current can damage the wire.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "usageNote": "ここでは電気の「電流」。形容詞の「現在の」という意味ではありません。",
+      "meaningDistractors": [
+        "actuator",
+        "feedback"
+      ]
+    },
+    {
+      "word": "resistance",
+      "meaning": "a measure of how strongly a material opposes electric current",
+      "japaneseMeaning": "抵抗",
+      "example": "The resistance of this wire increases as it gets hotter.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "signal",
+        "power supply"
+      ]
+    },
+    {
+      "word": "sensor",
+      "meaning": "a device that detects a physical condition and produces a signal",
+      "japaneseMeaning": "センサー",
+      "example": "The sensor measures the temperature of the motor.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "calibration",
+        "circuit"
+      ],
+      "sentencePractice": {
+        "prompt": "This device detects temperature and sends a measurement to the controller. The device is a ____.",
+        "distractors": [
+          "power supply",
+          "actuator"
+        ],
+        "reviewNote": "Sensing and reporting temperature is distinct from supplying energy or creating movement."
+      }
+    },
+    {
+      "word": "actuator",
+      "meaning": "a device that turns energy or a control signal into physical movement",
+      "japaneseMeaning": "アクチュエーター",
+      "example": "The actuator opens the valve when it receives a signal.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "feedback",
+        "voltage"
+      ]
+    },
+    {
+      "word": "signal",
+      "meaning": "a changing physical quantity used to carry information",
+      "japaneseMeaning": "信号",
+      "example": "The controller receives a signal from the sensor.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "power supply",
+        "current"
+      ]
+    },
+    {
+      "word": "calibration",
+      "meaning": "the process of checking a measurement device against a known reference",
+      "japaneseMeaning": "校正",
+      "example": "Calibration helps us identify errors in the scale.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "circuit",
+        "resistance"
+      ]
+    },
+    {
+      "word": "feedback",
+      "meaning": "information about a system's output that is returned to control its behavior",
+      "japaneseMeaning": "フィードバック",
+      "example": "The controller uses feedback to keep the temperature steady.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "voltage",
+        "sensor"
+      ]
+    },
+    {
+      "word": "power supply",
+      "meaning": "equipment that provides electrical energy to a device",
+      "japaneseMeaning": "電源装置",
+      "example": "Turn off the power supply before replacing the component.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "current",
+        "actuator"
+      ]
+    }
+  ]
+}

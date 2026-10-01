@@ -1,0 +1,144 @@
+{
+  "lesson_id": "idioms-beginner-lesson-60",
+  "title": "Lesson 10",
+  "paragraph": "体調と休日のひとこと",
+  "words": [
+    {
+      "word": "have a cold",
+      "meaning": "to have a common illness that can make your nose run and your throat hurt",
+      "japaneseMeaning": "風邪をひいている",
+      "example": "I have a cold, so I'm staying home today.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "feel better",
+        "be full"
+      ]
+    },
+    {
+      "word": "feel better",
+      "meaning": "to feel less ill or unhappy than before",
+      "japaneseMeaning": "気分や体調がよくなる",
+      "example": "I hope you feel better soon.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "have a cold",
+        "get ready"
+      ]
+    },
+    {
+      "word": "get ready",
+      "meaning": "to prepare yourself for something you are going to do",
+      "japaneseMeaning": "準備をする",
+      "example": "We need to get ready for school.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "take a break",
+        "fall asleep"
+      ]
+    },
+    {
+      "word": "play a game",
+      "meaning": "to join an activity with rules for enjoyment",
+      "japaneseMeaning": "ゲームをする",
+      "example": "Let's play a game before dinner.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "do homework",
+        "take a photo"
+      ]
+    },
+    {
+      "word": "go swimming",
+      "meaning": "to spend time moving through water for fun or exercise",
+      "japaneseMeaning": "泳ぎに行く",
+      "example": "We go swimming at the local pool on Sundays.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "take a shower",
+        "go to bed"
+      ]
+    },
+    {
+      "word": "take a photo",
+      "meaning": "to use a camera to make a picture",
+      "japaneseMeaning": "写真を撮る",
+      "example": "Could you take a photo of us by the lake?",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "have a look",
+        "ask a question"
+      ],
+      "sentencePractice": {
+        "prompt": "Please press the camera button to ____ of our family standing together.",
+        "distractors": [
+          "draw a picture",
+          "write a description"
+        ],
+        "reviewNote": "Pressing the camera shutter creates a photograph. Drawing and writing use different actions, even though all three can represent the family."
+      }
+    },
+    {
+      "word": "have a look",
+      "meaning": "to look at something for a short time",
+      "japaneseMeaning": "ちょっと見る",
+      "example": "Come and have a look at my drawing.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "take a photo",
+        "say that again"
+      ]
+    },
+    {
+      "word": "well done",
+      "meaning": "used to praise someone for doing something successfully",
+      "japaneseMeaning": "よくできたね、お見事",
+      "example": "You finished the puzzle. Well done!",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "good luck",
+        "I'm sorry"
+      ],
+      "sentencePractice": {
+        "prompt": "After your friend finishes the difficult puzzle, you praise her success by saying, \"____!\"",
+        "distractors": [
+          "good luck",
+          "I'm sorry"
+        ],
+        "reviewNote": "Success has already happened and is being praised. Good luck wishes success before an uncertain outcome; an apology does not praise success."
+      },
+      "usageNote": "ここでは成功を褒める言葉。肉の焼き加減を表す well-done とは別の意味です。"
+    },
+    {
+      "word": "a little bit",
+      "meaning": "a small amount",
+      "japaneseMeaning": "少しだけ",
+      "example": "This soup needs a little bit of salt.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "every day",
+        "once a week"
+      ]
+    },
+    {
+      "word": "not yet",
+      "meaning": "used to say that something has not happened but may happen later",
+      "japaneseMeaning": "まだです、まだ～ない",
+      "example": "Have you finished the book? Not yet.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "at the moment",
+        "for the first time"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>二枚の三角形のパンの間に、葉野菜や具をはさんだサンドイッチ。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#efd3a3" d="m43 120 125-66 37 88-138 15Z"/><path fill="#e69a76" d="m48 108 122-63 32 85-136 14Z"/><path fill="#80b67a" d="m43 104 18-13 11 7 12-19 13 4 15-18 13 4 41-26 41 81-26 8-15-5-18 11-17-4-14 10-22-3-24 9Z"/><path fill="#f8e4bd" d="m38 89 128-61 35 89-138 15Z"/><path stroke="#d0a570" d="m63 113 120-9"/></g>
+</svg>

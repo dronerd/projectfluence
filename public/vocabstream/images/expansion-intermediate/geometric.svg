@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>円、三角形、四角形という線と角でできた形が並ぶ。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<circle cx="82" cy="100" r="41" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><path d="M180 51 134 149h93Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="254" y="63" width="68" height="86" rx="1" fill="#89b28c" stroke="#40565b" stroke-width="2.5"/><text x="180" y="207" text-anchor="middle" font-size="18" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">円・三角形・四角形</text>
+</svg>

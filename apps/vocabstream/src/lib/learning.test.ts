@@ -3,9 +3,9 @@ import test from "node:test";
 import { createAttempt, makeLessonQuestions, summarizeAttempts, type LessonData } from "./learning.ts";
 
 const lesson: LessonData = { words: [
-  { word: "apple", meaning: "a round fruit", example: "I ate an apple." },
-  { word: "banana", meaning: "a long fruit", example: "The banana is yellow." },
-  { word: "carrot", meaning: "an orange vegetable", example: "I ate a carrot." },
+  { word: "apple", meaning: "a round fruit", example: "I ate an apple.", sentencePractice: {prompt:"The round red fruit is an ____.",distractors:["banana","carrot"],reviewNote:"Only apple matches the round red fruit clue."} },
+  { word: "banana", meaning: "a long fruit", example: "The banana is yellow.", sentencePractice: {prompt:"The long yellow fruit is a ____.",distractors:["apple","carrot"],reviewNote:"Only banana matches both the shape and color clues."} },
+  { word: "carrot", meaning: "an orange vegetable", example: "I ate a carrot.", sentencePractice: {prompt:"The orange root vegetable is a ____.",distractors:["apple","banana"],reviewNote:"Only carrot is a root vegetable."} },
 ] };
 
 test("a perfect lesson counts the final answer once and stays at 100 percent", () => {
@@ -41,4 +41,11 @@ test("missing or unsuitable examples are not turned into misleading sentence que
   assert.equal(questions.filter((question) => question.questionType === "quiz").length, 1);
   assert.equal(questions.filter((question) => question.questionType === "meaning").length, 3);
   assert.match(questions.find((question) => question.questionType === "quiz")!.prompt, /____/);
+});
+
+test("study examples never become scored gaps without explicit reviewed practice", () => {
+  const words=lesson.words.map(word=>({...word,sentencePractice:undefined}));
+  const questions=makeLessonQuestions({words},"word-beginner-lesson-1");
+  assert.equal(questions.length,3);assert.ok(questions.every(question=>question.questionType==="meaning"));
+  assert.equal(summarizeAttempts(questions,[]).quizTotal,0);
 });

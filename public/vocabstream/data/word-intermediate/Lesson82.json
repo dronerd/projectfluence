@@ -36,7 +36,25 @@
       "synonyms": "uneven, hard",
       "antonyms": "smooth, gentle",
       "forms": "rough, more rough, most rough",
-      "example": "The road was rough after the heavy rain."
+      "example": "The road was rough after the heavy rain.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/rough.svg",
+        "alt": "なめらかな表面と、細かくでこぼこした表面を拡大して比べた図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/rough.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "casual",
+        "unwell"
+      ]
     },
     {
       "word": "consistent",

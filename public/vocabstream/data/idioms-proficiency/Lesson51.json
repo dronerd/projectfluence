@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-51",
+  "title": "Lesson 1",
+  "paragraph": "根拠と議論",
+  "words": [
+    {
+      "word": "hinge on",
+      "meaning": "to depend completely on a particular factor",
+      "japaneseMeaning": "～にかかっている",
+      "example": "The decision will hinge on the results of the trial.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "call into question",
+        "qualify a claim"
+      ]
+    },
+    {
+      "word": "stem from",
+      "meaning": "to develop as a result of a particular cause",
+      "japaneseMeaning": "～に由来する",
+      "example": "Many delays stem from unclear instructions.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "hold up to scrutiny",
+        "on the grounds that"
+      ]
+    },
+    {
+      "word": "bear out",
+      "meaning": "to provide evidence that a claim is correct",
+      "japaneseMeaning": "裏づける",
+      "example": "Later studies may bear out these early findings.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "draw a distinction",
+        "in light of"
+      ],
+      "sentencePractice": {
+        "prompt": "The later studies provide supporting evidence: they ____ the earlier prediction.",
+        "distractors": [
+          "call into question",
+          "stem from"
+        ],
+        "reviewNote": "The explicit supporting-evidence relation requires confirming the prediction; originating from it describes a cause, not support."
+      }
+    },
+    {
+      "word": "call into question",
+      "meaning": "to give people a reason to doubt something",
+      "japaneseMeaning": "疑問を投げかける",
+      "example": "These errors call into question the reliability of the report.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "qualify a claim",
+        "by the same token"
+      ]
+    },
+    {
+      "word": "hold up to scrutiny",
+      "meaning": "to remain convincing after careful examination",
+      "japaneseMeaning": "厳しい検証に耐える",
+      "example": "The claim must hold up to scrutiny from independent researchers.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "on the grounds that",
+        "hinge on"
+      ]
+    },
+    {
+      "word": "draw a distinction",
+      "meaning": "to explain or recognize a difference between things",
+      "japaneseMeaning": "区別する",
+      "example": "We should draw a distinction between intention and outcome.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "in light of",
+        "stem from"
+      ]
+    },
+    {
+      "word": "qualify a claim",
+      "meaning": "to limit a statement so that it is more precise",
+      "japaneseMeaning": "主張に条件や限定をつける",
+      "example": "The authors qualify a claim by stating where it may not apply.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "by the same token",
+        "bear out"
+      ]
+    },
+    {
+      "word": "on the grounds that",
+      "meaning": "because of the reason that follows",
+      "japaneseMeaning": "～という理由で",
+      "example": "The appeal was accepted on the grounds that the procedure was unfair.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "hinge on",
+        "call into question"
+      ]
+    },
+    {
+      "word": "in light of",
+      "meaning": "after considering new information or circumstances",
+      "japaneseMeaning": "～を踏まえて",
+      "example": "We revised the plan in light of the feedback.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "stem from",
+        "hold up to scrutiny"
+      ]
+    },
+    {
+      "word": "by the same token",
+      "meaning": "for a similar reason or using the same logic",
+      "japaneseMeaning": "同じ理屈で",
+      "example": "We expect honest feedback; by the same token, we must give it.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "bear out",
+        "draw a distinction"
+      ]
+    }
+  ]
+}

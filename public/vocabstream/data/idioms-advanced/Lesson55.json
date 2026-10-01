@@ -1,0 +1,136 @@
+{
+  "lesson_id": "idioms-advanced-lesson-55",
+  "title": "Lesson 5",
+  "paragraph": "会話の比喩と状況",
+  "words": [
+    {
+      "word": "break the ice",
+      "meaning": "to make people feel more comfortable when first meeting",
+      "japaneseMeaning": "初対面の緊張をほぐす",
+      "example": "A simple game helped break the ice.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "give someone a hand",
+        "under pressure"
+      ],
+      "sentencePractice": {
+        "prompt": "Nobody in the new group knew each other. The game helped them feel comfortable talking for the first time. It helped ____.",
+        "distractors": [
+          "keep your options open",
+          "make up your mind"
+        ],
+        "reviewNote": "The stated result is comfort in first conversation, not maintaining choices or making a decision."
+      }
+    },
+    {
+      "word": "see eye to eye",
+      "meaning": "to agree with someone",
+      "japaneseMeaning": "意見が一致する",
+      "example": "We don't always see eye to eye on spending.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "out of the blue",
+        "in charge of"
+      ]
+    },
+    {
+      "word": "on the same page",
+      "meaning": "sharing the same understanding of a situation",
+      "japaneseMeaning": "認識が一致して",
+      "example": "Let's check that we're on the same page before we start.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a last resort",
+        "on purpose"
+      ]
+    },
+    {
+      "word": "give someone a hand",
+      "meaning": "to help someone with a task",
+      "japaneseMeaning": "人の手伝いをする",
+      "example": "It feels good to give someone a hand when they need help.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "usageNote": "someone の位置に手伝う相手を入れます。例: give me a hand。",
+      "meaningDistractors": [
+        "under pressure",
+        "for the time being"
+      ]
+    },
+    {
+      "word": "out of the blue",
+      "meaning": "unexpectedly, without any warning",
+      "japaneseMeaning": "突然・思いがけず",
+      "example": "An old friend called me out of the blue.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "in charge of",
+        "break the ice"
+      ]
+    },
+    {
+      "word": "a last resort",
+      "meaning": "an option used only when other options have failed",
+      "japaneseMeaning": "最後の手段",
+      "example": "Closing the library should be a last resort.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "on purpose",
+        "see eye to eye"
+      ]
+    },
+    {
+      "word": "under pressure",
+      "meaning": "facing demands that make a situation stressful",
+      "japaneseMeaning": "プレッシャーを受けて",
+      "example": "She stays calm under pressure.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "for the time being",
+        "on the same page"
+      ]
+    },
+    {
+      "word": "in charge of",
+      "meaning": "responsible for managing someone or something",
+      "japaneseMeaning": "～を担当して・管理して",
+      "example": "Who is in charge of the booking system?",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "break the ice",
+        "give someone a hand"
+      ]
+    },
+    {
+      "word": "on purpose",
+      "meaning": "intentionally rather than by accident",
+      "japaneseMeaning": "わざと",
+      "example": "I left the door open on purpose.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "see eye to eye",
+        "out of the blue"
+      ]
+    },
+    {
+      "word": "for the time being",
+      "meaning": "for now, until the situation changes",
+      "japaneseMeaning": "当面の間",
+      "example": "We will use the smaller room for the time being.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "on the same page",
+        "a last resort"
+      ]
+    }
+  ]
+}

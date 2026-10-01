@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>緑色の星形のへたが付いた、丸い赤いトマト。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#e86a55" d="M119 59c-30-19-70 1-73 39-3 34 32 57 73 56 44 1 75-23 73-56-4-39-43-58-73-39Z"/><path fill="#6b9f67" d="m118 57-33-14 16 25-31 7 34 7 16 18 10-21 32-4-25-12 14-23-27 12Z"/><path d="M122 60q-7-18 4-31"/><path stroke="#ffbbaa" d="M68 98q-5 17 11 28"/></g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>水平な地面に対して直角に、まっすぐ上下へ伸びる線。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<line x1="74" y1="194" x2="286" y2="194" stroke="#b7c6c6" stroke-width="4" stroke-linecap="round"/><line x1="178" y1="48" x2="178" y2="194" stroke="#77aebc" stroke-width="9" stroke-linecap="round"/><path d="M178 176h18v18" fill="none" stroke="#40565b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><line x1="212" y1="68" x2="212" y2="173" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="212,173 217.0,163.0 207.0,163.0" fill="#40565b"/><line x1="212" y1="173" x2="212" y2="68" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="212,68 207.0,78.0 217.0,78.0" fill="#40565b"/><text x="180" y="228" text-anchor="middle" font-size="18" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">まっすぐ上下</text>
+</svg>

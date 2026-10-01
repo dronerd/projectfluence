@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>後ろに曲がる二本の角、細いひげ、短い毛を持つヤギ。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#d7c9ac" d="M86 113h18v42H86Zm63 0h18v42h-18Z"/><ellipse cx="128" cy="102" rx="49" ry="31" fill="#d7c9ac"/><path d="m174 88 14-14"/><path fill="#b4a086" d="M81 63Q66 35 80 21l9 40m14 0q1-28 21-35-12 24-10 41"/><path fill="#d7c9ac" d="m76 75-22-10-3 15 23 9m37-14 24-9-1 16-25 8"/><path fill="#d7c9ac" d="M76 60q19-11 35 4l-5 45-17 15-17-18Z"/><path fill="#f0e8d5" d="m78 117 22 0-9 24Z"/><path d="M81 82v2m19-2v2m-17 21 14 0m-11 48h18m45 0h18"/></g>
+</svg>

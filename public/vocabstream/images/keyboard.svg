@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>文字入力に使う、たくさんのキーと長いスペースキーが並ぶキーボード。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#adc4c9" d="M39 49h162l17 95H22Z"/><path fill="#eaf0eb" d="M49 62h17v15H47Zm29 0h17v15H77Zm30 0h17v15h-17Zm30 0h17v15h-17Zm30 0h19l2 15h-21ZM44 88h19v16H41Zm30 0h19v16H72Zm30 0h20v16h-20Zm30 0h20v16h-20Zm30 0h27l3 16h-30ZM39 116h19v15H36Zm32 0h99v15H68Zm113 0h13l3 15h-16Z"/><path d="M122 48V28q0-12 17-12"/></g>
+</svg>

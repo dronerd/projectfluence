@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-engineering-lesson-6",
+  "title": "Lesson 6",
+  "paragraph": "材料とその性質",
+  "words": [
+    {
+      "word": "steel",
+      "meaning": "an alloy made mainly from iron with a controlled amount of carbon",
+      "japaneseMeaning": "鋼・スチール",
+      "example": "The frame is made from steel to support the load.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "aluminium",
+        "ceramic"
+      ]
+    },
+    {
+      "word": "aluminium",
+      "meaning": "a light, silver-coloured metal used in products such as frames and containers",
+      "japaneseMeaning": "アルミニウム",
+      "example": "The lightweight cover is made from aluminium.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "steel",
+        "concrete"
+      ],
+      "usageNote": "米国英語では aluminum と綴ります。"
+    },
+    {
+      "word": "alloy",
+      "meaning": "a metallic material made by combining a metal with other elements",
+      "japaneseMeaning": "合金",
+      "example": "The engineer selected an alloy that resists corrosion.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "polymer",
+        "concrete"
+      ]
+    },
+    {
+      "word": "concrete",
+      "meaning": "a building material made by mixing cement, water, and material such as sand and gravel",
+      "japaneseMeaning": "コンクリート",
+      "example": "The concrete was poured into the prepared mould.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "steel",
+        "ceramic"
+      ]
+    },
+    {
+      "word": "polymer",
+      "meaning": "a substance made of very large molecules built from repeating smaller units",
+      "japaneseMeaning": "ポリマー・高分子",
+      "example": "The laboratory tested the flexibility of the polymer.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "alloy",
+        "concrete"
+      ],
+      "usageNote": "プラスチックのほか、ゴムや自然由来の高分子も含みます。"
+    },
+    {
+      "word": "ceramic",
+      "meaning": "a non-metallic inorganic material, often shaped and hardened by heating",
+      "japaneseMeaning": "セラミックス",
+      "example": "The sensor has a ceramic layer that tolerates high temperatures.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "alloy",
+        "polymer"
+      ]
+    },
+    {
+      "word": "density",
+      "meaning": "the mass of a material divided by its volume",
+      "japaneseMeaning": "密度",
+      "example": "The calculation uses the density of the material.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "hardness",
+        "elasticity"
+      ],
+      "sentencePractice": {
+        "prompt": "Two blocks have the same volume, but one has twice the mass. The property calculated from mass divided by volume is ____.",
+        "distractors": [
+          "hardness",
+          "elasticity"
+        ],
+        "reviewNote": "The ratio of mass to volume defines density; hardness and elasticity are different properties and are not determined by this calculation."
+      }
+    },
+    {
+      "word": "hardness",
+      "meaning": "a material's resistance to being scratched or permanently indented",
+      "japaneseMeaning": "硬さ・硬度",
+      "example": "The test compares the hardness of the two surfaces.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "density",
+        "stiffness"
+      ]
+    },
+    {
+      "word": "stiffness",
+      "meaning": "resistance to a change in shape under an applied force",
+      "japaneseMeaning": "剛性",
+      "example": "The added support increases the stiffness of the frame.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "hardness",
+        "density"
+      ]
+    },
+    {
+      "word": "elasticity",
+      "meaning": "the ability of a material to return toward its original shape after a force is removed",
+      "japaneseMeaning": "弾性",
+      "example": "The rubber lost some of its elasticity after many years.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "density",
+        "hardness"
+      ],
+      "sentencePractice": {
+        "prompt": "After the stretching force is removed, the material returns to its original shape because of its ____.",
+        "distractors": [
+          "density",
+          "hardness"
+        ],
+        "reviewNote": "Recovery after removal of force identifies elasticity; mass per volume and scratch resistance do not explain that return."
+      }
+    }
+  ]
+}

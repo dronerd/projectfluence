@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-beginner-lesson-55",
+  "title": "Lesson 5",
+  "paragraph": "会話と時間",
+  "words": [
+    {
+      "word": "of course",
+      "meaning": "used to say yes in a friendly way",
+      "japaneseMeaning": "もちろん",
+      "example": "Of course you can sit here.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "see you later",
+        "at the moment"
+      ]
+    },
+    {
+      "word": "thank you",
+      "meaning": "used to show that you are grateful",
+      "japaneseMeaning": "ありがとう",
+      "example": "Thank you for your help.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "have a good time",
+        "every day"
+      ]
+    },
+    {
+      "word": "excuse me",
+      "meaning": "used politely to get someone's attention",
+      "japaneseMeaning": "すみません",
+      "example": "Excuse me, where is the station?",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "take care",
+        "on time"
+      ]
+    },
+    {
+      "word": "see you later",
+      "meaning": "used when saying goodbye to someone you expect to see again",
+      "japaneseMeaning": "また後でね",
+      "example": "I have to go now. See you later!",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "at the moment",
+        "in a hurry"
+      ]
+    },
+    {
+      "word": "have a good time",
+      "meaning": "to enjoy yourself",
+      "japaneseMeaning": "楽しい時間を過ごす",
+      "example": "I hope you have a good time at the party.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "every day",
+        "of course"
+      ]
+    },
+    {
+      "word": "take care",
+      "meaning": "used when saying goodbye and wishing someone well",
+      "japaneseMeaning": "元気でね・気をつけてね",
+      "example": "Take care! See you next week.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "on time",
+        "thank you"
+      ]
+    },
+    {
+      "word": "at the moment",
+      "meaning": "now; at this time",
+      "japaneseMeaning": "今のところ・今は",
+      "example": "She is busy at the moment.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "in a hurry",
+        "excuse me"
+      ]
+    },
+    {
+      "word": "every day",
+      "meaning": "on all days",
+      "japaneseMeaning": "毎日",
+      "example": "We walk to school every day.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "of course",
+        "see you later"
+      ]
+    },
+    {
+      "word": "on time",
+      "meaning": "at the planned time, without being late",
+      "japaneseMeaning": "時間どおりに",
+      "example": "The train arrived on time.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "thank you",
+        "have a good time"
+      ],
+      "sentencePractice": {
+        "prompt": "The train was due at 9:00 and arrived at exactly 9:00. It was ____.",
+        "distractors": [
+          "in a hurry",
+          "out of stock"
+        ],
+        "reviewNote": "The identical scheduled and actual times define punctuality."
+      }
+    },
+    {
+      "word": "in a hurry",
+      "meaning": "needing to do something quickly",
+      "japaneseMeaning": "急いで",
+      "example": "I can't stop to talk; I'm in a hurry.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "excuse me",
+        "take care"
+      ]
+    }
+  ]
+}

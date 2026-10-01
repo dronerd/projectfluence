@@ -10,16 +10,52 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "school, schools",
-      "example": "Our school is near the station."
+      "example": "Our school is near the station.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3eb.svg",
+        "alt": "校舎と時計のある学校の建物。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3eb.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "hospital",
+        "factory"
+      ]
     },
     {
       "word": "teacher",
       "meaning": "a person who helps students learn",
       "japaneseMeaning": "先生、教師",
       "synonyms": "",
-      "antonyms": "student",
+      "antonyms": "",
       "forms": "teacher, teachers",
-      "example": "The teacher writes on the board."
+      "example": "The teacher writes on the board.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9d1-200d-1f3eb.svg",
+        "alt": "黒板の前で説明する教師の人物表現。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9d1-200d-1f3eb.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "farmer",
+        "pilot"
+      ]
     },
     {
       "word": "classroom",
@@ -28,16 +64,58 @@
       "synonyms": "class",
       "antonyms": "",
       "forms": "classroom, classrooms",
-      "example": "The classroom has many desks."
+      "example": "The classroom has many desks.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/classroom.svg",
+        "alt": "黒板と、前を向いて並ぶ学習用の机がある教室。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/classroom.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "bedroom",
+        "kitchen"
+      ]
     },
     {
       "word": "pencil",
-      "meaning": "a thing used for writing or drawing",
+      "meaning": "a tool for writing or drawing that makes marks you can erase",
       "japaneseMeaning": "鉛筆",
       "synonyms": "",
       "antonyms": "",
       "forms": "pencil, pencils",
-      "example": "I write with a pencil."
+      "example": "I write with a pencil.",
+      "sentencePractice": {
+        "prompt": "I wrote with a ____ so I could remove any mistakes with an eraser.",
+        "distractors": [
+          "pen",
+          "ruler"
+        ],
+        "reviewNote": "Erasable marks distinguish pencil from an ink pen and a measuring tool."
+      },
+      "image": {
+        "src": "/vocabstream/images/pencil.svg",
+        "alt": "先を削ると木と芯が見える、黄色い鉛筆。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pencil.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "pen",
+        "ruler"
+      ]
     },
     {
       "word": "pen",
@@ -46,7 +124,31 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "pen, pens",
-      "example": "This pen is blue."
+      "example": "This pen is blue.",
+      "sentencePractice": {
+        "prompt": "This ____ writes with ink, not with the gray material in a pencil.",
+        "distractors": [
+          "eraser",
+          "ruler"
+        ],
+        "reviewNote": "Writing with ink identifies pen; neither distractor writes."
+      },
+      "image": {
+        "src": "/vocabstream/images/pen.svg",
+        "alt": "インクで書く、クリップとノックボタンのある青いペン。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pen.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "eraser",
+        "ruler"
+      ]
     },
     {
       "word": "book",
@@ -55,7 +157,31 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "book, books",
-      "example": "The book is on my desk."
+      "example": "The book is on my desk.",
+      "sentencePractice": {
+        "prompt": "I opened the ____ and read the story on page twenty.",
+        "distractors": [
+          "ruler",
+          "backpack"
+        ],
+        "reviewNote": "A numbered page containing a story identifies a book rather than either school object."
+      },
+      "image": {
+        "src": "/vocabstream/images/book.svg",
+        "alt": "表紙を開くと、両側のページに文章が印刷されている本。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/book.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "ruler",
+        "backpack"
+      ]
     },
     {
       "word": "notebook",
@@ -64,16 +190,64 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "notebook, notebooks",
-      "example": "My notebook is in my bag."
+      "example": "My notebook is in my bag.",
+      "sentencePractice": {
+        "prompt": "I wrote today's notes on the blank pages of my ____.",
+        "distractors": [
+          "ruler",
+          "eraser"
+        ],
+        "reviewNote": "Bound blank writing pages identify notebook and exclude both tools."
+      },
+      "image": {
+        "src": "/vocabstream/images/notebook.svg",
+        "alt": "左側をリングでとじた、文字を書くための横線入りノート。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/notebook.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "ruler",
+        "eraser"
+      ]
     },
     {
       "word": "ruler",
-      "meaning": "a tool used to draw straight lines",
+      "meaning": "a straight tool with marks for measuring length and drawing lines",
       "japaneseMeaning": "定規",
       "synonyms": "",
       "antonyms": "",
       "forms": "ruler, rulers",
-      "example": "Use a ruler for this line."
+      "example": "Use a ruler for this line.",
+      "sentencePractice": {
+        "prompt": "I used the centimeter marks on a ____ to measure the line.",
+        "distractors": [
+          "book",
+          "eraser"
+        ],
+        "reviewNote": "A marked measuring tool identifies ruler within this choice set."
+      },
+      "image": {
+        "src": "/vocabstream/images/ruler.svg",
+        "alt": "長さを測り、まっすぐな線を引くための目盛り付き定規。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/ruler.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "book",
+        "eraser"
+      ]
     },
     {
       "word": "eraser",
@@ -82,7 +256,31 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "eraser, erasers",
-      "example": "I need an eraser for this mistake."
+      "example": "I need an eraser for this mistake.",
+      "sentencePractice": {
+        "prompt": "I removed the pencil mark using my ____.",
+        "distractors": [
+          "ruler",
+          "pen"
+        ],
+        "reviewNote": "Only an eraser removes an ordinary pencil mark; a ruler measures and a pen adds ink."
+      },
+      "image": {
+        "src": "/vocabstream/images/eraser.svg",
+        "alt": "鉛筆の線を消す、紙の帯が巻かれた白い消しゴム。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/eraser.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "ruler",
+        "pen"
+      ]
     },
     {
       "word": "backpack",
@@ -91,7 +289,31 @@
       "synonyms": "school bag",
       "antonyms": "",
       "forms": "backpack, backpacks",
-      "example": "My backpack is heavy today."
+      "example": "My backpack is heavy today.",
+      "sentencePractice": {
+        "prompt": "I put my school things in a ____ and carried it on my back.",
+        "distractors": [
+          "ruler",
+          "pencil"
+        ],
+        "reviewNote": "A container carried on the back distinguishes backpack from individual supplies."
+      },
+      "image": {
+        "src": "/vocabstream/images/backpack.svg",
+        "alt": "二本の肩ひもと前ポケットのある、青いリュックサック。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/backpack.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "ruler",
+        "pencil"
+      ]
     }
   ]
 }

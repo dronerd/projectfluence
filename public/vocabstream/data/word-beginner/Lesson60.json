@@ -3,15 +3,149 @@
   "title": "Lesson 60",
   "paragraph": "This lesson practices useful adjectives for places.",
   "words": [
-    { "word": "wide", "meaning": "large from side to side", "japaneseMeaning": "広い／幅の広い", "synonyms": "broad, large", "antonyms": "narrow, thin", "forms": "wide, wider, widest", "example": "This road is wide." },
-    { "word": "narrow", "meaning": "not wide", "japaneseMeaning": "狭い／細い", "synonyms": "thin, tight", "antonyms": "wide, broad", "forms": "narrow, narrower, narrowest", "example": "The street is narrow." },
-    { "word": "close", "meaning": "not far away", "japaneseMeaning": "近い", "synonyms": "near, nearby", "antonyms": "far, distant", "forms": "close, closer, closest", "example": "The library is close to my school." },
-    { "word": "remote", "meaning": "far away from towns or people", "japaneseMeaning": "遠く離れた", "synonyms": "far, distant", "antonyms": "close, nearby", "forms": "remote, more remote, most remote", "example": "We can see remote mountains." },
-    { "word": "public", "meaning": "for everyone to use", "japaneseMeaning": "公共の", "synonyms": "open, shared", "antonyms": "private, personal", "forms": "public, more public, most public", "example": "This is a public park." },
-    { "word": "private", "meaning": "for one person or group only", "japaneseMeaning": "私的な／個人の", "synonyms": "personal, closed", "antonyms": "public, open", "forms": "private, more private, most private", "example": "This is a private room." },
-    { "word": "central", "meaning": "in the middle or main area", "japaneseMeaning": "中心の", "synonyms": "middle, main", "antonyms": "outer, side", "forms": "central, more central, most central", "example": "Our hotel is in the central area." },
-    { "word": "vacant", "meaning": "not used or not filled", "japaneseMeaning": "空いている", "synonyms": "empty, free", "antonyms": "full, occupied", "forms": "vacant, more vacant, most vacant", "example": "The seat is vacant now." },
-    { "word": "peaceful", "meaning": "quiet and calm", "japaneseMeaning": "平和な／穏やかな", "synonyms": "calm, quiet", "antonyms": "noisy, busy", "forms": "peaceful, more peaceful, most peaceful", "example": "The garden is peaceful in the morning." },
-    { "word": "modern", "meaning": "new in style", "japaneseMeaning": "現代的な", "synonyms": "new, current", "antonyms": "old, traditional", "forms": "modern, more modern, most modern", "example": "The station has a modern design." }
+    {
+      "word": "wide",
+      "meaning": "large from side to side",
+      "japaneseMeaning": "広い／幅の広い",
+      "synonyms": "broad, large",
+      "antonyms": "narrow, thin",
+      "forms": "wide, wider, widest",
+      "example": "This road is wide.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/wide.svg",
+        "alt": "同じ高さの二つの形を並べ、幅が広い方を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/wide.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "narrow",
+        "central"
+      ]
+    },
+    {
+      "word": "narrow",
+      "meaning": "not wide",
+      "japaneseMeaning": "狭い／細い",
+      "synonyms": "thin, tight",
+      "antonyms": "wide, broad",
+      "forms": "narrow, narrower, narrowest",
+      "example": "The street is narrow.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/narrow.svg",
+        "alt": "同じ高さの二つの形を並べ、幅が狭い方を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/narrow.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "wide",
+        "central"
+      ]
+    },
+    {
+      "word": "close",
+      "meaning": "not far away",
+      "japaneseMeaning": "近い",
+      "synonyms": "near, nearby",
+      "antonyms": "far, distant",
+      "forms": "close, closer, closest",
+      "example": "The library is close to my school."
+    },
+    {
+      "word": "remote",
+      "meaning": "far away from towns or people",
+      "japaneseMeaning": "遠く離れた",
+      "synonyms": "far, distant",
+      "antonyms": "close, nearby",
+      "forms": "remote, more remote, most remote",
+      "example": "We can see remote mountains."
+    },
+    {
+      "word": "public",
+      "meaning": "for everyone to use",
+      "japaneseMeaning": "公共の",
+      "synonyms": "open, shared",
+      "antonyms": "private, personal",
+      "forms": "public, more public, most public",
+      "example": "This is a public park."
+    },
+    {
+      "word": "private",
+      "meaning": "for one person or group only",
+      "japaneseMeaning": "私的な／個人の",
+      "synonyms": "personal, closed",
+      "antonyms": "public, open",
+      "forms": "private, more private, most private",
+      "example": "This is a private room."
+    },
+    {
+      "word": "central",
+      "meaning": "in the middle or main area",
+      "japaneseMeaning": "中心の",
+      "synonyms": "middle, main",
+      "antonyms": "outer, side",
+      "forms": "central, more central, most central",
+      "example": "Our hotel is in the central area.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/central.svg",
+        "alt": "九つの位置のうち中央の位置を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/central.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "wide",
+        "narrow"
+      ]
+    },
+    {
+      "word": "vacant",
+      "meaning": "not used or not filled",
+      "japaneseMeaning": "空いている",
+      "synonyms": "empty, free",
+      "antonyms": "full, occupied",
+      "forms": "vacant, more vacant, most vacant",
+      "example": "The seat is vacant now."
+    },
+    {
+      "word": "peaceful",
+      "meaning": "quiet and calm",
+      "japaneseMeaning": "平和な／穏やかな",
+      "synonyms": "calm, quiet",
+      "antonyms": "noisy, busy",
+      "forms": "peaceful, more peaceful, most peaceful",
+      "example": "The garden is peaceful in the morning."
+    },
+    {
+      "word": "modern",
+      "meaning": "new in style",
+      "japaneseMeaning": "現代的な",
+      "synonyms": "new, current",
+      "antonyms": "old, traditional",
+      "forms": "modern, more modern, most modern",
+      "example": "The station has a modern design."
+    }
   ]
 }

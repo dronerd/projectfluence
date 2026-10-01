@@ -18,7 +18,25 @@
       "synonyms": "equal, similar",
       "antonyms": "different, unequal",
       "forms": "equivalent, equivalently",
-      "example": "This certificate is equivalent to one year of study."
+      "example": "This certificate is equivalent to one year of study.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/equivalent.svg",
+        "alt": "二分の一と四分の二の色の面積が等しいことを示す図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/equivalent.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "informal",
+        "loyal"
+      ]
     },
     {
       "word": "informal",

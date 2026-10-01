@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>温度つまみと、庫内の棚が見えるガラス扉を持つオーブン。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><rect x="55" y="28" width="131" height="128" rx="9" fill="#b0c4c8"/><path fill="#e0e8e6" d="M57 30h127v31H57Z"/><circle cx="78" cy="45" r="7" fill="#fbefd1"/><circle cx="103" cy="45" r="7" fill="#fbefd1"/><rect x="135" y="38" width="34" height="12" rx="3" fill="#6a898f"/><rect x="70" y="75" width="101" height="64" rx="8" fill="#526f79"/><path stroke="#e3eeeb" stroke-width="6" d="M80 68h82"/><path stroke="#95bac2" d="M82 102h77m-77 19h77m-61-26v35m20-35v35m20-35v35"/><path stroke="#d2e3e3" d="m83 85 12 0"/></g>
+</svg>

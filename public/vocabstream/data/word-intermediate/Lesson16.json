@@ -45,7 +45,25 @@
       "synonyms": "gain, earnings",
       "antonyms": "loss, debt",
       "forms": "profit, profits",
-      "example": "The shop made a small profit during the festival."
+      "example": "The shop made a small profit during the festival.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/profit.svg",
+        "alt": "売上百から費用七十を引くと、三十のお金が残る計算。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/profit.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "crime",
+        "duty"
+      ]
     },
     {
       "word": "safety",
@@ -63,7 +81,25 @@
       "synonyms": "example, specimen",
       "antonyms": "whole, full amount",
       "forms": "sample, samples",
-      "example": "The nurse took a blood sample for the test."
+      "example": "The nurse took a blood sample for the test.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/sample.svg",
+        "alt": "多数の球が入る大きな容器から、少数だけを小さい容器に取り出している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/sample.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "belief",
+        "crime"
+      ]
     },
     {
       "word": "standard",

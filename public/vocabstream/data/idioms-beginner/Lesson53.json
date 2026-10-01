@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-beginner-lesson-53",
+  "title": "Lesson 3",
+  "paragraph": "外出と道案内",
+  "words": [
+    {
+      "word": "go out",
+      "meaning": "to leave home to do something enjoyable",
+      "japaneseMeaning": "外出する",
+      "example": "We go out for dinner on Saturdays.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "get off",
+        "go straight"
+      ]
+    },
+    {
+      "word": "come back",
+      "meaning": "to return to the place you are talking about",
+      "japaneseMeaning": "戻ってくる",
+      "example": "Please come back before six.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "on foot",
+        "turn left"
+      ]
+    },
+    {
+      "word": "get on",
+      "meaning": "to enter a bus, train, or plane",
+      "japaneseMeaning": "バスなどに乗る",
+      "example": "We get on the bus outside the library.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "by bus",
+        "next to"
+      ]
+    },
+    {
+      "word": "get off",
+      "meaning": "to leave a bus, train, or plane",
+      "japaneseMeaning": "バスなどを降りる",
+      "example": "Get off the bus at the next stop.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "go straight",
+        "in front of"
+      ],
+      "sentencePractice": {
+        "prompt": "This is our stop. We need to ____ the bus here, not stay on it.",
+        "distractors": [
+          "get on",
+          "look for"
+        ],
+        "reviewNote": "The speakers are already aboard and must leave at their stop."
+      }
+    },
+    {
+      "word": "on foot",
+      "meaning": "by walking",
+      "japaneseMeaning": "歩いて",
+      "example": "The station is ten minutes away on foot.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "turn left",
+        "go out"
+      ]
+    },
+    {
+      "word": "by bus",
+      "meaning": "using a bus to travel",
+      "japaneseMeaning": "バスで",
+      "example": "I go to school by bus.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "next to",
+        "come back"
+      ]
+    },
+    {
+      "word": "go straight",
+      "meaning": "to continue forward without turning",
+      "japaneseMeaning": "まっすぐ進む",
+      "example": "Go straight for two minutes, then turn right.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "in front of",
+        "get on"
+      ]
+    },
+    {
+      "word": "turn left",
+      "meaning": "to change direction toward your left side",
+      "japaneseMeaning": "左に曲がる",
+      "example": "Turn left at the bank.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "go out",
+        "get off"
+      ]
+    },
+    {
+      "word": "next to",
+      "meaning": "at the side of someone or something",
+      "japaneseMeaning": "～の隣に",
+      "example": "The café is next to the bank.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "come back",
+        "on foot"
+      ]
+    },
+    {
+      "word": "in front of",
+      "meaning": "on the side of something that faces forward",
+      "japaneseMeaning": "～の前に",
+      "example": "The bus stops in front of our school.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "get on",
+        "by bus"
+      ]
+    }
+  ]
+}

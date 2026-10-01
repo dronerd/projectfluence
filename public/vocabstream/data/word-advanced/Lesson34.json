@@ -85,10 +85,10 @@
     },
     {
       "word": "threaten",
-      "meaning": "to warn that you may hurt someone or cause harm",
-      "japaneseMeaning": "脅す、脅かす",
-      "synonyms": "warn, endanger",
-      "antonyms": "protect, reassure",
+      "meaning": "to be likely to cause harm or damage",
+      "japaneseMeaning": "脅かす",
+      "synonyms": "endanger",
+      "antonyms": "protect",
       "forms": "threaten, threatens, threatening, threatened",
       "example": "Rising costs threaten small local businesses."
     }

@@ -3,15 +3,152 @@
   "title": "Lesson 98",
   "paragraph": "This lesson practices useful nouns for safety and emergencies.",
   "words": [
-    { "word": "emergency", "meaning": "a serious problem that needs help quickly", "japaneseMeaning": "緊急事態", "synonyms": "danger, urgent problem", "antonyms": "normal day", "forms": "emergency, emergencies", "example": "Call this number in an emergency." },
-    { "word": "alarm", "meaning": "a loud sound that warns people", "japaneseMeaning": "警報／アラーム", "synonyms": "warning, bell", "antonyms": "silence", "forms": "alarm, alarms", "example": "The fire alarm is loud." },
-    { "word": "firefighter", "meaning": "a person who stops fires", "japaneseMeaning": "消防士", "synonyms": "fire worker, rescuer", "antonyms": "none", "forms": "firefighter, firefighters", "example": "The firefighter helps people." },
-    { "word": "police officer", "meaning": "a person who helps keep people safe and follows the law", "japaneseMeaning": "警察官", "synonyms": "officer, police worker", "antonyms": "criminal", "forms": "police officer, police officers", "example": "Ask a police officer for help." },
-    { "word": "ambulance", "meaning": "a vehicle that takes sick or hurt people to a hospital", "japaneseMeaning": "救急車", "synonyms": "emergency car, medical vehicle", "antonyms": "none", "forms": "ambulance, ambulances", "example": "The ambulance arrives quickly." },
-    { "word": "helmet", "meaning": "a hard hat that protects your head", "japaneseMeaning": "ヘルメット", "synonyms": "hard hat, head guard", "antonyms": "cap", "forms": "helmet, helmets", "example": "Wear a helmet on your bike." },
-    { "word": "seatbelt", "meaning": "a belt that keeps you safe in a car", "japaneseMeaning": "シートベルト", "synonyms": "safety belt, car belt", "antonyms": "none", "forms": "seatbelt, seatbelts", "example": "Put on your seatbelt." },
-    { "word": "exit", "meaning": "a way out of a place", "japaneseMeaning": "出口", "synonyms": "way out, door", "antonyms": "entrance", "forms": "exit, exits", "example": "The exit is near the stairs." },
-    { "word": "warning", "meaning": "words or a sign that tell people about danger", "japaneseMeaning": "警告", "synonyms": "notice, alert", "antonyms": "permission", "forms": "warning, warnings", "example": "Read the warning before swimming." },
-    { "word": "danger", "meaning": "a chance that something bad may happen", "japaneseMeaning": "危険", "synonyms": "risk, unsafe thing", "antonyms": "safety", "forms": "danger, dangers", "example": "There is danger near the broken bridge." }
+    {
+      "word": "emergency",
+      "meaning": "a serious problem that needs help quickly",
+      "japaneseMeaning": "緊急事態",
+      "synonyms": "danger, urgent problem",
+      "antonyms": "normal day",
+      "forms": "emergency, emergencies",
+      "example": "Call this number in an emergency."
+    },
+    {
+      "word": "alarm",
+      "meaning": "a loud sound that warns people",
+      "japaneseMeaning": "警報／アラーム",
+      "synonyms": "warning, bell",
+      "antonyms": "silence",
+      "forms": "alarm, alarms",
+      "example": "The fire alarm is loud."
+    },
+    {
+      "word": "firefighter",
+      "meaning": "a person who stops fires",
+      "japaneseMeaning": "消防士",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "firefighter, firefighters",
+      "example": "The firefighter helps people.",
+      "duplicateOf": {
+        "category": "word-beginner",
+        "lessonNumber": 22,
+        "word": "firefighter"
+      }
+    },
+    {
+      "word": "police officer",
+      "meaning": "a person whose job is to protect people and enforce the law",
+      "japaneseMeaning": "警察官",
+      "synonyms": "police constable",
+      "antonyms": "",
+      "forms": "police officer, police officers",
+      "example": "Ask a police officer for help.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f46e.svg",
+        "alt": "制帽と制服を着た警察官の表現。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f46e.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "farmer",
+        "teacher"
+      ]
+    },
+    {
+      "word": "ambulance",
+      "meaning": "a vehicle that takes sick or hurt people to a hospital",
+      "japaneseMeaning": "救急車",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "ambulance, ambulances",
+      "example": "The ambulance arrives quickly.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/ambulance.svg",
+        "alt": "緊急用のライトと青い医療マークが付いた、患者を運ぶ救急車。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/ambulance.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "helmet",
+        "seatbelt"
+      ]
+    },
+    {
+      "word": "helmet",
+      "meaning": "a hard hat that protects your head",
+      "japaneseMeaning": "ヘルメット",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "helmet, helmets",
+      "example": "Wear a helmet on your bike."
+    },
+    {
+      "word": "seatbelt",
+      "meaning": "a belt that keeps you safe in a car",
+      "japaneseMeaning": "シートベルト",
+      "synonyms": "safety belt",
+      "antonyms": "",
+      "forms": "seatbelt, seatbelts",
+      "example": "Put on your seatbelt.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/seatbelt.svg",
+        "alt": "座席に座る人の肩と腰を斜めと横のベルトで固定する図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/seatbelt.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "helmet",
+        "glove"
+      ]
+    },
+    {
+      "word": "exit",
+      "meaning": "a way out of a place",
+      "japaneseMeaning": "出口",
+      "synonyms": "way out, door",
+      "antonyms": "entrance",
+      "forms": "exit, exits",
+      "example": "The exit is near the stairs."
+    },
+    {
+      "word": "warning",
+      "meaning": "words or a sign that tell people about danger",
+      "japaneseMeaning": "警告",
+      "synonyms": "notice, alert",
+      "antonyms": "",
+      "forms": "warning, warnings",
+      "example": "Read the warning before swimming."
+    },
+    {
+      "word": "danger",
+      "meaning": "a chance that something bad may happen",
+      "japaneseMeaning": "危険",
+      "synonyms": "risk, unsafe thing",
+      "antonyms": "safety",
+      "forms": "danger, dangers",
+      "example": "There is danger near the broken bridge."
+    }
   ]
 }

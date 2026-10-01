@@ -4,14 +4,14 @@
   "paragraph": "Pronouns for people, animals, and things.",
   "words": [
     { "word": "I", "meaning": "the person speaking", "japaneseMeaning": "私は、私が", "synonyms": "me", "antonyms": "you", "forms": "I, me, my, mine", "example": "I like English." },
-    { "word": "you", "meaning": "the person or people I speak to", "japaneseMeaning": "あなたは、あなたを", "synonyms": "", "antonyms": "me", "forms": "you, your, yours", "example": "You are my friend." },
-    { "word": "he", "meaning": "a boy or man already named", "japaneseMeaning": "彼は、彼が", "synonyms": "him", "antonyms": "she", "forms": "he, him, his", "example": "He is my brother." },
-    { "word": "she", "meaning": "a girl or woman already named", "japaneseMeaning": "彼女は、彼女が", "synonyms": "her", "antonyms": "he", "forms": "she, her, hers", "example": "She is my sister." },
+    { "word": "you", "meaning": "the person or people I speak to", "japaneseMeaning": "あなたは、あなたを", "synonyms": "", "antonyms": "", "forms": "you, your, yours", "example": "You are my friend." },
+    { "word": "he", "meaning": "a boy or man already named", "japaneseMeaning": "彼は、彼が", "synonyms": "him", "antonyms": "", "forms": "he, him, his", "example": "He is my brother." },
+    { "word": "she", "meaning": "a girl or woman already named", "japaneseMeaning": "彼女は、彼女が", "synonyms": "her", "antonyms": "", "forms": "she, her, hers", "example": "She is my sister." },
     { "word": "it", "meaning": "an animal or thing already named", "japaneseMeaning": "それは、それを", "synonyms": "", "antonyms": "", "forms": "it, its", "example": "It is my book." },
-    { "word": "we", "meaning": "the speaker and other people", "japaneseMeaning": "私たちは", "synonyms": "us", "antonyms": "they", "forms": "we, us, our, ours", "example": "We play soccer after school." },
-    { "word": "they", "meaning": "two or more people or things", "japaneseMeaning": "彼らは、それらは", "synonyms": "them", "antonyms": "we", "forms": "they, them, their, theirs", "example": "They are in the classroom." },
-    { "word": "me", "meaning": "the person speaking, as an object", "japaneseMeaning": "私を、私に", "synonyms": "I", "antonyms": "you", "forms": "me, my, mine", "example": "Please help me." },
-    { "word": "him", "meaning": "a boy or man, as an object", "japaneseMeaning": "彼を、彼に", "synonyms": "he", "antonyms": "her", "forms": "him, his", "example": "I gave him a pencil." },
-    { "word": "her", "meaning": "a girl or woman, as an object", "japaneseMeaning": "彼女を、彼女に", "synonyms": "she", "antonyms": "him", "forms": "her, hers", "example": "I called her yesterday." }
+    { "word": "we", "meaning": "the speaker and other people", "japaneseMeaning": "私たちは", "synonyms": "us", "antonyms": "", "forms": "we, us, our, ours", "example": "We play soccer after school." },
+    { "word": "they", "meaning": "two or more people or things", "japaneseMeaning": "彼らは、それらは", "synonyms": "them", "antonyms": "", "forms": "they, them, their, theirs", "example": "They are in the classroom." },
+    { "word": "me", "meaning": "the person speaking, as an object", "japaneseMeaning": "私を、私に", "synonyms": "I", "antonyms": "", "forms": "me, my, mine", "example": "Please help me." },
+    { "word": "him", "meaning": "a boy or man, as an object", "japaneseMeaning": "彼を、彼に", "synonyms": "he", "antonyms": "", "forms": "him, his", "example": "I gave him a pencil." },
+    { "word": "her", "meaning": "a girl or woman, as an object", "japaneseMeaning": "彼女を、彼女に", "synonyms": "she", "antonyms": "", "forms": "her, hers", "example": "I called her yesterday." }
   ]
 }

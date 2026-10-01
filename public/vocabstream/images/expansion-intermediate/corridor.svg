@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>両側に部屋のドアが並び、奥へ続く建物内の長い廊下。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<path d="M24 210 119 53h124l93 157Z" fill="#fffdf5" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M24 210V23l95 30v111m217 46V23l-93 30v111" fill="#dcecef" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M43 68 82 79v83l-39 40Zm234 11 40-11v134l-40-40Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="146" y="60" width="69" height="89" rx="5" fill="#dcecef" stroke="#40565b" stroke-width="2.5"/><text x="180" y="234" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">建物の中の長い通路</text>
+</svg>

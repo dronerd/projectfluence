@@ -1,0 +1,143 @@
+{
+  "lesson_id": "idioms-beginner-lesson-58",
+  "title": "Lesson 8",
+  "paragraph": "授業と学習の基本動作",
+  "words": [
+    {
+      "word": "do homework",
+      "meaning": "to complete school work that a teacher asks you to do at home",
+      "japaneseMeaning": "宿題をする",
+      "example": "I do homework at the kitchen table.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "take a break",
+        "play a game"
+      ]
+    },
+    {
+      "word": "read aloud",
+      "meaning": "to say the words in a text so other people can hear them",
+      "japaneseMeaning": "声に出して読む",
+      "example": "Please read aloud so everyone can hear the story.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "speak slowly",
+        "ask a question"
+      ],
+      "sentencePractice": {
+        "prompt": "Keep your eyes on the printed story and ____ so the whole class can hear its exact words.",
+        "distractors": [
+          "read silently",
+          "close the book"
+        ],
+        "reviewNote": "The text must be spoken for the class to hear it. Silent reading cannot be heard; closing the book stops reading the visible words."
+      }
+    },
+    {
+      "word": "turn the page",
+      "meaning": "to move to the next page of a book",
+      "japaneseMeaning": "ページをめくる",
+      "example": "Turn the page to see the next picture.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "read aloud",
+        "put down"
+      ]
+    },
+    {
+      "word": "take a break",
+      "meaning": "to stop an activity for a short rest",
+      "japaneseMeaning": "休憩する",
+      "example": "Let's take a break after this exercise.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "do homework",
+        "make a mistake"
+      ]
+    },
+    {
+      "word": "make a mistake",
+      "meaning": "to do something that is not correct",
+      "japaneseMeaning": "間違える",
+      "example": "It is normal to make a mistake when you learn.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "ask a question",
+        "take a photo"
+      ]
+    },
+    {
+      "word": "ask a question",
+      "meaning": "to say something because you want an answer",
+      "japaneseMeaning": "質問する",
+      "example": "Raise your hand if you want to ask a question.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "make a mistake",
+        "turn the page"
+      ]
+    },
+    {
+      "word": "work in pairs",
+      "meaning": "to do a task in groups of two people",
+      "japaneseMeaning": "二人一組で取り組む",
+      "example": "We work in pairs for this speaking activity.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "switch places",
+        "take a break"
+      ]
+    },
+    {
+      "word": "switch places",
+      "meaning": "to move to each other's positions",
+      "japaneseMeaning": "場所を入れ替わる",
+      "example": "I can't see the board. Can we switch places?",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "work in pairs",
+        "stand up"
+      ],
+      "sentencePractice": {
+        "prompt": "You sit in my chair and I will sit in yours. Let’s ____.",
+        "distractors": [
+          "stay seated",
+          "move closer"
+        ],
+        "reviewNote": "Exchanging the two positions is switching places. Remaining seated or reducing distance does not describe exchanging chairs."
+      }
+    },
+    {
+      "word": "at school",
+      "meaning": "in the place where students have lessons",
+      "japaneseMeaning": "学校にいる、学校で",
+      "example": "The children are at school until three.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "after school",
+        "in the morning"
+      ]
+    },
+    {
+      "word": "after school",
+      "meaning": "when the day's lessons have finished",
+      "japaneseMeaning": "放課後に",
+      "example": "We play football after school.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "at school",
+        "at night"
+      ]
+    }
+  ]
+}

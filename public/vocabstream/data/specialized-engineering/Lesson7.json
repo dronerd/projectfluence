@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-engineering-lesson-7",
+  "title": "Lesson 7",
+  "paragraph": "加工と品質の確認",
+  "words": [
+    {
+      "word": "machining",
+      "meaning": "shaping a workpiece by removing material with controlled tools",
+      "japaneseMeaning": "機械加工",
+      "example": "Machining produced a smooth, accurate surface on the metal part.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "casting",
+        "welding"
+      ]
+    },
+    {
+      "word": "casting",
+      "meaning": "making a shape by pouring liquid material into a mould and letting it solidify",
+      "japaneseMeaning": "鋳造・注型",
+      "example": "The factory uses casting to produce the metal housing.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "machining",
+        "drilling"
+      ],
+      "sentencePractice": {
+        "prompt": "Workers pour liquid metal into a shaped cavity and leave it to become solid. This process is ____.",
+        "distractors": [
+          "machining",
+          "drilling"
+        ],
+        "reviewNote": "Pouring and solidification in a mould define casting; the other processes remove solid material with tools."
+      }
+    },
+    {
+      "word": "mould",
+      "meaning": "a hollow form that gives material a particular shape while it hardens",
+      "japaneseMeaning": "型・鋳型",
+      "example": "The liquid metal fills the mould before cooling.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "coating",
+        "defect"
+      ],
+      "usageNote": "米国英語では mold と綴ります。ここでは製造用の型です。"
+    },
+    {
+      "word": "welding",
+      "meaning": "joining materials by forming a bond at their surfaces, often using heat or pressure",
+      "japaneseMeaning": "溶接",
+      "example": "Welding joins the two sections of the steel frame.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "drilling",
+        "casting"
+      ]
+    },
+    {
+      "word": "soldering",
+      "meaning": "joining metal parts with a melted filler metal without melting the parts themselves",
+      "japaneseMeaning": "はんだ付け",
+      "example": "Soldering connects the wire to the small electrical terminal.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "drilling",
+        "coating"
+      ]
+    },
+    {
+      "word": "drilling",
+      "meaning": "making a round hole in a material using a rotating cutting tool",
+      "japaneseMeaning": "穴あけ加工",
+      "example": "Drilling the mounting holes is the next step.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "casting",
+        "welding"
+      ],
+      "sentencePractice": {
+        "prompt": "A rotating cutting tool makes a round hole through the plate. The operation is ____.",
+        "distractors": [
+          "welding",
+          "casting"
+        ],
+        "reviewNote": "A rotating tool that creates a hole performs drilling; joining material and pouring liquid into a mould are different operations."
+      }
+    },
+    {
+      "word": "cutting",
+      "meaning": "separating or removing material using a tool or a controlled process",
+      "japaneseMeaning": "切断・切削",
+      "example": "The cutting process divides the sheet into smaller pieces.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "assembly",
+        "inspection"
+      ]
+    },
+    {
+      "word": "coating",
+      "meaning": "a layer of material applied to a surface for protection or another purpose",
+      "japaneseMeaning": "コーティング・被膜",
+      "example": "The protective coating reduces damage from moisture.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "mould",
+        "defect"
+      ]
+    },
+    {
+      "word": "inspection",
+      "meaning": "a careful check to determine whether a product or process meets requirements",
+      "japaneseMeaning": "検査",
+      "example": "Final inspection revealed a small crack in the housing.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "assembly",
+        "casting"
+      ]
+    },
+    {
+      "word": "defect",
+      "meaning": "a flaw that makes a part or product fail to meet a requirement",
+      "japaneseMeaning": "欠陥・不良",
+      "example": "The inspector recorded the defect before rejecting the part.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "coating",
+        "specification"
+      ]
+    }
+  ]
+}

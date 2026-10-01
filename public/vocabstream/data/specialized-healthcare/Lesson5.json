@@ -1,0 +1,146 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-5",
+  "title": "Lesson 5",
+  "paragraph": "状態を説明する形容詞",
+  "words": [
+    {
+      "word": "acute",
+      "meaning": "starting suddenly or developing quickly, often over a short period",
+      "japaneseMeaning": "急性の",
+      "example": "The report describes an acute illness that began that morning.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "chronic",
+        "benign"
+      ],
+      "usageNote": "医療では経過の急さを表します。単に「痛みが強い」という意味とは限りません。"
+    },
+    {
+      "word": "chronic",
+      "meaning": "lasting for a long time or repeatedly continuing over time",
+      "japaneseMeaning": "慢性の",
+      "example": "The clinic provides support for people with chronic conditions.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "acute",
+        "contagious"
+      ],
+      "sentencePractice": {
+        "prompt": "The condition has continued for several years. The word describing this long duration is ____.",
+        "distractors": [
+          "acute",
+          "contagious"
+        ],
+        "reviewNote": "The long duration is described by chronic; acute describes rapid onset and contagious describes transmission rather than duration."
+      }
+    },
+    {
+      "word": "benign",
+      "meaning": "not cancerous, when describing a tumour or growth",
+      "japaneseMeaning": "良性の",
+      "example": "The doctor explained that the growth was benign.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "malignant",
+        "contagious"
+      ],
+      "usageNote": "良性でも場所や大きさによって問題になることがあります。",
+      "sentencePractice": {
+        "prompt": "The doctor says the tumour is not cancerous. The word used to describe it is ____.",
+        "distractors": [
+          "malignant",
+          "contagious"
+        ],
+        "reviewNote": "For a tumour, not cancerous means benign; malignant means cancerous and contagious concerns transmission."
+      }
+    },
+    {
+      "word": "malignant",
+      "meaning": "cancerous and able to invade nearby tissue or spread",
+      "japaneseMeaning": "悪性の",
+      "example": "The laboratory report identified malignant cells.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "benign",
+        "stable"
+      ]
+    },
+    {
+      "word": "contagious",
+      "meaning": "able to pass from one person to another",
+      "japaneseMeaning": "伝染性の・人にうつる",
+      "example": "The leaflet explains whether the illness is contagious.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "chronic",
+        "numb"
+      ]
+    },
+    {
+      "word": "swollen",
+      "meaning": "larger than usual because fluid or inflammation has increased its size",
+      "japaneseMeaning": "腫れた",
+      "example": "The nurse examined the swollen ankle.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "numb",
+        "dizzy"
+      ]
+    },
+    {
+      "word": "numb",
+      "meaning": "having reduced or no normal feeling in a part of the body",
+      "japaneseMeaning": "感覚が鈍い・しびれた",
+      "example": "The patient said that two fingers felt numb.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "swollen",
+        "contagious"
+      ]
+    },
+    {
+      "word": "dizzy",
+      "meaning": "feeling unsteady or as if you or your surroundings are moving",
+      "japaneseMeaning": "めまいがする",
+      "example": "She told the nurse that she felt dizzy when standing.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "numb",
+        "benign"
+      ]
+    },
+    {
+      "word": "stable",
+      "meaning": "not changing significantly over the period being observed",
+      "japaneseMeaning": "安定した",
+      "example": "The patient's condition remained stable during the journey.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "acute",
+        "malignant"
+      ],
+      "usageNote": "stable は観察中に大きな変化がない意味で、必ずしも健康や回復を意味しません。"
+    },
+    {
+      "word": "conscious",
+      "meaning": "awake and aware of yourself or your surroundings",
+      "japaneseMeaning": "意識のある",
+      "example": "The patient was conscious and able to answer questions.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "dizzy",
+        "swollen"
+      ]
+    }
+  ]
+}

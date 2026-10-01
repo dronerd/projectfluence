@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-advanced-lesson-60",
+  "title": "Lesson 10",
+  "paragraph": "会話・感情・対人関係",
+  "words": [
+    {
+      "word": "beat around the bush",
+      "meaning": "to avoid talking directly about the main subject",
+      "japaneseMeaning": "遠回しに話して本題を避ける",
+      "example": "Please don't beat around the bush; tell me what went wrong.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "hit the nail on the head",
+        "spell out"
+      ]
+    },
+    {
+      "word": "talk someone into",
+      "meaning": "to persuade someone to do something",
+      "japaneseMeaning": "説得して～させる",
+      "example": "You should not talk someone into accepting a job they do not want.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "talk someone out of",
+        "fill in for"
+      ],
+      "usageNote": "someone を相手に置き換え、into の後ろには名詞や -ing 形を置きます。"
+    },
+    {
+      "word": "talk someone out of",
+      "meaning": "to persuade someone not to do something",
+      "japaneseMeaning": "説得して～を思いとどまらせる",
+      "example": "It can be hard to talk someone out of making an impulsive purchase.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "talk someone into",
+        "take over"
+      ],
+      "sentencePractice": {
+        "prompt": "When your aim is to persuade a person not to buy something, you try to ____ buying it.",
+        "distractors": [
+          "talk someone into",
+          "help someone with"
+        ],
+        "reviewNote": "Preventing the purchase by persuasion uses out of. Into encourages the purchase; helping with it assists rather than prevents it."
+      },
+      "usageNote": "someone を相手に置き換え、out of の後ろには名詞や -ing 形を置きます。"
+    },
+    {
+      "word": "hold a grudge",
+      "meaning": "to remain angry with someone because of something they did in the past",
+      "japaneseMeaning": "過去のことを根に持つ",
+      "example": "She apologized, and I do not want to hold a grudge.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "keep an open mind",
+        "give someone a hand"
+      ]
+    },
+    {
+      "word": "put yourself in someone's shoes",
+      "meaning": "to imagine another person's situation in order to understand their feelings",
+      "japaneseMeaning": "相手の立場に立って考える",
+      "example": "Put yourself in your colleague's shoes before criticizing her decision.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "pull someone's leg",
+        "lose your temper"
+      ]
+    },
+    {
+      "word": "lose your temper",
+      "meaning": "to suddenly become very angry",
+      "japaneseMeaning": "かっとなる",
+      "example": "Try not to lose your temper when the conversation becomes difficult.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "bite your tongue",
+        "keep an open mind"
+      ]
+    },
+    {
+      "word": "pull someone's leg",
+      "meaning": "to joke with someone by saying something that is not true",
+      "japaneseMeaning": "冗談を言って人をからかう",
+      "example": "When he said he owned a castle, I knew he was pulling my leg.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "give someone the benefit of the doubt",
+        "hold a grudge"
+      ]
+    },
+    {
+      "word": "hit the nail on the head",
+      "meaning": "to say exactly what is causing a problem or what is true",
+      "japaneseMeaning": "的を射たことを言う",
+      "example": "You hit the nail on the head when you said our instructions were unclear.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "miss the point",
+        "beat around the bush"
+      ]
+    },
+    {
+      "word": "let the cat out of the bag",
+      "meaning": "to reveal a secret, often by accident",
+      "japaneseMeaning": "秘密をうっかり漏らす",
+      "example": "Don't let the cat out of the bag about the surprise party.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "bite your tongue",
+        "sweep something under the carpet"
+      ],
+      "sentencePractice": {
+        "prompt": "The party was meant to be a secret, but I accidentally mentioned it in front of the guest of honor. I did not mean to ____.",
+        "distractors": [
+          "keep it under wraps",
+          "keep everyone guessing"
+        ],
+        "reviewNote": "Accidentally disclosing the secret lets the cat out of the bag. Both other phrases describe keeping information concealed or uncertain."
+      }
+    },
+    {
+      "word": "bite your tongue",
+      "meaning": "to stop yourself from saying something you would like to say",
+      "japaneseMeaning": "言いたいことをぐっとこらえる",
+      "example": "Sometimes you need to bite your tongue and let the other person finish.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "lose your temper",
+        "let the cat out of the bag"
+      ]
+    }
+  ]
+}

@@ -30,3 +30,11 @@ test("replay-only batches retain first-pass totals without inferring scores from
   assert.equal(result.meaningScore, 7);
   assert.equal(result.replayCorrect, 1);
 });
+test("rejects case, Unicode-width and whitespace duplicate choices without changing stable IDs", () => {
+  for (const choices of [["hello", "bye", "HELLO"], ["hello", "bye", "ｈｅｌｌｏ"], ["hello", "bye", " bye "]]) {
+    assert.throws(() => parseVocabStreamProgress({ ...payload, questionAttempts: [{ ...answer, choices }] }), ProgressValidationError);
+  }
+  const compound={...answer,word:"take off",correctAnswer:"take off",selectedAnswer:"put on",choices:["take off","put on","take  off"]};
+  assert.throws(() => parseVocabStreamProgress({ ...payload, questionAttempts: [compound] }), ProgressValidationError);
+  assert.equal(parseVocabStreamProgress(payload).attemptId,payload.attemptId);
+});

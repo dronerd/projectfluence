@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>二つのケーブルの接続部を近づけて、つなごうとしている図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<line x1="25" y1="123" x2="97" y2="123" stroke="#77aebc" stroke-width="8" stroke-linecap="round"/><rect x="97" y="99" width="48" height="49" rx="5" fill="#b7c6c6" stroke="#40565b" stroke-width="2.5"/><line x1="145" y1="109" x2="166" y2="109" stroke="#40565b" stroke-width="4" stroke-linecap="round"/><line x1="145" y1="137" x2="166" y2="137" stroke="#40565b" stroke-width="4" stroke-linecap="round"/><rect x="220" y="99" width="48" height="49" rx="5" fill="#b7c6c6" stroke="#40565b" stroke-width="2.5"/><line x1="234" y1="109" x2="234" y2="137" stroke="#40565b" stroke-width="4" stroke-linecap="round"/><line x1="268" y1="123" x2="336" y2="123" stroke="#77aebc" stroke-width="8" stroke-linecap="round"/><line x1="175" y1="77" x2="213" y2="77" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="213,77 203.0,72.0 203.0,82.0" fill="#40565b"/><text x="180" y="207" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">二つをつなぐ</text>
+</svg>

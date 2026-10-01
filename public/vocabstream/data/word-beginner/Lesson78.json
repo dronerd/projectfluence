@@ -3,15 +3,183 @@
   "title": "Lesson 78",
   "paragraph": "This lesson practices useful nouns for clothes and accessories.",
   "words": [
-    { "word": "cap", "meaning": "a soft hat with a front part", "japaneseMeaning": "帽子／キャップ", "synonyms": "hat, headwear", "antonyms": "none", "forms": "cap, caps", "example": "He wears a cap at the park." },
-    { "word": "uniform", "meaning": "special clothes for school or work", "japaneseMeaning": "制服／ユニフォーム", "synonyms": "school clothes, work clothes", "antonyms": "casual clothes", "forms": "uniform, uniforms", "example": "Our uniform is black and white." },
-    { "word": "pajamas", "meaning": "clothes worn for sleeping", "japaneseMeaning": "パジャマ", "synonyms": "sleepwear, night clothes", "antonyms": "uniform", "forms": "pajamas", "example": "I put on pajamas before bed." },
-    { "word": "belt", "meaning": "a long thing worn around the waist", "japaneseMeaning": "ベルト", "synonyms": "waist band, strap", "antonyms": "none", "forms": "belt, belts", "example": "This belt is too long." },
-    { "word": "glove", "meaning": "clothing for a hand", "japaneseMeaning": "手袋", "synonyms": "hand cover, mitten", "antonyms": "bare hand", "forms": "glove, gloves", "example": "I lost one glove in the snow." },
-    { "word": "boot", "meaning": "a strong shoe that covers the ankle", "japaneseMeaning": "ブーツ", "synonyms": "high shoe, shoe", "antonyms": "sandal", "forms": "boot, boots", "example": "Her boot is wet from the rain." },
-    { "word": "pocket", "meaning": "a small bag in clothes", "japaneseMeaning": "ポケット", "synonyms": "small bag, pouch", "antonyms": "none", "forms": "pocket, pockets", "example": "The key is in my pocket." },
-    { "word": "button", "meaning": "a small thing used to close clothes", "japaneseMeaning": "ボタン", "synonyms": "fastener, closer", "antonyms": "hole", "forms": "button, buttons", "example": "A button fell off my shirt." },
-    { "word": "zipper", "meaning": "a thing used to open and close clothes or bags", "japaneseMeaning": "ファスナー／ジッパー", "synonyms": "fastener, zip", "antonyms": "button", "forms": "zipper, zippers", "example": "The zipper on my bag is broken." },
-    { "word": "sleeve", "meaning": "the arm part of a shirt or coat", "japaneseMeaning": "袖", "synonyms": "arm part, shirt arm", "antonyms": "collar", "forms": "sleeve, sleeves", "example": "My sleeve is wet." }
+    {
+      "word": "cap",
+      "meaning": "a soft hat with a front part",
+      "japaneseMeaning": "帽子／キャップ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "cap, caps",
+      "example": "He wears a cap at the park.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9e2.svg",
+        "alt": "前に日よけのつばがある柔らかい帽子。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9e2.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "boot",
+        "belt"
+      ]
+    },
+    {
+      "word": "uniform",
+      "meaning": "special clothes for school or work",
+      "japaneseMeaning": "制服／ユニフォーム",
+      "synonyms": "school clothes, work clothes",
+      "antonyms": "casual clothes",
+      "forms": "uniform, uniforms",
+      "example": "Our uniform is black and white."
+    },
+    {
+      "word": "pajamas",
+      "meaning": "clothes worn for sleeping",
+      "japaneseMeaning": "パジャマ",
+      "synonyms": "sleepwear, night clothes",
+      "antonyms": "",
+      "forms": "pajamas",
+      "example": "I put on pajamas before bed."
+    },
+    {
+      "word": "belt",
+      "meaning": "a long thing worn around the waist",
+      "japaneseMeaning": "ベルト",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "belt, belts",
+      "example": "This belt is too long."
+    },
+    {
+      "word": "glove",
+      "meaning": "clothing for a hand",
+      "japaneseMeaning": "手袋",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "glove, gloves",
+      "example": "I lost one glove in the snow.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/glove.svg",
+        "alt": "五本の指を別々に包む、片手用の手袋。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/glove.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "belt",
+        "boot"
+      ]
+    },
+    {
+      "word": "boot",
+      "meaning": "a strong shoe that covers the ankle",
+      "japaneseMeaning": "ブーツ",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "boot, boots",
+      "example": "Her boot is wet from the rain.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f97e.svg",
+        "alt": "足首まで覆う丈夫なひも付きの靴。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f97e.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "cap",
+        "glove"
+      ]
+    },
+    {
+      "word": "pocket",
+      "meaning": "a small bag in clothes",
+      "japaneseMeaning": "ポケット",
+      "synonyms": "small bag, pouch",
+      "antonyms": "",
+      "forms": "pocket, pockets",
+      "example": "The key is in my pocket."
+    },
+    {
+      "word": "button",
+      "meaning": "a small thing used to close clothes",
+      "japaneseMeaning": "ボタン",
+      "synonyms": "fastener, closer",
+      "antonyms": "",
+      "forms": "button, buttons",
+      "example": "A button fell off my shirt.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/button.svg",
+        "alt": "糸を通す四つの穴がある、服用の丸いボタン。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/button.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "zipper",
+        "belt"
+      ]
+    },
+    {
+      "word": "zipper",
+      "meaning": "a thing used to open and close clothes or bags",
+      "japaneseMeaning": "ファスナー／ジッパー",
+      "synonyms": "fastener, zip",
+      "antonyms": "",
+      "forms": "zipper, zippers",
+      "example": "The zipper on my bag is broken.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/zipper.svg",
+        "alt": "左右の歯とかみ合わせを動かす引き手があるファスナー。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/zipper.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "button",
+        "pocket"
+      ]
+    },
+    {
+      "word": "sleeve",
+      "meaning": "the arm part of a shirt or coat",
+      "japaneseMeaning": "袖",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "sleeve, sleeves",
+      "example": "My sleeve is wet."
+    }
   ]
 }

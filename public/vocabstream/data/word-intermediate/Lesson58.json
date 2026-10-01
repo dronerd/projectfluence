@@ -90,7 +90,25 @@
       "synonyms": "shape-based, mathematical",
       "antonyms": "natural, irregular",
       "forms": "geometric, geometrically",
-      "example": "The building has a simple geometric design."
+      "example": "The building has a simple geometric design.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/geometric.svg",
+        "alt": "円、三角形、四角形という線と角でできた形が並ぶ。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/geometric.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "fortunate",
+        "civic"
+      ]
     }
   ]
 }

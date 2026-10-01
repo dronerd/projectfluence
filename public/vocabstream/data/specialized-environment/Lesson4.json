@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-environment-lesson-4",
+  "title": "Lesson 4",
+  "paragraph": "水と土地の変化",
+  "words": [
+    {
+      "word": "evaporation",
+      "meaning": "the change of liquid water into water vapour at a surface",
+      "japaneseMeaning": "蒸発",
+      "example": "Warm weather increased evaporation from the lake.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "condensation",
+        "infiltration"
+      ],
+      "sentencePractice": {
+        "prompt": "Water slowly leaves the lake's surface and enters the air as vapour. This process is ____.",
+        "distractors": [
+          "condensation",
+          "infiltration"
+        ],
+        "reviewNote": "Liquid changing to vapour at the surface is evaporation; condensation reverses the change and infiltration moves water into soil."
+      }
+    },
+    {
+      "word": "condensation",
+      "meaning": "the change of water vapour into liquid water",
+      "japaneseMeaning": "凝結・結露",
+      "example": "Condensation formed tiny drops on the cold surface.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "evaporation",
+        "erosion"
+      ]
+    },
+    {
+      "word": "precipitation",
+      "meaning": "water that falls from clouds as rain, snow, or other forms",
+      "japaneseMeaning": "降水",
+      "example": "The station records total precipitation each month.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "evaporation",
+        "groundwater"
+      ]
+    },
+    {
+      "word": "infiltration",
+      "meaning": "the movement of water from the ground surface into soil",
+      "japaneseMeaning": "浸透",
+      "example": "Plant cover can affect the rate of infiltration.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "evaporation",
+        "condensation"
+      ]
+    },
+    {
+      "word": "aquifer",
+      "meaning": "a layer of rock or other underground material that stores and transmits usable amounts of water",
+      "japaneseMeaning": "帯水層",
+      "example": "The wells draw water from the same aquifer.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "watershed",
+        "water table"
+      ],
+      "sentencePractice": {
+        "prompt": "The well draws water from a rock layer that stores and transmits it underground. This layer is an ____.",
+        "distractors": [
+          "ecosystem",
+          "emission"
+        ],
+        "reviewNote": "A water-bearing layer that can supply a well is an aquifer; an interacting natural system and a release of material do not name that layer. All options fit after an."
+      }
+    },
+    {
+      "word": "water table",
+      "meaning": "the upper surface of the underground zone where spaces in soil or rock are filled with water",
+      "japaneseMeaning": "地下水面",
+      "example": "The water table rose after several weeks of rain.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "aquifer",
+        "sea level"
+      ]
+    },
+    {
+      "word": "erosion",
+      "meaning": "the removal and movement of soil or rock by water, wind, or other forces",
+      "japaneseMeaning": "侵食",
+      "example": "Tree roots help reduce erosion on the slope.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "infiltration",
+        "condensation"
+      ]
+    },
+    {
+      "word": "sediment",
+      "meaning": "small particles of rock, soil, or organic material moved or deposited by water, wind, or ice",
+      "japaneseMeaning": "堆積物",
+      "example": "The river carried sediment toward the coast.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "groundwater",
+        "compost"
+      ]
+    },
+    {
+      "word": "drought",
+      "meaning": "a prolonged shortage of water caused by unusually dry conditions",
+      "japaneseMeaning": "干ばつ",
+      "example": "The drought reduced water supplies across the region.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "flood",
+        "erosion"
+      ]
+    },
+    {
+      "word": "flood",
+      "meaning": "water covering land that is normally dry",
+      "japaneseMeaning": "洪水",
+      "example": "The flood covered the road beside the river.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "drought",
+        "evaporation"
+      ]
+    }
+  ]
+}

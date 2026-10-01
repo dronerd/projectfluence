@@ -1,0 +1,152 @@
+{
+  "lesson_id": "specialized-engineering-lesson-3",
+  "title": "Lesson 3",
+  "paragraph": "設計と製造",
+  "words": [
+    {
+      "word": "prototype",
+      "meaning": "an early model built to test a design",
+      "japaneseMeaning": "試作品",
+      "example": "The team tested a prototype before starting production.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "component",
+        "fatigue"
+      ],
+      "sentencePractice": {
+        "prompt": "We built an early model to test the design before production. That model is a ____.",
+        "distractors": [
+          "specification",
+          "tolerance"
+        ],
+        "reviewNote": "A physical early test model is neither a requirements document nor an allowed measurement difference."
+      }
+    },
+    {
+      "word": "specification",
+      "meaning": "a detailed statement of what a design or product must do",
+      "japaneseMeaning": "仕様",
+      "example": "The specification gives the required size and operating temperature.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "assembly",
+        "corrosion"
+      ]
+    },
+    {
+      "word": "tolerance",
+      "meaning": "the allowed difference between a specified measurement and the actual measurement",
+      "japaneseMeaning": "許容差",
+      "example": "The hole must be made within a tolerance of one millimetre.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "maintenance",
+        "efficiency"
+      ],
+      "sentencePractice": {
+        "prompt": "The drawing allows the width to vary by 0.1 mm from the stated value. This allowed difference is the ____.",
+        "distractors": [
+          "load",
+          "efficiency"
+        ],
+        "reviewNote": "An allowed dimensional difference is not a supported force or useful-output proportion."
+      }
+    },
+    {
+      "word": "component",
+      "meaning": "one part of a larger machine or system",
+      "japaneseMeaning": "部品・構成要素",
+      "example": "Each component has a number on the assembly drawing.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "fatigue",
+        "safety factor"
+      ]
+    },
+    {
+      "word": "assembly",
+      "meaning": "the process of putting separate parts together",
+      "japaneseMeaning": "組み立て",
+      "example": "Final assembly takes place at the factory.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "corrosion",
+        "prototype"
+      ]
+    },
+    {
+      "word": "maintenance",
+      "meaning": "work done to keep equipment in good working condition",
+      "japaneseMeaning": "保守・整備",
+      "example": "Regular maintenance helps prevent unexpected breakdowns.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "efficiency",
+        "specification"
+      ]
+    },
+    {
+      "word": "fatigue",
+      "meaning": "damage that develops in a material after repeated loading",
+      "japaneseMeaning": "疲労",
+      "example": "Small cracks can grow because of fatigue.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "usageNote": "ここでは繰り返し荷重による材料の「疲労」。人の疲れという意味ではありません。",
+      "meaningDistractors": [
+        "safety factor",
+        "tolerance"
+      ]
+    },
+    {
+      "word": "corrosion",
+      "meaning": "the gradual damage to a material caused by chemical reactions with its surroundings",
+      "japaneseMeaning": "腐食",
+      "example": "This coating helps protect the metal from corrosion.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "prototype",
+        "component"
+      ],
+      "sentencePractice": {
+        "prompt": "Chemical reactions with moisture gradually damage the metal. This damage is ____.",
+        "distractors": [
+          "fatigue",
+          "vibration"
+        ],
+        "reviewNote": "The explicit chemical cause excludes repeated-loading fatigue and back-and-forth motion."
+      }
+    },
+    {
+      "word": "efficiency",
+      "meaning": "the share of supplied energy or resources that becomes useful output",
+      "japaneseMeaning": "効率",
+      "example": "Better insulation improves the efficiency of the heating system.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "specification",
+        "assembly"
+      ]
+    },
+    {
+      "word": "safety factor",
+      "meaning": "the ratio of available strength to the load a design is expected to carry",
+      "japaneseMeaning": "安全率",
+      "example": "The engineer selected a safety factor to allow for uncertainty.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "tolerance",
+        "maintenance"
+      ]
+    }
+  ]
+}

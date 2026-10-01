@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-business-lesson-4",
+  "title": "Lesson 4",
+  "paragraph": "支払いと会計書類",
+  "words": [
+    {
+      "word": "balance sheet",
+      "meaning": "a financial statement showing assets, liabilities, and ownership value at a particular time",
+      "japaneseMeaning": "貸借対照表",
+      "example": "The accountant prepared the balance sheet at the end of the year.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "income statement",
+        "purchase order"
+      ]
+    },
+    {
+      "word": "income statement",
+      "meaning": "a financial report showing revenue, costs, and profit or loss over a period",
+      "japaneseMeaning": "損益計算書",
+      "example": "The income statement shows how the business performed this quarter.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "balance sheet",
+        "receipt"
+      ]
+    },
+    {
+      "word": "purchase order",
+      "meaning": "a buyer's document specifying the goods or services they want to order",
+      "japaneseMeaning": "発注書",
+      "example": "The supplier asked for a purchase order before shipping the goods.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "invoice",
+        "receipt"
+      ]
+    },
+    {
+      "word": "receipt",
+      "meaning": "a document confirming that money or goods have been received",
+      "japaneseMeaning": "領収書・受領書",
+      "example": "Keep the receipt as proof of payment.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "invoice",
+        "purchase order"
+      ],
+      "sentencePractice": {
+        "prompt": "After the customer paid, the cashier gave them a document confirming the payment. This document was a ____.",
+        "distractors": [
+          "purchase order",
+          "forecast"
+        ],
+        "reviewNote": "Proof that payment has been received is a receipt; an order or prediction does not confirm payment."
+      }
+    },
+    {
+      "word": "refund",
+      "meaning": "money returned to a customer after a payment",
+      "japaneseMeaning": "返金",
+      "example": "The customer requested a refund for the damaged item.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "deposit",
+        "subsidy"
+      ],
+      "sentencePractice": {
+        "prompt": "The shop returned the customer's money after accepting the damaged product. The returned money was a ____.",
+        "distractors": [
+          "deposit",
+          "subsidy"
+        ],
+        "reviewNote": "Money paid back after a purchase is a refund; an advance payment or financial support for an activity is different."
+      }
+    },
+    {
+      "word": "deposit",
+      "meaning": "an amount paid in advance to reserve something or provide security",
+      "japaneseMeaning": "手付金・保証金",
+      "example": "The venue requires a deposit to confirm the booking.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "refund",
+        "profit"
+      ]
+    },
+    {
+      "word": "payment terms",
+      "meaning": "the agreed conditions governing when and how a payment must be made",
+      "japaneseMeaning": "支払条件",
+      "example": "The payment terms allow thirty days to pay the invoice.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "credit limit",
+        "cash flow"
+      ]
+    },
+    {
+      "word": "credit limit",
+      "meaning": "the maximum amount a lender or supplier permits someone to owe",
+      "japaneseMeaning": "信用限度額・与信限度額",
+      "example": "The customer cannot place another credit order above the credit limit.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "interest rate",
+        "payment terms"
+      ]
+    },
+    {
+      "word": "overdue payment",
+      "meaning": "money that should already have been paid by an agreed date",
+      "japaneseMeaning": "支払期限を過ぎた未払金",
+      "example": "The accounts team sent a reminder about the overdue payment.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "deposit",
+        "refund"
+      ]
+    },
+    {
+      "word": "payroll",
+      "meaning": "the process or records used to calculate and pay employees' wages",
+      "japaneseMeaning": "給与計算・給与台帳",
+      "example": "The payroll team checked the hours worked this month.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "inventory",
+        "purchase order"
+      ]
+    }
+  ]
+}

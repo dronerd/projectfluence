@@ -5,7 +5,7 @@
     "words": [
       {"word": "significance", "meaning": "importance or meaning", "japaneseMeaning": "重要性", "synonyms": "importance, relevance", "antonyms": "insignificance, triviality", "example": "The discovery has great significance."},
       {"word": "relevance", "meaning": "connection to the matter", "japaneseMeaning": "関連性", "synonyms": "applicability, pertinence", "antonyms": "irrelevance, insignificance", "example": "The evidence is of relevance to the case."},
-      {"word": "merit", "meaning": "deserving recognition", "japaneseMeaning": "価値、長所", "synonyms": "value, worth", "antonyms": "demerit, flaw", "example": "Her proposal has merit."},
+      {"word": "merit", "meaning": "the value or good qualities of something", "japaneseMeaning": "価値、長所", "synonyms": "value, worth", "antonyms": "demerit, flaw", "example": "Her proposal has merit."},
       {"word": "utility", "meaning": "usefulness", "japaneseMeaning": "有用性", "synonyms": "usefulness, function", "antonyms": "uselessness, futility", "example": "The utility of this tool is high."},
       {"word": "contribution", "meaning": "something given or added", "japaneseMeaning": "貢献", "synonyms": "input, donation", "antonyms": "withdrawal, neglect", "example": "Her contribution helped the team succeed."},
       {"word": "importance", "meaning": "value or priority", "japaneseMeaning": "重要性", "synonyms": "significance, weight", "antonyms": "triviality, insignificance", "example": "Education holds great importance."},

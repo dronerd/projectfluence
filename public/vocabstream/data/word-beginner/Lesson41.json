@@ -11,7 +11,7 @@
     { "word": "yet", "meaning": "until now, usually in questions or negatives", "japaneseMeaning": "まだ／もう", "synonyms": "so far, still", "antonyms": "already, now", "forms": "yet", "example": "I have not eaten lunch yet." },
     { "word": "still", "meaning": "continuing until now", "japaneseMeaning": "まだ／今でも", "synonyms": "even now, yet", "antonyms": "no longer, already", "forms": "still", "example": "She is still at school." },
     { "word": "just", "meaning": "only or a short time ago", "japaneseMeaning": "ちょうど／ただ", "synonyms": "only, exactly", "antonyms": "more, long ago", "forms": "just", "example": "I just saw your message." },
-    { "word": "too", "meaning": "more than is good or also", "japaneseMeaning": "〜すぎる／〜も", "synonyms": "also, very", "antonyms": "not enough, only", "forms": "too", "example": "This bag is too heavy." },
+    { "word": "too", "meaning": "more than is wanted or needed", "japaneseMeaning": "～すぎる", "synonyms": "also, very", "antonyms": "not enough, only", "forms": "too", "example": "This bag is too heavy.", "usageNote": "ここでは「～すぎる」の意味。「～もまた」の too は文の終わりなどで使います。" },
     { "word": "enough", "meaning": "as much as needed", "japaneseMeaning": "十分に", "synonyms": "sufficiently, fully", "antonyms": "not enough, too little", "forms": "enough", "example": "She sleeps enough every night." }
   ]
 }

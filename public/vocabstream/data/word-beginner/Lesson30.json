@@ -3,15 +3,147 @@
   "title": "Lesson 30",
   "paragraph": "This lesson practices useful nouns for travel.",
   "words": [
-    { "word": "station", "meaning": "a place where trains or buses stop", "japaneseMeaning": "駅／停留所", "synonyms": "stop, terminal", "antonyms": "none", "forms": "station, stations", "example": "Meet me at the station at six." },
-    { "word": "airport", "meaning": "a place where planes arrive and leave", "japaneseMeaning": "空港", "synonyms": "air terminal, plane stop", "antonyms": "none", "forms": "airport, airports", "example": "We go to the airport by bus." },
-    { "word": "hotel", "meaning": "a place where people stay when they travel", "japaneseMeaning": "ホテル", "synonyms": "inn, place to stay", "antonyms": "home", "forms": "hotel, hotels", "example": "Our hotel is near the beach." },
-    { "word": "suitcase", "meaning": "a large bag for travel", "japaneseMeaning": "スーツケース", "synonyms": "bag, luggage", "antonyms": "none", "forms": "suitcase, suitcases", "example": "My suitcase is heavy." },
-    { "word": "passport", "meaning": "a book that shows who you are when you travel to another country", "japaneseMeaning": "パスポート", "synonyms": "travel ID, ID book", "antonyms": "none", "forms": "passport, passports", "example": "Do not forget your passport." },
-    { "word": "address", "meaning": "the place where someone lives or works", "japaneseMeaning": "住所", "synonyms": "home place, location", "antonyms": "none", "forms": "address, addresses", "example": "Write your address on this form." },
-    { "word": "guide", "meaning": "a person or book that helps travelers", "japaneseMeaning": "ガイド／案内人", "synonyms": "helper, travel book", "antonyms": "none", "forms": "guide, guides", "example": "The guide shows us the old castle." },
-    { "word": "tour", "meaning": "a trip to see places", "japaneseMeaning": "見学／旅行", "synonyms": "trip, visit", "antonyms": "stay", "forms": "tour, tours", "example": "We take a tour of the city." },
-    { "word": "seat", "meaning": "a place to sit", "japaneseMeaning": "座席", "synonyms": "chair, place", "antonyms": "floor", "forms": "seat, seats", "example": "This is my seat on the train." },
-    { "word": "traffic", "meaning": "cars and buses moving on roads", "japaneseMeaning": "交通／交通量", "synonyms": "cars, road use", "antonyms": "empty road", "forms": "traffic", "example": "There is a lot of traffic today." }
+    {
+      "word": "station",
+      "meaning": "a place where trains or buses stop",
+      "japaneseMeaning": "駅／停留所",
+      "synonyms": "terminal",
+      "antonyms": "",
+      "forms": "station, stations",
+      "example": "Meet me at the station at six."
+    },
+    {
+      "word": "airport",
+      "meaning": "a place where planes arrive and leave",
+      "japaneseMeaning": "空港",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "airport, airports",
+      "example": "We go to the airport by bus."
+    },
+    {
+      "word": "hotel",
+      "meaning": "a place where people stay when they travel",
+      "japaneseMeaning": "ホテル",
+      "synonyms": "inn",
+      "antonyms": "",
+      "forms": "hotel, hotels",
+      "example": "Our hotel is near the beach.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f3e8.svg",
+        "alt": "宿泊用のホテルを表す建物の一例。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f3e8.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "school",
+        "factory"
+      ]
+    },
+    {
+      "word": "suitcase",
+      "meaning": "a large bag for travel",
+      "japaneseMeaning": "スーツケース",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "suitcase, suitcases",
+      "example": "My suitcase is heavy.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/suitcase.svg",
+        "alt": "伸ばした持ち手と小さな車輪がある、旅行用のスーツケース。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/suitcase.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "passport",
+        "ticket"
+      ]
+    },
+    {
+      "word": "passport",
+      "meaning": "a book that shows who you are when you travel to another country",
+      "japaneseMeaning": "パスポート",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "passport, passports",
+      "example": "Do not forget your passport."
+    },
+    {
+      "word": "address",
+      "meaning": "the place where someone lives or works",
+      "japaneseMeaning": "住所",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "address, addresses",
+      "example": "Write your address on this form."
+    },
+    {
+      "word": "guide",
+      "meaning": "a person or book that helps travelers",
+      "japaneseMeaning": "ガイド／案内人",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "guide, guides",
+      "example": "The guide shows us the old castle."
+    },
+    {
+      "word": "tour",
+      "meaning": "a trip to see places",
+      "japaneseMeaning": "見学／旅行",
+      "synonyms": "sightseeing trip",
+      "antonyms": "",
+      "forms": "tour, tours",
+      "example": "We take a tour of the city."
+    },
+    {
+      "word": "seat",
+      "meaning": "a place to sit",
+      "japaneseMeaning": "座席",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "seat, seats",
+      "example": "This is my seat on the train.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f4ba.svg",
+        "alt": "座面と背もたれと肘掛けのある座席。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f4ba.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "stairs",
+        "roof"
+      ]
+    },
+    {
+      "word": "traffic",
+      "meaning": "cars and buses moving on roads",
+      "japaneseMeaning": "交通／交通量",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "traffic",
+      "example": "There is a lot of traffic today."
+    }
   ]
 }

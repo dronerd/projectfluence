@@ -10,7 +10,31 @@
       "synonyms": "top",
       "antonyms": "",
       "forms": "shirt, shirts",
-      "example": "My shirt is white."
+      "example": "My shirt is white.",
+      "sentencePractice": {
+        "prompt": "He put on a ____ with long sleeves and buttons down the front.",
+        "distractors": [
+          "shoes",
+          "hat"
+        ],
+        "reviewNote": "Only the target has sleeves in this clothing set."
+      },
+      "image": {
+        "src": "/vocabstream/images/shirt.svg",
+        "alt": "えりと前ボタン、短い袖がある青いシャツ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/shirt.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "shoes",
+        "hat"
+      ]
     },
     {
       "word": "pants",
@@ -19,7 +43,23 @@
       "synonyms": "trousers",
       "antonyms": "",
       "forms": "pants",
-      "example": "These pants are black."
+      "example": "These pants are black.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/pants.svg",
+        "alt": "腰から両足を別々に包む、ベージュ色の長いズボン。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pants.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "shirt",
+        "hat"
+      ]
     },
     {
       "word": "skirt",
@@ -28,16 +68,56 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "skirt, skirts",
-      "example": "Her skirt is long."
+      "example": "Her skirt is long.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/skirt.svg",
+        "alt": "ウエストから下に広がる、青いスカート。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/skirt.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "shoes",
+        "scarf"
+      ]
     },
     {
       "word": "shoes",
       "meaning": "things worn on the feet",
       "japaneseMeaning": "靴",
-      "synonyms": "footwear",
+      "synonyms": "",
       "antonyms": "",
       "forms": "shoe, shoes",
-      "example": "My shoes are by the door."
+      "example": "My shoes are by the door.",
+      "sentencePractice": {
+        "prompt": "I tied the laces of my ____ before walking outside.",
+        "distractors": [
+          "hat",
+          "socks"
+        ],
+        "reviewNote": "Laces and outdoor footwear identify shoes; ordinary hats and socks have no laces."
+      },
+      "image": {
+        "src": "/vocabstream/images/shoes.svg",
+        "alt": "ひもが付いた、左右一組の運動靴。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/shoes.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "hat",
+        "socks"
+      ]
     },
     {
       "word": "socks",
@@ -46,16 +126,64 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "sock, socks",
-      "example": "These socks are clean."
+      "example": "These socks are clean.",
+      "sentencePractice": {
+        "prompt": "I put the soft ____ on my feet before putting on my shoes.",
+        "distractors": [
+          "shirt",
+          "hat"
+        ],
+        "reviewNote": "The location and dressing sequence identify socks rather than upper-body clothing."
+      },
+      "image": {
+        "src": "/vocabstream/images/socks.svg",
+        "alt": "足首と足先を包む、左右一組の靴下。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/socks.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "shirt",
+        "hat"
+      ]
     },
     {
       "word": "hat",
       "meaning": "clothing worn on the head",
       "japaneseMeaning": "帽子",
-      "synonyms": "cap",
+      "synonyms": "",
       "antonyms": "",
       "forms": "hat, hats",
-      "example": "The hat is on the shelf."
+      "example": "The hat is on the shelf.",
+      "sentencePractice": {
+        "prompt": "I put a ____ on my head to keep the sun off my face.",
+        "distractors": [
+          "shirt",
+          "shoes"
+        ],
+        "reviewNote": "Headwear that shields the face identifies hat within this choice set."
+      },
+      "image": {
+        "src": "/vocabstream/images/hat.svg",
+        "alt": "つばのある、茶色い帽子。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/hat.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "shirt",
+        "shoes"
+      ]
     },
     {
       "word": "jacket",
@@ -64,16 +192,52 @@
       "synonyms": "coat",
       "antonyms": "",
       "forms": "jacket, jackets",
-      "example": "I wear a jacket in spring."
+      "example": "I wear a jacket in spring.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/jacket.svg",
+        "alt": "襟と前開きの留め具がある、腰丈のジャケット。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/jacket.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "shirt",
+        "skirt"
+      ]
     },
     {
       "word": "jeans",
-      "meaning": "strong blue pants",
+      "meaning": "pants made from strong cotton cloth called denim",
       "japaneseMeaning": "ジーンズ",
-      "synonyms": "pants",
+      "synonyms": "",
       "antonyms": "",
       "forms": "jeans",
-      "example": "These jeans are too long."
+      "example": "These jeans are too long.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f456.svg",
+        "alt": "縫い目とポケットがある青いジーンズ。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f456.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "skirt",
+        "scarf"
+      ]
     },
     {
       "word": "scarf",
@@ -82,7 +246,23 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "scarf, scarves",
-      "example": "She wears a scarf in winter."
+      "example": "She wears a scarf in winter.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/scarf.svg",
+        "alt": "首に巻くための、フリンジが付いた赤い長いマフラー。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/scarf.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "socks",
+        "pants"
+      ]
     },
     {
       "word": "sweater",
@@ -91,7 +271,25 @@
       "synonyms": "",
       "antonyms": "",
       "forms": "sweater, sweaters",
-      "example": "This sweater is warm."
+      "example": "This sweater is warm.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/sweater.svg",
+        "alt": "首回りと裾に編み目がある、かぶって着るセーター。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/sweater.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "jacket",
+        "scarf"
+      ]
     }
   ]
 }

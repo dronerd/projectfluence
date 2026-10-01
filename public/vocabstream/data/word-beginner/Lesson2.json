@@ -7,88 +7,281 @@
       "word": "butter",
       "meaning": "a soft yellow food made from milk",
       "japaneseMeaning": "バター",
-      "synonyms": "food",
+      "synonyms": "",
       "antonyms": "",
       "forms": "butter",
-      "example": "I put butter on bread."
+      "example": "I put butter on bread.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f9c8.svg",
+        "alt": "切り分けた黄色いバター。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f9c8.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "bread",
+        "soup"
+      ]
     },
     {
       "word": "cereal",
       "meaning": "dry food often eaten with milk",
       "japaneseMeaning": "シリアル",
-      "synonyms": "food",
+      "synonyms": "",
       "antonyms": "",
       "forms": "cereal, cereals",
-      "example": "Cereal is easy to eat in the morning."
+      "example": "Cereal is easy to eat in the morning.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/cereal.svg",
+        "alt": "穀物の箱と、牛乳に浮かぶ薄片の入った朝食用のボウル。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/cereal.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "soup",
+        "salad"
+      ]
     },
     {
       "word": "soup",
-      "meaning": "hot food with a lot of water",
+      "meaning": "a liquid food, often made with vegetables, meat, or fish",
       "japaneseMeaning": "スープ",
-      "synonyms": "food",
+      "synonyms": "",
       "antonyms": "",
       "forms": "soup, soups",
-      "example": "This soup has carrots in it."
+      "example": "This soup has carrots in it.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f372.svg",
+        "alt": "野菜などの具が入ったスープの器。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f372.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "salad",
+        "cookie"
+      ]
     },
     {
       "word": "pizza",
       "meaning": "round bread with cheese and other food on top",
       "japaneseMeaning": "ピザ",
-      "synonyms": "food",
+      "synonyms": "",
       "antonyms": "",
       "forms": "pizza, pizzas",
-      "example": "We ate pizza for dinner."
+      "example": "We ate pizza for dinner.",
+      "sentencePractice": {
+        "prompt": "We baked a round base with tomato sauce and cheese on top, then cut the ____ into slices.",
+        "distractors": [
+          "soup",
+          "sandwich"
+        ],
+        "reviewNote": "A baked round base with these toppings distinguishes pizza from soup and a filled sandwich."
+      },
+      "image": {
+        "src": "/vocabstream/images/pizza.svg",
+        "alt": "チーズと丸い具がのった、丸いピザ。一切れが少し離れている。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/pizza.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "soup",
+        "sandwich"
+      ]
     },
     {
       "word": "sandwich",
       "meaning": "food between two pieces of bread",
       "japaneseMeaning": "サンドイッチ",
-      "synonyms": "food",
+      "synonyms": "",
       "antonyms": "",
       "forms": "sandwich, sandwiches",
-      "example": "I made a sandwich for lunch."
+      "example": "I made a sandwich for lunch.",
+      "sentencePractice": {
+        "prompt": "I put chicken between two slices of bread to make a ____.",
+        "distractors": [
+          "cookie",
+          "salad"
+        ],
+        "reviewNote": "Food between bread slices defines sandwich and excludes both alternatives."
+      },
+      "image": {
+        "src": "/vocabstream/images/sandwich.svg",
+        "alt": "二枚の三角形のパンの間に、葉野菜や具をはさんだサンドイッチ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/sandwich.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "cookie",
+        "salad"
+      ]
     },
     {
       "word": "salad",
       "meaning": "cold food with vegetables",
       "japaneseMeaning": "サラダ",
-      "synonyms": "food",
+      "synonyms": "",
       "antonyms": "",
       "forms": "salad, salads",
-      "example": "The salad has tomato in it."
+      "example": "The salad has tomato in it.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f957.svg",
+        "alt": "葉野菜やトマトを盛ったサラダ。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f957.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "soup",
+        "bread"
+      ]
     },
     {
       "word": "cookie",
-      "meaning": "a small sweet food",
+      "meaning": "a small sweet baked food, usually flat and round",
       "japaneseMeaning": "クッキー",
-      "synonyms": "snack",
+      "synonyms": "",
       "antonyms": "",
       "forms": "cookie, cookies",
-      "example": "He ate a cookie after school."
+      "example": "He ate a cookie after school.",
+      "sentencePractice": {
+        "prompt": "She baked small, flat, sweet treats with chocolate chips. I ate one ____.",
+        "distractors": [
+          "soup",
+          "sandwich"
+        ],
+        "reviewNote": "Baked flat sweet treats with chocolate chips identify cookies in this choice set."
+      },
+      "image": {
+        "src": "/vocabstream/images/cookie.svg",
+        "alt": "丸い生地に茶色いチョコチップが入ったクッキー。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/cookie.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "soup",
+        "sandwich"
+      ]
     },
     {
       "word": "chocolate",
-      "meaning": "a sweet brown food",
+      "meaning": "a sweet food made from cocoa beans",
       "japaneseMeaning": "チョコレート",
-      "synonyms": "sweet",
+      "synonyms": "",
       "antonyms": "",
       "forms": "chocolate, chocolates",
-      "example": "This chocolate is very sweet."
+      "example": "This chocolate is very sweet.",
+      "sentencePractice": {
+        "prompt": "This sweet brown food is made from cocoa beans. It is ____.",
+        "distractors": [
+          "cheese",
+          "butter"
+        ],
+        "reviewNote": "The cocoa-bean source distinguishes chocolate from both milk products."
+      },
+      "image": {
+        "src": "/vocabstream/images/chocolate.svg",
+        "alt": "小さな四角に区切られた、茶色い板チョコレート。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/chocolate.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "meaningDistractors": [
+        "cheese",
+        "butter"
+      ]
     },
     {
       "word": "donut",
-      "meaning": "a small sweet round food",
+      "meaning": "a small sweet cake, often shaped like a ring",
       "japaneseMeaning": "ドーナツ",
-      "synonyms": "snack",
+      "synonyms": "doughnut",
       "antonyms": "",
       "forms": "donut, donuts",
-      "example": "I eat a donut after lunch."
+      "example": "I eat a donut after lunch.",
+      "sentencePractice": {
+        "prompt": "I chose the sweet ring-shaped cake with a hole in the middle. It was a ____.",
+        "distractors": [
+          "sandwich",
+          "salad"
+        ],
+        "reviewNote": "The sweet ring with a center hole distinguishes donut from both alternatives."
+      },
+      "image": {
+        "src": "/vocabstream/images/donut.svg",
+        "alt": "真ん中に穴がある、丸いドーナツ。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/donut.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "definitionType": "image+text",
+      "usageNote": "doughnut ともつづります。ここでは中央に穴のある形を画像で示しています。",
+      "meaningDistractors": [
+        "sandwich",
+        "salad"
+      ]
     },
     {
       "word": "sugar",
-      "meaning": "a sweet white thing used in food",
+      "meaning": "a sweet substance added to food and drinks",
       "japaneseMeaning": "砂糖",
-      "synonyms": "sweetener",
+      "synonyms": "",
       "antonyms": "",
       "forms": "sugar",
       "example": "She puts sugar in her coffee."

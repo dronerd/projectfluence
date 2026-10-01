@@ -27,7 +27,25 @@
       "synonyms": "connect, fasten",
       "antonyms": "remove, separate",
       "forms": "attach, attaches, attaching, attached",
-      "example": "Please attach a photo to the form."
+      "example": "Please attach a photo to the form.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/attach.svg",
+        "alt": "二枚の紙の上部を、一本のクリップで一緒に留めている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/attach.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "invest",
+        "struggle"
+      ]
     },
     {
       "word": "invest",
@@ -45,7 +63,25 @@
       "synonyms": "join, mix",
       "antonyms": "separate, divide",
       "forms": "combine, combines, combining, combined",
-      "example": "The course combines grammar practice with speaking."
+      "example": "The course combines grammar practice with speaking.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/combine.svg",
+        "alt": "別々のパンと具材を合わせ、一つのサンドイッチにする図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/combine.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "comply",
+        "misplace"
+      ]
     },
     {
       "word": "misplace",
@@ -90,7 +126,7 @@
       "synonyms": "increase, lift",
       "antonyms": "lower, reduce",
       "forms": "raise, raises, raising, raised",
-      "example": "The article raises an important question."
+      "example": "Please raise your hand if you have a question."
     }
   ]
 }

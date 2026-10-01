@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-proficiency-lesson-58",
+  "title": "Lesson 8",
+  "paragraph": "調査と組織の問題を捉える",
+  "words": [
+    {
+      "word": "leave no stone unturned",
+      "meaning": "to make every reasonable effort to find an answer or solution",
+      "japaneseMeaning": "あらゆる手段を尽くして調べる",
+      "example": "The team promised to leave no stone unturned in locating the missing records.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "turn a blind eye",
+        "pass the buck"
+      ]
+    },
+    {
+      "word": "trace back to",
+      "meaning": "to identify the earlier origin or cause of something",
+      "japaneseMeaning": "起源や原因を～までさかのぼって突き止める",
+      "example": "We can trace the error back to an incorrect entry in the first report.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "hinge on",
+        "allow for"
+      ],
+      "usageNote": "目的語を trace と back の間に置く形も使います。例: trace the error back to its source。"
+    },
+    {
+      "word": "come under fire",
+      "meaning": "to receive strong public criticism",
+      "japaneseMeaning": "厳しい批判を浴びる",
+      "example": "The proposal has come under fire for excluding rural communities.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "hold up to scrutiny",
+        "come to terms with"
+      ],
+      "usageNote": "ここでは批判を受ける比喩的な意味。実際の銃撃について述べる文脈ではありません。"
+    },
+    {
+      "word": "pass the buck",
+      "meaning": "to avoid responsibility by making someone else deal with a problem",
+      "japaneseMeaning": "責任を他人に押し付ける",
+      "example": "When no one takes ownership, departments tend to pass the buck.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "follow through",
+        "stand your ground"
+      ],
+      "sentencePractice": {
+        "prompt": "Neither department wants responsibility. Instead of solving the complaint, they ____ by repeatedly insisting that the other department must handle it.",
+        "distractors": [
+          "take ownership",
+          "follow through"
+        ],
+        "reviewNote": "Repeatedly transferring responsibility is passing the buck. Taking ownership accepts responsibility; following through completes the required action."
+      }
+    },
+    {
+      "word": "fall through the cracks",
+      "meaning": "to be overlooked because a system does not handle a person's needs or a task properly",
+      "japaneseMeaning": "制度や対応の隙間で見落とされる",
+      "example": "Without clear follow-up, some support requests fall through the cracks.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "come under fire",
+        "hold up to scrutiny"
+      ]
+    },
+    {
+      "word": "an uphill battle",
+      "meaning": "a task that is difficult because of strong obstacles or opposition",
+      "japaneseMeaning": "大きな困難や抵抗のある取り組み",
+      "example": "Restoring public trust after the scandal will be an uphill battle.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a foregone conclusion",
+        "a level playing field"
+      ]
+    },
+    {
+      "word": "a sticking point",
+      "meaning": "a particular issue that prevents agreement or progress",
+      "japaneseMeaning": "合意や進展を妨げる争点",
+      "example": "The payment schedule remains a sticking point in the negotiations.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a foregone conclusion",
+        "a means to an end"
+      ],
+      "sentencePractice": {
+        "prompt": "The two sides agree on everything except the price. That unresolved price is ____ preventing them from signing.",
+        "distractors": [
+          "a settled matter",
+          "a point of agreement"
+        ],
+        "reviewNote": "The price is explicitly unresolved and blocks signing. A settled matter is resolved; a point of agreement describes something both sides accept."
+      }
+    },
+    {
+      "word": "the elephant in the room",
+      "meaning": "an obvious important problem that people avoid discussing",
+      "japaneseMeaning": "明らかだが誰も触れようとしない重要な問題",
+      "example": "The missing funding was the elephant in the room at the planning meeting.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a red herring",
+        "the tip of the iceberg"
+      ]
+    },
+    {
+      "word": "cut through the noise",
+      "meaning": "to separate useful information from distracting messages or discussion",
+      "japaneseMeaning": "雑多な情報に惑わされず要点をつかむ",
+      "example": "A clear comparison table can cut through the noise of competing advertisements.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "split hairs",
+        "shift the burden of proof"
+      ]
+    },
+    {
+      "word": "under the radar",
+      "meaning": "without attracting attention or being noticed",
+      "japaneseMeaning": "注目や監視を受けずに",
+      "example": "The small research group worked under the radar until it published its results.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "in the pipeline",
+        "at the outset"
+      ]
+    }
+  ]
+}

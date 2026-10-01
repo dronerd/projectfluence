@@ -1,0 +1,145 @@
+{
+  "lesson_id": "specialized-environment-lesson-9",
+  "title": "Lesson 9",
+  "paragraph": "生息環境と自然のつながり",
+  "words": [
+    {
+      "word": "wetland",
+      "meaning": "land where water covers or saturates the soil long enough to support plants adapted to wet conditions",
+      "japaneseMeaning": "湿地",
+      "example": "The wetland holds water during the rainy season.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "aquifer",
+        "watershed"
+      ]
+    },
+    {
+      "word": "estuary",
+      "meaning": "a coastal area where river water meets and mixes with seawater",
+      "japaneseMeaning": "河口域・河口の汽水域",
+      "example": "The river carries nutrients into the estuary.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "aquifer",
+        "coral reef"
+      ],
+      "usageNote": "ここでは海沿いの河口域を指します。大きな湖への河口で類似した水域にも使われることがあります。"
+    },
+    {
+      "word": "coral reef",
+      "meaning": "an underwater structure built mainly from the hard skeletons produced by corals",
+      "japaneseMeaning": "サンゴ礁",
+      "example": "Many fish find shelter around the coral reef.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "wetland",
+        "peatland"
+      ]
+    },
+    {
+      "word": "mangrove",
+      "meaning": "a tree or shrub adapted to living along warm coasts in salty or partly salty water",
+      "japaneseMeaning": "マングローブの樹木",
+      "example": "The mangrove has roots adapted to the wet coastal soil.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "decomposer",
+        "predator"
+      ],
+      "usageNote": "樹木自体を指すほか、複数形 mangroves でマングローブ林を表すこともあります。"
+    },
+    {
+      "word": "peatland",
+      "meaning": "land with a substantial layer of partly decomposed plant material accumulated under wet conditions",
+      "japaneseMeaning": "泥炭地",
+      "example": "The project protects the peatland from drainage.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "coral reef",
+        "watershed"
+      ]
+    },
+    {
+      "word": "canopy",
+      "meaning": "the layer of branches and leaves forming the upper cover of a forest",
+      "japaneseMeaning": "林冠",
+      "example": "Little direct sunlight reaches the ground beneath the dense canopy.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "sediment",
+        "aquifer"
+      ],
+      "sentencePractice": {
+        "prompt": "The upper branches and leaves join to form the forest's overhead cover. This layer is the ____.",
+        "distractors": [
+          "sediment",
+          "aquifer"
+        ],
+        "reviewNote": "The forest's leafy upper cover is its canopy; sediment is deposited material and an aquifer stores and transmits groundwater."
+      }
+    },
+    {
+      "word": "soil fertility",
+      "meaning": "the ability of soil to provide nutrients and conditions needed for plant growth",
+      "japaneseMeaning": "土壌の肥沃度",
+      "example": "The study examined how farming methods affect soil fertility.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "salinity",
+        "air quality"
+      ]
+    },
+    {
+      "word": "habitat corridor",
+      "meaning": "a connected strip or route of suitable habitat that helps organisms move between separated areas",
+      "japaneseMeaning": "生息地を結ぶ回廊・生態系ネットワークの通路",
+      "example": "The habitat corridor links two areas of woodland.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "food chain",
+        "watershed"
+      ]
+    },
+    {
+      "word": "overfishing",
+      "meaning": "catching fish faster than their population can replace the losses over time",
+      "japaneseMeaning": "魚の乱獲",
+      "example": "The report examines how overfishing has reduced the local fish population.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "migration",
+        "pollination"
+      ]
+    },
+    {
+      "word": "salinity",
+      "meaning": "the concentration of dissolved salts in water",
+      "japaneseMeaning": "塩分濃度",
+      "example": "The team measures salinity at several points along the estuary.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "soil fertility",
+        "sea level"
+      ],
+      "sentencePractice": {
+        "prompt": "The sample is tested to find the concentration of salts dissolved in the water. This property is ____.",
+        "distractors": [
+          "sea level",
+          "air quality"
+        ],
+        "reviewNote": "Dissolved salt concentration is salinity; sea level measures ocean height and air quality describes the condition of air."
+      }
+    }
+  ]
+}

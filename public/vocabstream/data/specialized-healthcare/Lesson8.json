@@ -1,0 +1,143 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-8",
+  "title": "Lesson 8",
+  "paragraph": "ケアの連携と利用",
+  "words": [
+    {
+      "word": "care plan",
+      "meaning": "a written description of a person's care needs, goals, and agreed support",
+      "japaneseMeaning": "ケアプラン・療養計画",
+      "example": "The team reviewed the care plan with the patient.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "medical history",
+        "waiting list"
+      ]
+    },
+    {
+      "word": "handover",
+      "meaning": "the transfer of responsibility and important information between care staff",
+      "japaneseMeaning": "申し送り・引き継ぎ",
+      "example": "The evening team received an update during handover.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "discharge",
+        "referral"
+      ]
+    },
+    {
+      "word": "observation",
+      "meaning": "watching and checking a person's condition over time",
+      "japaneseMeaning": "観察",
+      "example": "The patient remained under observation after the procedure.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "consent",
+        "discharge"
+      ]
+    },
+    {
+      "word": "assessment",
+      "meaning": "the process of gathering and considering information about a person's health or care needs",
+      "japaneseMeaning": "アセスメント・状態の評価",
+      "example": "The assessment included questions about daily activities.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "referral",
+        "prescription"
+      ]
+    },
+    {
+      "word": "triage",
+      "meaning": "the process of deciding how urgently different patients need care",
+      "japaneseMeaning": "トリアージ・緊急度による優先順位の判断",
+      "example": "A trained nurse carried out triage when patients arrived.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "discharge",
+        "rehabilitation"
+      ],
+      "sentencePractice": {
+        "prompt": "Several patients arrive together. Staff decide who needs care most urgently through a process called ____.",
+        "distractors": [
+          "discharge",
+          "rehabilitation"
+        ],
+        "reviewNote": "Ordering patients by urgency identifies triage; formal release and recovery support serve different purposes."
+      }
+    },
+    {
+      "word": "outpatient",
+      "meaning": "a patient who receives hospital care without being admitted for a stay",
+      "japaneseMeaning": "外来患者",
+      "example": "She attended the hospital as an outpatient.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "inpatient",
+        "caregiver"
+      ],
+      "sentencePractice": {
+        "prompt": "She receives care at the hospital but is not admitted for a stay. She is an ____.",
+        "distractors": [
+          "inpatient",
+          "interpreter"
+        ],
+        "reviewNote": "Care without admission identifies an outpatient; an inpatient is admitted and an interpreter translates communication. All options fit after an."
+      }
+    },
+    {
+      "word": "inpatient",
+      "meaning": "a patient admitted to a hospital for a stay while receiving care",
+      "japaneseMeaning": "入院患者",
+      "example": "The service supports each inpatient during recovery.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "outpatient",
+        "interpreter"
+      ]
+    },
+    {
+      "word": "waiting list",
+      "meaning": "a record of people waiting to receive a service or procedure",
+      "japaneseMeaning": "診療や処置の待機者名簿",
+      "example": "The clinic confirmed that his name was on the waiting list.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "care plan",
+        "medical history"
+      ]
+    },
+    {
+      "word": "accessibility",
+      "meaning": "how easily people, including those with disabilities, can use a service or place",
+      "japaneseMeaning": "利用のしやすさ・アクセシビリティ",
+      "example": "The clinic improved accessibility with clear signs and step-free entrances.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "confidentiality",
+        "hydration"
+      ]
+    },
+    {
+      "word": "shared decision-making",
+      "meaning": "a process in which patients and professionals consider options together to agree on care",
+      "japaneseMeaning": "共同意思決定",
+      "example": "The consultation included shared decision-making about the next step.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "infection control",
+        "pain relief"
+      ]
+    }
+  ]
+}

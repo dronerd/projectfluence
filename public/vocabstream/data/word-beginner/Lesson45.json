@@ -10,8 +10,8 @@
     { "word": "safely", "meaning": "in a safe way", "japaneseMeaning": "安全に", "synonyms": "carefully, without danger", "antonyms": "dangerously, carelessly", "forms": "safely, more safely, most safely", "example": "Walk safely across the street." },
     { "word": "rarely", "meaning": "not often", "japaneseMeaning": "めったに〜ない", "synonyms": "not often, seldom", "antonyms": "often, usually", "forms": "rarely, more rarely, most rarely", "example": "He rarely eats breakfast late." },
     { "word": "normally", "meaning": "in the usual way", "japaneseMeaning": "普通は／通常", "synonyms": "usually, commonly", "antonyms": "unusually, rarely", "forms": "normally", "example": "We normally have lunch at noon." },
-    { "word": "daily", "meaning": "every day", "japaneseMeaning": "毎日", "synonyms": "every day, each day", "antonyms": "weekly, rarely", "forms": "daily", "example": "I practice English daily." },
-    { "word": "weekly", "meaning": "once a week or every week", "japaneseMeaning": "毎週", "synonyms": "every week, each week", "antonyms": "daily, yearly", "forms": "weekly", "example": "We clean the classroom weekly." },
-    { "word": "yearly", "meaning": "once a year or every year", "japaneseMeaning": "毎年", "synonyms": "every year, annually", "antonyms": "daily, weekly", "forms": "yearly", "example": "Our school festival happens yearly." }
+    { "word": "daily", "meaning": "every day", "japaneseMeaning": "毎日", "synonyms": "every day, each day", "antonyms": "", "forms": "daily", "example": "I practice English daily." },
+    { "word": "weekly", "meaning": "once a week or every week", "japaneseMeaning": "毎週", "synonyms": "every week, each week", "antonyms": "", "forms": "weekly", "example": "We clean the classroom weekly." },
+    { "word": "yearly", "meaning": "once a year or every year", "japaneseMeaning": "毎年", "synonyms": "every year, annually", "antonyms": "", "forms": "yearly", "example": "Our school festival happens yearly." }
   ]
 }

@@ -4,7 +4,7 @@
   "words": [
     {
       "word": "valid",
-      "meaning": "accepted because it is true or correct",
+      "meaning": "officially accepted or allowed to be used, or based on sound reasons",
       "japaneseMeaning": "有効な、妥当な",
       "synonyms": "accepted, correct",
       "antonyms": "invalid, wrong",
@@ -81,7 +81,25 @@
       "synonyms": "steady, secure",
       "antonyms": "unstable, weak",
       "forms": "stable, more stable, most stable",
-      "example": "The patient's condition is stable today."
+      "example": "The patient's condition is stable today.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/stable.svg",
+        "alt": "時間が進んでも、測定値が同じ高さを保つ水平な折れ線。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/stable.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "youthful",
+        "decisive"
+      ]
     },
     {
       "word": "frequent",
@@ -90,7 +108,25 @@
       "synonyms": "common, regular",
       "antonyms": "rare, occasional",
       "forms": "frequent, more frequent, most frequent",
-      "example": "Frequent breaks help students stay focused."
+      "example": "Frequent breaks help students stay focused.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/frequent.svg",
+        "alt": "一か月のカレンダーの多くの日に、同じ予定の印が付いている。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/frequent.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "social",
+        "exhausted"
+      ]
     }
   ]
 }

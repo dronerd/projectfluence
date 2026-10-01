@@ -5,12 +5,12 @@
     "words": [
       {"word": "resemble", "meaning": "to be similar to", "japaneseMeaning": "似ている", "synonyms": "look like, match", "antonyms": "differ, contrast", "example": "She resembles her mother."},
       {"word": "diverge", "meaning": "to separate in direction", "japaneseMeaning": "分岐する", "synonyms": "separate, differ", "antonyms": "converge, meet", "example": "Opinions diverge on this topic."},
-      {"word": "differentiate", "meaning": "to recognize differences", "japaneseMeaning": "区別する", "synonyms": "distinguish, discern", "antonyms": "confuse, mix up", "example": "Teachers differentiate instruction for students."},
+      {"word": "differentiate", "meaning": "to recognize differences", "japaneseMeaning": "区別する", "synonyms": "distinguish, discern", "antonyms": "confuse, mix up", "example": "Can you differentiate between the original painting and the copy?"},
       {"word": "parallel", "meaning": "similar or corresponding", "japaneseMeaning": "平行の、類似の", "synonyms": "similar, analogous", "antonyms": "perpendicular, divergent", "example": "The story runs parallel to history."},
       {"word": "oppose", "meaning": "to resist or act against", "japaneseMeaning": "反対する", "synonyms": "resist, confront", "antonyms": "support, agree", "example": "They opposed the proposal."},
       {"word": "counterpart", "meaning": "person or thing with similar role", "japaneseMeaning": "相当物", "synonyms": "equivalent, peer", "antonyms": "", "example": "He met his French counterpart."},
       {"word": "vary", "meaning": "to change or differ", "japaneseMeaning": "変わる、異なる", "synonyms": "differ, fluctuate", "antonyms": "remain, stay", "example": "Temperatures vary across regions."},
-      {"word": "contrast", "meaning": "to compare differences", "japaneseMeaning": "対比する", "synonyms": "differ, oppose", "antonyms": "compare, resemble", "example": "Light contrasts with dark."},
+      {"word": "contrast", "meaning": "to compare things in order to show their differences", "japaneseMeaning": "対比する", "synonyms": "set against", "antonyms": "equate", "example": "The essay contrasts city life with life in the countryside."},
       {"word": "comparable", "meaning": "able to be compared", "japaneseMeaning": "比較できる", "synonyms": "similar, equivalent", "antonyms": "incomparable, different", "example": "The two products are comparable."},
       {"word": "distinct", "meaning": "clearly different", "japaneseMeaning": "明確な、はっきりした", "synonyms": "unique, separate", "antonyms": "similar, indistinct", "example": "Each culture has distinct traits."}
     ]

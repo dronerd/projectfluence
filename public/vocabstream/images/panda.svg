@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>白い体に黒い耳、目のまわり、足があるパンダ。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="120" cy="119" rx="45" ry="38" fill="#faf9ef"/><ellipse cx="82" cy="117" rx="16" ry="30" fill="#566669" transform="rotate(20 82 117)"/><ellipse cx="158" cy="117" rx="16" ry="30" fill="#566669" transform="rotate(-20 158 117)"/><ellipse cx="94" cy="150" rx="23" ry="14" fill="#566669"/><ellipse cx="146" cy="150" rx="23" ry="14" fill="#566669"/><circle cx="86" cy="41" r="18" fill="#566669"/><circle cx="154" cy="41" r="18" fill="#566669"/><ellipse cx="120" cy="71" rx="48" ry="39" fill="#faf9ef"/><ellipse cx="98" cy="70" rx="13" ry="17" fill="#566669" transform="rotate(28 98 70)"/><ellipse cx="143" cy="70" rx="13" ry="17" fill="#566669" transform="rotate(-28 143 70)"/><circle cx="101" cy="69" r="4" fill="#fff" stroke="none"/><circle cx="140" cy="69" r="4" fill="#fff" stroke="none"/><path fill="#566669" d="m113 88 15 0-8 7Z"/><path d="M120 94v7m-7-1q7 6 14 0"/></g>
+</svg>

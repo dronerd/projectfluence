@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>二つの国の領域が接する線を、赤く太く示した地図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<path d="M28 45 128 27 179 67 168 178 45 211Z" fill="#89b28c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M179 67 285 32 331 99 300 204 168 178Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M179 67 168 178" fill="none" stroke="#d9887b" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><text x="94" y="129" text-anchor="middle" font-size="24" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">国①</text><text x="249" y="129" text-anchor="middle" font-size="24" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">国②</text><line x1="185" y1="215" x2="176" y2="175" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="176,175 173.3170731707317,185.85365853658536 183.0731707317073,183.65853658536585" fill="#40565b"/>
+</svg>

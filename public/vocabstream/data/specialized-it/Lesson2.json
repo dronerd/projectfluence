@@ -1,0 +1,135 @@
+{
+  "lesson_id": "specialized-it-lesson-2",
+  "title": "Lesson 2",
+  "paragraph": "プログラミング",
+  "words": [
+    {
+      "word": "variable",
+      "meaning": "a named place in a program that holds a value which may change",
+      "japaneseMeaning": "変数",
+      "example": "This variable stores the number of items in the cart.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "condition",
+        "error"
+      ]
+    },
+    {
+      "word": "function",
+      "meaning": "a reusable block of code that performs a task",
+      "japaneseMeaning": "関数",
+      "example": "This function checks whether the address is valid.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "input",
+        "debug"
+      ]
+    },
+    {
+      "word": "loop",
+      "meaning": "code that repeats an action while a condition is met or for a set number of times",
+      "japaneseMeaning": "ループ・繰り返し処理",
+      "example": "The loop checks each name in the list.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "output",
+        "test case"
+      ],
+      "sentencePractice": {
+        "prompt": "The program repeats the same action for each item. The code that repeats is a ____.",
+        "distractors": [
+          "variable",
+          "version"
+        ],
+        "reviewNote": "Repetition is the defining function; a value holder and a release cannot perform it by themselves."
+      }
+    },
+    {
+      "word": "condition",
+      "meaning": "a test in a program that determines which action happens next",
+      "japaneseMeaning": "条件",
+      "example": "The program displays a warning if this condition is true.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "error",
+        "version"
+      ]
+    },
+    {
+      "word": "input",
+      "meaning": "data given to a computer program for processing",
+      "japaneseMeaning": "入力",
+      "example": "The form checks user input before saving it.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "debug",
+        "variable"
+      ]
+    },
+    {
+      "word": "output",
+      "meaning": "information produced by a computer program",
+      "japaneseMeaning": "出力",
+      "example": "The output is a list of matching products.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "test case",
+        "function"
+      ]
+    },
+    {
+      "word": "error",
+      "meaning": "a problem that prevents a program from working as intended",
+      "japaneseMeaning": "エラー",
+      "example": "The application displays an error when the file is missing.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "version",
+        "loop"
+      ]
+    },
+    {
+      "word": "debug",
+      "meaning": "to find and fix problems in a program",
+      "japaneseMeaning": "デバッグする",
+      "example": "We need to debug the search function before release.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "variable",
+        "condition"
+      ]
+    },
+    {
+      "word": "test case",
+      "meaning": "a set of inputs and expected results used to check software behavior",
+      "japaneseMeaning": "テストケース",
+      "example": "This test case checks what happens when the password is empty.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "function",
+        "input"
+      ]
+    },
+    {
+      "word": "version",
+      "meaning": "a particular form of software at a stage in its development",
+      "japaneseMeaning": "バージョン",
+      "example": "The latest version fixes the loading problem.",
+      "definitionType": "text",
+      "domain": "it",
+      "meaningDistractors": [
+        "loop",
+        "output"
+      ]
+    }
+  ]
+}

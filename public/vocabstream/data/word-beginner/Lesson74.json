@@ -3,15 +3,165 @@
   "title": "Lesson 74",
   "paragraph": "This lesson practices useful nouns for travel and town places.",
   "words": [
-    { "word": "port", "meaning": "a place where ships stop", "japaneseMeaning": "港", "synonyms": "harbor, ship stop", "antonyms": "inland place", "forms": "port, ports", "example": "The ship leaves the port." },
-    { "word": "harbor", "meaning": "a safe place for boats near land", "japaneseMeaning": "港", "synonyms": "port, boat place", "antonyms": "open sea", "forms": "harbor, harbors", "example": "Small boats are in the harbor." },
-    { "word": "church", "meaning": "a building where Christians pray", "japaneseMeaning": "教会", "synonyms": "prayer building, chapel", "antonyms": "none", "forms": "church, churches", "example": "The church is old and white." },
-    { "word": "temple", "meaning": "a building where people pray", "japaneseMeaning": "寺／神殿", "synonyms": "prayer place, shrine", "antonyms": "none", "forms": "temple, temples", "example": "We visited a temple in Nara." },
-    { "word": "village", "meaning": "a very small town", "japaneseMeaning": "村", "synonyms": "small town, community", "antonyms": "city", "forms": "village, villages", "example": "My grandparents live in a village." },
-    { "word": "subway", "meaning": "a train that runs under a city", "japaneseMeaning": "地下鉄", "synonyms": "underground train, metro", "antonyms": "bus", "forms": "subway, subways", "example": "We take the subway to work." },
-    { "word": "platform", "meaning": "the place where people wait for a train", "japaneseMeaning": "ホーム", "synonyms": "train area, waiting place", "antonyms": "train", "forms": "platform, platforms", "example": "Wait on platform three." },
-    { "word": "ferry", "meaning": "a boat that carries people or cars", "japaneseMeaning": "フェリー", "synonyms": "boat, ship", "antonyms": "train", "forms": "ferry, ferries", "example": "The ferry crosses the river." },
-    { "word": "luggage", "meaning": "bags used for travel", "japaneseMeaning": "荷物", "synonyms": "bags, baggage", "antonyms": "none", "forms": "luggage", "example": "My luggage is under the seat." },
-    { "word": "schedule", "meaning": "a list of times for plans or travel", "japaneseMeaning": "予定表／時刻表", "synonyms": "timetable, plan", "antonyms": "no plan", "forms": "schedule, schedules", "example": "Check the train schedule." }
+    {
+      "word": "port",
+      "meaning": "a place where ships stop",
+      "japaneseMeaning": "港",
+      "synonyms": "harbor, ship stop",
+      "antonyms": "",
+      "forms": "port, ports",
+      "example": "The ship leaves the port."
+    },
+    {
+      "word": "harbor",
+      "meaning": "a safe place for boats near land",
+      "japaneseMeaning": "港",
+      "synonyms": "port, boat place",
+      "antonyms": "",
+      "forms": "harbor, harbors",
+      "example": "Small boats are in the harbor."
+    },
+    {
+      "word": "church",
+      "meaning": "a building where Christians pray",
+      "japaneseMeaning": "教会",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "church, churches",
+      "example": "The church is old and white.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/26ea.svg",
+        "alt": "十字架を掲げたキリスト教の教会。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/26ea.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "factory",
+        "hotel"
+      ]
+    },
+    {
+      "word": "temple",
+      "meaning": "a building where people such as Buddhists or Hindus pray",
+      "japaneseMeaning": "寺／神殿",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "temple, temples",
+      "example": "We visited a temple in Nara.",
+      "meaningDistractors": [
+        "platform",
+        "ferry"
+      ],
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1f6d5.svg",
+        "alt": "宗教的な祈りに使う寺院の一例。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1f6d5.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      }
+    },
+    {
+      "word": "village",
+      "meaning": "a very small town",
+      "japaneseMeaning": "村",
+      "synonyms": "small town, community",
+      "antonyms": "",
+      "forms": "village, villages",
+      "example": "My grandparents live in a village."
+    },
+    {
+      "word": "subway",
+      "meaning": "a train that runs under a city",
+      "japaneseMeaning": "地下鉄",
+      "synonyms": "underground train, metro",
+      "antonyms": "",
+      "forms": "subway, subways",
+      "example": "We take the subway to work.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/subway.svg",
+        "alt": "街の地面より下にあるトンネルを走る電車の断面図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/subway.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "ferry",
+        "taxi"
+      ]
+    },
+    {
+      "word": "platform",
+      "meaning": "the place where people wait for a train",
+      "japaneseMeaning": "ホーム",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "platform, platforms",
+      "example": "Wait on platform three."
+    },
+    {
+      "word": "ferry",
+      "meaning": "a boat that carries people or cars",
+      "japaneseMeaning": "フェリー",
+      "synonyms": "boat, ship",
+      "antonyms": "",
+      "forms": "ferry, ferries",
+      "example": "The ferry crosses the river.",
+      "definitionType": "image+text",
+      "image": {
+        "src": "/vocabstream/images/ferry.svg",
+        "alt": "車と乗客を運ぶための甲板がある、水上のフェリー。",
+        "width": 240,
+        "height": 180,
+        "source": "ProjectFluence original SVG illustration",
+        "sourceUrl": "/vocabstream/images/ferry.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "subway",
+        "luggage"
+      ]
+    },
+    {
+      "word": "luggage",
+      "meaning": "bags used for travel",
+      "japaneseMeaning": "荷物",
+      "synonyms": "bags, baggage",
+      "antonyms": "",
+      "forms": "luggage",
+      "example": "My luggage is under the seat."
+    },
+    {
+      "word": "schedule",
+      "meaning": "a list of times for plans or travel",
+      "japaneseMeaning": "予定表／時刻表",
+      "synonyms": "timetable, plan",
+      "antonyms": "",
+      "forms": "schedule, schedules",
+      "example": "Check the train schedule."
+    }
   ]
 }

@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-academic-lesson-6",
+  "title": "Lesson 6",
+  "paragraph": "データの要約と解釈",
+  "words": [
+    {
+      "word": "mean",
+      "meaning": "the value found by adding all numerical observations and dividing by their number",
+      "japaneseMeaning": "平均値",
+      "example": "The mean score increased after the course.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "median",
+        "mode"
+      ]
+    },
+    {
+      "word": "median",
+      "meaning": "the middle value in an ordered set, or the mean of the two middle values when the count is even",
+      "japaneseMeaning": "中央値",
+      "example": "The report gives the median household income.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "mean",
+        "mode"
+      ],
+      "sentencePractice": {
+        "prompt": "After five different values are ordered from smallest to largest, the researcher selects the third value. This method finds the ____.",
+        "distractors": [
+          "mean",
+          "mode"
+        ],
+        "reviewNote": "Selecting the central ordered value is the method for finding the median; the mean uses arithmetic averaging and the mode identifies the most frequent value, even if numerical results happen to coincide."
+      }
+    },
+    {
+      "word": "mode",
+      "meaning": "the value or category that occurs most often in a set of observations",
+      "japaneseMeaning": "最頻値",
+      "example": "The mode was the most frequently chosen response.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "mean",
+        "median"
+      ]
+    },
+    {
+      "word": "distribution",
+      "meaning": "the pattern showing how values or categories occur across a set of observations",
+      "japaneseMeaning": "分布",
+      "example": "The graph shows the distribution of test scores.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "estimate",
+        "effect size"
+      ]
+    },
+    {
+      "word": "variability",
+      "meaning": "the extent to which observations differ from one another",
+      "japaneseMeaning": "ばらつき・変動性",
+      "example": "The second group showed greater variability in completion time.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "proportion",
+        "statistical significance"
+      ]
+    },
+    {
+      "word": "standard deviation",
+      "meaning": "a numerical measure of how spread out values are around their mean",
+      "japaneseMeaning": "標準偏差",
+      "example": "The table reports the mean and standard deviation for each group.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "median",
+        "proportion"
+      ]
+    },
+    {
+      "word": "proportion",
+      "meaning": "the size of a part divided by the size of the whole",
+      "japaneseMeaning": "割合・比率",
+      "example": "The proportion of participants who completed the task was higher this year.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "mean",
+        "standard deviation"
+      ]
+    },
+    {
+      "word": "estimate",
+      "meaning": "an approximate value for an unknown quantity based on available information",
+      "japaneseMeaning": "推定値",
+      "example": "The sample provided an estimate of average study time.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "hypothesis",
+        "mode"
+      ]
+    },
+    {
+      "word": "statistical significance",
+      "meaning": "a test result meeting a chosen cutoff for evidence against a stated starting assumption",
+      "japaneseMeaning": "統計的有意性",
+      "example": "The authors reported statistical significance alongside the size of the difference.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "effect size",
+        "variability"
+      ],
+      "usageNote": "検定の前提が成り立つ条件で、帰無仮説に対する所定の基準を満たすことです。効果の大きさ、実用上の重要性、仮説が正しい確率は示しません。"
+    },
+    {
+      "word": "effect size",
+      "meaning": "a numerical measure of the magnitude of a difference or relationship",
+      "japaneseMeaning": "効果量",
+      "example": "The effect size describes how large the observed difference was.",
+      "definitionType": "text",
+      "domain": "academic",
+      "meaningDistractors": [
+        "statistical significance",
+        "sample"
+      ],
+      "sentencePractice": {
+        "prompt": "The authors report how large the difference between the groups is, rather than whether it crosses a testing threshold. They report the ____.",
+        "distractors": [
+          "statistical significance",
+          "sample"
+        ],
+        "reviewNote": "Magnitude of a difference identifies effect size; statistical significance concerns a threshold and a sample is the set studied."
+      }
+    }
+  ]
+}

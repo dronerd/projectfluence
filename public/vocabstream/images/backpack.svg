@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>二本の肩ひもと前ポケットのある、青いリュックサック。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#658998" fill="none" stroke-width="11" d="M78 60q-27 27-22 79m106-79q27 27 22 79M105 39V27q15-14 30 0v12"/><path fill="#83b2c1" d="M66 73q0-40 54-40t54 40v73q-54 23-108 0Z"/><path fill="#b2d1d8" d="M82 100q38-12 76 0v39q-38 12-76 0Z"/><path d="M81 88V74q0-24 39-24t39 24v14m-76 20h74"/><path stroke="#efd69c" stroke-width="5" d="M146 110v11m10-47v12"/></g>
+</svg>

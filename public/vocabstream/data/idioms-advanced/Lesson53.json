@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-advanced-lesson-53",
+  "title": "Lesson 3",
+  "paragraph": "比較と判断",
+  "words": [
+    {
+      "word": "weigh up",
+      "meaning": "to compare the advantages and disadvantages of a choice",
+      "japaneseMeaning": "比較してよく検討する",
+      "example": "We need to weigh up the costs and benefits.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "come up with",
+        "keep your options open"
+      ]
+    },
+    {
+      "word": "rule out",
+      "meaning": "to decide that something is not possible or suitable",
+      "japaneseMeaning": "選択肢から除外する",
+      "example": "We can't rule out a change in the schedule.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "take into account",
+        "on balance"
+      ],
+      "sentencePractice": {
+        "prompt": "This option is impossible, so we can ____ that option and consider the others.",
+        "distractors": [
+          "weigh up",
+          "come up with"
+        ],
+        "reviewNote": "An impossible option is eliminated, not compared further or invented."
+      }
+    },
+    {
+      "word": "figure out",
+      "meaning": "to understand or solve something by thinking",
+      "japaneseMeaning": "理解する・解決法を見つける",
+      "example": "I'm trying to figure out why the printer won't work.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "make up your mind",
+        "in the long run"
+      ]
+    },
+    {
+      "word": "come up with",
+      "meaning": "to think of an idea or solution",
+      "japaneseMeaning": "思いつく",
+      "example": "Can you come up with a better title?",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "keep your options open",
+        "a trade-off"
+      ]
+    },
+    {
+      "word": "take into account",
+      "meaning": "to consider a fact when making a decision",
+      "japaneseMeaning": "考慮に入れる",
+      "example": "We must take into account the needs of part-time staff.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "rule out",
+        "keep your options open"
+      ]
+    },
+    {
+      "word": "make up your mind",
+      "meaning": "to decide what you want to do",
+      "japaneseMeaning": "決心する",
+      "example": "You don't have to make up your mind today.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "in the long run",
+        "rule out"
+      ]
+    },
+    {
+      "word": "keep your options open",
+      "meaning": "to avoid deciding too soon so several choices remain",
+      "japaneseMeaning": "選択肢を残しておく",
+      "example": "I'm applying to several colleges to keep my options open.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a trade-off",
+        "figure out"
+      ]
+    },
+    {
+      "word": "on balance",
+      "meaning": "after considering both the good and bad points",
+      "japaneseMeaning": "総合的に判断すると",
+      "example": "On balance, the new timetable works better.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "weigh up",
+        "come up with"
+      ]
+    },
+    {
+      "word": "in the long run",
+      "meaning": "over a long period rather than immediately",
+      "japaneseMeaning": "長い目で見ると",
+      "example": "Better insulation saves money in the long run.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "rule out",
+        "take into account"
+      ]
+    },
+    {
+      "word": "a trade-off",
+      "meaning": "a choice in which gaining one benefit means losing another",
+      "japaneseMeaning": "何かを得るために別の利点を失うこと",
+      "example": "There is a trade-off between cost and speed.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "figure out",
+        "make up your mind"
+      ]
+    }
+  ]
+}

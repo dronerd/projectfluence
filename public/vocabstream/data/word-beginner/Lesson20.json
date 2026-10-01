@@ -3,15 +3,221 @@
   "title": "Lesson 20",
   "paragraph": "Adverbs for time and place.",
   "words": [
-    { "word": "now", "meaning": "at this time", "japaneseMeaning": "今", "synonyms": "right now", "antonyms": "later", "forms": "now", "example": "Please come now." },
-    { "word": "here", "meaning": "in this place", "japaneseMeaning": "ここに、ここで", "synonyms": "this place", "antonyms": "there", "forms": "here", "example": "Put your bag here." },
-    { "word": "there", "meaning": "in that place", "japaneseMeaning": "そこに、あそこに", "synonyms": "that place", "antonyms": "here", "forms": "there", "example": "The station is there." },
-    { "word": "up", "meaning": "to or in a higher place", "japaneseMeaning": "上へ、上に", "synonyms": "higher", "antonyms": "down", "forms": "up", "example": "Look up at the sky." },
-    { "word": "down", "meaning": "to or in a lower place", "japaneseMeaning": "下へ、下に", "synonyms": "lower", "antonyms": "up", "forms": "down", "example": "Sit down, please." },
-    { "word": "inside", "meaning": "in a room, building, or thing", "japaneseMeaning": "中に、中で", "synonyms": "indoors", "antonyms": "outside", "forms": "inside", "example": "The dog is inside." },
-    { "word": "outside", "meaning": "not inside a room or building", "japaneseMeaning": "外に、外で", "synonyms": "outdoors", "antonyms": "inside", "forms": "outside", "example": "The children play outside." },
-    { "word": "near", "meaning": "not far away", "japaneseMeaning": "近くに", "synonyms": "close", "antonyms": "far", "forms": "near, nearer, nearest", "example": "My house is near school." },
-    { "word": "far", "meaning": "not near", "japaneseMeaning": "遠くに", "synonyms": "away", "antonyms": "near", "forms": "far, farther, farthest", "example": "The park is far from here." },
-    { "word": "today", "meaning": "on this day", "japaneseMeaning": "今日", "synonyms": "this day", "antonyms": "tomorrow", "forms": "today", "example": "Today is sunny." }
+    {
+      "word": "now",
+      "meaning": "at this time",
+      "japaneseMeaning": "今",
+      "synonyms": "right now",
+      "antonyms": "later",
+      "forms": "now",
+      "example": "Please come now."
+    },
+    {
+      "word": "here",
+      "meaning": "in this place",
+      "japaneseMeaning": "ここに、ここで",
+      "synonyms": "this place",
+      "antonyms": "there",
+      "forms": "here",
+      "example": "Put your bag here."
+    },
+    {
+      "word": "there",
+      "meaning": "in that place",
+      "japaneseMeaning": "そこに、あそこに",
+      "synonyms": "that place",
+      "antonyms": "here",
+      "forms": "there",
+      "example": "The station is there."
+    },
+    {
+      "word": "up",
+      "meaning": "to or in a higher place",
+      "japaneseMeaning": "上へ、上に",
+      "synonyms": "higher",
+      "antonyms": "down",
+      "forms": "up",
+      "example": "Look up at the sky.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/up.svg",
+        "alt": "丸の位置から上向きに進む矢印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/up.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "down",
+        "inside"
+      ]
+    },
+    {
+      "word": "down",
+      "meaning": "to or in a lower place",
+      "japaneseMeaning": "下へ、下に",
+      "synonyms": "lower",
+      "antonyms": "up",
+      "forms": "down",
+      "example": "Sit down, please.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/down.svg",
+        "alt": "丸の位置から下向きに進む矢印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/down.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "up",
+        "outside"
+      ]
+    },
+    {
+      "word": "inside",
+      "meaning": "in a room, building, or thing",
+      "japaneseMeaning": "中に、中で",
+      "synonyms": "indoors",
+      "antonyms": "outside",
+      "forms": "inside",
+      "example": "The dog is inside.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/inside.svg",
+        "alt": "箱の境界の内側にある目印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/inside.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "outside",
+        "up"
+      ]
+    },
+    {
+      "word": "outside",
+      "meaning": "not inside a room or building",
+      "japaneseMeaning": "外に、外で",
+      "synonyms": "outdoors",
+      "antonyms": "inside",
+      "forms": "outside",
+      "example": "The children play outside.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/outside.svg",
+        "alt": "箱の境界の外側にある目印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/outside.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "inside",
+        "down"
+      ]
+    },
+    {
+      "word": "near",
+      "meaning": "not far away",
+      "japaneseMeaning": "近くに",
+      "synonyms": "close",
+      "antonyms": "far",
+      "forms": "near, nearer, nearest",
+      "example": "My house is near school.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/near.svg",
+        "alt": "建物のすぐそばにある丸い目印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/near.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "far",
+        "inside"
+      ]
+    },
+    {
+      "word": "far",
+      "meaning": "not near",
+      "japaneseMeaning": "遠くに",
+      "synonyms": "away",
+      "antonyms": "near",
+      "forms": "far, farther, farthest",
+      "example": "The park is far from here.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/far.svg",
+        "alt": "建物から大きく離れた丸い目印。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/far.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "near",
+        "outside"
+      ]
+    },
+    {
+      "word": "today",
+      "meaning": "on this day",
+      "japaneseMeaning": "今日",
+      "synonyms": "this day",
+      "antonyms": "",
+      "forms": "today",
+      "example": "Today is sunny.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/today.svg",
+        "alt": "今日を十五日とした例で、当日の十五日を強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/today.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "yesterday",
+        "tomorrow"
+      ]
+    }
   ]
 }

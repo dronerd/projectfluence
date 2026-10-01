@@ -18,7 +18,25 @@
       "synonyms": "paper, file",
       "antonyms": "blank, speech",
       "forms": "document, documents",
-      "example": "Please sign the document before you leave the office."
+      "example": "Please sign the document before you leave the office.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/document.svg",
+        "alt": "見出し、文章、図が印刷された一枚の文書。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/document.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "attendance",
+        "relationship"
+      ]
     },
     {
       "word": "equipment",
@@ -90,7 +108,25 @@
       "synonyms": "range, mix",
       "antonyms": "sameness, uniformity",
       "forms": "variety, varieties",
-      "example": "The store sells a variety of fresh fruit."
+      "example": "The store sells a variety of fresh fruit.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/variety.svg",
+        "alt": "りんご、オレンジ、バナナという異なる種類の果物が並ぶ。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/variety.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "instruction",
+        "trouble"
+      ]
     }
   ]
 }

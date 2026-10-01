@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>顔のまわりに茶色いたてがみがある、金色のライオン。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#c6964d" stroke-width="8" d="M163 128q40-24 25-51"/><path fill="#a96e3f" d="m184 83 6-20 12 15-11 11Z"/><ellipse cx="130" cy="119" rx="45" ry="31" fill="#e5ba6f"/><path fill="#e5ba6f" d="M102 121h22v34h-29Zm44 3h20v31h-24Z"/><path fill="#a96e3f" d="m81 36 17-9 17 9 20 4 4 20 9 17-9 18-5 21-22 4-17 9-20-11-22-6-3-22-7-17 11-17 5-17Z"/><circle cx="76" cy="52" r="11" fill="#e5ba6f"/><circle cx="115" cy="52" r="11" fill="#e5ba6f"/><ellipse cx="96" cy="76" rx="28" ry="30" fill="#e5ba6f"/><path d="M85 73v2m22-2v2m-11 15v10m-8-1q8 7 16 0"/><path fill="#7e614b" d="m89 85 14 0-7 7Z"/></g>
+</svg>

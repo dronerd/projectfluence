@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>先を削ると木と芯が見える、黄色い鉛筆。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(35 120 90)"><path fill="#e8c96c" d="M105 32h30v99h-30Z"/><path fill="#f1d5ad" d="m105 131 15 33 15-33Z"/><path fill="#46535b" d="m115 153 5 11 5-11Z"/><path fill="#e8a396" d="M105 20q15-7 30 0v15h-30Z"/><path fill="#c9d2d5" d="M104 32h32v13h-32Z"/><path stroke="#b79b44" d="M120 47v81"/></g></g>
+</svg>

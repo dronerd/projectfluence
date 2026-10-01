@@ -58,6 +58,10 @@ For local development, use ignored root `.env.local` for Next and ignored `api/s
 
 `NEXT_PUBLIC_*` values are embedded during `npm run build`. Changing them in Render requires a new build/deploy; restarting the existing process is insufficient. The same Supabase project must be used in the browser, Next, and Python environments.
 
+## VidMatch curation branch prerequisite
+
+The curation branch adds migration `20260930000100_vidmatch_curation.sql`. Apply it after the baseline/hardening migrations, then run `npm run vidmatch:catalog -- import --env-file .env.local --write` with the intended project before deploying active-only recommendation code or enabling cron. The initial pre-migration catalog additions do not activate themselves after migration. The worker, variables, review process, legacy bridge and exact branch rollout are documented in [the VidMatch runbook](../apps/vidmatch/README.md). Do not set `VIDMATCH_LEGACY_CATALOG=true` in the final production configuration: it bypasses review/freshness filtering. SpeakWise/Render Python settings are unchanged by this branch.
+
 ## Deployment sequence
 
 1. **GitHub:** publish/review the audit branch. Keep production auto-deploy paused while applying schema/config changes. Do not merge into a production auto-deploy branch until steps 2–4 are ready. Existing uncommitted transcript/IR work is separate from the audit commit.

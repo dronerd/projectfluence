@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>月曜から木曜までの区間を、時間の線上で帯として示した図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<line x1="40" y1="142" x2="320" y2="142" stroke="#b7c6c6" stroke-width="4" stroke-linecap="round"/><line x1="96" y1="128" x2="96" y2="156" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><line x1="253" y1="128" x2="253" y2="156" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><rect x="96" y="102" width="157" height="27" rx="1" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><text x="96" y="185" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">月曜</text><text x="253" y="185" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">木曜</text><text x="177" y="70" text-anchor="middle" font-size="19" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">この間の時間</text>
+</svg>

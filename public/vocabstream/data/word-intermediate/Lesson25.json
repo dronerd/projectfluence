@@ -27,7 +27,25 @@
       "synonyms": "local office, division",
       "antonyms": "headquarters, main office",
       "forms": "branch, branches",
-      "example": "The bank opened a new branch near the station."
+      "example": "The bank opened a new branch near the station.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/branch.svg",
+        "alt": "本社の下につながる三つの支社のうち、一つを囲んだ組織図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/branch.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "policy",
+        "ethnicity"
+      ]
     },
     {
       "word": "performance",

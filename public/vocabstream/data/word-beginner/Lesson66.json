@@ -3,15 +3,205 @@
   "title": "Lesson 66",
   "paragraph": "This lesson practices useful nouns for meals and table items.",
   "words": [
-    { "word": "menu", "meaning": "a list of food in a restaurant", "japaneseMeaning": "メニュー", "synonyms": "food list, list", "antonyms": "none", "forms": "menu, menus", "example": "The menu has many desserts." },
-    { "word": "napkin", "meaning": "paper or cloth used while eating", "japaneseMeaning": "ナプキン", "synonyms": "cloth, paper", "antonyms": "none", "forms": "napkin, napkins", "example": "Put the napkin on your lap." },
-    { "word": "straw", "meaning": "a small tube used for drinking", "japaneseMeaning": "ストロー", "synonyms": "tube, drink tube", "antonyms": "none", "forms": "straw, straws", "example": "She drinks juice with a straw." },
-    { "word": "tray", "meaning": "a flat thing used to carry food or cups", "japaneseMeaning": "トレー／盆", "synonyms": "plate, board", "antonyms": "none", "forms": "tray, trays", "example": "Put your lunch on the tray." },
-    { "word": "chopstick", "meaning": "one of two thin sticks used for eating", "japaneseMeaning": "箸", "synonyms": "eating stick, stick", "antonyms": "fork", "forms": "chopstick, chopsticks", "example": "I use chopsticks for rice." },
-    { "word": "teapot", "meaning": "a pot used for making or pouring tea", "japaneseMeaning": "急須／ティーポット", "synonyms": "tea pot, pot", "antonyms": "none", "forms": "teapot, teapots", "example": "The teapot is on the table." },
-    { "word": "kettle", "meaning": "a thing used to boil water", "japaneseMeaning": "やかん／ケトル", "synonyms": "water pot, boiler", "antonyms": "none", "forms": "kettle, kettles", "example": "The kettle is hot." },
-    { "word": "freezer", "meaning": "a very cold box for keeping food frozen", "japaneseMeaning": "冷凍庫", "synonyms": "ice box, cold box", "antonyms": "oven", "forms": "freezer, freezers", "example": "The ice cream is in the freezer." },
-    { "word": "leftover", "meaning": "food that remains after a meal", "japaneseMeaning": "残り物", "synonyms": "extra food, remains", "antonyms": "fresh meal", "forms": "leftover, leftovers", "example": "We eat leftovers for lunch." },
-    { "word": "cafeteria", "meaning": "a place to eat in a school or company", "japaneseMeaning": "食堂／カフェテリア", "synonyms": "dining hall, lunch room", "antonyms": "classroom", "forms": "cafeteria, cafeterias", "example": "Students eat lunch in the cafeteria." }
+    {
+      "word": "menu",
+      "meaning": "a list of food in a restaurant",
+      "japaneseMeaning": "メニュー",
+      "synonyms": "food list, list",
+      "antonyms": "",
+      "forms": "menu, menus",
+      "example": "The menu has many desserts.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/menu.svg",
+        "alt": "食事の品名と価格を並べたメニュー。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/menu.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "recipe",
+        "receipt"
+      ]
+    },
+    {
+      "word": "napkin",
+      "meaning": "paper or cloth used while eating",
+      "japaneseMeaning": "ナプキン",
+      "synonyms": "serviette",
+      "antonyms": "",
+      "forms": "napkin, napkins",
+      "example": "Put the napkin on your lap."
+    },
+    {
+      "word": "straw",
+      "meaning": "a small tube used for drinking",
+      "japaneseMeaning": "ストロー",
+      "synonyms": "drinking straw",
+      "antonyms": "",
+      "forms": "straw, straws",
+      "example": "She drinks juice with a straw.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/straw.svg",
+        "alt": "飲み物に挿した細いストローを矢印で示した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/straw.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "spoon",
+        "bottle"
+      ]
+    },
+    {
+      "word": "tray",
+      "meaning": "a flat thing used to carry food or cups",
+      "japaneseMeaning": "トレー／盆",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "tray, trays",
+      "example": "Put your lunch on the tray."
+    },
+    {
+      "word": "chopstick",
+      "meaning": "one of two thin sticks used for eating",
+      "japaneseMeaning": "箸",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "chopstick, chopsticks",
+      "example": "I use chopsticks for rice.",
+      "usageNote": "通常は2本で使うため、chopsticks と複数形で言います。1本だけを指すときは a chopstick。",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/chopstick.svg",
+        "alt": "一対の箸のうち、一本を色と矢印で強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/chopstick.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "fork",
+        "knife"
+      ]
+    },
+    {
+      "word": "teapot",
+      "meaning": "a pot used for making or pouring tea",
+      "japaneseMeaning": "急須／ティーポット",
+      "synonyms": "tea pot, pot",
+      "antonyms": "",
+      "forms": "teapot, teapots",
+      "example": "The teapot is on the table.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/twemoji/1fad6.svg",
+        "alt": "茶を注ぐための、ふたと注ぎ口のあるポット。",
+        "width": 240,
+        "height": 240,
+        "source": "Twemoji v17.0.3",
+        "sourceUrl": "https://github.com/jdecked/twemoji/blob/v17.0.3/assets/svg/1fad6.svg",
+        "creator": "Twitter, Inc. and other contributors",
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Twemoji by Twitter and contributors"
+      },
+      "meaningDistractors": [
+        "bowl",
+        "plate"
+      ]
+    },
+    {
+      "word": "kettle",
+      "meaning": "a thing used to boil water",
+      "japaneseMeaning": "やかん／ケトル",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "kettle, kettles",
+      "example": "The kettle is hot.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/kettle.svg",
+        "alt": "湯を沸かす台の上で、注ぎ口から湯気の出るやかん。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/kettle.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "teapot",
+        "bowl"
+      ]
+    },
+    {
+      "word": "freezer",
+      "meaning": "a very cold box for keeping food frozen",
+      "japaneseMeaning": "冷凍庫",
+      "synonyms": "",
+      "antonyms": "",
+      "forms": "freezer, freezers",
+      "example": "The ice cream is in the freezer.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/freezer.svg",
+        "alt": "ふたを開けた冷凍庫と、氷や冷凍品を保つ低い温度の表示。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/freezer.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "oven",
+        "kettle"
+      ]
+    },
+    {
+      "word": "leftover",
+      "meaning": "food that remains after a meal",
+      "japaneseMeaning": "残り物",
+      "synonyms": "extra food, remains",
+      "antonyms": "",
+      "forms": "leftover, leftovers",
+      "example": "We eat leftovers for lunch.",
+      "usageNote": "食事の残り物という名詞では、例文のように leftovers と複数形で使うことが多いです。"
+    },
+    {
+      "word": "cafeteria",
+      "meaning": "a place to eat in a school or company",
+      "japaneseMeaning": "食堂／カフェテリア",
+      "synonyms": "dining hall, lunch room",
+      "antonyms": "",
+      "forms": "cafeteria, cafeterias",
+      "example": "Students eat lunch in the cafeteria."
+    }
   ]
 }

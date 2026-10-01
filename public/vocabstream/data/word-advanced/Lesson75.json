@@ -10,7 +10,7 @@
       {"word": "organization", "meaning": "structured group or system", "japaneseMeaning": "組織", "synonyms": "institution, structure", "antonyms": "disorder, chaos", "example": "The organization's hierarchy was clear."},
       {"word": "delegation", "meaning": "assigning tasks to others", "japaneseMeaning": "委任", "synonyms": "assignment, entrustment", "antonyms": "retention, monopolization", "example": "Delegation improves efficiency."},
       {"word": "marketing", "meaning": "promotion of products or services", "japaneseMeaning": "マーケティング", "synonyms": "advertising, promotion", "antonyms": "neglect, ignorance", "example": "Marketing boosted sales."},
-      {"word": "efficiency", "meaning": "achieving maximum productivity", "japaneseMeaning": "効率", "synonyms": "effectiveness, productivity", "antonyms": "inefficiency, waste", "example": "Efficiency reduced operational costs."},
+      {"word": "efficiency", "meaning": "the ability to achieve a result with little waste of time, energy, or money", "japaneseMeaning": "効率", "synonyms": "", "antonyms": "inefficiency, waste", "example": "Efficiency reduced operational costs."},
       {"word": "leadership", "meaning": "ability to guide or direct", "japaneseMeaning": "リーダーシップ", "synonyms": "guidance, management", "antonyms": "mismanagement, followership", "example": "Leadership is vital for teams."},
       {"word": "structure", "meaning": "arrangement of parts", "japaneseMeaning": "構造", "synonyms": "framework, organization", "antonyms": "disorganization, chaos", "example": "The company improved its structure."}
     ]

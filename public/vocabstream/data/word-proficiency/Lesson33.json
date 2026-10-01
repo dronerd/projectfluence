@@ -82,7 +82,12 @@
         "japaneseMeaning": "普及、伝播",
         "synonyms": "distribution, propagation",
         "antonyms": "",
-        "example": "The dissemination of research findings is crucial for scientific progress."
+        "example": "The dissemination of research findings is crucial for scientific progress.",
+        "duplicateOf": {
+          "category": "word-proficiency",
+          "lessonNumber": 27,
+          "word": "dissemination"
+        }
       }
     ]
   }

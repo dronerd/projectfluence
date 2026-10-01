@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-environment-lesson-8",
+  "title": "Lesson 8",
+  "paragraph": "環境保全と社会の仕組み",
+  "words": [
+    {
+      "word": "environmental impact",
+      "meaning": "a change to the natural environment resulting from an activity",
+      "japaneseMeaning": "環境への影響",
+      "example": "The study assesses the environmental impact of the new road.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "environmental regulation",
+        "energy demand"
+      ]
+    },
+    {
+      "word": "life cycle",
+      "meaning": "the connected stages through which a product passes from raw materials to disposal or recovery",
+      "japaneseMeaning": "ライフサイクル・製品の全生涯",
+      "example": "The analysis considers the product's entire life cycle.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "food chain",
+        "breeding season"
+      ],
+      "usageNote": "ここでは製品の資源採取から廃棄・回収までの段階を指します。"
+    },
+    {
+      "word": "circular economy",
+      "meaning": "an economic approach that keeps products and materials in use and reduces waste",
+      "japaneseMeaning": "循環型経済",
+      "example": "Repair services can support a circular economy.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "landfill",
+        "electricity grid"
+      ]
+    },
+    {
+      "word": "waste reduction",
+      "meaning": "action that decreases the amount of material discarded",
+      "japaneseMeaning": "廃棄物の削減",
+      "example": "The restaurant introduced smaller portions as part of waste reduction.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "pollination",
+        "water table"
+      ]
+    },
+    {
+      "word": "protected area",
+      "meaning": "a defined place managed to conserve nature and related values",
+      "japaneseMeaning": "保護地域",
+      "example": "Visitors follow special rules inside the protected area.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "watershed",
+        "landfill"
+      ]
+    },
+    {
+      "word": "habitat loss",
+      "meaning": "the destruction or change of places so they can no longer support the organisms that lived there",
+      "japaneseMeaning": "生息地の喪失",
+      "example": "The new development caused habitat loss along the river.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "migration",
+        "restoration"
+      ]
+    },
+    {
+      "word": "deforestation",
+      "meaning": "the clearing of forest so that the land is used for another purpose",
+      "japaneseMeaning": "森林減少・森林の他用途への転換",
+      "example": "The study links agricultural expansion to deforestation.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "reforestation",
+        "pollination"
+      ]
+    },
+    {
+      "word": "reforestation",
+      "meaning": "the establishment of trees on land that was recently forested",
+      "japaneseMeaning": "再植林・森林の再生",
+      "example": "The reforestation project uses species suited to the local conditions.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "deforestation",
+        "erosion"
+      ],
+      "sentencePractice": {
+        "prompt": "Trees are established again on land that recently lost its forest. The project is an example of ____.",
+        "distractors": [
+          "deforestation",
+          "erosion"
+        ],
+        "reviewNote": "Restoring tree cover to recently forested land identifies reforestation; clearing forest and removal of soil describe different processes."
+      }
+    },
+    {
+      "word": "monitoring",
+      "meaning": "repeated observations or measurements used to track environmental conditions over time",
+      "japaneseMeaning": "環境モニタリング・継続監視",
+      "example": "Regular monitoring shows how river conditions change.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "restoration",
+        "pollination"
+      ],
+      "sentencePractice": {
+        "prompt": "The team measures river conditions at the same sites every month to track changes. This repeated checking is ____.",
+        "distractors": [
+          "restoration",
+          "pollination"
+        ],
+        "reviewNote": "Repeated measurements to follow conditions are monitoring; repairing a natural area and transferring pollen are different activities."
+      }
+    },
+    {
+      "word": "environmental regulation",
+      "meaning": "an official rule intended to protect the environment or limit harmful activities",
+      "japaneseMeaning": "環境規制",
+      "example": "The factory reviewed the new environmental regulation.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "environmental impact",
+        "carbon footprint"
+      ]
+    }
+  ]
+}

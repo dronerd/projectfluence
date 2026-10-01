@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-business-lesson-9",
+  "title": "Lesson 9",
+  "paragraph": "顧客対応と継続サービス",
+  "words": [
+    {
+      "word": "quotation",
+      "meaning": "a statement from a seller giving the price for specified goods or services",
+      "japaneseMeaning": "見積書・提示価格",
+      "example": "The supplier sent a quotation for the installation work.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "invoice",
+        "receipt"
+      ],
+      "usageNote": "ここでは取引の見積もりです。文章からの引用という意味もあります。",
+      "sentencePractice": {
+        "prompt": "Before an order is placed, the seller sends a document stating the price of the requested work. This price statement is a ____.",
+        "distractors": [
+          "receipt",
+          "complaint"
+        ],
+        "reviewNote": "A seller's price statement for proposed work is a quotation; a receipt confirms a completed payment and a complaint expresses dissatisfaction."
+      }
+    },
+    {
+      "word": "discount",
+      "meaning": "a reduction from the usual or stated price",
+      "japaneseMeaning": "値引き・割引",
+      "example": "The company offered a discount on large orders.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "refund",
+        "deposit"
+      ],
+      "sentencePractice": {
+        "prompt": "The usual price is one hundred pounds, but the customer is charged ninety pounds before paying. The ten-pound reduction is a ____.",
+        "distractors": [
+          "refund",
+          "deposit"
+        ],
+        "reviewNote": "A reduction from the stated price before payment is a discount; a refund returns money already paid and a deposit is an advance or security payment."
+      }
+    },
+    {
+      "word": "warranty",
+      "meaning": "a seller's or manufacturer's promise to repair or replace a product under stated conditions",
+      "japaneseMeaning": "保証・保証書の約束",
+      "example": "The customer checked whether the repair was covered by the warranty.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "quotation",
+        "subscription"
+      ]
+    },
+    {
+      "word": "return policy",
+      "meaning": "the rules a business sets for accepting goods that customers send or bring back",
+      "japaneseMeaning": "返品規定",
+      "example": "The website explains the return policy before checkout.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "payment terms",
+        "warranty"
+      ]
+    },
+    {
+      "word": "complaint",
+      "meaning": "a statement that a customer is dissatisfied with a product or service",
+      "japaneseMeaning": "苦情・不満の申し立て",
+      "example": "The manager responded to the complaint about the late delivery.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "proposal",
+        "quotation"
+      ]
+    },
+    {
+      "word": "resolution",
+      "meaning": "an agreed solution or settlement of a problem or disagreement",
+      "japaneseMeaning": "問題の解決・合意された解決策",
+      "example": "Both sides accepted the proposed resolution.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "complaint",
+        "renewal"
+      ]
+    },
+    {
+      "word": "renewal",
+      "meaning": "the extension of an agreement or service for another period",
+      "japaneseMeaning": "契約やサービスの更新",
+      "example": "The team reviewed the price before the contract renewal.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "refund",
+        "launch"
+      ]
+    },
+    {
+      "word": "subscription",
+      "meaning": "an arrangement to receive a service or product regularly, often through repeated payments",
+      "japaneseMeaning": "定期契約・サブスクリプション",
+      "example": "The monthly subscription includes access to the reporting tool.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "deposit",
+        "quotation"
+      ]
+    },
+    {
+      "word": "service level",
+      "meaning": "an agreed or expected standard of service, often expressed through measurable targets",
+      "japaneseMeaning": "サービス水準",
+      "example": "The agreement defines a service level for answering support requests.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "market share",
+        "credit limit"
+      ]
+    },
+    {
+      "word": "customer satisfaction",
+      "meaning": "how well customers feel a product or service has met their expectations",
+      "japaneseMeaning": "顧客満足度",
+      "example": "The survey measures customer satisfaction after each delivery.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "retention",
+        "market share"
+      ]
+    }
+  ]
+}

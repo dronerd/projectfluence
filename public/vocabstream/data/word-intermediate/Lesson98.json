@@ -45,7 +45,7 @@
       "synonyms": "reservation, appointment",
       "antonyms": "cancellation, refusal",
       "forms": "booking, bookings",
-      "example": "Our hotel booking was ready when we arrived."
+      "example": "We received an email confirming our hotel booking."
     },
     {
       "word": "transportation",
@@ -90,7 +90,25 @@
       "synonyms": "reduction, lower price",
       "antonyms": "increase, extra charge",
       "forms": "discount, discounts",
-      "example": "Students can get a discount at the museum."
+      "example": "Students can get a discount at the museum.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/discount.svg",
+        "alt": "二百円の元値が取り消され、百五十円へ値下げされた価格札。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/discount.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "booking",
+        "departure"
+      ]
     }
   ]
 }

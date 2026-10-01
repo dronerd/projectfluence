@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-environment-lesson-7",
+  "title": "Lesson 7",
+  "paragraph": "汚染と身近な環境問題",
+  "words": [
+    {
+      "word": "air quality",
+      "meaning": "the condition of the air with regard to substances that may affect health or the environment",
+      "japaneseMeaning": "大気の質",
+      "example": "The city measures air quality near busy roads.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "biodiversity",
+        "sea level"
+      ]
+    },
+    {
+      "word": "particulate matter",
+      "meaning": "tiny solid particles or liquid droplets suspended in the air",
+      "japaneseMeaning": "粒子状物質",
+      "example": "The monitor records particulate matter beside the road.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "groundwater",
+        "wastewater"
+      ]
+    },
+    {
+      "word": "wastewater",
+      "meaning": "water whose quality has been changed by human use and that needs collection or treatment",
+      "japaneseMeaning": "排水",
+      "example": "The factory treats its wastewater before release.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "groundwater",
+        "precipitation"
+      ]
+    },
+    {
+      "word": "sewage",
+      "meaning": "wastewater containing human waste from toilets and related drains",
+      "japaneseMeaning": "下水・汚水",
+      "example": "The treatment plant processes sewage from nearby homes.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "runoff",
+        "groundwater"
+      ],
+      "sentencePractice": {
+        "prompt": "The pipe carries wastewater containing human waste from toilets to the treatment plant. It carries ____.",
+        "distractors": [
+          "groundwater",
+          "precipitation"
+        ],
+        "reviewNote": "Wastewater containing toilet waste is sewage; underground water and water falling from clouds do not describe this stream."
+      }
+    },
+    {
+      "word": "pesticide",
+      "meaning": "a substance used to control organisms considered harmful to crops, property, or health",
+      "japaneseMeaning": "農薬・害虫などの防除剤",
+      "example": "The study tested for pesticide residues in the stream.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "fertiliser",
+        "nutrient"
+      ],
+      "sentencePractice": {
+        "prompt": "The farmer applies a substance specifically to control insects that damage the crop. The substance is a ____.",
+        "distractors": [
+          "fertiliser",
+          "nutrient"
+        ],
+        "reviewNote": "A substance for controlling a crop pest is a pesticide; nutrients and fertiliser supply resources for growth rather than defining pest control."
+      }
+    },
+    {
+      "word": "fertiliser",
+      "meaning": "a substance added to soil or plants to supply nutrients for growth",
+      "japaneseMeaning": "肥料",
+      "example": "The farmer measured the fertiliser before spreading it.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "pesticide",
+        "pollutant"
+      ],
+      "usageNote": "米国英語では fertilizer と綴ります。"
+    },
+    {
+      "word": "microplastic",
+      "meaning": "a very small piece of plastic, generally less than five millimetres across",
+      "japaneseMeaning": "マイクロプラスチック",
+      "example": "The researchers identified a microplastic particle in the sample.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "sediment",
+        "nutrient"
+      ]
+    },
+    {
+      "word": "litter",
+      "meaning": "waste items left in places where they do not belong",
+      "japaneseMeaning": "散乱ごみ・ポイ捨てされたごみ",
+      "example": "Volunteers collected litter from the riverbank.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "compost",
+        "groundwater"
+      ]
+    },
+    {
+      "word": "contamination",
+      "meaning": "the presence or addition of unwanted or harmful substances in something",
+      "japaneseMeaning": "汚染・異物混入",
+      "example": "The tests checked the soil for contamination.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "conservation",
+        "restoration"
+      ]
+    },
+    {
+      "word": "noise pollution",
+      "meaning": "unwanted sound at levels or durations that harm wellbeing or the environment",
+      "japaneseMeaning": "騒音公害",
+      "example": "The report examines noise pollution near the airport.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "air quality",
+        "erosion"
+      ]
+    }
+  ]
+}

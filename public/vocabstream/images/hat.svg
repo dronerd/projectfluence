@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>つばのある、茶色い帽子。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="120" cy="123" rx="90" ry="28" fill="#cfa777"/><path fill="#e5c398" d="M68 115q7-52 15-73 16-16 36-3 22-13 41 2 10 25 14 74c-24 16-79 17-106 0Z"/><path fill="#9a6f54" d="m71 94-3 21c27 17 82 16 106 0l-3-21q-52 14-100 0Z"/></g>
+</svg>

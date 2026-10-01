@@ -12,7 +12,7 @@
       {"word": "ambition", "meaning": "strong desire for success", "japaneseMeaning": "野心", "synonyms": "aspiration, goal", "antonyms": "contentment, passivity", "example": "Ambition pushes individuals forward."},
       {"word": "productivity", "meaning": "efficiency in producing results", "japaneseMeaning": "生産性", "synonyms": "efficiency, output", "antonyms": "inefficiency, idleness", "example": "High productivity improves profits."},
       {"word": "improvement", "meaning": "process of making something better", "japaneseMeaning": "改善", "synonyms": "enhancement, progress", "antonyms": "decline, deterioration", "example": "Continuous improvement is key to success."},
-      {"word": "determination", "meaning": "firmness of purpose", "japaneseMeaning": "決意", "synonyms": "resolve, perseverance", "antonyms": "indecision, doubt", "example": "Determination helped her overcome obstacles."}
+      {"word": "determination", "meaning": "firmness of purpose", "japaneseMeaning": "決意", "synonyms": "resolve, perseverance", "antonyms": "indecision, doubt", "example": "Determination helped her overcome obstacles.", "duplicateOf": {"category": "word-advanced", "lessonNumber": 64, "word": "determination"}}
     ]
   }
 

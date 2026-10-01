@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>深く丸い形の青いボウル。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path fill="#82b4c0" d="M43 69q4 76 76 82 73-6 78-82Z"/><ellipse cx="120" cy="69" rx="77" ry="26" fill="#d9e8e7"/><ellipse cx="120" cy="71" rx="61" ry="17" fill="#a7cbd1"/><path stroke="#d6e8e5" d="M62 98q13 32 37 38"/></g>
+</svg>

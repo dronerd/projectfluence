@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-business-lesson-2",
+  "title": "Lesson 2",
+  "paragraph": "仕事と取引",
+  "words": [
+    {
+      "word": "customer",
+      "meaning": "a person or organization that buys goods or services",
+      "japaneseMeaning": "顧客",
+      "example": "The customer asked for a written quote.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "contract",
+        "deadline"
+      ]
+    },
+    {
+      "word": "supplier",
+      "meaning": "a person or business that provides goods or services to another business",
+      "japaneseMeaning": "仕入先・供給者",
+      "example": "We asked the supplier about the delivery date.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "negotiation",
+        "agenda"
+      ],
+      "sentencePractice": {
+        "prompt": "This business provides our shop with goods to sell. It is our ____.",
+        "distractors": [
+          "customer",
+          "liability"
+        ],
+        "reviewNote": "The role is providing goods to the shop, not buying from it or being its debt."
+      }
+    },
+    {
+      "word": "stakeholder",
+      "meaning": "a person or group affected by or interested in a project or organization",
+      "japaneseMeaning": "利害関係者",
+      "example": "Each stakeholder had a chance to comment on the plan.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "proposal",
+        "minutes"
+      ]
+    },
+    {
+      "word": "contract",
+      "meaning": "an agreement that creates obligations between parties",
+      "japaneseMeaning": "契約",
+      "example": "Both companies reviewed the contract before signing it.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "deadline",
+        "deliverable"
+      ]
+    },
+    {
+      "word": "negotiation",
+      "meaning": "discussion intended to reach an agreement",
+      "japaneseMeaning": "交渉",
+      "example": "The negotiation focused on price and delivery dates.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "agenda",
+        "customer"
+      ]
+    },
+    {
+      "word": "proposal",
+      "meaning": "a suggested plan presented for others to consider",
+      "japaneseMeaning": "提案書・提案",
+      "example": "The team submitted a proposal for a new service.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "minutes",
+        "supplier"
+      ]
+    },
+    {
+      "word": "deadline",
+      "meaning": "the latest time by which something must be completed",
+      "japaneseMeaning": "締め切り",
+      "example": "The deadline for submitting the report is Friday.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "deliverable",
+        "stakeholder"
+      ]
+    },
+    {
+      "word": "agenda",
+      "meaning": "a list of topics to discuss at a meeting",
+      "japaneseMeaning": "議題一覧",
+      "example": "Please add the training plan to the agenda.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "customer",
+        "contract"
+      ]
+    },
+    {
+      "word": "minutes",
+      "meaning": "the written record of decisions and discussion at a meeting",
+      "japaneseMeaning": "議事録",
+      "example": "The minutes confirm who will contact the supplier.",
+      "definitionType": "text",
+      "domain": "business",
+      "usageNote": "会議の「議事録」の意味では複数形で使います。時間の「分」とは区別します。",
+      "meaningDistractors": [
+        "supplier",
+        "negotiation"
+      ],
+      "sentencePractice": {
+        "prompt": "After the meeting, we read the written record of its decisions. This record is called the ____.",
+        "distractors": [
+          "agenda",
+          "forecast"
+        ],
+        "reviewNote": "A post-meeting decision record is not a pre-meeting topic list or a future estimate."
+      }
+    },
+    {
+      "word": "deliverable",
+      "meaning": "a specific result or item that a project must produce",
+      "japaneseMeaning": "成果物",
+      "example": "The first deliverable is a working demonstration.",
+      "definitionType": "text",
+      "domain": "business",
+      "meaningDistractors": [
+        "stakeholder",
+        "proposal"
+      ]
+    }
+  ]
+}

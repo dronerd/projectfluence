@@ -1,0 +1,144 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-60",
+  "title": "Lesson 10",
+  "paragraph": "気持ち・行動・約束",
+  "words": [
+    {
+      "word": "calm down",
+      "meaning": "to become less angry, excited, or upset",
+      "japaneseMeaning": "落ち着く",
+      "example": "Take a slow breath and try to calm down.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "give up",
+        "show up"
+      ]
+    },
+    {
+      "word": "be proud of",
+      "meaning": "to feel pleased about someone or something you value or achieved",
+      "japaneseMeaning": "～を誇りに思う",
+      "example": "You should be proud of the work you put into this project.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "be afraid of",
+        "be fed up with"
+      ]
+    },
+    {
+      "word": "be afraid of",
+      "meaning": "to feel fear about someone or something",
+      "japaneseMeaning": "～を怖がる",
+      "example": "There is no need to be afraid of this friendly dog.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "be proud of",
+        "look forward to"
+      ]
+    },
+    {
+      "word": "change your mind",
+      "meaning": "to decide differently after an earlier decision",
+      "japaneseMeaning": "考えや決心を変える",
+      "example": "You can change your mind before you sign the form.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "keep a promise",
+        "tell the truth"
+      ]
+    },
+    {
+      "word": "keep a promise",
+      "meaning": "to do what you said you would do",
+      "japaneseMeaning": "約束を守る",
+      "example": "I always try to keep a promise, even when it is difficult.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "change your mind",
+        "make an effort"
+      ],
+      "sentencePractice": {
+        "prompt": "You said you would help and now you do exactly what you said. In this way, you ____.",
+        "distractors": [
+          "break a promise",
+          "make an excuse"
+        ],
+        "reviewNote": "Doing the promised action fulfils the promise. Breaking it means failing to do it; an excuse explains away an action rather than fulfilling the commitment."
+      }
+    },
+    {
+      "word": "tell the truth",
+      "meaning": "to say what really happened or what you know to be true",
+      "japaneseMeaning": "本当のことを言う",
+      "example": "Please tell the truth about the broken window.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "keep a promise",
+        "make an effort"
+      ]
+    },
+    {
+      "word": "make an effort",
+      "meaning": "to try hard to do something",
+      "japaneseMeaning": "努力する",
+      "example": "We should make an effort to include the new student.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "give up",
+        "calm down"
+      ]
+    },
+    {
+      "word": "a piece of cake",
+      "meaning": "something that is very easy to do",
+      "japaneseMeaning": "とても簡単なこと",
+      "example": "After all that practice, the final exercise was a piece of cake.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "a traffic jam",
+        "heavy rain"
+      ],
+      "usageNote": "ここでは食べ物ではなく、「とても簡単なこと」という比喩的な意味です。"
+    },
+    {
+      "word": "under the weather",
+      "meaning": "feeling slightly ill",
+      "japaneseMeaning": "少し体調が悪い",
+      "example": "I'm feeling under the weather, so I'll stay home.",
+      "definitionType": "text",
+      "expressionType": "idiom",
+      "meaningDistractors": [
+        "in a good mood",
+        "on sale"
+      ],
+      "sentencePractice": {
+        "prompt": "I feel slightly ill; in other words, I am ____.",
+        "distractors": [
+          "in a good mood",
+          "full of energy"
+        ],
+        "reviewNote": "The explicit paraphrase asks for the phrase meaning slightly ill. Good mood and high energy do not mean illness, even though a person can be cheerful while ill."
+      }
+    },
+    {
+      "word": "in a good mood",
+      "meaning": "feeling happy and pleasant",
+      "japaneseMeaning": "機嫌がよい",
+      "example": "She's in a good mood after hearing the good news.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "under the weather",
+        "by mistake"
+      ]
+    }
+  ]
+}

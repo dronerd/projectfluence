@@ -9,7 +9,25 @@
       "synonyms": "order, rate",
       "antonyms": "mix, disorder",
       "forms": "rank, ranks, ranking, ranked",
-      "example": "The judges rank the photos from best to worst."
+      "example": "The judges rank the photos from best to worst.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/rank.svg",
+        "alt": "成績順の一位、二位、三位を、高さの違う台で示している。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/rank.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "compose",
+        "perceive"
+      ]
     },
     {
       "word": "create",
@@ -36,7 +54,25 @@
       "synonyms": "say again, redo",
       "antonyms": "stop, skip",
       "forms": "repeat, repeats, repeating, repeated",
-      "example": "Please repeat the question."
+      "example": "Please repeat the question.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/repeat.svg",
+        "alt": "同じ動作の周りを矢印が巡り、何度も行うことを示す図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/repeat.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "invite",
+        "create"
+      ]
     },
     {
       "word": "compose",
@@ -63,7 +99,25 @@
       "synonyms": "move, pass",
       "antonyms": "keep, hold",
       "forms": "transfer, transfers, transferring, transferred",
-      "example": "The office will transfer the files to the new computer."
+      "example": "The office will transfer the files to the new computer.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/transfer.svg",
+        "alt": "保存したファイルを、一つ目の保存先から二つ目へ移す図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/transfer.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "perceive",
+        "compose"
+      ]
     },
     {
       "word": "perceive",

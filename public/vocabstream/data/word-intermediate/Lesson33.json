@@ -18,7 +18,25 @@
       "synonyms": "link, join",
       "antonyms": "separate, divide",
       "forms": "connect, connects, connecting, connected",
-      "example": "The teacher helped us connect the story to real life."
+      "example": "The teacher helped us connect the story to real life.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/connect.svg",
+        "alt": "二つのケーブルの接続部を近づけて、つなごうとしている図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/connect.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "wander",
+        "recognize"
+      ]
     },
     {
       "word": "include",
@@ -49,7 +67,7 @@
     },
     {
       "word": "exercise",
-      "meaning": "to move your body to be healthy",
+      "meaning": "physical activity done to keep your body healthy",
       "japaneseMeaning": "運動、練習問題",
       "synonyms": "training, activity",
       "antonyms": "rest, sleep",

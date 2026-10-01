@@ -3,15 +3,203 @@
   "title": "Lesson 77",
   "paragraph": "This lesson practices useful adverbs for travel and directions.",
   "words": [
-    { "word": "directly", "meaning": "straight to a place", "japaneseMeaning": "直接に／まっすぐに", "synonyms": "straight, right away", "antonyms": "indirectly, around", "forms": "directly, more directly, most directly", "example": "Go directly to the ticket gate." },
-    { "word": "indirectly", "meaning": "not in a straight or direct way", "japaneseMeaning": "間接的に", "synonyms": "not directly, around", "antonyms": "directly, straight", "forms": "indirectly, more indirectly, most indirectly", "example": "This train goes indirectly to the airport." },
-    { "word": "north", "meaning": "toward the north", "japaneseMeaning": "北へ／北に", "synonyms": "northward, up", "antonyms": "south", "forms": "north", "example": "Drive north for ten minutes." },
-    { "word": "south", "meaning": "toward the south", "japaneseMeaning": "南へ／南に", "synonyms": "southward, down", "antonyms": "north", "forms": "south", "example": "The bus goes south after the bridge." },
-    { "word": "east", "meaning": "toward the east", "japaneseMeaning": "東へ／東に", "synonyms": "eastward, right on a map", "antonyms": "west", "forms": "east", "example": "Walk east from the station." },
-    { "word": "west", "meaning": "toward the west", "japaneseMeaning": "西へ／西に", "synonyms": "westward, left on a map", "antonyms": "east", "forms": "west", "example": "The river runs west." },
-    { "word": "uphill", "meaning": "up a hill", "japaneseMeaning": "坂を上って", "synonyms": "up, higher", "antonyms": "downhill, down", "forms": "uphill", "example": "Walk uphill to the temple." },
-    { "word": "downhill", "meaning": "down a hill", "japaneseMeaning": "坂を下って", "synonyms": "down, lower", "antonyms": "uphill, up", "forms": "downhill", "example": "Ride your bike downhill slowly." },
-    { "word": "nearby", "meaning": "close to this place", "japaneseMeaning": "近くに", "synonyms": "near, close", "antonyms": "far away, distant", "forms": "nearby", "example": "There is a cafe nearby." },
-    { "word": "overnight", "meaning": "for one night", "japaneseMeaning": "一晩中／一泊で", "synonyms": "for one night, all night", "antonyms": "daily, briefly", "forms": "overnight", "example": "We stayed overnight at the hotel." }
+    {
+      "word": "directly",
+      "meaning": "straight to a place",
+      "japaneseMeaning": "直接に／まっすぐに",
+      "synonyms": "straight, right away",
+      "antonyms": "indirectly, around",
+      "forms": "directly, more directly, most directly",
+      "example": "Go directly to the ticket gate."
+    },
+    {
+      "word": "indirectly",
+      "meaning": "through another person or thing, not directly",
+      "japaneseMeaning": "間接的に",
+      "synonyms": "not directly, around",
+      "antonyms": "directly, straight",
+      "forms": "indirectly, more indirectly, most indirectly",
+      "example": "I heard the news indirectly, through a friend."
+    },
+    {
+      "word": "north",
+      "meaning": "in the direction opposite south",
+      "japaneseMeaning": "北へ／北に",
+      "synonyms": "northward, up",
+      "antonyms": "south",
+      "forms": "north",
+      "example": "Drive north for ten minutes.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/north.svg",
+        "alt": "方位盤で北への向きを強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/north.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "south",
+        "east"
+      ]
+    },
+    {
+      "word": "south",
+      "meaning": "in the direction opposite north",
+      "japaneseMeaning": "南へ／南に",
+      "synonyms": "southward, down",
+      "antonyms": "north",
+      "forms": "south",
+      "example": "The bus goes south after the bridge.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/south.svg",
+        "alt": "方位盤で南への向きを強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/south.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "north",
+        "east"
+      ]
+    },
+    {
+      "word": "east",
+      "meaning": "in the direction where the sun rises",
+      "japaneseMeaning": "東へ／東に",
+      "synonyms": "eastward, right on a map",
+      "antonyms": "west",
+      "forms": "east",
+      "example": "Walk east from the station.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/east.svg",
+        "alt": "方位盤で東への向きを強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/east.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "north",
+        "south"
+      ]
+    },
+    {
+      "word": "west",
+      "meaning": "in the direction where the sun sets",
+      "japaneseMeaning": "西へ／西に",
+      "synonyms": "westward, left on a map",
+      "antonyms": "east",
+      "forms": "west",
+      "example": "The river runs west.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/west.svg",
+        "alt": "方位盤で西への向きを強調した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/west.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "north",
+        "south"
+      ]
+    },
+    {
+      "word": "uphill",
+      "meaning": "up a hill",
+      "japaneseMeaning": "坂を上って",
+      "synonyms": "up, higher",
+      "antonyms": "downhill, down",
+      "forms": "uphill",
+      "example": "Walk uphill to the temple.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/uphill.svg",
+        "alt": "傾斜の低い側から高い側へ進む向きを示した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/uphill.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "downhill",
+        "north"
+      ]
+    },
+    {
+      "word": "downhill",
+      "meaning": "down a hill",
+      "japaneseMeaning": "坂を下って",
+      "synonyms": "down, lower",
+      "antonyms": "uphill, up",
+      "forms": "downhill",
+      "example": "Ride your bike downhill slowly.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/downhill.svg",
+        "alt": "傾斜の高い側から低い側へ進む向きを示した図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/downhill.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "uphill",
+        "south"
+      ]
+    },
+    {
+      "word": "nearby",
+      "meaning": "close to this place",
+      "japaneseMeaning": "近くに",
+      "synonyms": "near, close",
+      "antonyms": "far away, distant",
+      "forms": "nearby",
+      "example": "There is a cafe nearby."
+    },
+    {
+      "word": "overnight",
+      "meaning": "for one night",
+      "japaneseMeaning": "一晩中／一泊で",
+      "synonyms": "for one night, all night",
+      "antonyms": "",
+      "forms": "overnight",
+      "example": "We stayed overnight at the hotel."
+    }
   ]
 }

@@ -11,7 +11,7 @@
     { "word": "lie", "meaning": "to say something that is not true", "japaneseMeaning": "うそをつく", "synonyms": "tell a lie, cheat", "antonyms": "tell the truth, admit", "forms": "lie, lies, lying, lied, lied", "example": "Do not lie to your parents." },
     { "word": "listen", "meaning": "to try to hear someone or something", "japaneseMeaning": "聞く／耳を傾ける", "synonyms": "hear, pay attention", "antonyms": "ignore, miss", "forms": "listen, listens, listening, listened, listened", "example": "Listen to the teacher carefully." },
     { "word": "lose", "meaning": "to not be able to find something", "japaneseMeaning": "なくす／負ける", "synonyms": "miss, drop", "antonyms": "find, win", "forms": "lose, loses, losing, lost, lost", "example": "I often lose my keys." },
-    { "word": "notice", "meaning": "to see or hear something", "japaneseMeaning": "気づく", "synonyms": "see, find", "antonyms": "miss, ignore", "forms": "notice, notices, noticing, noticed, noticed", "example": "Did you notice the new poster?" },
+    { "word": "notice", "meaning": "to become aware of something you see or hear", "japaneseMeaning": "気づく", "synonyms": "see, find", "antonyms": "miss, ignore", "forms": "notice, notices, noticing, noticed, noticed", "example": "Did you notice the new poster?" },
     { "word": "remember", "meaning": "to keep something in your mind", "japaneseMeaning": "覚えている／思い出す", "synonyms": "think of, recall", "antonyms": "forget, miss", "forms": "remember, remembers, remembering, remembered, remembered", "example": "Please remember my phone number." }
   ]
 }

@@ -18,7 +18,7 @@
       "synonyms": "manage, direct",
       "antonyms": "release, lose",
       "forms": "control, controls, controlling, controlled",
-      "example": "He lost control of the situation."
+      "example": "The driver struggled to control the car on the icy road."
     },
     {
       "word": "inspect",
@@ -54,7 +54,25 @@
       "synonyms": "enlarge, grow",
       "antonyms": "contract, shrink",
       "forms": "expand, expands, expanding, expanded",
-      "example": "The company plans to expand its operations."
+      "example": "The company plans to expand its operations.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/expand.svg",
+        "alt": "小さかった風船に空気が入り、全体が大きくなる前後の図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/expand.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "afford",
+        "recall"
+      ]
     },
     {
       "word": "seem",

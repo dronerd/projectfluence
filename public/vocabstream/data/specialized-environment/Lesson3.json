@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-environment-lesson-3",
+  "title": "Lesson 3",
+  "paragraph": "資源と水",
+  "words": [
+    {
+      "word": "recycling",
+      "meaning": "processing waste materials so they can be used to make new products",
+      "japaneseMeaning": "リサイクル",
+      "example": "The council collects paper for recycling.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "biodegradable",
+        "runoff"
+      ]
+    },
+    {
+      "word": "landfill",
+      "meaning": "a site where waste is buried in the ground",
+      "japaneseMeaning": "埋立処分場",
+      "example": "Less food waste would reduce the amount sent to landfill.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "reuse",
+        "groundwater"
+      ],
+      "sentencePractice": {
+        "prompt": "Waste is taken to this site and buried in the ground. The site is a ____.",
+        "distractors": [
+          "watershed",
+          "food chain"
+        ],
+        "reviewNote": "The explicit waste-disposal role excludes a drainage area or sequence of feeding relationships."
+      }
+    },
+    {
+      "word": "compost",
+      "meaning": "material made from broken-down plant and food waste, used to improve soil",
+      "japaneseMeaning": "堆肥",
+      "example": "The garden uses compost made from vegetable scraps.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "pollutant",
+        "watershed"
+      ]
+    },
+    {
+      "word": "biodegradable",
+      "meaning": "able to be broken down by living organisms under suitable conditions",
+      "japaneseMeaning": "生分解性の",
+      "example": "The label explains the conditions in which the packaging is biodegradable.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "runoff",
+        "sustainability"
+      ]
+    },
+    {
+      "word": "reuse",
+      "meaning": "to use something again instead of discarding it",
+      "japaneseMeaning": "再使用する",
+      "example": "We reuse the boxes for storing equipment.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "groundwater",
+        "compost"
+      ]
+    },
+    {
+      "word": "pollutant",
+      "meaning": "a substance that causes harm when released into the environment",
+      "japaneseMeaning": "汚染物質",
+      "example": "The laboratory tested the water for a common pollutant.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "watershed",
+        "landfill"
+      ]
+    },
+    {
+      "word": "runoff",
+      "meaning": "water that flows over the ground into streams, lakes, or drains",
+      "japaneseMeaning": "地表流出水",
+      "example": "Heavy rain carried runoff from the fields into the river.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "sustainability",
+        "compost"
+      ]
+    },
+    {
+      "word": "groundwater",
+      "meaning": "water stored below the ground in soil and rock",
+      "japaneseMeaning": "地下水",
+      "example": "The village relies on groundwater for its water supply.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "recycling",
+        "biodegradable"
+      ],
+      "sentencePractice": {
+        "prompt": "This water is stored below the ground in soil and rock. It is ____.",
+        "distractors": [
+          "runoff",
+          "compost"
+        ],
+        "reviewNote": "Subsurface stored water differs from surface flow and decomposed organic material."
+      }
+    },
+    {
+      "word": "watershed",
+      "meaning": "an area of land where water drains toward the same river or outlet",
+      "japaneseMeaning": "流域",
+      "example": "The study covered the whole watershed, from the hills to the coast.",
+      "definitionType": "text",
+      "domain": "environment",
+      "usageNote": "ここでは主に北米で使われる「流域」の意味。イギリス英語では分水界を指すこともあります。",
+      "meaningDistractors": [
+        "landfill",
+        "reuse"
+      ]
+    },
+    {
+      "word": "sustainability",
+      "meaning": "meeting needs in ways that can continue without using up or damaging essential resources",
+      "japaneseMeaning": "持続可能性",
+      "example": "The project assesses sustainability as well as cost.",
+      "definitionType": "text",
+      "domain": "environment",
+      "meaningDistractors": [
+        "compost",
+        "pollutant"
+      ]
+    }
+  ]
+}

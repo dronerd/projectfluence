@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-engineering-lesson-10",
+  "title": "Lesson 10",
+  "paragraph": "設計の確認と信頼できる設備",
+  "words": [
+    {
+      "word": "requirement",
+      "meaning": "a condition or capability that a product or system must satisfy",
+      "japaneseMeaning": "要求事項",
+      "example": "One requirement is that the device must operate outdoors.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "prototype",
+        "failure mode"
+      ]
+    },
+    {
+      "word": "constraint",
+      "meaning": "a limit that restricts the choices available when designing a system",
+      "japaneseMeaning": "設計上の制約",
+      "example": "The available space is a constraint on the new design.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "simulation",
+        "prototype"
+      ]
+    },
+    {
+      "word": "simulation",
+      "meaning": "the use of a model to imitate a system's behavior under chosen conditions",
+      "japaneseMeaning": "シミュレーション",
+      "example": "The simulation predicts how the structure responds to wind.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "calibration",
+        "assembly"
+      ]
+    },
+    {
+      "word": "validation",
+      "meaning": "checking that a system meets users' needs in its intended use",
+      "japaneseMeaning": "妥当性確認・用途への適合確認",
+      "example": "Validation included trials with the people who would use the equipment.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "verification",
+        "calibration"
+      ],
+      "usageNote": "ここでは用途への適合確認です。verification は定められた要求事項への適合を確認します。"
+    },
+    {
+      "word": "verification",
+      "meaning": "checking that a system or product meets its stated requirements",
+      "japaneseMeaning": "検証・要求事項への適合確認",
+      "example": "Verification confirmed that the housing met the specified dimensions.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "validation",
+        "maintenance"
+      ]
+    },
+    {
+      "word": "reliability",
+      "meaning": "the ability of equipment to perform its required function under stated conditions for a period of time",
+      "japaneseMeaning": "信頼性",
+      "example": "The long test assessed the reliability of the pump.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "efficiency",
+        "stiffness"
+      ]
+    },
+    {
+      "word": "redundancy",
+      "meaning": "extra components or functions provided so a system can continue if one fails",
+      "japaneseMeaning": "冗長性・予備機能の用意",
+      "example": "Redundancy allows the second power unit to take over if the first stops.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "maintenance",
+        "simulation"
+      ],
+      "sentencePractice": {
+        "prompt": "The system has a spare power unit that takes over if the first unit fails. Providing this extra unit is an example of ____.",
+        "distractors": [
+          "calibration",
+          "simulation"
+        ],
+        "reviewNote": "An additional unit that maintains function after a failure provides redundancy; comparison with a reference and use of a model do not describe the design feature."
+      }
+    },
+    {
+      "word": "failure mode",
+      "meaning": "a particular way in which a component or system can stop performing its required function",
+      "japaneseMeaning": "故障モード",
+      "example": "A stuck valve is one possible failure mode.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "root cause",
+        "requirement"
+      ]
+    },
+    {
+      "word": "root cause",
+      "meaning": "an underlying reason that explains why a failure or problem occurred",
+      "japaneseMeaning": "根本原因",
+      "example": "The investigation traced the root cause to an incorrect assembly step.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "failure mode",
+        "tolerance"
+      ],
+      "sentencePractice": {
+        "prompt": "The investigation asks why the valve failed and finds that a wrongly fitted part caused the problem. That underlying reason is the ____.",
+        "distractors": [
+          "failure mode",
+          "setpoint"
+        ],
+        "reviewNote": "The underlying reason is the root cause; failure mode describes how the valve fails and setpoint is a control target, not an explanation of the failure."
+      }
+    },
+    {
+      "word": "risk assessment",
+      "meaning": "the process of identifying possible harm and judging its likelihood and consequences",
+      "japaneseMeaning": "リスク評価",
+      "example": "The team completed a risk assessment before the trial.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "calibration",
+        "assembly"
+      ]
+    }
+  ]
+}

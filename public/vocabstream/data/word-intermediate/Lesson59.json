@@ -9,7 +9,25 @@
       "synonyms": "coming, reaching",
       "antonyms": "departure, leaving",
       "forms": "arrival, arrivals",
-      "example": "The train's arrival was ten minutes late."
+      "example": "The train's arrival was ten minutes late.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/arrival.svg",
+        "alt": "列車が駅の建物とホームに向かって到着する図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/arrival.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "partnership",
+        "correspondence"
+      ]
     },
     {
       "word": "delivery",
@@ -45,7 +63,25 @@
       "synonyms": "procedure, method",
       "antonyms": "disorder, accident",
       "forms": "process, processes",
-      "example": "The hiring process took two weeks."
+      "example": "The hiring process took two weeks.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/process.svg",
+        "alt": "小麦から粉、生地、パンへと加工が進む、一連の手順。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/process.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "lecture",
+        "territory"
+      ]
     },
     {
       "word": "speech",

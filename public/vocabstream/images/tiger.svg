@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>オレンジ色の毛に黒い縞があるトラ。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#da9b52" stroke-width="11" d="M174 112q32-4 24-39"/><path d="m194 83 10 1m-6 15 8-5"/><ellipse cx="127" cy="109" rx="52" ry="34" fill="#e5a65b"/><path fill="#e5a65b" d="M93 121h20v34H87Zm49 0h22v34h-26Z"/><circle cx="74" cy="52" r="14" fill="#e5a65b"/><circle cx="121" cy="52" r="14" fill="#e5a65b"/><ellipse cx="98" cy="82" rx="35" ry="36" fill="#e5a65b"/><path fill="#fff0d6" stroke="none" d="M75 91q23-17 47 0-4 23-24 23-20 0-23-23"/><path stroke-width="6" d="m87 51 3 12m17-12-3 12m-37 13 14 6m-16 10 14 1m49-17-14 6m16 10-14 1m13-14 3 16m15-13-2 19m18-12-7 17m-65 38 13 0m33 0h18"/><circle cx="86" cy="82" r="2" fill="#40565b"/><circle cx="111" cy="82" r="2" fill="#40565b"/><path fill="#805d50" d="m92 96 12 0-6 6Z"/></g>
+</svg>

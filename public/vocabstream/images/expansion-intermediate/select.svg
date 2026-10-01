@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>四つの同じ大きさのカードから、一枚を選んで印を付けた図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<text x="180" y="35" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">四つの中から一つ</text><rect x="30" y="88" width="55" height="62" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><rect x="110" y="88" width="55" height="62" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><rect x="190" y="88" width="55" height="62" rx="5" fill="#89b28c" stroke="#40565b" stroke-width="2.5"/><rect x="270" y="88" width="55" height="62" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><path d="M210 179l6 6 14-16" fill="none" stroke="#89b28c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><line x1="219" y1="57" x2="219" y2="80" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="219,80 224.0,70.0 214.0,70.0" fill="#40565b"/>
+</svg>

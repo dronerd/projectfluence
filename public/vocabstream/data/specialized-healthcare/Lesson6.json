@@ -1,0 +1,144 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-6",
+  "title": "Lesson 6",
+  "paragraph": "診察と検査",
+  "words": [
+    {
+      "word": "examination",
+      "meaning": "a healthcare professional's careful check of a person's body or health",
+      "japaneseMeaning": "診察・身体の検査",
+      "example": "The doctor explained each part of the examination.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "prescription",
+        "referral"
+      ]
+    },
+    {
+      "word": "vital signs",
+      "meaning": "basic measurements of body functions, such as pulse and breathing rate",
+      "japaneseMeaning": "バイタルサイン・生命徴候",
+      "example": "The nurse recorded the vital signs on the chart.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "medical history",
+        "care plan"
+      ]
+    },
+    {
+      "word": "temperature",
+      "meaning": "a measure of how hot or cold the body is",
+      "japaneseMeaning": "体温",
+      "example": "The nurse measured the patient's temperature.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "pulse",
+        "blood pressure"
+      ]
+    },
+    {
+      "word": "blood test",
+      "meaning": "a laboratory examination of a sample of blood",
+      "japaneseMeaning": "血液検査",
+      "example": "The clinician discussed the blood test results with the patient.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "urine test",
+        "ultrasound"
+      ]
+    },
+    {
+      "word": "urine test",
+      "meaning": "an examination of a urine sample to look for information about health",
+      "japaneseMeaning": "尿検査",
+      "example": "The nurse explained how the urine test would be arranged.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "blood test",
+        "X-ray"
+      ]
+    },
+    {
+      "word": "X-ray",
+      "meaning": "an image of the inside of the body produced using a type of radiation",
+      "japaneseMeaning": "エックス線画像・レントゲン写真",
+      "example": "The doctor reviewed the X-ray of the injured wrist.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "ultrasound",
+        "blood test"
+      ],
+      "usageNote": "ここでは画像の意味です。X-ray は放射線や検査そのものも指します。"
+    },
+    {
+      "word": "ultrasound",
+      "meaning": "a method of making images inside the body using high-frequency sound waves",
+      "japaneseMeaning": "超音波検査",
+      "example": "The clinician used ultrasound to examine the soft tissue.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "X-ray",
+        "blood test"
+      ],
+      "sentencePractice": {
+        "prompt": "The examination creates pictures inside the body using high-frequency sound waves. The record names this method as \"____\".",
+        "distractors": [
+          "X-ray",
+          "blood test"
+        ],
+        "reviewNote": "Sound-wave imaging identifies ultrasound; X-ray uses radiation and a blood test examines a blood sample. Quoted method names allow each noun phrase to fit the same grammar."
+      }
+    },
+    {
+      "word": "biopsy",
+      "meaning": "the removal of a small amount of tissue or cells for examination",
+      "japaneseMeaning": "生検",
+      "example": "The specialist explained why a biopsy was being considered.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "ultrasound",
+        "urine test"
+      ],
+      "sentencePractice": {
+        "prompt": "A clinician removes a small piece of tissue so it can be examined in the laboratory. This procedure is a ____.",
+        "distractors": [
+          "consultation",
+          "referral"
+        ],
+        "reviewNote": "Removal of tissue for examination identifies a biopsy; a discussion and a request for specialist care do not remove tissue."
+      }
+    },
+    {
+      "word": "result",
+      "meaning": "information obtained from a test or examination",
+      "japaneseMeaning": "検査結果",
+      "example": "The doctor explained the result in clear language.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "specimen",
+        "prescription"
+      ]
+    },
+    {
+      "word": "laboratory",
+      "meaning": "a place where samples are examined and scientific tests are performed",
+      "japaneseMeaning": "検査室・検査機関",
+      "example": "The labelled specimen was sent to the laboratory.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "ward",
+        "pharmacy"
+      ]
+    }
+  ]
+}

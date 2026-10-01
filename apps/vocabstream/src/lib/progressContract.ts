@@ -95,6 +95,8 @@ export function parseVocabStreamProgress(value: unknown): VocabStreamProgressPay
     const choices = attempt.choices === undefined ? [] : attempt.choices;
     if (!Array.isArray(choices) || choices.length > 20) throw new ProgressValidationError("Invalid answer choices.");
     const normalizedChoices = choices.map((choice) => text(choice, "choice")!);
+    const choiceKeys = normalizedChoices.map(choice => choice.normalize("NFKC").toLowerCase().replace(/\s+/g, " "));
+    if (new Set(choiceKeys).size !== choiceKeys.length) throw new ProgressValidationError("Answer choices must be distinct.");
     if (normalizedChoices.length && (!normalizedChoices.includes(correctAnswer) || !normalizedChoices.includes(selectedAnswer))) {
       throw new ProgressValidationError("Answers must be present in the choices.");
     }

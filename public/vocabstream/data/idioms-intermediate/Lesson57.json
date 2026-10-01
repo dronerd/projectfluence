@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-57",
+  "title": "Lesson 7",
+  "paragraph": "学習と仕事を進める",
+  "words": [
+    {
+      "word": "sign up for",
+      "meaning": "to put your name on a list to join a course or activity",
+      "japaneseMeaning": "～に申し込む",
+      "example": "I want to sign up for the evening photography class.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "look forward to",
+        "run out of"
+      ]
+    },
+    {
+      "word": "fill in",
+      "meaning": "to write the requested information in the empty spaces of a form",
+      "japaneseMeaning": "空欄に記入する",
+      "example": "Please fill in your address on this form.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "cross out",
+        "leave out"
+      ],
+      "sentencePractice": {
+        "prompt": "The boxes are blank. Please ____ each one by writing the requested information inside it.",
+        "distractors": [
+          "cross out",
+          "leave out"
+        ],
+        "reviewNote": "Writing missing information inside blank spaces fills them in. Crossing out cancels writing; leaving out omits it."
+      },
+      "usageNote": "用紙への記入を指します。主にイギリス英語で、アメリカ英語では fill out もよく使います。"
+    },
+    {
+      "word": "take notes",
+      "meaning": "to write short points about what you hear or read",
+      "japaneseMeaning": "メモを取る",
+      "example": "I take notes during lectures to help me remember the main ideas.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "hand out",
+        "learn by heart"
+      ]
+    },
+    {
+      "word": "go over",
+      "meaning": "to review something carefully to check or learn it",
+      "japaneseMeaning": "～を見直す、復習する",
+      "example": "Let's go over the instructions before we start.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "put together",
+        "hand in"
+      ]
+    },
+    {
+      "word": "hand out",
+      "meaning": "to give something to each person in a group",
+      "japaneseMeaning": "配る",
+      "example": "The teacher will hand out the worksheets after lunch.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "hand in",
+        "leave out"
+      ]
+    },
+    {
+      "word": "leave out",
+      "meaning": "to not include someone or something",
+      "japaneseMeaning": "～を省く、入れない",
+      "example": "Please don't leave out the date when you write the letter.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "fill in",
+        "put together"
+      ]
+    },
+    {
+      "word": "put together",
+      "meaning": "to join different parts to make something complete",
+      "japaneseMeaning": "組み立てる、まとめ上げる",
+      "example": "We put together the new desk using the instructions.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "take out",
+        "cross out"
+      ]
+    },
+    {
+      "word": "look forward to",
+      "meaning": "to feel happy about something that will happen in the future",
+      "japaneseMeaning": "～を楽しみに待つ",
+      "example": "I look forward to meeting your family.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "be afraid of",
+        "be fed up with"
+      ],
+      "usageNote": "to の後ろには名詞か -ing 形を置きます。例: look forward to meeting you。"
+    },
+    {
+      "word": "cross out",
+      "meaning": "to draw a line through writing to show that it should be removed",
+      "japaneseMeaning": "線を引いて消す",
+      "example": "Cross out the wrong answer and write the correct one.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "fill in",
+        "write down"
+      ],
+      "sentencePractice": {
+        "prompt": "That sentence is wrong. Please ____ the whole sentence by drawing a line through it.",
+        "distractors": [
+          "write down",
+          "read aloud"
+        ],
+        "reviewNote": "A line through the sentence cancels it. Writing it down records it; reading aloud produces speech rather than a cancellation mark."
+      }
+    },
+    {
+      "word": "learn by heart",
+      "meaning": "to learn something so well that you can repeat it without looking",
+      "japaneseMeaning": "暗記する",
+      "example": "We had to learn the short poem by heart.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "go over",
+        "take notes"
+      ]
+    }
+  ]
+}

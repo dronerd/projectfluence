@@ -3,15 +3,167 @@
   "title": "Lesson 28",
   "paragraph": "This lesson practices useful adjectives for simple descriptions.",
   "words": [
-    { "word": "safe", "meaning": "not dangerous", "japaneseMeaning": "安全な", "synonyms": "secure, okay", "antonyms": "dangerous, unsafe", "forms": "safe, safer, safest", "example": "This street is safe in the daytime." },
-    { "word": "dangerous", "meaning": "able to hurt someone", "japaneseMeaning": "危険な", "synonyms": "unsafe, risky", "antonyms": "safe, harmless", "forms": "dangerous, more dangerous, most dangerous", "example": "It is dangerous to run near the road." },
-    { "word": "quiet", "meaning": "with little or no noise", "japaneseMeaning": "静かな", "synonyms": "silent, calm", "antonyms": "noisy, loud", "forms": "quiet, quieter, quietest", "example": "The library is quiet after lunch." },
-    { "word": "noisy", "meaning": "making a lot of noise", "japaneseMeaning": "うるさい", "synonyms": "loud, busy", "antonyms": "quiet, silent", "forms": "noisy, noisier, noisiest", "example": "The classroom is noisy before the teacher comes." },
-    { "word": "full", "meaning": "having no empty space", "japaneseMeaning": "いっぱいの／満腹の", "synonyms": "filled, packed", "antonyms": "empty, hungry", "forms": "full, fuller, fullest", "example": "The bus is full this morning." },
-    { "word": "empty", "meaning": "having nothing inside", "japaneseMeaning": "空の", "synonyms": "blank, clear", "antonyms": "full, filled", "forms": "empty, emptier, emptiest", "example": "The box is empty." },
-    { "word": "clean", "meaning": "not dirty", "japaneseMeaning": "きれいな／清潔な", "synonyms": "neat, clear", "antonyms": "dirty, messy", "forms": "clean, cleaner, cleanest", "example": "Please use a clean cup." },
-    { "word": "dirty", "meaning": "not clean", "japaneseMeaning": "汚い", "synonyms": "unclean, messy", "antonyms": "clean, neat", "forms": "dirty, dirtier, dirtiest", "example": "Your shoes are dirty after the rain." },
-    { "word": "fresh", "meaning": "new, clean, or recently made", "japaneseMeaning": "新鮮な", "synonyms": "new, clean", "antonyms": "old, stale", "forms": "fresh, fresher, freshest", "example": "This bread is fresh and warm." },
-    { "word": "ready", "meaning": "prepared to do something", "japaneseMeaning": "準備ができた", "synonyms": "prepared, set", "antonyms": "unready, late", "forms": "ready, readier, readiest", "example": "Are you ready for the test?" }
+    {
+      "word": "safe",
+      "meaning": "not dangerous",
+      "japaneseMeaning": "安全な",
+      "synonyms": "secure, okay",
+      "antonyms": "dangerous, unsafe",
+      "forms": "safe, safer, safest",
+      "example": "This street is safe in the daytime."
+    },
+    {
+      "word": "dangerous",
+      "meaning": "able to hurt someone",
+      "japaneseMeaning": "危険な",
+      "synonyms": "unsafe, risky",
+      "antonyms": "safe, harmless",
+      "forms": "dangerous, more dangerous, most dangerous",
+      "example": "It is dangerous to run near the road."
+    },
+    {
+      "word": "quiet",
+      "meaning": "with little or no noise",
+      "japaneseMeaning": "静かな",
+      "synonyms": "silent, calm",
+      "antonyms": "noisy, loud",
+      "forms": "quiet, quieter, quietest",
+      "example": "The library is quiet after lunch."
+    },
+    {
+      "word": "noisy",
+      "meaning": "making a lot of noise",
+      "japaneseMeaning": "うるさい",
+      "synonyms": "loud, busy",
+      "antonyms": "quiet, silent",
+      "forms": "noisy, noisier, noisiest",
+      "example": "The classroom is noisy before the teacher comes."
+    },
+    {
+      "word": "full",
+      "meaning": "having no empty space",
+      "japaneseMeaning": "いっぱいの／満腹の",
+      "synonyms": "filled, packed",
+      "antonyms": "empty, hungry",
+      "forms": "full, fuller, fullest",
+      "example": "The bus is full this morning.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/full.svg",
+        "alt": "容器の上端近くまで水が入っている図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/full.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "empty",
+        "dirty"
+      ]
+    },
+    {
+      "word": "empty",
+      "meaning": "having nothing inside",
+      "japaneseMeaning": "空の",
+      "synonyms": "blank, clear",
+      "antonyms": "full, filled",
+      "forms": "empty, emptier, emptiest",
+      "example": "The box is empty.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/empty.svg",
+        "alt": "中に何も入っていない透明な容器。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/empty.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "full",
+        "dirty"
+      ]
+    },
+    {
+      "word": "clean",
+      "meaning": "not dirty",
+      "japaneseMeaning": "きれいな／清潔な",
+      "synonyms": "neat, clear",
+      "antonyms": "dirty, messy",
+      "forms": "clean, cleaner, cleanest",
+      "example": "Please use a clean cup.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/clean.svg",
+        "alt": "汚れの付いていない皿の図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/clean.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "dirty",
+        "full"
+      ]
+    },
+    {
+      "word": "dirty",
+      "meaning": "not clean",
+      "japaneseMeaning": "汚い",
+      "synonyms": "unclean, messy",
+      "antonyms": "clean, neat",
+      "forms": "dirty, dirtier, dirtiest",
+      "example": "Your shoes are dirty after the rain.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/dirty.svg",
+        "alt": "食べ物の汚れが残っている皿の図。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/dirty.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "clean",
+        "empty"
+      ]
+    },
+    {
+      "word": "fresh",
+      "meaning": "new, clean, or recently made",
+      "japaneseMeaning": "新鮮な",
+      "synonyms": "new, clean",
+      "antonyms": "old, stale",
+      "forms": "fresh, fresher, freshest",
+      "example": "This bread is fresh and warm."
+    },
+    {
+      "word": "ready",
+      "meaning": "prepared to do something",
+      "japaneseMeaning": "準備ができた",
+      "synonyms": "prepared, set",
+      "antonyms": "unready, late",
+      "forms": "ready, readier, readiest",
+      "example": "Are you ready for the test?"
+    }
   ]
 }

@@ -63,7 +63,25 @@
       "synonyms": "send, post",
       "antonyms": "download, delete",
       "forms": "upload, uploads, uploading, uploaded",
-      "example": "Please upload the report by Friday."
+      "example": "Please upload the report by Friday.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/upload.svg",
+        "alt": "端末内のファイルを、インターネット側へ送る上向きの矢印。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/upload.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "purchase",
+        "instruct"
+      ]
     },
     {
       "word": "proceed",
@@ -90,7 +108,25 @@
       "synonyms": "classify, arrange",
       "antonyms": "mix, scatter",
       "forms": "sort, sorts, sorting, sorted",
-      "example": "Please sort the papers by date."
+      "example": "Please sort the papers by date.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/sort.svg",
+        "alt": "混ざっていた丸と三角の部品を、種類ごとに別の箱へ分ける図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/sort.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "instruct",
+        "proceed"
+      ]
     }
   ]
 }

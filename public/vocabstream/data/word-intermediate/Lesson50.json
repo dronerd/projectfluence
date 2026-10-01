@@ -45,7 +45,25 @@
       "synonyms": "people, residents",
       "antonyms": "empty place, desert",
       "forms": "population, populations",
-      "example": "The population of this city is growing."
+      "example": "The population of this city is growing.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/population.svg",
+        "alt": "一つの地域の中にある家々と、そこに住む六人をまとめて囲んだ図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/population.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "knowledge",
+        "effort"
+      ]
     },
     {
       "word": "semester",
@@ -81,7 +99,25 @@
       "synonyms": "chart, drawing",
       "antonyms": "text, explanation",
       "forms": "diagram, diagrams",
-      "example": "The diagram shows how water moves through the machine."
+      "example": "The diagram shows how water moves through the machine.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/diagram.svg",
+        "alt": "懐中電灯の断面を簡略化し、電池と光の位置を線で説明した図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/diagram.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "failure",
+        "principle"
+      ]
     },
     {
       "word": "principle",

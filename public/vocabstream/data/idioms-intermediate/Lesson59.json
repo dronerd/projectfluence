@@ -1,0 +1,145 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-59",
+  "title": "Lesson 9",
+  "paragraph": "移動と天気のトラブル",
+  "words": [
+    {
+      "word": "hold on",
+      "meaning": "to wait for a short time",
+      "japaneseMeaning": "ちょっと待つ",
+      "example": "Hold on a moment while I find your number.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "set off",
+        "show up"
+      ]
+    },
+    {
+      "word": "get in",
+      "meaning": "to enter a car, taxi, or other small enclosed vehicle",
+      "japaneseMeaning": "車などに乗り込む",
+      "example": "Open the taxi door and get in carefully.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "get out",
+        "move out"
+      ],
+      "sentencePractice": {
+        "prompt": "You are still outside the taxi. Open the door and ____ so you can join me inside for the journey.",
+        "distractors": [
+          "get out",
+          "step back"
+        ],
+        "reviewNote": "The person needs to move from outside to inside the vehicle. Getting out leaves it; stepping back moves away from its entrance."
+      },
+      "usageNote": "車やタクシーへの乗車を指します。通常、バスや電車には get on を使います。"
+    },
+    {
+      "word": "get out",
+      "meaning": "to leave a car, taxi, or other enclosed place",
+      "japaneseMeaning": "車などから出る",
+      "example": "Wait until the taxi stops before you get out.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "get in",
+        "move in"
+      ]
+    },
+    {
+      "word": "take a wrong turn",
+      "meaning": "to turn in a direction that does not lead where you want to go",
+      "japaneseMeaning": "曲がる方向を間違える",
+      "example": "It's easy to take a wrong turn at that large junction.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "book in advance",
+        "give way"
+      ]
+    },
+    {
+      "word": "miss the bus",
+      "meaning": "to arrive too late to catch the bus you wanted",
+      "japaneseMeaning": "バスに乗り遅れる",
+      "example": "If we leave late, we might miss the bus.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "give way",
+        "take a wrong turn"
+      ]
+    },
+    {
+      "word": "give way",
+      "meaning": "to let another vehicle or person go first",
+      "japaneseMeaning": "道を譲る、先に行かせる",
+      "example": "Drivers must give way to people on this crossing.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "set off",
+        "take a wrong turn"
+      ],
+      "usageNote": "ここでは交通上の優先を譲る意味。アメリカ英語の道路標識では yield がよく使われます。"
+    },
+    {
+      "word": "heavy rain",
+      "meaning": "rain that falls in a large amount",
+      "japaneseMeaning": "大雨",
+      "example": "Heavy rain caused flooding near the river.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "clear skies",
+        "a traffic jam"
+      ],
+      "sentencePractice": {
+        "prompt": "The forecast predicts ____: a large amount of water falling from the clouds throughout the afternoon.",
+        "distractors": [
+          "clear skies",
+          "a traffic jam"
+        ],
+        "reviewNote": "The description explicitly concerns abundant falling rain. Clear skies have few clouds; a traffic jam concerns vehicles on a road."
+      }
+    },
+    {
+      "word": "clear skies",
+      "meaning": "skies with few or no clouds",
+      "japaneseMeaning": "晴れた空",
+      "example": "We enjoyed clear skies throughout the trip.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "heavy rain",
+        "a traffic jam"
+      ]
+    },
+    {
+      "word": "a traffic jam",
+      "meaning": "a line of vehicles moving very slowly or not moving at all",
+      "japaneseMeaning": "交通渋滞",
+      "example": "We were stuck in a traffic jam for an hour.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "heavy rain",
+        "clear skies"
+      ]
+    },
+    {
+      "word": "in the distance",
+      "meaning": "far away from the place where you are",
+      "japaneseMeaning": "遠くに",
+      "example": "We could see a lighthouse in the distance.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "on the other hand",
+        "by mistake"
+      ]
+    }
+  ]
+}

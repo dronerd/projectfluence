@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>七個の球をまとめて数え、七個という数量を示している。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<circle cx="71" cy="82" r="12" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="93" cy="82" r="12" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="115" cy="82" r="12" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="137" cy="82" r="12" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="71" cy="104" r="12" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="93" cy="104" r="12" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="115" cy="104" r="12" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><text x="250" y="131" text-anchor="middle" font-size="39" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">７個</text><path d="M49 60h-16v102h16" fill="none" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="180" y="218" text-anchor="middle" font-size="18" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">いくつあるか</text>
+</svg>

@@ -45,7 +45,25 @@
       "synonyms": "seaside, shore",
       "antonyms": "inland, mountain",
       "forms": "coastal",
-      "example": "The coastal town is popular with tourists."
+      "example": "The coastal town is popular with tourists.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/coastal.svg",
+        "alt": "海岸近くの陸地に家があり、そのすぐ隣に海が広がる図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/coastal.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "patient",
+        "comprehensive"
+      ]
     },
     {
       "word": "remarkable",

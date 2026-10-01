@@ -3,15 +3,149 @@
   "title": "Lesson 51",
   "paragraph": "This lesson practices useful verbs for school and communication.",
   "words": [
-    { "word": "practice", "meaning": "to do something again to get better", "japaneseMeaning": "練習する", "synonyms": "train, repeat", "antonyms": "stop, quit", "forms": "practice, practices, practicing, practiced, practiced", "example": "I practice piano after school." },
-    { "word": "review", "meaning": "to study something again", "japaneseMeaning": "復習する", "synonyms": "study again, check", "antonyms": "forget, skip", "forms": "review, reviews, reviewing, reviewed, reviewed", "example": "Review the words before the quiz." },
-    { "word": "underline", "meaning": "to draw a line under a word", "japaneseMeaning": "下線を引く", "synonyms": "mark, line", "antonyms": "erase, remove", "forms": "underline, underlines, underlining, underlined, underlined", "example": "Underline the new word in the sentence." },
-    { "word": "circle", "meaning": "to draw a round line around something", "japaneseMeaning": "丸で囲む", "synonyms": "mark, ring", "antonyms": "erase, cross out", "forms": "circle, circles, circling, circled, circled", "example": "Circle the correct answer." },
-    { "word": "translate", "meaning": "to change words into another language", "japaneseMeaning": "翻訳する", "synonyms": "change language, explain", "antonyms": "copy, repeat", "forms": "translate, translates, translating, translated, translated", "example": "Translate this sentence into Japanese." },
-    { "word": "submit", "meaning": "to give school work to a teacher", "japaneseMeaning": "提出する", "synonyms": "hand in, give", "antonyms": "keep, hold", "forms": "submit, submits, submitting, submitted, submitted", "example": "Submit your homework by Friday." },
-    { "word": "highlight", "meaning": "to mark words with a bright color", "japaneseMeaning": "蛍光ペンで印をつける", "synonyms": "mark, show", "antonyms": "hide, erase", "forms": "highlight, highlights, highlighting, highlighted, highlighted", "example": "Highlight the important word." },
-    { "word": "correct", "meaning": "to fix a mistake", "japaneseMeaning": "訂正する", "synonyms": "fix, change", "antonyms": "mistake, break", "forms": "correct, corrects, correcting, corrected, corrected", "example": "Correct the spelling mistake." },
-    { "word": "reply", "meaning": "to answer someone", "japaneseMeaning": "返事をする", "synonyms": "answer, respond", "antonyms": "ask, ignore", "forms": "reply, replies, replying, replied, replied", "example": "Please reply to the teacher's email." },
-    { "word": "explain", "meaning": "to make something easy to understand", "japaneseMeaning": "説明する", "synonyms": "tell, describe", "antonyms": "hide, confuse", "forms": "explain, explains, explaining, explained, explained", "example": "Can you explain this rule?" }
+    {
+      "word": "practice",
+      "meaning": "to do something again to get better",
+      "japaneseMeaning": "練習する",
+      "synonyms": "train, repeat",
+      "antonyms": "stop, quit",
+      "forms": "practice, practices, practicing, practiced, practiced",
+      "example": "I practice piano after school."
+    },
+    {
+      "word": "review",
+      "meaning": "to study something again",
+      "japaneseMeaning": "復習する",
+      "synonyms": "study again, check",
+      "antonyms": "forget, skip",
+      "forms": "review, reviews, reviewing, reviewed, reviewed",
+      "example": "Review the words before the quiz."
+    },
+    {
+      "word": "underline",
+      "meaning": "to draw a line under a word",
+      "japaneseMeaning": "下線を引く",
+      "synonyms": "mark, line",
+      "antonyms": "erase, remove",
+      "forms": "underline, underlines, underlining, underlined, underlined",
+      "example": "Underline the new word in the sentence.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/underline.svg",
+        "alt": "文字の下に一本の線を引く様子。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/underline.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "circle",
+        "highlight"
+      ]
+    },
+    {
+      "word": "circle",
+      "meaning": "to draw a round line around something",
+      "japaneseMeaning": "丸で囲む",
+      "synonyms": "mark, ring",
+      "antonyms": "erase, cross out",
+      "forms": "circle, circles, circling, circled, circled",
+      "example": "Circle the correct answer.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/circle.svg",
+        "alt": "文字を囲む丸い線を描く様子。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/circle.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "underline",
+        "highlight"
+      ]
+    },
+    {
+      "word": "translate",
+      "meaning": "to change words into another language",
+      "japaneseMeaning": "翻訳する",
+      "synonyms": "change language, explain",
+      "antonyms": "copy, repeat",
+      "forms": "translate, translates, translating, translated, translated",
+      "example": "Translate this sentence into Japanese."
+    },
+    {
+      "word": "submit",
+      "meaning": "to give school work to a teacher",
+      "japaneseMeaning": "提出する",
+      "synonyms": "hand in, give",
+      "antonyms": "keep, hold",
+      "forms": "submit, submits, submitting, submitted, submitted",
+      "example": "Submit your homework by Friday."
+    },
+    {
+      "word": "highlight",
+      "meaning": "to mark words with a bright color",
+      "japaneseMeaning": "蛍光ペンで印をつける",
+      "synonyms": "mark, show",
+      "antonyms": "hide, erase",
+      "forms": "highlight, highlights, highlighting, highlighted, highlighted",
+      "example": "Highlight the important word.",
+      "definitionType": "image+text",
+      "imageRole": "meaning",
+      "image": {
+        "src": "/vocabstream/images/expansion-beginner/highlight.svg",
+        "alt": "文字の背景を蛍光色で目立たせる様子。",
+        "width": 320,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-beginner/highlight.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "underline",
+        "circle"
+      ]
+    },
+    {
+      "word": "correct",
+      "meaning": "to fix a mistake",
+      "japaneseMeaning": "訂正する",
+      "synonyms": "fix, change",
+      "antonyms": "mistake, break",
+      "forms": "correct, corrects, correcting, corrected, corrected",
+      "example": "Correct the spelling mistake."
+    },
+    {
+      "word": "reply",
+      "meaning": "to answer someone",
+      "japaneseMeaning": "返事をする",
+      "synonyms": "answer, respond",
+      "antonyms": "ask, ignore",
+      "forms": "reply, replies, replying, replied, replied",
+      "example": "Please reply to the teacher's email."
+    },
+    {
+      "word": "explain",
+      "meaning": "to make something easy to understand",
+      "japaneseMeaning": "説明する",
+      "synonyms": "tell, describe",
+      "antonyms": "hide, confuse",
+      "forms": "explain, explains, explaining, explained, explained",
+      "example": "Can you explain this rule?"
+    }
   ]
 }

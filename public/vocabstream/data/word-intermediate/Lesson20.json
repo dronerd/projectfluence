@@ -81,7 +81,25 @@
       "synonyms": "trade, swap",
       "antonyms": "keep, hold",
       "forms": "exchange, exchanges, exchanging, exchanged",
-      "example": "We exchange gifts at the end of the year."
+      "example": "We exchange gifts at the end of the year.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/exchange.svg",
+        "alt": "二人が一方から本を渡し、反対方向からかばんを受け取って交換する図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/exchange.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "escape",
+        "identify"
+      ]
     },
     {
       "word": "identify",

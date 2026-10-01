@@ -8,7 +8,8 @@ import AuthButton from "@/app/components/AuthButton";
 import { requestSignal } from "@/lib/browserRequest";
 import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 
-import { parseVideoRows, thumbnailSources, youtubeWatchUrl, type VidMatchVideo } from "./services/videoContract";
+import { parseVideoRows, parseVideoRecommendations, thumbnailSources, youtubeWatchUrl, type VidMatchVideo } from "./services/videoContract";
+import { TOPICS, TOPIC_LABELS, normalizeTopics } from "./services/videoTaxonomy";
 
 // Bound waits on mobile/network interruptions; never retry learner writes automatically.
 async function browserFetch(input: RequestInfo | URL, init: RequestInit = {}): Promise<Response> {
@@ -33,11 +34,10 @@ type Settings = {
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const LEVEL_LABELS = ["入門", "初級", "中級", "中上級", "上級", "熟練"];
 const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversation"];
-const TOPICS = ["travel", "daily life", "school"];
 const ACCENTS = ["American", "British", "Australian", "Canadian"];
 const LABELS: Record<string, string> = {
+  ...TOPIC_LABELS,
   listening: "リスニング", vocabulary: "語彙", pronunciation: "発音", grammar: "文法", conversation: "会話",
-  travel: "旅行", "daily life": "日常生活", school: "学校・留学",
   American: "アメリカ英語", British: "イギリス英語", Australian: "オーストラリア英語", Canadian: "カナダ英語",
 };
 const DEFAULT_SETTINGS: Settings = {
@@ -52,7 +52,7 @@ function sanitizeSettings(value: unknown): Settings | null {
   return {
     selectedLevel: typeof raw.selectedLevel === "string" && LEVELS.includes(raw.selectedLevel) ? raw.selectedLevel : "B1",
     selectedSkills: stringArray(raw.selectedSkills).filter((skill) => SKILLS.includes(skill)),
-    selectedTopics: stringArray(raw.selectedTopics).filter((topic) => TOPICS.includes(topic)),
+    selectedTopics: normalizeTopics(stringArray(raw.selectedTopics)).filter((topic) => (TOPICS as readonly string[]).includes(topic)),
     customTopics: typeof raw.customTopics === "string" ? raw.customTopics.slice(0, 240) : "",
     selectedAccent: typeof raw.selectedAccent === "string" && ACCENTS.includes(raw.selectedAccent) ? raw.selectedAccent : "",
     captionOnly: Boolean(raw.captionOnly),
@@ -81,6 +81,11 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
   const [recommendations, setRecommendations] = useState<VidMatchVideo[]>([]);
   const [recommendationError, setRecommendationError] = useState("");
   const [recommendationLoading, setRecommendationLoading] = useState(false);
+  const [moreLoading, setMoreLoading] = useState(false);
+  const [moreError, setMoreError] = useState("");
+  const [moreNeedsRestart, setMoreNeedsRestart] = useState(false);
+  const [nextCursor, setNextCursor] = useState<string | null>(null);
+  const searchedParams = useRef<URLSearchParams>(new URLSearchParams());
   const [hasSearched, setHasSearched] = useState(false);
   const [history, setHistory] = useState<HistoryVideo[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
@@ -92,9 +97,9 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
   const isHistory = pathname === "/history";
   const isSimilar = pathname.startsWith("/similar/");
   const similarId = isSimilar ? decodeId(pathname.slice("/similar/".length)) : "";
-  const topics = useMemo(() => Array.from(new Set([
+  const topics = useMemo(() => normalizeTopics([
     ...settings.selectedTopics, ...settings.customTopics.split(/[,、]/).map((topic) => topic.trim()).filter(Boolean),
-  ])), [settings.selectedTopics, settings.customTopics]);
+  ]), [settings.selectedTopics, settings.customTopics]);
   const topicError = topics.length > 10 ? "トピックは10個以内で入力してください。" : topics.some((topic) => topic.length > 80) ? "各トピックは80文字以内で入力してください。" : "";
 
   useEffect(() => {
@@ -169,31 +174,54 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
     updateSettings({ [key]: settings[key].includes(value) ? settings[key].filter((item) => item !== value) : [...settings[key], value] });
   };
 
-  const loadRecommendations = useCallback(async (params: URLSearchParams, scroll = false) => {
+  const loadRecommendations = useCallback(async (params: URLSearchParams, scroll = false, append = false) => {
     const currentRequest = ++requestNumber.current;
     recommendationRequest.current?.abort();
     const controller = new AbortController();
     recommendationRequest.current = controller;
-    setRecommendationLoading(true);
+    setRecommendationLoading(!append);
+    setMoreLoading(append);
+    setMoreError("");
+    setMoreNeedsRestart(false);
+    if (!append) { searchedParams.current = new URLSearchParams(params); setNextCursor(null); }
     setRecommendationError("");
     setHasSearched(true);
     try {
       const response = await browserFetch(`/api/vidmatch/recommend?${params}`, { signal: controller.signal });
       const data = await response.json();
+      if (append && response.status === 400 && data.code === "invalid_cursor") {
+        if (currentRequest === requestNumber.current) {
+          setMoreError("動画一覧が更新されました。最新の一覧を読み込んでください。");
+          setMoreNeedsRestart(true);
+        }
+        return;
+      }
       if (!response.ok || data.error) throw new Error("Recommendations unavailable");
-      if (currentRequest === requestNumber.current) setRecommendations(parseVideoRows(data.videos));
+      const page = parseVideoRecommendations(data);
+      if (currentRequest === requestNumber.current) {
+        setRecommendations((current) => append ? [...new Map([...current, ...page.videos].map((video) => [video.video_id, video])).values()] : page.videos);
+        setNextCursor(page.nextCursor);
+      }
     } catch {
       if (currentRequest === requestNumber.current) {
-        setRecommendations([]);
-        setRecommendationError("動画を読み込めませんでした。通信状況を確認して、もう一度お試しください。");
+        if (append) setMoreError("続きの動画を読み込めませんでした。表示中の動画はそのまま見られます。");
+        else { setRecommendations([]); setRecommendationError("動画を読み込めませんでした。通信状況を確認して、もう一度お試しください。"); }
       }
     } finally {
       if (currentRequest === requestNumber.current) {
         setRecommendationLoading(false);
+        setMoreLoading(false);
         if (scroll && window.innerWidth < 900) window.requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }));
       }
     }
   }, []);
+
+  const loadMore = () => {
+    if (!nextCursor || moreLoading) return;
+    const params = new URLSearchParams(searchedParams.current);
+    params.set("cursor", nextCursor);
+    void loadRecommendations(params, false, true);
+  };
 
   const search = () => {
     if (topicError) return;
@@ -210,7 +238,7 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
   const invalidateRequests = useCallback(() => { requestNumber.current += 1; recommendationRequest.current?.abort(); }, []);
   useEffect(() => {
     if (isSimilar) searchSimilar();
-    else { invalidateRequests(); setRecommendations([]); setRecommendationLoading(false); setRecommendationError(""); setHasSearched(false); }
+    else { invalidateRequests(); setRecommendations([]); setRecommendationLoading(false); setMoreLoading(false); setMoreError(""); setNextCursor(null); setRecommendationError(""); setHasSearched(false); }
     return invalidateRequests;
   }, [isSimilar, searchSimilar, invalidateRequests]);
 
@@ -246,7 +274,7 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
   const results = <>
     {recommendationLoading ? <LoadingVideos /> : recommendationError ? (
       <div className="vm-state" role="alert"><h3>動画を読み込めませんでした</h3><p>{recommendationError}</p><button className="pf-button-secondary" onClick={isSimilar ? searchSimilar : search}>もう一度試す</button></div>
-    ) : recommendations.length ? <><p className="vm-result-count" role="status">{recommendations.length}件の動画が見つかりました</p>{renderVideos(recommendations)}</> : (
+    ) : recommendations.length ? <><p className="vm-result-count" role="status">{recommendations.length}件の動画を表示中</p>{renderVideos(recommendations)}</> : (
       <div className={`vm-state${hasSearched ? "" : " vm-state-intro"}`} role="status">
         {hasSearched && <h3>条件に合う動画が見つかりませんでした</h3>}
         <p>{isSimilar ? "ほかの動画を選ぶか、条件を変えて探してみましょう。" : hasSearched ? "トピックやアクセントの指定を減らすと、見つかりやすくなります。" : "条件を選んで「動画を探す」を押してください。"}</p>
@@ -254,6 +282,10 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
         {!isSimilar && hasSearched && <button className="pf-button-secondary" onClick={() => { updateSettings({ selectedTopics: [], customTopics: "", selectedAccent: "", captionOnly: false }); }}>追加の条件をクリア</button>}
       </div>
     )}
+    {!recommendationLoading && !recommendationError && nextCursor && <div className="vm-more">
+      {moreError && <p className="vm-error" role="alert">{moreError}</p>}
+      <button type="button" className="pf-button-secondary" onClick={moreNeedsRestart ? () => { void loadRecommendations(new URLSearchParams(searchedParams.current)); } : loadMore} disabled={moreLoading}>{moreLoading ? "続きの動画を読み込み中…" : moreNeedsRestart ? "動画一覧を更新" : moreError ? "続きをもう一度読み込む" : "もっと動画を見る"}</button>
+    </div>}
   </>;
 
   return <div className="vm-shell">
@@ -266,6 +298,7 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
         {(isHistory || isSimilar) && <p>{isHistory ? "YouTubeで開いた動画の記録です。" : "レベルやテーマが近い動画です。"}</p>}
         <Link href={isHistory || isSimilar ? "/vidmatch" : "/vidmatch/history"} className="pf-button-secondary">{isHistory || isSimilar ? "動画を探す" : "動画の履歴"}<span aria-hidden="true"> →</span></Link>
       </div>
+      <p className="vm-help vm-editorial-note">レベル・トピックはProjectFluenceによる学習の目安です。字幕の言語や再生可否はYouTubeでご確認ください。</p>
       {trackingError && <p className="vm-notice" role="status">{trackingError}</p>}
       {isHistory ? (
         <section className="vm-history" aria-label="動画の履歴">
@@ -286,7 +319,7 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
               <details className="vm-extra-filters"><summary>トピック・アクセントなど{(topics.length > 0 || settings.selectedAccent || settings.captionOnly) && <span className="vm-filter-dot" aria-label="追加条件を選択中" />}</summary>
                 <div className="vm-control"><h3 id="vm-topic-label">好きなトピック</h3><div className="vm-chips" role="group" aria-labelledby="vm-topic-label">{TOPICS.map((topic) => <button key={topic} type="button" className="vm-choice" aria-pressed={settings.selectedTopics.includes(topic)} onClick={() => toggle("selectedTopics", topic)}>{LABELS[topic]}</button>)}</div><label className="vm-input-label" htmlFor="vm-custom-topics">その他のトピック</label><input id="vm-custom-topics" value={settings.customTopics} onChange={(event) => updateSettings({ customTopics: event.target.value })} maxLength={240} placeholder="例: music, cooking" aria-describedby={topicError ? "vm-topic-error vm-topic-hint" : "vm-topic-hint"} aria-invalid={!!topicError} /><p id="vm-topic-hint" className="vm-help">英語で入力し、複数ある場合はカンマで区切ってください。</p>{topicError && <p id="vm-topic-error" className="vm-error" role="alert">{topicError}</p>}</div>
                 <div className="vm-control"><label className="vm-input-label" htmlFor="vm-accent">アクセント</label><select id="vm-accent" value={settings.selectedAccent} onChange={(event) => updateSettings({ selectedAccent: event.target.value })}><option value="">指定なし</option>{ACCENTS.map((accent) => <option key={accent} value={accent}>{LABELS[accent]}</option>)}</select></div>
-                <label className="vm-caption"><input type="checkbox" checked={settings.captionOnly} onChange={(event) => updateSettings({ captionOnly: event.target.checked })} /><span>字幕・文字起こしのある動画のみ</span></label>
+                <label className="vm-caption"><input type="checkbox" checked={settings.captionOnly} onChange={(event) => updateSettings({ captionOnly: event.target.checked })} /><span>字幕のある動画のみ（言語はYouTubeで確認）</span></label>
               </details>
               <button type="submit" className="pf-button vm-search" disabled={recommendationLoading || !!topicError}>{recommendationLoading ? "動画を検索中…" : "動画を探す"}<span aria-hidden="true"> →</span></button>
             </fieldset>
@@ -312,7 +345,7 @@ function VideoCard({ video, openedAt, onOpen }: { video: VidMatchVideo; openedAt
   const [imageLoaded, setImageLoaded] = useState(false);
   useEffect(() => { setSourceIndex(0); setImageLoaded(false); }, [sources]);
   const thumbnail = sources[sourceIndex];
-  const tags = Array.from(new Set([...(video.skills ?? []), ...(video.topics ?? [])])).slice(0, 3);
+  const tags = Array.from(new Set([...(video.topics ?? []).slice(0, 2), ...(video.skills ?? [])])).slice(0, 3);
   return <article className="vm-video-card">
     <div className="vm-thumbnail" aria-busy={!!thumbnail && !imageLoaded}>
       {thumbnail ? <img src={thumbnail} alt="" width={480} height={360} loading="lazy" decoding="async" onLoad={() => setImageLoaded(true)} onError={() => {
@@ -321,7 +354,7 @@ function VideoCard({ video, openedAt, onOpen }: { video: VidMatchVideo; openedAt
       }} /> : <span className="vm-thumbnail-fallback">画像を読み込めませんでした<button type="button" className="vm-text-link" onClick={() => { setSourceIndex(0); setImageLoaded(false); }}>画像を再読み込み</button></span>}
       {duration && <span className="vm-duration">{duration}</span>}
     </div>
-    <div className="vm-video-body"><p className="vm-channel">{video.channel_name}</p><h3>{video.title}</h3><div className="vm-tags">{video.level && <span className="vm-level-tag">{video.level}</span>}{tags.map((tag) => <span key={tag}>{LABELS[tag] || tag}</span>)}{video.transcript_available && <span>字幕あり</span>}</div>{video.description && <p className="vm-description">{video.description}</p>}{openedAt && <p className="vm-opened">前回開いた日: {formatDate(openedAt)}</p>}<div className="vm-video-actions"><a href={watchUrl ?? undefined} aria-disabled={!watchUrl} target="_blank" rel="noopener noreferrer" className="pf-button-secondary" onClick={(event) => { if (!watchUrl) { event.preventDefault(); return; } void onOpen(video); }} aria-label={`${video.title}をYouTubeで見る（新しいタブ）`}>YouTubeで見る <span aria-hidden="true">↗</span></a><Link href={`/vidmatch/similar/${encodeURIComponent(video.video_id)}`} className="vm-text-link" aria-label={`${video.title}に似た動画を探す`}>似た動画</Link></div></div>
+    <div className="vm-video-body"><p className="vm-channel">{video.channel_name}</p><h3>{video.title}</h3><div className="vm-tags">{video.level && <span className="vm-level-tag">{video.level_min && video.level_max && video.level_min !== video.level_max ? `${video.level_min}–${video.level_max}` : video.level}</span>}{tags.map((tag) => <span key={tag}>{LABELS[tag] || tag}</span>)}{video.transcript_available && <span>字幕あり</span>}</div>{video.description && <p className="vm-description">{video.description}</p>}{openedAt && <p className="vm-opened">前回開いた日: {formatDate(openedAt)}</p>}<div className="vm-video-actions"><a href={watchUrl ?? undefined} aria-disabled={!watchUrl} target="_blank" rel="noopener noreferrer" className="pf-button-secondary" onClick={(event) => { if (!watchUrl) { event.preventDefault(); return; } void onOpen(video); }} aria-label={`${video.title}をYouTubeで見る（新しいタブ）`}>YouTubeで見る <span aria-hidden="true">↗</span></a><Link href={`/vidmatch/similar/${encodeURIComponent(video.video_id)}`} className="vm-text-link" aria-label={`${video.title}に似た動画を探す`}>似た動画</Link></div></div>
   </article>;
 }
 function LoadingVideos() {
@@ -385,6 +418,8 @@ const styles = `
 .vm-results { min-width:0; scroll-margin-top:calc(var(--pf-header-height) + 20px); }
 .vm-results-heading { padding:2px 0 16px; border-bottom:1px solid var(--pf-border); }
 .vm-result-count { color:var(--pf-muted); margin:18px 0; font-size:12px; }
+.vm-more { margin-top:24px; text-align:center; }
+.vm-editorial-note { margin-bottom:18px; }
 .vm-video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
 .vm-history .vm-video-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .vm-video-card { min-width:0; display:flex; flex-direction:column; overflow:hidden; border:1px solid var(--pf-border); border-radius:12px; background:var(--pf-surface); }

@@ -11,7 +11,7 @@
       {"word": "counterargument", "meaning": "an opposing argument", "japaneseMeaning": "反論", "synonyms": "rebuttal, opposition", "antonyms": "", "example": "He presented a strong counterargument."},
       {"word": "evaluation", "meaning": "judgment about value or quality", "japaneseMeaning": "評価", "synonyms": "assessment, appraisal", "antonyms": "neglect, disregard", "example": "The evaluation highlighted strengths and weaknesses."},
       {"word": "thesis", "meaning": "a proposition or argument", "japaneseMeaning": "論文、主張", "synonyms": "dissertation, argument", "antonyms": "", "example": "The thesis was well-supported."},
-      {"word": "evidence", "meaning": "proof supporting a claim", "japaneseMeaning": "証拠", "synonyms": "proof, confirmation", "antonyms": "disproof, doubt", "example": "The evidence was compelling."},
+      {"word": "evidence", "meaning": "facts or information that help show whether a claim is true", "japaneseMeaning": "証拠", "synonyms": "supporting information", "antonyms": "", "example": "The evidence was compelling."},
       {"word": "conclusion", "meaning": "final decision or judgment", "japaneseMeaning": "結論", "synonyms": "result, outcome", "antonyms": "beginning, premise", "example": "The conclusion was inevitable."}
     ]
   }

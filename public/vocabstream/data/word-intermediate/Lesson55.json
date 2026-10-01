@@ -9,7 +9,25 @@
       "synonyms": "typical, ordinary",
       "antonyms": "exceptional, extraordinary",
       "forms": "average, averages",
-      "example": "The average temperature in May is warm."
+      "example": "The average temperature in May is twenty degrees Celsius.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/average.svg",
+        "alt": "二、四、六を足して三で割ると、平均が四になる計算。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/average.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "professional",
+        "loud"
+      ]
     },
     {
       "word": "supplementary",
@@ -45,7 +63,25 @@
       "synonyms": "small, tiny",
       "antonyms": "huge, full-size",
       "forms": "miniature",
-      "example": "The museum displayed a miniature model of the castle."
+      "example": "The museum displayed a miniature model of the castle.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/miniature.svg",
+        "alt": "大きな家と、それと同じ形を小さく再現した模型の比較。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/miniature.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "qualified",
+        "spare"
+      ]
     },
     {
       "word": "portable",
@@ -54,7 +90,25 @@
       "synonyms": "movable, light",
       "antonyms": "fixed, heavy",
       "forms": "portable, portability",
-      "example": "A portable charger is useful when traveling."
+      "example": "A portable charger is useful when traveling.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/portable.svg",
+        "alt": "一人で持って歩ける小さなノートパソコンと、移動する方向の矢印。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/portable.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "loud",
+        "disciplined"
+      ]
     },
     {
       "word": "loud",

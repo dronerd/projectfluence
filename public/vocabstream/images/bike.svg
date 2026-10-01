@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>二つの車輪、ペダル、サドル、ハンドルがある自転車。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="62" cy="120" r="35" fill="#f4f8f5"/><circle cx="180" cy="120" r="35" fill="#f4f8f5"/><path stroke="#7eaca5" stroke-width="7" d="m62 120 30-62 28 62 46-56H92m28 56H62m101-73 17 73"/><path stroke-width="5" d="M80 55h25m53-10h19l5 12"/><circle cx="120" cy="120" r="9" fill="#c6d2d0"/><path d="m120 120 14 13h9m-23-13-10-12h-8"/></g>
+</svg>

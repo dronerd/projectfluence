@@ -1,0 +1,135 @@
+{
+  "lesson_id": "idioms-intermediate-lesson-53",
+  "title": "Lesson 3",
+  "paragraph": "暮らしと健康",
+  "words": [
+    {
+      "word": "run out of",
+      "meaning": "to have none of something left",
+      "japaneseMeaning": "～を使い切る",
+      "example": "We will run out of milk if we don't buy more.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "eat out",
+        "take part in"
+      ],
+      "sentencePractice": {
+        "prompt": "We have only one bottle left. If we use it all, we will ____ water.",
+        "distractors": [
+          "cut down on",
+          "look after"
+        ],
+        "reviewNote": "Using all remaining water means none remains; reducing use has the opposite effect."
+      }
+    },
+    {
+      "word": "cut down on",
+      "meaning": "to use or do less of something",
+      "japaneseMeaning": "～を減らす",
+      "example": "I'm trying to cut down on sugary drinks.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "take out",
+        "go for a walk"
+      ]
+    },
+    {
+      "word": "throw away",
+      "meaning": "to put something you no longer want in the rubbish",
+      "japaneseMeaning": "捨てる",
+      "example": "Don't throw away that box; we can use it again.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "put away",
+        "keep fit"
+      ]
+    },
+    {
+      "word": "eat out",
+      "meaning": "to eat a meal at a restaurant",
+      "japaneseMeaning": "外食する",
+      "example": "We eat out once a month.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "take part in",
+        "feel like"
+      ]
+    },
+    {
+      "word": "take out",
+      "meaning": "to remove something from inside another thing",
+      "japaneseMeaning": "取り出す",
+      "example": "Please take out the clean plates from the cupboard.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "go for a walk",
+        "run out of"
+      ]
+    },
+    {
+      "word": "put away",
+      "meaning": "to return something to its usual storage place",
+      "japaneseMeaning": "しまう",
+      "example": "Put away your clothes before dinner.",
+      "definitionType": "text",
+      "expressionType": "phrasal-verb",
+      "meaningDistractors": [
+        "keep fit",
+        "cut down on"
+      ]
+    },
+    {
+      "word": "take part in",
+      "meaning": "to join an activity with other people",
+      "japaneseMeaning": "～に参加する",
+      "example": "Everyone can take part in the school play.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "feel like",
+        "throw away"
+      ]
+    },
+    {
+      "word": "go for a walk",
+      "meaning": "to walk outside for enjoyment or exercise",
+      "japaneseMeaning": "散歩に行く",
+      "example": "Let's go for a walk by the river.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "run out of",
+        "eat out"
+      ]
+    },
+    {
+      "word": "keep fit",
+      "meaning": "to stay healthy and strong through exercise",
+      "japaneseMeaning": "健康な体を保つ",
+      "example": "I swim twice a week to keep fit.",
+      "definitionType": "text",
+      "expressionType": "collocation",
+      "meaningDistractors": [
+        "cut down on",
+        "take out"
+      ]
+    },
+    {
+      "word": "feel like",
+      "meaning": "to want something or want to do something",
+      "japaneseMeaning": "～したい気がする",
+      "example": "I feel like having soup for lunch.",
+      "definitionType": "text",
+      "expressionType": "fixed-expression",
+      "meaningDistractors": [
+        "throw away",
+        "put away"
+      ]
+    }
+  ]
+}

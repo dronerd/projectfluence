@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>箱の中の三角の部品だけを、箱の外へ取り出す図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="35" y="65" width="130" height="113" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><circle cx="80" cy="104" r="15" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><path d="M105 149 123 118 141 149Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><line x1="137" y1="133" x2="261" y2="133" stroke="#d9887b" stroke-width="3" stroke-linecap="round"/><polygon points="261,133 251.0,128.0 251.0,138.0" fill="#d9887b"/><path d="M273 149 291 118 309 149Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="180" y="212" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">中にあったものを外へ</text>
+</svg>

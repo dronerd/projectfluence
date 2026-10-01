@@ -1,0 +1,146 @@
+{
+  "lesson_id": "specialized-healthcare-lesson-10",
+  "title": "Lesson 10",
+  "paragraph": "薬の形と使用情報",
+  "words": [
+    {
+      "word": "antibiotic",
+      "meaning": "a medicine that kills bacteria or stops them from growing",
+      "japaneseMeaning": "抗菌薬・抗生物質",
+      "example": "The pharmacist explained the antibiotic prescribed for this infection.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "vaccine",
+        "anaesthetic"
+      ],
+      "usageNote": "細菌に作用する薬です。ウイルスに対する薬を意味しません。"
+    },
+    {
+      "word": "vaccine",
+      "meaning": "a preparation that trains the immune system to recognize and protect against a particular disease",
+      "japaneseMeaning": "ワクチン",
+      "example": "The nurse explained which disease the vaccine is designed to protect against.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "antibiotic",
+        "anaesthetic"
+      ]
+    },
+    {
+      "word": "tablet",
+      "meaning": "a solid measured dose of medicine pressed into a compact shape",
+      "japaneseMeaning": "錠剤",
+      "example": "The pharmacist showed the patient the tablet listed on the prescription.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "capsule",
+        "ointment"
+      ]
+    },
+    {
+      "word": "capsule",
+      "meaning": "a medicine form in which the contents are enclosed in a small dissolvable shell",
+      "japaneseMeaning": "カプセル剤",
+      "example": "The medicine is supplied as a capsule.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "tablet",
+        "ointment"
+      ],
+      "sentencePractice": {
+        "prompt": "The medicine powder is enclosed in a small two-piece shell that dissolves after swallowing. This medicine form is a ____.",
+        "distractors": [
+          "tablet",
+          "bandage"
+        ],
+        "reviewNote": "A shell enclosing medicine identifies a capsule; a tablet is compressed solid medicine and a bandage is wrapping material. All options are countable nouns after a."
+      }
+    },
+    {
+      "word": "ointment",
+      "meaning": "a thick preparation applied to the skin for protection or treatment",
+      "japaneseMeaning": "軟膏",
+      "example": "The pharmacist checked the label on the ointment.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "tablet",
+        "capsule"
+      ]
+    },
+    {
+      "word": "inhaler",
+      "meaning": "a device that delivers medicine for a person to breathe into the lungs",
+      "japaneseMeaning": "吸入器",
+      "example": "The nurse explained the purpose of the inhaler.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "bandage",
+        "suture"
+      ]
+    },
+    {
+      "word": "expiry date",
+      "meaning": "the last date a manufacturer states a product should be used under its specified storage conditions",
+      "japaneseMeaning": "使用期限",
+      "example": "The pharmacist checked the expiry date printed on the package.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "dosage",
+        "side effect"
+      ],
+      "usageNote": "米国英語では expiration date もよく使われます。",
+      "sentencePractice": {
+        "prompt": "The package states the last date the manufacturer says the medicine should be used under the specified storage conditions. This is its ____.",
+        "distractors": [
+          "dosage",
+          "side effect"
+        ],
+        "reviewNote": "The last stated date for use is the expiry date; dosage concerns amount and frequency, and a side effect is an additional treatment effect."
+      }
+    },
+    {
+      "word": "dosage",
+      "meaning": "the prescribed amount of a medicine and how often it should be taken",
+      "japaneseMeaning": "投与量と服用頻度・用量用法",
+      "example": "The clinician reviewed the dosage recorded in the care plan.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "expiry date",
+        "adherence"
+      ],
+      "usageNote": "dose は通常1回の量、dosage は量と頻度などの投与計画を表します。"
+    },
+    {
+      "word": "precaution",
+      "meaning": "an action or measure taken in advance to reduce a possible risk",
+      "japaneseMeaning": "予防措置・注意事項",
+      "example": "The leaflet explains a precaution related to this medicine.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "side effect",
+        "diagnosis"
+      ]
+    },
+    {
+      "word": "adherence",
+      "meaning": "the extent to which a person follows a care or treatment plan agreed with a healthcare professional",
+      "japaneseMeaning": "治療方針の実行・アドヒアランス",
+      "example": "The team discussed barriers to adherence without blaming the patient.",
+      "definitionType": "text",
+      "domain": "healthcare",
+      "meaningDistractors": [
+        "consent",
+        "recovery"
+      ]
+    }
+  ]
+}

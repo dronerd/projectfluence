@@ -1,0 +1,146 @@
+{
+  "lesson_id": "specialized-engineering-lesson-9",
+  "title": "Lesson 9",
+  "paragraph": "測定の品質と制御の基本",
+  "words": [
+    {
+      "word": "accuracy",
+      "meaning": "how close a measurement is to the true value of the quantity being measured",
+      "japaneseMeaning": "正確さ・測定の真値への近さ",
+      "example": "The reference test helps assess the accuracy of the thermometer.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "precision",
+        "resolution"
+      ],
+      "usageNote": "繰り返した値どうしの一致を表す precision とは区別します。真値を正確に知ることが難しい場合は基準値と比較します。",
+      "sentencePractice": {
+        "prompt": "The team checks how close a measurement is to the true value, rather than how closely repeated readings agree. The first property is ____.",
+        "distractors": [
+          "precision",
+          "resolution"
+        ],
+        "reviewNote": "Closeness to the true value defines accuracy; agreement among repeated readings is precision and the smallest distinguishable change is resolution."
+      }
+    },
+    {
+      "word": "precision",
+      "meaning": "how closely repeated measurements agree with one another",
+      "japaneseMeaning": "精密さ・測定値どうしの一致",
+      "example": "The repeated readings show good precision even though they share an offset.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "accuracy",
+        "range"
+      ],
+      "usageNote": "値がよく揃っていても、すべて真値からずれていれば accuracy が高いとは限りません。"
+    },
+    {
+      "word": "resolution",
+      "meaning": "the smallest change in a measured quantity that an instrument can distinguish",
+      "japaneseMeaning": "分解能",
+      "example": "The instrument's resolution is fine enough to show small changes in thickness.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "accuracy",
+        "range"
+      ]
+    },
+    {
+      "word": "uncertainty",
+      "meaning": "a quantified description of the range of values reasonably associated with a measurement result",
+      "japaneseMeaning": "測定不確かさ",
+      "example": "The report gives the measured length together with its uncertainty.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "resolution",
+        "drift"
+      ],
+      "usageNote": "測定値の誤差そのものではなく、結果に伴う値の広がりを表します。"
+    },
+    {
+      "word": "repeatability",
+      "meaning": "agreement between repeated measurements made under the same conditions",
+      "japaneseMeaning": "繰り返し性",
+      "example": "The technician checked repeatability without changing the instrument or method.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "accuracy",
+        "sampling rate"
+      ]
+    },
+    {
+      "word": "range",
+      "meaning": "the interval between the lowest and highest values an instrument is designed to measure",
+      "japaneseMeaning": "測定範囲",
+      "example": "The expected pressure is within the sensor's range.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "resolution",
+        "setpoint"
+      ]
+    },
+    {
+      "word": "threshold",
+      "meaning": "a value at which a system begins an action or changes its response",
+      "japaneseMeaning": "しきい値",
+      "example": "The alarm activates when the temperature exceeds the threshold.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "range",
+        "sampling rate"
+      ]
+    },
+    {
+      "word": "setpoint",
+      "meaning": "the target value that a control system tries to maintain",
+      "japaneseMeaning": "設定値・制御の目標値",
+      "example": "The controller adjusts heating to keep the temperature near the setpoint.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "threshold",
+        "resolution"
+      ]
+    },
+    {
+      "word": "drift",
+      "meaning": "a gradual change in an instrument's response over time when the measured quantity stays the same",
+      "japaneseMeaning": "ドリフト・測定応答の時間変化",
+      "example": "The repeated reference checks revealed slow drift in the sensor.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "vibration",
+        "sampling rate"
+      ]
+    },
+    {
+      "word": "sampling rate",
+      "meaning": "the number of measurements or samples taken per unit of time",
+      "japaneseMeaning": "サンプリング周波数・標本化率",
+      "example": "The logger uses a sampling rate of one hundred readings per second.",
+      "definitionType": "text",
+      "domain": "engineering",
+      "meaningDistractors": [
+        "resolution",
+        "range"
+      ],
+      "sentencePractice": {
+        "prompt": "The recorder takes two hundred measurements every second. This number per unit of time is its ____.",
+        "distractors": [
+          "range",
+          "resolution"
+        ],
+        "reviewNote": "The count of measurements per time is sampling rate; range gives measurement limits and resolution describes distinguishable change."
+      }
+    }
+  ]
+}

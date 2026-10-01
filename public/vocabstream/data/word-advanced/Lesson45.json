@@ -6,7 +6,7 @@
       {"word": "obstacle", "meaning": "something that blocks progress", "japaneseMeaning": "障害", "synonyms": "barrier, hindrance", "antonyms": "aid, advantage", "example": "They overcame many obstacles."},
       {"word": "strategy", "meaning": "plan for achieving goals", "japaneseMeaning": "戦略", "synonyms": "plan, approach", "antonyms": "improvisation, randomness", "example": "The strategy led to success."},
       {"word": "resolution", "meaning": "solution to a problem", "japaneseMeaning": "解決", "synonyms": "solution, answer", "antonyms": "problem, conflict", "example": "The resolution was accepted."},
-      {"word": "alternative", "meaning": "another option or choice", "japaneseMeaning": "代替案", "synonyms": "option, substitute", "antonyms": "necessity, requirement", "example": "They proposed an alternative plan."},
+      {"word": "alternative", "meaning": "another option or choice", "japaneseMeaning": "代替案", "synonyms": "option, substitute", "antonyms": "", "example": "They proposed an alternative to the expensive plan."},
       {"word": "innovation", "meaning": "introducing new methods or ideas", "japaneseMeaning": "革新", "synonyms": "invention, novelty", "antonyms": "stagnation, tradition", "example": "Innovation drives progress."},
       {"word": "intervention", "meaning": "action to improve a situation", "japaneseMeaning": "介入", "synonyms": "interference, involvement", "antonyms": "neglect, avoidance", "example": "Intervention prevented the crisis."},
       {"word": "adaptation", "meaning": "modifying to suit new conditions", "japaneseMeaning": "適応", "synonyms": "adjustment, modification", "antonyms": "resistance, rigidity", "example": "Adaptation helped them survive."},

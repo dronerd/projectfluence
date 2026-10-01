@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+  <title>棒に掛けられた、端に織り模様がある青いタオル。</title>
+  <metadata>Original ProjectFluence geometric illustration. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+  <rect width="240" height="180" rx="20" fill="#f5f8f6"/>
+  <ellipse cx="120" cy="160" rx="78" ry="7" fill="#e3eae5"/>
+  <g fill="none" stroke="#40565b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#90a7ab" stroke-width="9" d="M40 47h160"/><circle cx="40" cy="47" r="7" fill="#c8d7d7"/><circle cx="200" cy="47" r="7" fill="#c8d7d7"/><path fill="#7eb0bc" d="M77 47q0-18 18-18h55q15 0 15 18v91h-19Z"/><path fill="#b5d6dc" d="M95 29q-18 0-18 18v105h69V47q0-18 18-18Z"/><path stroke="#76a6b3" stroke-width="4" d="M83 131h57m-57 11h57"/><path stroke="#dae9e9" d="M91 61v52m15-52v52m15-52v52"/><path stroke="#83b4bd" d="M80 152v10m10-10v10m10-10v10m10-10v10m10-10v10m10-10v10m10-10v10"/></g>
+</svg>

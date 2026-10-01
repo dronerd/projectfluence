@@ -10,7 +10,7 @@
     { "word": "round", "meaning": "shaped like a circle", "japaneseMeaning": "丸い", "synonyms": "circular, ball-shaped", "antonyms": "square, straight", "forms": "round, rounder, roundest", "example": "The station clock is round." },
     { "word": "lost", "meaning": "not knowing where you are", "japaneseMeaning": "道に迷った／失くした", "synonyms": "missing, confused", "antonyms": "found, safe", "forms": "lost, more lost, most lost", "example": "We are lost near the station." },
     { "word": "available", "meaning": "ready to use or free to take", "japaneseMeaning": "利用できる／空いている", "synonyms": "free, ready", "antonyms": "unavailable, busy", "forms": "available, more available, most available", "example": "A taxi is available outside." },
-    { "word": "crowded", "meaning": "full of many people", "japaneseMeaning": "混雑した", "synonyms": "full, busy", "antonyms": "empty, quiet", "forms": "crowded, more crowded, most crowded", "example": "The bus is crowded today." },
+    { "word": "crowded", "meaning": "full of many people", "japaneseMeaning": "混雑した", "synonyms": "full, busy", "antonyms": "empty, quiet", "forms": "crowded, more crowded, most crowded", "example": "The bus is crowded today.", "duplicateOf": {"category": "word-beginner", "lessonNumber": 36, "word": "crowded"} },
     { "word": "empty", "meaning": "with nothing or no people inside", "japaneseMeaning": "空の", "synonyms": "blank, clear", "antonyms": "full, crowded", "forms": "empty, emptier, emptiest", "example": "The train car is empty." },
     { "word": "distant", "meaning": "far away", "japaneseMeaning": "遠い", "synonyms": "far, remote", "antonyms": "near, close", "forms": "distant, more distant, most distant", "example": "We can see distant mountains." }
   ]

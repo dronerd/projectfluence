@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>中心点を動かさず、三角形を九十度回転させる図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<circle cx="174" cy="128" r="4" fill="#40565b" stroke="#40565b" stroke-width="2.5"/><path d="M174 128 174 62 214 128Z" fill="#77aebc" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M174 128 240 128 174 169Z" fill="#d9b76c" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M104 153Q73 57 158 48" fill="none" stroke="#b7c6c6" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><line x1="146" y1="48" x2="160" y2="48" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><polygon points="160,48 150.0,43.0 150.0,53.0" fill="#40565b"/><text x="83" y="193" text-anchor="middle" font-size="21" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">90°</text>
+</svg>

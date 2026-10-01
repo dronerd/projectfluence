@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>家庭で使う洗濯機とトースターが並ぶ図。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<rect x="36" y="50" width="133" height="157" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><rect x="39" y="54" width="127" height="27" rx="1" fill="#dcecef" stroke="#40565b" stroke-width="2.5"/><circle cx="102" cy="137" r="46" fill="#dcecef" stroke="#40565b" stroke-width="2.5"/><circle cx="102" cy="137" r="32" fill="#77aebc" stroke="#40565b" stroke-width="2.5"/><circle cx="55" cy="65" r="5" fill="#d9b76c" stroke="#40565b" stroke-width="2.5"/><rect x="208" y="109" width="108" height="77" rx="5" fill="#b7c6c6" stroke="#40565b" stroke-width="2.5"/><rect x="223" y="85" width="22" height="37" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><rect x="275" y="85" width="22" height="37" rx="5" fill="#fffdf5" stroke="#40565b" stroke-width="2.5"/><text x="181" y="232" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">洗濯機・トースター</text>
+</svg>

@@ -36,7 +36,25 @@
       "synonyms": "give out, share",
       "antonyms": "collect, keep",
       "forms": "distribute, distributes, distributing, distributed",
-      "example": "The teacher distributed the worksheets before class."
+      "example": "The teacher distributed the worksheets before class.",
+      "definitionType": "image+text",
+      "imageRole": "supporting",
+      "image": {
+        "src": "/vocabstream/images/expansion-intermediate/distribute.svg",
+        "alt": "一か所に集めた品物を、三つの受け取り先へ分けて渡す図。",
+        "width": 360,
+        "height": 240,
+        "source": "ProjectFluence original SVG teaching illustration",
+        "sourceUrl": "/vocabstream/images/expansion-intermediate/distribute.svg",
+        "creator": "ProjectFluence",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "ProjectFluence · CC0-1.0"
+      },
+      "meaningDistractors": [
+        "confront",
+        "occur"
+      ]
     },
     {
       "word": "calculate",

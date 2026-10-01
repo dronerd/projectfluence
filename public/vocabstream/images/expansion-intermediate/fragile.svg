@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<title>薄いガラスのコップに細いひびが入り、割れやすさを示している。</title>
+<metadata>Original ProjectFluence teaching diagram. CC0-1.0. https://creativecommons.org/publicdomain/zero/1.0/</metadata>
+<rect width="360" height="240" rx="20" fill="#f5f8f6"/>
+<path d="M123 39h114q2 74-57 75-59-1-57-75Z" fill="#dcecef" stroke="#40565b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><line x1="180" y1="114" x2="180" y2="187" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><line x1="142" y1="190" x2="218" y2="190" stroke="#40565b" stroke-width="3" stroke-linecap="round"/><path d="M198 45 185 63 201 73 183 93" fill="none" stroke="#d9887b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="180" y="229" text-anchor="middle" font-size="17" fill="#40565b" font-family="system-ui,-apple-system,sans-serif">割れやすい薄いガラス</text>
+</svg>
