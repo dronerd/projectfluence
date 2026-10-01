@@ -1,5 +1,7 @@
 # ProjectFluence production deployment
 
+**Historical alternative:** this page describes the optional all-Render topology. The intended deployment is **Next.js on Vercel, SpeakWise Python on Render, and the existing Supabase project**; follow [the current deployment guide](deployment-current-setup.md) and [SpeakWise learning operations](speakwise-learning-operations.md). Do not import the complete Render Blueprint merely to enable SpeakWise. The 2026-10-01 implementation has not been deployed.
+
 This guide deploys the repository's Next.js application/API, SpeakWise FastAPI service, and existing daily YouTube ingestion schedule to Render, with Supabase providing Auth/PostgreSQL. It does not claim those services have been deployed. Use the audited commit after the staging checks below.
 
 ## Services and exact commands
@@ -75,7 +77,7 @@ The curation branch adds migration `20260930000100_vidmatch_curation.sql`. Apply
    npx supabase migration list
    ```
 
-   The three root migrations provision tables, indexes, RLS, grants, triggers, transcript storage and transaction functions. Do not rerun per-app schema snapshots afterward. Existing per-app installations can adopt the idempotent baseline; undocumented schema drift must be reviewed. No production reset or blanket migration repair is needed. Details, preserved legacy-row constraints, and local SQL tests are in [the Supabase guide](../supabase/README.md).
+   The five root migrations provision tables, indexes, RLS, grants, triggers, transcript storage and transaction functions. Do not rerun per-app schema snapshots afterward. Existing per-app installations can adopt the idempotent baseline; undocumented schema drift must be reviewed. No production reset or blanket migration repair is needed. Details, preserved legacy-row constraints, and local SQL tests are in [the Supabase guide](../supabase/README.md).
 3. **Supabase Auth, once in dashboard:** enable Email and confirmation, configure SMTP, keep anonymous Auth disabled, and enable/configure Google if offering Google sign-in. Google Cloud's authorized redirect URI is the callback shown by Supabase, normally `https://PROJECT_REF.supabase.co/auth/v1/callback`. OAuth credentials belong in Supabase, not Render. `db push` does not apply hosted Auth settings from local `config.toml`.
 4. **Reserve/create Render services:** connect the reviewed branch/Blueprint and read both assigned web-service URLs. Enter the variable table values. `NEXT_PUBLIC_SPEAKWISE_API_URL` cannot be finalized until the Python URL exists. `NEXT_PUBLIC_SITE_URL`, cron `PROJECTFLUENCE_URL`, and Python `SPEAKWISE_CORS_ORIGINS` cannot be finalized until the Next URL/custom domain is known. There is a URL-configuration dependency in both directions, not an application runtime circular dependency. Do not publish placeholder origins.
 5. **Deploy Python:** after Supabase Auth/project keys exist, deploy `speakwise-backend`. Confirm `/health` returns 200. Confirm missing/invalid bearer tokens get 401 on paid routes. Health is liveness, not a paid-provider or database readiness probe. Keep one worker/instance.
@@ -93,7 +95,7 @@ The curation branch adds migration `20260930000100_vidmatch_curation.sql`. Apply
    Use locally supplied secret environment values; never paste them into docs or logs. Run the Render cron manually once and check its success log. If migrating from Vercel, disable the Vercel schedule before enabling Render cron. On-demand ingestion still uses the separate ingest token. The transcript tables are ready, but the preexisting local-only Stage 1 ingestion route must be separately reviewed/committed before relying on that endpoint in deployment.
 9. **Production validation:** run the checklist below on the actual domain and devices. Only then merge/enable normal auto-deploy and direct users to the release. Existing migrations are additive and preserve historical data; roll back application code if needed without dropping those tables.
 
-No Supabase Storage bucket creation, Storage policies, file uploads, Edge Function deployment, realtime publication, database webhook or persistent-media-volume step is applicable. VidMatch opens YouTube; SpeakWise streams disposable audio from FastAPI. Browser-to-Next is same-origin. Browser-to-Python uses the CORS allowlist and bearer token. Do not add wildcard CORS or proxy video bytes through Next to troubleshoot external playback.
+PDF uploads now go directly to authenticated Python extraction; private extracted pages are stored in Supabase. No Supabase Storage bucket creation, Storage policies, Edge Function deployment, realtime publication, database webhook or persistent-media-volume step is applicable. VidMatch opens YouTube; SpeakWise streams disposable audio from FastAPI. Browser-to-Next is same-origin. Browser-to-Python uses the CORS allowlist and bearer token. Do not add wildcard CORS or proxy video bytes through Next to troubleshoot external playback.
 
 ## Production smoke checklist
 
@@ -103,11 +105,11 @@ Use two ordinary test accounts A/B and an unauthenticated browser. Keep a record
 - [ ] Sign out and confirm the UI clears its session and private screens show sign-in guidance. Missing/invalid/expired bearer tokens must be rejected by private writes and paid AI. Supabase controls the remaining lifetime of an already issued JWT; logout is not a claim of instant global JWT revocation.
 - [ ] Complete password reset at `/auth/reset-password`; test Google OAuth if configured. No redirect to localhost/stale Vercel origin.
 - [ ] A completes a vocabulary lesson; reload and see the score/review data. Retry a save after a lost response: no duplicate attempt or inflated mistake counter. Guest practice remains usable and makes no durable write.
-- [ ] B cannot read A's private rows through direct Supabase requests. Browser anon/authenticated roles cannot invoke privileged save/analytics RPCs or insert/update/delete learning tables. B cannot attach a SpeakWise summary to A's session.
+- [ ] B cannot read A's private rows through direct Supabase requests. Browser anon/authenticated roles cannot invoke privileged save/analytics RPCs; new private-document and message writes use restricted owner policies described in the SpeakWise data runbook. B cannot attach a SpeakWise summary to A's session.
 - [ ] Start SpeakWise signed in. Grant microphone permission on HTTPS; test denial/unavailable recognition and typed input. Confirm recognized words remain editable and manual Send works.
 - [ ] Receive chat text, play AI audio, replay manually if autoplay is blocked, interrupt by starting input/end lesson, and verify no overlapping/late audio. Test a phone as well as desktop.
 - [ ] Correlate server `llm_complete`, `tts_first_byte`, `tts_closed` logs with browser `speakwise_timing`; capture first-token, total-text, first-audio-byte and `playing` timings. Compare p50/p95 under real network conditions before claiming a latency improvement.
-- [ ] Finish the lesson, see a valid summary, save/retry it, and reload learner memory. Database refresh failure after commit must not be reported as lost data.
+- [ ] Finish the lesson through the saved-session completion route, see a valid evidence-based summary, retry completion, and reload learner memory. Database refresh failure after commit must not be reported as lost data.
 - [ ] VidMatch returns a populated matching catalog; filters work even for videos outside the former first 100 rows. Empty results and backend failure are distinct.
 - [ ] Block the thumbnail CDN to verify fallback/error/manual retry, then restore it. Open a canonical YouTube link; verify playback on current iPhone Safari, smaller/older supported iPhone, iPad, Android Chrome, macOS Safari/Chrome, Windows Chrome/Edge.
 - [ ] Record provider-side failures separately: removed, private, regional or age-restricted video; account restriction; offline network. The app cannot inspect/control playback inside YouTube.

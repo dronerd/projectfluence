@@ -1,0 +1,43 @@
+{
+  "label": "Small synthetic regression evaluation; human-authored relevance labels; no learning-benefit claim",
+  "asOf": "2026-10-01T00:00:00Z",
+  "memory": [
+    {"name":"older relevant weakness", "query":"past tense", "relevance":{"old":3}, "records":[
+      {"id":"old","text":"Past tense narrative sequencing was difficult","at":"2026-05-01T00:00:00Z","kind":"lesson_summary","confidence":0.9},
+      {"id":"new1","text":"Shopping for apples","at":"2026-09-30T00:00:00Z","kind":"lesson_summary"},
+      {"id":"new2","text":"Coffee and cooking","at":"2026-09-29T00:00:00Z","kind":"lesson_summary"},
+      {"id":"new3","text":"Travel plans","at":"2026-09-28T00:00:00Z","kind":"lesson_summary"}]},
+    {"name":"hard vocabulary reference", "query":"photosynthesis", "relevance":{"botany":3}, "records":[
+      {"id":"botany","text":"photosynthesis means producing food using light","at":"2026-04-10T00:00:00Z","kind":"vocabulary","failures":3,"successes":0},
+      {"id":"new1","text":"Pronunciation of airport","at":"2026-09-30T00:00:00Z","kind":"lesson_summary"},
+      {"id":"new2","text":"Reading news","at":"2026-09-29T00:00:00Z","kind":"lesson_summary"},
+      {"id":"new3","text":"School timetable","at":"2026-09-28T00:00:00Z","kind":"lesson_summary"}]},
+    {"name":"resolved mistakes versus recurring difficulty", "query":"affect effect", "relevance":{"ongoing":3,"resolved":1}, "records":[
+      {"id":"ongoing","text":"affect effect word-choice confusion persists","at":"2026-09-20T00:00:00Z","kind":"vocabulary","failures":6,"successes":0,"confidence":1},
+      {"id":"resolved","text":"affect effect previously difficult; recent successful recalls","at":"2026-09-30T00:00:00Z","kind":"vocabulary","failures":1,"successes":8,"confidence":1},
+      {"id":"other","text":"Buying snacks","at":"2026-09-29T00:00:00Z","kind":"lesson_summary"}]},
+    {"name":"sparse history", "query":"garden", "relevance":{"only":2}, "records":[
+      {"id":"only","text":"garden: place where plants grow","at":"2026-09-20T00:00:00Z","kind":"vocabulary","failures":1}]},
+    {"name":"future evidence is unavailable at prediction time", "query":"conditional sentences", "relevance":{"past":3}, "records":[
+      {"id":"future","text":"conditional sentences perfect recovery","at":"2026-10-02T00:00:00Z","kind":"lesson_summary"},
+      {"id":"past","text":"conditional sentences need another practice","at":"2026-03-01T00:00:00Z","kind":"lesson_summary"},
+      {"id":"new1","text":"Movie discussion","at":"2026-09-30T00:00:00Z","kind":"lesson_summary"},
+      {"id":"new2","text":"Music interests","at":"2026-09-29T00:00:00Z","kind":"lesson_summary"},
+      {"id":"new3","text":"Favorite sport","at":"2026-09-28T00:00:00Z","kind":"lesson_summary"}]}
+  ],
+  "content": [
+    {"name":"rare topic beyond newest content", "query":"photosynthesis", "relevance":{"old-science":3}},
+    {"name":"document-style multi-term request", "query":"please find a resource about gardens rainwater", "relevance":{"gardens":3}},
+    {"name":"indexed text body reference", "query":"volcanic ash", "relevance":{"volcano":3}},
+    {"name":"empty catalog match", "query":"qzxunavailable", "relevance":{}}
+  ],
+  "catalog": [
+    {"id":"old-science","title":"Photosynthesis explained","body":"Plants use sunlight to make food.","createdAt":"2026-01-01T00:00:00Z"},
+    {"id":"gardens","title":"City gardens","body":"Neighbors collect rainwater in barrels and use it for flowers.","createdAt":"2026-02-01T00:00:00Z"},
+    {"id":"volcano","title":"Mountain observations","body":"Scientists measured volcanic ash above the island.","createdAt":"2026-03-01T00:00:00Z"},
+    {"id":"new1","title":"Shopping for clothes","body":"Read about a new coat.","createdAt":"2026-09-30T00:00:00Z"},
+    {"id":"new2","title":"Playing guitar","body":"Music is enjoyable.","createdAt":"2026-09-29T00:00:00Z"},
+    {"id":"new3","title":"Going to a restaurant","body":"Learn to order lunch.","createdAt":"2026-09-28T00:00:00Z"},
+    {"id":"future","title":"Photosynthesis gardens volcanic ash","body":"Future publication must be excluded by evaluation cut-off.","createdAt":"2026-10-02T00:00:00Z"}
+  ]
+}

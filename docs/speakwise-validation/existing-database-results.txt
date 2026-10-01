@@ -1,0 +1,32 @@
+(node:14845) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/yutokuroki/Desktop/Project%20Fluence/projectfluence/apps/vocabstream/src/lib/learning.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/yutokuroki/Desktop/Project Fluence/projectfluence/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS migration 20260929000100_application_baseline.sql
+PASS adopt an existing 20260929000100_application_baseline.sql
+PASS migration 20260929000200_transcript_foundation.sql
+PASS adopt an existing 20260929000200_transcript_foundation.sql
+PASS migration 20260929000300_atomic_learning_writes.sql
+PASS migration 20260930000100_vidmatch_curation.sql
+PASS migration 20261001000100_speakwise_learning.sql
+PASS duplicate username does not prevent signup
+PASS atomic VocabStream save and retry without duplicates
+PASS same id cannot alter answers or cross owners
+PASS late invalid question rolls back attempt, progress, and mistakes
+PASS subsequent batches increment existing mistake counts
+PASS SpeakWise summary rejects a different session owner
+PASS SpeakWise summary and mistake counts are idempotent
+PASS VidMatch history is catalog-backed with atomic click counts
+PASS transcript snapshots remain atomic and preserve usable chunks after provider failure
+PASS analytics returns the application contract for owned data
+PASS analytics counts beyond the REST 1000 row ceiling
+PASS authenticated RLS hides all other learners private rows
+PASS authenticated users can read their own question history
+PASS browser roles cannot execute privileged RPCs or mutate other data
+PASS database owner-reference trigger protects direct service writes
+PASS service role can execute RPC after grants
+PASS hardening adopts legacy inconsistent scores and duplicate summaries without data deletion
+PASS new idiom, specialist and image meaning attempts save and retry without a schema migration
+PASS new curriculum saves leave original lesson identities and historical answer snapshots unchanged
+PASS new curriculum and image answer history stay private to their owner
+DATABASE_CHECKS_OK 27; isolated PostgreSQL/WASM; no hosted Supabase calls

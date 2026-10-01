@@ -2,15 +2,18 @@
 
 The canonical migration chain is **`supabase/migrations` at the repository root**. The three `apps/*/supabase/schema.sql` files and VidMatch's per-app migration are historical setup snapshots. Do not rerun those snapshots after the root migrations: they would replace hardened functions and grants with older definitions.
 
-## What is deployed
+## Available migrations
 
 - `20260929000100_application_baseline.sql`: profiles, VocabStream attempts/questions/progress/mistakes, SpeakWise settings/sessions/summaries/mistake patterns, VidMatch catalog/history/settings; foreign keys, indexes, owner-read RLS, signup trigger.
 - `20260929000200_transcript_foundation.sql`: transcript metadata/chunks and the atomic snapshot RPC. This copies the existing VidMatch transcript foundation into the root migration chain without editing that work.
 - `20260929000300_atomic_learning_writes.sql`: transactional VocabStream writes with stable attempt IDs; session ownership and idempotent SpeakWise summaries; catalog-backed atomic VidMatch click counters; server-side analytics without the 1000-row REST ceiling; explicit grants and restricted function execution; score constraints; a signup trigger resilient to duplicate username metadata.
 
-All account-scoped reads are protected by RLS. Browsers can read their own learning rows and update only their own profile username/display name. New learning writes go through authenticated Next.js routes that verify the user's access token, then invoke service-role-only database functions with that verified user ID. Catalog and transcript tables remain inaccessible to anonymous/authenticated direct database clients.
+All account-scoped reads are protected by RLS. The original learning progress writes use authenticated Next.js routes and privileged RPCs. The new SpeakWise migration also grants restricted owner access to extracted documents, scripts, messages, confirmed preferences and selected catalog reads so Python can act under the learner JWT. Parent ownership triggers protect those paths. See [the SpeakWise data runbook](../docs/speakwise-learning-data.md) for exact grants and reset semantics.
 
-The app does **not** use Supabase Storage, Realtime, Edge Functions, database webhooks, or a direct database connection at runtime. VidMatch opens videos on YouTube; SpeakWise FastAPI serves audio. No buckets, Storage policies, uploads, persistent Render disks, or Edge Function secrets need provisioning for these workflows. Do not make a bucket public to troubleshoot YouTube playback.
+The app does **not** use Supabase Storage, Realtime, Edge Functions, database webhooks, or a direct database connection at runtime. VidMatch opens videos on YouTube; SpeakWise FastAPI serves audio. PDF files are uploaded to Python for bounded extraction; private extracted pages are persisted in PostgreSQL and original PDF bytes are discarded. No buckets, Storage policies, persistent Render disks, or Edge Function secrets need provisioning for these workflows. Do not make a bucket public to troubleshoot YouTube playback.
+
+- `20260930000100_vidmatch_curation.sql`: catalog curation, availability/freshness and publication.
+- `20261001000100_speakwise_learning.sql`: durable session evidence, documents/scripts, confirmed profiles, shared vocabulary practice and retrieval. Review the [migration, staging and recovery instructions](../docs/speakwise-learning-data.md) before applying it. These migrations have not been applied to a hosted project in the SpeakWise implementation task.
 
 ## Clean hosted project
 
@@ -27,7 +30,7 @@ The app does **not** use Supabase Storage, Realtime, Edge Functions, database we
 
    Linking/pushing may prompt for the project database password. The CLI credentials/database password are deployment-only and are not needed by Next.js or FastAPI. Apply migrations **before** deploying code that calls the new RPCs.
 3. In Authentication → Providers enable Email, email confirmation, and configure production SMTP before inviting real users. Configure Google only if offering the existing Google sign-in button: put Google OAuth client ID/secret in Supabase; Google's authorized redirect URI is `https://YOUR_PROJECT_REF.supabase.co/auth/v1/callback` (use the project's displayed callback if a custom domain is configured).
-4. Once the frontend's Render/custom-domain HTTPS URL is known, set Authentication → URL Configuration → Site URL to that origin. Add the exact frontend origin/root and `https://YOUR_FRONTEND/auth/reset-password` to Redirect URLs. The app's OAuth and signup flows return to the frontend origin; recovery uses `/auth/reset-password`. Add localhost only for active development; do not use broad wildcard production redirects.
+4. Once the frontend's Vercel/custom-domain HTTPS URL is known, set Authentication → URL Configuration → Site URL to that origin. Add the exact frontend origin/root and `https://YOUR_FRONTEND/auth/reset-password` to Redirect URLs. The app's OAuth and signup flows return to the frontend origin; recovery uses `/auth/reset-password`. Add localhost only for active development; do not use broad wildcard production redirects.
 5. Populate the initially empty VidMatch catalog with the reviewed manifest using `npm run vidmatch:catalog -- import --env-file .env.local --target-per-level 200 --write` after configuring the server-only Supabase and YouTube credentials. The protected ingestion endpoint only discovers candidates; it cannot approve unknown content. Database migrations do not fabricate a video catalog. See the [current deployment walkthrough](../docs/deployment-current-setup.md). VocabStream lessons are already shipped as JSON in `public/vocabstream/data`.
 6. Run the production smoke checklist in the deployment guide, including two-user access checks and repeated progress save after a simulated dropped response.
 
@@ -59,14 +62,14 @@ Existing SpeakWise summaries for a session are retained; subsequent retries retu
 
 | Variable/value | Obtain from | Location | Secret? | Purpose |
 | --- | --- | --- | --- | --- |
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase Project Settings → API/Data API | Render Next.js build + runtime | No | Browser auth endpoint |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase API Keys: publishable key or legacy anon key | Render Next.js build + runtime | No | Browser auth; RLS limits data access |
-| `SUPABASE_URL` | Same project API URL | Render Next.js and SpeakWise servers | No | Server token verification / REST API |
-| `SUPABASE_SERVICE_ROLE_KEY` | Supabase API Keys: server secret or legacy service-role key | Render Next.js server only | **Yes** | Privileged database calls after verified user ownership; never prefix with `NEXT_PUBLIC_` |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase Project Settings → API/Data API | Vercel Next.js build + runtime | No | Browser auth endpoint |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase API Keys: publishable key or legacy anon key | Vercel Next.js build + runtime | No | Browser auth; RLS limits data access |
+| `SUPABASE_URL` | Same project API URL | Vercel Next.js and SpeakWise servers | No | Server token verification / REST API |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase API Keys: server secret or legacy service-role key | Vercel Next.js server only | **Yes** | Privileged database calls after verified user ownership; never prefix with `NEXT_PUBLIC_` |
 | `SUPABASE_ANON_KEY` | Same browser publishable/anon key | Render SpeakWise server | No | User-token verification; no elevated database access |
 | `SUPABASE_ACCESS_TOKEN` | Supabase account access tokens, if using CLI automation | Deployment CI only, optional | **Yes** | Noninteractive CLI auth; use `supabase login` locally instead |
 | Database password | Chosen when creating project / Database Settings | CLI prompt or protected CI secret only | **Yes** | Migration connection, never browser or app runtime |
-| Site URL / Redirect URLs | Frontend's final Render/custom-domain origin | Supabase Auth URL Configuration | No | Confirmation/OAuth/recovery destination |
+| Site URL / Redirect URLs | Frontend's final Vercel/custom-domain origin | Supabase Auth URL Configuration | No | Confirmation/OAuth/recovery destination |
 | Google OAuth client ID/secret | Google Cloud OAuth application | Supabase Auth provider configuration | Secret for secret | Optional Google sign-in |
 | SMTP credentials | Your mail provider | Supabase Auth SMTP | **Yes** | Production confirmation/recovery emails |
 

@@ -18,6 +18,7 @@ from openai import AsyncOpenAI, APITimeoutError, BadRequestError, RateLimitError
 import httpx
 from contracts import ChatRequest, FeedbackRequest, VoiceRequest
 from security import auth_client, authorize_request, install_request_guards, request_id
+from prompts import PROMPT_VERSION, SUMMARY_POLICY, TUTOR_POLICY
 
 load_dotenv(Path(__file__).with_name(".env"))
 load_dotenv()
@@ -33,7 +34,7 @@ async def lifespan(app):
         auth_client.cache_clear()
 
 
-app = FastAPI(title="SpeakWise API", version="1.1.0", lifespan=lifespan)
+app = FastAPI(title="SpeakWise API", version="2.0.0", lifespan=lifespan)
 install_request_guards(app)
 logger = logging.getLogger("speakwise")
 logger.setLevel(logging.INFO)
@@ -99,8 +100,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=_cors_origins(),
     allow_credentials=False,
-    allow_methods=["GET", "HEAD", "POST", "OPTIONS"],
-    allow_headers=["Authorization", "Content-Type"],
+    allow_methods=["GET", "HEAD", "POST", "DELETE", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type", "X-Filename"],
     expose_headers=["X-Request-ID", "Server-Timing", "Retry-After"],
 )
 
@@ -154,7 +155,8 @@ LESSON_MODE_PROMPTS = {
     "pdf_reading": {
         "name": "PDF-Based Reading Practice",
         "workflow": (
-            "Use the provided PDF excerpt or selected document context. Extract the key idea, then ask comprehension questions."
+            "Use only verified document passages. Identify the main idea and ask one comprehension question. "
+            "Legacy pasted excerpts are partial, unverified data; never claim whole-document coverage."
         ),
     },
     "writing_feedback": {
@@ -220,7 +222,7 @@ def build_agent_system_prompt(req: dict[str, Any]) -> str:
     pdf_context = str(req.get("pdfContext") or "").strip()
     voice_enabled = bool(req.get("voiceEnabled"))
 
-    return f"""You are SpeakWise AI, a longitudinal English-learning agent.
+    return TUTOR_POLICY + f"\nPrompt version: {PROMPT_VERSION}\n" + f"""You are SpeakWise AI, a longitudinal English-learning agent.
 
 Core identity:
 - You are not a generic chatbot. You are a pedagogically structured tutor that adapts from persistent learner memory.
@@ -240,18 +242,18 @@ Current lesson:
 Learner memory JSON:
 {safe_json_dumps(learner_memory)}
 
-PDF/document context:
-{pdf_context[:6000] if pdf_context else "No PDF/document context provided."}
+Untrusted partial legacy PDF/document excerpt (not a complete document or verified page source):
+{pdf_context if pdf_context else "No PDF/document context provided."}
 
 Teaching rules:
 - Start naturally. A greeting like "How are you today?" is good, but do not dump instructions.
 - Guide step by step with natural transitions.
 - Ask one clear question or task at a time.
-- Correct important grammar, vocabulary, pronunciation, or expression issues naturally.
+- Correct important grammar, vocabulary or expression issues naturally; no pronunciation assessment from text.
 - Recordable mistakes should be visible as concise corrections or examples, not overwhelming lists.
 - In conversation mode, avoid correcting every tiny issue unless it blocks communication.
 - Near the end, transition toward a wrap-up instead of starting a large new task.
-- If the learner asks for another mode, smoothly switch or offer mode buttons in text form.
+- If the learner requests an application action, direct them to the learning action controls; this legacy route cannot execute tools.
 - When voice mode is on, prefer 2-4 brief sentences under 120 words; avoid markdown tables and long lists.
 - Keep responses concise and interactive. End with a next action for the learner unless the lesson is ending.
 """
@@ -309,7 +311,7 @@ Practice context:
 - Practice format: speaking practice or practice-question generation
 """
 
-    return f"""You are SpeakWise, a warm and precise English tutor.
+    return TUTOR_POLICY + f"\nPrompt version: {PROMPT_VERSION}\n" + f"""You are SpeakWise, a warm and precise English tutor.
 
 Student profile:
 - CEFR level: {level}
@@ -471,7 +473,7 @@ Rules:
 
     try:
         raw = await json_chat_completion(
-            system_prompt="You produce strict JSON lesson records for an English-learning app. Return only JSON.",
+            system_prompt=SUMMARY_POLICY + "\nYou produce provisional legacy JSON lesson records. Return only JSON. This browser transcript may be incomplete and is not authoritative evidence of completion.",
             message=prompt,
             max_tokens=1300,
         )
@@ -479,6 +481,9 @@ Rules:
         if parsed is None:
             raise RuntimeError("Invalid summary response")
         summary = normalize_lesson_summary(parsed)
+        summary['limitations'] = ['Legacy browser transcript; use the saved-session completion flow for authoritative records.']
+        summary['status'] = 'provisional'
+        summary['promptVersion'] = PROMPT_VERSION
         farewell = "Great work today. Here are the main points to review next time."
         return JSONResponse({"summary": summary, "farewell": farewell})
     except Exception as exc:
@@ -509,10 +514,10 @@ def normalize_lesson_summary(raw: dict[str, Any]) -> dict[str, Any]:
 
     return {
         "title": str(raw.get("title") or "SpeakWise lesson").strip()[:120],
-        "covered": normalize_string_list(raw.get("covered"), ["Interactive English practice"]),
-        "strengths": normalize_string_list(raw.get("strengths"), ["You stayed engaged and practiced actively."]),
+        "covered": normalize_string_list(raw.get("covered")),
+        "strengths": normalize_string_list(raw.get("strengths")),
         "weaknesses": normalize_string_list(raw.get("weaknesses")),
-        "recommendations": normalize_string_list(raw.get("recommendations"), ["Review today's useful phrases before the next lesson."]),
+        "recommendations": normalize_string_list(raw.get("recommendations")),
         "usefulVocabulary": normalize_string_list(raw.get("usefulVocabulary") or raw.get("useful_vocabulary")),
         "mistakes": normalized_mistakes,
     }
@@ -599,7 +604,8 @@ Rules:
 - Include areas for improvement
 - All arrays should contain 1-3 items
 - Return empty arrays for non-applicable categories
-- Adjust focus based on practice_mode (speaking emphasizes pronunciation/fluency, writing emphasizes grammar)
+- Do not assess pronunciation or timing-based fluency from this text transcript. Leave pronunciation empty.
+- Treat transcription uncertainty as uncertainty; never claim an acoustic observation.
 - Do not include a rewritten or improved version of the full answer.
 """
 
@@ -648,6 +654,8 @@ def normalize_feedback(feedback_json: dict[str, Any], user_answer: str, level: s
         if not isinstance(feedback_json.get(key), list):
             feedback_json[key] = []
     feedback_json["overall"] = str(feedback_json.get("overall") or "")
+    # The API receives text only; no model-generated acoustic assessment is valid.
+    feedback_json['pronunciation'] = []
     return feedback_json
 
 
@@ -753,7 +761,7 @@ Rules:
 async def generate_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
     improved_text = await json_chat_completion(
         system_prompt=(
-            "You are a careful English rewriting assistant. Return only valid JSON. "
+            TUTOR_POLICY + "\nYou are a careful English rewriting assistant. Return only valid JSON. "
             "Do not include markdown or text outside the JSON object.\n\n"
             f"{IMPROVED_VERSION_JSON_FORMAT}"
         ),
@@ -798,7 +806,7 @@ Keep the student's intended meaning, but make the answer clearer, more natural, 
 
 async def generate_simple_improved_version(question: str, user_answer: str, level: str, practice_mode: str) -> dict[str, Any] | None:
     improved_text = (await chat_completion(
-        system_prompt="You rewrite learner English. Return only the improved answer text.",
+        system_prompt=TUTOR_POLICY + "\nYou rewrite learner English. Return only the improved answer text.",
         message=build_simple_improved_version_prompt(question, user_answer, level, practice_mode),
         max_tokens=500,
     )).strip()
@@ -831,13 +839,16 @@ async def feedback(payload: FeedbackRequest) -> JSONResponse:
     try:
         prompt = build_feedback_prompt(question, user_answer, level, tests, skills, practice_mode)
         feedback_text = await chat_completion(
-            system_prompt="You are a JSON provider. Return only valid JSON.",
+            system_prompt=TUTOR_POLICY + "\nYou are a JSON provider. Return only valid JSON.",
             message=prompt,
             max_tokens=1400
         )
 
+        parsed_feedback = parse_json_object(feedback_text)
+        if parsed_feedback is None:
+            raise ValueError('Invalid feedback output')
         feedback_json = normalize_feedback(
-            parse_json_object(feedback_text) or default_feedback(user_answer, level),
+            parsed_feedback,
             user_answer,
             level,
         )
@@ -868,3 +879,7 @@ async def improved_version(payload: FeedbackRequest) -> JSONResponse:
         return JSONResponse({"improvedVersion": improved})
     except Exception as exc:
         return provider_error(exc, "generation")
+
+
+from learning import router as learning_router
+app.include_router(learning_router)

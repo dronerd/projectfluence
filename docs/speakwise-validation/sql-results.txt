@@ -1,0 +1,17 @@
+
+> intro-page@0.1.0 test:speakwise:sql
+> node scripts/validate-speakwise-db.mjs
+
+PASS durable session saves and exact retries contain one message/event each
+PASS foreign session/document and changed message IDs fail atomically
+PASS client self-reports cannot create scored vocabulary evidence
+PASS vocabulary answer writes shared VocabStream evidence once across retry
+PASS reveals/hints do not clear difficulty; one success does not erase a recurring mistake
+PASS several unaided recalls reduce old review priority while preserving question history
+PASS completion verifies authoritative evidence and is idempotent
+PASS historical lexical retrieval finds relevant evidence beyond 1,000 newer rows
+PASS RLS and authenticated memory RPC deny another user, including direct access
+PASS privileged writes still reject foreign session references
+PASS memory reset deletes derived evidence, preserves shared progress, and enforces retrieval boundary
+PASS full SpeakWise deletion removes private artifacts without touching another learner
+SPEAKWISE_SQL_OK 12; real SQL; synthetic users; no hosted data; single connection, concurrency not evaluated.
