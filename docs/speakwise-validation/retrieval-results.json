@@ -1,0 +1,246 @@
+{
+  "label": "Small synthetic regression evaluation; human-authored relevance labels; no learning-benefit claim",
+  "asOf": "2026-10-01T00:00:00Z",
+  "environment": {
+    "node": "v22.18.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "database": "PGlite PostgreSQL/WASM, in-memory, isolated synthetic corpus"
+  },
+  "method": "Recency-only baseline vs production full-corpus lexical content candidate RPC and production evidence-aware memory reranking. Content reranking and provider quality are outside this small fixture comparison.",
+  "memory": {
+    "queryCount": 5,
+    "baseline": {
+      "recallAt3": 0.4,
+      "nDCGAt3": 0.3179410673488087
+    },
+    "implemented": {
+      "recallAt3": 1,
+      "nDCGAt3": 1
+    },
+    "cases": [
+      {
+        "name": "older relevant weakness",
+        "baseline": {
+          "recall": 0,
+          "ndcg": 0
+        },
+        "implemented": {
+          "recall": 1,
+          "ndcg": 1
+        },
+        "baselineIds": [
+          "new1",
+          "new2",
+          "new3"
+        ],
+        "selectedIds": [
+          "old",
+          "new1",
+          "new2"
+        ],
+        "contextChars": 82
+      },
+      {
+        "name": "hard vocabulary reference",
+        "baseline": {
+          "recall": 0,
+          "ndcg": 0
+        },
+        "implemented": {
+          "recall": 1,
+          "ndcg": 1
+        },
+        "baselineIds": [
+          "new1",
+          "new2",
+          "new3"
+        ],
+        "selectedIds": [
+          "botany",
+          "new1",
+          "new2"
+        ],
+        "contextChars": 83
+      },
+      {
+        "name": "resolved mistakes versus recurring difficulty",
+        "baseline": {
+          "recall": 1,
+          "ndcg": 0.5897053367440438
+        },
+        "implemented": {
+          "recall": 1,
+          "ndcg": 1
+        },
+        "baselineIds": [
+          "resolved",
+          "other",
+          "ongoing"
+        ],
+        "selectedIds": [
+          "ongoing",
+          "resolved",
+          "other"
+        ],
+        "contextChars": 118
+      },
+      {
+        "name": "sparse history",
+        "baseline": {
+          "recall": 1,
+          "ndcg": 1
+        },
+        "implemented": {
+          "recall": 1,
+          "ndcg": 1
+        },
+        "baselineIds": [
+          "only"
+        ],
+        "selectedIds": [
+          "only"
+        ],
+        "contextChars": 31
+      },
+      {
+        "name": "future evidence is unavailable at prediction time",
+        "baseline": {
+          "recall": 0,
+          "ndcg": 0
+        },
+        "implemented": {
+          "recall": 1,
+          "ndcg": 1
+        },
+        "baselineIds": [
+          "new1",
+          "new2",
+          "new3"
+        ],
+        "selectedIds": [
+          "past",
+          "new1",
+          "new2"
+        ],
+        "contextChars": 74
+      }
+    ]
+  },
+  "content": {
+    "queryCount": 4,
+    "baseline": {
+      "recallAt3": 0,
+      "nDCGAt3": 0
+    },
+    "implemented": {
+      "recallAt3": 1,
+      "nDCGAt3": 1
+    },
+    "cases": [
+      {
+        "name": "rare topic beyond newest content",
+        "baseline": {
+          "recall": 0,
+          "ndcg": 0
+        },
+        "implemented": {
+          "recall": 1,
+          "ndcg": 1
+        },
+        "baselineIds": [
+          "new1",
+          "new2",
+          "new3"
+        ],
+        "selectedIds": [
+          "old-science"
+        ]
+      },
+      {
+        "name": "document-style multi-term request",
+        "baseline": {
+          "recall": 0,
+          "ndcg": 0
+        },
+        "implemented": {
+          "recall": 1,
+          "ndcg": 1
+        },
+        "baselineIds": [
+          "new1",
+          "new2",
+          "new3"
+        ],
+        "selectedIds": [
+          "gardens"
+        ]
+      },
+      {
+        "name": "indexed text body reference",
+        "baseline": {
+          "recall": 0,
+          "ndcg": 0
+        },
+        "implemented": {
+          "recall": 1,
+          "ndcg": 1
+        },
+        "baselineIds": [
+          "new1",
+          "new2",
+          "new3"
+        ],
+        "selectedIds": [
+          "volcano"
+        ]
+      },
+      {
+        "name": "empty catalog match",
+        "baseline": {
+          "recall": null,
+          "ndcg": null,
+          "emptyCorrect": false
+        },
+        "implemented": {
+          "recall": null,
+          "ndcg": null,
+          "emptyCorrect": true
+        },
+        "baselineIds": [
+          "new1",
+          "new2",
+          "new3"
+        ],
+        "selectedIds": []
+      }
+    ]
+  },
+  "latency": {
+    "contentSql": {
+      "sampleSize": 100,
+      "medianMs": 0.489,
+      "p95Ms": 1.39
+    },
+    "memoryReranker": {
+      "sampleSize": 500,
+      "medianMs": 0.004,
+      "p95Ms": 0.005
+    }
+  },
+  "context": {
+    "memoryChars": [
+      82,
+      83,
+      118,
+      31,
+      74
+    ],
+    "tokenEstimate": "Character counts only; provider tokenizer and conversational/first-audible latency are not measured."
+  },
+  "limitations": [
+    "Synthetic labels and tiny corpus cannot establish a learning benefit.",
+    "No future rows are loaded or ranked for historical prediction.",
+    "Microbenchmarks omit network, authentication, hosted Supabase, and provider latency."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "label": "Synthetic source retrieval fixtures; not a learning efficacy study",
+  "version": 1,
+  "pages": [
+    "A travel introduction describes rail tickets, hotels and packing a suitcase.",
+    "A city walking tour introduces museums and restaurant reservations.",
+    "A cooking lesson explains baking bread with yeast and flour.",
+    "A sports report discusses a football match and a swimming competition.",
+    "A botany section describes photosynthesis and chlorophyll inside leaves.",
+    "A music section discusses violins, orchestras and a concerto.",
+    "A conservation guide explains how mangroves protect a coastline from erosion.",
+    "An astronomy note defines a quasar as a distant luminous galactic nucleus.",
+    "A laboratory protocol describes titration using a burette and an indicator.",
+    "A economics section explains inflation and household purchasing power.",
+    "A mathematics explanation defines a tessellation using repeating polygons.",
+    "The final engineering page describes the zephyr turbine producing renewable electricity."
+  ],
+  "queries": [
+    {"query": "What does the zephyr turbine do?", "relevantPages": [12]},
+    {"query": "Explain the quasar definition", "relevantPages": [8]},
+    {"query": "Help me practice titration and burette vocabulary", "relevantPages": [9]},
+    {"query": "Summarize page 7", "relevantPages": [7]},
+    {"query": "Explain the last page", "relevantPages": [12]},
+    {"query": "What causes erosion near mangroves?", "relevantPages": [7]},
+    {"query": "What should I pack in a suitcase?", "relevantPages": [1]},
+    {"query": "What do yeast and flour make?", "relevantPages": [3]}
+  ]
+}

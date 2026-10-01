@@ -1,0 +1,31 @@
+{
+  "label": "Synthetic source retrieval fixtures; not a learning efficacy study",
+  "environment": {
+    "python": "3.13.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "query_count": 8,
+  "corpus_pages": 12,
+  "timing_iterations_per_query": 25,
+  "total_rank_calls_per_method": 200,
+  "metrics": {
+    "legacy_initial_6000_chars": {
+      "recall_at_3": 0.25,
+      "ndcg_at_3": 0.25
+    },
+    "whole_document_bm25_page_aware": {
+      "recall_at_3": 1.0,
+      "ndcg_at_3": 0.9539
+    }
+  },
+  "retrieval_mean_ms": 0.555,
+  "retrieval_max_query_mean_ms": 0.68,
+  "mean_selected_context_characters": 3339,
+  "provider_latency_measured": false,
+  "limitations": [
+    "Small synthetic English corpus.",
+    "No live Supabase/network/provider latency.",
+    "No semantic ranking or real learning benefit measured.",
+    "Character counts are not tokenizer-measured token usage."
+  ]
+}

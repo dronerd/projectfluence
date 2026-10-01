@@ -17,6 +17,7 @@ from fastapi.responses import JSONResponse
 logger = logging.getLogger('speakwise')
 request_id = ContextVar('request_id', default=None)
 MAX_BODY_BYTES = 128 * 1024
+MAX_PDF_BYTES = 8 * 1024 * 1024
 
 
 @lru_cache(maxsize=1)
@@ -97,20 +98,24 @@ def install_request_guards(app):
         started = time.monotonic()
         try:
             if request.method == 'POST':
+                body_limit = MAX_PDF_BYTES if request.url.path == '/api/documents' else MAX_BODY_BYTES
                 try:
                     declared_size = int(request.headers.get('content-length', '0'))
                 except ValueError:
                     return JSONResponse({'error': 'Invalid content length.', 'code': 'invalid_request'}, status_code=400)
-                if declared_size < 0 or declared_size > MAX_BODY_BYTES:
+                if declared_size < 0 or declared_size > body_limit:
                     return JSONResponse({'error': 'Request is too large.', 'code': 'payload_too_large'}, status_code=413)
-                chunks, size = [], 0
-                async with asyncio.timeout(10):
-                    async for chunk in request.stream():
-                        size += len(chunk)
-                        if size > MAX_BODY_BYTES:
-                            return JSONResponse({'error': 'Request is too large.', 'code': 'payload_too_large'}, status_code=413)
-                        chunks.append(chunk)
-                request._body = b''.join(chunks)
+                # Large PDF bodies are read by the endpoint only AFTER auth and
+                # request-budget checks. Never buffer unauthenticated 8 MiB uploads.
+                if request.url.path != '/api/documents':
+                    chunks, size = [], 0
+                    async with asyncio.timeout(10):
+                        async for chunk in request.stream():
+                            size += len(chunk)
+                            if size > body_limit:
+                                return JSONResponse({'error': 'Request is too large.', 'code': 'payload_too_large'}, status_code=413)
+                            chunks.append(chunk)
+                    request._body = b''.join(chunks)
             response = await call_next(request)
         except TimeoutError:
             response = JSONResponse({"error": "Request timed out.", "code": "request_timeout"}, status_code=408)

@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-01",
+  "environment": {
+    "node": "22.18.0",
+    "python": "3.13.0",
+    "os": "macOS arm64",
+    "frontend": "Next.js production build",
+    "database": "PGlite 0.5.8 single connection",
+    "externalAdapters": "synthetic Auth/PostgREST/model"
+  },
+  "build": "pass",
+  "typescript": "pass",
+  "eslint": "pass",
+  "frontendTests": 27,
+  "backendTests": 100,
+  "pythonTests": 31,
+  "existingSqlChecks": 27,
+  "newSqlChecks": 12,
+  "httpWorkflowScenarios": 9,
+  "httpTimedRequests": 29,
+  "browserChecks": 14,
+  "browserApiRequests": 52,
+  "browserRuntimeErrors": 0,
+  "browserAxeViolations": 0,
+  "viewports": [
+    [
+      320,
+      700
+    ],
+    [
+      375,
+      812
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      430,
+      932
+    ],
+    [
+      600,
+      900
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      1024,
+      768
+    ],
+    [
+      1180,
+      820
+    ],
+    [
+      1440,
+      900
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      852,
+      393
+    ]
+  ],
+  "activityStates": [
+    "PDF",
+    "conversation",
+    "reading",
+    "catalog",
+    "vocabulary",
+    "summary"
+  ],
+  "physicalDevicesTested": false,
+  "liveProvidersTested": false,
+  "hostedMigrationApplied": false,
+  "productionDeployed": false
+}

@@ -1,0 +1,161 @@
+PASS authenticated session creation is durable and ignores spoofed identity
+PASS native multi-page PDF upload/retrieval finds the final page with true references
+PASS malformed and image-only PDFs return honest bounded outcomes
+PASS whole-source request explicitly covers all readable pages
+PASS conversation is grounded in selected document and persisted for reconnect
+PASS reading script is saved once with source/settings and can be reopened
+PASS actual catalog returns video/text cards and respects missing transcripts
+PASS canonical in-lesson vocabulary writes shared evidence idempotently
+PASS completion reads authoritative saved evidence and retries without duplicates
+{
+  "label": "local production-build integration timings; synthetic Auth/model; real SQL/PDF",
+  "sampleSize": 29,
+  "requests": [
+    {
+      "path": "/api/speakwise/lesson-sessions",
+      "status": 200,
+      "ms": 15.2
+    },
+    {
+      "path": "/api/speakwise/lesson-sessions",
+      "status": 200,
+      "ms": 3.9
+    },
+    {
+      "path": "/api/documents",
+      "status": 200,
+      "ms": 3.9
+    },
+    {
+      "path": "/api/documents/f8294b57-c849-55e9-b847-443343528e0f/retrieve",
+      "status": 200,
+      "ms": 2.8
+    },
+    {
+      "path": "/api/documents/f8294b57-c849-55e9-b847-443343528e0f",
+      "status": 404,
+      "ms": 2.5
+    },
+    {
+      "path": "/api/documents",
+      "status": 422,
+      "ms": 66
+    },
+    {
+      "path": "/api/documents",
+      "status": 200,
+      "ms": 66.5
+    },
+    {
+      "path": "/api/documents/f8294b57-c849-55e9-b847-443343528e0f/retrieve",
+      "status": 200,
+      "ms": 2.5
+    },
+    {
+      "path": "/api/speakwise/lesson-sessions",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "path": "/api/learning/chat",
+      "status": 200,
+      "ms": 11.2
+    },
+    {
+      "path": "/api/learning/chat",
+      "status": 200,
+      "ms": 3.1
+    },
+    {
+      "path": "/api/speakwise/lesson-sessions?sessionId=1b0b27d9-74c8-4534-beae-67ee6230a2bc",
+      "status": 200,
+      "ms": 4.5
+    },
+    {
+      "path": "/api/speakwise/lesson-sessions?sessionId=1b0b27d9-74c8-4534-beae-67ee6230a2bc",
+      "status": 404,
+      "ms": 2.2
+    },
+    {
+      "path": "/api/learning/script",
+      "status": 200,
+      "ms": 6.9
+    },
+    {
+      "path": "/api/learning/script",
+      "status": 200,
+      "ms": 2.1
+    },
+    {
+      "path": "/api/learning/scripts/1f223437-0779-567a-8111-bc93f57f31d4",
+      "status": 200,
+      "ms": 2.1
+    },
+    {
+      "path": "/api/learning/scripts/1f223437-0779-567a-8111-bc93f57f31d4",
+      "status": 404,
+      "ms": 2.2
+    },
+    {
+      "path": "/api/speakwise/learning",
+      "status": 200,
+      "ms": 6.5
+    },
+    {
+      "path": "/api/speakwise/learning",
+      "status": 200,
+      "ms": 6.4
+    },
+    {
+      "path": "/api/speakwise/learning",
+      "status": 200,
+      "ms": 4.8
+    },
+    {
+      "path": "/api/speakwise/learning",
+      "status": 200,
+      "ms": 4.7
+    },
+    {
+      "path": "/api/speakwise/learning",
+      "status": 200,
+      "ms": 8.8
+    },
+    {
+      "path": "/api/speakwise/learning",
+      "status": 200,
+      "ms": 3.7
+    },
+    {
+      "path": "/api/speakwise/learning",
+      "status": 200,
+      "ms": 3.5
+    },
+    {
+      "path": "/api/speakwise/learner-memory?query=water",
+      "status": 200,
+      "ms": 4.9
+    },
+    {
+      "path": "/api/speakwise/lesson-sessions?sessionId=1b0b27d9-74c8-4534-beae-67ee6230a2bc",
+      "status": 200,
+      "ms": 3.6
+    },
+    {
+      "path": "/api/speakwise/lesson-sessions",
+      "status": 200,
+      "ms": 5.6
+    },
+    {
+      "path": "/api/speakwise/lesson-sessions",
+      "status": 200,
+      "ms": 3.7
+    },
+    {
+      "path": "/api/speakwise/learner-memory",
+      "status": 409,
+      "ms": 0.7
+    }
+  ]
+}
+SPEAKWISE_WORKFLOWS_OK 9; actual Next/Python; real PDF extraction and SQL; synthetic external adapters; no hosted data.

@@ -1,5 +1,7 @@
 # Deploy the current ProjectFluence repository
 
+**SpeakWise update, 2026-10-01:** retain the Vercel + Render + existing Supabase topology below. The learning workflows require the fifth migration and updated Python dependencies before deploying either application. Follow the [SpeakWise operations receipt](speakwise-learning-operations.md) and [data runbook](speakwise-learning-data.md). No hosted changes were made during this implementation. Catalog counts and branch/remote status below remain dated historical observations, not current verification.
+
 This runbook uses **Vercel for the Next.js application, Render for SpeakWise FastAPI, and the existing Supabase project for data and authentication**. This matches the intended separation behind the earlier Vercel `requirements.txt` parsing failure. An all-Render alternative is in step 10. The 300-video expansion has been imported and read back from the existing Supabase catalog: it now contains 490 videos, and all original 190 records are unchanged. No hosted migration or application deployment was performed. See the [catalog expansion receipt](vidmatch-catalog-expansion-2026-09.md).
 
 ## 1. Select the correct Git revision
@@ -59,12 +61,13 @@ npx supabase db push
 npx supabase migration list
 ```
 
-Review the dry run before the write. The canonical chain has **four** migrations, in this order:
+Review the dry run before the write. The canonical chain has **five** migrations, in this order:
 
 1. `20260929000100_application_baseline.sql` — application tables, ownership policies, grants, indexes, signup profile trigger.
 2. `20260929000200_transcript_foundation.sql` — transcript schema and atomic snapshot RPC; no transcript acquisition is enabled by deployment.
 3. `20260929000300_atomic_learning_writes.sql` — transactional learning saves, authorization, idempotency, analytics.
 4. `20260930000100_vidmatch_curation.sql` — private curation pipeline, availability/freshness fields, worker leases, atomic catalog publication.
+5. `20261001000100_speakwise_learning.sql` — private extracted documents/scripts, durable session evidence, learner profiles, shared vocabulary attempts, text catalog and owned retrieval/transaction functions. See [migration and recovery guidance](speakwise-learning-data.md).
 
 The fourth migration preserves existing catalog and history identities. Legacy rows begin with `unknown` availability and an adoption retention window; they are not automatically certified as reviewed/playable. Step 6 handles activation. Migrations supply SQL functions/RLS automatically; no dashboard SQL copy/paste is needed for those objects. If history/schema drift is reported, compare it explicitly rather than applying blanket `migration repair`. Supabase tracks applied migrations independently of Git and pushes only pending migrations. [Supabase migration workflow](https://supabase.com/docs/guides/deployment/database-migrations).
 
@@ -270,7 +273,7 @@ No Storage upload/signed-URL smoke test applies because these workflows do not u
 
 The required order is:
 
-**Reviewed Git commit available on the selected deployment branch → existing Supabase backup and four migrations → create Render voice service and obtain its URL → reviewed catalog activation/verification → build Next with real Supabase/voice/site URLs → finalize Supabase Auth and voice CORS → rebuild/redeploy any changed URL configuration → smoke checks → verify the single production scheduler.**
+**Reviewed Git commit available on the selected deployment branch → existing Supabase backup and pending migrations in the five-migration chain → update the existing Render voice service and verify its URL → reviewed catalog activation/verification → build Next with real Supabase/voice/site URLs → verify Supabase Auth and voice CORS → rebuild/redeploy any changed URL configuration → smoke checks → verify the single production scheduler.**
 
 Catalog import can run before either host is live because it uses Supabase and YouTube directly. A first Next project deployment may be needed to assign its stable URL; it is only a bootstrap until the public variables, Auth redirects and CORS match. Voice CORS and Supabase Auth need the frontend origin; the browser's voice variable needs the Render origin; Render cron needs the frontend origin. There is no URL-dependent webhook to add beyond Auth redirects and the scheduler destination.
 

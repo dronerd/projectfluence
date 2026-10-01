@@ -1,0 +1,21 @@
+PASS pdf: eleven viewports 320–1920px + landscape, zero horizontal overflow, Axe clear
+PASS lost welcome response retries the committed request without duplicate messages
+PASS PDF question uses page references and conversation survives refresh
+PASS conversation: eleven viewports 320–1920px + landscape, zero horizontal overflow, Axe clear
+PASS reading: eleven viewports 320–1920px + landscape, zero horizontal overflow, Axe clear
+PASS saved script and comprehension response reopen after refresh
+PASS catalog: eleven viewports 320–1920px + landscape, zero horizontal overflow, Axe clear
+PASS VidMatch article activity uses actual catalog body
+PASS vocabulary: eleven viewports 320–1920px + landscape, zero horizontal overflow, Axe clear
+PASS natural request opens real vocabulary card and saves shared progress
+PASS reduced viewport keyboard emulation keeps input visible
+PASS summary: eleven viewports 320–1920px + landscape, zero horizontal overflow, Axe clear
+PASS confirmed target language persists after completed lesson and refresh
+PASS deleting PDF clears its selected derived script and cached library
+{
+  "environment": "Chrome desktop browser with viewport emulation; actual local services, synthetic external adapters",
+  "checks": 14,
+  "apiRequests": 52,
+  "browserErrors": []
+}
+SPEAKWISE_BROWSER_OK

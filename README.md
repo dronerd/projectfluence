@@ -34,8 +34,11 @@ SpeakWiseAI is the interactive practice layer. The frontend guides learners thro
 
 Backend capabilities:
 
+- Durable lessons with private PDF extraction/search, saved reading scripts, real VidMatch resource selection, and in-lesson canonical VocabStream practice. See the [capability audit](docs/speakwise-learning-audit.md), [setup and verification receipt](docs/speakwise-learning-operations.md), and [data migration guide](docs/speakwise-learning-data.md). Hosted migration/deployment and live-provider acceptance remain pending.
+- Python `POST /api/learning/chat` generates validated replies/actions from owned, saved session records. Next.js `/api/speakwise/learning` executes catalog/vocabulary actions, and `/api/speakwise/lesson-sessions` saves state and finalizes evidence-based summaries.
+
 - `POST /api/chat` for speaking, lesson, and warmup modes.
-- `POST /api/feedback` for structured grammar, vocabulary, pronunciation, fluency, and suggestion feedback.
+- `POST /api/feedback` for structured grammar, vocabulary, fluency, and suggestion feedback; a transcript alone cannot establish pronunciation quality.
 - `POST /api/improved-version` for highlighted rewrites with segment-level change metadata.
 - `POST /api/voice` for OpenAI text-to-speech audio.
 - `GET /health` for uptime and deployment checks.

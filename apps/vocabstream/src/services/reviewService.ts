@@ -43,7 +43,7 @@ async function readWeakWords(userId: string) {
   return (await response.json()) as VocabStreamWeakWordRow[];
 }
 
-function loadWordCatalog() {
+export function loadWordCatalog() {
   // Share cold-start work between concurrent requests. A failed read remains retryable.
   wordCatalogPromise ??= readWordCatalog().catch((error) => { wordCatalogPromise = null; throw error; });
   return wordCatalogPromise;
