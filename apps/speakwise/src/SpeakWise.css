@@ -243,3 +243,43 @@
 .sw-workspace-tabs { position: sticky; top: var(--sw-tools-heading-height); z-index: 3; background: var(--pf-surface); }
 .sw-workspace :is(h3, h4, input, textarea, select, button) { scroll-margin-top: 136px; }
 @media (max-width: 560px) { .sw-learning-tools { --sw-tools-heading-height: 60px; } }
+
+/* Keep the optional material entry and the active source visible in conversation. */
+.sw-add-materials { display: inline-flex; flex-direction: column; color: var(--pf-primary-hover); border-color: var(--pf-primary-border); background: var(--pf-primary-soft); gap: 1px; font-weight: 650; }
+.sw-add-materials span { font-size: 10px; font-weight: 400; }
+.sw-selected-material { display: flex; align-items: center; gap: 12px; padding: 6px 18px; border-bottom: 1px solid var(--sw-border); background: var(--pf-surface); flex-shrink: 0; }
+.sw-material-title { display: flex; flex-direction: column; text-align: left; min-width: 0; flex: 1; min-height: 44px; justify-content: center; border: 0; background: transparent; color: var(--pf-text); cursor: pointer; }
+.sw-material-title span { color: var(--sw-muted); font-size: 10px; }
+.sw-material-title strong { font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+.sw-selected-material > .sw-text-link { flex-shrink: 0; font-size: 11px; }
+.sw-material-invitation { display: block; margin-top: 12px; color: var(--pf-primary-hover); background: var(--pf-primary-soft); }
+.sw-vocabulary-picker .sw-resource-card { margin-top: 14px; }
+.sw-vocabulary-lesson ul { list-style: none; padding: 0; margin: 12px 0; }
+.sw-vocabulary-lesson li { border-top: 1px solid var(--sw-border); padding: 8px 0 12px; }
+.sw-vocabulary-lesson li p { margin: 0; line-height: 1.7; font-size: 14px; }
+.sw-vocabulary-lesson .sw-text-link { font-size: 16px; font-weight: 650; }
+.sw-workspace-body .sw-word-practice-heading { border-top: 1px solid var(--sw-border); padding-top: 20px; margin-top: 24px; }
+.sw-tool-status { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+.sw-workspace-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; }
+.sw-workspace-tabs button { min-width: 0; }
+.sw-learning-tools { scroll-padding-top: 185px; }
+.sw-workspace :is(h3, h4, input, textarea, select, button) { scroll-margin-top: 185px; }
+@media (min-width: 600px) {
+  .sw-workspace-tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .sw-learning-tools { scroll-padding-top: 140px; }
+  .sw-workspace :is(h3, h4, input, textarea, select, button) { scroll-margin-top: 140px; }
+}
+@media (max-width: 560px) {
+  .sw-chat-head { flex-wrap: wrap; }
+  .sw-chat-controls { gap: 6px; }
+  .sw-chat-heading { flex-basis: 100%; }
+  .sw-chat-controls { width: 100%; justify-content: flex-start; }
+  .sw-chat-controls .sw-end:last-child { margin-left: auto; }
+  .sw-chat-controls .sw-add-materials { margin-left: 0; }
+  .sw-selected-material { padding: 4px 12px; }
+}
+@media (max-height: 500px) {
+  .sw-chat-heading, .sw-add-materials span { display: none; }
+  .sw-notice { max-height: 60px; overflow-y: auto; flex-shrink: 0; }
+  .sw-selected-material { padding-block: 0; }
+}

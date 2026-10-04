@@ -180,3 +180,63 @@ speech-to-speech WebRTC turn using generated sample audio with trailing silence.
 The live speech check observed speech-started/stopped, input transcription completion,
 assistant transcript completion and a remote audio track. Physical microphone hardware,
 Safari/iPhone behavior and production deployment remain unverified.
+
+## In-conversation materials — 2026-10-04
+
+SpeakWise now fixes the learning target to English, including restored settings,
+chat generation, reading generation and voice transcription. Setup contains no
+language selector or material-preparation control. Even PDF mode can start with
+no file; material invitations use a validated `open_materials` action whose button
+opens a picker only when clicked. The persistent `教材を追加 / Add materials` button
+also opens PDF, VocabStream, VidMatch and saved/generated reading tools.
+
+Material changes retain the session ID, conversation, draft, elapsed time and
+learning state. The selected title stays visible above chat and reopens its pane.
+The mobile/tablet pane has a sticky return button and supports Escape with focus
+restoration; desktop retains the conversation beside the material. Uploads and
+pending material fetches can be canceled, failed selections retain the prior
+source, and saved sources reload with the lesson. Native PDF extraction limits
+and missing video transcripts are disclosed rather than treated as readable text.
+
+The VocabStream picker previews the canonical course/lesson, then saves its actual
+words, definitions and examples as an owned excerpt in the existing
+`speakwise_scripts` table. Request IDs make retries idempotent. This lets the
+separate Render API retrieve the same content without copying the vocabulary
+catalog into another deployment. Word practice keeps its source course/lesson
+identity. No database migration or dependency change is required.
+
+Voice connections receive a bounded preview of the current material. Changing
+material closes the previous voice connection; the learner can resume voice in
+the same saved lesson with the new source and existing conversation. Typed chat
+retains focused/full-document retrieval. A voice preview does not establish full
+PDF coverage or access to video visuals.
+
+Validation used Node 22.23.3, Chrome viewport emulation, the actual Next production
+build and Python service, and the isolated SQL/Auth/model fixtures described
+above. No production account records or environment files were changed.
+
+| Check | Result |
+| --- | --- |
+| `npm run prebuild` | All existing vocabulary/content/image/ambiguity/audio audits passed |
+| `npm run build --ignore-scripts` | Production build passed; postbuild sitemap generation deliberately skipped to preserve the existing local sitemap edits |
+| `npm run typecheck`, `npm run lint`, `git diff --check` | Passed, no lint warnings |
+| `npm run test:backend` | 106 passed |
+| `npm run test:speakwise-api` | 39 passed, including typed invitations, canonical vocabulary grounding, indexed video grounding and selected-source voice context |
+| `scripts/validate-speakwise-workflows.mjs` | 11 local integration checks passed, including English settings, ownership and selection retry identity |
+| `scripts/validate-speakwise-browser.mjs` | 21 checks / 86 API requests passed against the production build |
+| Responsive/accessibility | Eight material/lesson states at 11 viewports from 320–1920px including landscape; zero horizontal overflow, zero Axe findings; reduced-height composer and keyboard focus verified |
+| `scripts/validate-speakwise-realtime.mjs` | Six scenario groups passed, including transcript recovery, microphone denial and six responsive viewports |
+
+The browser suite covers optional PDF starts, a lost welcome response, explicit
+invitation acceptance, canceled pending uploads, failed PDF/video loads, preview
+cancellation, canonical vocabulary reaching the tutor, source switching without a
+new session, refresh recovery, reading answers, shared word progress, completion,
+and deletion of a PDF with its derived reading artifact. The production run also
+caught and fixed a setup hydration race: setup fields now wait for saved settings
+before accepting changes.
+
+Logs and screenshots for this run are under `/tmp/speakwise-materials-*.log` and
+`/tmp/speakwise-materials-verification/`. Hosted deployment, live model invitation
+quality, live catalog/provider behavior and physical iOS/Android microphones or
+keyboards were not verified in this change. Ship the Next frontend/API and Render
+Python changes together; the deployed site has not been updated by this work.

@@ -6,7 +6,7 @@ import { playVoiceResponse } from "../lib/voicePlayback";
 import { RealtimeConversation, type VoiceStatus, type VoiceTurn } from "../lib/realtimeConversation";
 import LearningWorkspace, { type WorkspaceHandle } from "../components/LearningWorkspace";
 import MemoryControls from "../components/MemoryControls";
-import { languageTag, jsonRequest, type LearningAction, type LearningContext, type LearningEvent, type LearningRequest, type SourceCitation, type SourceSelection } from "../lib/learning";
+import { MATERIAL_ACTION_LABELS, languageTag, jsonRequest, type MaterialKind, type LearningAction, type LearningContext, type LearningEvent, type LearningRequest, type SourceCitation, type SourceSelection } from "../lib/learning";
 import { requestSignal } from "@/lib/browserRequest";
 
 type CEFRLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
@@ -155,7 +155,7 @@ function sanitizeSettings(value: unknown): SpeakWiseSettings | null {
   if (!value || typeof value !== "object" || Array.isArray(value)) return null;
   const raw = value as Partial<SpeakWiseSettings>;
   return {
-    targetLanguage: typeof raw.targetLanguage === "string" && ["en", "ja", "es", "fr", "de"].includes(raw.targetLanguage) ? raw.targetLanguage : "en",
+    targetLanguage: "en",
     level: isLevel(raw.level) ? raw.level : DEFAULT_SETTINGS.level,
     durationMinutes: DURATION_OPTIONS.includes(Number(raw.durationMinutes))
       ? Number(raw.durationMinutes)
@@ -222,15 +222,15 @@ export default function AIChat() {
   const workspaceRef = useRef<WorkspaceHandle>(null);
   const workspaceHeadingRef = useRef<HTMLHeadingElement>(null);
   const workspaceToggleRef = useRef<HTMLButtonElement>(null);
-  const workspaceSetupRef = useRef<HTMLButtonElement>(null);
+  const workspaceReturnRef = useRef<HTMLElement | null>(null);
+  const [materialBusy, setMaterialBusy] = useState(false);
   const wasWorkspaceOpenRef = useRef(false);
   const stickToBottomRef = useRef(true);
   const turnIdRef = useRef<string | null>(null);
   const startRequestRef = useRef<{ sessionId: string; requestId: string; message: string; context: LearningContext; settings: SpeakWiseSettings; source: SourceSelection } | null>(null);
   const stateQueueRef = useRef(Promise.resolve());
   const [settings, setSettings] = useState<SpeakWiseSettings>(DEFAULT_SETTINGS);
-  const targetLanguage = settings.targetLanguage;
-  const setTargetLanguage = (language: string) => setSettings(previous => ({ ...previous, targetLanguage: language }));
+  const targetLanguage = "en";
   const [memory, setMemory] = useState<LearnerMemory | null>(null);
   const [chatLog, setChatLog] = useState<ChatEntry[]>([]);
   const [input, setInput] = useState("");
@@ -322,7 +322,7 @@ export default function AIChat() {
     pendingVoiceTurnsRef.current.clear();
     preparedVoiceRef.current = null;
     if (audioUrlRef.current) { URL.revokeObjectURL(audioUrlRef.current); audioUrlRef.current = null; }
-    currentSessionIdRef.current = null; startRequestRef.current = null; setSessionId(null); setSource({}); selectedSourceRef.current = {}; practiceRef.current = null; setPractice(null); setSessionEvents([]); setWorkspaceOpen(false);
+    currentSessionIdRef.current = null; startRequestRef.current = null; setSessionId(null); setSource({}); selectedSourceRef.current = {}; practiceRef.current = null; setPractice(null); setSessionEvents([]); setWorkspaceOpen(false); setMaterialBusy(false);
     setChatLog([]); setSummary(null); setSummarySaved(false); setLessonActive(false);
     setLessonStartedAt(null); setLessonEnded(false); setInput(""); setError("");
     setVoiceLoading(false); setVoiceStatus("closed"); setMicMuted(false); setOptionsOpen(true);
@@ -359,14 +359,13 @@ export default function AIChat() {
           const restored = sanitizeSettings(state.settings);
           if (restored) setSettings(restored);
           else setSettings(previous => ({ ...previous, level: isLevel(row.level) ? row.level : previous.level, lessonMode: isLessonMode(row.lesson_mode) ? row.lesson_mode : previous.lessonMode }));
-          const restoredSource = { documentId: state.documentId || undefined, contentId: state.contentId || undefined, contentType: state.contentType || undefined, scriptId: state.scriptId || undefined };
+          const restoredSource = { documentId: state.documentId || undefined, contentId: state.contentId || undefined, contentType: state.contentType || undefined, scriptId: state.scriptId || undefined, title: state.materialTitle || undefined, kind: state.materialKind || undefined };
           selectedSourceRef.current = restoredSource; setSource(restoredSource);
           const restoredPractice = state.cardId && state.practiceAttemptId ? { cardId: state.cardId, attemptId: state.practiceAttemptId } : null;
           practiceRef.current = restoredPractice; setPractice(restoredPractice);
           setSessionEvents((saved.events || []).map((event: { id: string; event_type: string; payload: Record<string, unknown> }) => ({ id: event.id, type: event.event_type, payload: event.payload })));
           const lastMessage = saved.messages?.at(-1);
           if (lastMessage?.role === "user") { turnIdRef.current = lastMessage.id; setRetryText(lastMessage.content); setError("保存した回答への返答が未確認です。「もう一度送信」で続けられます。"); }
-          setTargetLanguage(typeof state.targetLanguage === "string" ? state.targetLanguage : "en");
           setChatLog((saved.messages || []).map((message: { id: string; role: "user" | "assistant"; content: string; metadata?: { citations?: SourceCitation[]; inputMethod?: "typed" | "speech"; requestContext?: LearningContext; action?: LearningAction } }) => ({ id: message.id, sender: message.role, text: message.content, citations: message.metadata?.citations, inputMethod: message.metadata?.inputMethod, requestContext: message.metadata?.requestContext, action: message.metadata?.action })));
           const elapsed = Number(row.elapsed_seconds || state.elapsedSeconds || 0);
           setElapsedSeconds(elapsed);
@@ -415,10 +414,10 @@ export default function AIChat() {
   }, [lessonActive, lessonStartedAt]);
 
   useEffect(() => {
-    if (!lessonActive || isSending || isEnding || autoEndedRef.current || elapsedSeconds < totalSeconds || chatLog.length < 2) return;
+    if (!lessonActive || isSending || isEnding || materialBusy || autoEndedRef.current || elapsedSeconds < totalSeconds || chatLog.length < 2) return;
     autoEndedRef.current = true;
     void endLessonRef.current?.();
-  }, [chatLog.length, elapsedSeconds, lessonActive, totalSeconds, isSending, isEnding]);
+  }, [chatLog.length, elapsedSeconds, lessonActive, totalSeconds, isSending, isEnding, materialBusy]);
 
   useEffect(() => {
     const container = chatEndRef.current?.parentElement;
@@ -428,12 +427,11 @@ export default function AIChat() {
   useEffect(() => {
     if (workspaceOpen && !wasWorkspaceOpenRef.current) workspaceHeadingRef.current?.focus({ preventScroll: true });
     if (!workspaceOpen && wasWorkspaceOpenRef.current) {
-      const control = lessonViewStarted && !optionsOpen ? workspaceToggleRef.current : workspaceSetupRef.current;
-      control?.focus({ preventScroll: true });
+      const control = workspaceReturnRef.current;
+      (control?.isConnected ? control : workspaceToggleRef.current)?.focus({ preventScroll: true });
     }
     wasWorkspaceOpenRef.current = workspaceOpen;
     // Only a deliberate pane transition changes focus, never autosave or new content.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [workspaceOpen]);
 
   useEffect(() => () => {
@@ -453,6 +451,17 @@ export default function AIChat() {
   function toggleTopic(topic: string) {
     updateSettings({ selectedTopics: settings.selectedTopics.includes(topic)
       ? settings.selectedTopics.filter((item) => item !== topic) : [...settings.selectedTopics, topic] });
+  }
+
+  function openMaterials(kind?: MaterialKind) {
+    workspaceReturnRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : workspaceToggleRef.current;
+    setOptionsOpen(false); setWorkspaceOpen(true);
+    workspaceRef.current?.open(kind);
+  }
+
+  function closeMaterials() {
+    workspaceRef.current?.cancel();
+    setWorkspaceOpen(false);
   }
 
   function showSettings() {
@@ -476,13 +485,16 @@ export default function AIChat() {
   async function authenticatedJson<T>(url: string, init: RequestInit, timeoutMs = 60000) {
     const controller = new AbortController();
     requestsRef.current.add(controller);
-    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    const cancel = () => controller.abort();
+    if (init.signal?.aborted) controller.abort();
+    else init.signal?.addEventListener("abort", cancel, { once: true });
+    const timer = setTimeout(cancel, timeoutMs);
     try {
       const response = await authenticatedFetch(url, init, controller);
       // Keep the deadline and unmount cancellation until the body has finished.
       const data = await response.json() as T;
       return { response, data };
-    } finally { clearTimeout(timer); requestsRef.current.delete(controller); }
+    } finally { clearTimeout(timer); init.signal?.removeEventListener("abort", cancel); requestsRef.current.delete(controller); }
   }
 
   function requestError(status: number, fallback: string) {
@@ -505,7 +517,7 @@ export default function AIChat() {
     setSaveStatus("保存中…");
     try {
       const selected = selectedSourceRef.current;
-      const snapshot = { sessionId: id, messages, events, state: { documentId: selected.documentId ?? null, contentId: selected.contentId ?? null, contentType: selected.contentType ?? null, cardId: practiceRef.current?.cardId ?? null, practiceAttemptId: practiceRef.current?.attemptId ?? null, scriptId: selected.scriptId ?? null, settings: override?.settings || settings, targetLanguage: override?.targetLanguage || targetLanguage, elapsedSeconds }, elapsedSeconds };
+      const snapshot = { sessionId: id, messages, events, state: { documentId: selected.documentId ?? null, contentId: selected.contentId ?? null, contentType: selected.contentType ?? null, cardId: practiceRef.current?.cardId ?? null, practiceAttemptId: practiceRef.current?.attemptId ?? null, scriptId: selected.scriptId ?? null, materialTitle: selected.title ?? null, materialKind: selected.kind ?? null, settings: override?.settings || settings, targetLanguage: override?.targetLanguage || targetLanguage, elapsedSeconds }, elapsedSeconds };
       const write = stateQueueRef.current.then(() => learningRequest("/api/speakwise/lesson-sessions", jsonRequest(snapshot, "PATCH")));
       stateQueueRef.current = write.then(() => undefined, () => undefined);
       await write;
@@ -517,6 +529,8 @@ export default function AIChat() {
   function changeSource(next: SourceSelection) {
     stopRealtime();
     selectedSourceRef.current = next; setSource(next);
+    const materialNotice = next.documentId || next.scriptId || next.contentId ? "教材を選びました。このまま同じレッスンで質問・練習できます。" : "教材の選択を解除しました。会話はそのまま続けられます。";
+    setNotice(materialNotice + (voiceActive ? " 音声は「音声で会話する」から続けられます。" : ""));
     if (currentSessionIdRef.current) void saveLessonState().catch(() => setNotice("教材の選択を保存できませんでした。保存を再試行してください。"));
   }
 
@@ -530,7 +544,8 @@ export default function AIChat() {
   }
 
   function lessonRequestContext(): LearningContext {
-    return { documentId: source.documentId, contentId: source.contentId, scriptId: source.scriptId, level: settings.level, targetLanguage, lessonMode: selectedMode.id, topics };
+    const selected = selectedSourceRef.current;
+    return { documentId: selected.documentId, contentId: selected.contentId, scriptId: selected.scriptId, level: settings.level, targetLanguage, lessonMode: selectedMode.id, topics };
   }
 
   async function callAgent(userText: string, context = lessonRequestContext()) {
@@ -546,11 +561,10 @@ export default function AIChat() {
   async function appendAssistant(data: { reply: string; messageId: string; citations?: SourceCitation[]; action?: LearningAction; requestContext?: LearningContext }) {
     setChatLog(previous => previous.some(entry => entry.id === data.messageId) ? previous : [...previous, { id: data.messageId, sender: "assistant", text: data.reply, citations: data.citations, action: data.action, requestContext: data.requestContext }]);
     if (settings.voiceEnabled) void playVoice(data.reply);
-    if (data.action) {
-      setWorkspaceOpen(true);
+    if (data.action && data.action.type !== "open_materials") {
+      openMaterials();
       // The workspace stays mounted so actions can run even when its panel is closed.
-      const executed = await workspaceRef.current?.execute(data.action, { requestId: data.messageId, context: data.requestContext || lessonRequestContext() });
-      if (!executed) setNotice("学習アクションを完了できませんでした。教材パネルの案内を確認して、再試行してください。");
+      await workspaceRef.current?.execute(data.action, { requestId: data.messageId, context: data.requestContext || lessonRequestContext() });
     }
   }
 
@@ -559,11 +573,6 @@ export default function AIChat() {
     memoryResetRef.current = false;
     if (!accessToken) { setError("SpeakWiseを利用するには、ログインしてください。"); return; }
     const nextMode = modeOverride || selectedMode.id;
-    if (nextMode === "pdf_reading" && !source.documentId && !startRequestRef.current) {
-      setWorkspaceOpen(true);
-      setError("PDFをアップロードするか、保存済みPDFを選んでください。");
-      return;
-    }
     stopMedia();
     autoEndedRef.current = false;
     setSummary(null); setSummarySaved(false); setLessonEnded(false); setError(""); setRetryText(null);
@@ -580,7 +589,7 @@ export default function AIChat() {
     // A dropped welcome response must replay exactly its original request, even
     // if the setup controls were changed while recovering the connection.
     if (pendingStart) {
-      setSettings(startRequest.settings); setTargetLanguage(startRequest.context.targetLanguage);
+      setSettings({ ...startRequest.settings, targetLanguage: "en" });
       selectedSourceRef.current = startRequest.source; setSource(startRequest.source);
       setNotice("前回の開始リクエストを同じ設定で再開しています。開始後に教材を切り替えられます。");
     }
@@ -657,7 +666,7 @@ export default function AIChat() {
   }
 
   async function endLesson() {
-    if (isEnding || isSending || !chatLog.length || operationRef.current) return;
+    if (isEnding || isSending || materialBusy || !chatLog.length || operationRef.current) return;
     operationRef.current = true;
     stopMedia(); setError(""); setRetryText(null); setIsEnding(true); setLessonActive(false); setLessonEnded(true);
     try {
@@ -829,7 +838,7 @@ audio.onerror = () => {
   }
 
   function prepareNextLesson() {
-    setWorkspaceGeneration(value => value + 1);
+    setWorkspaceGeneration(value => value + 1); setWorkspaceOpen(false);
     stopMedia(); pendingVoiceTurnsRef.current.clear(); setOptionsOpen(true); setLessonEnded(false); setSummary(null); setChatLog([]); setSource({}); selectedSourceRef.current = {}; practiceRef.current = null; setPractice(null); setSessionEvents([]);
     currentSessionIdRef.current = null; startRequestRef.current = null; setSessionId(null); sessionPromiseRef.current = null; setSaveStatus("");
     setLessonStartedAt(null); setElapsedSeconds(0); setInput(""); setError(""); setRetryText(null);
@@ -838,12 +847,14 @@ audio.onerror = () => {
 
   useEffect(() => {
     if (!sessionId || !lessonActive || !accessToken) return;
-    const snapshot = { sessionId, state: { documentId: source.documentId ?? null, contentId: source.contentId ?? null, contentType: source.contentType ?? null, cardId: practiceRef.current?.cardId ?? null, practiceAttemptId: practiceRef.current?.attemptId ?? null, scriptId: source.scriptId ?? null, settings, targetLanguage }, elapsedSeconds };
+    const snapshot = { sessionId, state: { documentId: source.documentId ?? null, contentId: source.contentId ?? null, contentType: source.contentType ?? null, cardId: practiceRef.current?.cardId ?? null, practiceAttemptId: practiceRef.current?.attemptId ?? null, scriptId: source.scriptId ?? null, materialTitle: source.title ?? null, materialKind: source.kind ?? null, settings, targetLanguage }, elapsedSeconds };
     const timer = window.setTimeout(() => {
       stateQueueRef.current = stateQueueRef.current.then(async () => {
         const deadline = requestSignal(15000);
         try {
           if (memoryResetRef.current) return;
+          const current = selectedSourceRef.current;
+          snapshot.state = { ...snapshot.state, documentId: current.documentId ?? null, contentId: current.contentId ?? null, contentType: current.contentType ?? null, scriptId: current.scriptId ?? null, materialTitle: current.title ?? null, materialKind: current.kind ?? null };
           const response = await fetch("/api/speakwise/lesson-sessions", { ...jsonRequest(snapshot, "PATCH"), headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` }, signal: deadline.signal });
           if (!response.ok) throw new Error();
           setSaveStatus(pendingVoiceTurnsRef.current.size ? "未保存・再試行が必要" : "保存済み");
@@ -871,7 +882,7 @@ audio.onerror = () => {
           {authReady && !accessToken && <div><p className="sw-note">SpeakWiseを利用するには、ログインしてください。</p><AuthButton compact hideWhenAuthenticated /></div>}
           {!settingsLoaded && <p className="sw-note" role="status">前回の設定を読み込んでいます…</p>}
           {error && !lessonViewStarted && <p className="sw-alert" role="alert">{error}</p>}
-          <fieldset className="sw-settings-fields" disabled={setupDisabled}>
+          <fieldset className="sw-settings-fields" disabled={setupDisabled || !settingsLoaded}>
             <div className="sw-section">
               <label className="sw-label" htmlFor="sw-mode">練習内容</label>
               <select id="sw-mode" className="sw-select" value={selectedMode.id} onChange={(event) => updateSettings({ lessonMode: event.target.value as LessonMode })}>
@@ -887,11 +898,10 @@ audio.onerror = () => {
                 {DURATION_OPTIONS.map((minutes) => <option key={minutes} value={minutes}>{minutes}分</option>)}
               </select></div>
             </div>
-            <div className="sw-section"><label className="sw-label" htmlFor="sw-target-language">学ぶ言語</label><select id="sw-target-language" className="sw-select" value={targetLanguage} onChange={event => setTargetLanguage(event.target.value)}><option value="en">English</option><option value="ja">日本語</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option></select></div>
           </fieldset>
-          <button ref={workspaceSetupRef} className="sw-topic sw-wide" onClick={() => setWorkspaceOpen(previous => !previous)} aria-expanded={workspaceOpen} aria-controls="sw-learning-tools">PDF・読む教材・単語を準備</button>
+          <p className="sw-note">教材はレッスン中にいつでも追加できます。</p>
           <div className="sw-start-area">
-            {lessonActive ? <><p className="sw-note">レッスン中も教材の切り替えと音声設定を変更できます。</p><button className="pf-button pf-button-secondary sw-wide" disabled={isSending || isEnding} onClick={() => void endLesson()}>終了して振り返る</button></>
+            {lessonActive ? <><p className="sw-note">レッスン中も教材の切り替えと音声設定を変更できます。</p><button className="pf-button pf-button-secondary sw-wide" disabled={isSending || isEnding || materialBusy} onClick={() => void endLesson()}>終了して振り返る</button></>
               : lessonEnded ? <button className="pf-button sw-wide" disabled={isEnding} onClick={prepareNextLesson}>次のレッスンを準備</button>
               : <button className="pf-button sw-wide" disabled={isSending || isEnding || !settingsLoaded} onClick={() => void startLesson()}>{isSending ? "レッスンを準備しています…" : "レッスンを始める"}</button>}
           </div>
@@ -920,21 +930,22 @@ audio.onerror = () => {
           </details>
         </aside>
 
-        <div id="sw-learning-tools" className={`sw-learning-tools${workspaceOpen ? " is-open" : ""}`} hidden={!workspaceOpen}>
-          <div className="sw-tools-heading"><h2 ref={workspaceHeadingRef} tabIndex={-1}>レッスン教材</h2><button className="sw-topic" onClick={() => setWorkspaceOpen(false)}>教材を閉じる</button></div>
-          <LearningWorkspace key={`${userId || "guest"}:${workspaceGeneration}`} ref={workspaceRef} request={learningRequest} authenticated={Boolean(accessToken)} sessionId={sessionId} level={settings.level} targetLanguage={targetLanguage} source={source} events={sessionEvents} practice={practice} onPractice={changePractice} onSource={changeSource} onAsk={text => { setWorkspaceOpen(false); setOptionsOpen(false); if (lessonActive) void sendMessage(false, text); else { setInput(text); setNotice("教材を選びました。レッスンを開始すると質問できます。"); } }} onListen={text => void playVoice(text)} onStopAudio={stopMedia} voiceLoading={voiceLoading} recordEvent={async event => { await saveLessonState([], [event]); }} onActivity={() => void refreshMemory()} />
+        <div id="sw-learning-tools" role="region" aria-labelledby="sw-materials-title" className={`sw-learning-tools${workspaceOpen ? " is-open" : ""}`} hidden={!workspaceOpen} onKeyDown={event => { if (event.key === "Escape") { event.preventDefault(); closeMaterials(); } }}>
+          <div className="sw-tools-heading"><h2 id="sw-materials-title" ref={workspaceHeadingRef} tabIndex={-1}>レッスン教材</h2><button className="sw-topic" onClick={closeMaterials}>会話に戻る</button></div>
+          <LearningWorkspace key={`${userId || "guest"}:${workspaceGeneration}`} ref={workspaceRef} active={lessonActive} locked={isSending || isEnding} onBusy={setMaterialBusy} request={learningRequest} authenticated={Boolean(accessToken)} sessionId={sessionId} level={settings.level} targetLanguage={targetLanguage} source={source} events={sessionEvents} practice={practice} onPractice={changePractice} onSource={changeSource} onAsk={text => { closeMaterials(); setOptionsOpen(false); if (lessonActive) void sendMessage(false, text); else { setInput(text); setNotice("教材を選びました。レッスンを開始すると質問できます。"); } }} onListen={text => void playVoice(text)} onStopAudio={stopMedia} voiceLoading={voiceLoading} recordEvent={async event => { await saveLessonState([], [event]); }} onActivity={() => void refreshMemory()} />
         </div>
         <section className="sw-chat" aria-label="英語レッスン">
           <header className="sw-chat-head">
             <div className="sw-chat-heading"><h2>{selectedMode.labelJa}</h2><div className="sw-status"><span>{settings.level} · {LEVEL_LABELS[settings.level]}</span><span>{lessonActive ? `残り ${formatTime(remainingSeconds)}` : lessonEnded ? `${formatTime(elapsedSeconds)} 練習` : `${settings.durationMinutes}分のレッスン`}</span></div></div>
-            <div className="sw-chat-controls"><button ref={workspaceToggleRef} className="sw-end" aria-controls="sw-learning-tools" aria-expanded={workspaceOpen} onClick={() => { setWorkspaceOpen(previous => !previous); setOptionsOpen(false); }}>教材</button><button type="button" ref={settingsToggleRef} className="sw-chat-menu" onClick={showSettings} aria-controls="sw-settings" aria-expanded={optionsOpen}>設定</button>
-              {lessonActive && <button type="button" className="sw-end" disabled={isSending || isEnding} onClick={() => void endLesson()}>終了する</button>}
+            <div className="sw-chat-controls">{lessonActive && <button ref={workspaceToggleRef} className="sw-end sw-add-materials" aria-controls="sw-learning-tools" aria-expanded={workspaceOpen} onClick={() => workspaceOpen ? closeMaterials() : openMaterials()}>＋ 教材を追加<span lang="en">Add materials</span></button>}<button type="button" ref={settingsToggleRef} className="sw-chat-menu" onClick={showSettings} aria-controls="sw-settings" aria-expanded={optionsOpen}>設定</button>
+              {lessonActive && <button type="button" className="sw-end" disabled={isSending || isEnding || materialBusy} onClick={() => void endLesson()}>終了する</button>}
             </div>
           </header>
           {lessonActive && <div className="sw-progress" role="progressbar" aria-label="レッスンの経過時間" aria-valuenow={Math.min(elapsedSeconds, totalSeconds)} aria-valuemin={0} aria-valuemax={totalSeconds} aria-valuetext={`${settings.durationMinutes}分中、${Math.floor(elapsedSeconds / 60)}分経過`}><div style={{ width: `${Math.min(100, elapsedSeconds / totalSeconds * 100)}%` }} /></div>}
+          {(source.documentId || source.scriptId || source.contentId) && lessonActive && <div className="sw-selected-material"><button type="button" className="sw-material-title" onClick={() => openMaterials(source.kind || (source.documentId ? "pdf" : source.contentId ? "vidmatch" : "reading"))}><span>使用中の教材</span><strong>{source.title || (source.documentId ? "PDF" : source.contentId ? "VidMatch" : "読む教材")}</strong></button><button type="button" className="sw-text-link" disabled={isSending || isEnding || materialBusy} onClick={() => changeSource({})}>選択を解除</button></div>}
           <div className="sw-messages" onScroll={event => { const element = event.currentTarget; stickToBottomRef.current = element.scrollHeight - element.scrollTop - element.clientHeight < 100; }} role="log" aria-label="AIとの会話" aria-live="polite" aria-relevant="additions text">
             {!chatLog.length && !isSending && <div className="sw-empty"><h3>文字でも音声でも練習できます</h3><p>「レッスンを始める」を選ぶと、AIから最初の質問が届きます。</p></div>}
-            {chatLog.map((entry, index) => <article key={entry.id} className={`sw-msg ${entry.sender}`}><div className="sw-message-head"><span className="sw-sender">{entry.sender === "assistant" ? "SpeakWiseAI" : "あなた"}</span>{entry.sender === "assistant" && <button type="button" className="sw-voice-button" disabled={voiceLoading || entry.transcriptPending} onClick={() => void playVoice(entry.text)} aria-label={`AIの${index + 1}番目のメッセージを音声で再生`}>{voiceLoading ? "音声を準備中…" : "音声で聞く"}</button>}</div><p lang={languageTag(targetLanguage)}>{entry.text}</p>{entry.action && <button className="sw-topic" disabled={isSending || isEnding || !lessonActive} onClick={() => { setWorkspaceOpen(true); void workspaceRef.current?.execute(entry.action!, { requestId: entry.id, context: entry.requestContext || lessonRequestContext() }); }}>学習アクションを再表示・再試行</button>}{entry.citations?.map((citation, citeIndex) => <details className="sw-citation" key={citeIndex}><summary>出典 {citation.page ? `p. ${citation.page}` : citeIndex + 1}</summary><p>{citation.excerpt || "選択した教材を参照しています。"}</p></details>)}</article>)}
+            {chatLog.map((entry, index) => <article key={entry.id} className={`sw-msg ${entry.sender}`}><div className="sw-message-head"><span className="sw-sender">{entry.sender === "assistant" ? "SpeakWiseAI" : "あなた"}</span>{entry.sender === "assistant" && <button type="button" className="sw-voice-button" disabled={voiceLoading || entry.transcriptPending} onClick={() => void playVoice(entry.text)} aria-label={`AIの${index + 1}番目のメッセージを音声で再生`}>{voiceLoading ? "音声を準備中…" : "音声で聞く"}</button>}</div><p lang={languageTag(targetLanguage)}>{entry.text}</p>{entry.action && <button className="sw-topic sw-material-invitation" disabled={isSending || isEnding || !lessonActive || materialBusy} onClick={() => { if (entry.action?.type === "open_materials") openMaterials(entry.action.material); else { openMaterials(); void workspaceRef.current?.execute(entry.action!, { requestId: entry.id, context: entry.requestContext || lessonRequestContext() }); } }}>{entry.action.type === "open_materials" ? MATERIAL_ACTION_LABELS[entry.action.material] : "学習アクションを再表示・再試行"}</button>}{entry.citations?.map((citation, citeIndex) => <details className="sw-citation" key={citeIndex}><summary>出典 {citation.page ? `p. ${citation.page}` : citeIndex + 1}</summary><p>{citation.excerpt || "選択した教材を参照しています。"}</p></details>)}</article>)}
             {isSending && <div className="sw-msg assistant" role="status"><span className="sw-sender">SpeakWiseAI</span><p>{lessonActive ? pendingDescription || "返答を考えています…" : "レッスンを準備しています…"}</p></div>}
             {isEnding && <div className="sw-note" role="status">今日の振り返りをまとめています…</div>}
             {error && lessonViewStarted && <div className="sw-alert" role="alert"><p>{error}</p>{retryText && lessonActive && <button type="button" className="sw-text-link" disabled={isSending} onClick={() => void sendMessage(true)}>もう一度送信</button>}{lessonEnded && !summary && <button type="button" className="sw-text-link" disabled={isEnding} onClick={() => void endLesson()}>振り返りを再作成</button>}</div>}

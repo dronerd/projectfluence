@@ -69,9 +69,12 @@ export async function PATCH(request: NextRequest) {
       return { id: uuid(message.id), role: message.role, content, metadata };
     });
     const state = body.state === undefined ? {} : jsonObject(body.state);
-    const allowedState = ["documentId", "contentId", "contentType", "scriptId", "cardId", "practiceAttemptId", "objective", "targetLanguage", "settings", "startedAt", "elapsedSeconds", "activeTab", "lessonMode", "level", "topics", "durationMinutes"];
+    const allowedState = ["documentId", "contentId", "contentType", "scriptId", "cardId", "practiceAttemptId", "objective", "targetLanguage", "settings", "startedAt", "elapsedSeconds", "activeTab", "materialTitle", "materialKind", "lessonMode", "level", "topics", "durationMinutes"];
     if (Object.keys(state).some(key => !allowedState.includes(key)) || JSON.stringify(state).length > 24000) throw new ApiError(400, "Lesson state is invalid.", "INVALID_STATE");
     for (const field of ["documentId", "scriptId"]) if (state[field] != null) uuid(state[field], field);
+    if (state.materialTitle != null) bounded(state.materialTitle, "Material title", 300);
+    if (state.materialKind != null && !["pdf", "vocabstream", "vidmatch", "reading"].includes(String(state.materialKind))) throw new ApiError(400, "Material kind is invalid.", "INVALID_STATE");
+    if (state.targetLanguage !== undefined) state.targetLanguage = "en";
     const elapsed = body.elapsedSeconds ?? 0;
     if (!Number.isInteger(elapsed) || Number(elapsed) < 0 || Number(elapsed) > 86400) throw new ApiError(400, "Elapsed time is invalid.", "INVALID_STATE");
     const rawEvents = body.events ?? [];

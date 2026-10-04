@@ -1,8 +1,14 @@
 /** Version 1 learning contracts. Identity always comes from the authenticated request. */
-export type SourceSelection = { documentId?: string; contentId?: string; contentType?: string; scriptId?: string };
+export type MaterialKind = "pdf" | "vocabstream" | "vidmatch" | "reading";
+export type SourceSelection = { documentId?: string; contentId?: string; contentType?: string; scriptId?: string; title?: string; kind?: MaterialKind };
+export type VocabularyLesson = { category: string; lessonNumber: number; title: string; words: Array<{ word: string; definition: string; example: string }> };
+export const MATERIAL_ACTION_LABELS: Record<MaterialKind, string> = {
+  pdf: "PDFを追加", vocabstream: "VocabStreamのレッスンを選ぶ", vidmatch: "VidMatchの動画を選ぶ", reading: "読む教材を選ぶ",
+};
 export type LearningContext = { documentId?: string; contentId?: string; scriptId?: string; level: "A1" | "A2" | "B1" | "B2" | "C1" | "C2"; targetLanguage: string; lessonMode: string; topics: string[] };
 export type SourceCitation = { page?: number; documentId?: string; contentId?: string; scriptId?: string; excerpt?: string };
 export type LearningAction =
+  | { type: "open_materials"; material: MaterialKind }
   | { type: "search_content"; query: string; contentType?: "all" | "video" | "text" }
   | { type: "practice_vocabulary"; word: string }
   | { type: "create_script"; topic?: string; kind?: "adaptation" | "original" | "excerpt"; lengthWords?: number };
@@ -11,7 +17,7 @@ export type ReadingScript = {
   id: string; title: string; body: string; kind?: string; level?: string; targetLanguage?: string;
   sourceReferences?: SourceCitation[]; source_refs?: SourceCitation[];
   questions?: Array<{ id: string; prompt: string; answer?: string; explanation?: string }>;
-  vocabulary?: Array<string | { word: string; definition?: string }>;
+  vocabulary?: Array<string | { word: string; definition?: string; example?: string }>;
   settings?: Record<string, unknown>;
 };
 export type ResourceCard = { id: string; title: string; contentType: string; source: string; url?: string; duration?: string | number | null; availability: string; reasons?: string[]; passages?: Array<{ text: string; startMs?: number; endMs?: number }> };

@@ -35,8 +35,9 @@ async function geometry(label,reading=false){
  await page.screenshot({path:screenshotPath(`speakwise-${label}-390.png`),fullPage:true});
  check(`${label}: eleven viewports 320–1920px + landscape, zero horizontal overflow, Axe clear`);
 }
-async function openTools(){const close=page.getByRole('button',{name:'教材を閉じる',exact:true});if(!await close.isVisible()){const lessonButton=page.getByRole('button',{name:'教材',exact:true});if(await lessonButton.isVisible())await lessonButton.click();else await page.getByRole('button',{name:'PDF・読む教材・単語を準備',exact:true}).click();}}
-async function closeTools(){await page.getByRole('button',{name:'教材を閉じる',exact:true}).click();}
+async function openTools(){if(!await page.locator('#sw-learning-tools').isVisible())await page.getByRole('button',{name:/Add materials/}).click();}
+async function closeTools(){await page.locator('#sw-learning-tools').getByRole('button',{name:'会話に戻る',exact:true}).click();}
+async function savedLesson(){const response=await fetch(baseUrl+'/api/speakwise/lesson-sessions',{headers:{Authorization:'Bearer fixture-valid'}});assert.equal(response.status,200);return response.json();}
 async function send(text){await page.getByRole('textbox',{name:'英語の回答',exact:true}).fill(text);await page.getByRole('button',{name:'送信',exact:true}).click();}
 try{
  await page.goto(baseUrl+'/speakwise');
@@ -44,12 +45,10 @@ try{
  await page.waitForFunction(()=>!document.querySelector('#sw-mode')?.disabled);
  await page.locator('#sw-mode').selectOption('pdf_reading');
  await page.locator('#sw-level').selectOption('B1');
- await page.locator('#sw-target-language').selectOption('en');
- await page.getByRole('button',{name:'PDF・読む教材・単語を準備'}).click();
- await page.locator('#sw-pdf-upload').setInputFiles({name:'garden-fixture.pdf',mimeType:'application/pdf',buffer:learningPdf()});
- await page.getByRole('heading',{name:'garden-fixture.pdf'}).waitFor();
- await page.getByText('3ページ · 読み込み完了',{exact:true}).waitFor();
- await geometry('pdf',true);await closeTools();
+ assert.equal(await page.getByLabel('学ぶ言語',{exact:true}).count(),0);
+ assert.equal(await page.getByRole('button',{name:'PDF・読む教材・単語を準備'}).count(),0);
+ assert.equal(await page.getByRole('button',{name:/Add materials/}).count(),0);
+ await geometry('setup',true);
  let dropWelcome=true;
  await page.route('http://127.0.0.1:8100/api/learning/chat',async route=>{
   if(dropWelcome){dropWelcome=false;const committed=await route.fetch();assert.equal(committed.status(),200);return route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({detail:'Synthetic lost welcome response'})});}
@@ -61,12 +60,102 @@ try{
  await page.locator('.sw-msg.assistant').first().waitFor();
  assert.equal(await page.locator('.sw-msg.assistant').count(),1);check('lost welcome response retries the committed request without duplicate messages');
  await page.getByRole('button',{name:'終了する',exact:true}).waitFor();
+ const initial=await savedLesson(), originalSessionId=initial.session.id;
+ assert.equal(initial.session.state.targetLanguage,'en');
+ assert.equal(await page.locator('#sw-learning-tools').isVisible(),false);
+ await page.getByRole('button',{name:'PDFを追加',exact:true}).click();
+ assert.equal(await page.getByRole('tab',{name:'PDF',exact:true}).getAttribute('aria-selected'),'true');
+ await page.keyboard.press('Escape');
+ assert.equal(await page.getByRole('button',{name:'PDFを追加',exact:true}).evaluate(el=>el===document.activeElement),true);
+ assert.equal((await savedLesson()).session.id,originalSessionId);
+ check('PDF lesson starts without a resource; tutor invitation opens picker only on click; Escape returns focus');
+ await page.getByRole('textbox',{name:'英語の回答',exact:true}).fill('Draft stays here');
+ await openTools();await closeTools();
+ assert.equal(await page.getByRole('textbox',{name:'英語の回答',exact:true}).inputValue(),'Draft stays here');
+ await page.getByRole('textbox',{name:'英語の回答',exact:true}).fill('');
+ await openTools();
+ await page.locator('#sw-pdf-upload').setInputFiles({name:'bad.pdf',mimeType:'application/pdf',buffer:Buffer.from('invalid pdf')});
+ await page.locator('#sw-learning-tools [role="alert"]').waitFor();
+ assert.equal((await savedLesson()).session.state.documentId,null);
+ check('failed PDF upload shows feedback and leaves lesson/source intact');
+ let releaseUpload;
+ const heldUpload=new Promise(resolve=>{releaseUpload=resolve;});
+ const uploadRoute=async route=>{await heldUpload;await route.abort().catch(()=>{});};
+ await page.route('http://127.0.0.1:8100/api/documents',uploadRoute);
+ await page.locator('#sw-pdf-upload').setInputFiles({name:'cancelled.pdf',mimeType:'application/pdf',buffer:learningPdf()});
+ await page.getByRole('button',{name:'操作をキャンセル',exact:true}).waitFor();
+ await closeTools();releaseUpload();await page.unroute('http://127.0.0.1:8100/api/documents',uploadRoute);
+ assert.equal((await savedLesson()).session.state.documentId,null);
+ assert.equal(await page.locator('#sw-learning-tools').isVisible(),false);
+ check('closing a pending PDF upload cancels selection and keeps the same conversation');
+ await openTools();
+ await page.locator('#sw-pdf-upload').setInputFiles({name:'garden-fixture.pdf',mimeType:'application/pdf',buffer:learningPdf()});
+ await page.getByRole('heading',{name:'garden-fixture.pdf'}).waitFor();
+ await page.getByText('3ページ · 読み込み完了',{exact:true}).waitFor();
+ await page.getByText('PDFを保存しました。ページを指定した質問もできます。',{exact:true}).waitFor();
+ await geometry('pdf',true);await closeTools();
+ assert.equal((await savedLesson()).session.id,originalSessionId);
  await send('What does page 3 say about forty liters?');
  await page.locator('.sw-msg.assistant').nth(1).waitFor();
  await page.getByText('出典 p. 3',{exact:true}).first().waitFor();
  await page.reload();await page.getByText('保存したレッスンを再開しました。休止中の時間は学習時間に含めていません。',{exact:true}).waitFor();
  assert.equal(await page.locator('.sw-msg.user').count(),1);check('PDF question uses page references and conversation survives refresh');
  await geometry('conversation');
+ await send('choose a VocabStream lesson');
+ await page.getByRole('button',{name:'VocabStreamのレッスンを選ぶ',exact:true}).waitFor();
+ assert.equal(await page.locator('#sw-learning-tools').isVisible(),false);
+ await page.getByRole('button',{name:'VocabStreamのレッスンを選ぶ',exact:true}).click();
+ await page.locator('#sw-vocab-course').selectOption('word-beginner');
+ await page.locator('#sw-vocab-lesson').selectOption('1');
+ const beforePreview=await savedLesson();
+ await page.getByRole('button',{name:'内容を見る',exact:true}).click();
+ await page.getByRole('button',{name:'このレッスンを使う',exact:true}).waitFor();
+ assert.equal((await savedLesson()).session.state.documentId,beforePreview.session.state.documentId);
+ await closeTools();
+ assert.equal((await savedLesson()).session.state.documentId,beforePreview.session.state.documentId);
+ await openTools();
+ await page.getByRole('button',{name:'このレッスンを使う',exact:true}).click();
+ await page.locator('.sw-vocabulary-lesson').waitFor();
+ await page.getByText('VocabStreamのレッスンを選びました。単語の意味・例文を使って会話を続けられます。',{exact:true}).waitFor();
+ await geometry('vocab-lesson',true);
+ await page.getByRole('button',{name:'このレッスンで会話を続ける',exact:true}).click();
+ await page.locator('.sw-msg.assistant').filter({hasText:'a round red, green, or yellow fruit'}).waitFor();
+ const vocabState=await savedLesson();
+ assert.equal(vocabState.session.id,originalSessionId);
+ assert.equal(vocabState.session.state.materialKind,'vocabstream');
+ assert.equal(vocabState.session.state.documentId,null);
+ assert.ok(vocabState.messages.length>beforePreview.messages.length);
+ await page.reload();await page.getByText('保存したレッスンを再開しました。休止中の時間は学習時間に含めていません。',{exact:true}).waitFor();
+ assert.equal((await savedLesson()).session.state.scriptId,vocabState.session.state.scriptId);
+ await page.locator('.sw-material-title').click();await page.locator('.sw-vocabulary-lesson').waitFor();
+ assert.match(await page.locator('.sw-vocabulary-lesson').innerText(),/apple/);
+ check('canonical VocabStream lesson reaches tutor; preview cancellation and refresh preserve session and history');
+ await closeTools();
+ await send('choose a VidMatch video');
+ await page.getByRole('button',{name:'VidMatchの動画を選ぶ',exact:true}).click();
+ await page.locator('#sw-content-query').fill('garden');
+ await page.getByRole('button',{name:'検索',exact:true}).click();
+ const video=page.locator('.sw-resource-card').filter({hasText:'video'}).first();await video.waitFor();
+ let failVideo=true;
+ const videoRoute=async route=>{if(failVideo&&route.request().postDataJSON()?.action==='get_content'){failVideo=false;return route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({error:'Video temporarily unavailable'})});}return route.continue();};
+ await page.route('**/api/speakwise/learning',videoRoute);
+ await video.getByRole('button',{name:'レッスンで使う'}).click();
+ await page.locator('#sw-learning-tools [role="alert"]').waitFor();
+ assert.equal((await savedLesson()).session.state.scriptId,vocabState.session.state.scriptId);
+ await video.getByRole('button',{name:'レッスンで使う'}).click();
+ await page.unroute('**/api/speakwise/learning',videoRoute);
+ await page.getByText('本文・字幕はありません。タイトルと提供されたメタデータだけを使います。',{exact:true}).waitFor();
+ await closeTools();
+ const videoState=await savedLesson();assert.equal(videoState.session.state.contentType,'video');
+ assert.equal(videoState.session.id,originalSessionId);
+ await send('Tell me about the selected video');
+ await page.locator('.sw-msg.assistant').filter({hasText:'No indexed transcript is available'}).waitFor();
+ check('VidMatch invitation opens real catalog; metadata-only video is disclosed to learner and tutor');
+ // Return to the original PDF, preserving every intervening conversation turn.
+ await openTools();await page.getByRole('tab',{name:'PDF',exact:true}).click();
+ await page.getByRole('button',{name:'保存済みPDFを表示',exact:true}).click();
+ await page.getByRole('button',{name:'このPDFを使う',exact:true}).click();
+ await page.getByRole('button',{name:'このPDFを使用中',exact:true}).waitFor();await closeTools();
  await send('create a reading script');
  await page.getByRole('heading',{name:'The city garden',exact:true}).waitFor();
  await page.getByText('読む教材を保存しました。保存済み教材から開き直せます。',{exact:true}).waitFor();
@@ -99,10 +188,13 @@ try{
  await page.getByRole('button',{name:'終了する',exact:true}).click();await page.getByRole('heading',{name:'Your lesson review',exact:true}).waitFor();
  await page.getByText('学習履歴に保存しました。',{exact:true}).waitFor();await geometry('summary');
  await page.getByRole('button',{name:'次のレッスンを準備',exact:true}).click();
- const preferenceSaved=page.waitForResponse(response=>response.url().endsWith('/api/speakwise/lesson-settings')&&response.request().method()==='PUT'&&response.request().postDataJSON()?.settings?.targetLanguage==='de');
- await page.locator('#sw-target-language').selectOption('de');assert.equal((await preferenceSaved).status(),200);
- await page.reload();await page.waitForFunction(()=>document.querySelector('#sw-target-language')?.value==='de');
- check('confirmed target language persists after completed lesson and refresh');
+ assert.equal(await page.getByLabel('学ぶ言語',{exact:true}).count(),0);
+ await page.reload();await page.getByRole('button',{name:'レッスンを始める',exact:true}).waitFor();
+ await page.waitForFunction(()=>!document.querySelector('#sw-mode')?.disabled);
+ await page.getByRole('button',{name:'レッスンを始める',exact:true}).click();
+ await page.getByRole('button',{name:'終了する',exact:true}).waitFor();
+ assert.equal((await savedLesson()).session.state.targetLanguage,'en');
+ check('new and resumed lessons keep English fixed without a language selector');
  await openTools();await page.getByRole('tab',{name:'読む・聞く',exact:true}).click();
  await page.getByRole('button',{name:'保存済み教材を表示',exact:true}).click();
  await page.locator('#sw-saved-script').selectOption({label:'The city garden'});

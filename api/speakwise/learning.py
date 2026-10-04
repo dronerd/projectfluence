@@ -88,7 +88,12 @@ class ScriptAction(StrictModel):
     lengthWords: int = Field(default=250, ge=80, le=1000)
 
 
-Action = Annotated[Union[SearchAction, PracticeAction, ScriptAction], Field(discriminator='type')]
+class MaterialsAction(StrictModel):
+    type: Literal['open_materials']
+    material: Literal['pdf', 'vocabstream', 'vidmatch', 'reading']
+
+
+Action = Annotated[Union[SearchAction, PracticeAction, ScriptAction, MaterialsAction], Field(discriminator='type')]
 
 
 class Observation(StrictModel):
@@ -279,7 +284,8 @@ async def source_context(store, document_id=None, content_id=None, script_id=Non
     if script_id:
         script = await store.own('speakwise_scripts', 'id', script_id)
         return [{'sourceId': f'script:{script["id"]}', 'scriptId': script['id'], 'text': script['body'],
-                 'kind': script['kind'], 'sourceReferences': script.get('source_refs', [])}], None, 'Saved reading artifact; its kind distinguishes adaptation from original material.'
+                 'kind': script['kind'], 'sourceReferences': script.get('source_refs', [])}], None, ('Canonical VocabStream lesson: words, definitions and examples, selected within this lesson.'
+                 if script.get('settings', {}).get('sourceType') == 'vocabstream' else 'Saved reading artifact; its kind distinguishes adaptation from original material.')
     if content_id:
         if re.fullmatch(r'[0-9a-fA-F-]{36}', str(content_id)):
             rows = await store.call('vidmatch_text_content', params={'select': '*', 'id': f'eq.{content_id}', 'limit': '1'})
@@ -426,6 +432,7 @@ async def create_script(payload: ScriptInput, request: Request, user_id=Depends(
         if (payload.documentId or payload.contentId) and not sources:
             raise HTTPException(422, availability)
         settings = payload.model_dump(mode='json', exclude={'requestId', 'sessionId'})
+        settings['targetLanguage'] = 'en'
         # Excerpts are copied by the application, never entrusted to generation.
         excerpt = ''
         if kind == 'excerpt':
@@ -627,7 +634,7 @@ async def learning_chat(payload: ChatInput, request: Request, user_id=Depends(au
         mode = LESSON_MODE_PROMPTS[lesson_mode]
         planned_minutes = max(1, min(180, int(session.get('planned_duration_minutes') or 15)))
         elapsed_seconds = max(0, int(session.get('elapsed_seconds') or 0))
-        settings = {'level': session.get('level', payload.level), 'targetLanguage': payload.targetLanguage,
+        settings = {'level': session.get('level', payload.level), 'targetLanguage': 'en',
                     'lessonMode': lesson_mode, 'modeName': mode['name'], 'modeWorkflow': mode['workflow'],
                     'topics': session.get('selected_topics', payload.topics),
                     'durationMinutes': planned_minutes, 'elapsedSeconds': elapsed_seconds,
@@ -653,7 +660,7 @@ not demonstrated improvement. Use an empty array when evidence is insufficient.'
         citations = citations_for(output.sourceIds, sources)
         action = output.action.model_dump() if output.action else None
         reply = output.reply
-        if action:
+        if action and action['type'] != 'open_materials':
             reply = {'search_content': 'I can search the VidMatch catalog for this lesson.',
                      'practice_vocabulary': 'I can open a short vocabulary activity in this lesson.',
                      'create_script': 'I can create and save a reading script with the selected source and settings.'}[action['type']]

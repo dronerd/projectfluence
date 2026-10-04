@@ -162,6 +162,47 @@ class LearningApiTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(conflicted.status_code, 409)
         self.assertEqual(self.model.await_count, 1)
 
+    async def test_material_invitations_are_typed_optional_and_saved_for_reload(self):
+        for material in ['pdf', 'vocabstream', 'vidmatch', 'reading']:
+            invitation = 'Would you like to choose a material for this lesson?'
+            self.model.return_value = {'reply': invitation, 'sourceIds': [],
+                'action': {'type': 'open_materials', 'material': material}}
+            response = await self.chat(documentId=None, targetLanguage='de')
+            self.assertEqual(response.status_code, 200, response.text)
+            self.assertEqual(response.json()['reply'], invitation)
+            self.assertEqual(response.json()['action']['material'], material)
+            self.assertEqual(self.model.call_args.args[1]['settings']['targetLanguage'], 'en')
+            self.assertEqual(self.db['speakwise_lesson_messages'][-1]['metadata']['action']['material'], material)
+        self.model.return_value['action']['material'] = 'arbitrary-url'
+        self.assertEqual((await self.chat(documentId=None)).status_code, 502)
+
+    async def test_canonical_vocabulary_source_reaches_tutor_with_existing_history(self):
+        script_id = str(uuid4())
+        body = 'apple: a round red fruit. Example: I eat an apple after lunch.'
+        self.db['speakwise_scripts'].append({'id': script_id, 'user_id': USER,
+            'body': body, 'kind': 'excerpt', 'settings': {'sourceType': 'vocabstream'}})
+        self.model.return_value = {'reply': 'Try a sentence with apple.',
+            'sourceIds': [f'script:{script_id}'], 'action': None}
+        response = await self.chat(documentId=None, scriptId=script_id)
+        self.assertEqual(response.status_code, 200, response.text)
+        data = self.model.call_args.args[1]
+        self.assertEqual(data['sourcePassages'][0]['text'], body)
+        self.assertIn('Canonical VocabStream', data['availability'])
+        self.assertEqual(data['recentMessages'][0]['content'], 'Tell me about zephyr.')
+        self.assertEqual(response.json()['citations'][0]['scriptId'], script_id)
+
+    async def test_selected_video_passes_real_transcript_content_and_references(self):
+        self.db['vidmatch_transcripts'] = [{'id': 'transcript-fixture', 'video_id': 'abcDEF12345', 'status': 'available', 'language_code': 'en'}]
+        self.db['vidmatch_transcript_chunks'] = [{'chunk_id': 'chunk-fixture', 'video_id': 'abcDEF12345',
+            'transcript_id': 'transcript-fixture', 'text': 'The wind turbine supplies three homes.', 'start_ms': 12000, 'end_ms': 18000}]
+        self.model.return_value = {'reply': 'The turbine supplies three homes. Can you describe that?',
+            'sourceIds': ['transcript:chunk-fixture'], 'action': None}
+        response = await self.chat(documentId=None, contentId='abcDEF12345')
+        self.assertEqual(response.status_code, 200, response.text)
+        self.assertEqual(self.model.call_args.args[1]['sourcePassages'][0]['text'], 'The wind turbine supplies three homes.')
+        self.assertEqual(response.json()['citations'][0]['startMs'], 12000)
+        self.assertEqual(response.json()['citations'][0]['contentId'], 'abcDEF12345')
+
     async def test_cross_user_sources_and_sessions_never_reach_model(self):
         self.user = OTHER
         response = await self.chat()

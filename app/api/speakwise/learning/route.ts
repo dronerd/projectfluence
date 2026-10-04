@@ -3,6 +3,7 @@ import { getAuthenticatedUser } from "@/app/api/_lib/supabaseAuth";
 import { apiError, ApiError, readJsonBody } from "@/app/api/_lib/http";
 import { supabaseRest } from "@/app/api/_lib/supabaseRest";
 import { loadWordCatalog } from "@/apps/vocabstream/src/services/reviewService";
+import { getCourse, courseLabel, lessonLabel } from "@/apps/vocabstream/src/lib/catalog";
 import { buildWordQuestions, normalizeWord, validWordImage } from "@/apps/vocabstream/src/lib/questionPolicy";
 import { isYoutubeVideoId } from "@/apps/vidmatch/src/services/videoContract";
 import { bounded, jsonObject, ownedSession, uuid, type Row } from "../store";
@@ -23,6 +24,41 @@ export async function POST(request: NextRequest) {
     const body = jsonObject(await readJsonBody(request, 16000)), sessionId = uuid(body.sessionId);
     const session = await ownedSession(user.id, sessionId);
     if (session.status !== "active") throw new ApiError(409, "Reopen an active lesson before starting an activity.", "SESSION_COMPLETED");
+    if (body.action === "get_vocabulary_lesson" || body.action === "select_vocabulary_lesson") {
+      const category = bounded(body.category, "Course", 80), lessonNumber = Number(body.lessonNumber);
+      const course = getCourse(category);
+      if (!course || !Number.isInteger(lessonNumber) || lessonNumber < 1 || lessonNumber > course.lessons) {
+        throw new ApiError(400, "Choose an available VocabStream lesson.", "INVALID_LESSON");
+      }
+      const catalog = await loadWordCatalog();
+      const words = catalog.filter(word => word.sourceCategory === category && word.sourceLessonNumber === lessonNumber)
+        .map(word => ({ word: word.word, definition: word.meaning || "", example: word.example || "" }));
+      if (!words.length) throw new ApiError(404, "This lesson is unavailable. Choose another lesson.", "LESSON_UNAVAILABLE");
+      const title = `VocabStream · ${courseLabel(category)} · ${lessonLabel(category, lessonNumber)}`;
+      const lesson = { category, lessonNumber, title, words };
+      if (body.action === "get_vocabulary_lesson") return NextResponse.json({ lesson });
+      // Keep the exact canonical content in the existing owned source-artifact
+      // store. Render can ground chat/voice in it without a second catalog copy.
+      const requestId = uuid(body.requestId);
+      let rows = await supabaseRest<Row[]>(`speakwise_scripts?${new URLSearchParams({ select: "*", user_id: `eq.${user.id}`, request_id: `eq.${requestId}`, limit: "1" })}`);
+      if (!rows[0]) {
+        rows = await supabaseRest<Row[]>("speakwise_scripts?on_conflict=user_id,request_id", {
+          method: "POST", headers: { Prefer: "resolution=ignore-duplicates,return=representation" },
+          body: JSON.stringify({ user_id: user.id, session_id: sessionId, request_id: requestId, title,
+            body: words.map(word => `${word.word}: ${word.definition}\nExample: ${word.example}`).join("\n\n"),
+            kind: "excerpt", source_refs: [], questions: [], vocabulary: words,
+            settings: { sourceType: "vocabstream", category, lessonNumber, level: session.level, targetLanguage: "en" },
+            prompt_version: "canonical-vocabstream-2026-10-04", schema_version: 1 }),
+        });
+        if (!rows[0]) rows = await supabaseRest<Row[]>(`speakwise_scripts?${new URLSearchParams({ select: "*", user_id: `eq.${user.id}`, request_id: `eq.${requestId}`, limit: "1" })}`);
+      }
+      const saved = rows[0], settings = saved?.settings as Row | undefined;
+      if (!saved || saved.session_id !== sessionId || settings?.sourceType !== "vocabstream" || settings.category !== category || settings.lessonNumber !== lessonNumber) {
+        throw new ApiError(409, "This selection request belongs to another lesson. Please select again.", "REQUEST_CONFLICT");
+      }
+      return NextResponse.json({ script: { id: saved.id, title: saved.title, body: saved.body, kind: saved.kind,
+        vocabulary: saved.vocabulary, settings: saved.settings, questions: [], targetLanguage: "en" } });
+    }
     if (body.action === "search_content") {
       const query = bounded(body.query, "Search query", 500);
       const result = await supabaseRest<{ videos: Row[]; texts: Row[] }>("rpc/search_speakwise_catalog", { method: "POST", body: JSON.stringify({ p_user_id: user.id, p_query: query, p_level: session.level }) });
@@ -95,7 +131,9 @@ export async function POST(request: NextRequest) {
     if (body.action === "practice_word") {
       const word = bounded(body.word, "Word", 200), context = bounded(body.context, "Context", 2000);
       if (!word) throw new ApiError(400, "Choose a word to practice.", "INVALID_ARGUMENT");
-      const catalog = await loadWordCatalog(), matches = catalog.filter(item => normalizeWord(item.word) === normalizeWord(word));
+      const catalog = await loadWordCatalog(), matches = catalog.filter(item => normalizeWord(item.word) === normalizeWord(word)
+        && (!body.category || item.sourceCategory === body.category)
+        && (!body.lessonNumber || item.sourceLessonNumber === Number(body.lessonNumber)));
       const contextTerms = terms(context);
       matches.sort((a, b) => terms(`${b.meaning} ${b.example}`).filter(term => contextTerms.includes(term)).length - terms(`${a.meaning} ${a.example}`).filter(term => contextTerms.includes(term)).length);
       const target = matches[0];

@@ -160,7 +160,9 @@ LESSON_MODE_PROMPTS = {
     "pdf_reading": {
         "name": "PDF-Based Reading Practice",
         "workflow": (
-            "Use only verified document passages. Identify the main idea and ask one comprehension question. "
+            "If no PDF is selected, offer the optional PDF picker or an explicitly original short reading. "
+            "Continue the same lesson if the learner adds or changes materials. For PDF-based tasks, "
+            "use only verified document passages. Identify the main idea and ask one comprehension question. "
             "Legacy pasted excerpts are partial, unverified data; never claim whole-document coverage."
         ),
     },

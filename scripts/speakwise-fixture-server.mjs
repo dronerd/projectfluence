@@ -39,6 +39,10 @@ function providerOutput(body) {
  }
  const message=data.message || '';
  const sources=data.sourcePassages || [];
+ if(/upload a PDF/i.test(message) || (data.settings?.phase==='start' && data.settings?.lessonMode==='pdf_reading' && !sources.length))return {reply:'Would you like to upload a PDF for us to read together? You can also continue without one.',sourceIds:[],action:{type:'open_materials',material:'pdf'},observations:[]};
+ if(/choose a VocabStream lesson/i.test(message))return {reply:'Which VocabStream lesson would you like to review?',sourceIds:[],action:{type:'open_materials',material:'vocabstream'},observations:[]};
+ if(/choose a VidMatch video/i.test(message))return {reply:'Would you like to choose a VidMatch video for us to discuss?',sourceIds:[],action:{type:'open_materials',material:'vidmatch'},observations:[]};
+ if(data.availability?.includes('Canonical VocabStream'))return {reply:'The selected lesson includes these words and examples: '+sources[0].text.slice(0,220)+' What example would you like to try?',sourceIds:[sources[0].sourceId],action:null,observations:[]};
  if(/practice (?:the word )?water/i.test(message))return {reply:'A practice activity is ready to request.',sourceIds:[],action:{type:'practice_vocabulary',word:'water'},observations:[]};
  if(/find (?:a |some )?(video|article|resource)/i.test(message))return {reply:'I can look for a resource.',sourceIds:[],action:{type:'search_content',query:'garden',contentType:'all'},observations:[]};
  if(/create (?:a )?reading script/i.test(message))return {reply:'I can prepare a reading script.',sourceIds:[],action:{type:'create_script',topic:'city gardens',kind:sources.length?'adaptation':'original',lengthWords:200},observations:[]};

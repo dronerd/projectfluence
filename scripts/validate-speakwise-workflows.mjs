@@ -18,10 +18,26 @@ async function call(base,path,body,method=body===undefined?'GET':'POST',token='f
 async function ok(base,path,body,method,token,extra){const result=await call(base,path,body,method,token,extra);assert.equal(result.status,200,`${path}: ${JSON.stringify(result.data)}`);return result.data;}
 const check=async(name,fn)=>{await fn();checks++;console.log(`PASS ${name}`);};
 const sessionId=randomUUID();let documentId,scriptId,card,attemptId;
+await check('settings force English even when an old client sends another target',async()=>{
+ await ok(next,'/api/speakwise/lesson-settings',{settings:{targetLanguage:'de',level:'B1'}},'PUT');
+ const result=await ok(next,'/api/speakwise/lesson-settings');assert.equal(result.settings.targetLanguage,'en');
+});
 await check('authenticated session creation is durable and ignores spoofed identity',async()=>{
  const a=await ok(next,'/api/speakwise/lesson-sessions',{sessionId,level:'B1',lessonMode:'pdf_reading',durationMinutes:15,user_id:'00000000-0000-4000-8000-000000000002'});
  assert.equal(a.session.user_id,'00000000-0000-4000-8000-000000000001');
  const b=await ok(next,'/api/speakwise/lesson-sessions',{sessionId,level:'B1',lessonMode:'pdf_reading',durationMinutes:30});assert.equal(b.session.planned_duration_minutes,15);
+});
+await check('canonical vocabulary lesson preview, owned selection and idempotent retries',async()=>{
+ const preview=await ok(next,'/api/speakwise/learning',{action:'get_vocabulary_lesson',sessionId,category:'word-beginner',lessonNumber:1});
+ assert.equal(preview.lesson.words[0].word,'apple');assert.ok(preview.lesson.words[0].definition.includes('fruit'));
+ const selection={action:'select_vocabulary_lesson',sessionId,category:'word-beginner',lessonNumber:1,requestId:randomUUID()};
+ const saved=await ok(next,'/api/speakwise/learning',selection);
+ const retry=await ok(next,'/api/speakwise/learning',selection);assert.equal(saved.script.id,retry.script.id);
+ assert.ok(saved.script.body.includes('I eat an apple after lunch.'));
+ assert.equal((await call(next,'/api/speakwise/learning',{...selection,lessonNumber:2})).status,409);
+ assert.equal((await call(next,'/api/speakwise/learning',{...selection,category:'../../etc'})).status,400);
+ assert.equal((await call(python,`/api/learning/scripts/${saved.script.id}`,undefined,'GET','fixture-other')).status,404);
+ const state=await ok(next,`/api/speakwise/lesson-sessions?sessionId=${sessionId}`);assert.ok(!state.session.state.scriptId,'Preview/artifact creation does not commit selection');
 });
 await check('native multi-page PDF upload/retrieval finds the final page with true references',async()=>{
  const data=await ok(python,'/api/documents',learningPdf(),'POST',undefined,{headers:{'Content-Type':'application/pdf','X-Filename':'synthetic-garden.pdf'}});

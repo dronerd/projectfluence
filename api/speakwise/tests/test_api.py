@@ -221,6 +221,27 @@ class ApiTests(unittest.IsolatedAsyncioTestCase):
             for _, task in realtime.calls.values(): task.cancel()
             realtime.calls.clear()
 
+    async def test_realtime_receives_selected_material_preview_and_fixed_english(self):
+        session = {'level': 'B1', 'lesson_mode': 'speaking_practice', 'status': 'active',
+            'state': {'scriptId': '00000000-0000-4000-8000-000000000009'}}
+        store = SimpleNamespace(own=AsyncMock(return_value=session), call=AsyncMock(return_value=[]))
+        sources = AsyncMock(return_value=([{'sourceId': 'script:fixture', 'text': 'apple: a round red fruit.'}], None, 'Canonical VocabStream'))
+        provider = AsyncMock(return_value=httpx.Response(201, text='v=0 fixture answer', headers={'Location': '/v1/realtime/calls/rtc_material'}))
+        try:
+            with patch('realtime.Store', return_value=store), patch('realtime.learner_context', AsyncMock(return_value={})), patch('realtime.source_context', sources), patch('realtime.provider_request', provider):
+                response = await self.client.post('/api/realtime/calls', headers=self.headers, json={
+                    'sessionId': '00000000-0000-4000-8000-000000000001', 'sdp': 'v=0 fixture offer', 'targetLanguage': 'de'})
+                self.assertEqual(response.status_code, 200, response.text)
+                import json
+                config = json.loads(provider.call_args.kwargs['files']['session'][1])
+                self.assertIn('apple: a round red fruit.', config['instructions'])
+                self.assertIn('sourcePreviewOnly', config['instructions'])
+                self.assertEqual(config['audio']['input']['transcription']['language'], 'en')
+                self.assertEqual(sources.call_args.args[3], session['state']['scriptId'])
+        finally:
+            for _, task in realtime.calls.values(): task.cancel()
+            realtime.calls.clear()
+
     async def test_realtime_denies_other_owners_and_sanitizes_provider_failure(self):
         from fastapi import HTTPException
         store = SimpleNamespace(own=AsyncMock(side_effect=HTTPException(404, 'Unavailable')))

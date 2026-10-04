@@ -64,7 +64,7 @@ try {
     return button && !button.disabled;
   });
   await page.locator('#sw-mode').selectOption('natural_conversation');
-  await page.locator('#sw-target-language').selectOption('en');
+  assert.equal(await page.locator('#sw-target-language').count(), 0);
   await page.getByRole('button', { name: 'レッスンを始める', exact: true }).click();
   await page.getByRole('button', { name: '音声で会話する', exact: true }).waitFor();
   assert.equal(await page.evaluate(() => window.__rtc.tracks.length), 0, 'No microphone request before explicit click');
