@@ -12,9 +12,7 @@ export default function LessonList() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [retry, setRetry] = useState(0);
-  const [showLegacy, setShowLegacy] = useState(false);
   const [selectedPage, setSelectedPage] = useState<number | null>(null);
-  useEffect(() => { setShowLegacy(false); }, [genreId]);
   const listHeading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     let cancelled = false;
@@ -27,7 +25,7 @@ export default function LessonList() {
     return () => { cancelled = true; };
   }, [genreId, token, retry]);
   if (!course) return <div className="vs-page"><div className="vs-state"><h1>レッスンを選びましょう</h1><p>この分野のレッスンは、まだ公開されていません。</p><Link to="/learn" className="pf-button">レベルを選ぶ</Link></div></div>;
-  const lessons = courseLessonNumbers(course, showLegacy).map((number) => ({ number, displayNumber: displayLessonNumber(genreId, number), label: lessonLabel(genreId, number), id: `${genreId}-lesson-${number}` }));
+  const lessons = courseLessonNumbers(course).map((number) => ({ number, displayNumber: displayLessonNumber(genreId, number), label: lessonLabel(genreId, number), id: `${genreId}-lesson-${number}` }));
   const completed = lessons.filter((lesson) => progress[lesson.id]?.totalPossible > 0).length;
   const nextLesson = lessons.find((lesson) => !progress[lesson.id]?.totalPossible) ?? lessons[0];
   const loadingProgress = loading || authLoading;
@@ -43,7 +41,6 @@ export default function LessonList() {
     <Link className="vs-back" to="/learn">← レベルを選ぶ</Link>
     <header className="vs-page-heading"><p className="pf-eyebrow">{genreId.startsWith("idioms-") ? "IDIOM PRACTICE" : "VOCABULARY PRACTICE"}</p><h1>{courseLabel(genreId)}</h1><p>{course.description}</p></header>
     <section className="vs-start-strip" aria-labelledby="vs-next-title"><div><h2 id="vs-next-title">{loadingProgress ? "学習記録を確認しています" : completed === lessons.length ? "全レッスンを学習済み" : completed ? `次は ${nextLesson.label}` : nextLesson.label}</h2><p>{loadingProgress ? "レッスンは下の一覧から選べます。" : token ? `${completed} / ${lessons.length} レッスンを学習済み` : "ログインすると学習記録を保存できます。"}</p>{token && !loadingProgress && <progress className="vs-progress" max={lessons.length} value={completed} aria-label="学習済みのレッスン" />}</div><Link className="pf-button" to={`/lesson/${nextLesson.id}`}>{completed ? "学習を続ける" : "学習を始める"}<span aria-hidden="true">→</span></Link></section>
-    {course.firstLesson && <div className="vs-notice"><p>{showLegacy ? "以前のレッスンと学習記録を表示しています。" : "以前のレッスンと学習記録も確認できます。"}</p><button className="vs-text-button" onClick={() => { setShowLegacy((value) => !value); setSelectedPage(null); }}>{showLegacy ? "新しい熟語レッスンを見る" : "以前のレッスン・学習記録を見る"}</button></div>}
     {error && <div className="vs-notice" role="alert">学習記録を読み込めませんでした。レッスンはそのまま学べます。<button className="vs-text-button" onClick={() => setRetry((value) => value + 1)}>再読み込み</button></div>}
     <section className="vs-section" aria-labelledby="vs-lesson-list"><div className="vs-section-heading"><h2 id="vs-lesson-list" ref={listHeading} tabIndex={-1}>レッスン一覧</h2><span className="vs-muted" aria-live="polite">{visibleLessons[0].displayNumber}–{visibleLessons.at(-1)?.displayNumber} / {lessons.length} レッスン</span></div>
       <div className="vs-pagination-select"><label htmlFor="vs-lesson-group">レッスンの範囲</label><select id="vs-lesson-group" value={pageNumber} onChange={(event) => changePage(Number(event.target.value))}>{Array.from({ length: pageCount }, (_, index) => <option value={index} key={index}>Lesson {lessons[index * pageSize].displayNumber}–{lessons[Math.min((index + 1) * pageSize, lessons.length) - 1].displayNumber}</option>)}</select></div>

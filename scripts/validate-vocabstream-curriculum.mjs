@@ -192,24 +192,20 @@ async function verifySignedInCurriculum() {
   await page.locator('.vs-lesson-card').first().waitFor();
   assert.deepEqual(await page.locator('.vs-lesson-number').allTextContents(), Array.from({ length: 10 }, (_, i) => `Lesson ${i + 1}`));
   assert.equal(await page.locator('#vs-lesson-group option').innerText(), 'Lesson 1–10');
-  await page.getByRole('button', { name: '以前のレッスン・学習記録を見る' }).click();
-  const oldCard = page.locator('.vs-lesson-card[href="/vocabstream/lesson/idioms-beginner-lesson-1"]');
-  await oldCard.getByText('学習済み · 正答率 75%', { exact: true }).waitFor();
-  assert.equal(await oldCard.locator('.vs-lesson-number').innerText(), '以前の Lesson 1');
-  assert.equal(await page.locator('.vs-lesson-card[href="/vocabstream/lesson/idioms-beginner-lesson-51"]').count(), 0);
-  await page.getByRole('button', { name: '新しい熟語レッスンを見る' }).click();
+  assert.equal(await page.getByText('以前のレッスンと学習記録も確認できます。').count(), 0);
+  assert.equal(await page.getByRole('button', { name: '以前のレッスン・学習記録を見る' }).count(), 0);
+  assert.equal(await page.locator('.vs-lesson-card[href="/vocabstream/lesson/idioms-beginner-lesson-1"]').count(), 0);
   await page.locator('.vs-lesson-card[href="/vocabstream/lesson/idioms-beginner-lesson-51"]').getByText('学習済み · 正答率 100%', { exact: true }).waitFor();
-  await page.getByRole('button', { name: '以前のレッスン・学習記録を見る' }).click();
-  await oldCard.getByText('学習済み · 正答率 75%', { exact: true }).waitFor();
-  // Follow the actual in-app course navigation; the shared catalog unit test also
-  // covers a stale legacy flag during a direct course-to-course React update.
+  assert.equal(fixture.progress.get('idioms-beginner-lesson-1')?.percentScore, 75);
+  // Follow the actual in-app course navigation after confirming that the list
+  // exposes only the current expression curriculum.
   await page.getByRole('link', { name: '← レベルを選ぶ', exact: true }).click();
   await page.locator('.vs-course[href="/vocabstream/learn/word-beginner"]').click();
   await page.locator('.vs-lesson-card[href="/vocabstream/lesson/word-beginner-lesson-1"]').getByText('学習済み · 正答率 80%', { exact: true }).waitFor();
   assert.equal(await page.getByRole('button', { name: '新しい熟語レッスンを見る' }).count(), 0);
   assert.equal(await page.locator('.vs-lesson-card').count(), 20);
   assert.equal(fixture.writes.length, savedLessons.length);
-  results.push({ flow: 'archived lesson progress retained and archive-to-word navigation remains usable', oldLessonId: 'idioms-beginner-lesson-1', oldScore: 75, pass: true, persistence: 'preloaded historical fixture, not a live account' });
+  results.push({ flow: 'archived lesson hidden from the course list while saved progress is retained', oldLessonId: 'idioms-beginner-lesson-1', oldScore: 75, pass: true, persistence: 'preloaded historical fixture, not a live account' });
   await page.goto(`${baseUrl}/vocabstream/weak-words`);
   const currentWord = page.locator('.vs-weak-card').filter({ has: page.getByRole('heading', { name: 'get up', exact: true }) });
   await currentWord.waitFor();
