@@ -3,7 +3,7 @@ import test from "node:test";
 import { playAnswerSound, speakVocabulary, vocabularyAudioUrl } from "./speech.ts";
 
 test("prepared audio URL matches the generator for the same word and example", () => {
-  assert.equal(vocabularyAudioUrl("apple", "I eat an apple after lunch."), "/vocabstream/audio/v1/8948f4dd82268e08.m4a");
+  assert.equal(vocabularyAudioUrl("apple", "I eat an apple after lunch."), "/vocabstream/audio/v2/e48555405eb72563.m4a");
   assert.equal(vocabularyAudioUrl(" apple ", " I eat an apple after lunch. "), vocabularyAudioUrl("apple", "I eat an apple after lunch."));
 });
 
