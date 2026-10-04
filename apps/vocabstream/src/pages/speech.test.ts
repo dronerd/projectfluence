@@ -1,6 +1,49 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { playAnswerSound } from "./speech.ts";
+import { playAnswerSound, speakVocabulary, vocabularyAudioUrl } from "./speech.ts";
+
+test("prepared audio URL matches the generator for the same word and example", () => {
+  assert.equal(vocabularyAudioUrl("apple", "I eat an apple after lunch."), "/vocabstream/audio/v1/8948f4dd82268e08.m4a");
+  assert.equal(vocabularyAudioUrl(" apple ", " I eat an apple after lunch. "), vocabularyAudioUrl("apple", "I eat an apple after lunch."));
+});
+
+test("prepared audio plays from the click and falls back when a clip is unavailable", () => {
+  const previousWindow = Object.getOwnPropertyDescriptor(globalThis, "window");
+  const previousAudio = Object.getOwnPropertyDescriptor(globalThis, "Audio");
+  const previousUtterance = Object.getOwnPropertyDescriptor(globalThis, "SpeechSynthesisUtterance");
+  const utterances: string[] = [];
+  const audioInstances: Array<{ src: string; onerror: (() => void) | null; paused: boolean }> = [];
+  class FakeAudio {
+    src: string;
+    onerror: (() => void) | null = null;
+    onended: (() => void) | null = null;
+    paused = false;
+    constructor(src: string) { this.src = src; audioInstances.push(this); }
+    play() { return Promise.resolve(); }
+    pause() { this.paused = true; }
+  }
+  class FakeUtterance { lang = ""; rate = 1; text: string; onend: (() => void) | null = null; onerror: (() => void) | null = null; constructor(text: string) { this.text = text; } }
+  Object.defineProperty(globalThis, "Audio", { configurable: true, value: FakeAudio });
+  Object.defineProperty(globalThis, "SpeechSynthesisUtterance", { configurable: true, value: FakeUtterance });
+  Object.defineProperty(globalThis, "window", { configurable: true, value: { speechSynthesis: { cancel() {}, getVoices: () => [], speak: (utterance: FakeUtterance) => utterances.push(utterance.text) } } });
+  try {
+    speakVocabulary("apple", "I eat an apple after lunch.");
+    assert.equal(audioInstances[0].src, vocabularyAudioUrl("apple", "I eat an apple after lunch."));
+    assert.deepEqual(utterances, []);
+    audioInstances[0].onerror?.();
+    assert.deepEqual(utterances, ["apple. I eat an apple after lunch."]);
+    speakVocabulary("solution", "We need a solution.");
+    speakVocabulary("confident", "She felt confident.");
+    assert.equal(audioInstances[1].paused, true);
+    audioInstances[1].onerror?.();
+    assert.equal(utterances.length, 1, "a canceled reading cannot start late fallback speech");
+  } finally {
+    for (const [key, descriptor] of [["window", previousWindow], ["Audio", previousAudio], ["SpeechSynthesisUtterance", previousUtterance]] as const) {
+      if (descriptor) Object.defineProperty(globalThis, key, descriptor);
+      else Reflect.deleteProperty(globalThis, key);
+    }
+  }
+});
 
 class FakeAudioParam {
   events: { kind: string; value: number }[] = [];

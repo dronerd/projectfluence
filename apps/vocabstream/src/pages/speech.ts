@@ -1,5 +1,43 @@
+import audioConfig from "../../audio-config.json" with { type: "json" };
+
 let preferredVoice: SpeechSynthesisVoice | null = null;
 let activeUtterance: SpeechSynthesisUtterance | null = null;
+let activeAudio: HTMLAudioElement | null = null;
+let playbackVersion = 0;
+
+const audioVersion = `${audioConfig.version}|${audioConfig.model}|${audioConfig.voice}|${audioConfig.speed}|${audioConfig.instructions}|`;
+
+/** Must match scripts/generate-vocabstream-audio.py, including UTF-8 and the NUL separator. */
+export function vocabularyAudioUrl(word: string, example = "") {
+  let value = 0xcbf29ce484222325n;
+  const bytes = new TextEncoder().encode(`${audioVersion}${word.trim()}\0${example.trim()}`);
+  for (const byte of bytes) value = ((value ^ BigInt(byte)) * 0x100000001b3n) & 0xffffffffffffffffn;
+  return `/vocabstream/audio/${audioConfig.version}/${value.toString(16).padStart(16, "0")}.${audioConfig.extension}`;
+}
+
+/** Play a prepared reading on the original click gesture, with browser speech as a fallback. */
+export function speakVocabulary(word: string, example = "") {
+  if (typeof window === "undefined") return;
+  const text = `${word.trim()}. ${example.trim()}`;
+  const version = ++playbackVersion;
+  activeAudio?.pause();
+  activeAudio = null;
+  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+  try {
+    const audio = new Audio(vocabularyAudioUrl(word, example));
+    activeAudio = audio;
+    const fallback = () => {
+      if (version !== playbackVersion || activeAudio !== audio) return;
+      activeAudio = null;
+      speakEnglish(text);
+    };
+    audio.onended = () => { if (activeAudio === audio) activeAudio = null; };
+    audio.onerror = fallback;
+    void audio.play().catch(fallback);
+  } catch {
+    speakEnglish(text);
+  }
+}
 
 function availableVoices() {
   return typeof window !== "undefined" && "speechSynthesis" in window ? window.speechSynthesis.getVoices() : [];

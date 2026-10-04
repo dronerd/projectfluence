@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "model": "gpt-4o-mini-tts",
+  "voice": "marin",
+  "speed": 0.95,
+  "instructions": "Read the vocabulary expression, pause briefly, then read its example sentence. Use clear, natural American English at a comfortable language-learning pace. Say only the supplied text, without adding or changing words.",
+  "bitrate": "24k",
+  "extension": "m4a"
+}

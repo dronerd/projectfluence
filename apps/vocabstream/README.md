@@ -2,6 +2,16 @@
 
 VocabStream runs inside the root Next.js application. Static lesson JSON in `public/vocabstream/data/<course>/Lesson<N>.json` feeds the shared learning engine, cards and review service. Start from the repository root with `npm run dev`.
 
+## Prepared English audio
+
+The word, example sentence, and review buttons play prepared M4A files from `public/vocabstream/audio/v1`. The clip ID is based on the exact word and example plus the voice settings, so a changed reading gets a new file. Repeated readings share one asset. Old saved review text without an asset falls back to browser speech. No OpenAI key is sent to the browser or used when a learner clicks Play.
+
+From the repository root, `python3 scripts/generate-vocabstream-audio.py` reports coverage without spending money. After installing FFmpeg (or `imageio-ffmpeg`) and setting `OPENAI_API_KEY` locally, run `python3 scripts/generate-vocabstream-audio.py --generate --limit 3` to make a small sample, then `python3 scripts/generate-vocabstream-audio.py --generate` to resume the catalog. The script can read the existing ignored `api/speakwise/.env` when the environment variable is absent. `--convert-only` converts existing provider MP3s without API requests. It keeps completed M4A files across interrupted runs and removes each source MP3 only after successful conversion.
+
+The current generator uses `gpt-4o-mini-tts` with the `marin` voice and makes one provider request per missing reading. This model family is deprecated; the prepared assets remain playable, but the generator must move to a supported model before the announced January 2027 shutdown. See the [OpenAI deprecation notice](https://developers.openai.com/api/docs/deprecations). Audio generation is an explicit local maintenance step, never a build or learner-facing API call. Listen to representative clips, especially homographs and specialist terms, before publishing changed batches.
+
+The 2026-10-04 catalog has 4,937 prepared 24 kbps AAC files totaling 73,379,916 bytes (about 70 MiB). The full app source, excluding ignored build outputs and local dependencies, is about 94 MB, below Vercel Hobby's 100 MB CLI upload limit. Check the source total again when adding lessons or assets. The build runs `npm run vocabstream:audio` to reject missing or damaged clips and leftover source MP3s. The generated files are committed assets and do not depend on a running speech service.
+
 ## Curriculum and stable identity
 
 - Word courses retain their original 100 lessons each, ordered entries, spelling and level labels: beginner A1–A2, intermediate B1, advanced B2, proficiency C1–C2.

@@ -20,7 +20,7 @@ The current platform uses **Next.js on Vercel** for the frontend, **FastAPI on R
 
 ### VocabStream
 
-VocabStream is the platform's structured study layer. It serves lesson JSON from `public/vocabstream/data` and turns each lesson into a guided session with word cards, examples, meaning checks, sentence-completion quizzes, mistake replay, scoring, and browser speech synthesis.
+VocabStream is the platform's structured study layer. It serves lesson JSON and prepared word-and-example audio from `public/vocabstream` and turns each lesson into a guided session with word cards, examples, meaning checks, sentence-completion quizzes, mistake replay, and scoring. Browser speech remains a fallback when an older saved reading has no prepared clip.
 
 Supported content areas include:
 
