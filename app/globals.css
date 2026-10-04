@@ -85,6 +85,13 @@ img, svg { flex-shrink: 0; }
 .pf-modal::backdrop { background: rgb(13 22 43 / 48%); }
 .pf-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 26px 0; margin-top: 36px; border-top: 1px solid var(--pf-border); color: var(--pf-muted); font-size: 12px; }
 .pf-footer a { min-height: 44px; display: inline-flex; align-items: center; text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 1100px) {
+  .pf-nav { gap: 10px; }
+  .pf-nav a { font-size: 16px; }
+  .pf-nav-label { gap: 9px; padding: 7px 10px; }
+  .pf-nav-logo { width: 28px; height: 28px; }
+  .pf-nav svg { width: 27px; height: 27px; }
+}
 @media (min-width: 900px) and (max-width: 1099px) {
   :root { --pf-header-height: 64px; }
   .pf-header-inner { padding-inline: 20px; gap: 16px; }

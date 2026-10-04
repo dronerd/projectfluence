@@ -8,6 +8,7 @@ import PracticeQuestion, { focusLearningHeading, WordDetails } from "../componen
 import ReviewState from "../components/ReviewState";
 import VocabularyImage from "../components/VocabularyImage";
 import { validWordImage } from "../lib/questionPolicy";
+import { playAnswerSound } from "./speech";
 
 export default function ReviewLesson() {
   const { user } = useAuth();
@@ -42,7 +43,7 @@ function ReviewSession() {
     const version = saveVersion.current;
     apiSubmitVocabStreamProgress({ attemptId: attemptId.current, lessonId: "vocabstream-review", genre: "review", lessonNumber: null, lessonTitle: "復習", wordCount: new Set(questions.map((q) => q.word.toLowerCase())).size, meaningScore: summary.meaningScore, meaningTotal: summary.meaningTotal, quizScore: summary.quizScore, quizTotal: summary.quizTotal, replayCompleted: false, replayCorrect: 0, replayTotal: 0, questionAttempts: attempts }, token).then(() => { if (version === saveVersion.current) { saved.current = true; setSaveState("saved"); } }).catch(() => { if (version === saveVersion.current) setSaveState("error"); }).finally(() => { if (version === saveVersion.current) saving.current = false; });
   }, [finished, token, questions, attempts, summary.meaningScore, summary.meaningTotal, summary.quizScore, summary.quizTotal, retrySave]);
-  function choose(choice: number) { if (locked.current) return; locked.current = true; setSelected(choice); setAttempts((previous) => [...previous, createAttempt(questions[index], choice, previous.length + 1)]); }
+  function choose(choice: number) { if (locked.current) return; locked.current = true; setSelected(choice); playAnswerSound(choice === questions[index].answerIndex); setAttempts((previous) => [...previous, createAttempt(questions[index], choice, previous.length + 1)]); }
   function restart() { saveVersion.current += 1; setStarted(false); setIndex(0); setSelected(null); setAttempts([]); setSaveState("idle"); saved.current = false; attemptId.current = null; locked.current = false; refresh(); }
   return <div className="vs-page vs-practice">
     <Link className="vs-back" to="/learn">← レッスン一覧</Link>
