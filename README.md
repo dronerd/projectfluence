@@ -40,7 +40,9 @@ Backend capabilities:
 - `POST /api/chat` for speaking, lesson, and warmup modes.
 - `POST /api/feedback` for structured grammar, vocabulary, fluency, and suggestion feedback; a transcript alone cannot establish pronunciation quality.
 - `POST /api/improved-version` for highlighted rewrites with segment-level change metadata.
-- `POST /api/voice` for OpenAI text-to-speech audio.
+- `POST /api/voice` for replayable read-aloud audio via `gpt-realtime-2.1-mini`.
+- `POST /api/realtime/calls` and `DELETE /api/realtime/calls/{callId}` for live WebRTC conversation.
+- SpeakWise text generation defaults to `gpt-6-luna`.
 - `GET /health` for uptime and deployment checks.
 
 ### VidMatch

@@ -3,6 +3,7 @@ import { getSupabaseBrowserClient } from "@/lib/supabaseClient";
 import AppBrand from "@/app/components/AppBrand";
 import AuthButton from "@/app/components/AuthButton";
 import { playVoiceResponse } from "../lib/voicePlayback";
+import { RealtimeConversation, type VoiceStatus, type VoiceTurn } from "../lib/realtimeConversation";
 import LearningWorkspace, { type WorkspaceHandle } from "../components/LearningWorkspace";
 import MemoryControls from "../components/MemoryControls";
 import { languageTag, jsonRequest, type LearningAction, type LearningContext, type LearningEvent, type LearningRequest, type SourceCitation, type SourceSelection } from "../lib/learning";
@@ -31,6 +32,7 @@ type ChatEntry = {
   action?: LearningAction;
   text: string;
   audioLoading?: boolean;
+  transcriptPending?: boolean;
 };
 
 type LearnerMemory = {
@@ -133,7 +135,7 @@ const DEFAULT_SETTINGS: SpeakWiseSettings = {
   pdfContext: "",
 };
 
-const VOICES = ["alloy", "ash", "coral", "echo", "fable", "nova", "sage", "shimmer"];
+const VOICES = ["alloy", "ash", "ballad", "coral", "echo", "sage", "shimmer", "verse", "marin", "cedar"];
 
 function isLessonMode(value: unknown): value is LessonMode {
   return typeof value === "string" && LESSON_MODES.some((mode) => mode.id === value);
@@ -195,18 +197,6 @@ function summarizeMemory(memory: LearnerMemory | null) {
   ].filter(Boolean).join("\n") || "レッスンを重ねながら、あなたに合う練習を見つけましょう。";
 }
 
-type RecognitionInstance = {
-  lang: string;
-  interimResults: boolean;
-  continuous: boolean;
-  onstart: (() => void) | null;
-  onend: (() => void) | null;
-  onerror: ((event: { error: string }) => void) | null;
-  onresult: ((event: { resultIndex: number; results: ArrayLike<{ isFinal: boolean; 0: { transcript: string } }> }) => void) | null;
-  start: () => void;
-  stop: () => void;
-};
-
 const LEVEL_LABELS: Record<CEFRLevel, string> = {
   A1: "入門", A2: "初級", B1: "中級", B2: "中上級", C1: "上級", C2: "熟達",
 };
@@ -255,7 +245,17 @@ export default function AIChat() {
   const [lessonEnded, setLessonEnded] = useState(false);
   const [optionsOpen, setOptionsOpen] = useState(true);
   const sessionPromiseRef = useRef<Promise<string | null> | null>(null);
-  const [isListening, setIsListening] = useState(false);
+  const [voiceStatus, setVoiceStatus] = useState<VoiceStatus>("closed");
+  const [micMuted, setMicMuted] = useState(false);
+  const [livePlaybackBlocked, setLivePlaybackBlocked] = useState(false);
+  const realtimeRef = useRef<RealtimeConversation | null>(null);
+  const voiceDisconnectRef = useRef<Promise<unknown>>(Promise.resolve());
+  const liveAudioRef = useRef<HTMLAudioElement | null>(null);
+  const pendingVoiceTurnsRef = useRef(new Map<string, VoiceTurn>());
+  const voiceSaveQueueRef = useRef(Promise.resolve());
+  const voiceTurnHandlerRef = useRef<(turn: VoiceTurn) => void>(() => {});
+  const voiceActive = voiceStatus !== "closed";
+  const voiceBusy = voiceStatus === "connecting" || voiceStatus === "thinking" || voiceStatus === "speaking";
   const [voiceLoading, setVoiceLoading] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
@@ -265,7 +265,6 @@ export default function AIChat() {
   const audioElementRef = useRef<HTMLAudioElement | null>(null);
   const [audioVisible, setAudioVisible] = useState(false);
   const audioUrlRef = useRef<string | null>(null);
-  const recognitionRef = useRef<RecognitionInstance | null>(null);
   const autoEndedRef = useRef(false);
   const endLessonRef = useRef<(() => Promise<void>) | null>(null);
   const chatEndRef = useRef<HTMLDivElement | null>(null);
@@ -276,7 +275,6 @@ export default function AIChat() {
   const voiceAbortRef = useRef<AbortController | null>(null);
   const requestsRef = useRef(new Set<AbortController>());
   const turnStartedRef = useRef<number | null>(null);
-  const recognitionStartedRef = useRef<number | null>(null);
   const preparedVoiceRef = useRef<{ text: string; voice: string } | null>(null);
   const operationRef = useRef(false);
   const savedSettingsRef = useRef("");
@@ -320,13 +318,14 @@ export default function AIChat() {
     requestsRef.current.forEach((controller) => controller.abort());
     voiceAbortRef.current?.abort(); voiceRequestRef.current += 1;
     audioRef.current?.pause();
-    const oldRecognition = recognitionRef.current; recognitionRef.current = null; oldRecognition?.stop();
+    const oldVoice = realtimeRef.current; realtimeRef.current = null; oldVoice?.close();
+    pendingVoiceTurnsRef.current.clear();
     preparedVoiceRef.current = null;
     if (audioUrlRef.current) { URL.revokeObjectURL(audioUrlRef.current); audioUrlRef.current = null; }
     currentSessionIdRef.current = null; startRequestRef.current = null; setSessionId(null); setSource({}); selectedSourceRef.current = {}; practiceRef.current = null; setPractice(null); setSessionEvents([]); setWorkspaceOpen(false);
     setChatLog([]); setSummary(null); setSummarySaved(false); setLessonActive(false);
     setLessonStartedAt(null); setLessonEnded(false); setInput(""); setError("");
-    setVoiceLoading(false); setIsListening(false); setOptionsOpen(true);
+    setVoiceLoading(false); setVoiceStatus("closed"); setMicMuted(false); setOptionsOpen(true);
     if (!userId || !supabase) { deadline.dispose(); setSettingsLoaded(true); return; }
     // Reload only when identity changes, not on every access-token refresh.
     void supabase.auth.getSession().then(async ({ data }) => {
@@ -438,7 +437,8 @@ export default function AIChat() {
   }, [workspaceOpen]);
 
   useEffect(() => () => {
-    const oldRecognition = recognitionRef.current; recognitionRef.current = null; oldRecognition?.stop();
+    const oldVoice = realtimeRef.current; realtimeRef.current = null; oldVoice?.close();
+    pendingVoiceTurnsRef.current.clear();
     audioRef.current?.pause();
     voiceRequestRef.current += 1;
     voiceAbortRef.current?.abort();
@@ -509,12 +509,13 @@ export default function AIChat() {
       const write = stateQueueRef.current.then(() => learningRequest("/api/speakwise/lesson-sessions", jsonRequest(snapshot, "PATCH")));
       stateQueueRef.current = write.then(() => undefined, () => undefined);
       await write;
-      setSaveStatus("保存済み");
+      setSaveStatus(pendingVoiceTurnsRef.current.size && !messages.length ? "未保存・再試行が必要" : "保存済み");
       if (events.length) setSessionEvents(previous => [...previous, ...events.filter(event => !previous.some(saved => saved.id === event.id))]);
     } catch (cause) { setSaveStatus("未保存・再試行が必要"); throw cause; }
   }
 
   function changeSource(next: SourceSelection) {
+    stopRealtime();
     selectedSourceRef.current = next; setSource(next);
     if (currentSessionIdRef.current) void saveLessonState().catch(() => setNotice("教材の選択を保存できませんでした。保存を再試行してください。"));
   }
@@ -617,6 +618,25 @@ export default function AIChat() {
   async function sendMessage(retry = false, requestedText?: string) {
     const text = (requestedText || (retry ? retryText : input))?.trim();
     if (!text || !lessonActive || isSending || isEnding || operationRef.current) return;
+    if (voiceActive && !retry && !requestedText) {
+      if (voiceBusy) return;
+      const entry: ChatEntry = { id: crypto.randomUUID(), sender: "user", text, inputMethod: "typed", requestContext: lessonRequestContext() };
+      operationRef.current = true; setIsSending(true); setError("");
+      // Pause capture during the storage write to avoid overlapping a spoken turn.
+      const call = realtimeRef.current;
+      call?.setMuted(true);
+      try {
+        await flushVoiceTurns();
+        await saveLessonState([{ id: entry.id, role: "user", content: text, metadata: { inputMethod: "typed", requestContext: entry.requestContext } }]);
+        setChatLog(previous => [...previous, entry]); setInput("");
+        call?.sendText(text, entry.id);
+        if (!call || realtimeRef.current !== call) throw new Error("音声接続が切れました。保存した回答をもう一度送信できます。");
+      } catch (cause) {
+        setError(cause instanceof Error ? cause.message : "送信できませんでした。"); setRetryText(text); turnIdRef.current = entry.id;
+        stopRealtime();
+      } finally { call?.setMuted(micMuted); operationRef.current = false; setIsSending(false); }
+      return;
+    }
     stopMedia();
     operationRef.current = true; turnStartedRef.current = performance.now(); stickToBottomRef.current = true;
     setInput(""); setError(""); setRetryText(null);
@@ -626,6 +646,7 @@ export default function AIChat() {
     if (!retry) { setChatLog(previous => [...previous, entry]); }
     setIsSending(true);
     try {
+      await flushVoiceTurns();
       await saveLessonState([{ id: entry.id, role: "user", content: text, metadata: { inputMethod: entry.inputMethod || "typed", requestContext: entry.requestContext || lessonRequestContext() } }]);
       inputMethodRef.current = "typed";
       await appendAssistant(await callAgent(text, entry.requestContext || lessonRequestContext()));
@@ -640,6 +661,7 @@ export default function AIChat() {
     operationRef.current = true;
     stopMedia(); setError(""); setRetryText(null); setIsEnding(true); setLessonActive(false); setLessonEnded(true);
     try {
+      await flushVoiceTurns();
       await saveLessonState();
       const data = await learningRequest<{ summary: LessonSummary }>("/api/speakwise/lesson-sessions", jsonRequest({ action: "complete", sessionId: currentSessionIdRef.current }));
       setSummary(data.summary); setSummarySaved(true); void refreshMemory();
@@ -664,7 +686,7 @@ export default function AIChat() {
 
   function stopMedia() {
     setAudioVisible(false);
-    const oldRecognition = recognitionRef.current; recognitionRef.current = null; oldRecognition?.stop(); setIsListening(false);
+    stopRealtime();
     audioRef.current?.pause(); voiceAbortRef.current?.abort(); voiceRequestRef.current += 1; setVoiceLoading(false);
     preparedVoiceRef.current = null;
     if (audioUrlRef.current) { URL.revokeObjectURL(audioUrlRef.current); audioUrlRef.current = null; }
@@ -689,7 +711,7 @@ export default function AIChat() {
     audio.preload = "auto";
     audio.onplaying = () => {
       if (requestId !== voiceRequestRef.current) return;
-      console.info("speakwise_timing", { stage: "audio_playing", ttsToPlaybackMs: Math.round(performance.now() - started), turnToPlaybackMs: turnStartedRef.current ? Math.round(performance.now() - turnStartedRef.current) : null });
+      console.info("speakwise_timing", { stage: "audio_playing", readAloudToPlaybackMs: Math.round(performance.now() - started), turnToPlaybackMs: turnStartedRef.current ? Math.round(performance.now() - turnStartedRef.current) : null });
     };
     try {
       const res = await authenticatedFetch(`${SPEAKWISE_API_URL}/api/voice`, {
@@ -724,45 +746,91 @@ audio.onerror = () => {
     } finally { clearTimeout(timer); if (requestId === voiceRequestRef.current) setVoiceLoading(false); }
   }
 
-  function toggleListening() {
-    if (!lessonActive || isSending || isEnding) return;
-    if (recognitionRef.current) { recognitionRef.current.stop(); return; }
-    const speechWindow = window as typeof window & {
-      SpeechRecognition?: new () => RecognitionInstance;
-      webkitSpeechRecognition?: new () => RecognitionInstance;
-    };
-    const SpeechRecognition = speechWindow.SpeechRecognition || speechWindow.webkitSpeechRecognition;
-    if (!SpeechRecognition) { setNotice("このブラウザは音声入力に対応していません。下の欄に英文を入力して練習できます。"); return; }
-    stopMedia();
-    const recognition = new SpeechRecognition();
-    recognitionStartedRef.current = performance.now();
-    recognition.lang = targetLanguage === "ja" ? "ja-JP" : targetLanguage === "es" ? "es-ES" : targetLanguage === "fr" ? "fr-FR" : targetLanguage === "de" ? "de-DE" : "en-US"; recognition.interimResults = true; recognition.continuous = true;
-    recognition.onstart = () => { if (recognitionRef.current === recognition) setIsListening(true); };
-    recognition.onend = () => { if (recognitionRef.current !== recognition) return; setIsListening(false); recognitionRef.current = null; };
-    recognition.onerror = (event) => {
-      if (recognitionRef.current !== recognition) return;
-      setIsListening(false); recognitionRef.current = null;
-      if (event.error !== "aborted") setNotice(event.error === "not-allowed"
-        ? "マイクを使うには、ブラウザでマイクの使用を許可してください。文字入力でも練習できます。"
-        : "音声を聞き取れませんでした。もう一度話すか、文字で入力してください。");
-    };
-    recognition.onresult = (event) => {
-      if (recognitionRef.current !== recognition) return;
-      let finalText = "";
-      for (let i = event.resultIndex; i < event.results.length; i += 1) {
-        if (event.results[i].isFinal) finalText += `${event.results[i][0].transcript} `;
+  function stopRealtime() {
+    realtimeRef.current?.close();
+    realtimeRef.current = null;
+    setVoiceStatus("closed"); setMicMuted(false);
+  }
+
+  async function flushVoiceTurns() {
+    const session = currentSessionIdRef.current;
+    const write = voiceSaveQueueRef.current.then(async () => {
+      if (currentSessionIdRef.current !== session) return;
+      for (const turn of pendingVoiceTurnsRef.current.values()) {
+        if (!turn.final) break; // Recognition may finish after the AI transcript.
+        if (turn.text.trim()) {
+          // Separate transactions preserve created_at order on lesson reload.
+          await saveLessonState([{ id: turn.id, role: turn.role, content: turn.text,
+            metadata: { inputMethod: turn.inputMethod, requestContext: lessonRequestContext() } }]);
+        }
+        pendingVoiceTurnsRef.current.delete(turn.id);
       }
-      if (finalText.trim()) console.info("speakwise_timing", { stage: "recognition_final", captureMs: recognitionStartedRef.current ? Math.round(performance.now() - recognitionStartedRef.current) : null });
-      if (finalText.trim()) inputMethodRef.current = "speech";
-      if (finalText.trim()) setInput((prev) => [prev, finalText.trim()].filter(Boolean).join(" "));
-    };
-    recognitionRef.current = recognition;
-    try { recognition.start(); } catch { recognitionRef.current = null; setNotice("マイクを開始できませんでした。文字入力で練習できます。"); }
+    });
+    voiceSaveQueueRef.current = write.catch(() => {});
+    return write;
+  }
+
+  voiceTurnHandlerRef.current = turn => {
+    if (!currentSessionIdRef.current || memoryResetRef.current) return;
+    pendingVoiceTurnsRef.current.set(turn.id, turn);
+    setChatLog(previous => {
+      const entry = { id: turn.id, sender: turn.role, text: turn.text || "文字起こし中…", inputMethod: turn.inputMethod, transcriptPending: !turn.final };
+      if (turn.final && !turn.text.trim()) return previous.filter(item => item.id !== turn.id);
+      return previous.some(item => item.id === turn.id) ? previous.map(item => item.id === turn.id ? entry : item) : [...previous, entry];
+    });
+    if (turn.final) {
+      if (!turn.text.trim()) pendingVoiceTurnsRef.current.delete(turn.id);
+      void flushVoiceTurns().catch(() => {
+        setNotice("音声の会話を保存できませんでした。「保存を再試行」で再保存できます。");
+        stopRealtime();
+      });
+    }
+  };
+
+  async function startRealtime() {
+    if (!lessonActive || isSending || isEnding || operationRef.current || realtimeRef.current) return;
+    if (!SPEAKWISE_API_URL || !liveAudioRef.current) { setNotice("音声サービスに接続できません。文字入力で続けられます。"); return; }
+    stopMedia(); setNotice(""); setError(""); setLivePlaybackBlocked(false);
+    const call = new RealtimeConversation({
+      audio: liveAudioRef.current,
+      connect: async (sdp, signal) => {
+        await voiceDisconnectRef.current;
+        await flushVoiceTurns();
+        await stateQueueRef.current;
+        const controller = new AbortController();
+        const abort = () => controller.abort();
+        signal.addEventListener("abort", abort, { once: true });
+        if (signal.aborted) controller.abort();
+        try {
+          const response = await authenticatedFetch(`${SPEAKWISE_API_URL}/api/realtime/calls`, jsonRequest({
+            sessionId: currentSessionIdRef.current, sdp, voice: settings.selectedVoice, targetLanguage,
+          }), controller);
+          const data = await response.json();
+          if (!response.ok) throw new Error(requestError(response.status, data.error || "音声会話に接続できませんでした。"));
+          return data;
+        } finally { signal.removeEventListener("abort", abort); }
+      },
+      disconnect: callId => {
+        const closing = learningRequest(`/api/realtime/calls/${encodeURIComponent(callId)}`, { method: "DELETE" }, "python");
+        voiceDisconnectRef.current = closing.catch(() => undefined);
+        return closing;
+      },
+      onStatus: status => { if (realtimeRef.current === call) { setVoiceStatus(status); if (status === "closed") realtimeRef.current = null; } },
+      onTurn: turn => { if (realtimeRef.current === call) voiceTurnHandlerRef.current(turn); },
+      onError: message => { if (realtimeRef.current === call) setNotice(message); },
+      onPlaybackBlocked: () => {
+        if (realtimeRef.current !== call) return;
+        setLivePlaybackBlocked(true);
+        setNotice("音声を再生するには「AI音声を再生」を押してください。");
+      },
+    });
+    realtimeRef.current = call;
+    await call.start();
   }
 
   function prepareNextLesson() {
     setWorkspaceGeneration(value => value + 1);
-    stopMedia(); setOptionsOpen(true); setLessonEnded(false); setSummary(null); setChatLog([]); setSource({}); selectedSourceRef.current = {}; practiceRef.current = null; setPractice(null); setSessionEvents([]);
+    stopMedia(); pendingVoiceTurnsRef.current.clear(); setOptionsOpen(true); setLessonEnded(false); setSummary(null); setChatLog([]); setSource({}); selectedSourceRef.current = {}; practiceRef.current = null; setPractice(null); setSessionEvents([]);
     currentSessionIdRef.current = null; startRequestRef.current = null; setSessionId(null); sessionPromiseRef.current = null; setSaveStatus("");
     setLessonStartedAt(null); setElapsedSeconds(0); setInput(""); setError(""); setRetryText(null);
     requestAnimationFrame(() => settingsRef.current?.focus());
@@ -778,7 +846,7 @@ audio.onerror = () => {
           if (memoryResetRef.current) return;
           const response = await fetch("/api/speakwise/lesson-sessions", { ...jsonRequest(snapshot, "PATCH"), headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` }, signal: deadline.signal });
           if (!response.ok) throw new Error();
-          setSaveStatus("保存済み");
+          setSaveStatus(pendingVoiceTurnsRef.current.size ? "未保存・再試行が必要" : "保存済み");
         } catch { setSaveStatus("未保存・再試行が必要"); }
         finally { deadline.dispose(); }
       });
@@ -841,7 +909,8 @@ audio.onerror = () => {
             <summary>音声の設定<span>{settings.voiceEnabled ? "自動再生オン" : "自動再生オフ"}</span></summary>
             <label className="sw-toggle"><input type="checkbox" checked={settings.voiceEnabled} onChange={(event) => updateSettings({ voiceEnabled: event.target.checked })} /><span>AIの返答を自動で読み上げる（AI生成音声）</span></label>
             <label className="sw-label sw-file-label" htmlFor="sw-voice">読み上げの声</label>
-            <select id="sw-voice" className="sw-select" value={settings.selectedVoice} onChange={(event) => updateSettings({ selectedVoice: event.target.value })}>{VOICES.map((voice) => <option key={voice} value={voice}>{voice.charAt(0).toUpperCase() + voice.slice(1)}</option>)}</select>
+            <select id="sw-voice" className="sw-select" disabled={voiceActive} value={settings.selectedVoice} onChange={(event) => updateSettings({ selectedVoice: event.target.value })}>{VOICES.map((voice) => <option key={voice} value={voice}>{voice.charAt(0).toUpperCase() + voice.slice(1)}</option>)}</select>
+            {voiceActive && <p className="sw-note">声を変更するには音声会話を終了してください。</p>}
           </details>
           <details className="sw-details">
             <summary>これまでの学習</summary>
@@ -865,7 +934,7 @@ audio.onerror = () => {
           {lessonActive && <div className="sw-progress" role="progressbar" aria-label="レッスンの経過時間" aria-valuenow={Math.min(elapsedSeconds, totalSeconds)} aria-valuemin={0} aria-valuemax={totalSeconds} aria-valuetext={`${settings.durationMinutes}分中、${Math.floor(elapsedSeconds / 60)}分経過`}><div style={{ width: `${Math.min(100, elapsedSeconds / totalSeconds * 100)}%` }} /></div>}
           <div className="sw-messages" onScroll={event => { const element = event.currentTarget; stickToBottomRef.current = element.scrollHeight - element.scrollTop - element.clientHeight < 100; }} role="log" aria-label="AIとの会話" aria-live="polite" aria-relevant="additions text">
             {!chatLog.length && !isSending && <div className="sw-empty"><h3>文字でも音声でも練習できます</h3><p>「レッスンを始める」を選ぶと、AIから最初の質問が届きます。</p></div>}
-            {chatLog.map((entry, index) => <article key={entry.id} className={`sw-msg ${entry.sender}`}><div className="sw-message-head"><span className="sw-sender">{entry.sender === "assistant" ? "SpeakWiseAI" : "あなた"}</span>{entry.sender === "assistant" && <button type="button" className="sw-voice-button" disabled={voiceLoading} onClick={() => void playVoice(entry.text)} aria-label={`AIの${index + 1}番目のメッセージを音声で再生`}>{voiceLoading ? "音声を準備中…" : "音声で聞く"}</button>}</div><p lang={languageTag(targetLanguage)}>{entry.text}</p>{entry.action && <button className="sw-topic" disabled={isSending || isEnding || !lessonActive} onClick={() => { setWorkspaceOpen(true); void workspaceRef.current?.execute(entry.action!, { requestId: entry.id, context: entry.requestContext || lessonRequestContext() }); }}>学習アクションを再表示・再試行</button>}{entry.citations?.map((citation, citeIndex) => <details className="sw-citation" key={citeIndex}><summary>出典 {citation.page ? `p. ${citation.page}` : citeIndex + 1}</summary><p>{citation.excerpt || "選択した教材を参照しています。"}</p></details>)}</article>)}
+            {chatLog.map((entry, index) => <article key={entry.id} className={`sw-msg ${entry.sender}`}><div className="sw-message-head"><span className="sw-sender">{entry.sender === "assistant" ? "SpeakWiseAI" : "あなた"}</span>{entry.sender === "assistant" && <button type="button" className="sw-voice-button" disabled={voiceLoading || entry.transcriptPending} onClick={() => void playVoice(entry.text)} aria-label={`AIの${index + 1}番目のメッセージを音声で再生`}>{voiceLoading ? "音声を準備中…" : "音声で聞く"}</button>}</div><p lang={languageTag(targetLanguage)}>{entry.text}</p>{entry.action && <button className="sw-topic" disabled={isSending || isEnding || !lessonActive} onClick={() => { setWorkspaceOpen(true); void workspaceRef.current?.execute(entry.action!, { requestId: entry.id, context: entry.requestContext || lessonRequestContext() }); }}>学習アクションを再表示・再試行</button>}{entry.citations?.map((citation, citeIndex) => <details className="sw-citation" key={citeIndex}><summary>出典 {citation.page ? `p. ${citation.page}` : citeIndex + 1}</summary><p>{citation.excerpt || "選択した教材を参照しています。"}</p></details>)}</article>)}
             {isSending && <div className="sw-msg assistant" role="status"><span className="sw-sender">SpeakWiseAI</span><p>{lessonActive ? pendingDescription || "返答を考えています…" : "レッスンを準備しています…"}</p></div>}
             {isEnding && <div className="sw-note" role="status">今日の振り返りをまとめています…</div>}
             {error && lessonViewStarted && <div className="sw-alert" role="alert"><p>{error}</p>{retryText && lessonActive && <button type="button" className="sw-text-link" disabled={isSending} onClick={() => void sendMessage(true)}>もう一度送信</button>}{lessonEnded && !summary && <button type="button" className="sw-text-link" disabled={isEnding} onClick={() => void endLesson()}>振り返りを再作成</button>}</div>}
@@ -878,9 +947,19 @@ audio.onerror = () => {
           </div>
           {notice && lessonViewStarted && <div className="sw-notice" role="status"><span>{notice}</span><button type="button" onClick={() => setNotice("")} aria-label="お知らせを閉じる">×</button></div>}
           {lessonEnded ? <div className="sw-completion-actions"><button type="button" className="pf-button" disabled={isEnding} onClick={prepareNextLesson}>次のレッスンを準備</button>{summary && !summarySaved && accessToken && <button type="button" className="pf-button pf-button-secondary" disabled={isEnding} onClick={() => { setIsEnding(true); void persistSummary().then(setSummarySaved).finally(() => setIsEnding(false)); }}>振り返りの保存を再試行</button>}</div>
-            : lessonViewStarted ? <div className="sw-composer-area"><div className="sw-composer"><button type="button" className={`sw-icon ${isListening ? "active" : ""}`} disabled={!lessonActive || isSending || isEnding} onClick={toggleListening} aria-label={isListening ? "音声入力を停止" : "音声で入力"} aria-pressed={isListening}>{isListening ? "停止" : "音声"}</button><label className="sw-sr-only" htmlFor="sw-message">英語の回答</label><textarea id="sw-message" ref={inputRef} className="sw-textarea" value={input} maxLength={8000} disabled={!lessonActive || isEnding} onChange={(event) => setInput(event.target.value)} placeholder="英語で入力…" onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); void sendMessage(); } }} /><button type="button" className="sw-send" disabled={!lessonActive || !input.trim() || isSending || isEnding} onClick={() => void sendMessage()}>送信</button></div><p className="sw-save-status" role="status">{saveStatus}{saveStatus.startsWith("未保存") && <button className="sw-text-link" onClick={() => void saveLessonState().catch(() => setNotice("保存を再試行できませんでした。"))}>保存を再試行</button>}</p><p className={`sw-composer-hint${isListening ? " is-listening" : ""}`}>{isListening ? "聞き取り中です。話し終えたら「停止」を選んでください。" : "Enterで送信 · Shift + Enterで改行"}</p></div> : null}
+            : lessonViewStarted ? <div className="sw-composer-area">
+              <div className="sw-live-controls">
+                {voiceActive ? <>
+                  <span className="sw-live-status" role="status">{voiceStatus === "connecting" ? "接続中…" : voiceStatus === "speaking" ? "AIが話しています" : voiceStatus === "thinking" ? "返答を準備中…" : micMuted ? "マイクはミュート中" : "聞いています"}</span>
+                  <button type="button" className="sw-topic" disabled={voiceStatus === "connecting"} aria-pressed={micMuted} onClick={() => { realtimeRef.current?.setMuted(!micMuted); setMicMuted(!micMuted); }}>{micMuted ? "マイクをオン" : "マイクをミュート"}</button>
+                  <button type="button" className="sw-topic" onClick={stopRealtime}>音声会話を終了</button>
+                  {livePlaybackBlocked && <button type="button" className="sw-text-link" onClick={() => { void liveAudioRef.current?.play().then(() => { setLivePlaybackBlocked(false); setNotice(""); }).catch(() => setNotice("音声を再生できませんでした。再接続してください。")); }}>AI音声を再生</button>}
+                </> : <button type="button" className="sw-topic" disabled={!lessonActive || isSending || isEnding} onClick={() => void startRealtime()}>音声で会話する</button>}
+              </div>
+              <div className="sw-composer"><label className="sw-sr-only" htmlFor="sw-message">英語の回答</label><textarea id="sw-message" ref={inputRef} className="sw-textarea" value={input} maxLength={8000} disabled={!lessonActive || isEnding} onChange={(event) => setInput(event.target.value)} placeholder="英語で入力…" onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); void sendMessage(); } }} /><button type="button" className="sw-send" disabled={!lessonActive || !input.trim() || isSending || isEnding || (voiceActive && voiceBusy)} onClick={() => void sendMessage()}>送信</button></div><p className="sw-save-status" role="status">{saveStatus}{saveStatus.startsWith("未保存") && <button className="sw-text-link" onClick={() => void flushVoiceTurns().then(() => saveLessonState()).catch(() => setNotice("保存を再試行できませんでした。"))}>保存を再試行</button>}</p><p className="sw-composer-hint">{voiceActive ? "AI生成音声 · 話し終えると自動で返答します。文字でも送信できます。教材の操作は文字入力で続けられます。" : "Enterで送信 · Shift + Enterで改行 · 音声会話も選べます"}</p></div> : null}
         </section>
       </div>
+      <audio ref={liveAudioRef} autoPlay aria-label="リアルタイムのAI生成音声" />
       <div className="sw-audio-player sw-audio-floating" hidden={!audioVisible}><audio ref={audioElementRef} controls aria-label="AI生成音声の再生コントロール" /><button className="sw-topic" onClick={() => { stopMedia(); setAudioVisible(false); }} aria-label="音声プレーヤーを閉じる">×</button></div>
       {notice && !lessonViewStarted && <div className="sw-setup-notice" role="status">{notice}</div>}
     </main>

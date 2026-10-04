@@ -7,6 +7,7 @@ Text = Annotated[str, StringConstraints(max_length=8000)]
 Label = Annotated[str, StringConstraints(max_length=240)]
 Labels = Annotated[list[Label], Field(max_length=32)]
 Level = Literal['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+RealtimeVoice = Literal['alloy', 'ash', 'ballad', 'coral', 'echo', 'sage', 'shimmer', 'verse', 'marin', 'cedar']
 
 
 class HistoryEntry(BaseModel):
@@ -47,7 +48,7 @@ class ChatRequest(BaseModel):
 
 class VoiceRequest(BaseModel):
     text: Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=4096)]
-    voice: Literal['alloy', 'ash', 'coral', 'echo', 'fable', 'onyx', 'nova', 'sage', 'shimmer'] = 'alloy'
+    voice: RealtimeVoice = 'alloy'
 
 
 class FeedbackRequest(BaseModel):

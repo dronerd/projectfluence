@@ -21,9 +21,11 @@ services:
       - key: SPEAKWISE_CORS_ORIGINS
         sync: false
       - key: OPENAI_CHAT_MODEL
-        value: gpt-4o-mini
-      - key: OPENAI_TTS_MODEL
-        value: gpt-4o-mini-tts
+        value: gpt-6-luna
+      - key: OPENAI_REALTIME_MODEL
+        value: gpt-realtime-2.1-mini
+      - key: OPENAI_TRANSCRIBE_MODEL
+        value: gpt-transcribe
   - type: web
     name: projectfluence-web
     runtime: node

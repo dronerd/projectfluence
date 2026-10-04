@@ -37,9 +37,10 @@ Use dashboard secret fields, never source-controlled `.env` files. The variable 
 | `SUPABASE_URL` | Same Supabase project URL | Next server **and** Python server | No | Database REST / server token verification |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase API Keys: dedicated secret key or legacy service-role JWT | **Next server only** | **Yes** | Privileged DB access after user verification; never public/build client code |
 | `SUPABASE_ANON_KEY` | Same publishable/anon key used by the browser | **Python server**; optional on Next | No | Verify user access tokens with Supabase Auth; Python needs no service-role key |
-| `OPENAI_API_KEY` | OpenAI project API keys with funded/enabled model access | **Python server only** | **Yes** | Chat, summaries, feedback and TTS |
-| `OPENAI_CHAT_MODEL` | Model enabled on that OpenAI project | Python server; Blueprint default `gpt-4o-mini` | No | Chat Completions model |
-| `OPENAI_TTS_MODEL` | Speech model enabled on that OpenAI project | Python server; default `gpt-4o-mini-tts` | No | Continuous MP3 speech generation |
+| `OPENAI_API_KEY` | OpenAI project API keys with funded/enabled model access | **Python server only** | **Yes** | Chat, summaries, feedback and Realtime |
+| `OPENAI_CHAT_MODEL` | Model enabled on that OpenAI project | Python server; Blueprint default `gpt-6-luna` | No | Chat Completions model |
+| `OPENAI_REALTIME_MODEL` | Speech model enabled on that OpenAI project | Python server; default `gpt-realtime-2.1-mini` | No | Realtime conversation and read-aloud model |
+| `OPENAI_TRANSCRIBE_MODEL` | Realtime input transcription model | Python server; default `gpt-transcribe` | No | Captions for spoken learner turns |
 | `SPEAKWISE_CORS_ORIGINS` | Exact frontend origin(s) | **Python server** | No | Comma-separated HTTPS origins, no paths, wildcards, or trailing slash |
 | `YOUTUBE_API_KEY` | Google Cloud project with YouTube Data API v3 enabled | **Next server only** | **Yes** | Admin/daily video metadata ingestion; restrict the key to that API |
 | `VIDMATCH_INGEST_TOKEN` | Blueprint generates a random value, or generate a separate random secret | **Next server only** | **Yes** | Bearer token for administrative ingestion; never ship to UI |
@@ -95,7 +96,7 @@ The curation branch adds migration `20260930000100_vidmatch_curation.sql`. Apply
    Use locally supplied secret environment values; never paste them into docs or logs. Run the Render cron manually once and check its success log. If migrating from Vercel, disable the Vercel schedule before enabling Render cron. On-demand ingestion still uses the separate ingest token. The transcript tables are ready, but the preexisting local-only Stage 1 ingestion route must be separately reviewed/committed before relying on that endpoint in deployment.
 9. **Production validation:** run the checklist below on the actual domain and devices. Only then merge/enable normal auto-deploy and direct users to the release. Existing migrations are additive and preserve historical data; roll back application code if needed without dropping those tables.
 
-PDF uploads now go directly to authenticated Python extraction; private extracted pages are stored in Supabase. No Supabase Storage bucket creation, Storage policies, Edge Function deployment, realtime publication, database webhook or persistent-media-volume step is applicable. VidMatch opens YouTube; SpeakWise streams disposable audio from FastAPI. Browser-to-Next is same-origin. Browser-to-Python uses the CORS allowlist and bearer token. Do not add wildcard CORS or proxy video bytes through Next to troubleshoot external playback.
+PDF uploads now go directly to authenticated Python extraction; private extracted pages are stored in Supabase. No Supabase Storage bucket creation, Storage policies, Edge Function deployment, realtime publication, database webhook or persistent-media-volume step is applicable. VidMatch opens YouTube; SpeakWise negotiates live WebRTC through FastAPI and receives audio directly from OpenAI; read-aloud WAV files come from FastAPI. Browser-to-Next is same-origin. Browser-to-Python uses the CORS allowlist and bearer token. Do not add wildcard CORS or proxy video bytes through Next to troubleshoot external playback.
 
 ## Production smoke checklist
 
@@ -108,7 +109,7 @@ Use two ordinary test accounts A/B and an unauthenticated browser. Keep a record
 - [ ] B cannot read A's private rows through direct Supabase requests. Browser anon/authenticated roles cannot invoke privileged save/analytics RPCs; new private-document and message writes use restricted owner policies described in the SpeakWise data runbook. B cannot attach a SpeakWise summary to A's session.
 - [ ] Start SpeakWise signed in. Grant microphone permission on HTTPS; test denial/unavailable recognition and typed input. Confirm recognized words remain editable and manual Send works.
 - [ ] Receive chat text, play AI audio, replay manually if autoplay is blocked, interrupt by starting input/end lesson, and verify no overlapping/late audio. Test a phone as well as desktop.
-- [ ] Correlate server `llm_complete`, `tts_first_byte`, `tts_closed` logs with browser `speakwise_timing`; capture first-token, total-text, first-audio-byte and `playing` timings. Compare p50/p95 under real network conditions before claiming a latency improvement.
+- [ ] Verify typed chat, read-aloud WAV playback, microphone permission, spoken turn detection, interruption, mute, reconnect, transcript saving and lesson completion. Compare physical first-audible latency on target devices before claiming a latency improvement.
 - [ ] Finish the lesson through the saved-session completion route, see a valid evidence-based summary, retry completion, and reload learner memory. Database refresh failure after commit must not be reported as lost data.
 - [ ] VidMatch returns a populated matching catalog; filters work even for videos outside the former first 100 rows. Empty results and backend failure are distinct.
 - [ ] Block the thumbnail CDN to verify fallback/error/manual retry, then restore it. Open a canonical YouTube link; verify playback on current iPhone Safari, smaller/older supported iPhone, iPad, Android Chrome, macOS Safari/Chrome, Windows Chrome/Edge.
@@ -122,7 +123,7 @@ Use two ordinary test accounts A/B and an unauthenticated browser. Keep a record
 
 Authentication and per-user limits close anonymous paid API abuse, but creating many legitimate accounts can still incur cost. Configure provider project spending alerts, Supabase signup protections, and product quotas appropriate to expected usage. A durable shared rate/quota store is required before multiple Python workers/instances. These are deployment/product decisions, not implemented billing or entitlement systems.
 
-The current browser speech recognizer is device/provider dependent, and text still completes before one TTS utterance starts. Streaming STT/automatic turn detection and sentence-level/realtime speech are future architecture work. Browser `playing` is not a physical speaker measurement. Real mobile hardware and production provider latency were not certified by local fixture tests.
+Live voice uses `gpt-realtime-2.1-mini` over WebRTC with automatic turn detection and interruption. Typed tutoring uses `gpt-6-luna`; read-aloud WAV generation uses Realtime. Browser `playing` is not a physical speaker measurement. Real mobile hardware and production latency are separate deployment checks. See the current voice rollout notes in `speakwise-learning-operations.md`.
 
 Supabase hosted Auth/SMTP/Google, actual RLS deployment, real paid AI calls, real YouTube availability, and Render startup must be validated after service configuration. The SQL suite uses real PostgreSQL/WASM with modeled Supabase roles; it does not replace a full local Supabase stack or hosted two-user test.
 

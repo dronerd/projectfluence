@@ -1,5 +1,8 @@
 """Offline integration tests. All authentication and provider traffic is mocked."""
 import asyncio
+import base64
+import io
+import wave
 from contextlib import asynccontextmanager
 import os
 from pathlib import Path
@@ -15,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import main
 import security
 from contracts import VoiceRequest
+import realtime
 
 
 class TextStream:
@@ -63,7 +67,7 @@ class ApiTests(unittest.IsolatedAsyncioTestCase):
         self.env.stop()
 
     async def test_all_paid_routes_require_auth(self):
-        for route in ['chat', 'voice', 'feedback', 'improved-version', 'lesson-summary']:
+        for route in ['chat', 'voice', 'feedback', 'improved-version', 'lesson-summary', 'realtime/calls']:
             response = await self.client.post('/api/' + route, json={})
             self.assertEqual(response.status_code, 401, route)
             self.assertIn('error', response.json())
@@ -135,38 +139,111 @@ class ApiTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(response.headers['retry-after'], '60')
         self.create.assert_not_called()
 
-    async def test_voice_first_chunk_precedes_completion_and_disconnect_closes(self):
-        state = {'closed': False, 'tail': False}
-        async def chunks(chunk_size):
-            yield b'first-mp3-chunk'
-            state['tail'] = True
-            yield b'last-mp3-chunk'
+    def mock_realtime(self, status='completed', fail=False):
+        state = {'closed': False}
+        update, create = AsyncMock(), AsyncMock()
+        class Connection:
+            session = SimpleNamespace(update=update)
+            response = SimpleNamespace(create=create)
+            def __aiter__(self):
+                return self.events()
+            async def events(self):
+                yield SimpleNamespace(type='response.output_audio.delta', delta=base64.b64encode(b'\x00\x00' * 240).decode())
+                yield SimpleNamespace(type='response.done', response=SimpleNamespace(status=status))
         @asynccontextmanager
-        async def speech_context(**kwargs):
+        async def connect(**kwargs):
+            state['model'] = kwargs['model']
             try:
-                yield SimpleNamespace(iter_bytes=chunks)
+                if fail:
+                    raise TimeoutError('PRIVATE')
+                yield Connection()
             finally:
                 state['closed'] = True
-        self.ai.audio = SimpleNamespace(speech=SimpleNamespace(with_streaming_response=SimpleNamespace(create=speech_context)))
-        request = Request({'type': 'http', 'headers': []})
-        request.state.request_id = 'fixture-request'
-        response = await main.voice(VoiceRequest(text='Hello'), request)
-        self.assertFalse(state['tail'])
-        self.assertEqual(await anext(response.body_iterator), b'first-mp3-chunk')
-        self.assertFalse(state['tail'])
-        await response.body_iterator.aclose()
+        self.ai.realtime = SimpleNamespace(connect=connect)
+        return state, update, create
+
+    async def test_realtime_read_aloud_returns_replayable_wav_and_closes(self):
+        state, update, create = self.mock_realtime()
+        response = await self.client.post('/api/voice', headers=self.headers, json={'text': 'Hello', 'voice': 'marin'})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.headers['content-type'], 'audio/wav')
+        with wave.open(io.BytesIO(response.content)) as audio:
+            self.assertEqual((audio.getframerate(), audio.getnchannels(), audio.getsampwidth()), (24000, 1, 2))
+            self.assertEqual(audio.getnframes(), 240)
+        self.assertEqual(state['model'], 'gpt-realtime-2.1-mini')
+        self.assertEqual(update.call_args.kwargs['session']['audio']['output']['voice'], 'marin')
+        self.assertEqual(create.call_args.kwargs['response']['conversation'], 'none')
         self.assertTrue(state['closed'])
 
-    async def test_voice_initial_failure_returns_json_error(self):
-        @asynccontextmanager
-        async def failed(**kwargs):
-            raise TimeoutError('PRIVATE')
-            yield
-        self.ai.audio = SimpleNamespace(speech=SimpleNamespace(with_streaming_response=SimpleNamespace(create=failed)))
-        response = await self.client.post('/api/voice', headers=self.headers, json={'text': 'hello'})
-        self.assertEqual(response.status_code, 504)
-        self.assertNotIn('PRIVATE', response.text)
-        self.assertEqual(security.budget.active, {})
+    async def test_realtime_audio_incomplete_or_failed_never_returns_success(self):
+        for status, fail, expected in [('incomplete', False, 502), ('completed', True, 504)]:
+            state, _, _ = self.mock_realtime(status, fail)
+            response = await self.client.post('/api/voice', headers=self.headers, json={'text': 'hello'})
+            self.assertEqual(response.status_code, expected)
+            self.assertNotIn('PRIVATE', response.text)
+            self.assertTrue(state['closed'])
+            self.assertEqual(security.budget.active, {})
+
+    async def test_luna_preserves_text_and_json_contract_with_no_reasoning(self):
+        await main.complete([{'role': 'user', 'content': 'hello'}], 850, response_format={'type': 'json_object'})
+        args = self.create.call_args.kwargs
+        self.assertEqual(args['model'], 'gpt-6-luna')
+        self.assertEqual(args['reasoning_effort'], 'none')
+        self.assertEqual(args['max_completion_tokens'], 850)
+        self.assertNotIn('max_tokens', args)
+        self.assertEqual(args['response_format'], {'type': 'json_object'})
+
+    async def test_realtime_signaling_uses_owned_lesson_and_server_credentials(self):
+        session = {'level': 'B1', 'lesson_mode': 'speaking_practice', 'status': 'active', 'planned_duration_minutes': 5}
+        store = SimpleNamespace(own=AsyncMock(return_value=session), call=AsyncMock(return_value=[]))
+        provider = AsyncMock(return_value=httpx.Response(201, text='v=0 fixture answer', headers={'Location': '/v1/realtime/calls/rtc_fixture'}))
+        try:
+            with patch('realtime.Store', return_value=store), patch('realtime.learner_context', AsyncMock(return_value={})), patch('realtime.provider_request', provider):
+                response = await self.client.post('/api/realtime/calls', headers=self.headers, json={
+                    'sessionId': '00000000-0000-4000-8000-000000000001', 'sdp': 'v=0 fixture offer', 'voice': 'cedar'})
+                self.assertEqual(response.status_code, 200, response.text)
+                self.assertEqual(response.json(), {'sdp': 'v=0 fixture answer', 'callId': 'rtc_fixture', 'expiresIn': 300})
+                import json
+                config = json.loads(provider.call_args.kwargs['files']['session'][1])
+                self.assertEqual(config['model'], 'gpt-realtime-2.1-mini')
+                self.assertTrue(config['audio']['input']['turn_detection']['interrupt_response'])
+                self.assertEqual(config['audio']['input']['transcription']['model'], 'gpt-transcribe')
+                self.assertNotIn('api_key', response.text)
+                store.own.assert_awaited_once()
+                duplicate = await self.client.post('/api/realtime/calls', headers=self.headers, json={
+                    'sessionId': '00000000-0000-4000-8000-000000000001', 'sdp': 'v=0 fixture offer'})
+                self.assertEqual(duplicate.status_code, 200, 'Reconnect replaces the caller’s stale call')
+                self.assertEqual(len(realtime.calls), 1)
+                ended = await self.client.delete('/api/realtime/calls/rtc_fixture', headers=self.headers)
+                self.assertEqual(ended.status_code, 200)
+                self.assertFalse(realtime.calls)
+        finally:
+            for _, task in realtime.calls.values(): task.cancel()
+            realtime.calls.clear()
+
+    async def test_realtime_denies_other_owners_and_sanitizes_provider_failure(self):
+        from fastapi import HTTPException
+        store = SimpleNamespace(own=AsyncMock(side_effect=HTTPException(404, 'Unavailable')))
+        payload = {'sessionId': '00000000-0000-4000-8000-000000000001', 'sdp': 'v=0 fixture offer'}
+        with patch('realtime.Store', return_value=store), patch('realtime.provider_request', AsyncMock()) as provider:
+            response = await self.client.post('/api/realtime/calls', headers=self.headers, json=payload)
+            self.assertEqual(response.status_code, 404)
+            provider.assert_not_called()
+        store.own = AsyncMock(return_value={'status': 'active'})
+        store.call = AsyncMock(return_value=[])
+        with patch('realtime.Store', return_value=store), patch('realtime.learner_context', AsyncMock(return_value={})), patch('realtime.provider_request', AsyncMock(side_effect=TimeoutError('PRIVATE'))):
+            response = await self.client.post('/api/realtime/calls', headers=self.headers, json=payload)
+            self.assertEqual(response.status_code, 504)
+            self.assertNotIn('PRIVATE', response.text)
+            self.assertFalse(realtime.starting)
+
+    async def test_realtime_hangup_is_idempotent_after_provider_disconnect(self):
+        request = httpx.Request('POST', 'https://provider.test/realtime/calls/rtc_gone/hangup')
+        for status in (404, 410):
+            response = httpx.Response(status, request=request)
+            error = httpx.HTTPStatusError('Call already ended', request=request, response=response)
+            with patch('realtime.provider_request', AsyncMock(side_effect=error)):
+                await realtime.close_call('rtc_gone')
 
     async def test_cors_allows_auth_header_only_for_allowed_origin(self):
         response = await self.client.options('/api/chat', headers={'Origin': 'http://localhost:3000',

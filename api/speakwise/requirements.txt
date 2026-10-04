@@ -1,7 +1,7 @@
 -c constraints.txt
 fastapi==0.136.1
 uvicorn[standard]==0.46.0
-openai==2.33.0
+openai[realtime]==2.33.0
 python-dotenv==1.2.2
 httpx==0.28.1
 pypdf==6.19.0

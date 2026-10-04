@@ -34,6 +34,16 @@ test("autoplay rejection provides an explicit manual-play recovery", async () =>
   URL.revokeObjectURL(objectUrl);
 });
 
+test("Realtime WAV keeps its content type for native playback and replay", async () => {
+  const { audio, plays } = fakeAudio();
+  let objectUrl = "";
+  const response = new Response(new Uint8Array([82, 73, 70, 70]), { headers: { "content-type": "audio/wav" } });
+  await playVoiceResponse(response, audio, new AbortController().signal, url => { objectUrl = url; }, () => assert.fail("not blocked"), () => {});
+  assert.equal((await fetch(objectUrl)).headers.get("content-type"), "audio/wav");
+  assert.equal(plays(), 1);
+  URL.revokeObjectURL(objectUrl);
+});
+
 test("canceling a pending stream releases its reader and prevents playback", async () => {
   const { audio, plays } = fakeAudio();
   const controller = new AbortController();

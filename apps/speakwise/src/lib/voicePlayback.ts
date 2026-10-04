@@ -1,4 +1,4 @@
-/** Progressive MP3 playback where supported; one download with a Blob fallback.
+/** Progressive MP3 playback where supported; WAV/other audio uses a Blob.
  * No sentence splitting: the provider generates one continuous utterance.
  */
 export async function playVoiceResponse(
@@ -14,6 +14,7 @@ export async function playVoiceResponse(
   let playAttempt = 0;
   let fatalError: Error | null = null;
   const reader = response.body?.getReader();
+  const contentType = response.headers.get("content-type")?.split(";")[0] || "audio/mpeg";
   if (!reader) throw new Error("The audio response has no body.");
   function beginPlayback() {
     if (playStarted || signal.aborted) return;
@@ -43,7 +44,7 @@ export async function playVoiceResponse(
     }
   };
   audio.addEventListener("error", mediaError);
-  if (typeof MediaSource !== "undefined" && MediaSource.isTypeSupported("audio/mpeg") && response.body) {
+  if (contentType === "audio/mpeg" && typeof MediaSource !== "undefined" && MediaSource.isTypeSupported("audio/mpeg") && response.body) {
     try {
       source = new MediaSource();
       const opened = waitForEvent(source, "sourceopen", signal, undefined, audio);
@@ -96,7 +97,7 @@ export async function playVoiceResponse(
     if (!size) throw new Error("The audio response is empty.");
     if (source?.readyState === "open") source.endOfStream();
     if (!buffer || blocked) {
-      const url = URL.createObjectURL(new Blob(chunks, { type: "audio/mpeg" }));
+      const url = URL.createObjectURL(new Blob(chunks, { type: contentType }));
       setUrl(url);
       audio.src = url;
       if (!blocked) beginPlayback();

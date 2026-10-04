@@ -18,7 +18,7 @@ No vector database, agent framework, new paid service, OCR service, object-stora
 
 1. Use Node **22.18–22.x**, the committed lockfile (`npm ci`), and Python **3.13**. Install Python with `api/speakwise/.venv/bin/python -m pip install -r api/speakwise/requirements.txt`. The existing constraints file pins pypdf 6.19.0.
 2. Review the five root migrations in filename order. The new migration is [`20261001000100_speakwise_learning.sql`](../supabase/migrations/20261001000100_speakwise_learning.sql). Take an existing-project backup and verify on staging before an authorized hosted application. The [data runbook](speakwise-learning-data.md) gives dry-run, apply, ownership checks, compatibility, and recovery instructions. Do not run app-local schema snapshots or a hosted reset.
-3. Use the same Supabase project in all three runtimes. Next build/browser: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_SPEAKWISE_API_URL` (Render origin), and the existing `NEXT_PUBLIC_SITE_URL`. Next server: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`. Python: `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `OPENAI_API_KEY`, exact `SPEAKWISE_CORS_ORIGINS`; optional existing `OPENAI_CHAT_MODEL` / TTS settings. Never put the service credential in Python or a public variable. Rebuild Next when public values change.
+3. Use the same Supabase project in all three runtimes. Next build/browser: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_SPEAKWISE_API_URL` (Render origin), and the existing `NEXT_PUBLIC_SITE_URL`. Next server: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`. Python: `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `OPENAI_API_KEY`, exact `SPEAKWISE_CORS_ORIGINS`; optional `OPENAI_CHAT_MODEL`, `OPENAI_REALTIME_MODEL`, and `OPENAI_TRANSCRIBE_MODEL` settings. Never put the service credential in Python or a public variable. Rebuild Next when public values change.
 4. Keep `.vercelignore` excluding `/api/speakwise/` while including `app/api/`. `next.config.ts` includes the canonical vocabulary JSON in traced SpeakWise/review functions. Python retains one worker/instance while bounds are process-local. Do not move PDF extraction into Vercel functions or deploy the full alternative Render Blueprint.
 5. After the schema is ready, deploy reviewed Python and Next revisions to staging. Keep production promotion separate. Do not expose the new UI against the old schema: missing tables/RPCs produce honest failures but cannot save a lesson.
 6. Review/import text content into `vidmatch_text_content` with stable URLs, type, extracted body, source, language, and level using the existing server/admin boundary. **The migration deliberately contains no article seeds.** This task does not install a crawler or grant the model arbitrary URL fetching/catalog writes. Existing reviewed video catalog entries remain available; transcript metadata alone is not a usable transcript.
@@ -116,3 +116,67 @@ Warm microbenchmarks: catalog SQL median 0.489 ms, p95 1.390 ms over 100 calls; 
 ## Remaining live acceptance
 
 Use a staging project and two ordinary test accounts after authorization/configuration. Verify actual PostgREST composite/JSON responses and RLS, simultaneous completion/reset/attempt writes, signup/refresh-token recovery, real multi-page and scanned PDFs under Render limits, source-injection attempts against the selected model, level/language/script fidelity, and provider failure/retry behavior. Populate reviewed articles and usable transcripts before claiming broad text/video content coverage. Test audio/recognition/autoplay and embedded/source playback on physical iPhone/iPad/Android and supported Safari/Chrome/Edge. The reduced viewport test emulates available keyboard space; it is not a physical virtual-keyboard or microphone test. Measure conversational and first-audible p50/p95 with stated sample sizes on that staging topology before claiming latency improvement.
+
+
+## Realtime voice migration (2026-10-04)
+
+On Render set `OPENAI_CHAT_MODEL=gpt-6-luna`, `OPENAI_REALTIME_MODEL=gpt-realtime-2.1-mini`,
+and `OPENAI_TRANSCRIBE_MODEL=gpt-transcribe`. Remove the retired `OPENAI_TTS_MODEL` setting.
+Existing environment overrides win over code defaults, so update any old chat model value too.
+Install the updated Python requirements and deploy the Python and frontend changes together.
+The same server-only `OPENAI_API_KEY` and Supabase configuration are used; no new database
+migration or public OpenAI key is needed. Keep the single worker/instance deployment.
+
+The learner starts a lesson and selects **音声で会話する** to grant microphone access.
+Speech is sent directly to OpenAI over WebRTC; voice activity detection ends turns and
+allows interruption. Mute pauses microphone transmission. Typed messages can join the
+voice conversation while the AI is listening. **音声会話を終了** releases the microphone
+and returns to typed Luna tutoring. Read-aloud buttons still work without a microphone,
+using Realtime-generated WAV audio with replay controls. Unsupported saved voices fall
+back to Alloy; the voice picker now lists Realtime-compatible voices.
+
+The authenticated Python signaling endpoint retrieves the owned lesson, recent messages,
+and learner memory. It keeps credentials on the server. Voice connections have one active
+call per learner, a global limit of 24, and a deadline of the remaining lesson time or
+20 minutes (whichever is shorter). These are process-local controls. Microphone tracks
+and peer connections close on stop, errors, identity change and navigation. The server
+also ends registered calls at their deadline and during graceful shutdown. Reconnecting
+replaces only the caller’s previous connection, including stale registrations after a tab closes.
+
+Final transcripts are saved through the existing lesson-state API, marked with speech or
+typed input. Out-of-order transcription events wait for earlier turns before persistence;
+failed saves keep the message for retry. Unfinished microphone transcription at disconnect
+is discarded with an explicit notice. Transcripts are approximate evidence, not acoustic
+or pronunciation scores. A generated assistant transcript may include speech interrupted
+before playback finished. Voice mode has no source-retrieval or learning-action tools;
+PDF questions and saved learning activities continue through the existing typed/material
+controls. No source-reading or completed-action claims are made by the voice prompt.
+
+Validation commands (with the isolated fixture stack above):
+
+```sh
+npm run test:backend
+npm run test:speakwise-api
+node scripts/validate-speakwise-browser.mjs
+node scripts/validate-speakwise-realtime.mjs
+```
+
+The new browser suite simulates provider WebRTC events while using real local Next/Python
+services and ephemeral SQL for transcript saves. It covers mute, typed turns in voice mode,
+late and duplicate transcription, failed-save retry, reconnect, microphone denial, reload,
+lesson completion, responsive geometry and accessibility. It does not certify physical
+microphones, Safari/iPhone or production deployment.
+
+Official API references: [Luna](https://developers.openai.com/api/docs/models/gpt-6-luna),
+[Realtime Mini](https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini),
+[WebRTC](https://developers.openai.com/api/docs/guides/realtime-webrtc).
+
+Verification on 2026-10-04: Node 22 production build, TypeScript and ESLint passed;
+106 Node backend tests and 35 Python API tests passed. The existing browser suite
+passed 14 workflow checks across 11 viewports, and the voice suite passed its six
+scenario groups with no Axe findings. Live calls with the configured OpenAI project
+also succeeded for Luna text, Realtime WAV read-aloud, a typed WebRTC turn, and a
+speech-to-speech WebRTC turn using generated sample audio with trailing silence.
+The live speech check observed speech-started/stopped, input transcription completion,
+assistant transcript completion and a remote audio track. Physical microphone hardware,
+Safari/iPhone behavior and production deployment remain unverified.

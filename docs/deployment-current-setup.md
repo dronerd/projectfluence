@@ -88,9 +88,10 @@ For the primary topology, “Next” below means **Vercel Project → Settings �
 | `SUPABASE_URL` | Same Supabase project URL | Next server **and** Render SpeakWise environment; private local catalog operator environment | No | REST queries and access-token validation |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase Settings → API Keys: dedicated secret key or legacy service-role key | Next server and private local catalog operator environment; **not** Python/browser | **Yes** | Privileged RPCs after verified user ownership; catalog maintenance |
 | `SUPABASE_ANON_KEY` | Same publishable/anon key used above | Render SpeakWise required; Next optional because its public key is a fallback | No | Verify users through Supabase Auth without elevated access |
-| `OPENAI_API_KEY` | OpenAI project's API Keys | Render SpeakWise only | **Yes** | Chat/feedback/summary and TTS requests |
-| `OPENAI_CHAT_MODEL` | Model available to the OpenAI project | Render SpeakWise; default `gpt-4o-mini` | No | Text generation model |
-| `OPENAI_TTS_MODEL` | Speech model available to the OpenAI project | Render SpeakWise; default `gpt-4o-mini-tts` | No | Voice generation model |
+| `OPENAI_API_KEY` | OpenAI project's API Keys | Render SpeakWise only | **Yes** | Chat/feedback/summary and Realtime requests |
+| `OPENAI_CHAT_MODEL` | Model available to the OpenAI project | Render SpeakWise; default `gpt-6-luna` | No | Text generation model |
+| `OPENAI_REALTIME_MODEL` | Speech model available to the OpenAI project | Render SpeakWise; default `gpt-realtime-2.1-mini` | No | Realtime conversation and read-aloud model |
+| `OPENAI_TRANSCRIBE_MODEL` | Realtime input transcription model | Python server; default `gpt-transcribe` | No | Captions for spoken learner turns |
 | `SPEAKWISE_CORS_ORIGINS` | Exact production Next/custom-domain origin(s) | Render SpeakWise | No | Comma-separated permitted browser origins; no paths, trailing slashes, or `*` |
 | `YOUTUBE_API_KEY` | Google Cloud project with YouTube Data API v3 enabled | Next server and private local catalog operator environment | **Yes** | Official metadata, discovery and availability rechecks; restrict key to this API |
 | `CRON_SECRET` | Password manager generated random secret, at least 32 characters | Next server; same value on Render cron **only if using step 10** | **Yes** | Authorize the scheduled maintenance route |
@@ -260,7 +261,7 @@ Use test accounts and record the deployed SHA, hosts, migration versions, catalo
 - [ ] Private learning routes reject a missing/expired bearer token. Two different test users cannot read or modify one another's progress/settings/history through direct requests.
 - [ ] Complete a VocabStream meaning/sentence lesson; reload and see the same saved result. Image cards, review images and their attribution load. Existing idiom archive progress retains its identity.
 - [ ] Start SpeakWise signed in; allow microphone access on HTTPS, recognize speech where the browser supports it, send a turn, see the response and hear AI speech. Test typed-input fallback, denied microphone permission, manual audio playback if autoplay is blocked, cancellation/new turns and saving the lesson summary.
-- [ ] Inspect SpeakWise timing logs for LLM first token/total and TTS first byte/playback; confirm no CORS errors or request bodies/tokens/API keys in logs.
+- [ ] Inspect SpeakWise timing logs for LLM first token/total and read-aloud playback; confirm no CORS errors or request bodies/tokens/API keys in logs.
 - [ ] Load VidMatch A1–C2 and topic filters; paginate beyond the first page with no duplicate/missing items. Verify the expanded catalog's expected eligible entries, thumbnail fallback and clear empty/error state.
 - [ ] Open several VidMatch videos on current iPhone Safari, an iPad, Android Chrome, desktop Safari/Chrome/Edge; verify YouTube opens and plays. The app does not host its own video file or Supabase signed URL, so bucket/CORS/codec changes are not fixes for a YouTube availability restriction.
 - [ ] Open a video signed in; verify history and analytics survive reload. Confirm no video rows/history were deleted during migration/import.
