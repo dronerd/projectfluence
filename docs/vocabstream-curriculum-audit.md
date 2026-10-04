@@ -2,6 +2,8 @@
 
 This document records the initial implementation at commit `3b5cc04`. For subsequent lesson numbering, content expansion and current validation, see [the expansion report](vocabstream-expansion.md).
 
+Current behavior (October 2026): all 6,999 entries produce a scored English example sentence with one blank and English answer choices. The historical counts and policy below describe the initial implementation. Automatically generated gaps have structurally checked choices, but no claim of unique semantic correctness; the existing Japanese word meaning appears as a hint. The ambiguity audit can export these with `--include-generated`.
+
 ## Scope and architecture
 
 This update extends `codex/vidmatch-curated-catalog`. It does not merge into main, apply hosted migrations, or modify live learner records. It is safe to prepare before deployment; the existing branch's Supabase setup is still required for authenticated progress.

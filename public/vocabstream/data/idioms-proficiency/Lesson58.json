@@ -20,6 +20,7 @@
       "meaning": "to identify the earlier origin or cause of something",
       "japaneseMeaning": "起源や原因を～までさかのぼって突き止める",
       "example": "We can trace the error back to an incorrect entry in the first report.",
+      "exampleGap": { "prompt": "We can ____ an incorrect entry in the first report.", "answer": "trace the error back to" },
       "definitionType": "text",
       "expressionType": "phrasal-verb",
       "meaningDistractors": [

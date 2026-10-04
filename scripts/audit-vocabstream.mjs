@@ -54,6 +54,12 @@ for (const category of (await readdir(dataRoot, { withFileTypes: true })).filter
           validateDistractors(practice.distractors, "sentencePractice");
         }
       }
+      if (word.exampleGap !== undefined) {
+        const gap = word.exampleGap;
+        if (!gap || typeof gap !== "object" || !isText(gap.prompt) || !isText(gap.answer) || !/[A-Za-z]/.test(gap.answer) || (gap.prompt.match(/_+/g) || []).join(",") !== "____" || gap.answer.length > 200 || gap.prompt.replace("____", gap.answer) !== word.example) {
+          issue(location, "exampleGap requires exactly one ____ blank and an English answer that reconstructs the study example.");
+        }
+      }
       if (word.meaningDistractors !== undefined) validateDistractors(word.meaningDistractors, "meaningDistractors");
       if (word.image) {
         const image = word.image;

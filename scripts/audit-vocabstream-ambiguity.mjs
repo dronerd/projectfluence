@@ -3,17 +3,27 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { normalizeWord, sentenceChoices } from "../apps/vocabstream/src/lib/questionPolicy.ts";
+import { exampleGapChoices, normalizeWord, sentenceChoices } from "../apps/vocabstream/src/lib/questionPolicy.ts";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../public/vocabstream/data");
-const reviewed = [], studyOnly = [], errors = [];
+const reviewed = [], generated = [], errors = [];
 for (const category of (await readdir(root)).sort()) {
   for (const filename of (await readdir(path.join(root, category))).filter(name => /^Lesson\d+\.json$/.test(name)).sort()) {
     const lesson = JSON.parse(await readFile(path.join(root, category, filename), "utf8"));
     for (const word of lesson.words) {
       const location = `${category}/${filename}:${word.word}`;
       if (!word.sentencePractice) {
-        if (word.example) studyOnly.push({ location, example: word.example, reason: "No reviewed option set; never scored as a sentence gap." });
+        const gap = exampleGapChoices(word, lesson.words);
+        if (!gap) {
+          errors.push({ location, reason: "No usable example sentence gap or distinct option set." });
+          continue;
+        }
+        generated.push({
+          location, prompt: gap.prompt, correctAnswer: gap.answer,
+          substitutions: gap.choices.map(answer => ({ answer, sentence: gap.prompt.replace("____", answer), intended: answer === gap.answer })),
+          reason: "Automatically generated; context and alternative answers need editorial review.",
+          unique_answer: null,
+        });
         continue;
       }
       const practice = word.sentencePractice;
@@ -36,11 +46,11 @@ for (const category of (await readdir(root)).sort()) {
     }
   }
 }
-const report = { reviewedItems: reviewed.length, studyOnlyItems: studyOnly.length, errors, reviewed, ...(process.argv.includes("--include-study") ? { studyOnly } : {}) };
+const report = { reviewedItems: reviewed.length, generatedItems: generated.length, errors, reviewed, ...(process.argv.includes("--include-generated") ? { generated } : {}) };
 const outputIndex = process.argv.indexOf("--output");
 if (outputIndex >= 0) {
   if (!process.argv[outputIndex + 1]) throw new Error("--output requires a file path");
   await writeFile(process.argv[outputIndex + 1], JSON.stringify(report, null, 2) + "\n");
 }
-console.log(JSON.stringify({ reviewedItems: reviewed.length, studyOnlyItems: studyOnly.length, errors, semanticCertification: false }, null, 2));
+console.log(JSON.stringify({ reviewedItems: reviewed.length, generatedItems: generated.length, errors, semanticCertification: false }, null, 2));
 if (errors.length) process.exitCode = 1;

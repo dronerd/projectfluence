@@ -70,18 +70,61 @@ export function sentenceChoices(word:LessonWord):{prompt:string;choices:string[]
   return {prompt:practice.prompt,choices:shuffle([word.word,...practice.distractors])};
 }
 
-/** An example and its known Japanese sense can be used without inventing a gap sentence. */
-export function exampleMeaningChoices(word:LessonWord,catalog:readonly LessonWord[]):string[] {
-  if(!bounded(word.example,1500)||!bounded(word.japaneseMeaning,200))return [];
-  const target=normalizeWord(word.japaneseMeaning);
-  const pool=shuffle(catalog.filter(item=>item!==word && bounded(item.japaneseMeaning,200)
-    && normalizeWord(item.japaneseMeaning)!==target && !conflictingMeaning(word,item)));
-  const choices=[...new Map(pool.map(item=>[normalizeWord(item.japaneseMeaning!),item.japaneseMeaning!])).values()].slice(0,2);
-  return choices.length===2?shuffle([word.japaneseMeaning,...choices]):[];
+const irregularFirstWords:Record<string,string[]>={
+  go:["went","gone"],pay:["paid"],fall:["fell","fallen"],come:["came"],overcome:["overcame"],bring:["brought"],throw:["threw","thrown"],
+  run:["ran"],take:["took","taken"],get:["got","gotten"],buy:["bought"],sell:["sold"],make:["made"],
+  do:["did","done"],be:["was","were","been"],have:["had"],keep:["kept"],sweep:["swept"],show:["shown"],
+  learn:["learnt","learned"],write:["wrote","written"],speak:["spoke","spoken"],eat:["ate","eaten"],
+  drink:["drank","drunk"],choose:["chose","chosen"],find:["found"],build:["built"],lead:["led"],
+  leave:["left"],grow:["grew","grown"],know:["knew","known"],think:["thought"],fight:["fought"],
+  teach:["taught"],catch:["caught"],seek:["sought"],lie:["lay","lain"],rise:["rose","risen"],
+};
+
+/** Returns the original example with the actual spoken or written form removed. */
+export function exampleGap(word:LessonWord):{prompt:string;answer:string}|undefined {
+  if(!bounded(word.example,1500))return undefined;
+  const override=word.exampleGap;
+  if(override) {
+    if(!bounded(override.prompt,1500)||!bounded(override.answer,200)||!/[A-Za-z]/.test(override.answer)
+      ||override.prompt.match(/_+/g)?.length!==1||!override.prompt.includes("____")
+      ||override.prompt.replace("____",override.answer)!==word.example)return undefined;
+    return override;
+  }
+  if(!bounded(word.word,200))return undefined;
+  const first=word.word.split(" ")[0],rest=word.word.slice(first.length);
+  const variants=[word.word,...(word.forms??"").split(",").map(value=>value.trim()),first+"s",first+"es",first+"ed",first+"ing"];
+  if(first.endsWith("e"))variants.push(first.slice(0,-1)+"ing",first+"d");
+  if(first.endsWith("y"))variants.push(first.slice(0,-1)+"ies",first.slice(0,-1)+"ied");
+  if(first.length>2 && /[^aeiou][aeiou][^aeiouwxy]$/i.test(first)) {
+    variants.push(first+first.at(-1)+"ed",first+first.at(-1)+"ing");
+  }
+  variants.push(...(irregularFirstWords[first.toLowerCase()]??[]));
+  const candidates=[word.word,...variants.slice(1).map(value=>value.includes(" ")?value:value+rest)].filter(Boolean);
+  for(const candidate of new Set(candidates)) {
+    const escaped=candidate.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+    const match=new RegExp(`(^|[^\\p{L}\\p{N}])(${escaped})(?=$|[^\\p{L}\\p{N}])`,"iu").exec(word.example);
+    if(!match)continue;
+    const start=match.index+match[1].length,answer=match[2];
+    return {prompt:word.example.slice(0,start)+"____"+word.example.slice(start+answer.length),answer};
+  }
+  return undefined;
+}
+
+export function exampleGapChoices(word:LessonWord,catalog:readonly LessonWord[]):{prompt:string;answer:string;choices:string[]}|undefined {
+  const gap=exampleGap(word);
+  if(!gap)return undefined;
+  const labels=meaningChoices(word,catalog).filter(choice=>normalizeWord(choice)!==normalizeWord(word.word));
+  const distractors=labels.map(label=>{
+    const other=catalog.find(item=>normalizeWord(item.word)===normalizeWord(label));
+    return normalizeWord(gap.answer)===normalizeWord(word.word)?label:(other&&exampleGap(other)?.answer)||label;
+  });
+  const unique=[...new Map(distractors.filter(choice=>normalizeWord(choice)!==normalizeWord(gap.answer)).map(choice=>[normalizeWord(choice),choice])).values()];
+  if(unique.length<2)return undefined;
+  return {...gap,choices:shuffle([gap.answer,...unique.slice(0,2)])};
 }
 
 export function hasExampleQuestion(word:LessonWord,catalog:readonly LessonWord[]):boolean {
-  return Boolean(sentenceChoices(word)||exampleMeaningChoices(word,catalog).length);
+  return Boolean(sentenceChoices(word)||exampleGapChoices(word,catalog));
 }
 
 export function buildWordQuestions(word:LessonWord,catalog:readonly LessonWord[],source:QuestionSource,idSuffix=normalizeWord(word.word)):LearningQuestion[] {
@@ -96,8 +139,8 @@ export function buildWordQuestions(word:LessonWord,catalog:readonly LessonWord[]
   const sentence=sentenceChoices(word);
   if(sentence)result.push({...common,id:`quiz-${idSuffix}`,questionType:"quiz",prompt:sentence.prompt,promptMode:"sentence",choices:sentence.choices,answerIndex:sentence.choices.indexOf(word.word)});
   else {
-    const meanings=exampleMeaningChoices(word,catalog);
-    if(meanings.length)result.push({...common,id:`quiz-${idSuffix}`,questionType:"quiz",prompt:word.example!,promptMode:"example",choices:meanings,correctAnswer:word.japaneseMeaning!,answerIndex:meanings.indexOf(word.japaneseMeaning!)});
+    const gap=exampleGapChoices(word,catalog);
+    if(gap)result.push({...common,id:`quiz-${idSuffix}`,questionType:"quiz",prompt:gap.prompt,promptMode:"sentence",choices:gap.choices,correctAnswer:gap.answer,answerIndex:gap.choices.indexOf(gap.answer),showMeaningHint:Boolean(word.japaneseMeaning)});
   }
   return result;
 }
