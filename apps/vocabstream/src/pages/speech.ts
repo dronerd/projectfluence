@@ -25,36 +25,65 @@ export function setEnglishVoiceByName(name: string) { preferredVoice = available
 export function getEnglishVoices(): SpeechSynthesisVoice[] { return availableVoices().filter((voice) => voice.lang.startsWith("en")); }
 
 let feedbackContext: AudioContext | null = null;
-/** A brief answer cue, started only by the learner's answer click. */
+let feedbackOutput: GainNode | null = null;
+const answerCues = {
+  // A clear, rising three-note chime rewards a correct choice without delaying the next question.
+  correct: [
+    { frequency: 523.25, delay: 0, duration: .18, volume: .09 },
+    { frequency: 659.25, delay: .1, duration: .19, volume: .095 },
+    { frequency: 783.99, delay: .21, duration: .26, volume: .105 },
+  ],
+  // A gentle downward pair signals a mistake without sounding like an alarm.
+  incorrect: [
+    { frequency: 392, delay: 0, duration: .16, volume: .08 },
+    { frequency: 329.63, delay: .12, duration: .2, volume: .075 },
+  ],
+} as const;
+
+/** Play one answer cue directly from the learner's answer click. */
 export function playAnswerSound(correct: boolean) {
   if (typeof window === "undefined") return;
   const Audio = window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
   if (!Audio) return;
   try {
-    feedbackContext ??= new Audio();
+    if (!feedbackContext || feedbackContext.state === "closed") {
+      feedbackContext = new Audio();
+      feedbackOutput = null;
+    }
     const context = feedbackContext;
-    const play = () => {
-      const start = context.currentTime;
-      // A short ascending major arpeggio makes a correct answer feel rewarding.
-      const notes = correct
-        ? [{ frequency: 523.25, delay: 0, length: .22, volume: .045 }, { frequency: 659.25, delay: .09, length: .22, volume: .045 }, { frequency: 783.99, delay: .18, length: .23, volume: .05 }, { frequency: 1046.5, delay: .29, length: .3, volume: .055 }]
-        : [{ frequency: 440, delay: 0, length: .16, volume: .025 }];
-      notes.forEach(({ frequency, delay, length, volume }) => {
-        const noteStart = start + delay;
-        const gain = context.createGain();
-        gain.gain.setValueAtTime(.001, noteStart);
-        gain.gain.exponentialRampToValueAtTime(volume, noteStart + .015);
-        gain.gain.exponentialRampToValueAtTime(.001, noteStart + length);
-        gain.connect(context.destination);
-        const oscillator = context.createOscillator();
-        oscillator.type = "sine";
-        oscillator.frequency.value = frequency;
-        oscillator.connect(gain);
-        oscillator.start(noteStart);
-        oscillator.stop(noteStart + length);
-      });
-    };
-    if (context.state === "suspended") void context.resume().then(play).catch(() => undefined);
-    else play();
+    // Schedule within the click handler; waiting for resume() can lose the mobile gesture.
+    if (context.state !== "running") void context.resume().catch(() => undefined);
+    const start = context.currentTime + .008;
+    if (feedbackOutput) {
+      feedbackOutput.gain.cancelScheduledValues(context.currentTime);
+      feedbackOutput.gain.setTargetAtTime(0, context.currentTime, .008);
+    }
+    const output = context.createGain();
+    output.gain.setValueAtTime(1, start);
+    output.connect(context.destination);
+    feedbackOutput = output;
+    const notes = correct ? answerCues.correct : answerCues.incorrect;
+    notes.forEach(({ frequency, delay, duration, volume }, index) => {
+      const noteStart = start + delay;
+      const gain = context.createGain();
+      gain.gain.setValueAtTime(.001, noteStart);
+      gain.gain.linearRampToValueAtTime(volume, noteStart + .012);
+      gain.gain.exponentialRampToValueAtTime(.001, noteStart + duration);
+      gain.connect(output);
+      const oscillator = context.createOscillator();
+      oscillator.type = "triangle";
+      oscillator.frequency.value = frequency;
+      oscillator.connect(gain);
+      oscillator.onended = () => {
+        oscillator.disconnect();
+        gain.disconnect();
+        if (index === notes.length - 1) {
+          output.disconnect();
+          if (feedbackOutput === output) feedbackOutput = null;
+        }
+      };
+      oscillator.start(noteStart);
+      oscillator.stop(noteStart + duration);
+    });
   } catch { /* Visual feedback remains available when audio is unavailable. */ }
 }
