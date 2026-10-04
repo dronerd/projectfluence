@@ -14,7 +14,6 @@ export type VocabStreamQuestionAttempt = {
   sourceLessonNumber?: number | null;
   definition?: string;
   example?: string;
-  exampleJapanese?: string;
   explanation?: string;
   japaneseMeaning?: string;
   synonyms?: string;

@@ -90,7 +90,7 @@ export function buildWordQuestions(word:LessonWord,catalog:readonly LessonWord[]
   const image=validWordImage(word.image);
   const useImage=word.imageRole!=="supporting" && (word.definitionType==="image"||word.definitionType==="image+text") && image && !image.alt.toLowerCase().includes(word.word.toLowerCase());
   const definition=word.meaning||word.japaneseMeaning||image?.alt||"";
-  const common={word:word.word,correctAnswer:word.word,definition,definitionType:word.definitionType,imageRole:word.imageRole,...(image?{image}:{}),example:word.example,exampleJapanese:word.exampleJapanese,explanation:word.explanation,japaneseMeaning:word.japaneseMeaning,synonyms:word.synonyms,antonyms:word.antonyms,forms:word.forms,usageNote:word.usageNote,expressionType:word.expressionType,sourceCategory:source.category,sourceLessonId:source.lessonId,sourceLessonNumber:source.lessonNumber??null};
+  const common={word:word.word,correctAnswer:word.word,definition,definitionType:word.definitionType,imageRole:word.imageRole,...(image?{image}:{}),example:word.example,explanation:word.explanation,japaneseMeaning:word.japaneseMeaning,synonyms:word.synonyms,antonyms:word.antonyms,forms:word.forms,usageNote:word.usageNote,expressionType:word.expressionType,sourceCategory:source.category,sourceLessonId:source.lessonId,sourceLessonNumber:source.lessonNumber??null};
   const choices=meaningChoices(word,catalog);
   if(definition && choices.length>=2) result.push({...common,id:`meaning-${idSuffix}`,questionType:"meaning",prompt:useImage?"画像に合う英語を選んでください。":definition,promptMode:useImage?"image":"text",...(useImage?{image}:{}),choices,answerIndex:choices.indexOf(word.word)});
   const sentence=sentenceChoices(word);
