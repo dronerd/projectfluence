@@ -70,16 +70,34 @@ export function sentenceChoices(word:LessonWord):{prompt:string;choices:string[]
   return {prompt:practice.prompt,choices:shuffle([word.word,...practice.distractors])};
 }
 
+/** An example and its known Japanese sense can be used without inventing a gap sentence. */
+export function exampleMeaningChoices(word:LessonWord,catalog:readonly LessonWord[]):string[] {
+  if(!bounded(word.example,1500)||!bounded(word.japaneseMeaning,200))return [];
+  const target=normalizeWord(word.japaneseMeaning);
+  const pool=shuffle(catalog.filter(item=>item!==word && bounded(item.japaneseMeaning,200)
+    && normalizeWord(item.japaneseMeaning)!==target && !conflictingMeaning(word,item)));
+  const choices=[...new Map(pool.map(item=>[normalizeWord(item.japaneseMeaning!),item.japaneseMeaning!])).values()].slice(0,2);
+  return choices.length===2?shuffle([word.japaneseMeaning,...choices]):[];
+}
+
+export function hasExampleQuestion(word:LessonWord,catalog:readonly LessonWord[]):boolean {
+  return Boolean(sentenceChoices(word)||exampleMeaningChoices(word,catalog).length);
+}
+
 export function buildWordQuestions(word:LessonWord,catalog:readonly LessonWord[],source:QuestionSource,idSuffix=normalizeWord(word.word)):LearningQuestion[] {
   if(!bounded(word.word,200))return [];
   const result:LearningQuestion[]=[];
   const image=validWordImage(word.image);
   const useImage=word.imageRole!=="supporting" && (word.definitionType==="image"||word.definitionType==="image+text") && image && !image.alt.toLowerCase().includes(word.word.toLowerCase());
   const definition=word.meaning||word.japaneseMeaning||image?.alt||"";
-  const common={word:word.word,correctAnswer:word.word,definition,definitionType:word.definitionType,imageRole:word.imageRole,...(image?{image}:{}),example:word.example,explanation:word.explanation,japaneseMeaning:word.japaneseMeaning,synonyms:word.synonyms,antonyms:word.antonyms,forms:word.forms,usageNote:word.usageNote,expressionType:word.expressionType,sourceCategory:source.category,sourceLessonId:source.lessonId,sourceLessonNumber:source.lessonNumber??null};
+  const common={word:word.word,correctAnswer:word.word,definition,definitionType:word.definitionType,imageRole:word.imageRole,...(image?{image}:{}),example:word.example,exampleJapanese:word.exampleJapanese,explanation:word.explanation,japaneseMeaning:word.japaneseMeaning,synonyms:word.synonyms,antonyms:word.antonyms,forms:word.forms,usageNote:word.usageNote,expressionType:word.expressionType,sourceCategory:source.category,sourceLessonId:source.lessonId,sourceLessonNumber:source.lessonNumber??null};
   const choices=meaningChoices(word,catalog);
   if(definition && choices.length>=2) result.push({...common,id:`meaning-${idSuffix}`,questionType:"meaning",prompt:useImage?"画像に合う英語を選んでください。":definition,promptMode:useImage?"image":"text",...(useImage?{image}:{}),choices,answerIndex:choices.indexOf(word.word)});
   const sentence=sentenceChoices(word);
   if(sentence)result.push({...common,id:`quiz-${idSuffix}`,questionType:"quiz",prompt:sentence.prompt,promptMode:"sentence",choices:sentence.choices,answerIndex:sentence.choices.indexOf(word.word)});
+  else {
+    const meanings=exampleMeaningChoices(word,catalog);
+    if(meanings.length)result.push({...common,id:`quiz-${idSuffix}`,questionType:"quiz",prompt:word.example!,promptMode:"example",choices:meanings,correctAnswer:word.japaneseMeaning!,answerIndex:meanings.indexOf(word.japaneseMeaning!)});
+  }
   return result;
 }

@@ -33,15 +33,13 @@ type Settings = {
 };
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const LEVEL_LABELS = ["入門", "初級", "中級", "中上級", "上級", "熟練"];
-const SKILLS = ["listening", "vocabulary", "pronunciation", "grammar", "conversation"];
 const ACCENTS = ["American", "British", "Australian", "Canadian"];
 const LABELS: Record<string, string> = {
   ...TOPIC_LABELS,
-  listening: "リスニング", vocabulary: "語彙", pronunciation: "発音", grammar: "文法", conversation: "会話",
   American: "アメリカ英語", British: "イギリス英語", Australian: "オーストラリア英語", Canadian: "カナダ英語",
 };
 const DEFAULT_SETTINGS: Settings = {
-  selectedLevel: "B1", selectedSkills: ["listening"], selectedTopics: [], customTopics: "", selectedAccent: "", captionOnly: false,
+  selectedLevel: "B1", selectedSkills: [], selectedTopics: [], customTopics: "", selectedAccent: "", captionOnly: false,
 };
 function stringArray(value: unknown) {
   return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string" && !!item.trim()).map((item) => item.trim()) : [];
@@ -51,7 +49,7 @@ function sanitizeSettings(value: unknown): Settings | null {
   const raw = value as Partial<Settings>;
   return {
     selectedLevel: typeof raw.selectedLevel === "string" && LEVELS.includes(raw.selectedLevel) ? raw.selectedLevel : "B1",
-    selectedSkills: stringArray(raw.selectedSkills).filter((skill) => SKILLS.includes(skill)),
+    selectedSkills: [],
     selectedTopics: normalizeTopics(stringArray(raw.selectedTopics)).filter((topic) => (TOPICS as readonly string[]).includes(topic)),
     customTopics: typeof raw.customTopics === "string" ? raw.customTopics.slice(0, 240) : "",
     selectedAccent: typeof raw.selectedAccent === "string" && ACCENTS.includes(raw.selectedAccent) ? raw.selectedAccent : "",
@@ -170,8 +168,8 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
     setSettingsStatus("");
     setSettings((current) => ({ ...current, ...patch }));
   };
-  const toggle = (key: "selectedSkills" | "selectedTopics", value: string) => {
-    updateSettings({ [key]: settings[key].includes(value) ? settings[key].filter((item) => item !== value) : [...settings[key], value] });
+  const toggleTopic = (value: string) => {
+    updateSettings({ selectedTopics: settings.selectedTopics.includes(value) ? settings.selectedTopics.filter((item) => item !== value) : [...settings.selectedTopics, value] });
   };
 
   const loadRecommendations = useCallback(async (params: URLSearchParams, scroll = false, append = false) => {
@@ -226,7 +224,6 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
   const search = () => {
     if (topicError) return;
     const params = new URLSearchParams({ level: settings.selectedLevel, limit: "6" });
-    settings.selectedSkills.forEach((skill) => params.append("skills", skill));
     topics.forEach((topic) => params.append("topics", topic));
     if (settings.selectedAccent) params.set("accent", settings.selectedAccent);
     if (settings.captionOnly) params.set("transcript_available", "true");
@@ -298,7 +295,7 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
         {(isHistory || isSimilar) && <p>{isHistory ? "YouTubeで開いた動画の記録です。" : "レベルやテーマが近い動画です。"}</p>}
         <Link href={isHistory || isSimilar ? "/vidmatch" : "/vidmatch/history"} className="pf-button-secondary">{isHistory || isSimilar ? "動画を探す" : "動画の履歴"}<span aria-hidden="true"> →</span></Link>
       </div>
-      <p className="vm-help vm-editorial-note">レベル・トピックはProjectFluenceによる学習の目安です。字幕の言語や再生可否はYouTubeでご確認ください。</p>
+      <p className="vm-help vm-editorial-note">レベル・トピックはProjectFluenceによる学習の目安です。</p>
       {trackingError && <p className="vm-notice" role="status">{trackingError}</p>}
       {isHistory ? (
         <section className="vm-history" aria-label="動画の履歴">
@@ -315,11 +312,10 @@ export default function VidMatchApp({ pathname }: { pathname: string }) {
             <fieldset disabled={!authReady || settingsLoading} className="vm-fieldset">
               <legend className="sr-only">動画の検索条件</legend>
               <div className="vm-control"><h2 id="vm-level-label">英語レベル</h2><div className="vm-levels" role="group" aria-labelledby="vm-level-label">{LEVELS.map((level, index) => <button key={level} type="button" className="vm-choice" aria-pressed={settings.selectedLevel === level} onClick={() => updateSettings({ selectedLevel: level })}><strong>{level}</strong><span>{LEVEL_LABELS[index]}</span></button>)}</div></div>
-              <details className="vm-skill-filters"><summary><span>伸ばしたいスキル</span><span className="vm-skill-summary">{settings.selectedSkills.length === 1 ? LABELS[settings.selectedSkills[0]] : settings.selectedSkills.length ? `${settings.selectedSkills.length}つ選択中` : "指定なし"}</span></summary><div className="vm-control"><h3 id="vm-skill-label">スキルを選ぶ <span>複数選択可</span></h3><div className="vm-chips" role="group" aria-labelledby="vm-skill-label">{SKILLS.map((skill) => <button key={skill} type="button" className="vm-choice" aria-pressed={settings.selectedSkills.includes(skill)} onClick={() => toggle("selectedSkills", skill)}>{LABELS[skill]}</button>)}</div></div></details>
               <details className="vm-extra-filters"><summary>トピック・アクセントなど{(topics.length > 0 || settings.selectedAccent || settings.captionOnly) && <span className="vm-filter-dot" aria-label="追加条件を選択中" />}</summary>
-                <div className="vm-control"><h3 id="vm-topic-label">好きなトピック</h3><div className="vm-chips" role="group" aria-labelledby="vm-topic-label">{TOPICS.map((topic) => <button key={topic} type="button" className="vm-choice" aria-pressed={settings.selectedTopics.includes(topic)} onClick={() => toggle("selectedTopics", topic)}>{LABELS[topic]}</button>)}</div><label className="vm-input-label" htmlFor="vm-custom-topics">その他のトピック</label><input id="vm-custom-topics" value={settings.customTopics} onChange={(event) => updateSettings({ customTopics: event.target.value })} maxLength={240} placeholder="例: music, cooking" aria-describedby={topicError ? "vm-topic-error vm-topic-hint" : "vm-topic-hint"} aria-invalid={!!topicError} /><p id="vm-topic-hint" className="vm-help">英語で入力し、複数ある場合はカンマで区切ってください。</p>{topicError && <p id="vm-topic-error" className="vm-error" role="alert">{topicError}</p>}</div>
+                <div className="vm-control"><h3 id="vm-topic-label">好きなトピック</h3><div className="vm-chips" role="group" aria-labelledby="vm-topic-label">{TOPICS.map((topic) => <button key={topic} type="button" className="vm-choice" aria-pressed={settings.selectedTopics.includes(topic)} onClick={() => toggleTopic(topic)}>{LABELS[topic]}</button>)}</div><label className="vm-input-label" htmlFor="vm-custom-topics">その他のトピック</label><input id="vm-custom-topics" value={settings.customTopics} onChange={(event) => updateSettings({ customTopics: event.target.value })} maxLength={240} placeholder="例: music, cooking" aria-describedby={topicError ? "vm-topic-error vm-topic-hint" : "vm-topic-hint"} aria-invalid={!!topicError} /><p id="vm-topic-hint" className="vm-help">英語で入力し、複数ある場合はカンマで区切ってください。</p>{topicError && <p id="vm-topic-error" className="vm-error" role="alert">{topicError}</p>}</div>
                 <div className="vm-control"><label className="vm-input-label" htmlFor="vm-accent">アクセント</label><select id="vm-accent" value={settings.selectedAccent} onChange={(event) => updateSettings({ selectedAccent: event.target.value })}><option value="">指定なし</option>{ACCENTS.map((accent) => <option key={accent} value={accent}>{LABELS[accent]}</option>)}</select></div>
-                <label className="vm-caption"><input type="checkbox" checked={settings.captionOnly} onChange={(event) => updateSettings({ captionOnly: event.target.checked })} /><span>字幕のある動画のみ（言語はYouTubeで確認）</span></label>
+                <label className="vm-caption"><input type="checkbox" checked={settings.captionOnly} onChange={(event) => updateSettings({ captionOnly: event.target.checked })} /><span>字幕のある動画のみ</span></label>
               </details>
               <button type="submit" className="pf-button vm-search" disabled={recommendationLoading || !!topicError}>{recommendationLoading ? "動画を検索中…" : "動画を探す"}<span aria-hidden="true"> →</span></button>
             </fieldset>
@@ -397,10 +393,6 @@ const styles = `
 .vm-levels .vm-choice strong { font-size:15px; font-weight:700; }
 .vm-levels .vm-choice span { font-size:10px; }
 .vm-chips { display:flex; flex-wrap:wrap; gap:7px; }
-.vm-skill-filters { margin-top:16px; }
-.vm-skill-filters summary { min-height:44px; padding:11px 0; font-size:13px; font-weight:600; cursor:pointer; }
-.vm-skill-summary { float:right; color:var(--pf-muted); font-size:11px; font-weight:400; margin-left:6px; }
-.vm-skill-filters .vm-control { margin-top:8px; }
 .vm-extra-filters { border-top:1px solid var(--pf-border); border-bottom:1px solid var(--pf-border); margin-top:8px; padding:0; }
 .vm-extra-filters summary { min-height:48px; padding:15px 0; font-size:13px; cursor:pointer; font-weight:600; }
 .vm-extra-filters[open] { padding-bottom:14px; }
@@ -466,7 +458,6 @@ const styles = `
   .vm-levels .vm-choice { padding:4px 8px; gap:1px; min-height:44px; }
   .vm-choice { min-width:44px; }
   .vm-chips { gap:6px; }
-  .vm-skill-filters { margin-top:10px; }
   .vm-extra-filters { margin-top:4px; }
   .vm-extra-filters summary { min-height:44px; padding:11px 0; }
   .vm-extra-filters[open] { padding-bottom:8px; }
