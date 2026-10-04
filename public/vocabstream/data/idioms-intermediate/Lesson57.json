@@ -134,6 +134,7 @@
       "meaning": "to learn something so well that you can repeat it without looking",
       "japaneseMeaning": "暗記する",
       "example": "We had to learn the short poem by heart.",
+      "exampleGap": { "prompt": "We had to ____.", "answer": "learn the short poem by heart" },
       "definitionType": "text",
       "expressionType": "fixed-expression",
       "meaningDistractors": [

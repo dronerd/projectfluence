@@ -52,6 +52,7 @@
       "meaning": "to tell someone an idea in order to hear their opinion",
       "japaneseMeaning": "案などを人に話して意見を聞く",
       "example": "I will run the proposed schedule by Maya before sharing it with the team.",
+      "exampleGap": { "prompt": "I will ____ before sharing it with the team.", "answer": "run the proposed schedule by Maya" },
       "definitionType": "text",
       "expressionType": "phrasal-verb",
       "meaningDistractors": [

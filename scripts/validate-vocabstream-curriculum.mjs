@@ -103,34 +103,41 @@ async function waitForImage(page) {
 async function completeLesson(page, lesson, name, persistence = 'guest; no database write') {
   const total = Number(await page.locator('.vs-progress').getAttribute('max'));
   assert(total > 0, `${name}: no questions`);
-  let images = 0, sentences = 0, exampleQuestions = 0;
+  let images = 0, sentences = 0;
   for (let index = 0; index < total; index++) {
     const prompt = await page.locator('.vs-question-title').innerText();
     const image = page.locator('.vs-vocabulary-image img');
-    const isExample = prompt.startsWith('例文の「');
-    let word;
+    let word, answerText;
     if (await image.count()) {
       const src = await image.getAttribute('src');
       word = lesson.words.find(item => item.image?.src === src);
+      answerText = word?.word;
       images++;
-    } else if (isExample) {
-      const example = await page.locator('blockquote.vs-example').innerText();
-      const headword = prompt.match(/^例文の「(.+)」の意味を選んでください。$/)?.[1];
-      word = lesson.words.find(item => item.word === headword && item.example === example);
-      exampleQuestions++;
+    } else if (prompt.includes('____')) {
+      word = lesson.words.find(item => item.sentencePractice?.prompt === prompt || item.exampleGap?.prompt === prompt);
+      answerText = word?.sentencePractice ? word.word : word?.exampleGap?.answer;
+      if (!word) {
+        const options = await page.locator('.vs-choice span[lang="en"]').allTextContents();
+        for (const option of options) {
+          word = lesson.words.find(item => item.example === prompt.replace('____', option));
+          if (word) { answerText = option; break; }
+        }
+      }
+      sentences++;
     } else {
-      word = lesson.words.find(item => item.sentencePractice?.prompt === prompt || item.meaning === prompt || item.japaneseMeaning === prompt);
-      if (word?.sentencePractice?.prompt === prompt) sentences++;
+      word = lesson.words.find(item => item.meaning === prompt || item.japaneseMeaning === prompt);
+      answerText = word?.word;
     }
     assert(word, `${name}: unknown question ${prompt}`);
-    await page.locator('.vs-choice').getByText(isExample ? word.japaneseMeaning : word.word, { exact: true }).click();
+    assert(answerText, `${name}: no answer for ${prompt}`);
+    await page.locator('.vs-choice').getByText(answerText, { exact: true }).click();
     await page.getByRole('button', { name: /^(次の問題へ|次の練習へ|結果を見る)/ }).click();
   }
   await page.getByRole('heading', { name: 'すべて正解です！' }).waitFor();
   assert.equal(await page.locator('.vs-result-score strong').innerText(), '100%');
-  assert(sentences > 0, `${name}: reviewed sentences were not exercised`);
-  results.push({ flow: name, total, imageQuestions: images, sentenceQuestions: sentences, exampleQuestions, score: '100%', persistence });
-  return { total, images, sentences, exampleQuestions };
+  assert(sentences > 0, `${name}: sentence gaps were not exercised`);
+  results.push({ flow: name, total, imageQuestions: images, sentenceQuestions: sentences, score: '100%', persistence });
+  return { total, images, sentences };
 }
 
 async function verifySignedInCurriculum() {
@@ -152,20 +159,23 @@ async function verifySignedInCurriculum() {
     assert.match(body.attemptId, /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i);
     assert.equal(body.lessonId, lessonId); assert.equal(body.genre, category); assert.equal(body.lessonNumber, number);
     assert.equal(body.lessonTitle, category.startsWith('idioms-') ? `Lesson ${number - 50}` : lesson.title); assert.equal(body.wordCount, lesson.words.length);
-    assert.equal(body.meaningTotal, completed.total - completed.sentences - completed.exampleQuestions); assert.equal(body.meaningScore, body.meaningTotal);
-    assert.equal(body.quizTotal, completed.sentences + completed.exampleQuestions); assert.equal(body.quizScore, body.quizTotal);
+    assert.equal(body.meaningTotal, completed.total - completed.sentences); assert.equal(body.meaningScore, body.meaningTotal);
+    assert.equal(body.quizTotal, completed.sentences); assert.equal(body.quizScore, body.quizTotal);
     assert.equal(body.replayCompleted, false); assert.equal(body.replayCorrect, 0); assert.equal(body.replayTotal, 0);
     assert.equal(body.questionAttempts.length, completed.total);
     assert.equal(new Set(body.questionAttempts.map(attempt => attempt.questionId)).size, completed.total);
     for (const [index, attempt] of body.questionAttempts.entries()) {
       assert.equal(attempt.sourceCategory, category); assert.equal(attempt.sourceLessonId, lessonId); assert.equal(attempt.sourceLessonNumber, number);
       assert.equal(attempt.attemptOrder, index + 1); assert.equal(attempt.isReplay, false); assert.equal(attempt.isCorrect, true);
-      if (attempt.questionType === 'meaning' || lesson.words.find(word => word.word === attempt.word)?.sentencePractice) assert.equal(attempt.word, attempt.correctAnswer);
-      else assert.equal(attempt.correctAnswer, lesson.words.find(word => word.word === attempt.word)?.japaneseMeaning);
+      const sourceWord = lesson.words.find(word => word.word === attempt.word);
+      assert(sourceWord);
+      if (attempt.questionType === 'meaning' || sourceWord.sentencePractice) assert.equal(attempt.word, attempt.correctAnswer);
+      else if (sourceWord.exampleGap) assert.equal(attempt.correctAnswer, sourceWord.exampleGap.answer);
+      else assert.equal(attempt.prompt.replace('____', attempt.correctAnswer), sourceWord.example);
       assert.equal(attempt.selectedAnswer, attempt.correctAnswer);
       assert(attempt.choices.includes(attempt.correctAnswer)); assert(Number.isFinite(Date.parse(attempt.answeredAt)));
       assert(!('image' in attempt), 'Image metadata must not become persisted progress state.');
-      if (attempt.questionType === 'quiz') assert.equal(attempt.prompt, lesson.words.find(word => word.word === attempt.word)?.sentencePractice?.prompt || lesson.words.find(word => word.word === attempt.word)?.example);
+      if (attempt.questionType === 'quiz') assert.match(attempt.prompt, /____/);
     }
     await page.getByRole('link', { name: 'レッスン一覧へ', exact: true }).click();
     const card = page.locator(`.vs-lesson-card[href="/vocabstream/lesson/${lessonId}"]`);
@@ -315,7 +325,7 @@ try {
   await page.getByRole('button', { name: 'クイズから始める' }).waitFor();
   assert.equal(await page.getByText('例文は単語カードで確認できます。').count(), 0);
   assert.equal(await page.getByText('例文で確認', { exact: true }).count(), 1);
-  results.push({ flow: 'all examples are checked without inventing scored gaps', pass: true });
+  results.push({ flow: 'all examples are checked with sentence gaps', pass: true });
 
   await page.goto(lessonUrl('idioms-beginner', 1));
   await page.getByRole('link', { name: '新しい熟語レッスンへ' }).waitFor();

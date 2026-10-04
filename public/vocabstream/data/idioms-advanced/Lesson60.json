@@ -66,6 +66,7 @@
       "meaning": "to imagine another person's situation in order to understand their feelings",
       "japaneseMeaning": "相手の立場に立って考える",
       "example": "Put yourself in your colleague's shoes before criticizing her decision.",
+      "exampleGap": { "prompt": "____ before criticizing her decision.", "answer": "Put yourself in your colleague's shoes" },
       "definitionType": "text",
       "expressionType": "idiom",
       "meaningDistractors": [
@@ -90,6 +91,7 @@
       "meaning": "to joke with someone by saying something that is not true",
       "japaneseMeaning": "冗談を言って人をからかう",
       "example": "When he said he owned a castle, I knew he was pulling my leg.",
+      "exampleGap": { "prompt": "When he said he owned a castle, I knew he was ____.", "answer": "pulling my leg" },
       "definitionType": "text",
       "expressionType": "idiom",
       "meaningDistractors": [

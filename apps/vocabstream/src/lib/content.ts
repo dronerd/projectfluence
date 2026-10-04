@@ -13,6 +13,7 @@ export type WordImage = {
 };
 
 export type SentencePractice = { prompt: string; distractors: [string, string]; reviewNote: string };
+export type ExampleGap = { prompt: string; answer: string };
 export type LessonWord = {
   word: string;
   meaning?: string;
@@ -28,13 +29,15 @@ export type LessonWord = {
   image?: WordImage;
   meaningDistractors?: [string, string];
   sentencePractice?: SentencePractice;
+  /** Explicitly removes a contiguous phrase from the study example when automatic matching is insufficient. */
+  exampleGap?: ExampleGap;
   expressionType?: "phrasal-verb" | "collocation" | "fixed-expression" | "idiom";
   usageNote?: string;
   domain?: string;
   duplicateOf?: { category: string; lessonNumber: number; word: string };
 };
 export type LessonData = { lesson_id?: string; title?: string; paragraph?: string; words: LessonWord[] };
-export type QuestionPromptMode = "image" | "text" | "sentence" | "example";
+export type QuestionPromptMode = "image" | "text" | "sentence";
 
 export type LearningQuestion = {
   id: string;
@@ -52,6 +55,7 @@ export type LearningQuestion = {
   example?: string;
   explanation?: string;
   japaneseMeaning?: string;
+  showMeaningHint?: boolean;
   synonyms?: string;
   antonyms?: string;
   forms?: string;

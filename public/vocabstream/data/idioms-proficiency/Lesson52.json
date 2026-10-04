@@ -100,6 +100,7 @@
       "meaning": "to make a plan become a successful reality",
       "japaneseMeaning": "計画を実現させる",
       "example": "It took years to bring the community garden plan to fruition.",
+      "exampleGap": { "prompt": "It took years to ____.", "answer": "bring the community garden plan to fruition" },
       "definitionType": "text",
       "expressionType": "fixed-expression",
       "usageNote": "目的語は bring と to fruition の間にも置けます。やや改まった表現です。",

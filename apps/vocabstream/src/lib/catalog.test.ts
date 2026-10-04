@@ -71,15 +71,31 @@ test("the complete corpus produces valid options and never silently drops review
       const lesson: LessonData = JSON.parse(await readFile(new URL(`${course.id}/Lesson${number}.json`, data), "utf8"));
       const questions = makeLessonQuestions(lesson, `${course.id}-lesson-${number}`);
       assert.equal(new Set(questions.map(question => question.id)).size, questions.length);
+      const inspectedWords = new Set<string>();
       for (const question of questions) {
         assert.equal(new Set(question.choices.map(choice => choice.normalize("NFKC").toLowerCase())).size, question.choices.length);
         assert.equal(question.choices[question.answerIndex], question.correctAnswer);
+        if (question.questionType === "quiz") {
+          assert.equal(question.promptMode, "sentence", `${course.id}/${number}/${question.word}: quiz must use an English gap`);
+          assert.deepEqual(question.prompt.match(/_+/g), ["____"], `${course.id}/${number}/${question.word}: exactly one gap required`);
+          assert.match(question.correctAnswer, /[A-Za-z]/, `${course.id}/${number}/${question.word}: answer must be English`);
+        }
       }
       for (const word of lesson.words) {
+        // Historical duplicate headwords share one persisted question identity.
+        if (inspectedWords.has(normalizeWord(word.word))) { inspected++; continue; }
+        inspectedWords.add(normalizeWord(word.word));
         const own = questions.filter(question => question.word === word.word);
         if (word.meaningDistractors) assert.ok(own.some(question => question.questionType === "meaning"), `${course.id}/${number}/${word.word}: explicit meaning pair rejected`);
         if (word.sentencePractice) assert.ok(own.some(question => question.questionType === "quiz"), `${course.id}/${number}/${word.word}: curated gap rejected`);
         assert.ok(own.some(question => question.questionType === "quiz"), `${course.id}/${number}/${word.word}: example question missing`);
+        if (!word.sentencePractice) {
+          const gap = own.find(question => question.questionType === "quiz")!;
+          if (word.exampleGap) {
+            assert.equal(gap.prompt, word.exampleGap.prompt);
+            assert.equal(gap.correctAnswer, word.exampleGap.answer);
+          } else assert.ok(lesson.words.some(item => item.word === word.word && item.example === gap.prompt.replace("____", gap.correctAnswer)), `${course.id}/${number}/${word.word}: gap must reconstruct a study example for this headword`);
+        }
         if (word.image) {
           const meaning = own.find(question => question.questionType === "meaning");
           assert.equal(meaning?.image?.src, word.image.src, `${course.id}/${number}/${word.word}: review image lost`);
@@ -93,4 +109,13 @@ test("the complete corpus produces valid options and never silently drops review
   }
   assert.equal(inspected, 6999);
   assert.ok(images > 370, "Expansion must add more than 300 illustrated entries to the previous 70.");
+});
+
+test("mall uses its example sentence as an English gap", async () => {
+  const lesson: LessonData = JSON.parse(await readFile(new URL("word-beginner/Lesson9.json", data), "utf8"));
+  const question = makeLessonQuestions(lesson, "word-beginner-lesson-9").find(item => item.word === "mall" && item.questionType === "quiz");
+  assert.equal(question?.prompt, "We bought shoes at the ____.");
+  assert.equal(question?.correctAnswer, "mall");
+  assert.equal(question?.choices.length, 3);
+  assert.equal(question?.showMeaningHint, true);
 });

@@ -77,6 +77,7 @@
       "meaning": "to avoid fully believing a statement because it may not be accurate",
       "japaneseMeaning": "話をうのみにせず受け止める",
       "example": "I take those online rumors with a pinch of salt until a reliable source confirms them.",
+      "exampleGap": { "prompt": "I ____ until a reliable source confirms them.", "answer": "take those online rumors with a pinch of salt" },
       "definitionType": "text",
       "expressionType": "idiom",
       "meaningDistractors": [

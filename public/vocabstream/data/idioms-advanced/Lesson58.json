@@ -64,6 +64,7 @@
       "meaning": "to stop a problem at an early stage before it grows",
       "japaneseMeaning": "問題の芽を早めに摘む",
       "example": "A quick conversation helped us nip the disagreement in the bud.",
+      "exampleGap": { "prompt": "A quick conversation helped us ____.", "answer": "nip the disagreement in the bud" },
       "definitionType": "text",
       "expressionType": "idiom",
       "meaningDistractors": [
@@ -77,6 +78,7 @@
       "meaning": "to hide or ignore a problem instead of dealing with it",
       "japaneseMeaning": "問題を隠して見て見ぬふりをする",
       "example": "The manager tried to sweep the accounting error under the carpet.",
+      "exampleGap": { "prompt": "The manager tried to ____.", "answer": "sweep the accounting error under the carpet" },
       "definitionType": "text",
       "expressionType": "idiom",
       "meaningDistractors": [

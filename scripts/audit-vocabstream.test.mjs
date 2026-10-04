@@ -62,6 +62,14 @@ test("audit rejects malformed curated choices and dangling duplicate references"
   assert.ok(result.report.errors.some((error) => error.message.includes("duplicateOf")));
 }));
 
+test("audit rejects malformed example gap overrides", async () => fixture(async ({ original, write, audit }) => {
+  original.words[0].exampleGap = { prompt: "The _____ was red.", answer: "apple" };
+  await write(original);
+  const result = await audit();
+  assert.equal(result.status, 1);
+  assert.ok(result.report.errors.some(error => error.message.includes("exampleGap requires exactly one")));
+}));
+
 test("audit rejects attribution-free third-party images and unsupported image roles", async () => fixture(async ({ original, write, audit }) => {
   original.words[0].image={src:'/vocabstream/images/missing.svg',alt:'赤い果物',width:240,height:180,source:'Twemoji',sourceUrl:'https://github.com/jdecked/twemoji',creator:'Twitter and contributors',license:'CC-BY-4.0'};
   original.words[0].definitionType='image';original.words[0].imageRole='supporting';

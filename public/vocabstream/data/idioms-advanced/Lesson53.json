@@ -88,6 +88,7 @@
       "meaning": "to avoid deciding too soon so several choices remain",
       "japaneseMeaning": "選択肢を残しておく",
       "example": "I'm applying to several colleges to keep my options open.",
+      "exampleGap": { "prompt": "I'm applying to several colleges to ____.", "answer": "keep my options open" },
       "definitionType": "text",
       "expressionType": "idiom",
       "meaningDistractors": [

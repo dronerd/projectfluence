@@ -43,14 +43,15 @@ test("missing or unsuitable examples are not turned into misleading sentence que
   assert.match(questions.find((question) => question.questionType === "quiz")!.prompt, /____/);
 });
 
-test("study examples never become scored gaps without explicit reviewed practice", () => {
+test("study examples become gap questions when no curated sentence is present", () => {
   const words=lesson.words.map(word=>({...word,sentencePractice:undefined}));
   const questions=makeLessonQuestions({words},"word-beginner-lesson-1");
-  assert.equal(questions.length,3);assert.ok(questions.every(question=>question.questionType==="meaning"));
-  assert.equal(summarizeAttempts(questions,[]).quizTotal,0);
+  assert.equal(questions.length,6);
+  assert.equal(summarizeAttempts(questions,[]).quizTotal,3);
+  assert.ok(questions.filter(question=>question.questionType==="quiz").every(question=>question.promptMode==="sentence" && question.prompt.includes("____")));
 });
 
-test("an uncurated example gets a meaning check with the Japanese sense", () => {
+test("an inflected example blanks the form actually used in the sentence", () => {
   const words: LessonData["words"] = [
     { word: "assert", meaning: "to state firmly", japaneseMeaning: "主張する", example: "She asserted her view." },
     { word: "listen", meaning: "to pay attention to sound", japaneseMeaning: "聞く", example: "We listened carefully." },
@@ -58,8 +59,9 @@ test("an uncurated example gets a meaning check with the Japanese sense", () => 
   ];
   const questions = makeLessonQuestions({ words }, "word-advanced-lesson-1");
   const example = questions.find(question => question.word === "assert" && question.questionType === "quiz")!;
-  assert.equal(example.promptMode, "example");
-  assert.equal(example.prompt, words[0].example);
-  assert.equal(example.correctAnswer, "主張する");
+  assert.equal(example.promptMode, "sentence");
+  assert.equal(example.prompt, "She ____ her view.");
+  assert.equal(example.correctAnswer, "asserted");
+  assert.equal(createAttempt(example, example.answerIndex, 1).word, "assert");
   assert.equal(questions.filter(question => question.questionType === "quiz").length, 3);
 });
