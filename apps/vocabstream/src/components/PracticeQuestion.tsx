@@ -44,7 +44,7 @@ export default function PracticeQuestion({ question, index, total, selected, onC
     {selected !== null && <div className="vs-answer-result">
       <div className="vs-feedback vs-answer-feedback" role="status"><strong>{selected === question.answerIndex ? "正解です！" : <>正解は <span lang="en">{question.correctAnswer}</span> です。</>}</strong></div>
       {image && !imagePrompt && <VocabularyImage image={image} />}
-      <div className="vs-actions vs-answer-actions"><button className="pf-button" onClick={onNext}>{nextLabel}<span aria-hidden="true">→</span></button><button className="pf-button-secondary" onClick={() => speakVocabulary(question.word, question.example)}>音声を聞く</button></div><p className="vs-muted">英語の読み上げ音声はAIで生成したもので、人の録音ではありません。</p>
+      <div className="vs-actions vs-answer-actions"><button className="pf-button" onClick={onNext}>{nextLabel}<span aria-hidden="true">→</span></button><button className="pf-button-secondary" onClick={() => speakVocabulary(question.word, question.example)}>AI生成音声を聞く</button></div>
       <details className="vs-details"><summary>意味・例文を確認</summary><p lang="en">{question.definition}</p>{question.example && <p className="vs-example" lang="en">{question.example}</p>}<WordDetails word={question} /></details>
     </div>}
   </>;
