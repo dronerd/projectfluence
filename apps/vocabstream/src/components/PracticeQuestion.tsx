@@ -3,7 +3,7 @@ import type { VocabStreamReviewQuestion } from "../api";
 import type { LessonWord } from "../lib/learning";
 import { getCourse } from "../lib/catalog";
 import { Link } from "../lib/router-compat";
-import { speakEnglish } from "../pages/speech";
+import { speakVocabulary } from "../pages/speech";
 import VocabularyImage from "./VocabularyImage";
 import { validWordImage } from "../lib/questionPolicy";
 
@@ -44,7 +44,7 @@ export default function PracticeQuestion({ question, index, total, selected, onC
     {selected !== null && <div className="vs-answer-result">
       <div className="vs-feedback vs-answer-feedback" role="status"><strong>{selected === question.answerIndex ? "正解です！" : <>正解は <span lang="en">{question.correctAnswer}</span> です。</>}</strong></div>
       {image && !imagePrompt && <VocabularyImage image={image} />}
-      <div className="vs-actions vs-answer-actions"><button className="pf-button" onClick={onNext}>{nextLabel}<span aria-hidden="true">→</span></button><button className="pf-button-secondary" onClick={() => speakEnglish(`${question.word}. ${question.example || ""}`)}>音声を聞く</button></div>
+      <div className="vs-actions vs-answer-actions"><button className="pf-button" onClick={onNext}>{nextLabel}<span aria-hidden="true">→</span></button><button className="pf-button-secondary" onClick={() => speakVocabulary(question.word, question.example)}>音声を聞く</button></div><p className="vs-muted">英語の読み上げ音声はAIで生成したもので、人の録音ではありません。</p>
       <details className="vs-details"><summary>意味・例文を確認</summary><p lang="en">{question.definition}</p>{question.example && <p className="vs-example" lang="en">{question.example}</p>}<WordDetails word={question} /></details>
     </div>}
   </>;
