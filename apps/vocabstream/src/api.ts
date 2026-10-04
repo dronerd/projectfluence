@@ -14,7 +14,6 @@ export type VocabStreamWeakWord = Pick<LessonWord, "image" | "imageRole" | "defi
   word: string;
   definition: string;
   example?: string;
-  exampleJapanese?: string;
   explanation?: string;
   japaneseMeaning?: string;
   synonyms?: string;

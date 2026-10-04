@@ -18,7 +18,6 @@ export type LessonWord = {
   meaning?: string;
   japaneseMeaning?: string;
   example?: string;
-  exampleJapanese?: string;
   explanation?: string;
   synonyms?: string;
   antonyms?: string;
@@ -51,7 +50,6 @@ export type LearningQuestion = {
   correctAnswer: string;
   definition: string;
   example?: string;
-  exampleJapanese?: string;
   explanation?: string;
   japaneseMeaning?: string;
   synonyms?: string;
