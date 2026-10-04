@@ -17,9 +17,6 @@ function ImageContent({ image, loading }: { image: WordImage; loading: "eager" |
       {/* Native SVG delivery avoids a needless image transformation and preserves intrinsic dimensions. */}
       <img src={image.src} alt={image.alt} lang="ja" width={image.width} height={image.height} loading={loading} decoding="async" style={{ aspectRatio: `${image.width} / ${image.height}` }} onError={() => setFailed(true)} />
     </>}
-    <figcaption>
-      {!failed && <details><summary>画像の説明を読む</summary><p lang="ja">{image.alt}</p></details>}
-      {image.license === "CC-BY-4.0" && <div className="vs-image-credit"><a href={image.sourceUrl} target="_blank" rel="noreferrer">{image.credit}</a>{" · "}<a href={image.licenseUrl} target="_blank" rel="noreferrer">CC BY 4.0</a></div>}
-    </figcaption>
+    {image.license === "CC-BY-4.0" && <figcaption className="vs-image-credit"><a href={image.sourceUrl} target="_blank" rel="noreferrer">{image.credit}</a>{" · "}<a href={image.licenseUrl} target="_blank" rel="noreferrer">CC BY 4.0</a></figcaption>}
   </figure>;
 }

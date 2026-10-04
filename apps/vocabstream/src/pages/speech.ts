@@ -35,12 +35,24 @@ export function playAnswerSound(correct: boolean) {
     const context = feedbackContext;
     const play = () => {
       const start = context.currentTime;
-      const gain = context.createGain();
-      gain.gain.setValueAtTime(0.045, start);
-      gain.gain.exponentialRampToValueAtTime(0.001, start + .18);
-      gain.connect(context.destination);
-      const frequencies = correct ? [660, 880] : [440];
-      frequencies.forEach((frequency) => { const oscillator = context.createOscillator(); oscillator.frequency.value = frequency; oscillator.connect(gain); oscillator.start(start); oscillator.stop(start + .2); });
+      // A short ascending major arpeggio makes a correct answer feel rewarding.
+      const notes = correct
+        ? [{ frequency: 523.25, delay: 0, length: .22, volume: .045 }, { frequency: 659.25, delay: .09, length: .22, volume: .045 }, { frequency: 783.99, delay: .18, length: .23, volume: .05 }, { frequency: 1046.5, delay: .29, length: .3, volume: .055 }]
+        : [{ frequency: 440, delay: 0, length: .16, volume: .025 }];
+      notes.forEach(({ frequency, delay, length, volume }) => {
+        const noteStart = start + delay;
+        const gain = context.createGain();
+        gain.gain.setValueAtTime(.001, noteStart);
+        gain.gain.exponentialRampToValueAtTime(volume, noteStart + .015);
+        gain.gain.exponentialRampToValueAtTime(.001, noteStart + length);
+        gain.connect(context.destination);
+        const oscillator = context.createOscillator();
+        oscillator.type = "sine";
+        oscillator.frequency.value = frequency;
+        oscillator.connect(gain);
+        oscillator.start(noteStart);
+        oscillator.stop(noteStart + length);
+      });
     };
     if (context.state === "suspended") void context.resume().then(play).catch(() => undefined);
     else play();
