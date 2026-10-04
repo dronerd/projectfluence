@@ -56,73 +56,67 @@ import Image from "next/image";
   // --- The prompts to show / copy ---
   const prompts = [
     {
-      label: "英会話の練習用（英語のレベルをご自身で設定してください）",
+      label: "レベルに合わせた英会話練習",
       text:
-  `I want to practice speaking English. My English level: (A1 / A2 / B1 / B2 / C1 / C2).
+  `Be my patient English conversation partner. My level is [A1/A2/B1/B2/C1/C2, or "unsure"]. I want to talk about [topic], and my goal is [e.g., speak more smoothly / prepare for travel]. If my level is "unsure," start with an easy question and adjust as we go.
 
-  Please:
-  1. Ask me one question at a time about (everyday life / university studies / future plans, etc.).
-  2. Wait for my answer.
-  3. Give clear feedback on:
-    - Grammar
-    - Vocabulary
-    - Natural phrasing
-  4. Show a corrected version of my answer.
-  5. Then ask the next question.
+Ask one open question in English, then wait for my answer. After each answer:
+1. Respond naturally to what I said, as a real conversation partner would.
+2. Correct at most two mistakes that most affect meaning or naturalness. Quote my wording, explain the change briefly, and show a version I could say aloud.
+3. Teach one useful phrase at my level and ask me to use it in my next answer.
+4. Ask one related follow-up question. Do not answer it for me.
 
-  Use mostly words at my level, but occasionally include slightly more advanced vocabulary.`
+Keep the conversation mostly in English. Use short Japanese explanations only if I ask. After five exchanges, summarize my strengths, recurring mistakes, and one specific thing to practice next.`
     },
     {
-      label: "英検対策（例：１級の面接）",
+      label: "英検1級の面接練習",
       text:
-  `I want to practice for the Eiken Grade 1 speaking test.
+  `Help me practice the Eiken Grade 1 speaking interview. Run a practice round inspired by its topic-card, two-minute speech, and follow-up Q&A format. This is practice, not an official exam or score.
 
-  Please:
-  1. Give me a realistic Eiken-style topic.
-  2. Ask me to give a short speech (about 2 minutes).
-  3. After my answer, provide:
-    - A corrected version
-    - Feedback on structure, vocabulary, and coherence
-    - Suggestions for higher-level expressions
-  4. Then ask 2–3 follow-up questions like an examiner.
+First, give me five distinct social-issue topics in English and ask me to choose one. Once I choose, tell me to take one minute to plan a position, two reasons, and an example. Wait for me to say "ready"; do not claim to time me. Then invite me to give a speech of about two minutes by voice or text. Do not write a model speech before I try.
 
-  Keep the format close to the real test.`
+After my speech, ask three challenging follow-up questions, one at a time, and wait for each answer. When the Q&A is over, give feedback under these headings: argument and organization, clarity of English, useful corrections, and a stronger version of one short passage. End with a reusable outline for my next attempt. If I type my answers, say that you cannot judge pronunciation from text.`
     },
     {
       label: "TOEFLライティングの練習",
       text:
-  `Please give me a realistic TOEFL iBT writing task (Task 1 or Task 2).
+  `Help me practice a TOEFL iBT-style "Write for an Academic Discussion" task. Create an original classroom question on [topic, or choose one], plus two short student viewpoints that disagree in a reasonable way. Then ask me to write my own contribution. Wait for my response before giving examples or feedback.
 
-  After I write my response, please:
-  1. Correct grammar and sentence structure
-  2. Rewrite my answer in a more natural and high-scoring way
-  3. Suggest better vocabulary and expressions
-  4. Give a brief score estimate and explain why
+After I reply:
+1. State my main point in one sentence and identify any idea I have not supported well.
+2. Give specific feedback on relevance, development, organization, grammar, and word choice. Quote short parts of my writing so I can see what you mean.
+3. Show a minimally corrected version that keeps my ideas and voice. Then show one stronger paragraph and explain why it works better.
+4. Give me two targeted revision tasks and let me try again before showing a full model response.
 
-  Focus on helping me improve toward a higher band score.`
+Do not present a score as official TOEFL scoring. If you do not know the current exam rules, do not invent them.`
     },
     {
       label: "自由ライティングの添削",
       text:
-  `Please revise the following text.
+  `Act as an English writing coach. I am writing a [email / essay / social post / other] for [audience]. My goal is [what I want the reader to understand or do], and I want a [friendly / neutral / formal] tone.
 
-  Give me:
-  1. A corrected version
-  2. A more natural / fluent version
-  3. A brief explanation of key mistakes
-  4. Suggestions for improving vocabulary and style`
+Here is my draft:
+[Paste your text here]
+
+First, tell me whether the message is clear and fits the audience. Then provide:
+1. A lightly edited version that keeps my meaning and voice.
+2. A more fluent alternative only where it genuinely improves the text.
+3. A short table with up to five important changes: my wording, your wording, and the reason.
+4. Two patterns I should watch for next time and one brief rewrite exercise based on my own sentences.
+
+Flag any sentence whose meaning is unclear instead of guessing what I intended. If my draft is missing, ask me to paste it.`
     },
     {
       label: "学んだ表現のリスト化",
       text:
-  `Based on our conversation today, create a list of useful vocabulary and phrases I learned.
+  `Help me review useful English from our conversation or from the notes below. My level is [level], and I want expressions I can use in [situation].
 
-  For each item, include:
-  - Meaning
-  - Example sentence
-  - When to use it
+Notes or conversation:
+[Paste your notes here, or use our conversation if it is visible to you]
 
-  Focus on expressions that are practical and reusable.`
+Select up to eight practical words or phrases that actually appeared in the material. For each, give a simple English meaning, one natural example for my situation, a common collocation or usage note, and a short recall question. Separate expressions I used well from ones I could improve. Then quiz me on three of them, one question at a time, and wait for my answer before showing the answer.
+
+If you cannot see the conversation and I have not pasted notes, ask me for them. Do not invent things I supposedly said.`
     }
   ];
 
@@ -130,22 +124,58 @@ import Image from "next/image";
     {
       label: "単語の説明を求める",
       text:
-  `For the word (" "), please provide:
-  - A simple definition (using easier words)
-  - 1–2 example sentences
-  - Synonyms
-  - Antonyms
-  - Common collocations (if any)`
+  `Teach me the English word or phrase [word/phrase]. My level is [level]. I found it in this sentence or situation: [context, if available].
+
+Explain its meaning in simpler English first. Then give its part of speech, two natural example sentences in different situations, three common collocations, and one nearby word it is often confused with. Explain the difference using short examples. Include pronunciation help only if you are confident; otherwise skip it. If the word has several meanings, focus on the meaning in my context and briefly mention the others.
+
+Finish with one fill-in-the-blank question and one question that makes me use the word in my own sentence. Wait for my answers before giving corrections. If I have not supplied a word, ask for it.`
     },
     {
       label: "自作した例文の添削",
       text:
-  `Please correct and improve this sentence.
+  `Check this English sentence I wrote: [your sentence]. I want to express: [meaning or situation]. My level is [level].
 
-  Show:
-  1. Corrected version
-  2. More natural version
-  3. Brief explanation of the changes`
+Tell me first whether the sentence is understandable and whether it sounds natural in that situation. Give a minimally corrected version, then one more natural alternative if useful. Explain each important change in plain English, especially word choice, grammar, and register. If my intended meaning is unclear, ask one clarifying question before rewriting.
+
+Finally, give me a similar Japanese or English cue so I can write a new sentence using the same pattern. Wait for my attempt, then correct it. If I have not supplied a sentence, ask for one.`
+    },
+    {
+      label: "文法の弱点を見つけて練習",
+      text:
+  `Be my English grammar coach. My level is [level]. Here are three to five sentences I wrote:
+[Paste your sentences here]
+
+Find the one recurring grammar issue that most affects clarity. Show the exact places where it occurs, explain the rule in simple English with one correct and one incorrect example, and distinguish a real error from an acceptable style choice. Correct only the relevant parts of my sentences so I can compare them.
+
+Then create three short practice items that get a little harder. Ask them one at a time, wait for my answer, and explain why it is right or wrong before moving on. End by asking me to write one original sentence using the pattern. If there is no clear recurring issue, say so and choose one useful point instead. If I have not supplied sentences, ask for them.`
+    }
+  ];
+
+  const inputPrompts = [
+    {
+      label: "英文を深く読む練習",
+      text:
+  `Help me understand an English passage without translating every sentence into Japanese. My level is [level]. Here is the passage:
+[Paste a short passage here]
+
+First, ask me for a one-sentence summary in English and wait for my answer. Then ask three comprehension questions, one at a time: one about the main idea, one about a detail, and one that requires an inference. After I answer each, point to the words in the passage that support or challenge my answer. Explain up to five useful phrases in simpler English and show how they work in context. Give a Japanese explanation only if I request it.
+
+At the end, ask me to summarize the passage again in my own words and give feedback on how my understanding improved. If I have not pasted a passage, ask for one; do not make up facts about an unseen text.`
+    },
+    {
+      label: "動画・音声の聞き取り確認",
+      text:
+  `Help me study an English video or audio clip. My level is [level]. The topic is [topic]. I will first write what I think I heard, then paste the transcript or a short excerpt if I have one.
+
+My first attempt at what I heard:
+[Write your notes here]
+
+Transcript or excerpt, if available:
+[Paste it here later, or leave blank]
+
+Start by asking me for the main idea and two details I caught. Wait for my answer. If I provide a transcript, compare it with my notes, identify up to three missed words or connected-speech patterns, and explain them with short examples. Then give me two comprehension questions and one short shadowing sentence from my supplied excerpt. Wait for my answers before revealing explanations.
+
+If no transcript or audio is available to you, say what you can infer from my notes and ask me to add the transcript. Do not claim to have listened to a clip you cannot access.`
     }
   ];
 
@@ -292,8 +322,6 @@ export default function LearningResources(){ return <div className="home-resourc
                         <p>(対義語) Giving up, Surrender</p>
 
                         <p className="mt-2">英英辞書・英英単語帳を使い、この学習方法を実践できます。</p>
-                        <p className="mt-2">また、ChatGPTなどの生成AIに下のプロンプトを送信することも効果的です。</p>
-
                         <p className="mt-2">この学習方法を効率化するために、英単語アプリ
                          <Link
                           className="underline"
@@ -301,7 +329,7 @@ export default function LearningResources(){ return <div className="home-resourc
                          >
                           <strong>VocabStream</strong>
                           </Link>
-                          を安定して動作する機能のみ公開しています。
+                          を公開しています。
                         </p>
                       </div>
                     </div>
@@ -339,7 +367,6 @@ export default function LearningResources(){ return <div className="home-resourc
                   <div className="mt-1">
                     <p>アウトプットの経験を積むには、生成AIとスピーキング・ライティングを練習することがおすすめです。「いつでも・どこでも・好きなだけ」 練習できるのが最大のメリットです。</p>
 
-                    <p className="mt-2">ChatGPTなどの生成AIに下のプロンプトを送信することも効果的です。</p>
                     <p className="mt-2">この学習方法を効率化するために、レベルにあわせた会話練習を提供するアプリ
                       <Link
                           className="underline"
@@ -359,7 +386,7 @@ export default function LearningResources(){ return <div className="home-resourc
           <section id="prompts" className="home-resource"><details><summary>AIプロンプト集を使う<span aria-hidden="true">＋</span></summary><div className="home-resource-content">
             <h2 className="text-2xl font-bold">AIプロンプト集</h2>
             <p className="mt-2 text-gray-700">
-              以下のプロンプトを使うことで、AIを活用した英語学習を効果的に進めることができます。コピーして、ChatGPTなどの生成AIに送信してみてください。
+              以下のプロンプトをコピーして、ChatGPTなどの生成AIに送信してみてください。「[ ]」内はご自身のレベルや学習内容に置き換えて使えます。
             </p>
 
             <div className="mt-6">
@@ -375,6 +402,15 @@ export default function LearningResources(){ return <div className="home-resourc
               <h3 className="text-xl font-semibold mb-3">単語・文法練習</h3>
               <div className="grid gap-3">
                 {prompts2.map((p, i) => (
+                  <CopyablePrompt key={i} label={p.label} text={p.text} />
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold mb-3">インプット練習</h3>
+              <div className="grid gap-3">
+                {inputPrompts.map((p, i) => (
                   <CopyablePrompt key={i} label={p.label} text={p.text} />
                 ))}
               </div>
