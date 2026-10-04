@@ -49,3 +49,19 @@ test("study examples never become scored gaps without explicit reviewed practice
   assert.equal(questions.length,3);assert.ok(questions.every(question=>question.questionType==="meaning"));
   assert.equal(summarizeAttempts(questions,[]).quizTotal,0);
 });
+
+test("an uncurated example gets a meaning check with the Japanese sense and keeps its translation", () => {
+  const words: LessonData["words"] = [
+    { word: "assert", meaning: "to state firmly", japaneseMeaning: "主張する", example: "She asserted her view.", exampleJapanese: "彼女は自分の考えを主張した。" },
+    { word: "listen", meaning: "to pay attention to sound", japaneseMeaning: "聞く", example: "We listened carefully." },
+    { word: "write", meaning: "to put words on paper", japaneseMeaning: "書く", example: "I wrote a note." },
+  ];
+  const questions = makeLessonQuestions({ words }, "word-advanced-lesson-1");
+  const example = questions.find(question => question.word === "assert" && question.questionType === "quiz")!;
+  assert.equal(example.promptMode, "example");
+  assert.equal(example.prompt, words[0].example);
+  assert.equal(example.correctAnswer, "主張する");
+  assert.equal(example.exampleJapanese, words[0].exampleJapanese);
+  assert.equal(createAttempt(example, example.answerIndex, 1).exampleJapanese, words[0].exampleJapanese);
+  assert.equal(questions.filter(question => question.questionType === "quiz").length, 3);
+});

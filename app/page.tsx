@@ -26,7 +26,6 @@ export default function HomePage() {
           <p>単語・会話・動画で英語を学ぶ、AIを活用した学習プラットフォームです。</p>
           <p className="home-project-author"><a href="https://yutokuroki.vercel.app/ja" target="_blank" rel="noopener noreferrer">開発者 <strong>黒木 勇人</strong><span aria-hidden="true">↗</span></a></p>
           <p>早稲田大学情報理工学科２年。自身の語学学習とAI研究の経験をもとに開発しています。</p>
-          <a className="home-profile-link" href="https://yutokuroki.vercel.app/ja" target="_blank" rel="noopener noreferrer">→プロフィール<span className="sr-only">（新しいタブで開く）</span></a>
         </aside>
       </section>
       <section id="apps" aria-labelledby="practice-title" className="home-practice">
@@ -65,11 +64,7 @@ export default function HomePage() {
                 <section aria-labelledby="home-research-title">
                   <h3 id="home-research-title">AI研究と国際経験</h3>
                   <p>高校時代からAI分野の研究に取り組んでいます。高校３年時には、ドローン配送の最適化アルゴリズムに関する研究でJSEC2025のソニー賞を受賞し、国際学生科学技術フェア（ISEF2025）に日本代表として出場しました。また、<a className="home-inline-link" href="https://www.mext.go.jp/b_menu/houdou/2025/1416581_00001.htm" target="_blank" rel="noopener noreferrer">文部科学大臣特別賞<span className="sr-only">（新しいタブで開く）</span></a>を受賞しました。</p>
-                  <p>大学１年時にはRakuten AI for Businessでインターンを行い、2026年夏には中谷財団の奨学生として、ジョージア工科大学で脳卒中患者の歩行を支援する深層学習モデルを研究しました。現在は機械学習、RAG、Biomedical Knowledge Graph、ヘルスケアへの応用などに興味を持っています。</p>
-                </section>
-                <section className="home-profile-university" aria-labelledby="home-university-title">
-                  <h3 id="home-university-title">大学</h3>
-                  <p>早稲田大学情報理工学科２年です。早稲田大学基幹理工学部の２〜４年生の中から、学業成績が特に優秀な６人に贈られる大隈記念奨学金を受給しています。</p>
+                  <p>大学１年時にはRakuten AI for Businessでインターンを行い、2026年夏には中谷財団の奨学生として、ジョージア工科大学で脳卒中患者の歩行を支援する深層学習モデルを研究しました。現在は機械学習、RAG、Biomedical Knowledge Graph、ヘルスケアへの応用などに興味を持ち、早稲田大学の大隈記念奨学金も受給しています。</p>
                 </section>
               </div>
               <div className="home-about-links">

@@ -58,7 +58,7 @@ import Image from "next/image";
     {
       label: "レベルに合わせた英会話練習",
       text:
-  `Be my patient English conversation partner. My level is [A1/A2/B1/B2/C1/C2, or "unsure"]. I want to talk about [topic], and my goal is [e.g., speak more smoothly / prepare for travel]. If my level is "unsure," start with an easy question and adjust as we go.
+  `Be my patient English conversation partner. My level is [英語レベル（A1〜C2、わからなければ unsure）]. I want to talk about [話したいテーマ], and my goal is [例：もっとスムーズに話す／旅行に備える]. If my level is "unsure," start with an easy question and adjust as we go.
 
 Ask one open question in English, then wait for my answer. After each answer:
 1. Respond naturally to what I said, as a real conversation partner would.
@@ -80,7 +80,7 @@ After my speech, ask three challenging follow-up questions, one at a time, and w
     {
       label: "TOEFLライティングの練習",
       text:
-  `Help me practice a TOEFL iBT-style "Write for an Academic Discussion" task. Create an original classroom question on [topic, or choose one], plus two short student viewpoints that disagree in a reasonable way. Then ask me to write my own contribution. Wait for my response before giving examples or feedback.
+  `Help me practice a TOEFL iBT-style "Write for an Academic Discussion" task. Create an original classroom question on [希望するテーマ。指定しない場合はおまかせ], plus two short student viewpoints that disagree in a reasonable way. Then ask me to write my own contribution. Wait for my response before giving examples or feedback.
 
 After I reply:
 1. State my main point in one sentence and identify any idea I have not supported well.
@@ -93,10 +93,10 @@ Do not present a score as official TOEFL scoring. If you do not know the current
     {
       label: "自由ライティングの添削",
       text:
-  `Act as an English writing coach. I am writing a [email / essay / social post / other] for [audience]. My goal is [what I want the reader to understand or do], and I want a [friendly / neutral / formal] tone.
+  `Act as an English writing coach. I am writing a [メール／エッセイ／SNS投稿など] for [想定する読者]. My goal is [読者に伝えたいこと・取ってほしい行動], and I want a [親しみやすい／中立／フォーマル] tone.
 
 Here is my draft:
-[Paste your text here]
+[ここに英文を貼り付ける]
 
 First, tell me whether the message is clear and fits the audience. Then provide:
 1. A lightly edited version that keeps my meaning and voice.
@@ -109,10 +109,10 @@ Flag any sentence whose meaning is unclear instead of guessing what I intended. 
     {
       label: "学んだ表現のリスト化",
       text:
-  `Help me review useful English from our conversation or from the notes below. My level is [level], and I want expressions I can use in [situation].
+  `Help me review useful English from our conversation or from the notes below. My level is [自分の英語レベル], and I want expressions I can use in [使いたい場面].
 
 Notes or conversation:
-[Paste your notes here, or use our conversation if it is visible to you]
+[学習メモを貼り付ける。会話履歴が見える場合は省略可]
 
 Select up to eight practical words or phrases that actually appeared in the material. For each, give a simple English meaning, one natural example for my situation, a common collocation or usage note, and a short recall question. Separate expressions I used well from ones I could improve. Then quiz me on three of them, one question at a time, and wait for my answer before showing the answer.
 
@@ -124,7 +124,7 @@ If you cannot see the conversation and I have not pasted notes, ask me for them.
     {
       label: "単語の説明を求める",
       text:
-  `Teach me the English word or phrase [word/phrase]. My level is [level]. I found it in this sentence or situation: [context, if available].
+  `Teach me the English word or phrase [調べたい単語・表現]. My level is [自分の英語レベル]. I found it in this sentence or situation: [使われていた英文や場面。なければ空欄].
 
 Explain its meaning in simpler English first. Then give its part of speech, two natural example sentences in different situations, three common collocations, and one nearby word it is often confused with. Explain the difference using short examples. Include pronunciation help only if you are confident; otherwise skip it. If the word has several meanings, focus on the meaning in my context and briefly mention the others.
 
@@ -133,7 +133,7 @@ Finish with one fill-in-the-blank question and one question that makes me use th
     {
       label: "自作した例文の添削",
       text:
-  `Check this English sentence I wrote: [your sentence]. I want to express: [meaning or situation]. My level is [level].
+  `Check this English sentence I wrote: [自分が書いた英文]. I want to express: [伝えたい意味や使用場面]. My level is [自分の英語レベル].
 
 Tell me first whether the sentence is understandable and whether it sounds natural in that situation. Give a minimally corrected version, then one more natural alternative if useful. Explain each important change in plain English, especially word choice, grammar, and register. If my intended meaning is unclear, ask one clarifying question before rewriting.
 
@@ -142,8 +142,8 @@ Finally, give me a similar Japanese or English cue so I can write a new sentence
     {
       label: "文法の弱点を見つけて練習",
       text:
-  `Be my English grammar coach. My level is [level]. Here are three to five sentences I wrote:
-[Paste your sentences here]
+  `Be my English grammar coach. My level is [自分の英語レベル]. Here are three to five sentences I wrote:
+[自分で書いた英文を３〜５文貼り付ける]
 
 Find the one recurring grammar issue that most affects clarity. Show the exact places where it occurs, explain the rule in simple English with one correct and one incorrect example, and distinguish a real error from an acceptable style choice. Correct only the relevant parts of my sentences so I can compare them.
 
@@ -155,27 +155,12 @@ Then create three short practice items that get a little harder. Ask them one at
     {
       label: "英文を深く読む練習",
       text:
-  `Help me understand an English passage without translating every sentence into Japanese. My level is [level]. Here is the passage:
-[Paste a short passage here]
+  `Help me understand an English passage without translating every sentence into Japanese. My level is [自分の英語レベル]. Here is the passage:
+[短い英文を貼り付ける]
 
 First, ask me for a one-sentence summary in English and wait for my answer. Then ask three comprehension questions, one at a time: one about the main idea, one about a detail, and one that requires an inference. After I answer each, point to the words in the passage that support or challenge my answer. Explain up to five useful phrases in simpler English and show how they work in context. Give a Japanese explanation only if I request it.
 
 At the end, ask me to summarize the passage again in my own words and give feedback on how my understanding improved. If I have not pasted a passage, ask for one; do not make up facts about an unseen text.`
-    },
-    {
-      label: "動画・音声の聞き取り確認",
-      text:
-  `Help me study an English video or audio clip. My level is [level]. The topic is [topic]. I will first write what I think I heard, then paste the transcript or a short excerpt if I have one.
-
-My first attempt at what I heard:
-[Write your notes here]
-
-Transcript or excerpt, if available:
-[Paste it here later, or leave blank]
-
-Start by asking me for the main idea and two details I caught. Wait for my answer. If I provide a transcript, compare it with my notes, identify up to three missed words or connected-speech patterns, and explain them with short examples. Then give me two comprehension questions and one short shadowing sentence from my supplied excerpt. Wait for my answers before revealing explanations.
-
-If no transcript or audio is available to you, say what you can infer from my notes and ask me to add the transcript. Do not claim to have listened to a clip you cannot access.`
     }
   ];
 

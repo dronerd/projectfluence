@@ -1,5 +1,5 @@
 import type { LearningQuestion, LessonWord } from "./content.ts";
-import { buildWordQuestions, normalizeWord, sentenceChoices, shuffle } from "./questionPolicy.ts";
+import { buildWordQuestions, hasExampleQuestion, normalizeWord, shuffle } from "./questionPolicy.ts";
 
 export type WeakWordSnapshot={
   id?:string;
@@ -51,7 +51,7 @@ export function buildReviewQuestions(weakWords:readonly ReviewWord[],catalog:rea
   for(const word of shuffle(weakWords)) {
     const needsMeaning=meanings.length<20;
     // Once meanings are full, cheaply skip rows that cannot supply a reviewed sentence.
-    if(!needsMeaning && (word.historical || sentences.length>=20 || !sentenceChoices(word)))continue;
+    if(!needsMeaning && (word.historical || sentences.length>=20 || !hasExampleQuestion(word,categories.get(word.sourceCategory)??[])))continue;
     // Meaning ambiguity checks still include every sense in the category. Sentence-only
     // targets use their reviewed choices and need no category-wide distractor generation.
     const pool=needsMeaning?(categories.get(word.sourceCategory)??[]):[];

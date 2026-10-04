@@ -18,6 +18,7 @@ export type LessonWord = {
   meaning?: string;
   japaneseMeaning?: string;
   example?: string;
+  exampleJapanese?: string;
   explanation?: string;
   synonyms?: string;
   antonyms?: string;
@@ -34,7 +35,7 @@ export type LessonWord = {
   duplicateOf?: { category: string; lessonNumber: number; word: string };
 };
 export type LessonData = { lesson_id?: string; title?: string; paragraph?: string; words: LessonWord[] };
-export type QuestionPromptMode = "image" | "text" | "sentence";
+export type QuestionPromptMode = "image" | "text" | "sentence" | "example";
 
 export type LearningQuestion = {
   id: string;
@@ -50,6 +51,7 @@ export type LearningQuestion = {
   correctAnswer: string;
   definition: string;
   example?: string;
+  exampleJapanese?: string;
   explanation?: string;
   japaneseMeaning?: string;
   synonyms?: string;

@@ -49,7 +49,7 @@ test("every advertised lesson exists and every new item has a usable reviewed ch
       assert.equal(lesson.title, lessonLabel(course.id, number));
       const questions = makeLessonQuestions(lesson, `${course.id}-lesson-${number}`);
       assert.equal(questions.filter(question => question.questionType === "meaning").length, 10);
-      assert.equal(questions.filter(question => question.questionType === "quiz").length, lesson.words.filter(word => word.sentencePractice).length);
+      assert.equal(questions.filter(question => question.questionType === "quiz").length, lesson.words.length);
       for (const word of lesson.words) {
         assert.equal(word.meaningDistractors?.length, 2);
         if (course.id.startsWith("idioms-")) { assert.ok(word.word.includes(" ")); assert.ok(word.expressionType); }
@@ -79,6 +79,7 @@ test("the complete corpus produces valid options and never silently drops review
         const own = questions.filter(question => question.word === word.word);
         if (word.meaningDistractors) assert.ok(own.some(question => question.questionType === "meaning"), `${course.id}/${number}/${word.word}: explicit meaning pair rejected`);
         if (word.sentencePractice) assert.ok(own.some(question => question.questionType === "quiz"), `${course.id}/${number}/${word.word}: curated gap rejected`);
+        assert.ok(own.some(question => question.questionType === "quiz"), `${course.id}/${number}/${word.word}: example question missing`);
         if (word.image) {
           const meaning = own.find(question => question.questionType === "meaning");
           assert.equal(meaning?.image?.src, word.image.src, `${course.id}/${number}/${word.word}: review image lost`);
